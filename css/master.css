@@ -87,3 +87,10 @@ body {
 .container footer p {
     color: #f6f6f6;
 }
+
+@media screen and (max-width:1200px) {
+    .container {
+        width: 91%;
+        margin: 10% auto;
+    }
+}
