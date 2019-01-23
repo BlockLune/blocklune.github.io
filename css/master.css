@@ -5,19 +5,20 @@
 }
 
 a {
+    color: #f6f6f6;
     text-decoration-line: none;
 }
 
 a:link {
-    color: #445566;
+    color: #f6f6f6;
 }
 
 a:visited {
-    color: #445566;
+    color: #f6f6f6;
 }
 
 a:hover {
-    color: #000;
+    color: #ececec;
 }
 
 ::selection {
@@ -37,9 +38,9 @@ body {
 }
 
 .container .profile {
-    background: #fcfcfc;
+    background: #4d4d4d;
     padding: 70px;
-    color: #445566;
+    color: #f6f6f6;
 }
 
 .container .profile .name {
@@ -60,6 +61,7 @@ body {
 }
 
 .container .profile .contact img {
+    color: #fff;
     width: 25px;
     margin-right: 10px;
 }
@@ -71,13 +73,14 @@ body {
 .container .work {
     height: 1000px;
     background: #f6f6f6;
-    padding: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .container .work .box {
-    width: 700px;
+    width: 100%;
     height: 100px;
-    margin: 0 auto;
+    margin-bottom: 10px;
     background: #fff;
     display: flex;
     flex-direction: row;
@@ -91,15 +94,19 @@ body {
     margin-bottom: 10px;
 }
 
-.container .work .box .rightpart a:link {
+.container .work a {
     color: #000;
 }
 
-.container .work .box .rightpart a:visited {
+.container .work a:link {
     color: #000;
 }
 
-.container .work .box .rightpart a:hover {
+.container .work a:visited {
+    color: #000;
+}
+
+.container .work a:hover {
     color: #000;
 }
 
@@ -132,15 +139,6 @@ body {
         margin: 10% auto;
     }
     .container .work .box {
-        width: 95%;
-        height: 100px;
-        margin: 0 auto;
         font-size: 70%;
-    }
-}
-
-@media screen and (max-width:700px) {
-    .container .work {
-        padding: 20px;
     }
 }
