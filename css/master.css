@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration-line: none;
+}
+
+a:link {
+    color: #445566;
+}
+
+a:visited {
+    color: #445566;
+}
+
+a:hover {
+    color: #000;
+}
+
+::selection {
+    background: #d3d3d3;
+    color: #4d4d4d;
+}
+
+
+body {
+    background: #ececec;
+}
+
+.container {
+    background: #fff;
+    width: 1000px;
+    margin: 100px auto;
+    padding: 10px;
+}
+
+.container .profile {
+    background: #fcfcfc;
+    padding: 70px;
+    color: #445566;
+}
+
+.container .profile .name {
+    margin-bottom: 30px;
+    font-size: 110%;
+}
+
+.container .profile .sentence {
+    font-size: 90%;
+}
+
+.container .profile .sentence p {
+    margin: 5px 0;
+}
+
+.container .profile .contact {
+    margin-top: 20px;
+}
+
+.container .profile .contact img {
+    width: 25px;
+    margin-right: 10px;
+}
+
+.container .profile .contact img:hover {
+    opacity: 0.8;
+}
+
+.container .work {
+    height: 1000px;
+    background: #f6f6f6;
+}
+
+.container footer {
+    background: #4d4d4d;
+    text-align: center;
+    padding: 30px;
+}
+
+.container footer strong {
+    font-size: 80%;
+}
+
+.container footer p {
+    color: #f6f6f6;
+}
