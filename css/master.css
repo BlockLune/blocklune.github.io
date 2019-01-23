@@ -25,7 +25,6 @@ a:hover {
     color: #4d4d4d;
 }
 
-
 body {
     background: #ececec;
 }
@@ -72,6 +71,45 @@ body {
 .container .work {
     height: 1000px;
     background: #f6f6f6;
+    padding: 50px;
+}
+
+.container .work .box {
+    width: 700px;
+    height: 100px;
+    margin: 0 auto;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+}
+
+.container .work .box .rightpart {
+    padding: 20px;
+}
+
+.container .work .box .rightpart h2 {
+    margin-bottom: 10px;
+}
+
+.container .work .box .rightpart a:link {
+    color: #000;
+}
+
+.container .work .box .rightpart a:visited {
+    color: #000;
+}
+
+.container .work .box .rightpart a:hover {
+    color: #000;
+}
+
+.container .work .box:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07);
+}
+
+.container .work img {
+    height: 100px;
+    width: 100px;
 }
 
 .container footer {
@@ -92,5 +130,12 @@ body {
     .container {
         width: 91%;
         margin: 10% auto;
+    }
+
+    .container .work .box {
+        width: 95%;
+        height: 100px;
+        margin: 0 auto;
+        font-size: 70%;
     }
 }
