@@ -87,11 +87,11 @@ body {
 }
 
 .container .work .box .rightpart {
-    padding: 20px;
+    padding-left: 20px;
 }
 
 .container .work .box .rightpart h2 {
-    margin-bottom: 10px;
+    line-height: 100px;
 }
 
 .container .work a {
