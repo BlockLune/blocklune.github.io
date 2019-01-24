@@ -87,11 +87,9 @@ body {
 }
 
 .container .work .box .rightpart {
-    padding-left: 20px;
-}
-
-.container .work .box .rightpart h2 {
-    line-height: 100px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .container .work a {
@@ -137,6 +135,9 @@ body {
     .container {
         width: 91%;
         margin: 10% auto;
+    }
+    .container .profile {
+        padding: 50px;
     }
     .container .work .box {
         font-size: 70%;
