@@ -89,7 +89,23 @@ body {
 .container .work .box .rightpart {
     padding: 20px;
     display: flex;
+    flex-direction: column;
+}
+
+.container .work .box .rightpart .title {
+    display: flex;
     align-items: center;
+    height: 50px;
+}
+
+.container .work .box .rightpart .tags {
+    display: flex;
+}
+
+.container .work .box .rightpart .tags .tag {
+    margin-right: 10px;
+    font-size: 80%;
+    color: #4c4c4c;
 }
 
 .container .work a {
@@ -112,9 +128,16 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07);
 }
 
-.container .work img {
+.container .work .box .pic {
     height: 100px;
     width: 100px;
+    padding: 5px;
+    background: #fefefe;
+}
+
+.container .work .box .pic img {
+    height: 90px;
+    width: 90px;
 }
 
 .container footer {
