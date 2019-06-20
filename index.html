@@ -6,53 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport">
+    <meta content="SaltedFish的鱼塘" name="description">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/holakit/dist/holakit.css">
+    <script src="https://kit.fontawesome.com/ab4cafb1cc.js"></script>
+
     <title>Fish Pond</title>
 </head>
 
-<body>
-    <div class="container">
-        <div class="profile">
-            <div class="name">
-                <a href="#" title="一个无名的重度死宅而已，不会什么东西，却总喜欢幻想...">
-                    <h1>SaltedFish</h1>
-                </a>
-            </div>
-            <div class="sentence">
-                <P>这里是某条<span title="一个无名的重度死宅而已，不会什么东西，却总喜欢幻想...">咸鱼</span>的鱼塘</P>
-                <p>既然来了，就随便看看吧...</p>
-            </div>
-            <div class="contact">
-                <a href="#" title="QQ:692225021"><img src="img/qq.webp" alt=""></a>
-                <a href="mailto:blocklune@gmail.com" title="EMAIL:blocklune@gmail.com"><img src="img/email.webp" alt=""></a>
-                <a href="https://github.com/BlockLune" title="GITHUB:BlockLune"><img src="img/github.webp" alt=""></a>
-            </div>
+<body class="hola-body-typography hola-grey-bg">
+    <header class="hola-navbar hola-navbar-transparent hola-navbar-darkbg">
+        <div class="hola-container">
+            <nav class="hola-navbar-main">
+                <a href="#" class="hola-navbar-brand">Fish Pond</a>
+            </nav>
+            <input type="checkbox" class="hola-navbar-toggle" id="navbar-toggle">
+            <label for="navbar-toggle" class="hola-navbar-toggle-label"></label>
+            <nav class="hola-navbar-sub">
+                <a href="https://f-studio.top/" title="F-Studio官网">F-Studio</a>
+                <a href="https://teamhola.github.io/holakit/" title="本站所用CSS">HolaKit</a>
+            </nav>
         </div>
-        <div class="work">
-            <a href="http://www.mp3.1abc666.cn/" target="_blank" class="box">
-                <div class="pic">
-                    <img src="https://i.loli.net/2019/06/01/5cf272f171bee23649.jpg" alt="">
-                </div>
-                <div class="rightpart">
-                    <div class="title">
-                        <h2>多站合一音乐搜索</h2>
-                    </div>
-                    <div class="tags">
-                        <div class="tag">#网站</div>
-                    </div>
-                </div>
-            </a>
+    </header>
+    <div class="hola-hero hola-hero-dark-bg hola-hero-height-extended">
+        <div class="hola-container hola-hero-content">
+            <h1>SaltedFish</h1>
+            <p>这里是某条咸鱼的鱼塘</p>
+            <a href="https://space.bilibili.com/131605486" title="BILIBILI:BlockLune"><img src="img/bilibili.webp"
+                    class="profile-icon" height="25px" alt="" title=""></a>
+            <a href="mailto:blocklune@gmail.com" title="EMAIL:blocklune@gmail.com"><img src="img/email.webp"
+                    class="profile-icon" height="25px" alt="" title=""></a>
+            <a href="https://github.com/BlockLune" title="GITHUB:BlockLune"><img src="img/github.webp"
+                    class="profile-icon" height="25px" alt="" title=""></a>
         </div>
-        <footer>
-            <strong>
-                <p>(C)2019 SaltedFish</p>
-                <p>All rights reserved.</p>
-            </strong>
-
-        </footer>
     </div>
-
+    <div class="hola-container">
+        <h3 class="hola-card-stack-title hola-card-stack-title-light">
+            <p id="hitokoto">哎呀！hitokoto获取中···_(:τ」∠)_</p>
+            <!-- 兼容低版本浏览器 (包括 IE)，可移除 -->
+            <script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+            <!--End-->
+            <script>
+                fetch('https://v1.hitokoto.cn')
+                    .then(function (res) {
+                        return res.json();
+                    })
+                    .then(function (data) {
+                        var hitokoto = document.getElementById('hitokoto');
+                        hitokoto.innerText = data.hitokoto;
+                    })
+                    .catch(function (err) {
+                        console.error(err);
+                    })
+            </script>
+        </h3>
+        <div class="hola-columns hola-card-stack">
+            <div class="hola-columns-item">
+                <div class="hola-card">
+                    <h2 class="hola-card-title">推荐网站</h2>
+                    <ul class="hola-vmenu">
+                        <li class="hola-vmenu-item"><a href="https://wht.im/" target="_blank"><span
+                                    class="hola-badge hola-badge-radii">万花筒</span>极简网址导航</a></li>
+                        <li class="hola-vmenu-item"><a href="http://www.mp3.1abc666.cn/" target="_blank"><span
+                                    class="hola-badge hola-badge-radii">音乐搜索器</span>付费音乐下载</a></li>
+                        <li class="hola-vmenu-item"><a href="https://vcb-s.com/" target="_blank"><span
+                                    class="hola-badge hola-badge-radii">VCB-Studio</span>大家一起实现的故事</a></li>
+                        <li class="hola-vmenu-item"><a href="https://www.parsevideo.com/" target="_blank"><span
+                                    class="hola-badge hola-badge-radii">ParseVideo</span>视频解析</a></li>
+                        <li class="hola-vmenu-item"><a href="https://ai.binwang.me/couplet/" target="_blank"><span
+                                    class="hola-badge hola-badge-radii">王斌给您对对联</span>自动对联AI</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="hola-footer">
+        <div class="hola-container">
+            <p>Copyright 2019 F-Studio SaltedFish</p>
+        </div>
+    </footer>
 </body>
 
 </html>
