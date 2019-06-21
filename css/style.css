@@ -21,14 +21,6 @@ a {
     filter: alpha(opacity=70);
 }
 
-#grad-1 {
-    background-image: linear-gradient(135deg, #97ABFF 10%, #123597 100%);
-}
-
-#grad-2 {
-    background-image: linear-gradient(135deg, #43CBFF 10%, #9708CC 100%);
-}
-
 .search-bar {
     display: flex;
     line-height: 45px;
