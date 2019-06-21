@@ -5,7 +5,7 @@
 }
 
 a {
-    text-decoration-line: none
+    text-decoration-line: none;
 }
 
 .hola-card:hover {
@@ -27,6 +27,12 @@ a {
 
 #grad-2 {
     background-image: linear-gradient(135deg, #43CBFF 10%, #9708CC 100%);
+}
+
+.search-bar {
+    display: flex;
+    line-height: 45px;
+    justify-content: flex-end;
 }
 
 
