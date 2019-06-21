@@ -41,4 +41,8 @@ a {
     .hola-footer p {
         padding: 15px;
     }
+
+    .search-bar {
+        justify-content: flex-start;
+    }
 }
