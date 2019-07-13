@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+<title>那些值得推荐的Chrome插件</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+
+
+:root { --side-bar-bg-color: #fff; --control-text-color: #777; }
+html { font-size: 14px; }
+body { color: rgb(52, 73, 94); -webkit-font-smoothing: antialiased; line-height: 1.6rem; letter-spacing: 0px; margin: 0px; overflow-x: hidden; font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif !important; }
+#write { max-width: 860px; margin: 0px auto; padding: 20px 30px 100px; }
+#write p { line-height: 1.6rem; word-spacing: 0.05rem; }
+#write ol li { text-indent: 0.5rem; }
+#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
+body > :first-child { margin-top: 0px !important; }
+body > :last-child { margin-bottom: 0px !important; }
+a { color: rgb(66, 185, 131); font-weight: 600; padding: 0px 2px; text-decoration: none; }
+h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; }
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
+h1 tt, h1 code { font-size: inherit !important; }
+h2 tt, h2 code { font-size: inherit !important; }
+h3 tt, h3 code { font-size: inherit !important; }
+h4 tt, h4 code { font-size: inherit !important; }
+h5 tt, h5 code { font-size: inherit !important; }
+h6 tt, h6 code { font-size: inherit !important; }
+h2 a, h3 a { color: rgb(52, 73, 94); }
+h1 { padding-bottom: 0.4rem; font-size: 2.2rem; line-height: 1.3; }
+h2 { font-size: 1.75rem; line-height: 1.225; margin: 35px 0px 15px; padding-bottom: 0.5em; border-bottom: 1px solid rgb(221, 221, 221); }
+h3 { font-size: 1.4rem; line-height: 1.43; margin: 20px 0px 7px; }
+h4 { font-size: 1.2rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: 1rem; color: rgb(119, 119, 119); }
+p, blockquote, ul, ol, dl, table { margin: 0.8em 0px; }
+li > ol, li > ul { margin: 0px; }
+hr { height: 2px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; overflow: hidden; box-sizing: content-box; }
+body > h2:first-child { margin-top: 0px; padding-top: 0px; }
+body > h1:first-child { margin-top: 0px; padding-top: 0px; }
+body > h1:first-child + h2 { margin-top: 0px; padding-top: 0px; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child { margin-top: 0px; padding-top: 0px; }
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 { margin-top: 0px; padding-top: 0px; }
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p { margin-top: 0px; }
+li p.first { display: inline-block; }
+ul, ol { padding-left: 30px; }
+ul:first-child, ol:first-child { margin-top: 0px; }
+ul:last-child, ol:last-child { margin-bottom: 0px; }
+blockquote { border-left: 4px solid rgb(66, 185, 131); padding: 10px 15px; color: rgb(119, 119, 119); background-color: rgba(66, 185, 131, 0.1); }
+table { padding: 0px; word-break: initial; }
+table tr { border-top: 1px solid rgb(223, 226, 229); margin: 0px; padding: 0px; }
+table tr:nth-child(2n), thead { background-color: rgb(250, 250, 250); }
+table tr th { font-weight: bold; border-width: 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-left-style: solid; border-top-color: rgb(223, 226, 229); border-right-color: rgb(223, 226, 229); border-left-color: rgb(223, 226, 229); border-image: initial; border-bottom-style: initial; border-bottom-color: initial; text-align: left; margin: 0px; padding: 6px 13px; }
+table tr td { border: 1px solid rgb(223, 226, 229); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr th:first-child, table tr td:first-child { margin-top: 0px; }
+table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
+#write strong { padding: 0px 1px; }
+#write em { padding: 0px 5px 0px 2px; }
+#write table thead th { background-color: rgb(242, 242, 242); }
+#write .CodeMirror-gutters { border-right: none; }
+#write .md-fences { border: 1px solid rgb(244, 244, 244); -webkit-font-smoothing: initial; line-height: 1.43rem; border-radius: 2px; font-size: 0.85rem; overflow-wrap: normal; margin: 0.8rem 0px !important; padding: 0.3rem 0px !important; background-color: rgb(248, 248, 248) !important; font-family: "Roboto Mono", "Source Sans Pro", Monaco, courier, monospace !important; }
+#write .CodeMirror-wrap .CodeMirror-code pre { padding-left: 12px; }
+#write code, tt { margin: 0px 2px; padding: 2px 4px; border-radius: 2px; font-size: 0.92rem; color: rgb(233, 105, 0); background-color: rgb(248, 248, 248); font-family: "Roboto Mono", "Source Sans Pro", Monaco, courier, monospace !important; }
+#write .md-footnote { background-color: rgb(248, 248, 248); color: rgb(233, 105, 0); }
+#write mark { background-color: rgb(235, 255, 235); border-radius: 2px; padding: 2px 4px; margin: 0px 2px; color: rgb(34, 34, 34); font-weight: 500; }
+#write del { padding: 1px 2px; }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(34, 162, 201); }
+.cm-s-inner .cm-string { color: rgb(34, 162, 201); }
+.md-task-list-item > input { margin-left: -1.3em; }
+@media print {
+  html { font-size: 13px; }
+  table, pre { break-inside: avoid; }
+  pre { overflow-wrap: break-word; }
+}
+.md-fences { background-color: rgb(248, 248, 248); }
+#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
+.mathjax-block > .code-tooltip { bottom: 0.375rem; }
+#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
+#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+.md-image > .md-meta { border-radius: 3px; font-family: Consolas, "Liberation Mono", Courier, monospace; padding: 2px 0px 0px 4px; font-size: 0.9em; color: inherit; }
+.md-tag { color: inherit; }
+.md-toc { margin-top: 20px; padding-bottom: 20px; }
+.sidebar-tabs { border-bottom: none; }
+#typora-quick-open { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); }
+#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
+#md-notification::before { top: 10px; }
+.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.12); }
+header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Arial, sans-serif; }
+.file-node-content:hover .file-node-icon, .file-node-content:hover .file-node-open-state { visibility: visible; }
+.mac-seamless-mode #typora-sidebar { background-color: var(--side-bar-bg-color); }
+.md-lang { color: rgb(180, 101, 77); }
+.html-for-mac .context-menu { --item-hover-bg-color: #E6F0FE; }
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><p><img src='img\_head.webp' alt='' referrerPolicy='no-referrer' /></p><p>&nbsp;</p><h1><a name="%E9%82%A3%E4%BA%9B%E5%80%BC%E5%BE%97%E6%8E%A8%E8%8D%90%E7%9A%84chrome%E6%8F%92%E4%BB%B6" class="md-header-anchor"></a><span>那些值得推荐的Chrome插件</span></h1><blockquote><p><span>注：文中提到的</span><code>鹏少</code><span>、</span><code>Joker鹏少</code><span>等均指B站up主</span><a href='https://space.bilibili.com/92678046'><span>JOKER鹏少</span></a><span>，版权归其所有。他也是我非常喜欢的一个up主，为避免误会，特此声明。介绍中的引用部分为各个插件自己的介绍。</span></p></blockquote><h2><a name="%E5%BC%95%E8%A8%80" class="md-header-anchor"></a><span>引言</span></h2><p><span>你可能常年使用着国产的一些浏览器，却也常年遭受着各种弹窗、全家桶的侵扰...</span></p><p><span>你也可能不止一次地听过&quot;Chrome&quot;，安装下来后却发现他空空如也，又默默地装回那些国产...</span></p><p><span>那么，让这些插件来拯救你吧</span></p><h2><a name="%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95" class="md-header-anchor"></a><span>插件安装方法</span></h2><p><span>问度娘~ 或者在</span><a href='https://www.bilibili.com/video/av29290563'><span>这里</span></a><span>观看视频教程</span></p><h2><a name="%E5%BF%85%E5%A4%87%E6%8F%92%E4%BB%B6" class="md-header-anchor"></a><span>必备插件</span></h2><h3><a name="tampermonkey" class="md-header-anchor"></a><span>Tampermonkey</span></h3><ul><li><p><strong><span>介绍</span></strong></p><blockquote><p><span>The world&#39;s most popular userscript manager</span></p></blockquote><p><span>一个脚本管理插件，允许你自己通过编写脚本来实现某种功能，也可以下载脚本使用</span></p></li><li><p><strong><span>下载地址</span></strong></p><p><a href='https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo'><span>Chrome网上应用店</span></a></p></li></ul><h3><a name="%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B" class="md-header-anchor"></a><span>谷歌访问助手</span></h3><ul><li><p><strong><span>介绍</span></strong></p><blockquote><p><span>最简单易用的谷歌访问助手,为chrome扩展用户量身打造。可以解决chrome扩展无法自动更新的问题，同时可以访问谷歌google搜索，Gmail邮箱，google+等谷歌服务。</span></p></blockquote><p><span>帮助你访问所有Google的页面</span></p></li><li><p><strong><span>截图预览</span></strong></p><p><img src='img\gugefangwenzhushou.webp' alt='谷歌访问助手' referrerPolicy='no-referrer' /></p></li><li><p><strong><span>下载地址</span></strong></p><p><a href='https://chrome.google.com/webstore/detail/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B/gocklaboggjfkolaknpbhddbaopcepfp?hl=zh-CN'><span>Chrome网上应用店</span></a></p><p><span>你也可以去</span><a href='https://www.jokerps.com/851.html'><span>鹏少资源网</span></a><span>下载不用锁定主页的特别版</span></p></li></ul><h3><a name="infinity-%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5(pro)" class="md-header-anchor"></a><span>Infinity 新标签页(Pro)</span></h3><ul><li><p><strong><span>介绍</span></strong></p><blockquote><p><span>百万用户选择的新标签页和快速拨号，自由添加网站图标，云端高清壁纸，快速访问书签、天气、笔记、待办事项、扩展管理与历史记录。使你的主页和开始页更加美观和易用</span></p></blockquote><p><span>在</span><a href='https://www.bilibili.com/video/av18789095'><span>这里</span></a><span>可以观看鹏少更详细的介绍</span></p></li><li><p><strong><span>截图预览</span></strong></p><p><img src='img\infinity.webp' alt='Infinity新标签页' referrerPolicy='no-referrer' /></p></li><li><p><strong><span>下载地址</span></strong></p><p><a href='https://chrome.google.com/webstore/detail/infinity-new-tab-pro/nnnkddnnlpamobajfibfdgfnbcnkgngh'><span>Chrome网上应用店</span></a></p></li></ul><h3><a name="%E7%99%BE%E5%BA%A6%E4%BC%98%E5%8C%96" class="md-header-anchor"></a><span>百度优化</span></h3><ul><li><p><strong><span>介绍</span></strong></p><blockquote><p><span>本扩展支持百度、搜狗、必应、好搜、谷歌搜索结果的页面结果广告优化和显示内容优化。绕过百度和搜狗的重定向，同时优化主流搜索引擎的搜索结果的样式效果，更方便快速的得到搜索的真实内容，更符合用户习惯。同时支持双列三列甚至四列展示百度谷歌和必应的页面，还自带有护眼模式</span></p></blockquote></li><li><p><strong><span>截图预览</span></strong></p><p><img src='img\baiduyouhua.webp' alt='安装百度优化插件后的Google主页' referrerPolicy='no-referrer' /></p></li><li><p><strong><span>下载地址</span></strong></p><p><a href='[https://chrome.google.com/webstore/detail/%E7%99%BE%E5%BA%A6%E4%BC%98%E5%8C%96/denccnggppnbllgifimhkcehbpmlljcp](https://chrome.google.com/webstore/detail/百度优化/denccnggppnbllgifimhkcehbpmlljcp)'><span>Chrome网上应用店</span></a></p></li></ul><h3><a name="%E5%88%92%E8%AF%8D%E7%BF%BB%E8%AF%91" class="md-header-anchor"></a><span>划词翻译</span></h3><ul><li><p><strong><span>介绍</span></strong></p><blockquote><p><span>支持谷歌、百度、有道三大翻译和朗读引擎，可以方便的查看、复制和朗读不同引擎的翻译结果。</span></p></blockquote><p><span>同类型的软件很多 但是自己感觉这款最轻量好用</span></p></li><li><p><strong><span>截图预览</span></strong></p><p><img src='img\huacifanyi.webp' alt='划词翻译界面' referrerPolicy='no-referrer' /></p></li><li><p><strong><span>下载地址</span></strong></p><p><a href='[https://chrome.google.com/webstore/detail/%E5%88%92%E8%AF%8D%E7%BF%BB%E8%AF%91/ikhdkkncnoglghljlkmcimlnlhkeamad](https://chrome.google.com/webstore/detail/划词翻译/ikhdkkncnoglghljlkmcimlnlhkeamad)'><span>Chrome网上应用店</span></a></p></li></ul><h3><a name="fireshot" class="md-header-anchor"></a><span>FireShot</span></h3><ul><li><p><strong><span>介绍</span></strong></p><blockquote><p><span>捕捉网页截图，编辑并将它们保存为PDF，JPEG，GIF，PNG或BMP；上传，打印，在Photoshop中打开，复制到剪贴板或电子邮件</span></p></blockquote><p><span>在</span><a href='https://www.bilibili.com/video/av44274712'><span>这里</span></a><span>可以观看鹏少更详细的介绍</span></p></li><li><p><strong><span>截图预览</span></strong></p><p><img src='img\fireshot.webp' alt='一张用FireShot截取的维基百科首页' referrerPolicy='no-referrer' /></p></li><li><p><strong><span>下载地址</span></strong></p><p><a href='https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg'><span>Chrome网上应用店</span></a></p></li></ul><h3><a name="stylus" class="md-header-anchor"></a><span>Stylus</span></h3><ul><li><p><strong><span>介绍</span></strong></p><blockquote><p><span>Stylus 是一个调整网页外观的用户样式管理器。它可让您轻松地为许多热门网站网站安装主题和皮肤。</span></p></blockquote><p><span>在</span><a href='https://www.bilibili.com/video/av27145745'><span>这里</span></a><span>可以观看鹏少更详细的介绍</span></p></li><li><p><strong><span>截图预览</span></strong></p><p><img src='img\stylus.webp' alt='使用Stylus中“Baidu Lite 百度轻”后的百度主页' referrerPolicy='no-referrer' /></p></li><li><p><strong><span>下载地址</span></strong></p><p><a href='https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne'><span>Chrome网上应用店</span></a></p><p><a href='https://add0n.com/stylus.html'><span>官网</span></a></p></li></ul><h3><a name="adblock-plus" class="md-header-anchor"></a><span>Adblock Plus</span></h3><ul><li><p><strong><span>介绍</span></strong></p><blockquote><p><span>Adblock Plus 是拥有超过 5 亿次下载的全球最受欢迎的广告拦截软件之一。</span></p></blockquote></li><li><p><strong><span>下载地址</span></strong></p><p><a href='https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb'><span>Chrome网上应用店</span></a></p></li></ul><h3><a name="adguard-%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E5%99%A8" class="md-header-anchor"></a><span>AdGuard 广告拦截器</span></h3><ul><li><p><strong><span>介绍</span></strong></p><blockquote><p><span>广告拦截扩展对抗广告和弹出窗口。拦截 Facebook，YouTube 和所有其它网站的广告。</span></p></blockquote></li><li><p><strong><span>下载地址</span></strong></p><p><a href='https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg'><span>Chrome网上应用店</span></a></p></li></ul><h3><a name="clutter-free" class="md-header-anchor"></a><span>Clutter Free</span></h3><ul><li><p><strong><span>介绍</span></strong></p><blockquote><p><span>Reduce tab clutter - prevent duplicate tabs, quickly search &amp; switch tabs, and more...</span></p></blockquote><p><span>自动关闭重复打开的标签页</span></p></li><li><p><strong><span>下载地址</span></strong></p><p><a href='https://chrome.google.com/webstore/detail/clutter-free-prevent-dupl/iipjdmnoigaobkamfhnojmglcdbnfaaf'><span>Chrome网上应用店</span></a></p></li></ul><h3><a name="crxmouse-chrome%E2%84%A2-%E6%89%8B%E5%8A%BF" class="md-header-anchor"></a><span>crxMouse Chrome™ 手势</span></h3><ul><li><p><strong><span>介绍</span></strong></p><blockquote><p><span>方便,快捷,充分发掘鼠标的所有操作.功能包括:鼠标手势,超级拖曳,滚轮手势,摇杆手势,平滑滚动,标签页列表等.</span></p></blockquote></li><li><p><strong><span>截图预览</span></strong></p><p><img src='img\crxmouse.webp' alt='crxMouse设置界面' referrerPolicy='no-referrer' /></p></li><li><p><strong><span>下载地址</span></strong></p><p><a href='https://chrome.google.com/webstore/detail/crxmouse-chrome-gestures/jlgkpaicikihijadgifklkbpdajbkhjo'><span>Chrome网上应用店</span></a></p><p><a href='https://crxmouse.com/zh-hans/'><span>官网</span></a></p></li></ul><h3><a name="ie-tab" class="md-header-anchor"></a><span>IE Tab</span></h3><ul><li><p><strong><span>介绍</span></strong></p><blockquote><p><span>在标签页中以IE内核显示网页。快捷、强健、可靠。这个版本是最流行的一个原因。</span></p></blockquote></li><li><p><strong><span>下载地址</span></strong></p><p><a href='https://chrome.google.com/webstore/detail/ie-tab/hehijbfgiekmjfkfjpbkbammjbdenadd'><span>Chrome网上应用店</span></a></p></li></ul><h3><a name="imagus" class="md-header-anchor"></a><span>Imagus</span></h3><ul><li><p><strong><span>介绍</span></strong></p><blockquote><p><span>Enlarge thumbnails, and show images/videos from links with a mouse hover.</span></p></blockquote><p><span>在</span><a href='https://www.bilibili.com/video/av44940125'><span>这里</span></a><span>可以观看鹏少更详细的介绍</span></p></li><li><p><strong><span>下载地址</span></strong></p><p><a href='https://chrome.google.com/webstore/detail/imagus/immpkjjlgappgfkkfieppnmlhakdmaab'><span>Chrome网上应用店</span></a></p></li></ul><h3><a name="lazy-tabs" class="md-header-anchor"></a><span>Lazy Tabs</span></h3><ul><li><p><strong><span>介绍</span></strong></p><blockquote><p><span>Unload all inactive tabs (except pinned) at startup or by clicking an icon</span></p></blockquote></li><li><p><strong><span>下载地址</span></strong></p><p><a href='https://chrome.google.com/webstore/detail/lazy-tabs/aabgbgciohhaogajcnacpgilhmacdahc'><span>Chrome网上应用店</span></a></p></li></ul><h3><a name="onetab" class="md-header-anchor"></a><span>OneTab</span></h3><ul><li><p><strong><span>介绍</span></strong></p><blockquote><p><span>节省高达95％的内存，并减轻标签页混乱现象</span></p></blockquote></li><li><p><strong><span>截图预览</span></strong></p><p><img src='img\onetab.webp' alt='将打开的三个标签页全部聚拢' referrerPolicy='no-referrer' /></p></li><li><p><strong><span>下载地址</span></strong></p><p><a href='https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall'><span>Chrome网上应用店</span></a></p></li></ul><h3><a name="%E4%BA%91%E7%9B%98%E4%B8%87%E8%83%BD%E9%92%A5%E5%8C%99" class="md-header-anchor"></a><span>云盘万能钥匙</span></h3><ul><li><p><strong><span>介绍</span></strong></p><blockquote><p><span>您的云盘智能助手</span></p></blockquote><p><span>在</span><a href='https://www.bilibili.com/video/av55835350'><span>这里</span></a><span>可以观看鹏少更详细的介绍</span></p></li><li><p><strong><span>下载地址</span></strong></p><p><a href='https://chrome.google.com/webstore/detail/%E4%BA%91%E7%9B%98%E4%B8%87%E8%83%BD%E9%92%A5%E5%8C%99/anlllmnpjodopgbkbpnghnjlelnogfjc'><span>Chrome网上应用店</span></a></p><p><a href='https://extension.yunpanjingling.com/'><span>官网</span></a></p></li></ul><p>&nbsp;</p><h2><a name="%E9%80%82%E7%94%A8%E4%BA%8Eb%E7%AB%99%E6%9C%8B%E5%8F%8B%E4%BB%AC%E7%9A%84%E6%8F%92%E4%BB%B6" class="md-header-anchor"></a><span>适用于B站朋友们的插件</span></h2><h3><a name="%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E5%8A%A9%E6%89%8B" class="md-header-anchor"></a><span>哔哩哔哩助手</span></h3><ul><li><p><strong><span>介绍</span></strong></p><blockquote><p><span>哔哩哔哩弹幕网辅助扩展，拥有视频区和直播区的人性化功能</span></p></blockquote></li><li><p><strong><span>截图预览</span></strong></p><p><img src='img\bilibilizhushou.webp' alt='bilibili助手设置页面' referrerPolicy='no-referrer' /></p></li><li><p><strong><span>下载地址</span></strong></p><p><a href='https://chrome.google.com/webstore/detail/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E5%8A%A9%E6%89%8B%EF%BC%9Abilibilicom-%E7%BB%BC%E5%90%88%E8%BE%85%E5%8A%A9%E6%89%A9%E5%B1%95/kpbnombpnpcffllnianjibmpadjolanh'><span>Chrome网上应用店</span></a></p><p><a href='https://bilibili-helper.github.io/'><span>官网</span></a></p></li></ul><h3><a name="%E8%8E%B7%E5%8F%96%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9bilibili%E8%A7%86%E9%A2%91%E7%9A%84%E5%B0%81%E9%9D%A2%E5%9B%BE%E7%89%87" class="md-header-anchor"></a><span>获取哔哩哔哩bilibili视频的封面图片</span></h3><ul><li><p><strong><span>介绍</span></strong></p><blockquote><p><span>获取哔哩哔哩bilibili视频的封面图片</span></p></blockquote></li><li><p><strong><span>下载地址</span></strong></p><p><a href='https://chrome.google.com/webstore/detail/%E8%8E%B7%E5%8F%96%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9bilibili%E8%A7%86%E9%A2%91%E7%9A%84%E5%B0%81%E9%9D%A2%E5%9B%BE%E7%89%87/egodkcidolldembjebmiepoibpahmllh'><span>Chrome网上应用店</span></a></p></li></ul><p>&nbsp;</p></div>
+</body>
+</html>
