@@ -12,16 +12,18 @@ a {
     box-shadow: rgba(0, 0, 0, .2) 0 10px 30px
 }
 
+.disabled {
+    pointer-events: none;
+}
+
 @media (max-width:700px) {
     .hola-hero {
         padding: 15px;
     }
-
     #hitokoto {
         font-size: 77%;
         line-height: 20px;
     }
-
     .hola-footer p {
         padding: 15px;
     }
