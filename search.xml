@@ -4,21 +4,98 @@
   
     
     <entry>
-      <title>Edge扩展推荐</title>
-      <link href="/posts/3c91f84e.html"/>
-      <url>/posts/3c91f84e.html</url>
+      <title>【已解决】Hexo使用Icarus主题安装abbrlink插件后toc插件生成的目录存在错误无法跳转的问题</title>
+      <link href="/posts/a55922c1.html"/>
+      <url>/posts/a55922c1.html</url>
       
-        <content type="html"><![CDATA[<p>2019年7月写过一篇Chrome插件推荐的文章，那时候我还在用Chrome作为我的主要浏览器。一晃三年过去了，我也早已从Google Chrome转入全新Chromium内核构建的Edge浏览器。微软倒蛮有意思，自己从头开发的东西不咋地，在别人的平台上倒是表现得相当好。由于国内的水土不服啊，我用Chrome时总会遇到同步不了的情况，这点的体验在Edge这儿得到了很好的改善，也是我用Edge的主要原因吧。前些天帮很多同学做新机开荒，也推荐他们就用这款“Win11原装”浏览器。当然一个浏览器肯定是离不开扩展的，趁着帮他们开荒这个机会，也顺便整理了我认为必备的一些浏览器扩展。</p><p><strong>本文更多的从个人角度出发，仅涵盖了笔者的主要需求，自然是粗略的，仅供参考。</strong></p><span id="more"></span><h2><span id="全部用户">全部用户</span></h2><h3><span id="dark-reader">Dark Reader</span></h3><p>简介：强制暗黑模式的网页</p><h3><span id="infinity-新标签页-pro">Infinity 新标签页 (Pro)</span></h3><p>简介：rt，一个新标签页扩展</p><h3><span id="onetab">OneTab</span></h3><p>简介： 打开了太多网页的时候，按一下可以帮你全部收起来，之后可以自由恢复</p><h3><span id="prevent-duplicate-tabs">Prevent Duplicate Tabs</span></h3><p>简介： 帮你干掉那些重复的标签页</p><h3><span id="ublock-origin">uBlock Origin</span></h3><p>简介：干掉广告，且是众多去广告插件中占用相对较少的</p><h3><span id="捕捉网页截图-fireshot的">捕捉网页截图 - FireShot的</span></h3><p>简介：rt，支持长截图（名字有点怪，可能是翻译问题，搜索FireShot就能找到）</p><h3><span id="暴力猴">暴力猴</span></h3><p>简介：装脚本的插件，和大名鼎鼎的油猴一样的功能，这个可能(?)小巧一点</p><h3><span id="沙拉查词-聚合词典划词翻译">沙拉查词-聚合词典划词翻译</span></h3><p>简介：rt，划词翻译，可配置内容超多</p><h3><span id="imagus">Imagus</span></h3><p>简介：可以把网页图片放大了看</p><h3><span id="user-agent-switcher-for-chrome">User-Agent Switcher for Chrome</span></h3><p>简介：“伪装”你自己</p><h3><span id="video-speed-controller">Video Speed Controller</span></h3><p>简介：rt，但是竟然也可以改视频前广告的播放速度！</p><h2><span id="哔哩哔哩用户">哔哩哔哩用户</span></h2><h3><span id="pakku哔哩哔哩弹幕过滤器">pakku：哔哩哔哩弹幕过滤器</span></h3><p>简介：简化（过滤）你的b站弹幕</p><h3><span id="哔哩哔哩助手bilibilicom-综合辅助扩">哔哩哔哩助手：bilibili.com 综合辅助扩</span></h3><p>简介：功能超多，我主要用来下载b站视频了</p><h2><span id="steam用户">Steam用户</span></h2><h3><span id="augmented-steam">Augmented Steam</span></h3><p>简介：为steam官网提供了众多试用的玩意儿</p><h2><span id="it工作者">IT工作者</span></h2><h3><span id="octotree-github-code-tree">Octotree - GitHub code tree</span></h3><p>简介：方便地查看github上某个repository的文件结构</p><h3><span id="surfingkeys">Surfingkeys</span></h3><p>简介：像vim一样的玩意儿，让你完全用你的键盘浏览网页</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="问题再现"><a href="#问题再现" class="headerlink" title="问题再现"></a>问题再现</h2><p>配置Heox博客，为了优化seo，安装了abbrlink插件。但突然发现原来可以正常使用的Icarus主题自带的toc目录侧边栏无法正常跳转。查看源代码发现<code>&lt;a&gt;</code>标签的<code>href</code>属性均显示为<code>&quot;#&quot;</code>而非正确地址，遂前往寻找解决方案。</p><span id="more"></span><h2 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h2><p>来源：<a href="https://blog.csdn.net/weixin_45149481/article/details/116794535">hexo文章目录点击不跳转，html没有生成href_宁理大神1996的博客-CSDN博客</a></p><p>修改<code>(你的Blog目录)/node_modules/hexo-toc/lib/filter.js</code>中的<strong>29~31</strong>行</p><p>由原来的这样</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//$title.attr(&#x27;id&#x27;, id);</span></span><br><span class="line">$title.<span class="title function_">children</span>(<span class="string">&#x27;a&#x27;</span>).<span class="title function_">remove</span>();</span><br><span class="line">$title.<span class="title function_">html</span>( <span class="string">&#x27;&lt;span id=&quot;&#x27;</span> + id + <span class="string">&#x27;&quot;&gt;&#x27;</span> + $title.<span class="title function_">html</span>() + <span class="string">&#x27;&lt;/span&gt;&#x27;</span> );</span><br><span class="line">$title.<span class="title function_">removeAttr</span>(<span class="string">&#x27;id&#x27;</span>);</span><br></pre></td></tr></table></figure><p>改为这样</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$title.<span class="title function_">attr</span>(<span class="string">&#x27;id&#x27;</span>, id);</span><br><span class="line"><span class="comment">// $title.children(&#x27;a&#x27;).remove();</span></span><br><span class="line"><span class="comment">// $title.html( &#x27;&lt;span id=&quot;&#x27; + id + &#x27;&quot;&gt;&#x27; + $title.html() + &#x27;&lt;/span&gt;&#x27; );</span></span><br><span class="line"><span class="comment">// $title.removeAttr(&#x27;id&#x27;);</span></span><br></pre></td></tr></table></figure>]]></content>
       
       
       
         <tags>
             
-            <tag> Edge </tag>
+            <tag> 问题 </tag>
+            
+            <tag> 已解决 </tag>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Icarus </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>RLCraft新手教程一：过渡到你的正常生存</title>
+      <link href="/posts/a1ada34d.html"/>
+      <url>/posts/a1ada34d.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>本教程是笔者自己游玩过程中写的，出发点是笔者自己想玩但又不想花费时间看很多实况去了解一些细节，又找不到比较详细的文字版中文教程，以致于无从下手，只能慢慢啃各种模组的百科和RLCraft Wiki，便以教程形式写下自己的游玩过程，希望对后来者有所帮助。笔者不是什么资深玩家，故难免有疏漏，请大家多多包涵。</p></blockquote><p>由于NTP模组（<a href="https://www.mcmod.cn/class/2138.html">No Tree Punching，无树可撸</a>）的存在，初入RLCraft，你的第一件事情不再是获取原木，而是撸树叶获取木棍，然后找到沙砾获取燧石。你可以按住鼠标左键徒手破坏树叶和沙砾，然后用右键点击掉落物以拿起它（或者你也可以按下shift来吸取附近的掉落物）。</p><span id="more"></span><p>手拿燧石右击石头&#x2F;圆石等坚硬方块（?）上表面，你可以获取燧石碎块，然后打开背包，在2*2的合成栏上边放燧石碎块，下边放木棍，获取一把粗糙的小刀。</p><p>使用粗糙的小刀破坏草，可以获得植物纤维，在背包合成栏用三个植物纤维合成一个植物绳。然后再使用燧石碎块、植物绳、木棍合成粗糙的斧头。恭喜你获取了这个游戏的第一把斧头，用这把斧头你就可以开采原木了——当心，树倒下来可能会砸死你！</p><p>你不再能够直接使用背包合成栏分解原木，而是需要把原木竖直放在地上，并用斧头右击其上表面，以获取两块木板。木棍也可以用类似的方式获取——将木板放在地上，然后用斧头右击。</p><p>你可以看jei获取更多燧石工具的制作方法，但你更可以开始制作原版的木制工具。用木镐挖石头会掉落石子，四个石子2*2摆放可以获取圆石，而挖圆石则会直接掉落圆石。</p><p>恭喜你进入石器时代！现在，你可以开始下矿了！但要时刻注意的一点是照明——恐怖生物会在黑暗中生成… 别自己怎么死的都不知道。你会发现木棍加煤炭不再能合成原版火把，它们现在只能合成熄灭的火把。要点亮它们，你需要的是一颗打火石——将熄灭的火把和打火石放在合成栏里，你就可以获得点燃的火把。但这火把仍然会熄灭——比如一场雨过后，比如燃烧很久之后…</p><p>虽然还有很多路要走，但你现在基本上可以短暂地享受一回类原版的MC了。</p><p>To be continue…</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 游戏 </tag>
+            
+            <tag> Minecraft </tag>
+            
+            <tag> RLCraft </tag>
+            
+            <tag> 教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>补记一个用Vue.js和ElementUI实现的在线抽奖网页</title>
+      <link href="/posts/6a8a1633.html"/>
+      <url>/posts/6a8a1633.html</url>
+      
+        <content type="html"><![CDATA[<p>这件事儿发生在我的高中某个新学期开始，新来了一个电脑老师。有点打赌或者考验我的性质吧，ta说ta弄了随机数点名的小网页，还能用同学的照片进行抽取，问我能不能实现一个。ta的实现方法是jQuery，技术上比较老，界面也不太好看。我想去尝试一下别的方法，正好也试试略微学了一点的Vue.js，为了好看，用了Element UI。</p><span id="more"></span><p>一两个周末最终实现到现在的效果，能输入名字抽人，能随机数抽人（学号抽人？），还有一个通过图片抽的到今天也还没做。当时对着Vue.js和Element UI的开发文档勉里勉强做出来这个效果，现在早把那些基础知识忘记了，也不知道以后有没有工夫完善它了。</p><p>你可以<a href="/NoRenderPages/CatchDog/CatchDog.html">点击这里</a>来玩玩看。</p><p><img src="/img/loading.gif" data-original="https://pic.imgdb.cn/item/6308b57316f2c2beb1fad0f4.png"><br><img src="/img/loading.gif" data-original="https://pic.imgdb.cn/item/6308b57316f2c2beb1fad0ec.png"><br><img src="/img/loading.gif" data-original="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad081.png"><br><img src="/img/loading.gif" data-original="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad087.png"><br><img src="/img/loading.gif" data-original="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad091.png"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 记录 </tag>
+            
+            <tag> Vue.js </tag>
+            
+            <tag> Element UI </tag>
+            
+            <tag> Html </tag>
+            
+            <tag> JS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Edge扩展推荐</title>
+      <link href="/posts/3c91f84e.html"/>
+      <url>/posts/3c91f84e.html</url>
+      
+        <content type="html"><![CDATA[<p>2019年7月写过一篇Chrome插件推荐的文章，那时候我还在用Chrome作为我的主要浏览器。一晃三年过去了，我也早已从Google Chrome转入全新Chromium内核构建的Edge浏览器。微软倒蛮有意思，自己从头开发的东西不咋地，在别人的平台上倒是表现得相当好。由于国内的水土不服啊，我用Chrome时总会遇到同步不了的情况，这点的体验在Edge这儿得到了很好的改善，也是我用Edge的主要原因吧。前些天帮很多同学做新机开荒，也推荐他们就用这款“Win11原装”浏览器。当然一个浏览器肯定是离不开扩展的，趁着帮他们开荒这个机会，也顺便整理了我认为必备的一些浏览器扩展。</p><p><strong>本文更多的从个人角度出发，仅涵盖了笔者的主要需求，自然是粗略的，仅供参考。</strong></p><span id="more"></span><h2 id="全部用户"><a href="#全部用户" class="headerlink" title="全部用户"></a>全部用户</h2><h3 id="dark-reader"><a href="#Dark-Reader" class="headerlink" title="Dark Reader"></a>Dark Reader</h3><p>简介：强制暗黑模式的网页</p><h3 id="infinity-新标签页-pro"><a href="#Infinity-新标签页-Pro" class="headerlink" title="Infinity 新标签页 (Pro)"></a>Infinity 新标签页 (Pro)</h3><p>简介：rt，一个新标签页扩展</p><h3 id="onetab"><a href="#OneTab" class="headerlink" title="OneTab"></a>OneTab</h3><p>简介： 打开了太多网页的时候，按一下可以帮你全部收起来，之后可以自由恢复</p><h3 id="prevent-duplicate-tabs"><a href="#Prevent-Duplicate-Tabs" class="headerlink" title="Prevent Duplicate Tabs"></a>Prevent Duplicate Tabs</h3><p>简介： 帮你干掉那些重复的标签页</p><h3 id="ublock-origin"><a href="#uBlock-Origin" class="headerlink" title="uBlock Origin"></a>uBlock Origin</h3><p>简介：干掉广告，且是众多去广告插件中占用相对较少的</p><h3 id="捕捉网页截图-fireshot的"><a href="#捕捉网页截图-FireShot的" class="headerlink" title="捕捉网页截图 - FireShot的"></a>捕捉网页截图 - FireShot的</h3><p>简介：rt，支持长截图（名字有点怪，可能是翻译问题，搜索FireShot就能找到）</p><h3 id="暴力猴"><a href="#暴力猴" class="headerlink" title="暴力猴"></a>暴力猴</h3><p>简介：装脚本的插件，和大名鼎鼎的油猴一样的功能，这个可能(?)小巧一点</p><h3 id="沙拉查词-聚合词典划词翻译"><a href="#沙拉查词-聚合词典划词翻译" class="headerlink" title="沙拉查词-聚合词典划词翻译"></a>沙拉查词-聚合词典划词翻译</h3><p>简介：rt，划词翻译，可配置内容超多</p><h3 id="imagus"><a href="#Imagus" class="headerlink" title="Imagus"></a>Imagus</h3><p>简介：可以把网页图片放大了看</p><h3 id="user-agent-switcher-for-chrome"><a href="#User-Agent-Switcher-for-Chrome" class="headerlink" title="User-Agent Switcher for Chrome"></a>User-Agent Switcher for Chrome</h3><p>简介：“伪装”你自己</p><h3 id="video-speed-controller"><a href="#Video-Speed-Controller" class="headerlink" title="Video Speed Controller"></a>Video Speed Controller</h3><p>简介：rt，但是竟然也可以改视频前广告的播放速度！</p><h2 id="哔哩哔哩用户"><a href="#哔哩哔哩用户" class="headerlink" title="哔哩哔哩用户"></a>哔哩哔哩用户</h2><h3 id="pakku哔哩哔哩弹幕过滤器"><a href="#pakku：哔哩哔哩弹幕过滤器" class="headerlink" title="pakku：哔哩哔哩弹幕过滤器"></a>pakku：哔哩哔哩弹幕过滤器</h3><p>简介：简化（过滤）你的b站弹幕</p><h3 id="哔哩哔哩助手bilibilicom-综合辅助扩"><a href="#哔哩哔哩助手：bilibili-com-综合辅助扩" class="headerlink" title="哔哩哔哩助手：bilibili.com 综合辅助扩"></a>哔哩哔哩助手：bilibili.com 综合辅助扩</h3><p>简介：功能超多，我主要用来下载b站视频了</p><h2 id="steam用户"><a href="#Steam用户" class="headerlink" title="Steam用户"></a>Steam用户</h2><h3 id="augmented-steam"><a href="#Augmented-Steam" class="headerlink" title="Augmented Steam"></a>Augmented Steam</h3><p>简介：为steam官网提供了众多试用的玩意儿</p><h2 id="it工作者"><a href="#IT工作者" class="headerlink" title="IT工作者"></a>IT工作者</h2><h3 id="octotree-github-code-tree"><a href="#Octotree-GitHub-code-tree" class="headerlink" title="Octotree - GitHub code tree"></a>Octotree - GitHub code tree</h3><p>简介：方便地查看github上某个repository的文件结构</p><h3 id="surfingkeys"><a href="#Surfingkeys" class="headerlink" title="Surfingkeys"></a>Surfingkeys</h3><p>简介：像vim一样的玩意儿，让你完全用你的键盘浏览网页</p>]]></content>
+      
+      
+      
+        <tags>
             
             <tag> 浏览器 </tag>
             
             <tag> 推荐 </tag>
+            
+            <tag> Edge </tag>
             
         </tags>
       
@@ -31,13 +108,36 @@
       <link href="/posts/50b3c006.html"/>
       <url>/posts/50b3c006.html</url>
       
-        <content type="html"><![CDATA[<p>电脑是以前的老电脑，初一暑假时候买的y700。配置低的可怜，毫无性价比的一台机子吧，当年还是电脑小白的时候保意买的，在完全不懂的情况下被忽悠着忽悠着买了，满满的坑啊。</p><p>这电脑之前被我拆开来过，为了加一条固态，后盖螺丝因而已经不全了（拆必丢原则!），不过这次没丢!</p><span id="more"></span><p>硅脂买的是7921，网上说好用就买了，竟然还送了一些刷子垫片啥的，应该是很多人都买了清灰用的所以店家就把清灰附属需要的东西也都附赠了，这点还挺不错的。但是实际涂起来吧，这款硅脂是真的令我痛苦——真的很奇妙的质感，比较像容易断的那种橡皮泥(?)，反正结果就很尴尬（我知道我涂多了！没办法）</p><p>弄好装完发现点不亮了!吓了我一跳，结果发现是放那儿好久原来一直没接电源所以没电，接上电就能正常进系统了，太懒了，就没烤一下再看看。</p><p><img src="/img/loading.gif" data-original="https://cdn.jsdelivr.net/gh/BlockLune/MyPictureBed/IMG_20220824_212820.jpg" alt="所用硅脂——信越7921"></p><p><img src="/img/loading.gif" data-original="https://cdn.jsdelivr.net/gh/BlockLune/MyPictureBed/IMG_20220824_220243.jpg" alt="商家还送了一些清灰用的玩意儿（这张照片是补拍的）"></p><p><img src="/img/loading.gif" data-original="https://cdn.jsdelivr.net/gh/BlockLune/MyPictureBed/IMG_20220824_212642.jpg" alt="清灰前的风扇"></p><p><img src="/img/loading.gif" data-original="https://cdn.jsdelivr.net/gh/BlockLune/MyPictureBed/IMG_20220824_213121.jpg" alt="清灰前的...这叫啥..."></p><p><img src="/img/loading.gif" data-original="https://cdn.jsdelivr.net/gh/BlockLune/MyPictureBed/IMG_20220824_214422.jpg" alt="擦掉旧的硅脂（原来这个方方的才是gpu！）"></p><p><img src="/img/loading.gif" data-original="https://cdn.jsdelivr.net/gh/BlockLune/MyPictureBed/IMG_20220824_214436.jpg" alt="尽力清灰后..."></p><p><img src="/img/loading.gif" data-original="https://cdn.jsdelivr.net/gh/BlockLune/MyPictureBed/IMG_20220824_215223.jpg" alt="涂多了...希望不要出事"></p>]]></content>
+        <content type="html"><![CDATA[<p>电脑是以前的老电脑，初一暑假时候买的y700。配置低的可怜，毫无性价比的一台机子吧，当年还是电脑小白的时候保意买的，在完全不懂的情况下被忽悠着忽悠着买了，满满的坑啊。</p><p>这电脑之前被我拆开来过，为了加一条固态，后盖螺丝因而已经不全了（拆必丢原则!），不过这次没丢!</p><span id="more"></span><p>硅脂买的是7921，网上说好用就买了，竟然还送了一些刷子垫片啥的，应该是很多人都买了清灰用的所以店家就把清灰附属需要的东西也都附赠了，这点还挺不错的。但是实际涂起来吧，这款硅脂是真的令我痛苦——真的很奇妙的质感，比较像容易断的那种橡皮泥(?)，反正结果就很尴尬（我知道我涂多了！没办法）</p><p>弄好装完发现点不亮了!吓了我一跳，结果发现是放那儿好久原来一直没接电源所以没电，接上电就能正常进系统了，太懒了，就没烤一下再看看。</p><p><img src="/img/loading.gif" data-original="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed37f.jpg" alt="所用硅脂——信越7921"></p><p><img src="/img/loading.gif" data-original="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed388.jpg" alt="商家还送了一些清灰用的玩意儿（这张照片是补拍的）"></p><p><img src="/img/loading.gif" data-original="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed394.jpg" alt="清灰前的风扇"></p><p><img src="/img/loading.gif" data-original="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed36a.jpg" alt="清灰前的...这叫啥..."></p><p><img src="/img/loading.gif" data-original="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed375.jpg" alt="擦掉旧的硅脂（原来这个方方的才是gpu！）"></p><p><img src="/img/loading.gif" data-original="https://pic.imgdb.cn/item/6308bb6816f2c2beb1fed7e1.jpg" alt="尽力清灰后..."></p><p><img src="/img/loading.gif" data-original="https://pic.imgdb.cn/item/6308bb6816f2c2beb1fed7e6.jpg" alt="涂多了...希望不要出事"></p>]]></content>
       
       
       
         <tags>
             
             <tag> 记录 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Chrome插件推荐</title>
+      <link href="/posts/72a59031.html"/>
+      <url>/posts/72a59031.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p> 注：文中提到的<code>鹏少</code>、<code>Joker鹏少</code>等均指B站up主<a href="https://space.bilibili.com/92678046">JOKER鹏少</a>，版权归其所有。他也是我非常喜欢的一个up主，为避免误会，特此声明。介绍中的引用部分为各个插件自己的介绍。</p></blockquote><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>你可能常年使用着国产的一些浏览器，却也常年遭受着各种弹窗、全家桶的侵扰…</p><p>你也可能不止一次地听过”Chrome”，安装下来后却发现他空空如也，又默默地装回那些国产…</p><p>那么，让这些插件来拯救你吧</p><span id="more"></span><h2 id="插件安装方法"><a href="#插件安装方法" class="headerlink" title="插件安装方法"></a>插件安装方法</h2><p>问度娘~ 或者在<a href="https://www.bilibili.com/video/av29290563">这里</a>观看视频教程</p><h2 id="必备插件"><a href="#必备插件" class="headerlink" title="必备插件"></a>必备插件</h2><h3 id="tampermonkey"><a href="#Tampermonkey" class="headerlink" title="Tampermonkey"></a>Tampermonkey</h3><ul><li><p><strong>介绍</strong></p><blockquote><p>The world’s most popular userscript manager</p></blockquote><p>一个脚本管理插件，允许你自己通过编写脚本来实现某种功能，也可以下载脚本使用</p></li><li><p><strong>下载地址</strong></p><p><a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Chrome网上应用店</a></p></li></ul><h3 id="谷歌访问助手"><a href="#谷歌访问助手" class="headerlink" title="谷歌访问助手"></a>谷歌访问助手</h3><ul><li><p><strong>介绍</strong></p><blockquote><p>最简单易用的谷歌访问助手,为chrome扩展用户量身打造。可以解决chrome扩展无法自动更新的问题，同时可以访问谷歌google搜索，Gmail邮箱，google+等谷歌服务。</p></blockquote><p>帮助你访问所有Google的页面</p></li><li><p><strong>截图预览</strong></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/08/26/vRECiF.jpg" alt="谷歌访问助手"></p></li><li><p><strong>下载地址</strong></p><p><a href="https://chrome.google.com/webstore/detail/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B/gocklaboggjfkolaknpbhddbaopcepfp?hl=zh-CN">Chrome网上应用店</a></p><p>你也可以去<a href="https://www.jokerps.com/851.html">鹏少资源网</a>下载不用锁定主页的特别版</p></li></ul><h3 id="infinity-新标签页pro"><a href="#Infinity-新标签页-Pro" class="headerlink" title="Infinity 新标签页(Pro)"></a>Infinity 新标签页(Pro)</h3><ul><li><p><strong>介绍</strong></p><blockquote><p>百万用户选择的新标签页和快速拨号，自由添加网站图标，云端高清壁纸，快速访问书签、天气、笔记、待办事项、扩展管理与历史记录。使你的主页和开始页更加美观和易用</p></blockquote><p>在<a href="https://www.bilibili.com/video/av18789095">这里</a>可以观看鹏少更详细的介绍</p></li><li><p><strong>截图预览</strong></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/08/26/vREmdK.jpg" alt="Infinity新标签页"></p></li><li><p><strong>下载地址</strong></p><p><a href="https://chrome.google.com/webstore/detail/infinity-new-tab-pro/nnnkddnnlpamobajfibfdgfnbcnkgngh">Chrome网上应用店</a></p></li></ul><h3 id="百度优化"><a href="#百度优化" class="headerlink" title="百度优化"></a>百度优化</h3><ul><li><p><strong>介绍</strong></p><blockquote><p>本扩展支持百度、搜狗、必应、好搜、谷歌搜索结果的页面结果广告优化和显示内容优化。绕过百度和搜狗的重定向，同时优化主流搜索引擎的搜索结果的样式效果，更方便快速的得到搜索的真实内容，更符合用户习惯。同时支持双列三列甚至四列展示百度谷歌和必应的页面，还自带有护眼模式</p></blockquote></li><li><p><strong>截图预览</strong></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/08/26/vREeZ6.jpg" alt="安装百度优化插件后的Google主页"></p></li><li><p><strong>下载地址</strong></p><p><a href="%5Bhttps://chrome.google.com/webstore/detail/%E7%99%BE%E5%BA%A6%E4%BC%98%E5%8C%96/denccnggppnbllgifimhkcehbpmlljcp%5D(https://chrome.google.com/webstore/detail/%E7%99%BE%E5%BA%A6%E4%BC%98%E5%8C%96/denccnggppnbllgifimhkcehbpmlljcp)">Chrome网上应用店</a></p></li></ul><h3 id="划词翻译"><a href="#划词翻译" class="headerlink" title="划词翻译"></a>划词翻译</h3><ul><li><p><strong>介绍</strong></p><blockquote><p>支持谷歌、百度、有道三大翻译和朗读引擎，可以方便的查看、复制和朗读不同引擎的翻译结果。</p></blockquote><p>同类型的软件很多 但是自己感觉这款最轻量好用</p></li><li><p><strong>截图预览</strong></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/08/26/vREAMR.jpg" alt="划词翻译界面"></p></li><li><p><strong>下载地址</strong></p><p><a href="%5Bhttps://chrome.google.com/webstore/detail/%E5%88%92%E8%AF%8D%E7%BF%BB%E8%AF%91/ikhdkkncnoglghljlkmcimlnlhkeamad%5D(https://chrome.google.com/webstore/detail/%E5%88%92%E8%AF%8D%E7%BF%BB%E8%AF%91/ikhdkkncnoglghljlkmcimlnlhkeamad)">Chrome网上应用店</a></p></li></ul><h3 id="fireshot"><a href="#FireShot" class="headerlink" title="FireShot"></a>FireShot</h3><ul><li><p><strong>介绍</strong></p><blockquote><p>捕捉网页截图，编辑并将它们保存为PDF，JPEG，GIF，PNG或BMP；上传，打印，在Photoshop中打开，复制到剪贴板或电子邮件</p></blockquote><p>在<a href="https://www.bilibili.com/video/av44274712">这里</a>可以观看鹏少更详细的介绍</p></li><li><p><strong>截图预览</strong></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/08/26/vREiRJ.jpg" alt="一张用FireShot截取的维基百科首页"></p></li><li><p><strong>下载地址</strong></p><p><a href="https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg">Chrome网上应用店</a></p></li></ul><h3 id="stylus"><a href="#Stylus" class="headerlink" title="Stylus"></a>Stylus</h3><ul><li><p><strong>介绍</strong></p><blockquote><p>Stylus 是一个调整网页外观的用户样式管理器。它可让您轻松地为许多热门网站网站安装主题和皮肤。</p></blockquote><p>在<a href="https://www.bilibili.com/video/av27145745">这里</a>可以观看鹏少更详细的介绍</p></li><li><p><strong>截图预览</strong></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/08/26/vREVqx.jpg" alt="使用Stylus中“Baidu Lite 百度轻”后的百度主页"></p></li><li><p><strong>下载地址</strong></p><p><a href="https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne">Chrome网上应用店</a></p><p><a href="https://add0n.com/stylus.html">官网</a></p></li></ul><h3 id="adblock-plus"><a href="#Adblock-Plus" class="headerlink" title="Adblock Plus"></a>Adblock Plus</h3><ul><li><p><strong>介绍</strong></p><blockquote><p>Adblock Plus 是拥有超过 5 亿次下载的全球最受欢迎的广告拦截软件之一。</p></blockquote></li><li><p><strong>下载地址</strong></p><p><a href="https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb">Chrome网上应用店</a></p></li></ul><h3 id="adguard-广告拦截器"><a href="#AdGuard-广告拦截器" class="headerlink" title="AdGuard 广告拦截器"></a>AdGuard 广告拦截器</h3><ul><li><p><strong>介绍</strong></p><blockquote><p>广告拦截扩展对抗广告和弹出窗口。拦截 Facebook，YouTube 和所有其它网站的广告。</p></blockquote></li><li><p><strong>下载地址</strong></p><p><a href="https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg">Chrome网上应用店</a></p></li></ul><h3 id="clutter-free"><a href="#Clutter-Free" class="headerlink" title="Clutter Free"></a>Clutter Free</h3><ul><li><p><strong>介绍</strong></p><blockquote><p>Reduce tab clutter - prevent duplicate tabs, quickly search &amp; switch tabs, and more…</p></blockquote><p>自动关闭重复打开的标签页</p></li><li><p><strong>下载地址</strong></p><p><a href="https://chrome.google.com/webstore/detail/clutter-free-prevent-dupl/iipjdmnoigaobkamfhnojmglcdbnfaaf">Chrome网上应用店</a></p></li></ul><h3 id="crxmouse-chrometm-手势"><a href="#crxMouse-Chrome™-手势" class="headerlink" title="crxMouse Chrome™ 手势"></a>crxMouse Chrome™ 手势</h3><ul><li><p><strong>介绍</strong></p><blockquote><p>方便,快捷,充分发掘鼠标的所有操作.功能包括:鼠标手势,超级拖曳,滚轮手势,摇杆手势,平滑滚动,标签页列表等.</p></blockquote></li><li><p><strong>截图预览</strong></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/08/26/vREFz9.jpg" alt="crxMouse设置界面"></p></li><li><p><strong>下载地址</strong></p><p><a href="https://chrome.google.com/webstore/detail/crxmouse-chrome-gestures/jlgkpaicikihijadgifklkbpdajbkhjo">Chrome网上应用店</a></p><p><a href="https://crxmouse.com/zh-hans/">官网</a></p></li></ul><h3 id="ie-tab"><a href="#IE-Tab" class="headerlink" title="IE Tab"></a>IE Tab</h3><ul><li><p><strong>介绍</strong></p><blockquote><p>在标签页中以IE内核显示网页。快捷、强健、可靠。这个版本是最流行的一个原因。</p></blockquote></li><li><p><strong>下载地址</strong></p><p><a href="https://chrome.google.com/webstore/detail/ie-tab/hehijbfgiekmjfkfjpbkbammjbdenadd">Chrome网上应用店</a></p></li></ul><h3 id="imagus"><a href="#Imagus" class="headerlink" title="Imagus"></a>Imagus</h3><ul><li><p><strong>介绍</strong></p><blockquote><p>Enlarge thumbnails, and show images&#x2F;videos from links with a mouse hover.</p></blockquote><p>在<a href="https://www.bilibili.com/video/av44940125">这里</a>可以观看鹏少更详细的介绍</p></li><li><p><strong>下载地址</strong></p><p><a href="https://chrome.google.com/webstore/detail/imagus/immpkjjlgappgfkkfieppnmlhakdmaab">Chrome网上应用店</a></p></li></ul><h3 id="lazy-tabs"><a href="#Lazy-Tabs" class="headerlink" title="Lazy Tabs"></a>Lazy Tabs</h3><ul><li><p><strong>介绍</strong></p><blockquote><p>Unload all inactive tabs (except pinned) at startup or by clicking an icon</p></blockquote></li><li><p><strong>下载地址</strong></p><p><a href="https://chrome.google.com/webstore/detail/lazy-tabs/aabgbgciohhaogajcnacpgilhmacdahc">Chrome网上应用店</a></p></li></ul><h3 id="onetab"><a href="#OneTab" class="headerlink" title="OneTab"></a>OneTab</h3><ul><li><p><strong>介绍</strong></p><blockquote><p>节省高达95％的内存，并减轻标签页混乱现象</p></blockquote></li><li><p><strong>截图预览</strong></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/08/26/vREEs1.jpg" alt="将打开的三个标签页全部聚拢"></p></li><li><p><strong>下载地址</strong></p><p><a href="https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall">Chrome网上应用店</a></p></li></ul><h3 id="云盘万能钥匙"><a href="#云盘万能钥匙" class="headerlink" title="云盘万能钥匙"></a>云盘万能钥匙</h3><ul><li><p><strong>介绍</strong></p><blockquote><p>您的云盘智能助手</p></blockquote><p>在<a href="https://www.bilibili.com/video/av55835350">这里</a>可以观看鹏少更详细的介绍</p></li><li><p><strong>下载地址</strong></p><p><a href="https://chrome.google.com/webstore/detail/%E4%BA%91%E7%9B%98%E4%B8%87%E8%83%BD%E9%92%A5%E5%8C%99/anlllmnpjodopgbkbpnghnjlelnogfjc">Chrome网上应用店</a></p><p><a href="https://extension.yunpanjingling.com/">官网</a></p></li></ul><h2 id="适用于b站朋友们的插件"><a href="#适用于B站朋友们的插件" class="headerlink" title="适用于B站朋友们的插件"></a>适用于B站朋友们的插件</h2><h3 id="哔哩哔哩助手"><a href="#哔哩哔哩助手" class="headerlink" title="哔哩哔哩助手"></a>哔哩哔哩助手</h3><ul><li><p><strong>介绍</strong></p><blockquote><p>哔哩哔哩弹幕网辅助扩展，拥有视频区和直播区的人性化功能</p></blockquote></li><li><p><strong>截图预览</strong></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/08/26/vREPG4.jpg" alt="bilibili助手设置页面"></p></li><li><p><strong>下载地址</strong></p><p><a href="https://chrome.google.com/webstore/detail/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E5%8A%A9%E6%89%8B%EF%BC%9Abilibilicom-%E7%BB%BC%E5%90%88%E8%BE%85%E5%8A%A9%E6%89%A9%E5%B1%95/kpbnombpnpcffllnianjibmpadjolanh">Chrome网上应用店</a></p><p><a href="https://bilibili-helper.github.io/">官网</a></p></li></ul><h3 id="获取哔哩哔哩bilibili视频的封面图片"><a href="#获取哔哩哔哩bilibili视频的封面图片" class="headerlink" title="获取哔哩哔哩bilibili视频的封面图片"></a>获取哔哩哔哩bilibili视频的封面图片</h3><ul><li><p><strong>介绍</strong></p><blockquote><p>获取哔哩哔哩bilibili视频的封面图片</p></blockquote></li><li><p><strong>下载地址</strong></p><p><a href="https://chrome.google.com/webstore/detail/%E8%8E%B7%E5%8F%96%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9bilibili%E8%A7%86%E9%A2%91%E7%9A%84%E5%B0%81%E9%9D%A2%E5%9B%BE%E7%89%87/egodkcidolldembjebmiepoibpahmllh">Chrome网上应用店</a></p></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Chrome </tag>
+            
+            <tag> 浏览器 </tag>
+            
+            <tag> 推荐 </tag>
             
         </tags>
       
