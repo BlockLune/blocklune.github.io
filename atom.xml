@@ -6,7 +6,7 @@
   <link href="http://blocklune.github.io/atom.xml" rel="self"/>
   
   <link href="http://blocklune.github.io/"/>
-  <updated>2022-08-26T13:17:40.746Z</updated>
+  <updated>2022-08-26T13:29:21.000Z</updated>
   <id>http://blocklune.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://blocklune.github.io/posts/a55922c1.html"/>
     <id>http://blocklune.github.io/posts/a55922c1.html</id>
     <published>2022-08-26T13:06:34.000Z</published>
-    <updated>2022-08-26T13:17:40.746Z</updated>
+    <updated>2022-08-26T13:29:21.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="问题再现"><a href="#问题再现" class="headerlink" title="问题再现"></a>问题再现</h2><p>配置Heox博客，为了优化seo，安装了abbrlink插件。但突然发现原来可以正常使用的Icarus主题自带的toc目录侧边栏无法正常跳转。查看源代码发现<code>&lt;a&gt;</code>标签的<code>href</code>属性均显示为<code>&quot;#&quot;</code>而非正确地址，遂前往寻找解决方案。</p><span id="more"></span><h2 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h2><p>来源：<a href="https://blog.csdn.net/weixin_45149481/article/details/116794535">hexo文章目录点击不跳转，html没有生成href_宁理大神1996的博客-CSDN博客</a></p><p>修改<code>(你的Blog目录)/node_modules/hexo-toc/lib/filter.js</code>中的<strong>29~31</strong>行</p><p>由原来的这样</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//$title.attr(&#x27;id&#x27;, id);</span></span><br><span class="line">$title.<span class="title function_">children</span>(<span class="string">&#x27;a&#x27;</span>).<span class="title function_">remove</span>();</span><br><span class="line">$title.<span class="title function_">html</span>( <span class="string">&#x27;&lt;span id=&quot;&#x27;</span> + id + <span class="string">&#x27;&quot;&gt;&#x27;</span> + $title.<span class="title function_">html</span>() + <span class="string">&#x27;&lt;/span&gt;&#x27;</span> );</span><br><span class="line">$title.<span class="title function_">removeAttr</span>(<span class="string">&#x27;id&#x27;</span>);</span><br></pre></td></tr></table></figure><p>改为这样</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$title.<span class="title function_">attr</span>(<span class="string">&#x27;id&#x27;</span>, id);</span><br><span class="line"><span class="comment">// $title.children(&#x27;a&#x27;).remove();</span></span><br><span class="line"><span class="comment">// $title.html( &#x27;&lt;span id=&quot;&#x27; + id + &#x27;&quot;&gt;&#x27; + $title.html() + &#x27;&lt;/span&gt;&#x27; );</span></span><br><span class="line"><span class="comment">// $title.removeAttr(&#x27;id&#x27;);</span></span><br></pre></td></tr></table></figure>]]></content>
     
@@ -29,6 +29,12 @@
     <summary type="html">&lt;h2 id=&quot;问题再现&quot;&gt;&lt;a href=&quot;#问题再现&quot; class=&quot;headerlink&quot; title=&quot;问题再现&quot;&gt;&lt;/a&gt;问题再现&lt;/h2&gt;&lt;p&gt;配置Heox博客，为了优化seo，安装了abbrlink插件。但突然发现原来可以正常使用的Icarus主题自带的toc目录侧边栏无法正常跳转。查看源代码发现&lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;标签的&lt;code&gt;href&lt;/code&gt;属性均显示为&lt;code&gt;&amp;quot;#&amp;quot;&lt;/code&gt;而非正确地址，遂前往寻找解决方案。&lt;/p&gt;</summary>
     
     
+    
+    <category term="学习" scheme="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="Web" scheme="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/Web/"/>
+    
+    <category term="Hexo" scheme="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/Web/Hexo/"/>
     
     
     <category term="问题" scheme="http://blocklune.github.io/tags/%E9%97%AE%E9%A2%98/"/>
@@ -46,7 +52,7 @@
     <link href="http://blocklune.github.io/posts/a1ada34d.html"/>
     <id>http://blocklune.github.io/posts/a1ada34d.html</id>
     <published>2022-08-26T11:40:18.000Z</published>
-    <updated>2022-08-26T11:53:05.722Z</updated>
+    <updated>2022-08-26T11:40:18.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>本教程是笔者自己游玩过程中写的，出发点是笔者自己想玩但又不想花费时间看很多实况去了解一些细节，又找不到比较详细的文字版中文教程，以致于无从下手，只能慢慢啃各种模组的百科和RLCraft Wiki，便以教程形式写下自己的游玩过程，希望对后来者有所帮助。笔者不是什么资深玩家，故难免有疏漏，请大家多多包涵。</p></blockquote><p>由于NTP模组（<a href="https://www.mcmod.cn/class/2138.html">No Tree Punching，无树可撸</a>）的存在，初入RLCraft，你的第一件事情不再是获取原木，而是撸树叶获取木棍，然后找到沙砾获取燧石。你可以按住鼠标左键徒手破坏树叶和沙砾，然后用右键点击掉落物以拿起它（或者你也可以按下shift来吸取附近的掉落物）。</p><span id="more"></span><p>手拿燧石右击石头&#x2F;圆石等坚硬方块（?）上表面，你可以获取燧石碎块，然后打开背包，在2*2的合成栏上边放燧石碎块，下边放木棍，获取一把粗糙的小刀。</p><p>使用粗糙的小刀破坏草，可以获得植物纤维，在背包合成栏用三个植物纤维合成一个植物绳。然后再使用燧石碎块、植物绳、木棍合成粗糙的斧头。恭喜你获取了这个游戏的第一把斧头，用这把斧头你就可以开采原木了——当心，树倒下来可能会砸死你！</p><p>你不再能够直接使用背包合成栏分解原木，而是需要把原木竖直放在地上，并用斧头右击其上表面，以获取两块木板。木棍也可以用类似的方式获取——将木板放在地上，然后用斧头右击。</p><p>你可以看jei获取更多燧石工具的制作方法，但你更可以开始制作原版的木制工具。用木镐挖石头会掉落石子，四个石子2*2摆放可以获取圆石，而挖圆石则会直接掉落圆石。</p><p>恭喜你进入石器时代！现在，你可以开始下矿了！但要时刻注意的一点是照明——恐怖生物会在黑暗中生成… 别自己怎么死的都不知道。你会发现木棍加煤炭不再能合成原版火把，它们现在只能合成熄灭的火把。要点亮它们，你需要的是一颗打火石——将熄灭的火把和打火石放在合成栏里，你就可以获得点燃的火把。但这火把仍然会熄灭——比如一场雨过后，比如燃烧很久之后…</p><p>虽然还有很多路要走，但你现在基本上可以短暂地享受一回类原版的MC了。</p><p>To be continue…</p>]]></content>
     
@@ -57,6 +63,12 @@
 &lt;p&gt;由于NTP模组（&lt;a href=&quot;https://www.mcmod.cn/class/2138.html&quot;&gt;No Tree Punching，无树可撸&lt;/a&gt;）的存在，初入RLCraft，你的第一件事情不再是获取原木，而是撸树叶获取木棍，然后找到沙砾获取燧石。你可以按住鼠标左键徒手破坏树叶和沙砾，然后用右键点击掉落物以拿起它（或者你也可以按下shift来吸取附近的掉落物）。&lt;/p&gt;</summary>
     
     
+    
+    <category term="游戏" scheme="http://blocklune.github.io/categories/%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="Minecraft" scheme="http://blocklune.github.io/categories/%E6%B8%B8%E6%88%8F/Minecraft/"/>
+    
+    <category term="RLCraft" scheme="http://blocklune.github.io/categories/%E6%B8%B8%E6%88%8F/Minecraft/RLCraft/"/>
     
     
     <category term="游戏" scheme="http://blocklune.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
@@ -74,7 +86,7 @@
     <link href="http://blocklune.github.io/posts/6a8a1633.html"/>
     <id>http://blocklune.github.io/posts/6a8a1633.html</id>
     <published>2022-08-26T06:58:40.000Z</published>
-    <updated>2022-08-26T12:06:02.971Z</updated>
+    <updated>2022-08-26T06:58:40.000Z</updated>
     
     <content type="html"><![CDATA[<p>这件事儿发生在我的高中某个新学期开始，新来了一个电脑老师。有点打赌或者考验我的性质吧，ta说ta弄了随机数点名的小网页，还能用同学的照片进行抽取，问我能不能实现一个。ta的实现方法是jQuery，技术上比较老，界面也不太好看。我想去尝试一下别的方法，正好也试试略微学了一点的Vue.js，为了好看，用了Element UI。</p><span id="more"></span><p>一两个周末最终实现到现在的效果，能输入名字抽人，能随机数抽人（学号抽人？），还有一个通过图片抽的到今天也还没做。当时对着Vue.js和Element UI的开发文档勉里勉强做出来这个效果，现在早把那些基础知识忘记了，也不知道以后有没有工夫完善它了。</p><p>你可以<a href="/NoRenderPages/CatchDog/CatchDog.html">点击这里</a>来玩玩看。</p><p><img src="/img/loading.gif" data-original="https://pic.imgdb.cn/item/6308b57316f2c2beb1fad0f4.png"><br><img src="/img/loading.gif" data-original="https://pic.imgdb.cn/item/6308b57316f2c2beb1fad0ec.png"><br><img src="/img/loading.gif" data-original="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad081.png"><br><img src="/img/loading.gif" data-original="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad087.png"><br><img src="/img/loading.gif" data-original="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad091.png"></p>]]></content>
     
@@ -82,6 +94,12 @@
     <summary type="html">&lt;p&gt;这件事儿发生在我的高中某个新学期开始，新来了一个电脑老师。有点打赌或者考验我的性质吧，ta说ta弄了随机数点名的小网页，还能用同学的照片进行抽取，问我能不能实现一个。ta的实现方法是jQuery，技术上比较老，界面也不太好看。我想去尝试一下别的方法，正好也试试略微学了一点的Vue.js，为了好看，用了Element UI。&lt;/p&gt;</summary>
     
     
+    
+    <category term="学习" scheme="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="Web" scheme="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/Web/"/>
+    
+    <category term="Vue.js" scheme="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/Web/Vue-js/"/>
     
     
     <category term="记录" scheme="http://blocklune.github.io/tags/%E8%AE%B0%E5%BD%95/"/>
@@ -101,7 +119,7 @@
     <link href="http://blocklune.github.io/posts/3c91f84e.html"/>
     <id>http://blocklune.github.io/posts/3c91f84e.html</id>
     <published>2022-08-25T13:06:12.000Z</published>
-    <updated>2022-08-26T05:58:10.058Z</updated>
+    <updated>2022-08-25T13:06:12.000Z</updated>
     
     <content type="html"><![CDATA[<p>2019年7月写过一篇Chrome插件推荐的文章，那时候我还在用Chrome作为我的主要浏览器。一晃三年过去了，我也早已从Google Chrome转入全新Chromium内核构建的Edge浏览器。微软倒蛮有意思，自己从头开发的东西不咋地，在别人的平台上倒是表现得相当好。由于国内的水土不服啊，我用Chrome时总会遇到同步不了的情况，这点的体验在Edge这儿得到了很好的改善，也是我用Edge的主要原因吧。前些天帮很多同学做新机开荒，也推荐他们就用这款“Win11原装”浏览器。当然一个浏览器肯定是离不开扩展的，趁着帮他们开荒这个机会，也顺便整理了我认为必备的一些浏览器扩展。</p><p><strong>本文更多的从个人角度出发，仅涵盖了笔者的主要需求，自然是粗略的，仅供参考。</strong></p><span id="more"></span><h2 id="全部用户"><a href="#全部用户" class="headerlink" title="全部用户"></a>全部用户</h2><h3 id="dark-reader"><a href="#Dark-Reader" class="headerlink" title="Dark Reader"></a>Dark Reader</h3><p>简介：强制暗黑模式的网页</p><h3 id="infinity-新标签页-pro"><a href="#Infinity-新标签页-Pro" class="headerlink" title="Infinity 新标签页 (Pro)"></a>Infinity 新标签页 (Pro)</h3><p>简介：rt，一个新标签页扩展</p><h3 id="onetab"><a href="#OneTab" class="headerlink" title="OneTab"></a>OneTab</h3><p>简介： 打开了太多网页的时候，按一下可以帮你全部收起来，之后可以自由恢复</p><h3 id="prevent-duplicate-tabs"><a href="#Prevent-Duplicate-Tabs" class="headerlink" title="Prevent Duplicate Tabs"></a>Prevent Duplicate Tabs</h3><p>简介： 帮你干掉那些重复的标签页</p><h3 id="ublock-origin"><a href="#uBlock-Origin" class="headerlink" title="uBlock Origin"></a>uBlock Origin</h3><p>简介：干掉广告，且是众多去广告插件中占用相对较少的</p><h3 id="捕捉网页截图-fireshot的"><a href="#捕捉网页截图-FireShot的" class="headerlink" title="捕捉网页截图 - FireShot的"></a>捕捉网页截图 - FireShot的</h3><p>简介：rt，支持长截图（名字有点怪，可能是翻译问题，搜索FireShot就能找到）</p><h3 id="暴力猴"><a href="#暴力猴" class="headerlink" title="暴力猴"></a>暴力猴</h3><p>简介：装脚本的插件，和大名鼎鼎的油猴一样的功能，这个可能(?)小巧一点</p><h3 id="沙拉查词-聚合词典划词翻译"><a href="#沙拉查词-聚合词典划词翻译" class="headerlink" title="沙拉查词-聚合词典划词翻译"></a>沙拉查词-聚合词典划词翻译</h3><p>简介：rt，划词翻译，可配置内容超多</p><h3 id="imagus"><a href="#Imagus" class="headerlink" title="Imagus"></a>Imagus</h3><p>简介：可以把网页图片放大了看</p><h3 id="user-agent-switcher-for-chrome"><a href="#User-Agent-Switcher-for-Chrome" class="headerlink" title="User-Agent Switcher for Chrome"></a>User-Agent Switcher for Chrome</h3><p>简介：“伪装”你自己</p><h3 id="video-speed-controller"><a href="#Video-Speed-Controller" class="headerlink" title="Video Speed Controller"></a>Video Speed Controller</h3><p>简介：rt，但是竟然也可以改视频前广告的播放速度！</p><h2 id="哔哩哔哩用户"><a href="#哔哩哔哩用户" class="headerlink" title="哔哩哔哩用户"></a>哔哩哔哩用户</h2><h3 id="pakku哔哩哔哩弹幕过滤器"><a href="#pakku：哔哩哔哩弹幕过滤器" class="headerlink" title="pakku：哔哩哔哩弹幕过滤器"></a>pakku：哔哩哔哩弹幕过滤器</h3><p>简介：简化（过滤）你的b站弹幕</p><h3 id="哔哩哔哩助手bilibilicom-综合辅助扩"><a href="#哔哩哔哩助手：bilibili-com-综合辅助扩" class="headerlink" title="哔哩哔哩助手：bilibili.com 综合辅助扩"></a>哔哩哔哩助手：bilibili.com 综合辅助扩</h3><p>简介：功能超多，我主要用来下载b站视频了</p><h2 id="steam用户"><a href="#Steam用户" class="headerlink" title="Steam用户"></a>Steam用户</h2><h3 id="augmented-steam"><a href="#Augmented-Steam" class="headerlink" title="Augmented Steam"></a>Augmented Steam</h3><p>简介：为steam官网提供了众多试用的玩意儿</p><h2 id="it工作者"><a href="#IT工作者" class="headerlink" title="IT工作者"></a>IT工作者</h2><h3 id="octotree-github-code-tree"><a href="#Octotree-GitHub-code-tree" class="headerlink" title="Octotree - GitHub code tree"></a>Octotree - GitHub code tree</h3><p>简介：方便地查看github上某个repository的文件结构</p><h3 id="surfingkeys"><a href="#Surfingkeys" class="headerlink" title="Surfingkeys"></a>Surfingkeys</h3><p>简介：像vim一样的玩意儿，让你完全用你的键盘浏览网页</p>]]></content>
     
@@ -110,6 +128,8 @@
 &lt;p&gt;&lt;strong&gt;本文更多的从个人角度出发，仅涵盖了笔者的主要需求，自然是粗略的，仅供参考。&lt;/strong&gt;&lt;/p&gt;</summary>
     
     
+    
+    <category term="推荐" scheme="http://blocklune.github.io/categories/%E6%8E%A8%E8%8D%90/"/>
     
     
     <category term="浏览器" scheme="http://blocklune.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
@@ -125,7 +145,7 @@
     <link href="http://blocklune.github.io/posts/50b3c006.html"/>
     <id>http://blocklune.github.io/posts/50b3c006.html</id>
     <published>2022-08-24T14:00:00.000Z</published>
-    <updated>2022-08-26T12:24:27.216Z</updated>
+    <updated>2022-08-24T14:00:00.000Z</updated>
     
     <content type="html"><![CDATA[<p>电脑是以前的老电脑，初一暑假时候买的y700。配置低的可怜，毫无性价比的一台机子吧，当年还是电脑小白的时候保意买的，在完全不懂的情况下被忽悠着忽悠着买了，满满的坑啊。</p><p>这电脑之前被我拆开来过，为了加一条固态，后盖螺丝因而已经不全了（拆必丢原则!），不过这次没丢!</p><span id="more"></span><p>硅脂买的是7921，网上说好用就买了，竟然还送了一些刷子垫片啥的，应该是很多人都买了清灰用的所以店家就把清灰附属需要的东西也都附赠了，这点还挺不错的。但是实际涂起来吧，这款硅脂是真的令我痛苦——真的很奇妙的质感，比较像容易断的那种橡皮泥(?)，反正结果就很尴尬（我知道我涂多了！没办法）</p><p>弄好装完发现点不亮了!吓了我一跳，结果发现是放那儿好久原来一直没接电源所以没电，接上电就能正常进系统了，太懒了，就没烤一下再看看。</p><p><img src="/img/loading.gif" data-original="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed37f.jpg" alt="所用硅脂——信越7921"></p><p><img src="/img/loading.gif" data-original="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed388.jpg" alt="商家还送了一些清灰用的玩意儿（这张照片是补拍的）"></p><p><img src="/img/loading.gif" data-original="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed394.jpg" alt="清灰前的风扇"></p><p><img src="/img/loading.gif" data-original="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed36a.jpg" alt="清灰前的...这叫啥..."></p><p><img src="/img/loading.gif" data-original="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed375.jpg" alt="擦掉旧的硅脂（原来这个方方的才是gpu！）"></p><p><img src="/img/loading.gif" data-original="https://pic.imgdb.cn/item/6308bb6816f2c2beb1fed7e1.jpg" alt="尽力清灰后..."></p><p><img src="/img/loading.gif" data-original="https://pic.imgdb.cn/item/6308bb6816f2c2beb1fed7e6.jpg" alt="涂多了...希望不要出事"></p>]]></content>
     
@@ -134,6 +154,8 @@
 &lt;p&gt;这电脑之前被我拆开来过，为了加一条固态，后盖螺丝因而已经不全了（拆必丢原则!），不过这次没丢!&lt;/p&gt;</summary>
     
     
+    
+    <category term="记录" scheme="http://blocklune.github.io/categories/%E8%AE%B0%E5%BD%95/"/>
     
     
     <category term="记录" scheme="http://blocklune.github.io/tags/%E8%AE%B0%E5%BD%95/"/>
@@ -153,6 +175,8 @@
     <summary type="html">&lt;p&gt;事情的起因是跟爸闲聊我抱怨家里为什么没有预埋到我和我妹房间的网线，结果才知道原来是有的，只不过藏在空面板里没有装接口……于是就开始兴致勃勃地想把它装起来(这样我房间里就有有线网了!)，赶紧买了面板，交换机，网线和一众工具。&lt;/p&gt;</summary>
     
     
+    
+    <category term="记录" scheme="http://blocklune.github.io/categories/%E8%AE%B0%E5%BD%95/"/>
     
     
     <category term="记录" scheme="http://blocklune.github.io/tags/%E8%AE%B0%E5%BD%95/"/>
@@ -177,6 +201,8 @@
 &lt;p&gt;那么，让这些插件来拯救你吧&lt;/p&gt;</summary>
     
     
+    
+    <category term="推荐" scheme="http://blocklune.github.io/categories/%E6%8E%A8%E8%8D%90/"/>
     
     
     <category term="Chrome" scheme="http://blocklune.github.io/tags/Chrome/"/>
