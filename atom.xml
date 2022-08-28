@@ -141,6 +141,25 @@
   </entry>
   
   <entry>
+    <title>记一次网络改造</title>
+    <link href="http://blocklune.github.io/posts/b9a9b40d.html"/>
+    <id>http://blocklune.github.io/posts/b9a9b40d.html</id>
+    <published>2022-07-23T06:34:00.000Z</published>
+    <updated>2022-07-23T06:34:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>事情的起因是跟爸闲聊我抱怨家里为什么没有预埋到我和我妹房间的网线，结果才知道原来是有的，只不过藏在空面板里没有装接口……于是就开始兴致勃勃地想把它装起来(这样我房间里就有有线网了!)，赶紧买了面板，交换机，网线和一众工具。</p><span id="more"></span><p>接网线难在第一个，不过第一个弄会了后面也就快了，此次没有试水晶头的接法，下次有机会试试。</p><p>昨天仅仅是把面板弄完了，交换机今天才到的刚刚也弄上了，现在都做的很方便接上就能用了! 不过在等交换机的时候把家里老的路由器小米WiFi4整了出来，稀里糊涂地捣鼓了半天刷上了个openwrt，这个东西似乎是个linux发行版？! 反正似乎潜力巨大，可以装好多东西，但现在还没太研究，以前想试的adguard home似乎也可以试试去了。</p><p>现在我的房间也终于有千兆网了!</p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/08/28/vWrbPP.jpg"><br><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/08/28/vWrTUI.jpg"><br><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/08/28/vWroVA.jpg"><br><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/08/28/vWr75t.jpg"><br><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/08/28/vWr5bd.jpg"><br><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/08/28/vWrOxS.jpg"><br><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/08/28/vWrL28.jpg"><br><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/08/28/vWrq8f.jpg"></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;事情的起因是跟爸闲聊我抱怨家里为什么没有预埋到我和我妹房间的网线，结果才知道原来是有的，只不过藏在空面板里没有装接口……于是就开始兴致勃勃地想把它装起来(这样我房间里就有有线网了!)，赶紧买了面板，交换机，网线和一众工具。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="记录" scheme="http://blocklune.github.io/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Chrome插件推荐</title>
     <link href="http://blocklune.github.io/posts/72a59031.html"/>
     <id>http://blocklune.github.io/posts/72a59031.html</id>
