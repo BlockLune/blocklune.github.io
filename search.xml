@@ -4,7 +4,38 @@
   
     
     <entry>
-      <title>Hexo插件hexo-admonition的使用与测试</title>
+      <title>Hexo在icarus主题下更改字体</title>
+      <link href="/posts/2527d7a7.html"/>
+      <url>/posts/2527d7a7.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>在使用Hexo搭建博客的过程中，笔者发现使用<code>hexo s</code>创建的<code>localhost:4000</code>显示的网页上的字体效果与<code>hexo d</code>到github上的网页字体效果不同。遂想统一两者字体，希望通过换字体的方式达到该目的。</p><span id="more"></span><h2 id="选择字体"><a href="#选择字体" class="headerlink" title="选择字体"></a>选择字体</h2><p>英文笔者选择的是<code>JetBrains Mono</code>，中文笔者选择的是<code>Source Han Sans CN VF Blod</code>(思源黑体)。需要注意的是我们不仅要找到某个自己喜欢的字体，还需要找到字体对应的英文名。本文以这两个开源字体为例。</p><h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p>icarus的字体设置位于<code>&lt;Blog_path&gt;\node_modules\hexo-theme-icarus\include\style</code>下的<code>base.styl</code>中。第9~10行，原来为：</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$family</span>-sans-serif ?= Ubuntu, Roboto, <span class="string">&#x27;Open Sans&#x27;</span>, <span class="string">&#x27;Microsoft YaHei&#x27;</span>, sans-serif</span><br><span class="line"><span class="variable">$family</span>-<span class="selector-tag">code</span> ?= <span class="string">&#x27;Source Code Pro&#x27;</span>, monospace, <span class="string">&#x27;Microsoft YaHei&#x27;</span></span><br></pre></td></tr></table></figure><p>现改为（将所需字体添加在最前面）:</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$family</span>-sans-serif ?= <span class="string">&#x27;JetBrains Mono&#x27;</span>, <span class="string">&#x27;Source Han Sans CN VF Blod&#x27;</span>, Ubuntu, Roboto, <span class="string">&#x27;Open Sans&#x27;</span>, <span class="string">&#x27;Microsoft YaHei&#x27;</span>, sans-serif</span><br><span class="line"><span class="variable">$family</span>-<span class="selector-tag">code</span> ?= <span class="string">&#x27;JetBrains Mono&#x27;</span>, <span class="string">&#x27;Source Han Sans CN VF Blod&#x27;</span>, <span class="string">&#x27;Source Code Pro&#x27;</span>, monospace, <span class="string">&#x27;Microsoft YaHei&#x27;</span></span><br></pre></td></tr></table></figure><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+          <category> Web </category>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> icarus </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo插件hexo-admonition在icarus主题下的使用与测试</title>
       <link href="/posts/f81be6d0.html"/>
       <url>/posts/f81be6d0.html</url>
       
@@ -25,6 +56,8 @@
         <tags>
             
             <tag> Hexo </tag>
+            
+            <tag> icarus </tag>
             
             <tag> 测试 </tag>
             
@@ -158,11 +191,11 @@
       
         <tags>
             
-            <tag> Edge </tag>
-            
             <tag> 浏览器 </tag>
             
             <tag> 推荐 </tag>
+            
+            <tag> Edge </tag>
             
         </tags>
       
@@ -237,11 +270,11 @@
       
         <tags>
             
+            <tag> Chrome </tag>
+            
             <tag> 浏览器 </tag>
             
             <tag> 推荐 </tag>
-            
-            <tag> Chrome </tag>
             
         </tags>
       
