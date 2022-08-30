@@ -156,13 +156,6 @@
   </url>
   
   <url>
-    <loc>http://blocklune.github.io/tags/Edge/</loc>
-    <lastmod>2022-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://blocklune.github.io/tags/%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2022-08-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -191,28 +184,7 @@
   </url>
   
   <url>
-    <loc>http://blocklune.github.io/tags/%E6%B8%B8%E6%88%8F/</loc>
-    <lastmod>2022-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blocklune.github.io/tags/Minecraft/</loc>
-    <lastmod>2022-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blocklune.github.io/tags/RLCraft/</loc>
-    <lastmod>2022-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blocklune.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
+    <loc>http://blocklune.github.io/tags/Edge/</loc>
     <lastmod>2022-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -248,6 +220,34 @@
   
   <url>
     <loc>http://blocklune.github.io/tags/icarus/</loc>
+    <lastmod>2022-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blocklune.github.io/tags/%E6%B8%B8%E6%88%8F/</loc>
+    <lastmod>2022-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blocklune.github.io/tags/Minecraft/</loc>
+    <lastmod>2022-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blocklune.github.io/tags/RLCraft/</loc>
+    <lastmod>2022-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blocklune.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2022-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -312,14 +312,14 @@
   </url>
   
   <url>
-    <loc>http://blocklune.github.io/categories/%E6%B8%B8%E6%88%8F/Minecraft/RLCraft/</loc>
+    <loc>http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/Web/Vue-js/</loc>
     <lastmod>2022-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/Web/Vue-js/</loc>
+    <loc>http://blocklune.github.io/categories/%E6%B8%B8%E6%88%8F/Minecraft/RLCraft/</loc>
     <lastmod>2022-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
