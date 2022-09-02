@@ -6,7 +6,7 @@
   <link href="http://blocklune.github.io/atom.xml" rel="self"/>
   
   <link href="http://blocklune.github.io/"/>
-  <updated>2022-09-01T02:31:20.775Z</updated>
+  <updated>2022-09-02T02:35:31.176Z</updated>
   <id>http://blocklune.github.io/</id>
   
   <author>
@@ -17,11 +17,67 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hexo 在 Icarus 主题下在使用 Bulma 美化文章</title>
+    <title>Hexo 插件 hexo-bilibili-card 的使用与修改</title>
+    <link href="http://blocklune.github.io/posts/bb53ea7f.html"/>
+    <id>http://blocklune.github.io/posts/bb53ea7f.html</id>
+    <published>2022-09-02T02:12:09.000Z</published>
+    <updated>2022-09-02T02:35:31.176Z</updated>
+    
+    <content type="html"><![CDATA[<p>使用 Hexo 写博文时，可能需要插入一个视频卡片。我使用的 Icarus 主题提供了 Youtube 的视频卡片，而笔者更需要的是 Bilibili 的。于是找到了这个插件—— <a href="https://github.com/MaxChang3/hexo-bilibili-card">hexo-bilibili-card</a> 。</p><span id="more"></span><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-bilibili-card --save</span><br></pre></td></tr></table></figure><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>在你的 Markdown 文档中添加：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% bilicard av/BV %&#125;</span><br></pre></td></tr></table></figure><h2 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h2><p>使用过程中，笔者对其本身的样式不太满意，便对其 CSS 进行了一定程度的修改。</p><p>打开 <code>&lt;Blog_path&gt;\node_modules\hexo-bilibili-card\source\bilicard.css</code></p><p>注释掉第90行：</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">margin-top</span>: <span class="number">1px</span>;</span><br></pre></td></tr></table></figure><p>注释掉第121行：</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">top</span>: <span class="number">78px</span>;</span><br></pre></td></tr></table></figure><p>修改第119行为：</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">bottom</span>: <span class="number">2px</span>;</span><br></pre></td></tr></table></figure><p>修改第141~142行为：</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">width</span>: <span class="number">30px</span>;</span><br><span class="line"><span class="attribute">height</span>: <span class="number">15px</span>;</span><br></pre></td></tr></table></figure><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;使用 Hexo 写博文时，可能需要插入一个视频卡片。我使用的 Icarus 主题提供了 Youtube 的视频卡片，而笔者更需要的是 Bilibili 的。于是找到了这个插件—— &lt;a href=&quot;https://github.com/MaxChang3/hexo-bilibili-card&quot;&gt;hexo-bilibili-card&lt;/a&gt; 。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习" scheme="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="Web" scheme="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/Web/"/>
+    
+    <category term="Hexo" scheme="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/Web/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="http://blocklune.github.io/tags/Hexo/"/>
+    
+    <category term="插件" scheme="http://blocklune.github.io/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Blender 自学日记（一）：界面与基础操作</title>
+    <link href="http://blocklune.github.io/posts/5aa9eb29.html"/>
+    <id>http://blocklune.github.io/posts/5aa9eb29.html</id>
+    <published>2022-09-02T01:50:38.000Z</published>
+    <updated>2022-09-02T02:12:41.277Z</updated>
+    
+    <content type="html"><![CDATA[<p>该系列是笔者在自学 Blender 的过程中所作的笔记。课程来源是 <a href="https://www.doyoudo.com/">doyoudo</a>。这篇笔记是第一课的学习内容。</p><span id="more"></span><div class="bvideo">    <a href="//www.bilibili.com/video/BV1Ng411d7Be" target="_blank">        <div class="bvideo-box">            <div class="bvideo-cover">                <div class="cover-default"></div>                <div class="bvideo-cover-layer" style="background-image:url(https://images.weserv.nl/?url=http://i2.hdslb.com/bfs/archive/bc07ed55b12a6a8bdac972abda7c4fd07be764ae.jpg)">                    <i class="icon-video"></i>                </div>                <span class="duration">00:08:45</span>            </div>            <div class="bvideo-info">                <p class="title">Blender自学日记，新手系统案例课！第一集</p>                <p class="card-status">                    <span class="play-num">                        <i class="fa fa-youtube-play"></i>                        <span>3.8万</span></span>                    <span>                        <i class="fa fa-list-alt"></i>                        <span>77</span></span></p>                <div class="partition">                    <label class="card-label">视频</label>                    <label class="up-label"></label>                    <label class="up-name">doyoudo</label>                </div>                <div class="actions hide"></div>            </div>        </div>    </a></div><h2 id="基础操作"><a href="#基础操作" class="headerlink" title="基础操作"></a>基础操作</h2><p>按住 <code>~</code> 同时<code>鼠标选择</code>：快捷切换视图</p><p><code>Ctrl + Alt + Q</code>：切换四视图显示</p><p><code>鼠标中键</code>：旋转视图</p><p><code>Shift + 鼠标中键</code>：移动视图</p><p>右侧网格按钮：切换为 2.5D 创作视图</p><p><code>X</code>：删除元素</p><p><code>Shift + A</code>：新建元素</p><p><code>N</code>：调出常用属性</p><p>锁定摄像机：进入摄像机后可以直接调整视图</p><p><code>G</code>：移动物体</p><p><code>R</code>：旋转物体</p><p><code>S</code>：放大缩小</p><p><code>G/S + X/Y/Z</code>：按照轴向去移动&#x2F;放缩</p><p><code>鼠标右键</code>：取消刚才的这些操作</p><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;该系列是笔者在自学 Blender 的过程中所作的笔记。课程来源是 &lt;a href=&quot;https://www.doyoudo.com/&quot;&gt;doyoudo&lt;/a&gt;。这篇笔记是第一课的学习内容。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习" scheme="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="建模" scheme="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/%E5%BB%BA%E6%A8%A1/"/>
+    
+    <category term="Blender" scheme="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/%E5%BB%BA%E6%A8%A1/Blender/"/>
+    
+    
+    <category term="学习" scheme="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="建模" scheme="http://blocklune.github.io/tags/%E5%BB%BA%E6%A8%A1/"/>
+    
+    <category term="Blender" scheme="http://blocklune.github.io/tags/Blender/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo 使用 Bulma 美化文章</title>
     <link href="http://blocklune.github.io/posts/14706354.html"/>
     <id>http://blocklune.github.io/posts/14706354.html</id>
     <published>2022-09-01T00:37:28.000Z</published>
-    <updated>2022-09-01T02:31:20.775Z</updated>
+    <updated>2022-09-02T02:13:45.070Z</updated>
     
     <content type="html"><![CDATA[<p>虽然笔者已经在博客上安装了 <a href="https://github.com/lxl80/hexo-admonition">hexo-admonition</a> 插件来一定程度上对主体为 Markdown 的文章进行一定样式上的补充，但该插件所能提供的内容确实有限。如果能使用原生的 Html 和 CSS 技术自定义文章某些内容就好了。</p><span id="more"></span><p>搜索资料时看到了这两篇文章：</p><ul><li><a href="https://www.imaegoo.com/2020/icarus-with-bulma/">活用 Bulma 美化 Icarus 文章</a></li><li><a href="https://kuusei.moe/coding/%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/Hexo%E5%92%8CIcarus%E6%8A%98%E8%85%BE/">Hexo和Icarus折腾</a></li></ul><p>现做一些学习笔记。</p><h2 id="在-markdown-文件中插入-html-和-css-内容"><a href="#在-Markdown-文件中插入-Html-和-CSS-内容" class="headerlink" title="在 Markdown 文件中插入 Html 和 CSS 内容"></a>在 Markdown 文件中插入 Html 和 CSS 内容</h2><p>使用下面的 <code>raw</code> 标签:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line">//在这里添加一些内容不希望被渲染的内容</span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure><p>可以让我们在 Markdown 文档中添加 Html 内容，例如：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;notification is-info&quot;</span>&gt;</span></span><br><span class="line">这是一段 info</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure><p>显示为</p><div class="notification is-info">这是一段 info</div><p>而通过 <code>&lt;style type=&quot;text/css&quot;&gt;</code> 和 <code>&lt;/style&gt;</code> 标记，我们又可以在 Html 内容中直接添加 CSS 内容。</p><h2 id="用-bulma-实现的一些常见的玩意儿"><a href="#用-Bulma-实现的一些常见的玩意儿" class="headerlink" title="用 Bulma 实现的一些常见的玩意儿"></a>用 Bulma 实现的一些常见的玩意儿</h2><p>直接看 <a href="https://www.imaegoo.com/2020/icarus-with-bulma/">《活用 Bulma 美化 Icarus 文章》</a>这篇文章吧</p><h2 id="在-vs-code-中预览-bulma-内容"><a href="#在-VS-Code-中预览-Bulma-内容" class="headerlink" title="在 VS Code 中预览 Bulma 内容"></a>在 VS Code 中预览 Bulma 内容</h2><p>首先在 VS Code 中按下 <code>Ctrl + Shift + X</code> 打开扩展页面。安装 <code>Markdown Preview Enhanced</code>。重启你的 VS Code，然后使用 <code>Ctrl + K</code>、<code>V</code> 打开侧边预览。(具体见该插件的<a href="https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/">官方中文文档</a>)</p><p>接着添加 Bulma 的CSS：按下 <code>Ctrl + Shift + P</code>，输入 <code>Markdown Preview Enhanced: Customize CSS</code>，回车。笔者直接使用 <code>@import</code> 进行引入。</p><p>所以只要在上面命令打开的 <code>style.less</code> 开头添加:</p><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&quot;https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css&quot;</span>;</span><br></pre></td></tr></table></figure><p>按下 <code>Ctrl + Shift + P</code>，输入 <code>Markdown Preview Enhanced: Extend Parser</code>，回车。编辑 <code>onWillParseMarkdown</code>。在下边的<strong>这是一个标记</strong>处：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">onWillParseMarkdown</span>: <span class="keyword">function</span>(<span class="params">markdown</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>)=&gt;</span> &#123;</span><br><span class="line">        <span class="comment">//这是一个标记</span></span><br><span class="line">      <span class="keyword">return</span> <span class="title function_">resolve</span>(markdown)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure><p>添加：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">markdown = markdown.<span class="title function_">replace</span>(</span><br><span class="line">  <span class="regexp">/\&#123;% raw %&#125;/g</span>,</span><br><span class="line">  <span class="function">(<span class="params">whole</span>) =&gt;</span>  (<span class="string">``</span>)</span><br><span class="line">)</span><br><span class="line">markdown = markdown.<span class="title function_">replace</span>(</span><br><span class="line">  <span class="regexp">/\&#123;% endraw %&#125;/g</span>,</span><br><span class="line">  <span class="function">(<span class="params">whole</span>) =&gt;</span>  (<span class="string">``</span>)</span><br><span class="line">)</span><br></pre></td></tr></table></figure><p>现在它看起来应该是这样：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">onWillParseMarkdown</span>: <span class="keyword">function</span> (<span class="params">markdown</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">      markdown = markdown.<span class="title function_">replace</span>(</span><br><span class="line">        <span class="regexp">/\&#123;% raw %&#125;/g</span>,</span><br><span class="line">        <span class="function">(<span class="params">whole</span>) =&gt;</span> (<span class="string">``</span>)</span><br><span class="line">      )</span><br><span class="line">      markdown = markdown.<span class="title function_">replace</span>(</span><br><span class="line">        <span class="regexp">/\&#123;% endraw %&#125;/g</span>,</span><br><span class="line">        <span class="function">(<span class="params">whole</span>) =&gt;</span> (<span class="string">``</span>)</span><br><span class="line">      )</span><br><span class="line">      <span class="keyword">return</span> <span class="title function_">resolve</span>(markdown)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure><h2 id="上面的方法存在的问题以及也许可行的解决方案暂未实际解决"><a href="#上面的方法存在的问题以及也许可行的解决方案-暂未实际解决" class="headerlink" title="上面的方法存在的问题以及也许可行的解决方案(暂未实际解决)"></a>上面的方法存在的问题以及也许可行的解决方案(暂未实际解决)</h2><p><code>Markdown Preview Enhanced</code> 替换的时候会将所有的 <code>raw</code> 标签全部替换掉，以至于在渲染源代码部分时，会出现一些错误。但这些错误仅在本地的 VS Code 渲染时发生，在网页上是没有问题的。但还是… 让强迫症很难受。</p><p>现在的需求是，如果 <code>raw</code> 标签位于代码块中，那么渲染时它无需被删除，否则应该被删除。</p><p>笔者的思路是：检测 <code>raw</code> 标签的上下文，如果上文包含了标记为 Html&#x2F;js 的代码块起始标记，下文包含了代码块结束标记，则不进行替换；反之进行替换。</p><p>暂未实际实现。</p><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
     
@@ -38,8 +94,6 @@
     
     
     <category term="Hexo" scheme="http://blocklune.github.io/tags/Hexo/"/>
-    
-    <category term="Icarus" scheme="http://blocklune.github.io/tags/Icarus/"/>
     
     <category term="Bulma" scheme="http://blocklune.github.io/tags/Bulma/"/>
     
