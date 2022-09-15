@@ -37,9 +37,9 @@
     
     <category term="学习" scheme="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
     
-    <category term="LaTeX" scheme="http://blocklune.github.io/tags/LaTeX/"/>
-    
     <category term="数学" scheme="http://blocklune.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="LaTeX" scheme="http://blocklune.github.io/tags/LaTeX/"/>
     
   </entry>
   
@@ -306,13 +306,13 @@
     
     <category term="Web" scheme="http://blocklune.github.io/tags/Web/"/>
     
-    <category term="Hexo" scheme="http://blocklune.github.io/tags/Hexo/"/>
-    
-    <category term="Icarus" scheme="http://blocklune.github.io/tags/Icarus/"/>
-    
     <category term="问题" scheme="http://blocklune.github.io/tags/%E9%97%AE%E9%A2%98/"/>
     
     <category term="已解决" scheme="http://blocklune.github.io/tags/%E5%B7%B2%E8%A7%A3%E5%86%B3/"/>
+    
+    <category term="Hexo" scheme="http://blocklune.github.io/tags/Hexo/"/>
+    
+    <category term="Icarus" scheme="http://blocklune.github.io/tags/Icarus/"/>
     
   </entry>
   
@@ -405,11 +405,11 @@
     <category term="推荐" scheme="http://blocklune.github.io/categories/%E6%8E%A8%E8%8D%90/"/>
     
     
-    <category term="Edge" scheme="http://blocklune.github.io/tags/Edge/"/>
-    
     <category term="浏览器" scheme="http://blocklune.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
     
     <category term="推荐" scheme="http://blocklune.github.io/tags/%E6%8E%A8%E8%8D%90/"/>
+    
+    <category term="Edge" scheme="http://blocklune.github.io/tags/Edge/"/>
     
   </entry>
   
@@ -478,11 +478,11 @@
     <category term="推荐" scheme="http://blocklune.github.io/categories/%E6%8E%A8%E8%8D%90/"/>
     
     
+    <category term="Chrome" scheme="http://blocklune.github.io/tags/Chrome/"/>
+    
     <category term="浏览器" scheme="http://blocklune.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
     
     <category term="推荐" scheme="http://blocklune.github.io/tags/%E6%8E%A8%E8%8D%90/"/>
-    
-    <category term="Chrome" scheme="http://blocklune.github.io/tags/Chrome/"/>
     
   </entry>
   
