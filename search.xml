@@ -4,6 +4,103 @@
   
     
     <entry>
+      <title>LaTeX 公式基础</title>
+      <link href="/posts/848a7d31.html"/>
+      <url>/posts/848a7d31.html</url>
+      
+        <content type="html"><![CDATA[<p>用 LaTeX 写数学公式的时候，总记不住一些写法，故在此记录学习笔记。</p><span id="more"></span><h2 id="常见符号"><a href="#常见符号" class="headerlink" title="常见符号"></a>常见符号</h2><h3 id="希腊字母"><a href="#希腊字母" class="headerlink" title="希腊字母"></a>希腊字母</h3><p>大小写希腊字母的写法区别就在于 LaTeX 符号的首字母大小写。</p><p>若要使用斜体只要在前面加上 <code>var</code> 前缀，例如 <code>\varGamma</code> 可以用来显示 $\varGamma$ 。</p><table><thead><tr><th>大写字母</th><th>LaTeX 写法</th><th>小写字母</th><th>LaTeX 写法</th></tr></thead><tbody><tr><td>$\Alpha$</td><td>\Alpha</td><td>$\alpha$</td><td>\alpha</td></tr><tr><td>$\Beta$</td><td>\Beta</td><td>$\beta$</td><td>\beta</td></tr><tr><td>$\Gamma$</td><td>\Gamma</td><td>$\gamma$</td><td>\gamma</td></tr><tr><td>$\Delta$</td><td>\Delta</td><td>$\delta$</td><td>\delta</td></tr><tr><td>$\Epsilon$</td><td>\Epsilon</td><td>$\epsilon$</td><td>\epsilon</td></tr><tr><td>$\Zeta$</td><td>\Zeta</td><td>$\zeta$</td><td>\zeta</td></tr><tr><td>$\Eta$</td><td>\Eta</td><td>$\eta$</td><td>\eta</td></tr><tr><td>$\Theta$</td><td>\Theta</td><td>$\theta$</td><td>\theta</td></tr><tr><td>$\Iota$</td><td>\Iota</td><td>$\iota$</td><td>\iota</td></tr><tr><td>$\Kappa$</td><td>\Kappa</td><td>$\kappa$</td><td>\kappa</td></tr><tr><td>$\Lambda$</td><td>\Lambda</td><td>$\lambda$</td><td>\lambda</td></tr><tr><td>$\Mu$</td><td>\Mu</td><td>$\mu$</td><td>\mu</td></tr><tr><td>$\Nu$</td><td>\Nu</td><td>$\nu$</td><td>\nu</td></tr><tr><td>$\Xi$</td><td>\Xi</td><td>$\xi$</td><td>\xi</td></tr><tr><td>$\Omicron$</td><td>\Omicron</td><td>$\omicron$</td><td>\omicron</td></tr><tr><td>$\Pi$</td><td>\Pi</td><td>$\pi$</td><td>\pi</td></tr><tr><td>$\Rho$</td><td>\Rho</td><td>$\rho$</td><td>\rho</td></tr><tr><td>$\Sigma$</td><td>\Sigma</td><td>$\sigma$</td><td>\sigma</td></tr><tr><td>$\Tau$</td><td>\Tau</td><td>$\tau$</td><td>\tau</td></tr><tr><td>$\Upsilon$</td><td>\Upsilon</td><td>$\upsilon$</td><td>\upsilon</td></tr><tr><td>$\Phi$</td><td>\Phi</td><td>$\phi$</td><td>\phi</td></tr><tr><td>$\Chi$</td><td>\Chi</td><td>$\chi$</td><td>\chi</td></tr><tr><td>$\Psi$</td><td>\Psi</td><td>$\psi$</td><td>\psi</td></tr><tr><td>$\Omega$</td><td>\Omega</td><td>$\omega$</td><td>\omega</td></tr></tbody></table><h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><table><thead><tr><th>渲染结果</th><th>LaTeX 写法</th><th>记法</th></tr></thead><tbody><tr><td>$\pm$</td><td>\pm</td><td>英文：<strong>P</strong>lus + <strong>M</strong>inus</td></tr><tr><td>$\mp$</td><td>\mp</td><td>英文：<strong>M</strong>inus + <strong>P</strong>lus</td></tr><tr><td>$\times$</td><td>\times</td><td><strong>times</strong> 就有“乘”的意思</td></tr><tr><td>$\div$</td><td>\div</td><td>$6 \div 3&#x3D;2$ 表述为：Six <strong>div</strong>ided by two is three.</td></tr><tr><td>$\geq$</td><td>\geq</td><td>“大于等于”的英文：<strong>g</strong>reater than or <strong>eq</strong>ual to</td></tr><tr><td>$\leq$</td><td>\leq</td><td>“小于等于”的英文：<strong>l</strong>ess than or <strong>eq</strong>ual to</td></tr><tr><td>$\neq$</td><td>\neq</td><td>“不等于”的英文：<strong>n</strong>ot <strong>eq</strong>ual to</td></tr><tr><td>$\approx$</td><td>\approx</td><td>“约等于”的英文：<strong>approx</strong>imately equal to</td></tr><tr><td>$\propto$</td><td>\propto</td><td>“正比于”的英文：be <strong>prop</strong>ortional <strong>to</strong></td></tr></tbody></table><h3 id="圈与点"><a href="#圈与点" class="headerlink" title="圈与点"></a>圈与点</h3><table><thead><tr><th>渲染结果</th><th>LaTeX 写法</th></tr></thead><tbody><tr><td>$\circ$</td><td>\circ</td></tr><tr><td>$\cdot$</td><td>\cdot</td></tr><tr><td>$\cdotp$</td><td>\cdotp</td></tr><tr><td>$\cdots$</td><td>\cdots</td></tr><tr><td>$\ddots$</td><td>\ddots</td></tr><tr><td>$\bullet$</td><td>\bullet</td></tr><tr><td>$\dot{a}$</td><td>\dot{a}</td></tr></tbody></table><h3 id="集合相关"><a href="#集合相关" class="headerlink" title="集合相关"></a>集合相关</h3><table><thead><tr><th>渲染结果</th><th>LaTeX 写法</th></tr></thead><tbody><tr><td>$\in$</td><td>\in</td></tr><tr><td>$\notin$</td><td>\notin</td></tr><tr><td>$\subset$</td><td>\subset</td></tr><tr><td>$\subseteq$</td><td>\subseteq</td></tr><tr><td>$\supset$</td><td>\supset</td></tr><tr><td>$\supseteq$</td><td>\supseteq</td></tr><tr><td>$\cap$</td><td>\cap</td></tr><tr><td>$\cup$</td><td>\cap</td></tr><tr><td>$\complement$</td><td>\complement</td></tr></tbody></table><h2 id="上下标的输入方法"><a href="#上下标的输入方法" class="headerlink" title="上下标的输入方法"></a>上下标的输入方法</h2><p>上标 <code>^</code> ，下标 <code>_</code>，例如：</p><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X<span class="built_in">_</span>1 = a<span class="built_in">^</span>2,X<span class="built_in">_</span>2 = b<span class="built_in">^</span>2</span><br></pre></td></tr></table></figure><p>$$<br>X_1 &#x3D; a^2,X_2 &#x3D; b^2<br>$$</p><p>同时上下标，只要连续输入 <code>_</code> 和 <code>^</code> 即可，例如:</p><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X<span class="built_in">_</span>3<span class="built_in">^</span>2 = 9,X<span class="built_in">_</span>4<span class="built_in">^</span>2 = 16</span><br></pre></td></tr></table></figure><p>$$<br>X_3^2 &#x3D; 9,X_4^2 &#x3D; 16<br>$$</p><p>上下标如果由多字符组成，则需要加上花括号，例如：</p><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X<span class="built_in">_</span>&#123;i+j&#125;<span class="built_in">^</span>&#123;k+l&#125;</span><br></pre></td></tr></table></figure><p>$$<br>X_{i+j}^{k+l}<br>$$</p><p>左边的上下标只要写在前面就行了，例如：</p><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">^</span>a<span class="built_in">_</span>bX<span class="built_in">^</span>c<span class="built_in">_</span>d</span><br></pre></td></tr></table></figure><p>$$<br>^a_bX^c_d<br>$$</p><p>“上升”：</p><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X<span class="built_in">^</span>&#123;X<span class="built_in">^</span>&#123;X<span class="built_in">^</span>&#123;X<span class="built_in">^</span>&#123;X<span class="built_in">^</span>&#123;X&#125;&#125;&#125;&#125;&#125;</span><br></pre></td></tr></table></figure><p>$$<br>X^{X^{X^{X^{X^{X}}}}}<br>$$</p><p>”下降“：</p><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X<span class="built_in">_</span>&#123;X<span class="built_in">_</span>&#123;X<span class="built_in">_</span>&#123;X<span class="built_in">_</span>&#123;X<span class="built_in">_</span>&#123;X&#125;&#125;&#125;&#125;&#125;</span><br></pre></td></tr></table></figure><p>$$<br>X_{X_{X_{X_{X_{X}}}}}<br>$$</p><h3 id="分式"><a href="#分式" class="headerlink" title="分式"></a>分式</h3><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\frac</span>&#123;a&#125;&#123;b&#125;</span><br></pre></td></tr></table></figure><p>$$<br>\frac{a}{b}<br>$$</p><h3 id="根式"><a href="#根式" class="headerlink" title="根式"></a>根式</h3><table><thead><tr><th>渲染结果</th><th>LaTeX 写法</th></tr></thead><tbody><tr><td>$\sqrt{2}$</td><td>\sqrt{2}</td></tr><tr><td>$\sqrt[3]{2}$</td><td>\sqrt[3]{2}</td></tr></tbody></table><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\sqrt</span>[b]&#123;a&#125;</span><br></pre></td></tr></table></figure><p>$$<br>\sqrt[b]{a}<br>$$</p><h2 id="其他常用符号写法"><a href="#其他常用符号写法" class="headerlink" title="其他常用符号写法"></a>其他常用符号写法</h2><table><thead><tr><th>渲染结果</th><th>LaTeX 写法</th><th>记法</th></tr></thead><tbody><tr><td>$\to$</td><td>\to</td><td></td></tr><tr><td>$\infty$</td><td>\infty</td><td>”无穷“的英文：<strong>inf</strong>ini<strong>ty</strong></td></tr><tr><td>$\lim_{x \to 0}$</td><td>\lim_{x \to 0}</td><td></td></tr><tr><td>$\bot$</td><td>\bot</td><td></td></tr><tr><td>$\perp$</td><td>\perp</td><td>”相互垂直“的英文：<strong>perp</strong>endicular to each other</td></tr><tr><td>$\dot{a}$</td><td>\dot{a}</td><td></td></tr><tr><td>$\hat{a}$</td><td>\hat{a}</td><td></td></tr><tr><td>$\bar{a}$</td><td>\bar{a}</td><td></td></tr><tr><td>$\vec{a}$</td><td>\vec{a}</td><td>”向量“的英文：<strong>vec</strong>tor</td></tr><tr><td>$\tilde{a}$</td><td>\tilde{a}</td><td>”波浪号“的英文：<strong>tilde</strong></td></tr></tbody></table><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul><li><a href="https://blog.csdn.net/erciyuan_/article/details/90273268">latex公式语法_ecy_uooki的博客-CSDN博客_latex公式语法</a></li><li><a href="https://blog.csdn.net/bagba/article/details/123608562">latex不等于符号_Bagba的博客-CSDN博客_latex 不等于</a></li><li><a href="https://www.codeleading.com/article/36564801982/">latex补集怎么打 - 代码先锋网 (codeleading.com)</a></li><li><a href="https://zhuanlan.zhihu.com/p/262907455">如何用latex编写上标、下标？ - 知乎 (zhihu.com)</a></li></ul><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+          <category> LaTeX </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习 </tag>
+            
+            <tag> LaTeX </tag>
+            
+            <tag> 数学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo 在 Icarus 主题下渲染数学公式</title>
+      <link href="/posts/e201bde3.html"/>
+      <url>/posts/e201bde3.html</url>
+      
+        <content type="html"><![CDATA[<p>这个问题的起因是笔者写数学课笔记的时候发现本地使用 Typora 时正常可以渲染的数学公式无法在我的博客上显示。在查找资料的过程中发现 Hexo 默认渲染器不支持 LaTeX。正当我想着是否要换渲染器时，才发现我使用的 Icarus 主题只要稍微设置一下就可以渲染了。</p><span id="more"></span><p>官方文档地址：<a href="http://ppoffice.github.io/hexo-theme-icarus/Plugins/Other/icarus%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97-%E5%85%B6%E4%BB%96%E6%8F%92%E4%BB%B6/#MathJax">http://ppoffice.github.io/hexo-theme-icarus/Plugins/Other/icarus%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97-%E5%85%B6%E4%BB%96%E6%8F%92%E4%BB%B6/#MathJax</a></p><p>打开 <code>_config.icarus.yml</code> 文件，找到下面这行：</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">mathjax:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure><p>修改 <code>mathjax</code> 的值为 <code>true</code>，即变成这样：</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">mathjax:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure><p>然后在需要渲染数学公式的文档开头添加：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mathjax: true</span><br></pre></td></tr></table></figure><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+          <category> Web </category>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Icarus </tag>
+            
+            <tag> 学习 </tag>
+            
+            <tag> Web </tag>
+            
+            <tag> LaTeX </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>大一新生的高数预备知识学习笔记</title>
+      <link href="/posts/33435544.html"/>
+      <url>/posts/33435544.html</url>
+      
+        <content type="html"><![CDATA[<p>这是笔者从<a href="https://space.bilibili.com/66607740?spm_id_from=333.337.0.0">宋浩老师</a>处学习高数高数知识的课堂笔记，具体课程你可以看这里：</p><span id="more"></span><div class="bvideo">    <a href="//www.bilibili.com/video/BV1YU4y1e7Q9" target="_blank">        <div class="bvideo-box">            <div class="bvideo-cover">                <div class="cover-default"></div>                <div class="bvideo-cover-layer" style="background-image:url(https://images.weserv.nl/?url=http://i1.hdslb.com/bfs/archive/07b97c7a0ab6ccedf5a31e4ae592474833b17893.jpg)">                    <i class="icon-video"></i>                </div>                <span class="duration">00:01:26</span>            </div>            <div class="bvideo-info">                <p class="title">大一新生的高数预备知识简介</p>                <p class="card-status">                    <span class="play-num">                        <i class="fa fa-youtube-play"></i>                        <span>35.5万</span></span>                    <span>                        <i class="fa fa-list-alt"></i>                        <span>196</span></span></p>                <div class="partition">                    <label class="card-label">视频</label>                    <label class="up-label"></label>                    <label class="up-name">宋浩老师官方</label>                </div>                <div class="actions hide"></div>            </div>        </div>    </a></div><h2 id="反三角函数"><a href="#反三角函数" class="headerlink" title="反三角函数"></a>反三角函数</h2><h3 id="yx3darcsinx"><a href="#y-x3D-arcsinX" class="headerlink" title="y&#x3D;arcsinX"></a>y&#x3D;arcsinX</h3><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxa7CV.png"></p><h3 id="yx3darccosx"><a href="#y-x3D-arccosX" class="headerlink" title="y&#x3D;arccosX"></a>y&#x3D;arccosX</h3><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxdQxS.png"></p><h3 id="yx3darctanx"><a href="#y-x3D-arctanX" class="headerlink" title="y&#x3D;arctanX"></a>y&#x3D;arctanX</h3><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxd8bj.png"></p><h3 id="yx3darccotx"><a href="#y-x3D-arccotX" class="headerlink" title="y&#x3D;arccotX"></a>y&#x3D;arccotX</h3><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxdYan.png"></p><h3 id="yx3dsecx"><a href="#y-x3D-secX" class="headerlink" title="y&#x3D;secX"></a>y&#x3D;secX</h3><p>正割是余弦的倒数：<br>$$<br>secX &#x3D; \frac{1}{cosX}<br>$$<br> 定义域：显然$cosX \neq 0$，所以$y&#x3D;secX$的定义域为：$X\neq k\pi +\frac{\pi}{2},k\in Z$</p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxwCon.png"></p><h3 id="yx3dcscx"><a href="#y-x3D-cscX" class="headerlink" title="y&#x3D;cscX"></a>y&#x3D;cscX</h3><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxwneJ.png" alt="vxwneJ.png"></p><h2 id="多项式的除法"><a href="#多项式的除法" class="headerlink" title="多项式的除法"></a>多项式的除法</h2><ul><li>次数高的放前面，低的放后边</li><li>缺项的补出来</li></ul><h3 id="不带余数"><a href="#不带余数" class="headerlink" title="不带余数"></a>不带余数</h3><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vx0m1f.png"></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vx0Mng.png"></p><h3 id="带余数"><a href="#带余数" class="headerlink" title="带余数"></a>带余数</h3><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vx0t3V.png"></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vx0o4I.png"></p><h2 id="有理分式的拆分"><a href="#有理分式的拆分" class="headerlink" title="有理分式的拆分"></a>有理分式的拆分</h2><h3 id="何为有理分式"><a href="#何为有理分式：" class="headerlink" title="何为有理分式："></a>何为有理分式：</h3><p>有理分式就是一个多项式比一个多项式</p><h3 id="何为有理分式的拆分"><a href="#何为有理分式的拆分：" class="headerlink" title="何为有理分式的拆分："></a>何为有理分式的拆分：</h3><p>将相乘的项变成相加减</p><h3 id="过程"><a href="#过程：" class="headerlink" title="过程："></a>过程：</h3><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxBdRP.png"></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxBWR0.png"></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxBHo9.png"></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxDpee.png"></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxDUw4.png"></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxsWRI.png"></p><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+          <category> 数学 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习 </tag>
+            
+            <tag> 数学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>手动挡学习笔记</title>
       <link href="/posts/66959aa9.html"/>
       <url>/posts/66959aa9.html</url>
@@ -339,11 +436,11 @@
       
         <tags>
             
+            <tag> Edge </tag>
+            
             <tag> 浏览器 </tag>
             
             <tag> 推荐 </tag>
-            
-            <tag> Edge </tag>
             
         </tags>
       
@@ -418,11 +515,11 @@
       
         <tags>
             
-            <tag> Chrome </tag>
-            
             <tag> 浏览器 </tag>
             
             <tag> 推荐 </tag>
+            
+            <tag> Chrome </tag>
             
         </tags>
       
