@@ -37,13 +37,13 @@
     <category term="Hexo" scheme="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/Web/Hexo/"/>
     
     
-    <category term="学习" scheme="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="Web" scheme="http://blocklune.github.io/tags/Web/"/>
-    
     <category term="Hexo" scheme="http://blocklune.github.io/tags/Hexo/"/>
     
     <category term="Icarus" scheme="http://blocklune.github.io/tags/Icarus/"/>
+    
+    <category term="学习" scheme="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="Web" scheme="http://blocklune.github.io/tags/Web/"/>
     
   </entry>
   
@@ -176,9 +176,9 @@
     
     <category term="学习" scheme="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
     
-    <category term="LaTeX" scheme="http://blocklune.github.io/tags/LaTeX/"/>
-    
     <category term="数学" scheme="http://blocklune.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="LaTeX" scheme="http://blocklune.github.io/tags/LaTeX/"/>
     
   </entry>
   
@@ -203,13 +203,13 @@
     <category term="Hexo" scheme="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/Web/Hexo/"/>
     
     
-    <category term="学习" scheme="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="Web" scheme="http://blocklune.github.io/tags/Web/"/>
-    
     <category term="Hexo" scheme="http://blocklune.github.io/tags/Hexo/"/>
     
     <category term="Icarus" scheme="http://blocklune.github.io/tags/Icarus/"/>
+    
+    <category term="学习" scheme="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="Web" scheme="http://blocklune.github.io/tags/Web/"/>
     
     <category term="LaTeX" scheme="http://blocklune.github.io/tags/LaTeX/"/>
     
@@ -284,11 +284,11 @@
     <category term="Hexo" scheme="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/Web/Hexo/"/>
     
     
+    <category term="Hexo" scheme="http://blocklune.github.io/tags/Hexo/"/>
+    
     <category term="学习" scheme="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
     
     <category term="Web" scheme="http://blocklune.github.io/tags/Web/"/>
-    
-    <category term="Hexo" scheme="http://blocklune.github.io/tags/Hexo/"/>
     
     <category term="Hexo插件" scheme="http://blocklune.github.io/tags/Hexo%E6%8F%92%E4%BB%B6/"/>
     
@@ -344,11 +344,11 @@
     <category term="Hexo" scheme="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/Web/Hexo/"/>
     
     
+    <category term="Hexo" scheme="http://blocklune.github.io/tags/Hexo/"/>
+    
     <category term="学习" scheme="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
     
     <category term="Web" scheme="http://blocklune.github.io/tags/Web/"/>
-    
-    <category term="Hexo" scheme="http://blocklune.github.io/tags/Hexo/"/>
     
     <category term="Bulma" scheme="http://blocklune.github.io/tags/Bulma/"/>
     
@@ -377,13 +377,13 @@
     <category term="Hexo" scheme="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/Web/Hexo/"/>
     
     
-    <category term="学习" scheme="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="Web" scheme="http://blocklune.github.io/tags/Web/"/>
-    
     <category term="Hexo" scheme="http://blocklune.github.io/tags/Hexo/"/>
     
     <category term="Icarus" scheme="http://blocklune.github.io/tags/Icarus/"/>
+    
+    <category term="学习" scheme="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="Web" scheme="http://blocklune.github.io/tags/Web/"/>
     
   </entry>
   
@@ -408,13 +408,13 @@
     <category term="Hexo" scheme="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/Web/Hexo/"/>
     
     
-    <category term="学习" scheme="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="Web" scheme="http://blocklune.github.io/tags/Web/"/>
-    
     <category term="Hexo" scheme="http://blocklune.github.io/tags/Hexo/"/>
     
     <category term="Icarus" scheme="http://blocklune.github.io/tags/Icarus/"/>
+    
+    <category term="学习" scheme="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="Web" scheme="http://blocklune.github.io/tags/Web/"/>
     
     <category term="测试" scheme="http://blocklune.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
     
@@ -441,17 +441,17 @@
     <category term="Hexo" scheme="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/Web/Hexo/"/>
     
     
-    <category term="学习" scheme="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="问题" scheme="http://blocklune.github.io/tags/%E9%97%AE%E9%A2%98/"/>
     
-    <category term="Web" scheme="http://blocklune.github.io/tags/Web/"/>
+    <category term="已解决" scheme="http://blocklune.github.io/tags/%E5%B7%B2%E8%A7%A3%E5%86%B3/"/>
     
     <category term="Hexo" scheme="http://blocklune.github.io/tags/Hexo/"/>
     
     <category term="Icarus" scheme="http://blocklune.github.io/tags/Icarus/"/>
     
-    <category term="问题" scheme="http://blocklune.github.io/tags/%E9%97%AE%E9%A2%98/"/>
+    <category term="学习" scheme="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
     
-    <category term="已解决" scheme="http://blocklune.github.io/tags/%E5%B7%B2%E8%A7%A3%E5%86%B3/"/>
+    <category term="Web" scheme="http://blocklune.github.io/tags/Web/"/>
     
   </entry>
   
@@ -512,6 +512,10 @@
     
     <category term="记录" scheme="http://blocklune.github.io/tags/%E8%AE%B0%E5%BD%95/"/>
     
+    <category term="学习" scheme="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="Web" scheme="http://blocklune.github.io/tags/Web/"/>
+    
     <category term="Vue.js" scheme="http://blocklune.github.io/tags/Vue-js/"/>
     
     <category term="Element UI" scheme="http://blocklune.github.io/tags/Element-UI/"/>
@@ -519,10 +523,6 @@
     <category term="Html" scheme="http://blocklune.github.io/tags/Html/"/>
     
     <category term="JS" scheme="http://blocklune.github.io/tags/JS/"/>
-    
-    <category term="学习" scheme="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="Web" scheme="http://blocklune.github.io/tags/Web/"/>
     
   </entry>
   

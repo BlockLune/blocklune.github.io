@@ -24,13 +24,13 @@
       
         <tags>
             
-            <tag> 学习 </tag>
-            
-            <tag> Web </tag>
-            
             <tag> Hexo </tag>
             
             <tag> Icarus </tag>
+            
+            <tag> 学习 </tag>
+            
+            <tag> Web </tag>
             
         </tags>
       
@@ -183,9 +183,9 @@
             
             <tag> 学习 </tag>
             
-            <tag> LaTeX </tag>
-            
             <tag> 数学 </tag>
+            
+            <tag> LaTeX </tag>
             
         </tags>
       
@@ -214,13 +214,13 @@
       
         <tags>
             
-            <tag> 学习 </tag>
-            
-            <tag> Web </tag>
-            
             <tag> Hexo </tag>
             
             <tag> Icarus </tag>
+            
+            <tag> 学习 </tag>
+            
+            <tag> Web </tag>
             
             <tag> LaTeX </tag>
             
@@ -307,11 +307,11 @@
       
         <tags>
             
+            <tag> Hexo </tag>
+            
             <tag> 学习 </tag>
             
             <tag> Web </tag>
-            
-            <tag> Hexo </tag>
             
             <tag> Hexo插件 </tag>
             
@@ -375,11 +375,11 @@
       
         <tags>
             
+            <tag> Hexo </tag>
+            
             <tag> 学习 </tag>
             
             <tag> Web </tag>
-            
-            <tag> Hexo </tag>
             
             <tag> Bulma </tag>
             
@@ -412,13 +412,13 @@
       
         <tags>
             
-            <tag> 学习 </tag>
-            
-            <tag> Web </tag>
-            
             <tag> Hexo </tag>
             
             <tag> Icarus </tag>
+            
+            <tag> 学习 </tag>
+            
+            <tag> Web </tag>
             
         </tags>
       
@@ -447,13 +447,13 @@
       
         <tags>
             
-            <tag> 学习 </tag>
-            
-            <tag> Web </tag>
-            
             <tag> Hexo </tag>
             
             <tag> Icarus </tag>
+            
+            <tag> 学习 </tag>
+            
+            <tag> Web </tag>
             
             <tag> 测试 </tag>
             
@@ -484,17 +484,17 @@
       
         <tags>
             
-            <tag> 学习 </tag>
+            <tag> 问题 </tag>
             
-            <tag> Web </tag>
+            <tag> 已解决 </tag>
             
             <tag> Hexo </tag>
             
             <tag> Icarus </tag>
             
-            <tag> 问题 </tag>
+            <tag> 学习 </tag>
             
-            <tag> 已解决 </tag>
+            <tag> Web </tag>
             
         </tags>
       
@@ -560,6 +560,10 @@
             
             <tag> 记录 </tag>
             
+            <tag> 学习 </tag>
+            
+            <tag> Web </tag>
+            
             <tag> Vue.js </tag>
             
             <tag> Element UI </tag>
@@ -567,10 +571,6 @@
             <tag> Html </tag>
             
             <tag> JS </tag>
-            
-            <tag> 学习 </tag>
-            
-            <tag> Web </tag>
             
         </tags>
       
