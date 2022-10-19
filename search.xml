@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>C/C++ 格式化输入输出汇总</title>
+      <link href="/posts/b4e7acd7.html"/>
+      <url>/posts/b4e7acd7.html</url>
+      
+        <content type="html"><![CDATA[<p>本文汇总一下 C 语言 <code>scanf</code> 和 <code>printf</code> 的格式控制方法以及 C++ 的 <code>&lt;iomanip&gt;</code> 库。</p><span id="more"></span><h1 id="c-语言"><a href="#C-语言" class="headerlink" title="C 语言"></a>C 语言</h1><p>此处内容来源于 《C Primer Plus （第6版）中文版》。</p><h2 id="printf-函数"><a href="#printf-函数" class="headerlink" title="printf() 函数"></a>printf() 函数</h2><h3 id="转换说明"><a href="#转换说明" class="headerlink" title="转换说明"></a>转换说明</h3><p>ANSI C 中 printf() 的转换说明（P69，表 4.3：转换说明及其打印的输出结果）</p><h4 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h4><table><thead><tr><th>转换说明</th><th>打印的结果</th></tr></thead><tbody><tr><td>%d &#x2F; %i</td><td>有符号十进制整数</td></tr><tr><td>%u</td><td>无符号十进制整数</td></tr><tr><td>%o</td><td>无符号八进制整数</td></tr><tr><td>%x</td><td>无符号十六进制整数，使用十六进制数0f</td></tr><tr><td>%X</td><td>无符号十六进制整数，使用十六进制数0F</td></tr><tr><td>%a &#x2F; %A</td><td>十六进制数、浮点数和 p 计数法（C99&#x2F;C11）</td></tr></tbody></table><h4 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h4><table><thead><tr><th>转换说明</th><th>打印的结果</th></tr></thead><tbody><tr><td>%e &#x2F; %E</td><td>浮点数，e计数法</td></tr><tr><td>%f</td><td>浮点数，十进制计数法</td></tr><tr><td>%g &#x2F; %G</td><td>根据值的不同，自动选择 %f 或 %e &#x2F; %E。%e &#x2F; %E 格式用于指数小于-4或大于等于精度时。</td></tr><tr><td>%a &#x2F; %A</td><td>十六进制数、浮点数和 p 计数法（十六进制指数计数法）（C99&#x2F;C11）</td></tr></tbody></table><h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><table><thead><tr><th>转换说明</th><th>打印的结果</th></tr></thead><tbody><tr><td>%c</td><td>单个字符<strong>（包括空白字符）</strong></td></tr><tr><td>%s</td><td>字符串</td></tr><tr><td>%p</td><td>指针</td></tr><tr><td>%</td><td>百分号</td></tr></tbody></table><h3 id="转换说明修饰符"><a href="#转换说明修饰符" class="headerlink" title="转换说明修饰符"></a>转换说明修饰符</h3><p>（P71，表 4.4：printf()的修饰符）：</p><table><thead><tr><th>修饰符</th><th>含义</th></tr></thead><tbody><tr><td><strong>标记</strong></td><td>共5种（-, +, 空格, # , 0）</td></tr><tr><td><strong>数字</strong></td><td>最小字段宽度（不够自动变宽）</td></tr><tr><td><strong>.数字</strong></td><td>精度（具体见下边说明）</td></tr><tr><td><strong>h</strong></td><td>和整型转换说明一起使用，表示 short int 或 unsigned short int</td></tr><tr><td>hh</td><td>和整型转换说明一起使用，表示 signed char 或 unsigned char</td></tr><tr><td>j</td><td>和整型转换说明一起使用，表示 intmax_t 或 uintmax_t （这些类型定义在 &lt;stdint.h&gt; 中）</td></tr><tr><td><strong>l</strong></td><td>和整型转换说明一起使用，表示 long int 或 unsigned long int（和浮点型转换说明构成 %lf，表示 double）</td></tr><tr><td><strong>ll</strong></td><td>和整型转换说明一起使用，表示 long long int 或 unsigned long long int（C99）</td></tr><tr><td><strong>L</strong></td><td>和浮点转换说明一起使用，表示 long double 类型的值</td></tr><tr><td>t</td><td>和整型转换说明一起使用，表示 ptrdiff_t （ptrdiff_t 是两个指针差值的类型，C99）</td></tr><tr><td>z</td><td>和整型转换说明一起使用，表示 size_t （size_t 是 sizeof 返回的类型，C99）</td></tr></tbody></table><blockquote><p>上边的 <strong>.数字</strong>：</p><p>对于 %e、%E、%f，表示小数点右边数字的位数；</p><p>对于 %g、%G，表示有效数字的最大位数；</p><p>对于 %s，表示待打印字符的最大数量；</p><p>对于整型转换，表示待打印数字的最小位数，如有必要，使用前导0来达到这个位数。</p><p>只是用 . 表示其后跟随了一个 0，所以 %.f 和 %.0f 相同。</p></blockquote><p>（P72，表4.5：printf()中的标记）：</p><table><thead><tr><th>标记</th><th>含义</th></tr></thead><tbody><tr><td>-</td><td>左对齐</td></tr><tr><td>+</td><td>有符号值前加正负号</td></tr><tr><td>空格</td><td>有符号值正不加，负加负号</td></tr><tr><td>#</td><td>把结果转换为另一种形式，具体看下边</td></tr><tr><td>0</td><td>对于数值格式，用前导0代替空格填充字段宽度。对于整数格式，如果出现-标记或者指定精度，则忽略该标记</td></tr></tbody></table><blockquote><p># 的说明：</p><p>%o：以 0 开始；</p><p>%x &#x2F; %X：以 0x &#x2F; 0X 开始；</p><p>所有浮点格式：保证即使后边没有任何数字，也打印一个小数点字符；</p><p>%g &#x2F; %G：防止结果后边的 0 被删除。</p></blockquote><h2 id="scanf函数"><a href="#scanf-函数" class="headerlink" title="scanf()函数"></a>scanf()函数</h2><p>大部分与上边相同，只讲不一样的。</p><p>（P80，表4.7：scanf()转换说明中的修饰符）：</p><table><thead><tr><th>转换说明</th><th>含义</th></tr></thead><tbody><tr><td>*</td><td>抑制赋值</td></tr><tr><td>数字</td><td>最大字符宽度。输入达到这个宽度或者第一次遇到空白字符时停止。</td></tr></tbody></table><p>scanf() 的返回值是成功读取的项数。如果没有读取任何项，则返回0；如果检测到“文件结尾”，返回 EOF （EOF是定义 &lt;stdio.h&gt; 中定义的特殊值，一般用 #define 定义为 -1）。</p><p><strong>注意：</strong>输入数字的时候，在不设置分隔符号时，scanf()默认使用空白字符进行分隔；但是输入字符时，空白字符不会被忽略，而是被顺利读入。</p><p>比如下边这道题：</p><p>有如下程序段：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a1, a2;</span><br><span class="line"><span class="type">char</span> c1, c2;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d%c%d%c&quot;</span>, &amp;a1, &amp;c1, &amp;a2, &amp;c2);</span><br></pre></td></tr></table></figure><p>若要求 a1, a2, c1, c2 的值分别为 10, 20, A, B，正确的数据输入是（     ）：</p><p>A. 10A20 B&lt;CR&gt;</p><p>B. 10 A 20 B&lt;CR&gt;</p><p>C. 10 A20B&lt;CR&gt;</p><p>D. 10A 20B&lt;CR&gt;</p><p>正确答案为 D。</p><h1 id="c"><a href="#C" class="headerlink" title="C++"></a>C++</h1><p>未完待续。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+          <category> C/C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习 </tag>
+            
+            <tag> C/C++ </tag>
+            
+            <tag> iomanip </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>挖老婆矿！—— NovelAI 初试</title>
       <link href="/posts/f17b3e8b.html"/>
       <url>/posts/f17b3e8b.html</url>
@@ -57,13 +88,13 @@
       
         <tags>
             
-            <tag> 问题 </tag>
-            
-            <tag> 已解决 </tag>
-            
             <tag> VS Code </tag>
             
             <tag> C/C++ </tag>
+            
+            <tag> 问题 </tag>
+            
+            <tag> 已解决 </tag>
             
         </tags>
       
@@ -121,13 +152,13 @@
       
         <tags>
             
-            <tag> Hexo </tag>
-            
-            <tag> Icarus </tag>
-            
             <tag> 学习 </tag>
             
             <tag> Web </tag>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Icarus </tag>
             
         </tags>
       
@@ -154,11 +185,11 @@
       
         <tags>
             
+            <tag> 游戏 </tag>
+            
             <tag> 学习 </tag>
             
             <tag> C/C++ </tag>
-            
-            <tag> 游戏 </tag>
             
             <tag> 随机数生成器 </tag>
             
@@ -280,9 +311,9 @@
             
             <tag> 学习 </tag>
             
-            <tag> 数学 </tag>
-            
             <tag> LaTeX </tag>
+            
+            <tag> 数学 </tag>
             
         </tags>
       
@@ -311,13 +342,13 @@
       
         <tags>
             
-            <tag> Hexo </tag>
-            
-            <tag> Icarus </tag>
-            
             <tag> 学习 </tag>
             
             <tag> Web </tag>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Icarus </tag>
             
             <tag> LaTeX </tag>
             
@@ -332,7 +363,7 @@
       <link href="/posts/33435544.html"/>
       <url>/posts/33435544.html</url>
       
-        <content type="html"><![CDATA[<p>这篇文章主要是笔者从<a href="https://space.bilibili.com/66607740?spm_id_from=333.337.0.0">宋浩老师</a>处学习高数高数知识的课堂笔记，也加入了一些笔者自己搜到的东西。具体课程你可以看这里：</p><span id="more"></span><div class="bvideo"><a href="//www.bilibili.com/video/BV1YU4y1e7Q9" target="_blank">        <div class="bvideo-box">            <div class="bvideo-cover">                <div class="cover-default"></div>                <div class="bvideo-cover-layer" style="background-image:url(https://pic1.xuehuaimg.com/proxy/http://i1.hdslb.com/bfs/archive/07b97c7a0ab6ccedf5a31e4ae592474833b17893.jpg)">                    <i class="icon-video"></i>                </div>                <span class="duration">00:01:26</span>            </div>            <div class="bvideo-info">                <p class="title">大一新生的高数预备知识简介</p>                <p class="card-status">                    <span class="play-num">                        <i class="fa fa-youtube-play"></i>                        <span>58.4万</span></span>                    <span>                        <i class="fa fa-list-alt"></i>                        <span>264</span></span></p>                <div class="partition">                    <label class="card-label">视频</label>                    <label class="up-label"></label>                    <label class="up-name">宋浩老师官方</label>                </div>                <div class="actions hide"></div>            </div>        </div>    </a></div><h2 id="反三角函数"><a href="#反三角函数" class="headerlink" title="反三角函数"></a>反三角函数</h2><h3 id="yx3darcsinx"><a href="#y-x3D-arcsinX" class="headerlink" title="y&#x3D;arcsinX"></a>y&#x3D;arcsinX</h3><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxa7CV.png"></p><h3 id="yx3darccosx"><a href="#y-x3D-arccosX" class="headerlink" title="y&#x3D;arccosX"></a>y&#x3D;arccosX</h3><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxdQxS.png"></p><h3 id="yx3darctanx"><a href="#y-x3D-arctanX" class="headerlink" title="y&#x3D;arctanX"></a>y&#x3D;arctanX</h3><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxd8bj.png"></p><h3 id="yx3darccotx"><a href="#y-x3D-arccotX" class="headerlink" title="y&#x3D;arccotX"></a>y&#x3D;arccotX</h3><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxdYan.png"></p><h3 id="yx3dsecx"><a href="#y-x3D-secX" class="headerlink" title="y&#x3D;secX"></a>y&#x3D;secX</h3><p>正割是余弦的倒数：<br>$$<br>secX &#x3D; \frac{1}{cosX}<br>$$<br> 定义域：显然$cosX \neq 0$，所以$y&#x3D;secX$的定义域为：$X\neq k\pi +\frac{\pi}{2},k\in Z$</p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxwCon.png"></p><h3 id="yx3dcscx"><a href="#y-x3D-cscX" class="headerlink" title="y&#x3D;cscX"></a>y&#x3D;cscX</h3><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxwneJ.png"></p><h3 id="一些补充"><a href="#一些补充" class="headerlink" title="一些补充"></a>一些补充</h3><p>$$<br>sec^2x&#x3D;1+tan^2x,csc^2x&#x3D;1+cot^2x<br>$$</p><p>可以使用下面的方法进行记忆：</p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/16/vzBKpt.png"></p><p>六边形的中间是$1$。红色三角形的上边两个角的平方之和等于下边一个的平方，即：<br>$$<br>sin^2x+cos^2x&#x3D;1<br>$$<br>$$<br>tan^2x+1&#x3D;sec^2x<br>$$<br>$$<br>cot^2x+1&#x3D;csc^2x<br>$$</p><h2 id="多项式的除法"><a href="#多项式的除法" class="headerlink" title="多项式的除法"></a>多项式的除法</h2><ul><li>次数高的放前面，低的放后边</li><li>缺项的补出来</li></ul><h3 id="不带余数"><a href="#不带余数" class="headerlink" title="不带余数"></a>不带余数</h3><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vx0m1f.png"></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vx0Mng.png"></p><h3 id="带余数"><a href="#带余数" class="headerlink" title="带余数"></a>带余数</h3><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vx0t3V.png"></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vx0o4I.png"></p><h2 id="有理分式的拆分"><a href="#有理分式的拆分" class="headerlink" title="有理分式的拆分"></a>有理分式的拆分</h2><h3 id="何为有理分式"><a href="#何为有理分式：" class="headerlink" title="何为有理分式："></a>何为有理分式：</h3><p>有理分式就是一个多项式比一个多项式</p><h3 id="何为有理分式的拆分"><a href="#何为有理分式的拆分：" class="headerlink" title="何为有理分式的拆分："></a>何为有理分式的拆分：</h3><p>将相乘的项变成相加减</p><h3 id="过程"><a href="#过程：" class="headerlink" title="过程："></a>过程：</h3><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxBdRP.png"></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxBWR0.png"></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxBHo9.png"></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxDpee.png"></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxDUw4.png" alt="待定系数法例子之一"></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxsWRI.png" alt="待定系数法例子之二"></p><h2 id="极坐标"><a href="#极坐标" class="headerlink" title="极坐标"></a>极坐标</h2><h3 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h3><p>首先看转动角度，其次看这个点到原点的距离。</p><p>例如：直角坐标系中$(2,2)$点在极坐标系中表示为$(2\sqrt{2},\frac{\pi}{4})$；$(-2,2)$表示为$(2\sqrt{2},\frac{3\pi}{4})$。</p><p>极坐标中的原点叫<code>极点</code>，<code>极轴</code>是从极点向$X$轴正方向引入的一条射线（仅正方向有）。极坐标中的点到极点的距离叫做<code>极径</code>，记作$\rho(\rho\geq0)$（距离肯定是个非负数）；从极轴逆时针转过的角度记作$\theta(0\leq\theta&lt;2\pi)$（但实际上不一定取这个范围）。所以极坐标中一点$P$的坐标记为$P(\rho,\theta)$。</p><p>一般先考虑$\theta$再考虑$\rho$。</p><h3 id="一些常见图像的极坐标表示"><a href="#一些常见图像的极坐标表示" class="headerlink" title="一些常见图像的极坐标表示"></a>一些常见图像的极坐标表示</h3><blockquote><p>括号内范围是默认范围，可写可不写</p></blockquote><h4 id="射线"><a href="#射线" class="headerlink" title="射线"></a>射线</h4><p>例如一条以极点为端点，$\theta&#x3D;45^\circ$的射线表述为：<br>$$<br>\theta &#x3D; 45^\circ(,\rho\geq0)<br>$$</p><h4 id="圆"><a href="#圆" class="headerlink" title="圆"></a>圆</h4><p>例如一个以极点为圆心，$1$为半径的圆表述为：<br>$$<br>(0\leq\theta&lt;2\pi,)\rho&#x3D;1<br>$$</p><h4 id="半圆"><a href="#半圆" class="headerlink" title="半圆"></a>半圆</h4><p>例如一个以极点为圆心，$1$为半径的位于$X$轴上方的半圆表述为：<br>$$<br>0\leq\theta\leq\pi,\rho&#x3D;1<br>$$</p><h4 id="圆面"><a href="#圆面" class="headerlink" title="圆面"></a>圆面</h4><p>例如一个以极点为圆心，$1$为半径的圆面表述为：<br>$$<br>(0\leq\theta&lt;2\pi,)0\leq\rho\leq1<br>$$</p><h4 id="半圆面"><a href="#半圆面" class="headerlink" title="半圆面"></a>半圆面</h4><p>例如一个以极点为圆心，$1$为半径的位于$X$轴上方的半圆面表述为：<br>$$<br>0\leq\theta\leq\pi,0\leq\rho\leq1<br>$$</p><article class="message is-warning"><div class="message-body"><p>又例如这个以$(1,0)$为圆心，$1$为半径的位于$X$轴上方的半圆面表述为：<br>$$<br>0\leq\theta\leq\frac{\pi}{2},0\leq\rho\leq2cos\theta<br>$$</p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/16/vzwCNR.png"></p><p>又例如这个：</p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/16/vzwtbQ.png"></p></div></article><h4 id="圆环"><a href="#圆环" class="headerlink" title="圆环"></a>圆环</h4><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/16/vzdzB4.png"></p>]]></content>
+        <content type="html"><![CDATA[<p>这篇文章主要是笔者从<a href="https://space.bilibili.com/66607740?spm_id_from=333.337.0.0">宋浩老师</a>处学习高数高数知识的课堂笔记，也加入了一些笔者自己搜到的东西。具体课程你可以看这里：</p><span id="more"></span><div class="bvideo"><a href="//www.bilibili.com/video/BV1YU4y1e7Q9" target="_blank">        <div class="bvideo-box">            <div class="bvideo-cover">                <div class="cover-default"></div>                <div class="bvideo-cover-layer" style="background-image:url(https://pic1.xuehuaimg.com/proxy/http://i1.hdslb.com/bfs/archive/07b97c7a0ab6ccedf5a31e4ae592474833b17893.jpg)">                    <i class="icon-video"></i>                </div>                <span class="duration">00:01:26</span>            </div>            <div class="bvideo-info">                <p class="title">大一新生的高数预备知识简介</p>                <p class="card-status">                    <span class="play-num">                        <i class="fa fa-youtube-play"></i>                        <span>60.4万</span></span>                    <span>                        <i class="fa fa-list-alt"></i>                        <span>268</span></span></p>                <div class="partition">                    <label class="card-label">视频</label>                    <label class="up-label"></label>                    <label class="up-name">宋浩老师官方</label>                </div>                <div class="actions hide"></div>            </div>        </div>    </a></div><h2 id="反三角函数"><a href="#反三角函数" class="headerlink" title="反三角函数"></a>反三角函数</h2><h3 id="yx3darcsinx"><a href="#y-x3D-arcsinX" class="headerlink" title="y&#x3D;arcsinX"></a>y&#x3D;arcsinX</h3><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxa7CV.png"></p><h3 id="yx3darccosx"><a href="#y-x3D-arccosX" class="headerlink" title="y&#x3D;arccosX"></a>y&#x3D;arccosX</h3><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxdQxS.png"></p><h3 id="yx3darctanx"><a href="#y-x3D-arctanX" class="headerlink" title="y&#x3D;arctanX"></a>y&#x3D;arctanX</h3><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxd8bj.png"></p><h3 id="yx3darccotx"><a href="#y-x3D-arccotX" class="headerlink" title="y&#x3D;arccotX"></a>y&#x3D;arccotX</h3><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxdYan.png"></p><h3 id="yx3dsecx"><a href="#y-x3D-secX" class="headerlink" title="y&#x3D;secX"></a>y&#x3D;secX</h3><p>正割是余弦的倒数：<br>$$<br>secX &#x3D; \frac{1}{cosX}<br>$$<br> 定义域：显然$cosX \neq 0$，所以$y&#x3D;secX$的定义域为：$X\neq k\pi +\frac{\pi}{2},k\in Z$</p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxwCon.png"></p><h3 id="yx3dcscx"><a href="#y-x3D-cscX" class="headerlink" title="y&#x3D;cscX"></a>y&#x3D;cscX</h3><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxwneJ.png"></p><h3 id="一些补充"><a href="#一些补充" class="headerlink" title="一些补充"></a>一些补充</h3><p>$$<br>sec^2x&#x3D;1+tan^2x,csc^2x&#x3D;1+cot^2x<br>$$</p><p>可以使用下面的方法进行记忆：</p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/16/vzBKpt.png"></p><p>六边形的中间是$1$。红色三角形的上边两个角的平方之和等于下边一个的平方，即：<br>$$<br>sin^2x+cos^2x&#x3D;1<br>$$<br>$$<br>tan^2x+1&#x3D;sec^2x<br>$$<br>$$<br>cot^2x+1&#x3D;csc^2x<br>$$</p><h2 id="多项式的除法"><a href="#多项式的除法" class="headerlink" title="多项式的除法"></a>多项式的除法</h2><ul><li>次数高的放前面，低的放后边</li><li>缺项的补出来</li></ul><h3 id="不带余数"><a href="#不带余数" class="headerlink" title="不带余数"></a>不带余数</h3><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vx0m1f.png"></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vx0Mng.png"></p><h3 id="带余数"><a href="#带余数" class="headerlink" title="带余数"></a>带余数</h3><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vx0t3V.png"></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vx0o4I.png"></p><h2 id="有理分式的拆分"><a href="#有理分式的拆分" class="headerlink" title="有理分式的拆分"></a>有理分式的拆分</h2><h3 id="何为有理分式"><a href="#何为有理分式：" class="headerlink" title="何为有理分式："></a>何为有理分式：</h3><p>有理分式就是一个多项式比一个多项式</p><h3 id="何为有理分式的拆分"><a href="#何为有理分式的拆分：" class="headerlink" title="何为有理分式的拆分："></a>何为有理分式的拆分：</h3><p>将相乘的项变成相加减</p><h3 id="过程"><a href="#过程：" class="headerlink" title="过程："></a>过程：</h3><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxBdRP.png"></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxBWR0.png"></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxBHo9.png"></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxDpee.png"></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxDUw4.png" alt="待定系数法例子之一"></p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/15/vxsWRI.png" alt="待定系数法例子之二"></p><h2 id="极坐标"><a href="#极坐标" class="headerlink" title="极坐标"></a>极坐标</h2><h3 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h3><p>首先看转动角度，其次看这个点到原点的距离。</p><p>例如：直角坐标系中$(2,2)$点在极坐标系中表示为$(2\sqrt{2},\frac{\pi}{4})$；$(-2,2)$表示为$(2\sqrt{2},\frac{3\pi}{4})$。</p><p>极坐标中的原点叫<code>极点</code>，<code>极轴</code>是从极点向$X$轴正方向引入的一条射线（仅正方向有）。极坐标中的点到极点的距离叫做<code>极径</code>，记作$\rho(\rho\geq0)$（距离肯定是个非负数）；从极轴逆时针转过的角度记作$\theta(0\leq\theta&lt;2\pi)$（但实际上不一定取这个范围）。所以极坐标中一点$P$的坐标记为$P(\rho,\theta)$。</p><p>一般先考虑$\theta$再考虑$\rho$。</p><h3 id="一些常见图像的极坐标表示"><a href="#一些常见图像的极坐标表示" class="headerlink" title="一些常见图像的极坐标表示"></a>一些常见图像的极坐标表示</h3><blockquote><p>括号内范围是默认范围，可写可不写</p></blockquote><h4 id="射线"><a href="#射线" class="headerlink" title="射线"></a>射线</h4><p>例如一条以极点为端点，$\theta&#x3D;45^\circ$的射线表述为：<br>$$<br>\theta &#x3D; 45^\circ(,\rho\geq0)<br>$$</p><h4 id="圆"><a href="#圆" class="headerlink" title="圆"></a>圆</h4><p>例如一个以极点为圆心，$1$为半径的圆表述为：<br>$$<br>(0\leq\theta&lt;2\pi,)\rho&#x3D;1<br>$$</p><h4 id="半圆"><a href="#半圆" class="headerlink" title="半圆"></a>半圆</h4><p>例如一个以极点为圆心，$1$为半径的位于$X$轴上方的半圆表述为：<br>$$<br>0\leq\theta\leq\pi,\rho&#x3D;1<br>$$</p><h4 id="圆面"><a href="#圆面" class="headerlink" title="圆面"></a>圆面</h4><p>例如一个以极点为圆心，$1$为半径的圆面表述为：<br>$$<br>(0\leq\theta&lt;2\pi,)0\leq\rho\leq1<br>$$</p><h4 id="半圆面"><a href="#半圆面" class="headerlink" title="半圆面"></a>半圆面</h4><p>例如一个以极点为圆心，$1$为半径的位于$X$轴上方的半圆面表述为：<br>$$<br>0\leq\theta\leq\pi,0\leq\rho\leq1<br>$$</p><article class="message is-warning"><div class="message-body"><p>又例如这个以$(1,0)$为圆心，$1$为半径的位于$X$轴上方的半圆面表述为：<br>$$<br>0\leq\theta\leq\frac{\pi}{2},0\leq\rho\leq2cos\theta<br>$$</p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/16/vzwCNR.png"></p><p>又例如这个：</p><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/16/vzwtbQ.png"></p></div></article><h4 id="圆环"><a href="#圆环" class="headerlink" title="圆环"></a>圆环</h4><p><img src="/img/loading.gif" data-original="https://s1.ax1x.com/2022/09/16/vzdzB4.png"></p>]]></content>
       
       
       <categories>
@@ -404,11 +435,11 @@
       
         <tags>
             
-            <tag> Hexo </tag>
-            
             <tag> 学习 </tag>
             
             <tag> Web </tag>
+            
+            <tag> Hexo </tag>
             
             <tag> Hexo插件 </tag>
             
@@ -423,7 +454,7 @@
       <link href="/posts/5aa9eb29.html"/>
       <url>/posts/5aa9eb29.html</url>
       
-        <content type="html"><![CDATA[<p>该系列是笔者在自学 Blender 的过程中所作的笔记。课程来源是 <a href="https://www.doyoudo.com/">doyoudo</a>。这篇笔记是第一课的学习内容。</p><span id="more"></span><div class="bvideo"><a href="//www.bilibili.com/video/BV1Ng411d7Be" target="_blank">        <div class="bvideo-box">            <div class="bvideo-cover">                <div class="cover-default"></div>                <div class="bvideo-cover-layer" style="background-image:url(https://pic1.xuehuaimg.com/proxy/http://i2.hdslb.com/bfs/archive/bc07ed55b12a6a8bdac972abda7c4fd07be764ae.jpg)">                    <i class="icon-video"></i>                </div>                <span class="duration">00:08:45</span>            </div>            <div class="bvideo-info">                <p class="title">Blender自学日记，新手系统案例课！第一集</p>                <p class="card-status">                    <span class="play-num">                        <i class="fa fa-youtube-play"></i>                        <span>4.2万</span></span>                    <span>                        <i class="fa fa-list-alt"></i>                        <span>83</span></span></p>                <div class="partition">                    <label class="card-label">视频</label>                    <label class="up-label"></label>                    <label class="up-name">doyoudo</label>                </div>                <div class="actions hide"></div>            </div>        </div>    </a></div><h2 id="基础操作"><a href="#基础操作" class="headerlink" title="基础操作"></a>基础操作</h2><p>按住 <code>~</code> 同时<code>鼠标选择</code>：快捷切换视图</p><p><code>Ctrl + Alt + Q</code>：切换四视图显示</p><p><code>鼠标中键</code>：旋转视图</p><p><code>Shift + 鼠标中键</code>：移动视图</p><p>右侧网格按钮：切换为 2.5D 创作视图</p><p><code>X</code>：删除元素</p><p><code>Shift + A</code>：新建元素</p><p><code>N</code>：调出常用属性</p><p>锁定摄像机：进入摄像机后可以直接调整视图</p><p><code>G</code>：移动物体</p><p><code>R</code>：旋转物体</p><p><code>S</code>：放大缩小</p><p><code>G/S + X/Y/Z</code>：按照轴向去移动&#x2F;放缩</p><p><code>鼠标右键</code>：取消刚才的这些操作</p>]]></content>
+        <content type="html"><![CDATA[<p>该系列是笔者在自学 Blender 的过程中所作的笔记。课程来源是 <a href="https://www.doyoudo.com/">doyoudo</a>。这篇笔记是第一课的学习内容。</p><span id="more"></span><div class="bvideo"><a href="//www.bilibili.com/video/BV1Ng411d7Be" target="_blank">        <div class="bvideo-box">            <div class="bvideo-cover">                <div class="cover-default"></div>                <div class="bvideo-cover-layer" style="background-image:url(https://pic1.xuehuaimg.com/proxy/http://i2.hdslb.com/bfs/archive/bc07ed55b12a6a8bdac972abda7c4fd07be764ae.jpg)">                    <i class="icon-video"></i>                </div>                <span class="duration">00:08:45</span>            </div>            <div class="bvideo-info">                <p class="title">Blender自学日记，新手系统案例课！第一集</p>                <p class="card-status">                    <span class="play-num">                        <i class="fa fa-youtube-play"></i>                        <span>4.3万</span></span>                    <span>                        <i class="fa fa-list-alt"></i>                        <span>84</span></span></p>                <div class="partition">                    <label class="card-label">视频</label>                    <label class="up-label"></label>                    <label class="up-name">doyoudo</label>                </div>                <div class="actions hide"></div>            </div>        </div>    </a></div><h2 id="基础操作"><a href="#基础操作" class="headerlink" title="基础操作"></a>基础操作</h2><p>按住 <code>~</code> 同时<code>鼠标选择</code>：快捷切换视图</p><p><code>Ctrl + Alt + Q</code>：切换四视图显示</p><p><code>鼠标中键</code>：旋转视图</p><p><code>Shift + 鼠标中键</code>：移动视图</p><p>右侧网格按钮：切换为 2.5D 创作视图</p><p><code>X</code>：删除元素</p><p><code>Shift + A</code>：新建元素</p><p><code>N</code>：调出常用属性</p><p>锁定摄像机：进入摄像机后可以直接调整视图</p><p><code>G</code>：移动物体</p><p><code>R</code>：旋转物体</p><p><code>S</code>：放大缩小</p><p><code>G/S + X/Y/Z</code>：按照轴向去移动&#x2F;放缩</p><p><code>鼠标右键</code>：取消刚才的这些操作</p>]]></content>
       
       
       <categories>
@@ -472,11 +503,11 @@
       
         <tags>
             
-            <tag> Hexo </tag>
-            
             <tag> 学习 </tag>
             
             <tag> Web </tag>
+            
+            <tag> Hexo </tag>
             
             <tag> Bulma </tag>
             
@@ -509,13 +540,13 @@
       
         <tags>
             
-            <tag> Hexo </tag>
-            
-            <tag> Icarus </tag>
-            
             <tag> 学习 </tag>
             
             <tag> Web </tag>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Icarus </tag>
             
         </tags>
       
@@ -544,13 +575,13 @@
       
         <tags>
             
-            <tag> Hexo </tag>
-            
-            <tag> Icarus </tag>
-            
             <tag> 学习 </tag>
             
             <tag> Web </tag>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Icarus </tag>
             
             <tag> 测试 </tag>
             
@@ -581,17 +612,17 @@
       
         <tags>
             
-            <tag> 问题 </tag>
+            <tag> 学习 </tag>
             
-            <tag> 已解决 </tag>
+            <tag> Web </tag>
             
             <tag> Hexo </tag>
             
             <tag> Icarus </tag>
             
-            <tag> 学习 </tag>
+            <tag> 问题 </tag>
             
-            <tag> Web </tag>
+            <tag> 已解决 </tag>
             
         </tags>
       
@@ -657,10 +688,6 @@
             
             <tag> 记录 </tag>
             
-            <tag> 学习 </tag>
-            
-            <tag> Web </tag>
-            
             <tag> Vue.js </tag>
             
             <tag> Element UI </tag>
@@ -668,6 +695,10 @@
             <tag> Html </tag>
             
             <tag> JS </tag>
+            
+            <tag> 学习 </tag>
+            
+            <tag> Web </tag>
             
         </tags>
       
@@ -692,11 +723,11 @@
       
         <tags>
             
+            <tag> Edge </tag>
+            
             <tag> 浏览器 </tag>
             
             <tag> 推荐 </tag>
-            
-            <tag> Edge </tag>
             
         </tags>
       
@@ -771,11 +802,11 @@
       
         <tags>
             
-            <tag> Chrome </tag>
-            
             <tag> 浏览器 </tag>
             
             <tag> 推荐 </tag>
+            
+            <tag> Chrome </tag>
             
         </tags>
       
