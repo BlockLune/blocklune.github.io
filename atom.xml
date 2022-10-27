@@ -582,13 +582,13 @@
     
     <category term="Web" scheme="http://blocklune.github.io/tags/Web/"/>
     
-    <category term="Hexo" scheme="http://blocklune.github.io/tags/Hexo/"/>
-    
-    <category term="Icarus" scheme="http://blocklune.github.io/tags/Icarus/"/>
-    
     <category term="问题" scheme="http://blocklune.github.io/tags/%E9%97%AE%E9%A2%98/"/>
     
     <category term="已解决" scheme="http://blocklune.github.io/tags/%E5%B7%B2%E8%A7%A3%E5%86%B3/"/>
+    
+    <category term="Hexo" scheme="http://blocklune.github.io/tags/Hexo/"/>
+    
+    <category term="Icarus" scheme="http://blocklune.github.io/tags/Icarus/"/>
     
   </entry>
   

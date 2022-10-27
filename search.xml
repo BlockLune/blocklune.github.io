@@ -645,13 +645,13 @@
             
             <tag> Web </tag>
             
-            <tag> Hexo </tag>
-            
-            <tag> Icarus </tag>
-            
             <tag> 问题 </tag>
             
             <tag> 已解决 </tag>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Icarus </tag>
             
         </tags>
       
@@ -752,11 +752,11 @@
       
         <tags>
             
-            <tag> Edge </tag>
-            
             <tag> 浏览器 </tag>
             
             <tag> 推荐 </tag>
+            
+            <tag> Edge </tag>
             
         </tags>
       
@@ -831,11 +831,11 @@
       
         <tags>
             
+            <tag> Chrome </tag>
+            
             <tag> 浏览器 </tag>
             
             <tag> 推荐 </tag>
-            
-            <tag> Chrome </tag>
             
         </tags>
       
