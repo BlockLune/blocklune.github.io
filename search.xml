@@ -399,11 +399,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> C/C++ </tag>
-            
             <tag> 问题 </tag>
             
             <tag> 已解决 </tag>
+            
+            <tag> C/C++ </tag>
             
             <tag> 指针 </tag>
             
@@ -529,13 +529,13 @@
       
         <tags>
             
-            <tag> C/C++ </tag>
-            
             <tag> 问题 </tag>
             
             <tag> 已解决 </tag>
             
             <tag> VS Code </tag>
+            
+            <tag> C/C++ </tag>
             
         </tags>
       
@@ -628,9 +628,9 @@
             
             <tag> 学习 </tag>
             
-            <tag> C/C++ </tag>
-            
             <tag> 游戏 </tag>
+            
+            <tag> C/C++ </tag>
             
             <tag> 随机数生成器 </tag>
             
@@ -690,9 +690,9 @@
             
             <tag> 学习 </tag>
             
-            <tag> C/C++ </tag>
-            
             <tag> VS Code </tag>
+            
+            <tag> C/C++ </tag>
             
         </tags>
       
@@ -721,9 +721,9 @@
             
             <tag> 学习 </tag>
             
-            <tag> 数学 </tag>
-            
             <tag> LaTeX </tag>
+            
+            <tag> 数学 </tag>
             
         </tags>
       
@@ -1024,15 +1024,15 @@
             
             <tag> 学习 </tag>
             
-            <tag> 问题 </tag>
-            
-            <tag> 已解决 </tag>
-            
             <tag> Hexo </tag>
             
             <tag> Icarus </tag>
             
             <tag> Web </tag>
+            
+            <tag> 问题 </tag>
+            
+            <tag> 已解决 </tag>
             
         </tags>
       

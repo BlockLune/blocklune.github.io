@@ -6,7 +6,7 @@
   <link href="http://blocklune.github.io/atom.xml" rel="self"/>
   
   <link href="http://blocklune.github.io/"/>
-  <updated>2023-01-11T04:34:16.328Z</updated>
+  <updated>2023-01-11T04:34:46.333Z</updated>
   <id>http://blocklune.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://blocklune.github.io/posts/78dc947f.html"/>
     <id>http://blocklune.github.io/posts/78dc947f.html</id>
     <published>2023-01-11T04:34:16.000Z</published>
-    <updated>2023-01-11T04:34:16.328Z</updated>
+    <updated>2023-01-11T04:34:46.333Z</updated>
     
     <content type="html"><![CDATA[<p>直接先说解决方法：在使用 clang 工具链进行编译的时候，添加编译选项 <code>-fstandalone-debug</code>。</p><span id="more"></span><p>下边是完整的发现及解决问题的过程。</p><h1 id="发现问题"><a href="#发现问题" class="headerlink" title="发现问题"></a>发现问题</h1><p>在按照 <a href="https://www.bilibili.com/video/BV1sW411v7VZ">《使用 VS Code + Clangd + CMake 搭建 C&#x2F;C++ 开发环境》</a> 搭建我在 ArchWSL 内的 C&#x2F;C++ 开发环境时，我创建了一个用于测试的 HelloWorld 工程。这个工程的文件结构长这样：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── build</span><br><span class="line">├── .clang-format</span><br><span class="line">├── CMakeLists.txt</span><br><span class="line">└── main.cpp</span><br></pre></td></tr></table></figure><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># @file CMakeLists.txt</span></span><br><span class="line"><span class="comment"># old</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.10</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">project</span>(HelloWorld)</span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(HelloWorld main.cpp)</span><br></pre></td></tr></table></figure><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// @file main.cpp</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line">    std::string str = <span class="string">&quot;你好&quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; str &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>调试的时候发现，int 型变量 a 是可以查看的，但 std::string 型的变量 str 却显示 <code>error: summary string parsing error</code> 错误。</p><h1 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h1><p>在测试中我发现，这个问题只在我使用 clang 工具链编译时产生，使用 g++ 就没有这个问题，所以猜测不是 lldb 调试器的问题，而是 clang 编译器的问题。</p><p>在网上搜索到了类似的问题：</p><ul><li><a href="https://cloud.tencent.com/developer/ask/sof/1542916">无法在 lldb 中检查 std::string 变量 - 问答 - 腾讯云开发者社区</a></li><li><a href="https://github.com/vadimcn/vscode-lldb/issues/415">Cannot inspect any strings · Issue #415 · vadimcn&#x2F;vscode-lldb</a></li></ul><p>都说要使用 <code>-fstandalone-debug</code> 重新编译。</p><p>于是修改 CMakeLists.txt 为：</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># @file CMakeLists.txt</span></span><br><span class="line"><span class="comment"># new</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.10</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">project</span>(HelloWorld)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果使用的是 clang 工具链，那么需要添加上 -fstandalone-debug，否则 lldb 无法查看 std::string 的东东</span></span><br><span class="line"><span class="comment"># 见 https://cloud.tencent.com/developer/ask/sof/1542916</span></span><br><span class="line"><span class="comment"># 又见 https://github.com/vadimcn/vscode-lldb/issues/415</span></span><br><span class="line"><span class="keyword">add_compile_options</span>(-fstandalone-debug)</span><br><span class="line"><span class="keyword">message</span>(STATUS <span class="string">&quot;optional: -fstandalone-debug&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(HelloWorld main.cpp)</span><br></pre></td></tr></table></figure><p>至此成功解决。</p>]]></content>
     
@@ -374,11 +374,11 @@
     
     <category term="学习" scheme="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
     
-    <category term="C/C++" scheme="http://blocklune.github.io/tags/C-C/"/>
-    
     <category term="问题" scheme="http://blocklune.github.io/tags/%E9%97%AE%E9%A2%98/"/>
     
     <category term="已解决" scheme="http://blocklune.github.io/tags/%E5%B7%B2%E8%A7%A3%E5%86%B3/"/>
+    
+    <category term="C/C++" scheme="http://blocklune.github.io/tags/C-C/"/>
     
     <category term="指针" scheme="http://blocklune.github.io/tags/%E6%8C%87%E9%92%88/"/>
     
@@ -488,13 +488,13 @@
     <category term="C/C++" scheme="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/C-C/"/>
     
     
-    <category term="C/C++" scheme="http://blocklune.github.io/tags/C-C/"/>
-    
     <category term="问题" scheme="http://blocklune.github.io/tags/%E9%97%AE%E9%A2%98/"/>
     
     <category term="已解决" scheme="http://blocklune.github.io/tags/%E5%B7%B2%E8%A7%A3%E5%86%B3/"/>
     
     <category term="VS Code" scheme="http://blocklune.github.io/tags/VS-Code/"/>
+    
+    <category term="C/C++" scheme="http://blocklune.github.io/tags/C-C/"/>
     
   </entry>
   
@@ -575,9 +575,9 @@
     
     <category term="学习" scheme="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
     
-    <category term="C/C++" scheme="http://blocklune.github.io/tags/C-C/"/>
-    
     <category term="游戏" scheme="http://blocklune.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="C/C++" scheme="http://blocklune.github.io/tags/C-C/"/>
     
     <category term="随机数生成器" scheme="http://blocklune.github.io/tags/%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90%E5%99%A8/"/>
     
