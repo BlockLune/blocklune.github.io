@@ -15,8 +15,33 @@
     <atom:link href="http://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>BlockLune的个人博客</description>
-    <pubDate>Sun, 12 Mar 2023 03:21:47 GMT</pubDate>
+    <pubDate>Wed, 15 Mar 2023 15:44:21 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Useful packages in Java</title>
+      <link>http://blocklune.github.io/posts/a4746c9.html</link>
+      <guid>http://blocklune.github.io/posts/a4746c9.html</guid>
+      <pubDate>Wed, 15 Mar 2023 14:46:17 GMT</pubDate>
+      
+      <description>&lt;p&gt;A simple conclusion of some useful packages in java.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      <category domain="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/Java/">Java</category>
+      
+      
+      <category domain="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      <category domain="http://blocklune.github.io/tags/Java/">Java</category>
+      
+      
+      <comments>http://blocklune.github.io/posts/a4746c9.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Replace cat with bat</title>
@@ -803,9 +828,9 @@
       
       <category domain="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
       
-      <category domain="http://blocklune.github.io/tags/LaTeX/">LaTeX</category>
-      
       <category domain="http://blocklune.github.io/tags/%E6%95%B0%E5%AD%A6/">数学</category>
+      
+      <category domain="http://blocklune.github.io/tags/LaTeX/">LaTeX</category>
       
       
       <comments>http://blocklune.github.io/posts/848a7d31.html#disqus_thread</comments>
