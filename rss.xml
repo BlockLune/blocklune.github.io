@@ -15,8 +15,33 @@
     <atom:link href="http://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>BlockLune的个人博客</description>
-    <pubDate>Thu, 16 Mar 2023 15:13:34 GMT</pubDate>
+    <pubDate>Thu, 23 Mar 2023 16:29:31 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>The chmod command in Linux</title>
+      <link>http://blocklune.github.io/posts/a9dc5c1e.html</link>
+      <guid>http://blocklune.github.io/posts/a9dc5c1e.html</guid>
+      <pubDate>Thu, 23 Mar 2023 14:27:08 GMT</pubDate>
+      
+      <description>&lt;p&gt;I accidentally ran a wrong &lt;code&gt;chmod&lt;/code&gt; command in my Linux, and it messed up everything! I hate the permission management in Linux. :|&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      <category domain="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/Linux/">Linux</category>
+      
+      
+      <category domain="http://blocklune.github.io/tags/Linux/">Linux</category>
+      
+      <category domain="http://blocklune.github.io/tags/chmod/">chmod</category>
+      
+      
+      <comments>http://blocklune.github.io/posts/a9dc5c1e.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Useful packages in Java</title>
@@ -154,9 +179,9 @@
       <category domain="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/VS-Code/">VS Code</category>
       
       
-      <category domain="http://blocklune.github.io/tags/%E6%95%99%E7%A8%8B/">教程</category>
-      
       <category domain="http://blocklune.github.io/tags/%E5%B7%B2%E8%A7%A3%E5%86%B3/">已解决</category>
+      
+      <category domain="http://blocklune.github.io/tags/%E6%95%99%E7%A8%8B/">教程</category>
       
       <category domain="http://blocklune.github.io/tags/VS-Code/">VS Code</category>
       
@@ -249,11 +274,11 @@
       <category domain="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/%E7%BC%96%E8%AF%91%E9%93%BE%E6%8E%A5/GNU-Make/">GNU Make</category>
       
       
-      <category domain="http://blocklune.github.io/tags/%E7%BC%96%E8%AF%91%E9%93%BE%E6%8E%A5/">编译链接</category>
-      
       <category domain="http://blocklune.github.io/tags/Makefile/">Makefile</category>
       
       <category domain="http://blocklune.github.io/tags/GNU-Make/">GNU Make</category>
+      
+      <category domain="http://blocklune.github.io/tags/%E7%BC%96%E8%AF%91%E9%93%BE%E6%8E%A5/">编译链接</category>
       
       
       <comments>http://blocklune.github.io/posts/b5f1b38d.html#disqus_thread</comments>
@@ -433,11 +458,11 @@
       
       <category domain="http://blocklune.github.io/tags/C-C/">C/C++</category>
       
-      <category domain="http://blocklune.github.io/tags/%E6%8C%87%E9%92%88/">指针</category>
-      
       <category domain="http://blocklune.github.io/tags/%E6%95%B0%E7%BB%84/">数组</category>
       
       <category domain="http://blocklune.github.io/tags/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84/">二维数组</category>
+      
+      <category domain="http://blocklune.github.io/tags/%E6%8C%87%E9%92%88/">指针</category>
       
       
       <comments>http://blocklune.github.io/posts/57fd79a.html#disqus_thread</comments>
@@ -464,9 +489,9 @@
       
       <category domain="http://blocklune.github.io/tags/C-C/">C/C++</category>
       
-      <category domain="http://blocklune.github.io/tags/%E6%8C%87%E9%92%88/">指针</category>
-      
       <category domain="http://blocklune.github.io/tags/%E5%87%BD%E6%95%B0%E4%BC%A0%E5%8F%82/">函数传参</category>
+      
+      <category domain="http://blocklune.github.io/tags/%E6%8C%87%E9%92%88/">指针</category>
       
       
       <comments>http://blocklune.github.io/posts/1ef1e20b.html#disqus_thread</comments>
@@ -544,17 +569,17 @@
       <category domain="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/C-C/">C/C++</category>
       
       
-      <category domain="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
-      
-      <category domain="http://blocklune.github.io/tags/C-C/">C/C++</category>
-      
       <category domain="http://blocklune.github.io/tags/%E9%97%AE%E9%A2%98/">问题</category>
       
       <category domain="http://blocklune.github.io/tags/%E5%B7%B2%E8%A7%A3%E5%86%B3/">已解决</category>
       
-      <category domain="http://blocklune.github.io/tags/%E6%8C%87%E9%92%88/">指针</category>
+      <category domain="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      <category domain="http://blocklune.github.io/tags/C-C/">C/C++</category>
       
       <category domain="http://blocklune.github.io/tags/%E5%87%BD%E6%95%B0%E4%BC%A0%E5%8F%82/">函数传参</category>
+      
+      <category domain="http://blocklune.github.io/tags/%E6%8C%87%E9%92%88/">指针</category>
       
       
       <comments>http://blocklune.github.io/posts/50c16b14.html#disqus_thread</comments>
@@ -660,13 +685,13 @@
       <category domain="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/VS-Code/">VS Code</category>
       
       
-      <category domain="http://blocklune.github.io/tags/C-C/">C/C++</category>
-      
       <category domain="http://blocklune.github.io/tags/%E9%97%AE%E9%A2%98/">问题</category>
       
       <category domain="http://blocklune.github.io/tags/%E5%B7%B2%E8%A7%A3%E5%86%B3/">已解决</category>
       
       <category domain="http://blocklune.github.io/tags/VS-Code/">VS Code</category>
+      
+      <category domain="http://blocklune.github.io/tags/C-C/">C/C++</category>
       
       
       <comments>http://blocklune.github.io/posts/ca05bed5.html#disqus_thread</comments>
@@ -716,11 +741,11 @@
       <category domain="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/Web/Hexo/">Hexo</category>
       
       
-      <category domain="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
-      
       <category domain="http://blocklune.github.io/tags/Hexo/">Hexo</category>
       
       <category domain="http://blocklune.github.io/tags/Icarus/">Icarus</category>
+      
+      <category domain="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
       
       <category domain="http://blocklune.github.io/tags/Web/">Web</category>
       
@@ -747,9 +772,9 @@
       
       <category domain="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
       
-      <category domain="http://blocklune.github.io/tags/C-C/">C/C++</category>
-      
       <category domain="http://blocklune.github.io/tags/%E6%B8%B8%E6%88%8F/">游戏</category>
+      
+      <category domain="http://blocklune.github.io/tags/C-C/">C/C++</category>
       
       <category domain="http://blocklune.github.io/tags/%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90%E5%99%A8/">随机数生成器</category>
       
@@ -801,9 +826,9 @@
       
       <category domain="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
       
-      <category domain="http://blocklune.github.io/tags/C-C/">C/C++</category>
-      
       <category domain="http://blocklune.github.io/tags/VS-Code/">VS Code</category>
+      
+      <category domain="http://blocklune.github.io/tags/C-C/">C/C++</category>
       
       
       <comments>http://blocklune.github.io/posts/a7a0ce82.html#disqus_thread</comments>
@@ -855,11 +880,11 @@
       <category domain="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/Web/Hexo/">Hexo</category>
       
       
-      <category domain="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
-      
       <category domain="http://blocklune.github.io/tags/Hexo/">Hexo</category>
       
       <category domain="http://blocklune.github.io/tags/Icarus/">Icarus</category>
+      
+      <category domain="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
       
       <category domain="http://blocklune.github.io/tags/Web/">Web</category>
       
@@ -936,9 +961,9 @@
       <category domain="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/Web/Hexo/">Hexo</category>
       
       
-      <category domain="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
-      
       <category domain="http://blocklune.github.io/tags/Hexo/">Hexo</category>
+      
+      <category domain="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
       
       <category domain="http://blocklune.github.io/tags/Web/">Web</category>
       
@@ -996,9 +1021,9 @@
       <category domain="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/Web/Hexo/">Hexo</category>
       
       
-      <category domain="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
-      
       <category domain="http://blocklune.github.io/tags/Hexo/">Hexo</category>
+      
+      <category domain="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
       
       <category domain="http://blocklune.github.io/tags/Web/">Web</category>
       
@@ -1029,11 +1054,11 @@
       <category domain="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/Web/Hexo/">Hexo</category>
       
       
-      <category domain="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
-      
       <category domain="http://blocklune.github.io/tags/Hexo/">Hexo</category>
       
       <category domain="http://blocklune.github.io/tags/Icarus/">Icarus</category>
+      
+      <category domain="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
       
       <category domain="http://blocklune.github.io/tags/Web/">Web</category>
       
@@ -1060,11 +1085,11 @@
       <category domain="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/Web/Hexo/">Hexo</category>
       
       
-      <category domain="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
-      
       <category domain="http://blocklune.github.io/tags/Hexo/">Hexo</category>
       
       <category domain="http://blocklune.github.io/tags/Icarus/">Icarus</category>
+      
+      <category domain="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
       
       <category domain="http://blocklune.github.io/tags/Web/">Web</category>
       
@@ -1093,8 +1118,6 @@
       <category domain="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/Web/Hexo/">Hexo</category>
       
       
-      <category domain="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
-      
       <category domain="http://blocklune.github.io/tags/%E9%97%AE%E9%A2%98/">问题</category>
       
       <category domain="http://blocklune.github.io/tags/%E5%B7%B2%E8%A7%A3%E5%86%B3/">已解决</category>
@@ -1102,6 +1125,8 @@
       <category domain="http://blocklune.github.io/tags/Hexo/">Hexo</category>
       
       <category domain="http://blocklune.github.io/tags/Icarus/">Icarus</category>
+      
+      <category domain="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
       
       <category domain="http://blocklune.github.io/tags/Web/">Web</category>
       
@@ -1159,9 +1184,9 @@
       <category domain="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/Web/Vue-js/">Vue.js</category>
       
       
-      <category domain="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
-      
       <category domain="http://blocklune.github.io/tags/%E8%AE%B0%E5%BD%95/">记录</category>
+      
+      <category domain="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
       
       <category domain="http://blocklune.github.io/tags/Web/">Web</category>
       
