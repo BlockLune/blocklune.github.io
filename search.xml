@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>Pre-order, mid-order and post-order</title>
+      <link href="/posts/fa91ae6f.html"/>
+      <url>/posts/fa91ae6f.html</url>
+      
+        <content type="html"><![CDATA[<p>The pre-order, mid-order and post-order traversing in the binary tree.(PLACEHOLDER) :)</p><span id="more"></span><h2 id="an-easy-way-to-remember"><a href="#AN-EASY-WAY-TO-REMEMBER" class="headerlink" title="AN EASY WAY TO REMEMBER"></a>AN EASY WAY TO REMEMBER</h2><p>The law of pre-order traversing is <em>root, left, right</em>. The mid-order is <em>left, root, right</em>, and the post-order is <em>left, right, root</em>. Where the <em>root</em> is, what is the prefix.</p><h2 id="known-mid-and-prepost-calculates-postpre"><a href="#KNOWN-MID-AND-PRE-POST-CALCULATES-POST-PRE" class="headerlink" title="KNOWN MID AND PRE(POST), CALCULATES POST(PRE)"></a>KNOWN MID AND PRE(POST), CALCULATES POST(PRE)</h2><p><del>To be continued.</del></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Uses std::cin.ignore() to keep the user typing until the input meets the requirements</title>
       <link href="/posts/f96b3358.html"/>
       <url>/posts/f96b3358.html</url>
@@ -560,11 +573,11 @@
             
             <tag> C/C++ </tag>
             
-            <tag> 指针 </tag>
-            
             <tag> 数组 </tag>
             
             <tag> 二维数组 </tag>
+            
+            <tag> 指针 </tag>
             
         </tags>
       
@@ -595,9 +608,9 @@
             
             <tag> C/C++ </tag>
             
-            <tag> 指针 </tag>
-            
             <tag> 函数传参 </tag>
+            
+            <tag> 指针 </tag>
             
         </tags>
       
@@ -692,9 +705,9 @@
             
             <tag> 已解决 </tag>
             
-            <tag> 指针 </tag>
-            
             <tag> 函数传参 </tag>
+            
+            <tag> 指针 </tag>
             
         </tags>
       
@@ -1385,9 +1398,9 @@
             
             <tag> 学习 </tag>
             
-            <tag> 记录 </tag>
-            
             <tag> Web </tag>
+            
+            <tag> 记录 </tag>
             
             <tag> Vue.js </tag>
             
