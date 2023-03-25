@@ -15,8 +15,33 @@
     <atom:link href="http://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>BlockLune的个人博客</description>
-    <pubDate>Fri, 24 Mar 2023 15:03:01 GMT</pubDate>
+    <pubDate>Sat, 25 Mar 2023 12:32:33 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Uses std::cin.ignore() to keep the user typing until the input meets the requirements</title>
+      <link>http://blocklune.github.io/posts/f96b3358.html</link>
+      <guid>http://blocklune.github.io/posts/f96b3358.html</guid>
+      <pubDate>Sat, 25 Mar 2023 12:12:40 GMT</pubDate>
+      
+      <description>&lt;p&gt;I used to control users’ input by making the input a string and process it later. But today, my friend posed this question to me: Can we control input without a char array or string class?&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      <category domain="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/C-C/">C/C++</category>
+      
+      
+      <category domain="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      <category domain="http://blocklune.github.io/tags/C-C/">C/C++</category>
+      
+      
+      <comments>http://blocklune.github.io/posts/f96b3358.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>The const and constexpr in C++ (REMAKE)</title>
@@ -596,11 +621,11 @@
       
       <category domain="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
       
+      <category domain="http://blocklune.github.io/tags/C-C/">C/C++</category>
+      
       <category domain="http://blocklune.github.io/tags/%E9%97%AE%E9%A2%98/">问题</category>
       
       <category domain="http://blocklune.github.io/tags/%E5%B7%B2%E8%A7%A3%E5%86%B3/">已解决</category>
-      
-      <category domain="http://blocklune.github.io/tags/C-C/">C/C++</category>
       
       <category domain="http://blocklune.github.io/tags/%E6%8C%87%E9%92%88/">指针</category>
       
@@ -710,11 +735,11 @@
       <category domain="http://blocklune.github.io/categories/%E5%AD%A6%E4%B9%A0/VS-Code/">VS Code</category>
       
       
+      <category domain="http://blocklune.github.io/tags/C-C/">C/C++</category>
+      
       <category domain="http://blocklune.github.io/tags/%E9%97%AE%E9%A2%98/">问题</category>
       
       <category domain="http://blocklune.github.io/tags/%E5%B7%B2%E8%A7%A3%E5%86%B3/">已解决</category>
-      
-      <category domain="http://blocklune.github.io/tags/C-C/">C/C++</category>
       
       <category domain="http://blocklune.github.io/tags/VS-Code/">VS Code</category>
       
@@ -1211,9 +1236,9 @@
       
       <category domain="http://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
       
-      <category domain="http://blocklune.github.io/tags/Web/">Web</category>
-      
       <category domain="http://blocklune.github.io/tags/%E8%AE%B0%E5%BD%95/">记录</category>
+      
+      <category domain="http://blocklune.github.io/tags/Web/">Web</category>
       
       <category domain="http://blocklune.github.io/tags/Vue-js/">Vue.js</category>
       
