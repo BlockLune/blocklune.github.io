@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="google7b9c7ea42a3102a3.html">
+  <meta name="baidu-site-verification" content="baidu_verify_code-53bseLro2G.html">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blocklune.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="这是一次计算机导论的作业。老师提供了很多课题供我们选择，我选择的是 “有人说三进制是被证明理论上效率最高的进制，请广泛搜集相关资料，撰写关于三进制的科普报告，或者对其他进制进行对比和评价。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为何说三进制是效率最高的进制？以及其他一些与三进制有关的东西...">
+<meta property="og:url" content="https://blocklune.github.io/posts/1d122915.html">
+<meta property="og:site_name" content="Fish Pond">
+<meta property="og:description" content="这是一次计算机导论的作业。老师提供了很多课题供我们选择，我选择的是 “有人说三进制是被证明理论上效率最高的进制，请广泛搜集相关资料，撰写关于三进制的科普报告，或者对其他进制进行对比和评价。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-11-20T11:26:03.000Z">
+<meta property="article:modified_time" content="2023-04-12T05:05:56.881Z">
+<meta property="article:author" content="BlockLune">
+<meta property="article:tag" content="Mathematics">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://blocklune.github.io/posts/1d122915.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blocklune.github.io/posts/1d122915.html","path":"posts/1d122915.html","title":"为何说三进制是效率最高的进制？以及其他一些与三进制有关的东西..."}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>为何说三进制是效率最高的进制？以及其他一些与三进制有关的东西... | Fish Pond</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/rss.xml" title="Fish Pond" type="application/rss+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Fish Pond</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Posts swim here.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8%E7%90%86%E8%AE%BA%E4%B8%8A%E4%B8%89%E8%BF%9B%E5%88%B6%E6%98%AF%E6%9C%80%E9%AB%98%E6%95%88%E7%8E%87%E7%9A%84%E8%BF%9B%E5%88%B6%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">为什么在理论上三进制是最高效率的进制？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%B2%A1%E7%94%A8%E4%B8%89%E8%BF%9B%E5%88%B6%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">为什么没用三进制？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">3.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="BlockLune"
+      src="/img/waifu.png">
+  <p class="site-author-name" itemprop="name">BlockLune</p>
+  <div class="site-description" itemprop="description">Here is BlockLune's blog.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">56</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/BlockLune" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;BlockLune" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:blocklune@gmail.com" title="E-Mail → mailto:blocklune@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          Links
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="http://f-studio.is-best.net/" title="http:&#x2F;&#x2F;f-studio.is-best.net&#x2F;" rel="noopener" target="_blank">F-Studio</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://blog.yunfinibol.top/" title="http:&#x2F;&#x2F;blog.yunfinibol.top&#x2F;" rel="noopener" target="_blank">Yunfinibol's Blog</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blocklune.github.io/posts/1d122915.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/waifu.png">
+      <meta itemprop="name" content="BlockLune">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fish Pond">
+      <meta itemprop="description" content="Here is BlockLune's blog.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="为何说三进制是效率最高的进制？以及其他一些与三进制有关的东西... | Fish Pond">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          为何说三进制是效率最高的进制？以及其他一些与三进制有关的东西...
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-11-20 19:26:03" itemprop="dateCreated datePublished" datetime="2022-11-20T19:26:03+08:00">2022-11-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-04-12 13:05:56" itemprop="dateModified" datetime="2023-04-12T13:05:56+08:00">2023-04-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/mathematics/" itemprop="url" rel="index"><span itemprop="name">Mathematics</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>这是一次计算机导论的作业。老师提供了很多课题供我们选择，我选择的是 “有人说三进制是被证明理论上效率最高的进制，请广泛搜集相关资料，撰写关于三进制的科普报告，或者对其他进制进行对比和评价。</p>
+<span id="more"></span>
+
+<h2 id="为什么在理论上三进制是最高效率的进制？"><a href="#为什么在理论上三进制是最高效率的进制？" class="headerlink" title="为什么在理论上三进制是最高效率的进制？"></a>为什么在理论上三进制是最高效率的进制？</h2><blockquote>
+<p>这里的内容来自知乎大佬 <a target="_blank" rel="noopener" href="https://www.zhihu.com/people/bai-yun-long-52">@白云龙</a>的<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/435375360">这篇</a>回答。<br>B 站 up 主 <a target="_blank" rel="noopener" href="https://space.bilibili.com/19319172">@差评君</a> 的<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV17b4y1U7TZ/">这个</a>视频中对这篇回答进行了动画形式的展现。</p>
+</blockquote>
+<p>首先，先让我们来约定一下什么叫 “进制的效率”：<br>$$<br>进制的效率 = \frac {表达的信息量}{表达这些信息所需的资源}<br>$$<br>比如我们需要表达十进制下 <code>0~999</code> 这 1000 个数字，这就是我们 $ 表达的信息量 $，我们选择用写有数字的牌子来表示它们。</p>
+<ul>
+<li><p>在十进制下，<code>0~999</code> 我们至少需要三位，每位上我们都需要 0~9 十个数字的牌子，所以三位一共是 30 个数字牌子；</p>
+</li>
+<li><p>在二进制下，<code>0~999</code> 是 <code>0~1111100111</code>，我们至少需要十位，每位是 0 或 1，所以一共是 20 个数字牌子；</p>
+</li>
+<li><p>在三进制下，<code>0~999</code> 是 <code>0~1101000</code>，至少七位，每位是 0、1 或 2，所以一共是 21 个数字牌子；</p>
+</li>
+<li><p>在四进制下，<code>0~999</code> 是 <code>0~33213</code>，需要 20 个数字牌子；</p>
+</li>
+<li><p>在五进制下，<code>0~999</code> 是 <code>0~12444</code>，需要 25 个数字牌子；</p>
+</li>
+<li><p>…</p>
+</li>
+</ul>
+<p>这些数字牌子的个数就是 $ 表达这些信息所需的资源 $。到目前为止，似乎二进制和四进制的效率最高。</p>
+<p>但这样理解并不完全准确。因为实际上， 对于某些进制而言，对应数量的数字牌子其实不止能表达这么多信息。比如在二进制情况下，20 个数字牌子表达的数字总量应该是 $2^{10} = 1024 $ 个；在三进制的情况下，21 个数字牌子表达的数字总量却是 $3^7 = 2187$ 个；在四进制的情况下，20 个数字牌子表达的数字总量是 $4^5 = 1024$ 个…</p>
+<p>也就是说，虽然对于上边十进制而言，它那 30 个牌子表达的信息量确实就是 <code>0~999</code> 这 1000  个数字的信息，或者我们说 1000 种状态信息，但对于下边的比如二进制、三进制、四进制，对应的 20 个、21 个、20 个牌子其实表达了超过 1000 种状态，我们用这些牌子是有浪费的。</p>
+<p>这么来算，我们大致可以得到，十进制的效率是 $\frac {1000}{30} \approx 33.3333$，二进制的效率是 $\frac {1024}{20} = 51.2$，三进制的效率是 $\frac {2187}{21} \approx 104.1429$，四进制的效率是 $\frac {1024}{20} = 51.2$…</p>
+<p>从这个例子我们已经大概能看到三进制的效率了，那么怎么证明这件事儿呢？</p>
+<p>回顾上边的思考过程，我们的数字牌子个数是怎么被算出来的呢？我们大概可以总结出：<br>$$<br>数字牌子的个数 = 进制数 \times 所需的位数<br>$$<br>而为了满足上边的表达 1000 个状态的要求，所以我们要求：<br>$$<br>进制数 ^{所需的位数} \geq 1000<br>$$<br>也就是说：<br>$$<br>所需的位数 = 向上取整（log_{进制数} 1000）<br>$$<br>因为进制数必须是整数，所以我们必须加上 $ 向上取整 $，但就是因为这个向上取整，我们浪费了很多的资源，所以我们先假设 $ 进制数 $ 是个实数。</p>
+<p>那么现在对上面 $ 数字牌子的个数 $ 的式子改成 $ 表达这些信息所需的资源 $，这样这个式子就成了下边这样：<br>$$<br>表达这些信息所需的资源 = 进制数 \times log_{进制数} 表达的信息量<br>$$<br>记 $ 表达这些所需的资源 $ 为 $R$，$ 进制数 $ 为 $N$，$ 表达的信息量 $ 为 $I$：<br>$$<br>R = N \times log_NI<br>$$<br>记效率为 $E$，那么：<br>$$<br>E = \frac{I}{R} = \frac{I}{Nlog_NI} = \frac{I}{lnI}\times\frac{lnN}{N}<br>$$<br>求导<br>$$<br>\frac{dE}{dN} = \frac{I}{lnI}\times\frac{1-lnN}{N^2}<br>$$<br>分析单调性，我们知道，当 $N = e$ 时，效率 $E$ 最大。</p>
+<p>所以也就是，<code>e 进制</code> 理论上才是效率最高的进制。</p>
+<p>但是，e 进制是个啥呢？试试 e 附近的 2 和 3，得到 $E (2) \approx 0.3466\times\frac {I}{lnI}$，$E (3)\approx 0.3662\times\frac {I}{lnI}$，所以，三进制是理论上效率最高的进制。</p>
+<h2 id="为什么没用三进制？"><a href="#为什么没用三进制？" class="headerlink" title="为什么没用三进制？"></a>为什么没用三进制？</h2><p>在上边的两个引用里，知乎大佬 @白云龙 和 b 站 up 主 @差评君 都给出了一些答案。@白云龙 大佬的说法是，在实际的实现过程中，实现二进制的 “牌子” 和实现三进制的 “牌子” 的成本不一样，可能二进制的 01 牌子就便宜好用，但三进制的牌子就是又贵又难用，最后所需的资源还要乘上每个牌子的单价，加上这层因素后，二进制比三进制更经济。这其实也就是 @差评君 所言的，二进制只需高低电平来区分 01，但三进制需要实现三种电流状态就比较复杂。</p>
+<p>但其实我觉得，这样的问题并不是什么太大的问题，就像 SLC、MLC、TLC 一样。既然我们都可以在同样的电子数的情况下分别实现 2、4、8 种状态的区别，那多实现一个除了 01 以外的第三个状态似乎也类似？(我瞎说的哦，别当真，大佬轻喷…)。主要是，二进制计算机确实已经走到了这样一个瓶颈期，我们的芯片制程来到了十几纳米甚至几纳米、我们的光刻机使用的光已经来到了极紫外光的情况下，想要进一步提升二进制计算机的一丁点性能所消耗的成本是极其庞大的。但是，三进制却是一条新的路，也许就是一条出路。</p>
+<p>如果我们把视角从全人类缩到我们中国，在这个光刻机远远落后于欧美的情况下，或许三进制，真的就是我们中国的出路。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/435375360">《为什么计算机不用 e 进制，按道理说 e 进制难道不是最高效的吗？ - 知乎 (zhihu.com)》</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV17b4y1U7TZ/">苏联的三进制电脑，为什么被二进制干掉了？【差评君】哔哩哔哩</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.crucial.cn/articles/about-ssd/difference-between-slc-mlc-tlc">《SLC、MLC、TLC 颗粒的区别是什么 | Crucial (英睿达) | Crucial 英睿达》</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/rss.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/mathematics/" rel="tag"># Mathematics</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/7ec6ba38.html" rel="prev" title="C++ const 用法汇总">
+                  <i class="fa fa-chevron-left"></i> C++ const 用法汇总
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/a336c1b8.html" rel="next" title="初探深度优先搜索（DFS）和广度优先搜索（BFS）">
+                  初探深度优先搜索（DFS）和广度优先搜索（BFS） <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">BlockLune</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/BlockLune" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.4.3/mermaid.min.js","integrity":"sha256-e0o3JYsdjqKajf9eOe22FhioYSz9WofRY4dLKo3F6do="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"BlockLune","repo":"blocklune.github.io","client_id":"f0d9ff2c460a605d4f3f","client_secret":"9808616eda1afe0741c036b5d5670a490b68f6ef","admin_user":"BlockLune","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"87c5f61a737763cf424a890ddb0e8eb8"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="google7b9c7ea42a3102a3.html">
+  <meta name="baidu-site-verification" content="baidu_verify_code-53bseLro2G.html">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blocklune.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="简单记录一下 C 语言的文件操作的相关内容。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C 语言文件操作">
+<meta property="og:url" content="https://blocklune.github.io/posts/914118ff.html">
+<meta property="og:site_name" content="Fish Pond">
+<meta property="og:description" content="简单记录一下 C 语言的文件操作的相关内容。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-01-12T06:53:51.000Z">
+<meta property="article:modified_time" content="2023-04-12T06:30:06.711Z">
+<meta property="article:author" content="BlockLune">
+<meta property="article:tag" content="C&#x2F;C++">
+<meta property="article:tag" content="File">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://blocklune.github.io/posts/914118ff.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blocklune.github.io/posts/914118ff.html","path":"posts/914118ff.html","title":"C 语言文件操作"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>C 语言文件操作 | Fish Pond</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/rss.xml" title="Fish Pond" type="application/rss+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Fish Pond</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Posts swim here.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text">前期准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6-fopen"><span class="nav-number">2.</span> <span class="nav-text">打开文件 fopen ()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E9%97%AD%E6%96%87%E4%BB%B6-fclose"><span class="nav-number">3.</span> <span class="nav-text">关闭文件 fclose ()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BB%E5%86%99%E6%96%87%E4%BB%B6"><span class="nav-number">4.</span> <span class="nav-text">读写文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#fprintf-%E5%92%8C-fscanf"><span class="nav-number">4.1.</span> <span class="nav-text">fprintf () 和 fscanf ()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getc-%E5%92%8C-putc"><span class="nav-number">4.2.</span> <span class="nav-text">getc () 和 putc ()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ungetc"><span class="nav-number">4.3.</span> <span class="nav-text">ungetc()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fgets-%E5%92%8C-fputs"><span class="nav-number">4.4.</span> <span class="nav-text">fgets () 和 fputs ()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fread-%E5%92%8C-fwrite"><span class="nav-number">4.5.</span> <span class="nav-text">fread () 和 fwrite ()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E8%AE%BF%E9%97%AE-fseek-%E5%92%8C-ftell"><span class="nav-number">5.</span> <span class="nav-text">随机访问 fseek () 和 ftell ()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%87%BD%E6%95%B0"><span class="nav-number">6.</span> <span class="nav-text">其他函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%B7%E6%96%B0%E7%BC%93%E5%86%B2%E5%8C%BA-fflush"><span class="nav-number">6.1.</span> <span class="nav-text">刷新缓冲区 fflush ()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%9B%BF%E6%8D%A2%E4%BD%BF%E7%94%A8%E7%BC%93%E5%86%B2%E5%8C%BA-setvbuf"><span class="nav-number">6.2.</span> <span class="nav-text">创建替换使用缓冲区 setvbuf ()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#feof-%E5%92%8C-ferror"><span class="nav-number">6.3.</span> <span class="nav-text">feof () 和 ferror ()</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="BlockLune"
+      src="/img/waifu.png">
+  <p class="site-author-name" itemprop="name">BlockLune</p>
+  <div class="site-description" itemprop="description">Here is BlockLune's blog.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">56</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/BlockLune" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;BlockLune" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:blocklune@gmail.com" title="E-Mail → mailto:blocklune@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          Links
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="http://f-studio.is-best.net/" title="http:&#x2F;&#x2F;f-studio.is-best.net&#x2F;" rel="noopener" target="_blank">F-Studio</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://blog.yunfinibol.top/" title="http:&#x2F;&#x2F;blog.yunfinibol.top&#x2F;" rel="noopener" target="_blank">Yunfinibol's Blog</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blocklune.github.io/posts/914118ff.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/waifu.png">
+      <meta itemprop="name" content="BlockLune">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fish Pond">
+      <meta itemprop="description" content="Here is BlockLune's blog.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="C 语言文件操作 | Fish Pond">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          C 语言文件操作
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-01-12 14:53:51" itemprop="dateCreated datePublished" datetime="2023-01-12T14:53:51+08:00">2023-01-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-04-12 14:30:06" itemprop="dateModified" datetime="2023-04-12T14:30:06+08:00">2023-04-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/" itemprop="url" rel="index"><span itemprop="name">CS</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/languages/" itemprop="url" rel="index"><span itemprop="name">Languages</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/languages/c-cpp/" itemprop="url" rel="index"><span itemprop="name">C & Cpp</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>简单记录一下 C 语言的文件操作的相关内容。</p>
+<span id="more"></span>
+
+<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// stdio.h 提供了 C 语言中的许多 IO，当然包括文件 IO</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="comment">// 定义文件指针</span></span><br><span class="line">FILE *fp;</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="打开文件-fopen"><a href="#打开文件-fopen" class="headerlink" title="打开文件 fopen()"></a>打开文件 fopen ()</h2><div class="note "><p>函数名称：fopen<br>参数：待打开文件的名称（包含该文件名的字符串地址），打开文件的模式；<br>返回值：成功打开文件则返回一个文件指针，否则返回空指针（NULL）</p>
+</div>
+
+<p>例如：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">FILE *fp;</span><br><span class="line"><span class="keyword">if</span> (fp = fopen(<span class="string">"example.file"</span>, <span class="string">"r"</span>) == <span class="literal">NULL</span>)</span><br><span class="line">{</span><br><span class="line">    <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">"Fail to open the file.\n"</span>);</span><br><span class="line">    <span class="built_in">exit</span>(EXIT_FAILURE);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>需要注意，该函数第二个参数是一个字符串，可能的值如下（表来自《C Primer Plus（第 6 版）中文版》P357 表 13.1）：</p>
+<table>
+<thead>
+<tr>
+<th>模式字符串</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td> “r”</td>
+<td> 以读模式打开文件</td>
+</tr>
+<tr>
+<td> “w”</td>
+<td> 以写模式打开文件，把现有文件长度截为 0，如果文件不存在，则创建一个新文件</td>
+</tr>
+<tr>
+<td> “a”</td>
+<td> 以写模式打开文件，在现有文件末尾添加内容，如果文件不存在，则创建一个新文件</td>
+</tr>
+<tr>
+<td> “r+”</td>
+<td> 以更新模式打开文件（即可以读写文件）</td>
+</tr>
+<tr>
+<td>“w+”</td>
+<td> 以更新模式打开文件，如果文件存在，则将其长度截为 0，如果文件不存在则创建一个新文件</td>
+</tr>
+<tr>
+<td> “a+”</td>
+<td> 以更新模式打开文件，在现有文件的末尾添加内容，如果文件不存在则创建一个新文件，<strong>可以读整个文件，但只能从末尾添加内容</strong></td>
+</tr>
+<tr>
+<td> “rb”、”wb”、”ab”、”rb+”、”r+b”、”wb+”、”w+b”、”ab+”、”a+b”</td>
+<td> 与上边的对应类似，但以二进制模式打开文件</td>
+</tr>
+<tr>
+<td> “wx”、”wbx”、”w+x”、”wb+x” 或”w+bx”</td>
+<td>（C11）与上边对应类似，但如果文件已存在或以独占模式打开文件，则打开文件失败</td>
+</tr>
+</tbody></table>
+<p>带字母 x 的写模式比以前的具有更多特性：</p>
+<ol>
+<li>如果以传统的一种写模式打开一个现有文件，fopen () 会把该文件的长度截为 0，这样就丢失了该文件的内容。但是使用带 x 字母的写模式，即使 fopen () 操作失败，原文件的内容也不会被删除；</li>
+<li>如果环境允许，x 模式的独占特性使得其他程序或线程无法访问正在被打开的文件。</li>
+</ol>
+<h2 id="关闭文件-fclose"><a href="#关闭文件-fclose" class="headerlink" title="关闭文件 fclose()"></a>关闭文件 fclose ()</h2><div class="note "><p>函数名称：fclose<br>参数：待关闭文件的名称（包含该文件名的字符串地址）；<br>返回值：成功关闭返回 0，否则返回 EOF。</p>
+</div>
+
+<div class="note warning no-icon"><p>注意区分 fopen () 和 fclose () 的返回值！前者失败时返回 NULL（通常情况下就是 0），后者成功时返回 0。</p>
+</div>
+
+<h2 id="读写文件"><a href="#读写文件" class="headerlink" title="读写文件"></a>读写文件</h2><h3 id="fprintf-和-fscanf"><a href="#fprintf-和-fscanf" class="headerlink" title="fprintf() 和 fscanf()"></a>fprintf () 和 fscanf ()</h3><p>这两个函数分别和 printf () 和 scanf () 类似，只不过 printf () 和 scanf () 分别默认了写和读的标准文件是 stdout 和 stdin，而 fprintf () 和 fscanf () 的第一个参数都需要指定文件指针。</p>
+<h3 id="getc-和-putc"><a href="#getc-和-putc" class="headerlink" title="getc() 和 putc()"></a>getc () 和 putc ()</h3><p>这两个函数分别和 getchar () 和 putchar () 类似，只是需要提供文件指针。</p>
+<h3 id="ungetc"><a href="#ungetc" class="headerlink" title="ungetc()"></a>ungetc()</h3><div class="note "><p>函数名称：ungetc<br>函数原型：<code>int ungetc(int c, FILE *fp);</code><br>函数作用：把 c 指定的字符放回输入流中<br>返回值：如果成功，则返回被推入的字符，否则返回 EOF</p>
+</div>
+
+<h3 id="fgets-和-fputs"><a href="#fgets-和-fputs" class="headerlink" title="fgets() 和 fputs()"></a>fgets () 和 fputs ()</h3><p>虽然这两个函数也分别类似于 gets () 和 puts ()，但比起上边几个函数的” 类似”，这个要低一点，所以详细说明一下。</p>
+<div class="note "><p>函数名称：fgets<br>函数原型：<code>char *fgets (char * restrict str, int n, FILE * restrict fp);</code><br>返回值：如果成功，该函数返回相同的 str 参数。如果到达文件末尾或者没有读取到任何字符，str 的内容保持不变，并返回一个空指针。如果发生错误，返回一个空指针。</p>
+</div>
+
+<p>需要注意 fgets () 的第二个参数，因为 fgets () 读取输入知道第一个换行符的后边（<strong>意味着它会读入换行符</strong>），或读到文件结尾，或读取 n-1 个字符，并在结尾加上一个 <code>\0</code> 使之成为一个字符串。</p>
+<div class="note "><p>函数名称：fputs<br>函数原型：<code>int fputs (char * restrict str, FILE * restrict fp);</code><br>返回值：该函数返回一个非负值，如果发生错误则返回 EOF。</p>
+</div>
+
+<p>fputs () 与 puts () 类似，但<strong>不会在结尾自动添加换行</strong>。</p>
+<div class="note warning no-icon"><p>注意区分 fgets () 与 gets ()， fputs () 与 puts ()！gets () 不保留换行符所以 puts () 自动添加换行符；fgets () 保留换行符所以 fputs () 不会添加换行符。</p>
+</div>
+
+<h3 id="fread-和-fwrite"><a href="#fread-和-fwrite" class="headerlink" title="fread() 和 fwrite()"></a>fread () 和 fwrite ()</h3><p>上述的函数都是以文本形式读写文件，这两个函数用于以二进制形式读写文件。</p>
+<div class="note "><p>函数名称：fread<br>函数原型：<code>size_t fread(void * restrict ptr, size_t size, size_t nmemb, FILE * restrict fp);</code><br>返回值：返回成功读取项的数量。正常情况下返回值等于 nmemb，发生错误则返回值小于 nmemb。</p>
+</div>
+
+<div class="note "><p>函数名称：fwrite<br>函数原型：<code>size_t fwrite(const void * restrict ptr, size_t size, size_t nmemb, FILE * restrict fp);</code><br>返回值：返回成功写入项的数量。正常情况下返回值等于 nmemb，发生错误则返回值小于 nmemb。</p>
+</div>
+
+<p>参数 size 表示待写入数据块的大小（以字节为单位），nmemb 表示待写入数据块的数量。</p>
+<p>下边是两个使用这两个函数的例子。</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 保存一个大小为 256 字节的 buffer 数组</span></span><br><span class="line"><span class="type">char</span> buffer[<span class="number">256</span>];</span><br><span class="line">fwrite(buffer, <span class="number">256</span>, <span class="number">1</span>, fp);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 保存一个内含 10 个 double 类型值的数组</span></span><br><span class="line"><span class="comment">// 或者说理解成保存 10 个 double 类型的值</span></span><br><span class="line"><span class="type">double</span> earnings[<span class="number">10</span>];</span><br><span class="line">fwrite(earnings, <span class="keyword">sizeof</span>(<span class="type">double</span>), <span class="number">10</span>, fp);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 读取 10 个 double 类型的值到一个数组中</span></span><br><span class="line"><span class="type">double</span> earnings[<span class="number">10</span>];</span><br><span class="line">fread(earnings, <span class="keyword">sizeof</span>(<span class="type">double</span>), <span class="number">10</span>, fp);</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="随机访问-fseek-和-ftell"><a href="#随机访问-fseek-和-ftell" class="headerlink" title="随机访问 fseek() 和 ftell()"></a>随机访问 fseek () 和 ftell ()</h2><div class="note "><p>函数名称：fseek<br>函数原型：<code>int fseek(FILE *_File,long _Offset,int _Origin);</code><br>参数：文件指针，偏移量 (long 类型)，模式<br>返回值：正常则返回 0，错误则返回 -1。</p>
+</div>
+
+<p>第二个参数偏移量必须是一个 long 类型的值，代表偏移的<strong>字节数</strong>。这个值为正，则表示像文件末尾方向移动；为负则表示向文件开头处。<br>第三个参数可以理解成起点位置，可以使用 <code>SEEK_SET</code>、<code>SEEK_CUR</code> 或 <code>SEEK_END</code> 分别定位到文件开始、当前位置或文件末尾（老版本应分别使用 <code>0</code>、<code>1</code>、<code>2</code>）。</p>
+<p>下边是一些例子（来自《C Primer Plus（第 6 版）中文版》P364）：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fseek(fp, <span class="number">0L</span>, SEEK_SET);   <span class="comment">// 定位至文件开始处</span></span><br><span class="line">fseek(fp, <span class="number">10L</span>, SEEK_SET);  <span class="comment">// 定位至文件中第 10 个字节</span></span><br><span class="line">fseek(fp, <span class="number">2L</span>, SEEK_CUR);   <span class="comment">// 从文件当前位置向结尾方向移动 2 个字节</span></span><br><span class="line">fseek(fp, <span class="number">0L</span>, SEEK_END);   <span class="comment">// 定位至文件末尾</span></span><br><span class="line">fseek(fp, <span class="number">-10L</span>, SEEK_END); <span class="comment">// 从文件结尾处回退 10 个字节</span></span><br></pre></td></tr></tbody></table></figure>
+
+<div class="note "><p>函数名称：ftell<br>函数原型：<code>long ftell(FILE *_File);</code><br>返回值：返回当前位置距文件开始的字节数，如文件的第一个字节到文件开始处的距离为 0。</p>
+</div>
+
+<p>下边是书中给出的一个例子：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fseek(fp, <span class="number">0L</span>, SEEK_END); <span class="comment">// 首先定位到文件结尾</span></span><br><span class="line">last = ftell(fp);        <span class="comment">// 统计字节数，并存储到 last 中</span></span><br><span class="line"><span class="comment">// 逆序打印每一个字节的字符</span></span><br><span class="line"><span class="keyword">for</span> (count = <span class="number">1L</span>; count &lt;= last; count++)</span><br><span class="line">{</span><br><span class="line">    fseek(fp, -count, SEEK_END);</span><br><span class="line">    ch = getc(fp);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="其他函数"><a href="#其他函数" class="headerlink" title="其他函数"></a>其他函数</h2><h3 id="刷新缓冲区-fflush"><a href="#刷新缓冲区-fflush" class="headerlink" title="刷新缓冲区 fflush()"></a>刷新缓冲区 fflush ()</h3><div class="note "><p>函数名称：fflush<br>函数原型：<code>int fflush(FILE *fp);</code><br>函数作用：调用该函数将刷新缓冲区，即将输出缓冲区中所有的未写入数据被发送到 fp 指定的输出文件。如果 fp 为空指针，所有输出缓冲区都被刷新。<br>返回值：成功返回 0，错误返回 EOF。</p>
+</div>
+
+<h3 id="创建替换使用缓冲区-setvbuf"><a href="#创建替换使用缓冲区-setvbuf" class="headerlink" title="创建替换使用缓冲区 setvbuf()"></a>创建替换使用缓冲区 setvbuf ()</h3><div class="note "><p>函数名称：setvbuf<br>函数原型：<code>int setvbuf(FILE * restrict fp, char * restrict buf, int mode, size_t size);</code><br>返回值：成功返回 0，否则返回非零值。</p>
+</div>
+
+<p>第二个参数指向待使用的缓冲区。如果是 NULL，则自动分配。<br>第三个参数为模式，有下边几种：</p>
+<table>
+<thead>
+<tr>
+<th align="left">模式</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">_IOFBF</td>
+<td align="left"><strong> 全缓冲</strong>：对于输出，数据在缓冲填满时被一次性写入。对于输入，缓冲会在请求输入且缓冲为空时被填充。</td>
+</tr>
+<tr>
+<td align="left">_IOLBF</td>
+<td align="left"><strong> 行缓冲</strong>：对于输出，数据在遇到换行符或者在缓冲填满时被写入，具体视情况而定。对于输入，缓冲会在请求输入且缓冲为空时被填充，直到遇到下一个换行符。</td>
+</tr>
+<tr>
+<td align="left">_IONBF</td>
+<td align="left"><strong> 无缓冲</strong>：不使用缓冲。每个 I/O 操作都被即时写入。buffer 和 size 参数被忽略。</td>
+</tr>
+</tbody></table>
+<h3 id="feof-和-ferror"><a href="#feof-和-ferror" class="headerlink" title="feof() 和 ferror()"></a>feof () 和 ferror ()</h3><p>当上一次输入调用检测到文件结尾时，feof () 函数返回一个非零值，否则返回 0。<br>当读写出现错误，ferror () 函数返回一个非零值，否则返回 0。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/rss.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/c-c/" rel="tag"># C/C++</a>
+              <a href="/tags/file/" rel="tag"># File</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/78dc947f.html" rel="prev" title="error: summary string parsing error 错误解决方法">
+                  <i class="fa fa-chevron-left"></i> error: summary string parsing error 错误解决方法
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/bb929dc9.html" rel="next" title="VS Code 中设置显示最大列数边界线">
+                  VS Code 中设置显示最大列数边界线 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">BlockLune</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/BlockLune" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.4.3/mermaid.min.js","integrity":"sha256-e0o3JYsdjqKajf9eOe22FhioYSz9WofRY4dLKo3F6do="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"BlockLune","repo":"blocklune.github.io","client_id":"f0d9ff2c460a605d4f3f","client_secret":"9808616eda1afe0741c036b5d5670a490b68f6ef","admin_user":"BlockLune","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"1804451e3711addbd107f541232701fb"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

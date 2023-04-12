@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="google7b9c7ea42a3102a3.html">
+  <meta name="baidu-site-verification" content="baidu_verify_code-53bseLro2G.html">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blocklune.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="这是一次计算机导论课的作业。本来对于最大公约数的求解算法，我就只知道一个辗转相除法。原来，其实还有别的一些 …">
+<meta property="og:type" content="article">
+<meta property="og:title" content="求解最大公约数的四种算法">
+<meta property="og:url" content="https://blocklune.github.io/posts/504f038d.html">
+<meta property="og:site_name" content="Fish Pond">
+<meta property="og:description" content="这是一次计算机导论课的作业。本来对于最大公约数的求解算法，我就只知道一个辗转相除法。原来，其实还有别的一些 …">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s1.ax1x.com/2022/12/05/zy8vhn.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/12/05/zyNCG9.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/12/05/zyTcJe.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/12/05/zyTgRH.png">
+<meta property="article:published_time" content="2022-12-04T11:37:17.000Z">
+<meta property="article:modified_time" content="2023-04-12T06:04:52.440Z">
+<meta property="article:author" content="BlockLune">
+<meta property="article:tag" content="Algorithm">
+<meta property="article:tag" content="GCD">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2022/12/05/zy8vhn.png">
+
+
+<link rel="canonical" href="https://blocklune.github.io/posts/504f038d.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blocklune.github.io/posts/504f038d.html","path":"posts/504f038d.html","title":"求解最大公约数的四种算法"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>求解最大公约数的四种算法 | Fish Pond</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/rss.xml" title="Fish Pond" type="application/rss+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Fish Pond</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Posts swim here.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%95%E4%B8%80%EF%BC%9A%E8%AF%95%E9%99%A4%E6%B3%95%EF%BC%88%E7%A9%B7%E4%B8%BE%E6%B3%95%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">法一：试除法（穷举法）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">1.1.</span> <span class="nav-text">1. 时间复杂度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.2.</span> <span class="nav-text">1. 自然语言描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BC%AA%E4%BB%A3%E7%A0%81%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.3.</span> <span class="nav-text">1. 伪代码描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="nav-number">1.4.</span> <span class="nav-text">1. 流程图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-C-%E4%BB%A3%E7%A0%81"><span class="nav-number">1.5.</span> <span class="nav-text">1. C++ 代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%95%E4%BA%8C%EF%BC%9A%E8%BE%97%E8%BD%AC%E7%9B%B8%E9%99%A4%E6%B3%95%EF%BC%88%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">法二：辗转相除法（欧几里得算法）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">2.1.</span> <span class="nav-text">2. 时间复杂度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0"><span class="nav-number">2.2.</span> <span class="nav-text">2. 自然语言描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%BC%AA%E4%BB%A3%E7%A0%81%E6%8F%8F%E8%BF%B0"><span class="nav-number">2.3.</span> <span class="nav-text">2. 伪代码描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="nav-number">2.4.</span> <span class="nav-text">2. 流程图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-C-%E4%BB%A3%E7%A0%81"><span class="nav-number">2.5.</span> <span class="nav-text">2. C++ 代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%95%E4%B8%89%EF%BC%9A%E6%9B%B4%E7%9B%B8%E5%87%8F%E6%8D%9F%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">法三：更相减损法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">3.1.</span> <span class="nav-text">3. 时间复杂度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0"><span class="nav-number">3.2.</span> <span class="nav-text">3. 自然语言描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="nav-number">3.3.</span> <span class="nav-text">3. 流程图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-C-%E4%BB%A3%E7%A0%81"><span class="nav-number">3.4.</span> <span class="nav-text">3. C++ 代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%95%E5%9B%9B%EF%BC%9AStein-%E7%AE%97%E6%B3%95"><span class="nav-number">4.</span> <span class="nav-text">法四：Stein 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">4.1.</span> <span class="nav-text">4. 时间复杂度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%88%E6%9C%AC%E4%B8%80%EF%BC%9A"><span class="nav-number">4.2.</span> <span class="nav-text">版本一：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0"><span class="nav-number">4.2.1.</span> <span class="nav-text">4.1. 自然语言描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="nav-number">4.2.2.</span> <span class="nav-text">4.1. 流程图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-C-%E4%BB%A3%E7%A0%81"><span class="nav-number">4.2.3.</span> <span class="nav-text">4.1. C++ 代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%88%E6%9C%AC%E4%BA%8C%EF%BC%9A"><span class="nav-number">4.3.</span> <span class="nav-text">版本二：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0"><span class="nav-number">4.3.1.</span> <span class="nav-text">4.2. 自然语言描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="nav-number">4.3.2.</span> <span class="nav-text">4.2. 流程图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-C-%E4%BB%A3%E7%A0%81"><span class="nav-number">4.3.3.</span> <span class="nav-text">4.2. C++ 代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99%EF%BC%9A"><span class="nav-number">5.</span> <span class="nav-text">参考资料：</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="BlockLune"
+      src="/img/waifu.png">
+  <p class="site-author-name" itemprop="name">BlockLune</p>
+  <div class="site-description" itemprop="description">Here is BlockLune's blog.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">56</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/BlockLune" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;BlockLune" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:blocklune@gmail.com" title="E-Mail → mailto:blocklune@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          Links
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="http://f-studio.is-best.net/" title="http:&#x2F;&#x2F;f-studio.is-best.net&#x2F;" rel="noopener" target="_blank">F-Studio</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://blog.yunfinibol.top/" title="http:&#x2F;&#x2F;blog.yunfinibol.top&#x2F;" rel="noopener" target="_blank">Yunfinibol's Blog</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blocklune.github.io/posts/504f038d.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/waifu.png">
+      <meta itemprop="name" content="BlockLune">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fish Pond">
+      <meta itemprop="description" content="Here is BlockLune's blog.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="求解最大公约数的四种算法 | Fish Pond">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          求解最大公约数的四种算法
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-12-04 19:37:17" itemprop="dateCreated datePublished" datetime="2022-12-04T19:37:17+08:00">2022-12-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-04-12 14:04:52" itemprop="dateModified" datetime="2023-04-12T14:04:52+08:00">2023-04-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/" itemprop="url" rel="index"><span itemprop="name">CS</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/algorithms-data-structures/" itemprop="url" rel="index"><span itemprop="name">Algorithms & Data structures</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>这是一次计算机导论课的作业。本来对于最大公约数的求解算法，我就只知道一个<strong>辗转相除法</strong>。原来，其实还有别的一些 …</p>
+<span id="more"></span>
+
+<h2 id="法一：试除法（穷举法）"><a href="#法一：试除法（穷举法）" class="headerlink" title="法一：试除法（穷举法）"></a>法一：试除法（穷举法）</h2><p>也许这应该才是最先能想到的算法 —— 两个数中取小的那个，由大到小穷举这个数的所有因数，并且看看这个数是不是另一个数的因数，如果是，那这个数就是这两个数的最大公约数了。</p>
+<h3 id="1-时间复杂度"><a href="#1-时间复杂度" class="headerlink" title="1. 时间复杂度"></a>1. 时间复杂度</h3><p>$O(min(a,b))$</p>
+<h3 id="1-自然语言描述"><a href="#1-自然语言描述" class="headerlink" title="1. 自然语言描述"></a>1. 自然语言描述</h3><ol>
+<li>定义变量 $a,b$，用于存放两个待求取最大公约数的值，确保 $a\leq b$；</li>
+<li>定义变量 $i=a$；</li>
+<li>如果 $i\geq1$，执行步骤 4；</li>
+<li>判断 $i$ 是否是 $a$ 的因数，如果是，执行步骤 5，否则，执行步骤 7；</li>
+<li>判断 $i$ 是否是 $b$ 的因数，如果是，执行步骤 6，否则，执行步骤 7；</li>
+<li>跳出循环，$i$ 就是 $a$ 和 $b$ 的最大公约数；</li>
+<li>$i$ 自减 $1$，执行步骤 3；</li>
+</ol>
+<h3 id="1-伪代码描述"><a href="#1-伪代码描述" class="headerlink" title="1. 伪代码描述"></a>1. 伪代码描述</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var a,b,i:integer;</span><br><span class="line">input(a);</span><br><span class="line">input(b);</span><br><span class="line">Begin</span><br><span class="line">For i&lt;-a to 1 do</span><br><span class="line">Begin</span><br><span class="line">	If a%i==0 Then</span><br><span class="line">    	If b%i==0 Then</span><br><span class="line">    	Begin</span><br><span class="line">    		print(i);</span><br><span class="line">    		break;</span><br><span class="line">    	End;</span><br><span class="line">End;</span><br><span class="line">End;</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="1-流程图"><a href="#1-流程图" class="headerlink" title="1. 流程图"></a>1. 流程图</h3><p><img data-src="https://s1.ax1x.com/2022/12/05/zy8vhn.png" alt="Powered by draw.io"></p>
+<h3 id="1-C-代码"><a href="#1-C-代码" class="headerlink" title="1. C++ 代码"></a>1. C++ 代码</h3><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">uint64_t</span> a, b;</span><br><span class="line">    cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">    <span class="keyword">if</span> (a &gt; b)</span><br><span class="line">        <span class="built_in">swap</span>(a, b);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = a; i &gt;= <span class="number">1</span>; i--)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">if</span> (a % i == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">if</span> (b % i == <span class="number">0</span>)</span><br><span class="line">            {</span><br><span class="line">                cout &lt;&lt; i &lt;&lt; endl;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="法二：辗转相除法（欧几里得算法）"><a href="#法二：辗转相除法（欧几里得算法）" class="headerlink" title="法二：辗转相除法（欧几里得算法）"></a>法二：辗转相除法（欧几里得算法）</h2><p>这大概是最常见的计算最大公约数的算法了吧…</p>
+<h3 id="2-时间复杂度"><a href="#2-时间复杂度" class="headerlink" title="2. 时间复杂度"></a>2. 时间复杂度</h3><p>可近似看作 $O (log (max (a,b)))$，但取模运算性能较差。</p>
+<h3 id="2-自然语言描述"><a href="#2-自然语言描述" class="headerlink" title="2. 自然语言描述"></a>2. 自然语言描述</h3><ol>
+<li>定义变量 a，b 并读入；</li>
+<li>如果 b == 0，返回 a；</li>
+<li>否则，更新 a 的值为原来 b 的值，更新 b 的值为原来 a% b 的值，回到步骤 2。</li>
+</ol>
+<h3 id="2-伪代码描述"><a href="#2-伪代码描述" class="headerlink" title="2. 伪代码描述"></a>2. 伪代码描述</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var a,b:integer;</span><br><span class="line">def gcd(a,b):</span><br><span class="line">Begin</span><br><span class="line">	If b==0 Then</span><br><span class="line">    	return a;</span><br><span class="line">    Else return(gcd(b, a%b));</span><br><span class="line">End;</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="2-流程图"><a href="#2-流程图" class="headerlink" title="2. 流程图"></a>2. 流程图</h3><p><img data-src="https://s1.ax1x.com/2022/12/05/zyNCG9.png" alt="Powered by draw.io"></p>
+<h3 id="2-C-代码"><a href="#2-C-代码" class="headerlink" title="2. C++ 代码"></a>2. C++ 代码</h3><p>主函数及 gcd 函数的函数声明：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">uint64_t</span> <span class="title">gcd</span><span class="params">(<span class="type">uint64_t</span>, <span class="type">uint64_t</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">uint64_t</span> a, b;</span><br><span class="line">    cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">    cout &lt;&lt; <span class="built_in">gcd</span>(a, b) &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>gcd 函数（递归实现）：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">uint64_t</span> <span class="title">gcd</span><span class="params">(<span class="type">uint64_t</span> a, <span class="type">uint64_t</span> b)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">if</span> (b == <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">gcd</span>(b, a % b);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>gcd 函数（递归函数，写成一行的版本）：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">uint64_t</span> <span class="title">gcd</span><span class="params">(<span class="type">uint64_t</span> a, <span class="type">uint64_t</span> b)</span> </span>{ <span class="keyword">return</span> b ? <span class="built_in">gcd</span>(b, a % b) : a; }</span><br></pre></td></tr></tbody></table></figure>
+
+<p>gcd 函数（迭代实现）：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">uint64_t</span> <span class="title">gcd</span><span class="params">(<span class="type">uint64_t</span> a, <span class="type">uint64_t</span> b)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">while</span> (b != <span class="number">0</span>)</span><br><span class="line">    {</span><br><span class="line">        <span class="type">uint64_t</span> tmp = a % b;</span><br><span class="line">        a = b;</span><br><span class="line">        b = tmp;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="法三：更相减损法"><a href="#法三：更相减损法" class="headerlink" title="法三：更相减损法"></a>法三：更相减损法</h2><p>更相减损法又叫<strong>更相减损术</strong>，出自《九章算术》，是咱老祖宗的智慧。这个东西本来是为了约分而设计的，但是，既然都约分了，那自然也可以用来求取最大公约数。</p>
+<p>这个算法的原文描述是这样：</p>
+<blockquote>
+<p>可半者半之，不可半者，副置分母、子之数，以少减多，更相减损，求其等也。以等数约之。</p>
+</blockquote>
+<p>翻译成白话就是：</p>
+<blockquote>
+<p>（如果需要对分数进行约分，那么）可以折半的话，就折半（也就是用 2 来约分）。如果不可以折半的话，那么就比较分母和分子的大小，用大数减去小数，互相减来减去，一直到减数与差相等为止，用这个相等的数字来约分。</p>
+</blockquote>
+<p><em>这两段引用的来源是：<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9B%B4%E7%9B%B8%E5%87%8F%E6%8D%9F%E6%9C%AF">更相减损术_百度百科 (baidu.com)</a></em></p>
+<h3 id="3-时间复杂度"><a href="#3-时间复杂度" class="headerlink" title="3. 时间复杂度"></a>3. 时间复杂度</h3><p>$O(max(a,b))$</p>
+<h3 id="3-自然语言描述"><a href="#3-自然语言描述" class="headerlink" title="3. 自然语言描述"></a>3. 自然语言描述</h3><ol>
+<li>定义变量 a、b 并读入；</li>
+<li>如果 变量 a、b 能被 2 整除，那就都除以 2。不断重复执行这一步直到 a、b 任意一个不能被 2 整除，记录下进行这一步的次数，存入变量 cnt 中；</li>
+<li>定义三个变量 x1、x2、x3，用于表示被减数、减数和差；</li>
+<li>x1 赋初值为 a、b 中较大的那一个，x2 赋初值为 a、b 中较小的那一个，x3 赋初值为 x1-x2；</li>
+<li>在 x2!=x3 的情况下，不断更新 x1 = max (x2, x3)，x2 = min (x2, x3)，x3 = x1 - x2；</li>
+<li>返回 x2 + pow (2, cnt)。</li>
+</ol>
+<h3 id="3-流程图"><a href="#3-流程图" class="headerlink" title="3. 流程图"></a>3. 流程图</h3><h3 id="3-C-代码"><a href="#3-C-代码" class="headerlink" title="3. C++ 代码"></a>3. C++ 代码</h3><p>下边给出的是基于原文描述实现的更相减损法：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">uint64_t</span> <span class="title">gcd</span><span class="params">(<span class="type">uint64_t</span> a, <span class="type">uint64_t</span> b)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">uint64_t</span> cnt = <span class="number">0</span>; <span class="comment">// 统计除以二的次数</span></span><br><span class="line">    <span class="keyword">while</span> (a % <span class="number">2</span> == <span class="number">0</span> &amp;&amp; b % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">    {</span><br><span class="line">        cnt++;</span><br><span class="line">        a /= <span class="number">2</span>;</span><br><span class="line">        b /= <span class="number">2</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="type">uint64_t</span> x1, x2, x3; <span class="comment">// 分别表示被减数、减数、差</span></span><br><span class="line">    x1 = <span class="built_in">max</span>(a, b);</span><br><span class="line">    x2 = <span class="built_in">min</span>(a, b);</span><br><span class="line">    x3 = x1 - x2;</span><br><span class="line">    <span class="keyword">while</span> (x2 != x3)</span><br><span class="line">    {</span><br><span class="line">        x1 = <span class="built_in">max</span>(x2, x3);</span><br><span class="line">        x2 = <span class="built_in">min</span>(x2, x3);</span><br><span class="line">        x3 = x1 - x2;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> x2 * <span class="built_in">pow</span>(<span class="number">2</span>, cnt);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>如果去掉那些 “可半者半之”，直接进行后面的 “<strong>辗转相减</strong>” 部分，也是可以的：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">uint64_t</span> <span class="title">gcd</span><span class="params">(<span class="type">uint64_t</span> a, <span class="type">uint64_t</span> b)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">uint64_t</span> x1, x2, x3; <span class="comment">// 分别表示被减数、减数、差</span></span><br><span class="line">    x1 = <span class="built_in">max</span>(a, b);</span><br><span class="line">    x2 = <span class="built_in">min</span>(a, b);</span><br><span class="line">    x3 = x1 - x2;</span><br><span class="line">    <span class="keyword">while</span> (x2 != x3)</span><br><span class="line">    {</span><br><span class="line">        x1 = <span class="built_in">max</span>(x2, x3);</span><br><span class="line">        x2 = <span class="built_in">min</span>(x2, x3);</span><br><span class="line">        x3 = x1 - x2;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> x2;  <span class="comment">// 或者 return x3;</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>于是也可以写出递归形式：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">uint64_t</span> <span class="title">gcd</span><span class="params">(<span class="type">uint64_t</span> a, <span class="type">uint64_t</span> b)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">if</span> (a &lt; b)</span><br><span class="line">        a ^= b, b ^= a, a ^= b; <span class="comment">// 确保 a&gt;=b</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="number">2</span> * b == a)</span><br><span class="line">        <span class="keyword">return</span> b;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">gcd</span>(b, a - b);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="法四：Stein-算法"><a href="#法四：Stein-算法" class="headerlink" title="法四：Stein 算法"></a>法四：Stein 算法</h2><p>这个算法是辗转相除法的改进版本，避免了取模运算，且算法性能稳定。</p>
+<h3 id="4-时间复杂度"><a href="#4-时间复杂度" class="headerlink" title="4. 时间复杂度"></a>4. 时间复杂度</h3><p>$O(log(max(a,b)))$</p>
+<h3 id="版本一："><a href="#版本一：" class="headerlink" title="版本一："></a>版本一：</h3><p>学习自<a target="_blank" rel="noopener" href="https://cnblogs.com/COLIN-LIGHTNING/p/8425484.html">这篇</a>文章，正好学习一下位运算的一些 “骚操作”（见下文引用处）。</p>
+<h4 id="4-1-自然语言描述"><a href="#4-1-自然语言描述" class="headerlink" title="4.1. 自然语言描述"></a>4.1. 自然语言描述</h4><ol>
+<li>定义变量 a、b 并读入，确保 a&gt;=b（如果 a&lt;b 则交换）；</li>
+<li>如果两个数都是偶数，那就不断除以 2 直至至少一个不是偶数；</li>
+<li>如果一奇一偶，那就把那个偶数不断除以 2 直至它也为一个奇数；</li>
+<li>对两个奇数进行辗转相减（或者辗转相除？上边那篇文章里这么说，但是除的话不是无法避免取模运算效率低下的问题了嘛 emm），直至求出它们的最大公约数；</li>
+</ol>
+<h4 id="4-1-流程图"><a href="#4-1-流程图" class="headerlink" title="4.1. 流程图"></a>4.1. 流程图</h4><p><img data-src="https://s1.ax1x.com/2022/12/05/zyTcJe.png" alt="Powered by draw.io"></p>
+<h4 id="4-1-C-代码"><a href="#4-1-C-代码" class="headerlink" title="4.1. C++ 代码"></a>4.1. C++ 代码</h4><blockquote>
+<p>(1) 按位与 (&amp;):</p>
+<p>a&amp;x 为对数 a 的二进制形式的取位操作，即去 a 二进制形式的第 x 位。这里有一个重要应用就是 a&amp;1 可以用于判断数 a 的奇偶性，即 a 末位为 0 即为偶数，末位为 1 即为奇数。</p>
+<p>(2) 异或运算 (^):</p>
+<p>具体介绍参考之前的随笔：<a target="_blank" rel="noopener" href="http://www.cnblogs.com/COLIN-LIGHTNING/p/8298554.html%EF%BC%9B">http://www.cnblogs.com/COLIN-LIGHTNING/p/8298554.html；</a><br>应用为交换两数：a^=b,b^=a,a^=b 即完成了两数交换。</p>
+<p>(3) 按位左移 (&lt;&lt;):</p>
+<p>a&lt;&lt;=x 即为使 a 乘以 2 的 x 次幂，原理是让 a 的二进制形式左移 x 位；应用为对与 2 的幂次方相乘使运算更快更方便；</p>
+<p>(4) 按位右移 (&gt;&gt;):</p>
+<p>a&gt;&gt;=x 即为使 a 除以 2 的 x 次幂，原理是让 a 的二进制形式右移 x 位；应用为对与 2 的幂次方相除使运算更快更方便；</p>
+</blockquote>
+<p>大佬的代码大致是这样的：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">uint64_t</span> <span class="title">gcd</span><span class="params">(<span class="type">uint64_t</span> a, <span class="type">uint64_t</span> b)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">if</span> (a &lt; b)</span><br><span class="line">        a ^= b, b ^= a, a ^= b; <span class="comment">// 确保 a&gt;=b，也可以 swap(a,b);</span></span><br><span class="line">    <span class="keyword">if</span> (b == <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    <span class="keyword">if</span> ((!(a &amp; <span class="number">1</span>)) &amp;&amp; (!(b &amp; <span class="number">1</span>)))        <span class="comment">// a&amp;1 若为 0 表示 a%2==0，也就是 a 能被 2 整除；</span></span><br><span class="line">                                         <span class="comment">// 若非 0 则表示 a%2!=0，也就是 a 不能被 2 整除。</span></span><br><span class="line">                                         <span class="comment">// b&amp;1 类似。所以这里判断的是 “当 a、b 都是偶数的时候”</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">gcd</span>(a &gt;&gt; <span class="number">1</span>, b &gt;&gt; <span class="number">1</span>) &lt;&lt; <span class="number">1</span>; <span class="comment">// 步骤 2：将 a、b 都除以 2。注意最后的左移，在递归返回过程中将2因子乘上。</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> ((a &amp; <span class="number">1</span>) &amp;&amp; (!(b &amp; <span class="number">1</span>)))      <span class="comment">// “当 a 为奇数，b 为偶数时”</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">gcd</span>(a, b &gt;&gt; <span class="number">1</span>);           <span class="comment">// 步骤 3：将仍为偶数的那个数不断除以 2 直至其为奇数。</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> ((!(a &amp; <span class="number">1</span>)) &amp;&amp; (b &amp; <span class="number">1</span>))      <span class="comment">// “当 a 为偶数，b 为奇数时”</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">gcd</span>(a &gt;&gt; <span class="number">1</span>, b);           <span class="comment">// 与上面类似</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">gcd</span>(a - b, b); <span class="comment">// 步骤 4：用辗转相减法处理，求取这两个奇数的最大公约数;</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="版本二："><a href="#版本二：" class="headerlink" title="版本二："></a>版本二：</h3><p>来自<a target="_blank" rel="noopener" href="https://blog.csdn.net/Brilliance_panpan/article/details/88372432">这里</a>，对均为奇数的情况做了不同的处理，其他都是一样的。</p>
+<h4 id="4-2-自然语言描述"><a href="#4-2-自然语言描述" class="headerlink" title="4.2. 自然语言描述"></a>4.2. 自然语言描述</h4><ol>
+<li>定义变量 a、b 并读入；</li>
+<li>如果 a==b，则直接返回 a 或 b，否则下一步；</li>
+<li>如果 a&lt;b，交换 a、b 的值，确保 a&gt;b；</li>
+<li>判断属于下边哪种情况，按对应的情况更新 a、b 的值，回到步骤 2。</li>
+</ol>
+<p>四种情况分别是：</p>
+<ol>
+<li>均为偶数: gcd (a,b) = 2 * gcd (a/2,b/2);</li>
+<li> 均为奇数: gcd (a,b) = gcd ((a+b)/2,(a-b)/2);</li>
+<li>a 为奇数，b 为偶数: gcd (a,b) = gcd (a,b/2);</li>
+<li>a 为偶数，b 为奇数: gcd (a,b) = gcd (a/2,b);</li>
+</ol>
+<h4 id="4-2-流程图"><a href="#4-2-流程图" class="headerlink" title="4.2. 流程图"></a>4.2. 流程图</h4><p><img data-src="https://s1.ax1x.com/2022/12/05/zyTgRH.png" alt="Powered by draw.io"></p>
+<h4 id="4-2-C-代码"><a href="#4-2-C-代码" class="headerlink" title="4.2. C++ 代码"></a>4.2. C++ 代码</h4><p>最后代码和上边也没有太大差别。</p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">uint64_t</span> <span class="title">gcd</span><span class="params">(<span class="type">uint64_t</span> a, <span class="type">uint64_t</span> b)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">if</span> (a == b)</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    <span class="keyword">if</span> (a &lt; b)</span><br><span class="line">        a ^= b, b ^= a, a ^= b;</span><br><span class="line">    <span class="keyword">if</span> (!(a &amp; <span class="number">1</span>) &amp;&amp; !(b &amp; <span class="number">1</span>))            <span class="comment">// 均为偶数</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">gcd</span>(a &gt;&gt; <span class="number">1</span>, b &gt;&gt; <span class="number">1</span>) &lt;&lt; <span class="number">1</span>; <span class="comment">// 别忘了要乘回来</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> ((a &amp; <span class="number">1</span>) &amp;&amp; (b &amp; <span class="number">1</span>))         <span class="comment">// 均为奇数</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">gcd</span>((a + b) &gt;&gt; <span class="number">1</span>, (a - b) &gt;&gt; <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> ((a &amp; <span class="number">1</span>) &amp;&amp; !(b &amp; <span class="number">1</span>)) <span class="comment">// a 奇 b 偶</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">gcd</span>(a, b &gt;&gt; <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (!(a &amp; <span class="number">1</span>) &amp;&amp; (b &amp; <span class="number">1</span>)) <span class="comment">// a 偶 b 奇</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">gcd</span>(a &gt;&gt; <span class="number">1</span>, b);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/Brilliance_panpan/article/details/88372432">《求最大公约数的 4 种常用算法 <em>AmethystFOB 的博客 - CSDN 博客</em>求最大公约数的四种算法》</a></li>
+<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9B%B4%E7%9B%B8%E5%87%8F%E6%8D%9F%E6%9C%AF">《更相减损术_百度百科 (baidu.com)》</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/Dan1374219106/article/details/106676043">《教你写一手漂亮的伪代码（详细规则 &amp; 简单实例）_<em>陈同学</em>的博客 - CSDN 博客_伪代码的简单例子》</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.php.cn/csharp-article-415083.html">《伪代码是什么？如何写一个伪代码？-C#.Net 教程 - PHP 中文网》</a></li>
+<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%B5%81%E7%A8%8B%E5%9B%BE/206961">《流程图_百度百科 (baidu.com)》</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/359722998">《for、while、do while 三种循环的流程图画法总结（附案例） - 知乎 (zhihu.com)》</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.liuchengtu.com/tutorial/switchlct.html">《switch 语句流程图怎么画？简单的 switch 语句流程图模板分享 (liuchengtu.com)》</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/COLIN-LIGHTNING/p/8425484.html">《浅谈 Stein 算法求最大公约数 (GCD) 的原理及简单应用 - COLINGAO - 博客园 (cnblogs.com)》</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/rss.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/algorithm/" rel="tag"># Algorithm</a>
+              <a href="/tags/gcd/" rel="tag"># GCD</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/a336c1b8.html" rel="prev" title="初探深度优先搜索（DFS）和广度优先搜索（BFS）">
+                  <i class="fa fa-chevron-left"></i> 初探深度优先搜索（DFS）和广度优先搜索（BFS）
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/eab95d6e.html" rel="next" title="C 标准库中 qsort 和 C++ STL 中 sort 的用法">
+                  C 标准库中 qsort 和 C++ STL 中 sort 的用法 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">BlockLune</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/BlockLune" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.4.3/mermaid.min.js","integrity":"sha256-e0o3JYsdjqKajf9eOe22FhioYSz9WofRY4dLKo3F6do="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"BlockLune","repo":"blocklune.github.io","client_id":"f0d9ff2c460a605d4f3f","client_secret":"9808616eda1afe0741c036b5d5670a490b68f6ef","admin_user":"BlockLune","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"8689ec7dc3a491d05cff802ee185e4b3"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

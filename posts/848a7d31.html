@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="google7b9c7ea42a3102a3.html">
+  <meta name="baidu-site-verification" content="baidu_verify_code-53bseLro2G.html">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blocklune.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="用 LaTeX 写数学公式的时候，总记不住一些写法，故在此记录学习笔记。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LaTeX 公式基础">
+<meta property="og:url" content="https://blocklune.github.io/posts/848a7d31.html">
+<meta property="og:site_name" content="Fish Pond">
+<meta property="og:description" content="用 LaTeX 写数学公式的时候，总记不住一些写法，故在此记录学习笔记。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-09-15T06:11:07.000Z">
+<meta property="article:modified_time" content="2023-04-11T15:43:08.644Z">
+<meta property="article:author" content="BlockLune">
+<meta property="article:tag" content="Mathematics">
+<meta property="article:tag" content="LaTeX">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://blocklune.github.io/posts/848a7d31.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blocklune.github.io/posts/848a7d31.html","path":"posts/848a7d31.html","title":"LaTeX 公式基础"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>LaTeX 公式基础 | Fish Pond</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/rss.xml" title="Fish Pond" type="application/rss+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Fish Pond</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Posts swim here.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%AC%A6%E5%8F%B7"><span class="nav-number">1.</span> <span class="nav-text">常见符号</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D"><span class="nav-number">1.1.</span> <span class="nav-text">希腊字母</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">1.2.</span> <span class="nav-text">运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%88%E4%B8%8E%E7%82%B9"><span class="nav-number">1.3.</span> <span class="nav-text">圈与点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E7%9B%B8%E5%85%B3"><span class="nav-number">1.4.</span> <span class="nav-text">集合相关</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8A%E4%B8%8B%E6%A0%87%E7%9A%84%E8%BE%93%E5%85%A5%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">上下标的输入方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E5%BC%8F"><span class="nav-number">2.1.</span> <span class="nav-text">分式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B9%E5%BC%8F"><span class="nav-number">2.2.</span> <span class="nav-text">根式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%B8%B8%E7%94%A8%E7%AC%A6%E5%8F%B7%E5%86%99%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">其他常用符号写法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="BlockLune"
+      src="/img/waifu.png">
+  <p class="site-author-name" itemprop="name">BlockLune</p>
+  <div class="site-description" itemprop="description">Here is BlockLune's blog.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">56</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/BlockLune" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;BlockLune" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:blocklune@gmail.com" title="E-Mail → mailto:blocklune@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          Links
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="http://f-studio.is-best.net/" title="http:&#x2F;&#x2F;f-studio.is-best.net&#x2F;" rel="noopener" target="_blank">F-Studio</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://blog.yunfinibol.top/" title="http:&#x2F;&#x2F;blog.yunfinibol.top&#x2F;" rel="noopener" target="_blank">Yunfinibol's Blog</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blocklune.github.io/posts/848a7d31.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/waifu.png">
+      <meta itemprop="name" content="BlockLune">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fish Pond">
+      <meta itemprop="description" content="Here is BlockLune's blog.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="LaTeX 公式基础 | Fish Pond">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          LaTeX 公式基础
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-09-15 14:11:07" itemprop="dateCreated datePublished" datetime="2022-09-15T14:11:07+08:00">2022-09-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-04-11 23:43:08" itemprop="dateModified" datetime="2023-04-11T23:43:08+08:00">2023-04-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/" itemprop="url" rel="index"><span itemprop="name">CS</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/tools/" itemprop="url" rel="index"><span itemprop="name">Tools</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>用 LaTeX 写数学公式的时候，总记不住一些写法，故在此记录学习笔记。</p>
+<span id="more"></span>
+
+<h2 id="常见符号"><a href="#常见符号" class="headerlink" title="常见符号"></a>常见符号</h2><h3 id="希腊字母"><a href="#希腊字母" class="headerlink" title="希腊字母"></a>希腊字母</h3><p>大小写希腊字母的写法区别就在于 LaTeX 符号的首字母大小写。</p>
+<p>若要使用斜体只要在前面加上 <code>var</code> 前缀，例如 <code>\varGamma</code> 可以用来显示 $\varGamma$ 。</p>
+<table>
+<thead>
+<tr>
+<th>大写字母</th>
+<th> LaTeX 写法</th>
+<th>小写字母</th>
+<th> LaTeX 写法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td> $\Alpha$</td>
+<td>\Alpha</td>
+<td>$\alpha$</td>
+<td>\alpha</td>
+</tr>
+<tr>
+<td>$\Beta$</td>
+<td>\Beta</td>
+<td>$\beta$</td>
+<td>\beta</td>
+</tr>
+<tr>
+<td>$\Gamma$</td>
+<td>\Gamma</td>
+<td>$\gamma$</td>
+<td>\gamma</td>
+</tr>
+<tr>
+<td>$\Delta$</td>
+<td>\Delta</td>
+<td>$\delta$</td>
+<td>\delta</td>
+</tr>
+<tr>
+<td>$\Epsilon$</td>
+<td>\Epsilon</td>
+<td>$\epsilon$</td>
+<td>\epsilon</td>
+</tr>
+<tr>
+<td>$\Zeta$</td>
+<td>\Zeta</td>
+<td>$\zeta$</td>
+<td>\zeta</td>
+</tr>
+<tr>
+<td>$\Eta$</td>
+<td>\Eta</td>
+<td>$\eta$</td>
+<td>\eta</td>
+</tr>
+<tr>
+<td>$\Theta$</td>
+<td>\Theta</td>
+<td>$\theta$</td>
+<td>\theta</td>
+</tr>
+<tr>
+<td>$\Iota$</td>
+<td>\Iota</td>
+<td>$\iota$</td>
+<td>\iota</td>
+</tr>
+<tr>
+<td>$\Kappa$</td>
+<td>\Kappa</td>
+<td>$\kappa$</td>
+<td>\kappa</td>
+</tr>
+<tr>
+<td>$\Lambda$</td>
+<td>\Lambda</td>
+<td>$\lambda$</td>
+<td>\lambda</td>
+</tr>
+<tr>
+<td>$\Mu$</td>
+<td>\Mu</td>
+<td>$\mu$</td>
+<td>\mu</td>
+</tr>
+<tr>
+<td>$\Nu$</td>
+<td>\Nu</td>
+<td>$\nu$</td>
+<td>\nu</td>
+</tr>
+<tr>
+<td>$\Xi$</td>
+<td>\Xi</td>
+<td>$\xi$</td>
+<td>\xi</td>
+</tr>
+<tr>
+<td>$\Omicron$</td>
+<td>\Omicron</td>
+<td>$\omicron$</td>
+<td>\omicron</td>
+</tr>
+<tr>
+<td>$\Pi$</td>
+<td>\Pi</td>
+<td>$\pi$</td>
+<td>\pi</td>
+</tr>
+<tr>
+<td>$\Rho$</td>
+<td>\Rho</td>
+<td>$\rho$</td>
+<td>\rho</td>
+</tr>
+<tr>
+<td>$\Sigma$</td>
+<td>\Sigma</td>
+<td>$\sigma$</td>
+<td>\sigma</td>
+</tr>
+<tr>
+<td>$\Tau$</td>
+<td>\Tau</td>
+<td>$\tau$</td>
+<td>\tau</td>
+</tr>
+<tr>
+<td>$\Upsilon$</td>
+<td>\Upsilon</td>
+<td>$\upsilon$</td>
+<td>\upsilon</td>
+</tr>
+<tr>
+<td>$\Phi$</td>
+<td>\Phi</td>
+<td>$\phi$</td>
+<td>\phi</td>
+</tr>
+<tr>
+<td>$\Chi$</td>
+<td>\Chi</td>
+<td>$\chi$</td>
+<td>\chi</td>
+</tr>
+<tr>
+<td>$\Psi$</td>
+<td>\Psi</td>
+<td>$\psi$</td>
+<td>\psi</td>
+</tr>
+<tr>
+<td>$\Omega$</td>
+<td>\Omega</td>
+<td>$\omega$</td>
+<td>\omega</td>
+</tr>
+</tbody></table>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><table>
+<thead>
+<tr>
+<th>渲染结果</th>
+<th> LaTeX 写法</th>
+<th>记法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td> $\pm$</td>
+<td>\pm</td>
+<td> 英文：<strong>P</strong>lus + <strong>M</strong>inus</td>
+</tr>
+<tr>
+<td>$\mp$</td>
+<td>\mp</td>
+<td> 英文：<strong>M</strong>inus + <strong>P</strong>lus</td>
+</tr>
+<tr>
+<td>$\times$</td>
+<td>\times</td>
+<td><strong>times</strong> 就有 “乘” 的意思</td>
+</tr>
+<tr>
+<td> $\div$</td>
+<td>\div</td>
+<td>$6 \div 3=2$ 表述为：Six <strong>div</strong>ided by two is three.</td>
+</tr>
+<tr>
+<td>$\geq$</td>
+<td>\geq</td>
+<td>“大于等于” 的英文：<strong>g</strong>reater than or <strong>eq</strong>ual to</td>
+</tr>
+<tr>
+<td>$\leq$</td>
+<td>\leq</td>
+<td>“小于等于” 的英文：<strong>l</strong>ess than or <strong>eq</strong>ual to</td>
+</tr>
+<tr>
+<td>$\neq$</td>
+<td>\neq</td>
+<td>“不等于” 的英文：<strong>n</strong>ot <strong>eq</strong>ual to</td>
+</tr>
+<tr>
+<td>$\approx$</td>
+<td>\approx</td>
+<td>“约等于” 的英文：<strong>approx</strong>imately equal to</td>
+</tr>
+<tr>
+<td>$\propto$</td>
+<td>\propto</td>
+<td>“正比于” 的英文：be <strong>prop</strong>ortional <strong>to</strong></td>
+</tr>
+</tbody></table>
+<h3 id="圈与点"><a href="#圈与点" class="headerlink" title="圈与点"></a>圈与点</h3><table>
+<thead>
+<tr>
+<th>渲染结果</th>
+<th> LaTeX 写法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td> $\degree$</td>
+<td>\degree</td>
+</tr>
+<tr>
+<td>$\circ$</td>
+<td>\circ</td>
+</tr>
+<tr>
+<td>$\cdot$</td>
+<td>\cdot</td>
+</tr>
+<tr>
+<td>$\cdotp$</td>
+<td>\cdotp</td>
+</tr>
+<tr>
+<td>$\cdots$</td>
+<td>\cdots</td>
+</tr>
+<tr>
+<td>$\ddots$</td>
+<td>\ddots</td>
+</tr>
+<tr>
+<td>$\bullet$</td>
+<td>\bullet</td>
+</tr>
+<tr>
+<td>$\dot{a}$</td>
+<td>\dot{a}</td>
+</tr>
+</tbody></table>
+<h3 id="集合相关"><a href="#集合相关" class="headerlink" title="集合相关"></a>集合相关</h3><table>
+<thead>
+<tr>
+<th>渲染结果</th>
+<th> LaTeX 写法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td> $\in$</td>
+<td>\in</td>
+</tr>
+<tr>
+<td>$\notin$</td>
+<td>\notin</td>
+</tr>
+<tr>
+<td>$\subset$</td>
+<td>\subset</td>
+</tr>
+<tr>
+<td>$\subseteq$</td>
+<td>\subseteq</td>
+</tr>
+<tr>
+<td>$\supset$</td>
+<td>\supset</td>
+</tr>
+<tr>
+<td>$\supseteq$</td>
+<td>\supseteq</td>
+</tr>
+<tr>
+<td>$\cap$</td>
+<td>\cap</td>
+</tr>
+<tr>
+<td>$\cup$</td>
+<td>\cap</td>
+</tr>
+<tr>
+<td>$\complement$</td>
+<td>\complement</td>
+</tr>
+</tbody></table>
+<h2 id="上下标的输入方法"><a href="#上下标的输入方法" class="headerlink" title="上下标的输入方法"></a>上下标的输入方法</h2><p>上标 <code>^</code> ，下标 <code>_</code>，例如：</p>
+<figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X<span class="built_in">_</span>1 = a<span class="built_in">^</span>2,X<span class="built_in">_</span>2 = b<span class="built_in">^</span>2</span><br></pre></td></tr></tbody></table></figure>
+
+<p>$$<br>X_1 = a^2,X_2 = b^2<br>$$</p>
+<p>同时上下标，只要连续输入 <code>_</code> 和 <code>^</code> 即可，例如:</p>
+<figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X<span class="built_in">_</span>3<span class="built_in">^</span>2 = 9,X<span class="built_in">_</span>4<span class="built_in">^</span>2 = 16</span><br></pre></td></tr></tbody></table></figure>
+
+<p>$$<br>X_3^2 = 9,X_4^2 = 16<br>$$</p>
+<p>上下标如果由多字符组成，则需要加上花括号，例如：</p>
+<figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X<span class="built_in">_</span>{i+j}<span class="built_in">^</span>{k+l}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>$$<br>X_{i+j}^{k+l}<br>$$</p>
+<p>左边的上下标只要写在前面就行了，例如：</p>
+<figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">^</span>a<span class="built_in">_</span>bX<span class="built_in">^</span>c<span class="built_in">_</span>d</span><br></pre></td></tr></tbody></table></figure>
+
+<p>$$<br>^a_bX^c_d<br>$$</p>
+<p>所以除了通过 <code>\degree</code> 的方法写度数，也可以通过上标的方法达到类似效果：</p>
+<figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">45<span class="keyword">\degree</span>,90<span class="built_in">^</span>{<span class="keyword">\circ</span>}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>$$<br>45\degree,90^{\circ}<br>$$</p>
+<p>“上升”：</p>
+<figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X<span class="built_in">^</span>{X<span class="built_in">^</span>{X<span class="built_in">^</span>{X<span class="built_in">^</span>{X<span class="built_in">^</span>{X}}}}}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>$$<br>X^{X^{X^{X^{X^{X}}}}}<br>$$</p>
+<p>” 下降 “：</p>
+<figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X<span class="built_in">_</span>{X<span class="built_in">_</span>{X<span class="built_in">_</span>{X<span class="built_in">_</span>{X<span class="built_in">_</span>{X}}}}}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>$$<br>X_{X_{X_{X_{X_{X}}}}}<br>$$</p>
+<h3 id="分式"><a href="#分式" class="headerlink" title="分式"></a>分式</h3><figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\frac</span>{a}{b}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>$$<br>\frac{a}{b}<br>$$</p>
+<h3 id="根式"><a href="#根式" class="headerlink" title="根式"></a>根式</h3><table>
+<thead>
+<tr>
+<th>渲染结果</th>
+<th> LaTeX 写法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td> $\sqrt{2}$</td>
+<td>\sqrt{2}</td>
+</tr>
+<tr>
+<td>$\sqrt[3]{2}$</td>
+<td>\sqrt[3]{2}</td>
+</tr>
+</tbody></table>
+<figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\sqrt</span>[b]{a}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>$$<br>\sqrt[b]{a}<br>$$</p>
+<h2 id="其他常用符号写法"><a href="#其他常用符号写法" class="headerlink" title="其他常用符号写法"></a>其他常用符号写法</h2><table>
+<thead>
+<tr>
+<th>渲染结果</th>
+<th> LaTeX 写法</th>
+<th>记法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td> $\to$</td>
+<td>\to</td>
+<td></td>
+</tr>
+<tr>
+<td>$\infty$</td>
+<td>\infty</td>
+<td>” 无穷 “的英文：<strong>inf</strong>ini<strong>ty</strong></td>
+</tr>
+<tr>
+<td>$\lim_{x \to 0}$</td>
+<td>\lim_{x \to 0}</td>
+<td></td>
+</tr>
+<tr>
+<td>$\bot$</td>
+<td>\bot</td>
+<td></td>
+</tr>
+<tr>
+<td>$\perp$</td>
+<td>\perp</td>
+<td>” 相互垂直 “的英文：<strong>perp</strong>endicular to each other</td>
+</tr>
+<tr>
+<td>$\dot{a}$</td>
+<td>\dot{a}</td>
+<td></td>
+</tr>
+<tr>
+<td>$\hat{a}$</td>
+<td>\hat{a}</td>
+<td></td>
+</tr>
+<tr>
+<td>$\bar{a}$</td>
+<td>\bar{a}</td>
+<td></td>
+</tr>
+<tr>
+<td>$\vec{a}$</td>
+<td>\vec{a}</td>
+<td>” 向量 “的英文：<strong>vec</strong>tor</td>
+</tr>
+<tr>
+<td>$\tilde{a}$</td>
+<td>\tilde{a}</td>
+<td>” 波浪号 “的英文：<strong>tilde</strong></td>
+</tr>
+</tbody></table>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/erciyuan_/article/details/90273268">latex 公式语法_ecy_uooki 的博客 - CSDN 博客_latex 公式语法</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/bagba/article/details/123608562">latex 不等于符号_Bagba 的博客 - CSDN 博客_latex 不等于</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.codeleading.com/article/36564801982/">latex 补集怎么打 - 代码先锋网 (codeleading.com)</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/262907455">如何用 latex 编写上标、下标？ - 知乎 (zhihu.com)</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/rss.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/mathematics/" rel="tag"># Mathematics</a>
+              <a href="/tags/latex/" rel="tag"># LaTeX</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/66959aa9.html" rel="prev" title="手动挡学习笔记">
+                  <i class="fa fa-chevron-left"></i> 手动挡学习笔记
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/9e863176.html" rel="next" title="C++ 中 cin 与 cout 的转进制输入输出">
+                  C++ 中 cin 与 cout 的转进制输入输出 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">BlockLune</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/BlockLune" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.4.3/mermaid.min.js","integrity":"sha256-e0o3JYsdjqKajf9eOe22FhioYSz9WofRY4dLKo3F6do="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"BlockLune","repo":"blocklune.github.io","client_id":"f0d9ff2c460a605d4f3f","client_secret":"9808616eda1afe0741c036b5d5670a490b68f6ef","admin_user":"BlockLune","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"818cde959d40f975b611e58df1fb21a1"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- 引入Element UI样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <title>To catch the lucky dog.</title>
+</head>
+
+<style type="text/css">
+    * {
+        box-sizing: border-box;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .container {
+        margin: 0 500px;
+    }
+
+    @media screen and (max-width: 1650px) {
+        .container {
+            margin: 0 300px;
+        }
+    }
+
+    @media screen and (max-width: 1080px) {
+        .container {
+            margin: 0 200px;
+        }
+    }
+
+    @media screen and (max-width: 960px) {
+        .container {
+            margin: 0;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .el-button+.el-button {
+            margin-left: 0;
+        }
+
+        .youneedmargin {
+            margin-bottom: 10px;
+        }
+    }
+</style>
+
+<body>
+    <div id="app">
+        <el-container class="container">
+            <el-header>
+                <el-menu :default-active="activeIndex" mode="horizontal" @select="handleSelect">
+                    <el-menu-item index="name">
+                        <i class="el-icon-user-solid"></i>
+                        <strong>抽名字</strong>
+                    </el-menu-item>
+                    <el-menu-item index="img" disabled>
+                        <i class="el-icon-picture"></i>
+                        <strong>抽照片</strong>
+                    </el-menu-item>
+                </el-menu>
+            </el-header>
+            <el-main>
+                <div v-if="is_name">
+                    <el-row>
+                        <el-col :span="24">
+                            <el-steps :active="active" finish-status="success">
+                                <el-step title="步骤 1" description="录入名字"></el-step>
+                                <el-step title="步骤 2" description="抽奖"></el-step>
+                            </el-steps>
+                            <el-divider></el-divider>
+                            <!--步骤一-->
+                            <div v-show="!finish_step_1">
+                                <el-tabs type="border-card" v-model="activeName" @tab-click="handleClick">
+                                    <el-tab-pane label="来自键盘" name="from_keyboard">
+                                        <el-input type="textarea" :rows="2" placeholder="请输入名字，以空格为界"
+                                            v-model="textarea">
+                                        </el-input>
+                                        <p>以下是您输入的内容：</p>
+                                        <p>{{textarea}}</p>
+                                        <el-divider></el-divider>
+                                        <el-button round @click="next">提交</el-button>
+                                    </el-tab-pane>
+                                    <el-tab-pane label="来自随机数生成器" name="from_generator">
+                                        <el-row>
+                                            <el-col :span="3">
+                                                最小值
+                                            </el-col>
+                                            <el-col :span="21">
+                                                <el-slider v-model="min_value" show-input></el-slider>
+                                            </el-col>
+                                        </el-row>
+                                        <el-row>
+                                            <el-col :span="3">
+                                                最大值
+                                            </el-col>
+                                            <el-col :span="21">
+                                                <el-slider v-model="max_value" show-input></el-slider>
+                                            </el-col>
+                                        </el-row>
+                                        <el-button round @click="from_generator_next">提交</el-button>
+                                    </el-tab-pane>
+                                    <!--这东西还没做-->
+                                    <el-tab-pane label="来自文件" name="from_file" disabled>来自文件</el-tab-pane>
+                                </el-tabs>
+                            </div>
+                            <!--步骤二-->
+                            <div v-show="finish_step_1">
+                                <p>以下是您输入的内容：</p>
+                                <p>{{textarea}}</p>
+                                <p>经过统计，共含有{{names_num}}个名字。</p>
+                                <el-divider></el-divider>
+                                <el-button round type="success" @click="get_one" class="youneedmargin">看看是哪个小逼崽子中奖了！
+                                </el-button>
+                                <el-button round type="danger" @click="advanced" class="youneedmargin">高级功能</el-button>
+                                <el-card class="box-card" v-show="got" style="margin-top: 20px;">
+                                    <h1 class="center">{{lucky_dog}}</h1>
+                                </el-card>
+                                <div class="advanced_mode" v-show="show_advanced">
+                                    <el-divider></el-divider>
+                                    <div style="margin-bottom:10px;"><strong>高级功能</strong></div>
+                                    <el-collapse v-model="activeNames" accordion>
+                                        <el-collapse-item title="基础设置" name="basic-settings">
+                                            <el-row>
+                                                <el-col :span="2">单次抽奖</el-col>
+                                                <el-col :span="2">
+                                                    <el-tooltip class="item" content="已经被抽过一次的人不会被抽到第二次"
+                                                        placement="top">
+                                                        <el-switch v-model="is_single_catch"></el-switch>
+                                                    </el-tooltip>
+                                                </el-col>
+                                            </el-row>
+                                        </el-collapse-item>
+                                        <el-collapse-item title="单独控制" name="single-control">
+                                            <el-row v-for="(val,key,i) in names" :gutter="20"
+                                                style="margin-bottom: 5px;">
+                                                <el-col :span="1">{{key}}</el-col>
+                                                <el-col :span="1">丨</el-col>
+                                                <el-col :span="2">
+                                                    <el-switch v-model="names_switch[i]">
+                                                    </el-switch>
+                                                </el-col>
+                                            </el-row>
+                                        </el-collapse-item>
+                                    </el-collapse>
+                                </div>
+                            </div>
+                        </el-col>
+                    </el-row>
+                </div>
+                <div v-if="!is_name">
+                    <el-button-group>
+                        <el-button type="primary" icon="el-icon-picture">选择图片</el-button>
+                        <el-button type="primary" icon="el-icon-delete">清空已选文件</el-button>
+                    </el-button-group>
+                </div>
+            </el-main>
+        </el-container>
+
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    var names_array = new Array()
+    new Vue({
+        el: '#app',
+        data: {
+            activeIndex: 'name',
+            is_name: true,
+            active: 0,
+            activeName: 'from_keyboard',
+            finish_step_1: false,
+            textarea: '',
+            names_num: 0,
+            names: {},
+            got: false,
+            nameid: 0,
+            lucky_dog: '',
+            show_advanced: false,
+            names_switch: new Array(),
+            activeNames: ['basic-settings'],
+            min_value: 1,
+            max_value: 42,
+            is_single_catch: true
+        },
+        methods: {
+            handleSelect(key, keyPath) {
+                console.log(key);
+                this.activeIndex = key;
+                if (key == 'name') {
+                    this.is_name = true;
+                } else {
+                    this.is_name = false;
+                }
+            },
+            handleClick(tab, event) {
+                console.log(tab, event);
+            },
+            next() {
+                if (this.active++ > 0) this.active = 1;
+                this.finish_step_1 = true;
+                names_array = this.textarea.split(/[ ]+/) //正则匹配空白字符
+                this.names_num = names_array.length
+                //如果末尾''没有去掉的话 把他去掉
+                if (names_array[this.names_num - 1] == '') {
+                    names_array.pop(this.names_num - 1)
+                    this.names_num = names_array.length
+                }
+                console.log(names_array)
+                for (i = 0; i < this.names_num; i++) {
+                    this.names_switch.push(true)
+                }
+                console.log("switch:", this.names_switch)
+            },
+            get_one() {
+                this.got = true;
+                this.active = 2;
+                max = this.names_num - 1;
+                var flag = false;
+                //先判断这里有没有所有开关都关了 不然待会死循环了
+                for (i = 0; i < this.names_num; i++) {
+                    if (this.names_switch[i]) {
+                        flag = true;
+                    }
+                }
+                while (flag) {
+                    this.nameid = parseInt(Math.random() * (max + 1), 10)
+                    if (this.names_switch[this.nameid]) {
+                        this.lucky_dog = names_array[this.nameid]
+                        if (this.is_single_catch) {
+                            this.names_switch[this.nameid] = false; //如果是单次抽奖模式 标记一下已经被抽到的人
+                        }
+                        break;
+                    }
+                    continue;
+                }
+                if (!flag) {
+                    this.activeNames = ['basic-settings'];
+                    alert("所有人的抽奖开关都关啦...直接再按一次抽奖吧，我帮你把开关都打开了。");
+                    for (var i = 0; i < this.names_num; i++) {
+                        this.names_switch[i] = true;
+                    }
+                }
+            },
+            advanced() {
+                this.show_advanced = 1 - this.show_advanced;
+                for (i = 0; i < this.names_num; i++) {
+                    this.names[names_array[i]] = this.names_switch[i]
+                }
+
+            },
+            from_generator_next() {
+                for (var i = this.min_value; i <= this.max_value; i++) {
+                    names_array.push(i);
+                    this.textarea += i + " ";
+                }
+                if (this.active++ > 0) this.active = 1;
+                this.finish_step_1 = true;
+                console.log(names_array)
+                this.names_num = names_array.length
+                for (i = 0; i < this.names_num; i++) {
+                    this.names_switch.push(true)
+                }
+                console.log("switch:", this.names_switch)
+            }
+        }
+    })
+</script>
+
+</html>
