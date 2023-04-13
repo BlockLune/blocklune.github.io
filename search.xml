@@ -50,6 +50,77 @@
       </tags>
   </entry>
   <entry>
+    <title>大一新生的高数预备知识学习笔记</title>
+    <url>/posts/33435544.html</url>
+    <content><![CDATA[<p>这篇文章主要是笔者从<a href="https://space.bilibili.com/66607740">宋浩老师</a>处学习高数高数知识的课堂笔记，也加入了一些笔者自己搜到的东西。具体课程你可以看这里：<a href="https://www.bilibili.com/video/BV1YU4y1e7Q9/">大一新生的高数预备知识简介</a>.</p>
+<span id="more"></span>
+
+<h2 id="反三角函数"><a href="#反三角函数" class="headerlink" title="反三角函数"></a>反三角函数</h2><h3 id="y-arcsinX"><a href="#y-arcsinX" class="headerlink" title="y=arcsinX"></a>y=arcsinX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxa7CV.png"></p>
+<h3 id="y-arccosX"><a href="#y-arccosX" class="headerlink" title="y=arccosX"></a>y=arccosX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxdQxS.png"></p>
+<h3 id="y-arctanX"><a href="#y-arctanX" class="headerlink" title="y=arctanX"></a>y=arctanX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxd8bj.png"></p>
+<h3 id="y-arccotX"><a href="#y-arccotX" class="headerlink" title="y=arccotX"></a>y=arccotX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxdYan.png"></p>
+<h3 id="y-secX"><a href="#y-secX" class="headerlink" title="y=secX"></a>y=secX</h3><p>正割是余弦的倒数：</p>
+<p>$$<br>secX = \frac{1}{cosX}<br>$$</p>
+<p>定义域：显然 $cosX \neq 0$，所以 $y=secX$ 的定义域为：$X\neq k\pi +\frac {\pi}{2},k\in Z$</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/15/vxwCon.png"></p>
+<h3 id="y-cscX"><a href="#y-cscX" class="headerlink" title="y=cscX"></a>y=cscX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxwneJ.png"></p>
+<h3 id="一些补充"><a href="#一些补充" class="headerlink" title="一些补充"></a>一些补充</h3><p>$$<br>sec^2x=1+tan^2x,csc^2x=1+cot^2x<br>$$</p>
+<p>可以使用下面的方法进行记忆：</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/16/vzBKpt.png"></p>
+<p>六边形的中间是 $1$。红色三角形的上边两个角的平方之和等于下边一个的平方，即：</p>
+<p>$$<br>sin^2x+cos^2x=1<br>$$</p>
+<p>$$<br>tan^2x+1=sec^2x<br>$$</p>
+<p>$$<br>cot^2x+1=csc^2x<br>$$</p>
+<h2 id="多项式的除法"><a href="#多项式的除法" class="headerlink" title="多项式的除法"></a>多项式的除法</h2><ul>
+<li>次数高的放前面，低的放后边</li>
+<li>缺项的补出来</li>
+</ul>
+<h3 id="不带余数"><a href="#不带余数" class="headerlink" title="不带余数"></a>不带余数</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vx0m1f.png"></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/15/vx0Mng.png"></p>
+<h3 id="带余数"><a href="#带余数" class="headerlink" title="带余数"></a>带余数</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vx0t3V.png"></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/15/vx0o4I.png"></p>
+<h2 id="有理分式的拆分"><a href="#有理分式的拆分" class="headerlink" title="有理分式的拆分"></a>有理分式的拆分</h2><h3 id="何为有理分式："><a href="#何为有理分式：" class="headerlink" title="何为有理分式："></a>何为有理分式：</h3><p>有理分式就是一个多项式比一个多项式</p>
+<h3 id="何为有理分式的拆分："><a href="#何为有理分式的拆分：" class="headerlink" title="何为有理分式的拆分："></a>何为有理分式的拆分：</h3><p>将相乘的项变成相加减</p>
+<h3 id="过程："><a href="#过程：" class="headerlink" title="过程："></a>过程：</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxBdRP.png"></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/15/vxBWR0.png"></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/15/vxBHo9.png"></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/15/vxDpee.png"></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/15/vxDUw4.png" alt="待定系数法例子之一"></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/15/vxsWRI.png" alt="待定系数法例子之二"></p>
+<h2 id="极坐标"><a href="#极坐标" class="headerlink" title="极坐标"></a>极坐标</h2><h3 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h3><p>首先看转动角度，其次看这个点到原点的距离。</p>
+<p>例如：直角坐标系中 $(2,2)$ 点在极坐标系中表示为 $(2\sqrt {2},\frac {\pi}{4})$；$(-2,2)$ 表示为 $(2\sqrt {2},\frac {3\pi}{4})$。</p>
+<p>极坐标中的原点叫<code>极点</code>，<code>极轴</code>是从极点向 $X$ 轴正方向引入的一条射线（仅正方向有）。极坐标中的点到极点的距离叫做<code>极径</code>，记作 $\rho (\rho\geq0)$（距离肯定是个非负数）；从极轴逆时针转过的角度记作 $\theta (0\leq\theta&lt;2\pi)$（但实际上不一定取这个范围）。所以极坐标中一点 $P$ 的坐标记为 $P (\rho,\theta)$。</p>
+<p>一般先考虑 $\theta$ 再考虑 $\rho$。</p>
+<h3 id="一些常见图像的极坐标表示"><a href="#一些常见图像的极坐标表示" class="headerlink" title="一些常见图像的极坐标表示"></a>一些常见图像的极坐标表示</h3><blockquote>
+<p>括号内范围是默认范围，可写可不写</p>
+</blockquote>
+<h4 id="射线"><a href="#射线" class="headerlink" title="射线"></a>射线</h4><p>例如一条以极点为端点，$\theta=45^\circ$ 的射线表述为：</p>
+<p>$$<br>\theta = 45^\circ(,\rho\geq0)<br>$$</p>
+<h4 id="圆"><a href="#圆" class="headerlink" title="圆"></a>圆</h4><p>例如一个以极点为圆心，$1$ 为半径的圆表述为：</p>
+<p>$$<br>(0\leq\theta&lt;2\pi,)\rho=1<br>$$</p>
+<h4 id="半圆"><a href="#半圆" class="headerlink" title="半圆"></a>半圆</h4><p>例如一个以极点为圆心，$1$ 为半径的位于 $X$ 轴上方的半圆表述为：</p>
+<p>$$<br>0\leq\theta\leq\pi,\rho=1<br>$$</p>
+<h4 id="圆面"><a href="#圆面" class="headerlink" title="圆面"></a>圆面</h4><p>例如一个以极点为圆心，$1$ 为半径的圆面表述为：</p>
+<p>$$<br>(0\leq\theta&lt;2\pi,)0\leq\rho\leq1<br>$$</p>
+<h4 id="半圆面"><a href="#半圆面" class="headerlink" title="半圆面"></a>半圆面</h4><p>例如一个以极点为圆心，$1$ 为半径的位于 $X$ 轴上方的半圆面表述为：</p>
+<p>$$<br>0\leq\theta\leq\pi,0\leq\rho\leq1<br>$$</p>
+<div class="note warning no-icon"><p>又例如这个以 $(1,0)$ 为圆心，$1$ 为半径的位于 $X$ 轴上方的半圆面表述为：</p>
+<p>$$<br>0\leq\theta\leq\frac{\pi}{2},0\leq\rho\leq2cos\theta<br>$$</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/16/vzwCNR.png"></p>
+<p>又例如这个：</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/16/vzwtbQ.png"></p>
+</div>
+
+<h4 id="圆环"><a href="#圆环" class="headerlink" title="圆环"></a>圆环</h4><p><img data-src="https://s1.ax1x.com/2022/09/16/vzdzB4.png"></p>
+]]></content>
+      <categories>
+        <category>Mathematics</category>
+      </categories>
+      <tags>
+        <tag>Mathematics</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>手动挡学习笔记</title>
     <url>/posts/66959aa9.html</url>
     <content><![CDATA[<p>最近几天一直在忙着考驾照的事情，8 月份第一次考科二挂了后就开始边练科二边练科三。最近两三天先后把科三、第二次科二、科四过了，顺利拿到了 C1 驾照。但是… 学的是手动挡，家里的车却是自动挡。所以想着如果不记一下的话，以后估计开惯了自动挡手动挡就不会了，便想做些笔记。顺便也记录一下笔者自己的学车过程。</p>
@@ -561,28 +632,6 @@
       <tags>
         <tag>Algorithm</tag>
         <tag>GCD</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>补记一个用 Vue.js 和 ElementUI 实现的在线抽奖网页</title>
-    <url>/posts/6a8a1633.html</url>
-    <content><![CDATA[<p>这件事儿发生在我的高中某个新学期开始，新来了一个电脑老师。有点打赌或者考验我的性质吧，ta 说 ta 弄了随机数点名的小网页，还能用同学的照片进行抽取，问我能不能实现一个。ta 的实现方法是 jQuery，技术上比较老，界面也不太好看。我想去尝试一下别的方法，正好也试试略微学了一点的 Vue.js，为了好看，用了 Element UI。</p>
-<span id="more"></span>
-
-<p>一两个周末最终实现到现在的效果，能输入名字抽人，能随机数抽人（学号抽人？），还有一个通过图片抽的到今天也还没做。当时对着 Vue.js 和 Element UI 的开发文档勉里勉强做出来这个效果，现在早把那些基础知识忘记了，也不知道以后有没有工夫完善它了。</p>
-<p>你可以<a href="/raw/CatchDog/CatchDog.html">点击这里</a>来玩玩看。</p>
-<p><img data-src="https://pic.imgdb.cn/item/6308b57316f2c2beb1fad0f4.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57316f2c2beb1fad0ec.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad081.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad087.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad091.png"></p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>Vue.js</tag>
-        <tag>Element UI</tag>
-        <tag>Html</tag>
-        <tag>JS</tag>
-        <tag>Web</tag>
       </tags>
   </entry>
   <entry>
@@ -1425,7 +1474,6 @@
         <category>Tools</category>
       </categories>
       <tags>
-        <tag>学习</tag>
         <tag>Linux</tag>
         <tag>cat</tag>
         <tag>bat</tag>
@@ -1531,6 +1579,60 @@
       </tags>
   </entry>
   <entry>
+    <title>VS Code 中文乱码问题</title>
+    <url>/posts/ca05bed5.html</url>
+    <content><![CDATA[<p><strong>2023 年 1 月 12 日更新：</strong> 找到了方便地改变 Windows 中终端默认编码的方法，所以原来的改变 C/C++ 文件默认编码的方法可以淘汰了。</p>
+<span id="more"></span>
+
+<p>现在的新办法是：</p>
+<p>打开 “控制面板 - 时钟和区域 - 区域 - 管理 - 更改系统区域设置 (C)…”</p>
+<p>勾选 “Beta 版：使用 Unicode UTF-8 提供全球语言支持 (U)”</p>
+<p>确定，重启电脑。</p>
+<p>打开 CMD 测试一下，输入 <code>chcp</code> 可以发现已经变成了 <code>65001</code>，说明成功了。</p>
+<p>方法来源：<a href="https://blog.csdn.net/weixin_44285445/article/details/112325994">《Git Bash 中文显示乱码，options 修改为 zh_CN 和 utf-8 还是不行怎么办？》</a></p>
+<div class="note danger no-icon"><h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><p>该方法全局更改 Windows 系统的默认编码，可能引起某些软件运行异常。</p>
+</div>
+
+<p><strong>以下是原来的文章</strong></p>
+<p>开门见山，我最后采用的解决方案是对 C/C++ 文件单独设置默认编码。大致的操作方法是，打开 VS Code 的 <code>settings.json</code> 文件，添加如下配置：</p>
+<figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">"[cpp]"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"files.encoding"</span><span class="punctuation">:</span> <span class="string">"gbk"</span></span><br><span class="line"><span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">"[c]"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"files.encoding"</span><span class="punctuation">:</span> <span class="string">"gbk"</span></span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>具体的操作请参见原文：<a href="https://blog.csdn.net/qq_45538473/article/details/107258234">《VSCODE C 语言终端输出中文乱码编码设置》</a></p>
+<h2 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h2><p>复盘一下解决这个问题的过程。</p>
+<p>首先了解到的是 VS Code 中文乱码的根本原因 ——VS Code 默认的编码格式是 UTF-8 （这一点可在 VS Code 右下角看到），而 VS Code 调用的终端是 CMD，默认的编码格式是 gbk。所以解决方案就是两个方向：要么是更改终端的默认编码，从默认的 gbk 转为 utf8；要么就是更改 VS Code 中的 C/C++ 文件的编码。</p>
+<p><strong>2022/10/26 更新：</strong></p>
+<p>看到一个有意思的科普视频，贴在这里，可以看看乱码到底是如何产生的。</p>
+<p><a href="https://www.bilibili.com/video/BV1cB4y177QR/">锟斤拷 �⊠ 是怎样炼成的 —— 中文显示 “⼊” 门指南【柴知道】</a></p>
+<h3 id="第一个方向：更改终端默认编码"><a href="#第一个方向：更改终端默认编码" class="headerlink" title="第一个方向：更改终端默认编码"></a>第一个方向：更改终端默认编码</h3><p>了解到更改 CMD 编码为 utf8 的命令如下：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">chcp 65001</span><br></pre></td></tr></tbody></table></figure>
+
+<p>顺便一提，查看当前编码的命令为：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">chcp</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>chcp 65001</code> 这串命令的意思就是更改代码页为 65001，也就是用 utf8 编码。</p>
+<p>这串命令不是永久生效的，所以每次都要输入，比较麻烦。网上也有一些解决方案，比如通过修改注册表每次都自动运行一下上边的命令（<a href="https://www.jianshu.com/p/f40e494dc01d">《修改 Windows10 命令终端 cmd 的编码为 UTF-8》</a>），或者是配置 VS Code 让其自动输入的（<a href="https://blog.csdn.net/lzyws739307453/article/details/89823900">《永久解决 VS Code 终端中文乱码问题》</a>），可以去看看。</p>
+<h3 id="第二个方向：更改-VS-Code-中的-C-C-文件的编码"><a href="#第二个方向：更改-VS-Code-中的-C-C-文件的编码" class="headerlink" title="第二个方向：更改 VS Code 中的 C/C++ 文件的编码"></a>第二个方向：更改 VS Code 中的 C/C++ 文件的编码</h3><p>最初这个方法我只是想临时解决一下，就比较简单。点一下右下角的 UTF-8，选择 <code>通过编码重新打开</code>，选择 gbk 就行了。但这样只有一次，然后就想看看有没有永久的方法，便看到了上边的文章。</p>
+<p>顺便一提，这里可能还要把 VS Code 设置中的自动猜测编码功能打开，具体操作如下：</p>
+<ol>
+<li>使用 <code>Ctrl + ,</code> 快捷键打开设置；</li>
+<li>在搜索框输入 <code>encoding</code> ，找到 <code>Files:Auto Guess Encoding</code>，勾上它。</li>
+</ol>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://blog.csdn.net/qq_45538473/article/details/107258234">《VSCODE C 语言终端输出中文乱码编码设置》</a></li>
+<li><a href="https://www.jianshu.com/p/f40e494dc01d">《修改 Windows10 命令终端 cmd 的编码为 UTF-8》</a></li>
+<li><a href="https://blog.csdn.net/lzyws739307453/article/details/89823900">《永久解决 VS Code 终端中文乱码问题》</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+        <tag>VS Code</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>VS Code 中设置显示最大列数边界线</title>
     <url>/posts/bb929dc9.html</url>
     <content><![CDATA[<p>很多时候我们会避免一行代码过长，常见的限制有 80 字符、120 个字符等。我希望能在 VS Code 中显示一条边界线来提醒我已经到达这个限制了，需要换行。下边是设置的方法。</p>
@@ -1547,6 +1649,28 @@
       </categories>
       <tags>
         <tag>VS Code</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>补记一个用 Vue.js 和 ElementUI 实现的在线抽奖网页</title>
+    <url>/posts/6a8a1633.html</url>
+    <content><![CDATA[<p>这件事儿发生在我的高中某个新学期开始，新来了一个电脑老师。有点打赌或者考验我的性质吧，ta 说 ta 弄了随机数点名的小网页，还能用同学的照片进行抽取，问我能不能实现一个。ta 的实现方法是 jQuery，技术上比较老，界面也不太好看。我想去尝试一下别的方法，正好也试试略微学了一点的 Vue.js，为了好看，用了 Element UI。</p>
+<span id="more"></span>
+
+<p>一两个周末最终实现到现在的效果，能输入名字抽人，能随机数抽人（学号抽人？），还有一个通过图片抽的到今天也还没做。当时对着 Vue.js 和 Element UI 的开发文档勉里勉强做出来这个效果，现在早把那些基础知识忘记了，也不知道以后有没有工夫完善它了。</p>
+<p>你可以<a href="/raw/CatchDog/CatchDog.html">点击这里</a>来玩玩看。</p>
+<p><img data-src="https://pic.imgdb.cn/item/6308b57316f2c2beb1fad0f4.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57316f2c2beb1fad0ec.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad081.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad087.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad091.png"></p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Vue.js</tag>
+        <tag>Element UI</tag>
+        <tag>Html</tag>
+        <tag>JS</tag>
+        <tag>Web</tag>
       </tags>
   </entry>
   <entry>
@@ -1601,143 +1725,6 @@
       </categories>
       <tags>
         <tag>C/C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ 中 cin 与 cout 的转进制输入输出</title>
-    <url>/posts/9e863176.html</url>
-    <content><![CDATA[<p>笔者的朋友有道输入八进制输出十进制的题目，他是使用数学方法实现的。笔者隐隐约约记得好像 cin 和 cout 有控制输入输出数字进制的方法，查找了一些资料，做一下笔记。</p>
-<span id="more"></span>
-
-<table>
-<thead>
-<tr>
-<th>进制</th>
-<th>对应缩写</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>二进制</td>
-<td> bin</td>
-</tr>
-<tr>
-<td> 八进制</td>
-<td> oct</td>
-</tr>
-<tr>
-<td> 十进制</td>
-<td> dec</td>
-</tr>
-<tr>
-<td> 十六进制</td>
-<td> hex</td>
-</tr>
-</tbody></table>
-<p>接下来只要在输入 / 输出的时候加上这些缩写就行了。</p>
-<p>比如输入一个八进制数然后以十进制输出它：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> num;</span><br><span class="line">    cin &gt;&gt; oct &gt;&gt; num;</span><br><span class="line">    cout &lt;&lt; dec &lt;&lt; num &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>程序运行结果：</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">1750</span><br><span class="line">1000</span><br></pre></td></tr></tbody></table></figure>
-
-<p>（”1750” 是输入，”1000” 是输出）</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C 标准库中 qsort 和 C++ STL 中 sort 的用法</title>
-    <url>/posts/eab95d6e.html</url>
-    <content><![CDATA[<p>虽然到现在还是不能完全理解 <code>qsort</code> 和 <code>sort</code> 这两个函数的底层原理，但至少，先学会如何使用吧。</p>
-<span id="more"></span>
-
-<h2 id="qsort"><a href="#qsort" class="headerlink" title="qsort"></a>qsort</h2><p><strong>需要包含的库:</strong></p>
-<p>stdlib.h (C++ 中 是 cstdlib)</p>
-<p><strong>函数原型：</strong></p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">qsort</span><span class="params">(<span class="type">void</span> *base, <span class="type">size_t</span> nitems, <span class="type">size_t</span> size, <span class="type">int</span> (*compar)(<span class="type">const</span> <span class="type">void</span> *, <span class="type">const</span> <span class="type">void</span> *))</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p><strong>参数解释：</strong></p>
-<ul>
-<li>base: 必选，数组名（数组首元素的地址）；</li>
-<li>nitems: 必选，数组中元素的个数；</li>
-<li>size: 必选，数组中单个元素的大小；</li>
-<li>compar: 必选，一个函数指针，具体这个函数要干嘛下边细说。</li>
-</ul>
-<p>最后一个参数是函数指针，这个指针指向的函数的原型应该类似于下边这样：</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">cmp</span><span class="params">(<span class="type">const</span> <span class="type">void</span> *a, <span class="type">const</span> <span class="type">void</span> *b)</span>;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这是一个返回值为 <code>-1</code>、<code>0</code> 或 <code>1</code> 的函数。</p>
-<p>如果要实现升序，那么应该是：</p>
-<blockquote>
-<p>a&gt;b：返回 1（或其他正数）;<br>a==b：返回 0;<br>a&lt;b: 返回 -1（或其他负数）;</p>
-</blockquote>
-<p>如果是降序，那么就应该反过来，像下边这样：</p>
-<blockquote>
-<p>a&gt;b：返回 -1（或其他负数）;<br>a==b：返回 0;<br>a&lt;b: 返回 1（或其他正数）;</p>
-</blockquote>
-<p>比如我要对 int 类型的数组升序排序，那么我的 cmp 函数应该像下边这样：</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">cmp</span><span class="params">(<span class="type">const</span> <span class="type">void</span> *a, <span class="type">const</span> <span class="type">void</span> *b)</span></span><br><span class="line">{</span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> *x = (<span class="type">const</span> <span class="type">int</span> *)a;</span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> *y = (<span class="type">const</span> <span class="type">int</span> *)b;</span><br><span class="line">    <span class="keyword">if</span> (*x &gt; *y)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (*x == *y)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>或者也可以简化成下边这样：</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">cmp</span><span class="params">(<span class="type">const</span> <span class="type">void</span> *a, <span class="type">const</span> <span class="type">void</span> *b)</span></span><br><span class="line">{</span><br><span class="line">    <span class="keyword">return</span> (*(<span class="type">const</span> <span class="type">int</span> *)a - *(<span class="type">const</span> <span class="type">int</span> *)b);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这里的 a&gt;b 等比较方式只是形式上我这么写，实际上有可能这两个元素我并不能直接这么比（比如如果这里的 a、b 都是 struct），那么就应该类似下边这样：</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">{</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> ID;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> score;</span><br><span class="line">} STUDENT;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">cmp</span><span class="params">(<span class="type">const</span> <span class="type">void</span> *, <span class="type">const</span> <span class="type">void</span> *)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    STUDENT stu[<span class="number">5</span>] = {{<span class="number">1</span>, <span class="number">5</span>}, {<span class="number">2</span>, <span class="number">3</span>}, {<span class="number">3</span>, <span class="number">1</span>}, {<span class="number">4</span>, <span class="number">2</span>}, {<span class="number">5</span>, <span class="number">4</span>}};</span><br><span class="line">    qsort(stu, <span class="number">5</span>, <span class="keyword">sizeof</span>(STUDENT), cmp);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"ID: %u, Score: %u\n"</span>, stu[i].ID, stu[i].score);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">cmp</span><span class="params">(<span class="type">const</span> <span class="type">void</span> *a, <span class="type">const</span> <span class="type">void</span> *b)</span></span><br><span class="line">{</span><br><span class="line">    <span class="type">const</span> STUDENT *x = (<span class="type">const</span> STUDENT *)a;</span><br><span class="line">    <span class="type">const</span> STUDENT *y = (<span class="type">const</span> STUDENT *)b;</span><br><span class="line">    <span class="comment">// 降序排序</span></span><br><span class="line">    <span class="keyword">if</span> (x-&gt;score &gt; y-&gt;score)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (x-&gt;score == y-&gt;score)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>输出是：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">ID: 1, Score: 5</span><br><span class="line">ID: 5, Score: 4</span><br><span class="line">ID: 2, Score: 3</span><br><span class="line">ID: 4, Score: 2</span><br><span class="line">ID: 3, Score: 1</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h2><p><strong>需要包含的库:</strong></p>
-<p>algorithm（C++ STL 中的算法库）</p>
-<p><strong>函数原型：</strong></p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">RandomAccessIterator</span>, <span class="keyword">class</span> <span class="title class_">Compare</span>&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">sort</span> <span class="params">(RandomAccessIterator first, RandomAccessIterator last, Compare comp)</span></span>;</span><br></pre></td></tr></tbody></table></figure>
-
-<p><strong>参数解释：</strong></p>
-<p>first: 必选，排序开始处（参与排序的第一个元素）；<br>last: 必选，排序结束处的<strong>后一个紧挨着的位置</strong>（参与排序的最后一个元素的<strong>后一个位置</strong>）；<br>comp: 可选，用来指定怎么排序的函数，没有的话如果可以默认升序。</p>
-<p>下边给出一些例子：</p>
-<p>给一个数组升序排序：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> arr[<span class="number">5</span>] = {<span class="number">5</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">4</span>};</span><br><span class="line"><span class="built_in">sort</span>(arr, arr + <span class="number">5</span>);</span><br></pre></td></tr></tbody></table></figure>
-
-<p>给一个 vector 降序排序：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; nums = {<span class="number">5</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">4</span>};</span><br><span class="line"><span class="built_in">sort</span>(nums.<span class="built_in">begin</span>(), nums.<span class="built_in">end</span>(), <span class="built_in">greater</span>&lt;<span class="type">int</span>&gt;());</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这里用了 <code>greater&lt;typename&gt;()</code> 这个东东直接表达我这个排序需要降序排序，类似的还有 <code>less&lt;typename&gt;()</code> 用来指定升序。</p>
-<p>然后是自定义这第三个参数，我们就用上边 qsort 那个例子吧：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">STUDENT</span></span><br><span class="line">{</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> ID;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> score;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(STUDENT, STUDENT)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    STUDENT stu[<span class="number">5</span>] = {{<span class="number">1</span>, <span class="number">5</span>}, {<span class="number">2</span>, <span class="number">3</span>}, {<span class="number">3</span>, <span class="number">1</span>}, {<span class="number">4</span>, <span class="number">2</span>}, {<span class="number">5</span>, <span class="number">4</span>}};</span><br><span class="line">    <span class="built_in">sort</span>(stu, stu + <span class="number">5</span>, cmp);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"ID: %u, Score: %u\n"</span>, stu[i].ID, stu[i].score);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(STUDENT a, STUDENT b)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">if</span> (a.score &gt; b.score)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>或者也可以把 cmp 写成下边这种更容易记住的方式：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(STUDENT a, STUDENT b)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">return</span> a.score &gt; b.score;</span><br><span class="line">    <span class="comment">// 表示排序完成后前一个元素比后一个元素大，即降序排序</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>输出和上边是一样的。</p>
-
-
-<article class="message message-immersive is-danger">
-<div class="message-body">
-<i class="fas fa-exclamation-triangle mr-2"></i><strong>注意</strong>
-
-<p>在 qsort 中，最后一个参数的函数的返回值应是一个有符号整型。在期望<strong>升序</strong>排序时，这个返回值应该指定为：<strong>第一个元素大于第二个元素，返回正数；</strong>第一个元素等于第二个元素，返回 0；第一个元素小于第二个元素，返回负数。</p>
-<p>在 C++ STL 的 sort 中，最后一个参数的返回值应是一个布尔值。在期望<strong>升序</strong>排序时，这个返回值应该是 (第一个元素 &lt; 第二个元素) 的运算结果。</p>
-
-
-</div>
-</article>
-
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-        <tag>Sorting</tag>
-        <tag>STL</tag>
       </tags>
   </entry>
   <entry>
@@ -2041,25 +2028,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C 语言中与 (&amp;&amp;) 和或 (||) 运算符的短路运算</title>
-    <url>/posts/13d09bbb.html</url>
-    <content><![CDATA[<p>此篇笔记来源于下边的这个题目。<br><img data-src="https://s1.ax1x.com/2022/10/12/xaK5c9.png"></p>
-<span id="more"></span>
-
-<p>本来以为结果为 3，但是实际跑了一下发现结果是 1。请教了一下大佬知道了这叫做或运算符（||）的短路运算。</p>
-<p>正常来说，或运算中只要有一个为真，结果就为真。所谓或的短路运算就是说，如果已经出现了真，那么后续的运算就不会进行了。以上面的题目为例就是，因为第一个 ++x 这个运算结果肯定为真，那么后面的另外两个 ++x 就不会运行。</p>
-<p>类似的，还有与（&amp;&amp;）的短路运算。正常来说，与运算中必须所有均为真，结果才为真。所以与的短路就是，如果前面的运算结果已经有假了，那么就可以确定这个与运算总体的结果为假，也就不会运行后边的运算了。</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++ const 用法汇总</title>
     <url>/posts/7ec6ba38.html</url>
     <content><![CDATA[<p>最开始只是用 const 来定义常量，学到了指针传参的时候又知道了用 const 来防止一些值的修改，学到类的时候又看到非静态成员函数后边加个 const 来干嘛干嘛，然后么又听说什么顶层 const、底层 const… 真是越学越迷糊了，赶紧做一波整理。</p>
@@ -2123,6 +2091,193 @@
       <tags>
         <tag>C/C++</tag>
         <tag>const</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ 中 cin 与 cout 的转进制输入输出</title>
+    <url>/posts/9e863176.html</url>
+    <content><![CDATA[<p>笔者的朋友有道输入八进制输出十进制的题目，他是使用数学方法实现的。笔者隐隐约约记得好像 cin 和 cout 有控制输入输出数字进制的方法，查找了一些资料，做一下笔记。</p>
+<span id="more"></span>
+
+<table>
+<thead>
+<tr>
+<th>进制</th>
+<th>对应缩写</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>二进制</td>
+<td> bin</td>
+</tr>
+<tr>
+<td> 八进制</td>
+<td> oct</td>
+</tr>
+<tr>
+<td> 十进制</td>
+<td> dec</td>
+</tr>
+<tr>
+<td> 十六进制</td>
+<td> hex</td>
+</tr>
+</tbody></table>
+<p>接下来只要在输入 / 输出的时候加上这些缩写就行了。</p>
+<p>比如输入一个八进制数然后以十进制输出它：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> num;</span><br><span class="line">    cin &gt;&gt; oct &gt;&gt; num;</span><br><span class="line">    cout &lt;&lt; dec &lt;&lt; num &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>程序运行结果：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">1750</span><br><span class="line">1000</span><br></pre></td></tr></tbody></table></figure>
+
+<p>（”1750” 是输入，”1000” 是输出）</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C 标准库中 qsort 和 C++ STL 中 sort 的用法</title>
+    <url>/posts/eab95d6e.html</url>
+    <content><![CDATA[<p>虽然到现在还是不能完全理解 <code>qsort</code> 和 <code>sort</code> 这两个函数的底层原理，但至少，先学会如何使用吧。</p>
+<span id="more"></span>
+
+<h2 id="qsort"><a href="#qsort" class="headerlink" title="qsort"></a>qsort</h2><p><strong>需要包含的库:</strong></p>
+<p>stdlib.h (C++ 中 是 cstdlib)</p>
+<p><strong>函数原型：</strong></p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">qsort</span><span class="params">(<span class="type">void</span> *base, <span class="type">size_t</span> nitems, <span class="type">size_t</span> size, <span class="type">int</span> (*compar)(<span class="type">const</span> <span class="type">void</span> *, <span class="type">const</span> <span class="type">void</span> *))</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>参数解释：</strong></p>
+<ul>
+<li>base: 必选，数组名（数组首元素的地址）；</li>
+<li>nitems: 必选，数组中元素的个数；</li>
+<li>size: 必选，数组中单个元素的大小；</li>
+<li>compar: 必选，一个函数指针，具体这个函数要干嘛下边细说。</li>
+</ul>
+<p>最后一个参数是函数指针，这个指针指向的函数的原型应该类似于下边这样：</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">cmp</span><span class="params">(<span class="type">const</span> <span class="type">void</span> *a, <span class="type">const</span> <span class="type">void</span> *b)</span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这是一个返回值为 <code>-1</code>、<code>0</code> 或 <code>1</code> 的函数。</p>
+<p>如果要实现升序，那么应该是：</p>
+<blockquote>
+<p>a&gt;b：返回 1（或其他正数）;<br>a==b：返回 0;<br>a&lt;b: 返回 -1（或其他负数）;</p>
+</blockquote>
+<p>如果是降序，那么就应该反过来，像下边这样：</p>
+<blockquote>
+<p>a&gt;b：返回 -1（或其他负数）;<br>a==b：返回 0;<br>a&lt;b: 返回 1（或其他正数）;</p>
+</blockquote>
+<p>比如我要对 int 类型的数组升序排序，那么我的 cmp 函数应该像下边这样：</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">cmp</span><span class="params">(<span class="type">const</span> <span class="type">void</span> *a, <span class="type">const</span> <span class="type">void</span> *b)</span></span><br><span class="line">{</span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> *x = (<span class="type">const</span> <span class="type">int</span> *)a;</span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> *y = (<span class="type">const</span> <span class="type">int</span> *)b;</span><br><span class="line">    <span class="keyword">if</span> (*x &gt; *y)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (*x == *y)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>或者也可以简化成下边这样：</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">cmp</span><span class="params">(<span class="type">const</span> <span class="type">void</span> *a, <span class="type">const</span> <span class="type">void</span> *b)</span></span><br><span class="line">{</span><br><span class="line">    <span class="keyword">return</span> (*(<span class="type">const</span> <span class="type">int</span> *)a - *(<span class="type">const</span> <span class="type">int</span> *)b);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这里的 a&gt;b 等比较方式只是形式上我这么写，实际上有可能这两个元素我并不能直接这么比（比如如果这里的 a、b 都是 struct），那么就应该类似下边这样：</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">{</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> ID;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> score;</span><br><span class="line">} STUDENT;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">cmp</span><span class="params">(<span class="type">const</span> <span class="type">void</span> *, <span class="type">const</span> <span class="type">void</span> *)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    STUDENT stu[<span class="number">5</span>] = {{<span class="number">1</span>, <span class="number">5</span>}, {<span class="number">2</span>, <span class="number">3</span>}, {<span class="number">3</span>, <span class="number">1</span>}, {<span class="number">4</span>, <span class="number">2</span>}, {<span class="number">5</span>, <span class="number">4</span>}};</span><br><span class="line">    qsort(stu, <span class="number">5</span>, <span class="keyword">sizeof</span>(STUDENT), cmp);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"ID: %u, Score: %u\n"</span>, stu[i].ID, stu[i].score);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">cmp</span><span class="params">(<span class="type">const</span> <span class="type">void</span> *a, <span class="type">const</span> <span class="type">void</span> *b)</span></span><br><span class="line">{</span><br><span class="line">    <span class="type">const</span> STUDENT *x = (<span class="type">const</span> STUDENT *)a;</span><br><span class="line">    <span class="type">const</span> STUDENT *y = (<span class="type">const</span> STUDENT *)b;</span><br><span class="line">    <span class="comment">// 降序排序</span></span><br><span class="line">    <span class="keyword">if</span> (x-&gt;score &gt; y-&gt;score)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (x-&gt;score == y-&gt;score)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>输出是：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">ID: 1, Score: 5</span><br><span class="line">ID: 5, Score: 4</span><br><span class="line">ID: 2, Score: 3</span><br><span class="line">ID: 4, Score: 2</span><br><span class="line">ID: 3, Score: 1</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h2><p><strong>需要包含的库:</strong></p>
+<p>algorithm（C++ STL 中的算法库）</p>
+<p><strong>函数原型：</strong></p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">RandomAccessIterator</span>, <span class="keyword">class</span> <span class="title class_">Compare</span>&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">sort</span> <span class="params">(RandomAccessIterator first, RandomAccessIterator last, Compare comp)</span></span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>参数解释：</strong></p>
+<p>first: 必选，排序开始处（参与排序的第一个元素）；<br>last: 必选，排序结束处的<strong>后一个紧挨着的位置</strong>（参与排序的最后一个元素的<strong>后一个位置</strong>）；<br>comp: 可选，用来指定怎么排序的函数，没有的话如果可以默认升序。</p>
+<p>下边给出一些例子：</p>
+<p>给一个数组升序排序：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> arr[<span class="number">5</span>] = {<span class="number">5</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">4</span>};</span><br><span class="line"><span class="built_in">sort</span>(arr, arr + <span class="number">5</span>);</span><br></pre></td></tr></tbody></table></figure>
+
+<p>给一个 vector 降序排序：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; nums = {<span class="number">5</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">4</span>};</span><br><span class="line"><span class="built_in">sort</span>(nums.<span class="built_in">begin</span>(), nums.<span class="built_in">end</span>(), <span class="built_in">greater</span>&lt;<span class="type">int</span>&gt;());</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这里用了 <code>greater&lt;typename&gt;()</code> 这个东东直接表达我这个排序需要降序排序，类似的还有 <code>less&lt;typename&gt;()</code> 用来指定升序。</p>
+<p>然后是自定义这第三个参数，我们就用上边 qsort 那个例子吧：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">STUDENT</span></span><br><span class="line">{</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> ID;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> score;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(STUDENT, STUDENT)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    STUDENT stu[<span class="number">5</span>] = {{<span class="number">1</span>, <span class="number">5</span>}, {<span class="number">2</span>, <span class="number">3</span>}, {<span class="number">3</span>, <span class="number">1</span>}, {<span class="number">4</span>, <span class="number">2</span>}, {<span class="number">5</span>, <span class="number">4</span>}};</span><br><span class="line">    <span class="built_in">sort</span>(stu, stu + <span class="number">5</span>, cmp);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"ID: %u, Score: %u\n"</span>, stu[i].ID, stu[i].score);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(STUDENT a, STUDENT b)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">if</span> (a.score &gt; b.score)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>或者也可以把 cmp 写成下边这种更容易记住的方式：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(STUDENT a, STUDENT b)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">return</span> a.score &gt; b.score;</span><br><span class="line">    <span class="comment">// 表示排序完成后前一个元素比后一个元素大，即降序排序</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>输出和上边是一样的。</p>
+
+
+<article class="message message-immersive is-danger">
+<div class="message-body">
+<i class="fas fa-exclamation-triangle mr-2"></i><strong>注意</strong>
+
+<p>在 qsort 中，最后一个参数的函数的返回值应是一个有符号整型。在期望<strong>升序</strong>排序时，这个返回值应该指定为：<strong>第一个元素大于第二个元素，返回正数；</strong>第一个元素等于第二个元素，返回 0；第一个元素小于第二个元素，返回负数。</p>
+<p>在 C++ STL 的 sort 中，最后一个参数的返回值应是一个布尔值。在期望<strong>升序</strong>排序时，这个返回值应该是 (第一个元素 &lt; 第二个元素) 的运算结果。</p>
+
+
+</div>
+</article>
+
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+        <tag>Sorting</tag>
+        <tag>STL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C 语言中与 (&amp;&amp;) 和或 (||) 运算符的短路运算</title>
+    <url>/posts/13d09bbb.html</url>
+    <content><![CDATA[<p>此篇笔记来源于下边的这个题目。<br><img data-src="https://s1.ax1x.com/2022/10/12/xaK5c9.png"></p>
+<span id="more"></span>
+
+<p>本来以为结果为 3，但是实际跑了一下发现结果是 1。请教了一下大佬知道了这叫做或运算符（||）的短路运算。</p>
+<p>正常来说，或运算中只要有一个为真，结果就为真。所谓或的短路运算就是说，如果已经出现了真，那么后续的运算就不会进行了。以上面的题目为例就是，因为第一个 ++x 这个运算结果肯定为真，那么后面的另外两个 ++x 就不会运行。</p>
+<p>类似的，还有与（&amp;&amp;）的短路运算。正常来说，与运算中必须所有均为真，结果才为真。所以与的短路就是，如果前面的运算结果已经有假了，那么就可以确定这个与运算总体的结果为假，也就不会运行后边的运算了。</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C 语言中使用变量输出小数点位数</title>
+    <url>/posts/45e2d42.html</url>
+    <content><![CDATA[<p>这事儿要从一周前讲起，有人在群里问了这么一道题，要求用 C 实现：</p>
+<span id="more"></span>
+
+<blockquote>
+<p>习题 2-5 分数化小数（decimal）<br>输入正整数 a,b,c，输出 a/b 的小数形式，精确到小数点后 c 位。a,b&lt;=10^6，c&lt;=100。输入包含多组数据，结束标记为 a=b=c=0。<br>样例输入：<br>1 6 4<br>0 0 0<br>样例输出：<br>0.1667</p>
+</blockquote>
+<p>当时我做了个简化的版本 —— 最多处理 1000 组输入，并且 c 比较小（即不需要高精度）的情况的代码，主要是做一个字符串处理，来构造一个传给 <code>printf()</code> 的格式控制字符串，代码如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span> <span class="comment">// 需要用到它的 itoa() 函数</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span> <span class="comment">// 用到strcat拼接字符数组，memset清空字符数组</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    <span class="comment">// 仅实现了最多有 1000 个输入的情况</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> a[<span class="number">1000</span>], b[<span class="number">1000</span>], c[<span class="number">1000</span>], cnt = <span class="number">0</span>;</span><br><span class="line">    <span class="type">double</span> ans[<span class="number">1000</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">if</span> (cnt == <span class="number">1000</span>)</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%u%u%u"</span>, &amp;a[i], &amp;b[i], &amp;c[i]);</span><br><span class="line">        cnt++;</span><br><span class="line">        <span class="keyword">if</span> (!(a[i] == <span class="number">0</span> &amp;&amp; b[i] == <span class="number">0</span> &amp;&amp; c[i] == <span class="number">0</span>))</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">if</span> (b[i] != <span class="number">0</span>)</span><br><span class="line">            {</span><br><span class="line">                ans[i] = a[i] * <span class="number">1.0</span> / b[i];</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; cnt - <span class="number">1</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="type">char</span> formatMsgP1[] = <span class="string">"%."</span>;</span><br><span class="line">        <span class="type">char</span> *formatMsgP2;</span><br><span class="line">        <span class="comment">// 根据位数动态确定 char 数组的大小</span></span><br><span class="line">        <span class="keyword">if</span> (c[i] &gt; <span class="number">99</span>)</span><br><span class="line">        {</span><br><span class="line">            formatMsgP2 = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">char</span>) * <span class="number">3</span>);</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (c[i] &gt; <span class="number">9</span>)</span><br><span class="line">        {</span><br><span class="line">            formatMsgP2 = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">char</span>) * <span class="number">2</span>);</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            formatMsgP2 = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">char</span>));</span><br><span class="line">        }</span><br><span class="line">        itoa(c[i], formatMsgP2, <span class="number">10</span>);</span><br><span class="line">        <span class="type">char</span> formatMsgP3[] = <span class="string">"lf\n"</span>;</span><br><span class="line">        <span class="type">char</span> formatMsg[<span class="number">20</span>];</span><br><span class="line">        <span class="built_in">strcat</span>(formatMsg, formatMsgP1);</span><br><span class="line">        <span class="built_in">strcat</span>(formatMsg, formatMsgP2);</span><br><span class="line">        <span class="built_in">strcat</span>(formatMsg, formatMsgP3);</span><br><span class="line">        <span class="built_in">printf</span>(formatMsg, ans[i]);</span><br><span class="line">        <span class="built_in">memset</span>(formatMsg, <span class="number">0</span>, <span class="keyword">sizeof</span>(formatMsg)); <span class="comment">// 清空数组</span></span><br><span class="line">        <span class="built_in">free</span>(formatMsgP2);                       <span class="comment">// 释放指针</span></span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这样的代码就比较麻烦，大量的代码都用在字符串拼接了。但今天看到一篇文章（<a href="https://mxte.cc/90.html">《使用变量设定小数点位数》</a>），才知道原来根本不需要那么麻烦。</p>
+<p>本来我的目标是构造这么一个格式控制字符串 <code>%.&lt;c&gt;lf</code>，其中 <code>&lt;c&gt;</code> 需要由用户输入。上边的思路就是输入数字之后用 <code>itoa()</code> 函数把输入的数字转成字符串，然后拼一拼。</p>
+<p>但实际上可以这样：</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"%.*lf"</span>, c[i], ans[i]);</span><br></pre></td></tr></tbody></table></figure>
+
+<p>使用 <code>*</code>，<code>printf()</code> 就知道了，需要去后边找这么一个参数。</p>
+<p>所以上边 <code>return 0;</code> 前面那个 <code>for</code> 里那么多东西都只要换成这一句就行了。</p>
+<p>下边贴出一个用动态数组实现的任意组数数据输入的代码（依然没有高精度，我不会啊）：</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">NUMS</span></span></span><br><span class="line"><span class="class">{</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> c;</span><br><span class="line">    <span class="type">double</span> ans;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">NUMS</span> *<span class="title">p</span> =</span> <span class="number">0</span>;</span><br><span class="line"><span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> size = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">append</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span>, <span class="type">double</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    <span class="type">int</span> a = <span class="number">0</span>, b = <span class="number">0</span>, c = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%u%u%u"</span>, &amp;a, &amp;b, &amp;c);</span><br><span class="line">        <span class="keyword">if</span> (a == <span class="number">0</span> &amp;&amp; b == <span class="number">0</span> &amp;&amp; c == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            <span class="type">double</span> tmp_ans = a * <span class="number">1.0</span> / b;</span><br><span class="line">            append(c, tmp_ans);</span><br><span class="line">        }</span><br><span class="line">    } <span class="keyword">while</span> (<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%.*lf\n"</span>, (p + i)-&gt;c, (p + i)-&gt;ans);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">append</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> _c, <span class="type">double</span> _ans)</span></span><br><span class="line">{</span><br><span class="line">    <span class="keyword">if</span> (p == <span class="number">0</span>)</span><br><span class="line">    {</span><br><span class="line">        p = <span class="built_in">calloc</span>(<span class="number">1</span>, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        p-&gt;c = _c;</span><br><span class="line">        p-&gt;ans = _ans;</span><br><span class="line">        size++;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">struct</span> NUMS *tmp = <span class="built_in">calloc</span>(size, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        <span class="built_in">memcpy</span>(tmp, p, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS) * size);</span><br><span class="line">        <span class="built_in">free</span>(p);</span><br><span class="line">        p = <span class="built_in">calloc</span>(size + <span class="number">1</span>, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        <span class="built_in">memcpy</span>(p, tmp, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS) * (size + <span class="number">1</span>));</span><br><span class="line">        (p + size)-&gt;c = _c;</span><br><span class="line">        (p + size)-&gt;ans = _ans;</span><br><span class="line">        size++;</span><br><span class="line">        <span class="built_in">free</span>(tmp);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
       </tags>
   </entry>
   <entry>
@@ -2272,26 +2427,59 @@
       </tags>
   </entry>
   <entry>
-    <title>C 语言中使用变量输出小数点位数</title>
-    <url>/posts/45e2d42.html</url>
-    <content><![CDATA[<p>这事儿要从一周前讲起，有人在群里问了这么一道题，要求用 C 实现：</p>
+    <title>The const and constexpr in C++ (REMAKE)</title>
+    <url>/posts/3358bcc1.html</url>
+    <content><![CDATA[<p>I have written a post about <code>const</code> in C++ in Chinese before, but <a href="https://blocklune.github.io/posts/7ec6ba38.html">it</a> was too verbose and unclear. :( So, I decided to rewrite it.</p>
 <span id="more"></span>
 
+<h2 id="BASIC-USAGE-OF-CONST"><a href="#BASIC-USAGE-OF-CONST" class="headerlink" title="BASIC USAGE OF CONST"></a>BASIC USAGE OF CONST</h2><h3 id="MODIFIES-BASIC-DATE-TYPE-WITH-CONST"><a href="#MODIFIES-BASIC-DATE-TYPE-WITH-CONST" class="headerlink" title="MODIFIES BASIC DATE TYPE WITH CONST"></a>MODIFIES BASIC DATE TYPE WITH CONST</h3><p>The most basic usage of <code>const</code> is to define a constant. A constant is a variable whose value cannot be changed after initialization.</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">double</span> b = <span class="number">1.0</span>; <span class="comment">// now b is immutable</span></span><br><span class="line"></span><br><span class="line">a = <span class="number">2</span>; <span class="comment">// a is a variable. It's okay.</span></span><br><span class="line"><span class="comment">// b = 2.0; // WRONG! b is a constant.</span></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="MODIFIES-POINTERS-WITH-CONST"><a href="#MODIFIES-POINTERS-WITH-CONST" class="headerlink" title="MODIFIES POINTERS WITH CONST"></a>MODIFIES POINTERS WITH CONST</h3><p>When it comes to pointers, <code>const</code> can be used in two ways: <strong>top-level const</strong> and <strong>low-level const</strong>.</p>
 <blockquote>
-<p>习题 2-5 分数化小数（decimal）<br>输入正整数 a,b,c，输出 a/b 的小数形式，精确到小数点后 c 位。a,b&lt;=10^6，c&lt;=100。输入包含多组数据，结束标记为 a=b=c=0。<br>样例输入：<br>1 6 4<br>0 0 0<br>样例输出：<br>0.1667</p>
+<p>Top-level const means that the pointer itself is a constant, i.e. you can’t change what it points to.<br>Low-level const means that the object that the pointer points to is a constant, i.e. you can’t change the value of that object through this pointer.</p>
 </blockquote>
-<p>当时我做了个简化的版本 —— 最多处理 1000 组输入，并且 c 比较小（即不需要高精度）的情况的代码，主要是做一个字符串处理，来构造一个传给 <code>printf()</code> 的格式控制字符串，代码如下：</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span> <span class="comment">// 需要用到它的 itoa() 函数</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span> <span class="comment">// 用到strcat拼接字符数组，memset清空字符数组</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    <span class="comment">// 仅实现了最多有 1000 个输入的情况</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> a[<span class="number">1000</span>], b[<span class="number">1000</span>], c[<span class="number">1000</span>], cnt = <span class="number">0</span>;</span><br><span class="line">    <span class="type">double</span> ans[<span class="number">1000</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">if</span> (cnt == <span class="number">1000</span>)</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%u%u%u"</span>, &amp;a[i], &amp;b[i], &amp;c[i]);</span><br><span class="line">        cnt++;</span><br><span class="line">        <span class="keyword">if</span> (!(a[i] == <span class="number">0</span> &amp;&amp; b[i] == <span class="number">0</span> &amp;&amp; c[i] == <span class="number">0</span>))</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">if</span> (b[i] != <span class="number">0</span>)</span><br><span class="line">            {</span><br><span class="line">                ans[i] = a[i] * <span class="number">1.0</span> / b[i];</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; cnt - <span class="number">1</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="type">char</span> formatMsgP1[] = <span class="string">"%."</span>;</span><br><span class="line">        <span class="type">char</span> *formatMsgP2;</span><br><span class="line">        <span class="comment">// 根据位数动态确定 char 数组的大小</span></span><br><span class="line">        <span class="keyword">if</span> (c[i] &gt; <span class="number">99</span>)</span><br><span class="line">        {</span><br><span class="line">            formatMsgP2 = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">char</span>) * <span class="number">3</span>);</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (c[i] &gt; <span class="number">9</span>)</span><br><span class="line">        {</span><br><span class="line">            formatMsgP2 = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">char</span>) * <span class="number">2</span>);</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            formatMsgP2 = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">char</span>));</span><br><span class="line">        }</span><br><span class="line">        itoa(c[i], formatMsgP2, <span class="number">10</span>);</span><br><span class="line">        <span class="type">char</span> formatMsgP3[] = <span class="string">"lf\n"</span>;</span><br><span class="line">        <span class="type">char</span> formatMsg[<span class="number">20</span>];</span><br><span class="line">        <span class="built_in">strcat</span>(formatMsg, formatMsgP1);</span><br><span class="line">        <span class="built_in">strcat</span>(formatMsg, formatMsgP2);</span><br><span class="line">        <span class="built_in">strcat</span>(formatMsg, formatMsgP3);</span><br><span class="line">        <span class="built_in">printf</span>(formatMsg, ans[i]);</span><br><span class="line">        <span class="built_in">memset</span>(formatMsg, <span class="number">0</span>, <span class="keyword">sizeof</span>(formatMsg)); <span class="comment">// 清空数组</span></span><br><span class="line">        <span class="built_in">free</span>(formatMsgP2);                       <span class="comment">// 释放指针</span></span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>For example:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">1</span>;</span><br><span class="line"><span class="type">int</span> y = <span class="number">2</span>;</span><br><span class="line"><span class="type">int</span> *<span class="type">const</span> p1 = &amp;x;       <span class="comment">// top-level const</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> *p2 = &amp;x;       <span class="comment">// low-level const</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> *<span class="type">const</span> p3 = &amp;x; <span class="comment">// The first is low-level</span></span><br><span class="line">                          <span class="comment">// The second is top-level</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// p1 = &amp;y;               // WRONG! p1 is a constant pointer, it can't change its direction.</span></span><br><span class="line">*p1 = y;                  <span class="comment">// OK</span></span><br><span class="line"></span><br><span class="line">p2 = &amp;y;                  <span class="comment">// OK</span></span><br><span class="line"><span class="comment">// *p2 = y;               // WRONG! p2 points at a constant.</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// p3 = &amp;y;               // WRONG!</span></span><br><span class="line"><span class="comment">// *p3 = y;               // WRONG!</span></span><br></pre></td></tr></tbody></table></figure>
 
-<p>这样的代码就比较麻烦，大量的代码都用在字符串拼接了。但今天看到一篇文章（<a href="https://mxte.cc/90.html">《使用变量设定小数点位数》</a>），才知道原来根本不需要那么麻烦。</p>
-<p>本来我的目标是构造这么一个格式控制字符串 <code>%.&lt;c&gt;lf</code>，其中 <code>&lt;c&gt;</code> 需要由用户输入。上边的思路就是输入数字之后用 <code>itoa()</code> 函数把输入的数字转成字符串，然后拼一拼。</p>
-<p>但实际上可以这样：</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"%.*lf"</span>, c[i], ans[i]);</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="MODIFIES-REFERENCE-WITH-CONST"><a href="#MODIFIES-REFERENCE-WITH-CONST" class="headerlink" title="MODIFIES REFERENCE WITH CONST"></a>MODIFIES REFERENCE WITH CONST</h3><p>For reference, there is only one way to use <code>const</code>: <code>const T &amp;</code> (T is type name). Reference itself (like <code>T &amp;</code>) is always top-level, since you can’t change what it refers to after its initialization. So, <code>const T &amp;</code> makes the reference both top-level and low-level.</p>
+<h3 id="MODIFIES-OBJECTS-WITH-CONST"><a href="#MODIFIES-OBJECTS-WITH-CONST" class="headerlink" title="MODIFIES OBJECTS WITH CONST"></a>MODIFIES OBJECTS WITH CONST</h3><p>Modifying an object with <code>const</code> means that this object is immutable after its initialization.</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">const</span> std::string str = <span class="string">"This is an immutable string."</span>;</span><br></pre></td></tr></tbody></table></figure>
 
-<p>使用 <code>*</code>，<code>printf()</code> 就知道了，需要去后边找这么一个参数。</p>
-<p>所以上边 <code>return 0;</code> 前面那个 <code>for</code> 里那么多东西都只要换成这一句就行了。</p>
-<p>下边贴出一个用动态数组实现的任意组数数据输入的代码（依然没有高精度，我不会啊）：</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">NUMS</span></span></span><br><span class="line"><span class="class">{</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> c;</span><br><span class="line">    <span class="type">double</span> ans;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">NUMS</span> *<span class="title">p</span> =</span> <span class="number">0</span>;</span><br><span class="line"><span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> size = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">append</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span>, <span class="type">double</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    <span class="type">int</span> a = <span class="number">0</span>, b = <span class="number">0</span>, c = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%u%u%u"</span>, &amp;a, &amp;b, &amp;c);</span><br><span class="line">        <span class="keyword">if</span> (a == <span class="number">0</span> &amp;&amp; b == <span class="number">0</span> &amp;&amp; c == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            <span class="type">double</span> tmp_ans = a * <span class="number">1.0</span> / b;</span><br><span class="line">            append(c, tmp_ans);</span><br><span class="line">        }</span><br><span class="line">    } <span class="keyword">while</span> (<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%.*lf\n"</span>, (p + i)-&gt;c, (p + i)-&gt;ans);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">append</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> _c, <span class="type">double</span> _ans)</span></span><br><span class="line">{</span><br><span class="line">    <span class="keyword">if</span> (p == <span class="number">0</span>)</span><br><span class="line">    {</span><br><span class="line">        p = <span class="built_in">calloc</span>(<span class="number">1</span>, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        p-&gt;c = _c;</span><br><span class="line">        p-&gt;ans = _ans;</span><br><span class="line">        size++;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">struct</span> NUMS *tmp = <span class="built_in">calloc</span>(size, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        <span class="built_in">memcpy</span>(tmp, p, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS) * size);</span><br><span class="line">        <span class="built_in">free</span>(p);</span><br><span class="line">        p = <span class="built_in">calloc</span>(size + <span class="number">1</span>, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        <span class="built_in">memcpy</span>(p, tmp, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS) * (size + <span class="number">1</span>));</span><br><span class="line">        (p + size)-&gt;c = _c;</span><br><span class="line">        (p + size)-&gt;ans = _ans;</span><br><span class="line">        size++;</span><br><span class="line">        <span class="built_in">free</span>(tmp);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="CONST-IN-FUNCTIONS"><a href="#CONST-IN-FUNCTIONS" class="headerlink" title="CONST IN FUNCTIONS"></a>CONST IN FUNCTIONS</h2><h3 id="CONST-IN-PARAMETER-LIST"><a href="#CONST-IN-PARAMETER-LIST" class="headerlink" title="CONST IN PARAMETER LIST"></a>CONST IN PARAMETER LIST</h3><p>A parameter modified with <code>const</code> means it is <strong>read-only</strong> to the function. Usually, we use this feature together with reference. So, when we don’t want a function to change a specific argument, the parameter’s type may look like <code>const T &amp;</code>.</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Show</span><span class="params">(<span class="type">const</span> T &amp;)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  std::string str = <span class="string">"This is an example."</span>;</span><br><span class="line">  <span class="built_in">Show</span>(str);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Show</span><span class="params">(<span class="type">const</span> T &amp;in)</span> </span>{</span><br><span class="line">  <span class="comment">// in is read-only</span></span><br><span class="line">  std::cout &lt;&lt; in &lt;&lt; std::endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="THE-CONST-AFTER-A-MEMBER-FUNCTION"><a href="#THE-CONST-AFTER-A-MEMBER-FUNCTION" class="headerlink" title="THE CONST AFTER A MEMBER FUNCTION"></a>THE CONST AFTER A MEMBER FUNCTION</h3><p>The const after a member function indicates that the function does not modify any non-mutable data members of the class. In other words, this means that the <code>this</code> pointer is const, implying that this member function does not alter the state of this object.</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Fish</span> {</span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  <span class="type">double</span> weight_;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="built_in">Fish</span>() : <span class="built_in">weight_</span>(<span class="number">0</span>) {}</span><br><span class="line">  <span class="built_in">Fish</span>(<span class="type">const</span> <span class="type">double</span>&amp; weight) : <span class="built_in">weight_</span>(weight) {}</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">ModifyWeight</span><span class="params">(<span class="type">const</span> <span class="type">double</span>&amp; weight)</span></span>;</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">ShowWeight</span><span class="params">()</span> <span class="type">const</span></span>; <span class="comment">// Just show the weight. Read-only.</span></span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Fish::ModifyWeight</span><span class="params">(<span class="type">const</span> <span class="type">double</span>&amp; weight)</span> </span>{ <span class="keyword">this</span>-&gt;weight_ = weight; }</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Fish::ShowWeight</span><span class="params">()</span> <span class="type">const</span> </span>{ std::cout &lt;&lt; <span class="keyword">this</span>-&gt;weight_ &lt;&lt; std::endl; }</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="function">Fish <span class="title">fish</span><span class="params">(<span class="number">5.0</span>)</span></span>;</span><br><span class="line">  fish.<span class="built_in">ShowWeight</span>();</span><br><span class="line">  fish.<span class="built_in">ModifyWeight</span>(<span class="number">10.0</span>);</span><br><span class="line">  fish.<span class="built_in">ShowWeight</span>();</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="RETURNS-A-CONST"><a href="#RETURNS-A-CONST" class="headerlink" title="RETURNS A CONST"></a>RETURNS A CONST</h3><p>When returning an object, the <code>const</code> before the return type indicates that this object is a constant and is immutable. For example: <code>const int&amp; GetAgeConst()</code>, which returns a rvalue whose referenced content cannot be modified.</p>
+<p>When return a pointer type (or a reference), <code>const</code> helps protect the pointer or reference content from being modified. For example: <code>const char * const Fun()</code>, which returns a pointer to a constant, whose pointed content and the pointer itself cannot be modified.</p>
+<p>Here is an example generated by new bing:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> {</span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  <span class="type">int</span> age;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="built_in">Person</span>(<span class="type">int</span> a) : <span class="built_in">age</span>(a) {}</span><br><span class="line">  <span class="function"><span class="type">const</span> <span class="type">int</span>&amp; <span class="title">GetAgeConst</span><span class="params">()</span> <span class="type">const</span> </span>{ <span class="keyword">return</span> age; }</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="function">Person <span class="title">p</span><span class="params">(<span class="number">20</span>)</span></span>;</span><br><span class="line">  cout &lt;&lt; <span class="string">"The age is "</span> &lt;&lt; p.<span class="built_in">GetAgeConst</span>() &lt;&lt; endl;</span><br><span class="line">  <span class="comment">// p.GetAgeConst() = 30; // WRONG</span></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="CONSTEXPR-NEW-IN-C-11"><a href="#CONSTEXPR-NEW-IN-C-11" class="headerlink" title="CONSTEXPR (NEW IN C++11)"></a>CONSTEXPR (NEW IN C++11)</h2><p><code>constexpr</code> keyword helps the compiler find those constant expressions at compile stage. A really common place of use is defining an array:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">constexpr</span> <span class="type">int</span> <span class="title">GetConstexprLen</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">constexpr</span> <span class="type">int</span> <span class="title">Fibonacci</span><span class="params">(<span class="type">const</span> <span class="type">int</span> n)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> variable_len = <span class="number">10</span>;</span><br><span class="line">  <span class="type">const</span> <span class="type">int</span> const_len = <span class="number">10</span>;</span><br><span class="line">  <span class="keyword">constexpr</span> <span class="type">int</span> constexpr_len = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// int arr1[variable_len];    // Illegal. Not OK.</span></span><br><span class="line">  <span class="comment">// int arr2[const_len];       // Illegal. But usually OK.</span></span><br><span class="line">  <span class="type">int</span> arr3[constexpr_len];      <span class="comment">// Legal. OK.</span></span><br><span class="line">  <span class="type">int</span> arr4[<span class="built_in">GetConstexprLen</span>()];  <span class="comment">// Legal. OK.</span></span><br><span class="line">  <span class="type">int</span> arr5[<span class="built_in">Fibonacci</span>(<span class="number">5</span>)];       <span class="comment">// Legal. OK.</span></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">constexpr</span> <span class="type">int</span> <span class="title">GetConstexprLen</span><span class="params">()</span> </span>{ <span class="keyword">return</span> <span class="number">10</span>; }</span><br><span class="line"><span class="function"><span class="keyword">constexpr</span> <span class="type">int</span> <span class="title">Fibonacci</span><span class="params">(<span class="type">const</span> <span class="type">int</span> n)</span> </span>{</span><br><span class="line">  <span class="comment">// These codes are from https://changkun.de/modern-cpp/</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// You can't use local variables, loops,</span></span><br><span class="line">  <span class="comment">// and conditional statements here in C++11</span></span><br><span class="line">  <span class="comment">// But in C++14, that's OK.</span></span><br><span class="line">  <span class="keyword">return</span> n == <span class="number">1</span> || n == <span class="number">2</span> ? <span class="number">1</span> : <span class="built_in">Fibonacci</span>(n - <span class="number">1</span>) + <span class="built_in">Fibonacci</span>(n - <span class="number">2</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To learn more, you may read <em><a href="https://changkun.de/modern-cpp/">Modern C++ Tutorial</a></em></p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+        <tag>const</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Uses std::cin.ignore() to keep the user typing until the input meets the requirements</title>
+    <url>/posts/f96b3358.html</url>
+    <content><![CDATA[<p>I used to control users’ input by making the input a string and process it later. But today, my friend posed this question to me: Can we control input without a char array or string class?</p>
+<span id="more"></span>
+
+<p>On <em><a href="https://en.cppreference.com/w/cpp/io/basic_istream/ignore">cppreference.com</a></em>, I found <code>std::cin.ignore()</code>. This function can help us solve the previous question. Here is an example:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;limits&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> n = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span> (<span class="literal">true</span>) {</span><br><span class="line">    std::cout &lt;&lt; <span class="string">"Please input a number: "</span>;</span><br><span class="line">    std::cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">if</span> (!std::cin.<span class="built_in">good</span>()) {</span><br><span class="line">      std::cerr &lt;&lt; <span class="string">"Error input."</span> &lt;&lt; std::endl;</span><br><span class="line">      std::cin.<span class="built_in">clear</span>();</span><br><span class="line">      std::cin.<span class="built_in">ignore</span>(std::numeric_limits&lt;std::streamsize&gt;::<span class="built_in">max</span>(), <span class="string">'\n'</span>);</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    } <span class="keyword">else</span> {</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  std::cout &lt;&lt; <span class="string">"Your input is: "</span> &lt;&lt; n &lt;&lt; std::endl;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 ]]></content>
       <categories>
         <category>CS</category>
@@ -2341,52 +2529,6 @@
         <tag>LLDB</tag>
         <tag>LLVM</tag>
         <tag>Clang</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>The const and constexpr in C++ (REMAKE)</title>
-    <url>/posts/3358bcc1.html</url>
-    <content><![CDATA[<p>I have written a post about <code>const</code> in C++ in Chinese before, but <a href="https://blocklune.github.io/posts/7ec6ba38.html">it</a> was too verbose and unclear. :( So, I decided to rewrite it.</p>
-<span id="more"></span>
-
-<h2 id="BASIC-USAGE-OF-CONST"><a href="#BASIC-USAGE-OF-CONST" class="headerlink" title="BASIC USAGE OF CONST"></a>BASIC USAGE OF CONST</h2><h3 id="MODIFIES-BASIC-DATE-TYPE-WITH-CONST"><a href="#MODIFIES-BASIC-DATE-TYPE-WITH-CONST" class="headerlink" title="MODIFIES BASIC DATE TYPE WITH CONST"></a>MODIFIES BASIC DATE TYPE WITH CONST</h3><p>The most basic usage of <code>const</code> is to define a constant. A constant is a variable whose value cannot be changed after initialization.</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">double</span> b = <span class="number">1.0</span>; <span class="comment">// now b is immutable</span></span><br><span class="line"></span><br><span class="line">a = <span class="number">2</span>; <span class="comment">// a is a variable. It's okay.</span></span><br><span class="line"><span class="comment">// b = 2.0; // WRONG! b is a constant.</span></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="MODIFIES-POINTERS-WITH-CONST"><a href="#MODIFIES-POINTERS-WITH-CONST" class="headerlink" title="MODIFIES POINTERS WITH CONST"></a>MODIFIES POINTERS WITH CONST</h3><p>When it comes to pointers, <code>const</code> can be used in two ways: <strong>top-level const</strong> and <strong>low-level const</strong>.</p>
-<blockquote>
-<p>Top-level const means that the pointer itself is a constant, i.e. you can’t change what it points to.<br>Low-level const means that the object that the pointer points to is a constant, i.e. you can’t change the value of that object through this pointer.</p>
-</blockquote>
-<p>For example:</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">1</span>;</span><br><span class="line"><span class="type">int</span> y = <span class="number">2</span>;</span><br><span class="line"><span class="type">int</span> *<span class="type">const</span> p1 = &amp;x;       <span class="comment">// top-level const</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> *p2 = &amp;x;       <span class="comment">// low-level const</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> *<span class="type">const</span> p3 = &amp;x; <span class="comment">// The first is low-level</span></span><br><span class="line">                          <span class="comment">// The second is top-level</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// p1 = &amp;y;               // WRONG! p1 is a constant pointer, it can't change its direction.</span></span><br><span class="line">*p1 = y;                  <span class="comment">// OK</span></span><br><span class="line"></span><br><span class="line">p2 = &amp;y;                  <span class="comment">// OK</span></span><br><span class="line"><span class="comment">// *p2 = y;               // WRONG! p2 points at a constant.</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// p3 = &amp;y;               // WRONG!</span></span><br><span class="line"><span class="comment">// *p3 = y;               // WRONG!</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="MODIFIES-REFERENCE-WITH-CONST"><a href="#MODIFIES-REFERENCE-WITH-CONST" class="headerlink" title="MODIFIES REFERENCE WITH CONST"></a>MODIFIES REFERENCE WITH CONST</h3><p>For reference, there is only one way to use <code>const</code>: <code>const T &amp;</code> (T is type name). Reference itself (like <code>T &amp;</code>) is always top-level, since you can’t change what it refers to after its initialization. So, <code>const T &amp;</code> makes the reference both top-level and low-level.</p>
-<h3 id="MODIFIES-OBJECTS-WITH-CONST"><a href="#MODIFIES-OBJECTS-WITH-CONST" class="headerlink" title="MODIFIES OBJECTS WITH CONST"></a>MODIFIES OBJECTS WITH CONST</h3><p>Modifying an object with <code>const</code> means that this object is immutable after its initialization.</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">const</span> std::string str = <span class="string">"This is an immutable string."</span>;</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="CONST-IN-FUNCTIONS"><a href="#CONST-IN-FUNCTIONS" class="headerlink" title="CONST IN FUNCTIONS"></a>CONST IN FUNCTIONS</h2><h3 id="CONST-IN-PARAMETER-LIST"><a href="#CONST-IN-PARAMETER-LIST" class="headerlink" title="CONST IN PARAMETER LIST"></a>CONST IN PARAMETER LIST</h3><p>A parameter modified with <code>const</code> means it is <strong>read-only</strong> to the function. Usually, we use this feature together with reference. So, when we don’t want a function to change a specific argument, the parameter’s type may look like <code>const T &amp;</code>.</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Show</span><span class="params">(<span class="type">const</span> T &amp;)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  std::string str = <span class="string">"This is an example."</span>;</span><br><span class="line">  <span class="built_in">Show</span>(str);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Show</span><span class="params">(<span class="type">const</span> T &amp;in)</span> </span>{</span><br><span class="line">  <span class="comment">// in is read-only</span></span><br><span class="line">  std::cout &lt;&lt; in &lt;&lt; std::endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="THE-CONST-AFTER-A-MEMBER-FUNCTION"><a href="#THE-CONST-AFTER-A-MEMBER-FUNCTION" class="headerlink" title="THE CONST AFTER A MEMBER FUNCTION"></a>THE CONST AFTER A MEMBER FUNCTION</h3><p>The const after a member function indicates that the function does not modify any non-mutable data members of the class. In other words, this means that the <code>this</code> pointer is const, implying that this member function does not alter the state of this object.</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Fish</span> {</span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  <span class="type">double</span> weight_;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="built_in">Fish</span>() : <span class="built_in">weight_</span>(<span class="number">0</span>) {}</span><br><span class="line">  <span class="built_in">Fish</span>(<span class="type">const</span> <span class="type">double</span>&amp; weight) : <span class="built_in">weight_</span>(weight) {}</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">ModifyWeight</span><span class="params">(<span class="type">const</span> <span class="type">double</span>&amp; weight)</span></span>;</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">ShowWeight</span><span class="params">()</span> <span class="type">const</span></span>; <span class="comment">// Just show the weight. Read-only.</span></span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Fish::ModifyWeight</span><span class="params">(<span class="type">const</span> <span class="type">double</span>&amp; weight)</span> </span>{ <span class="keyword">this</span>-&gt;weight_ = weight; }</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Fish::ShowWeight</span><span class="params">()</span> <span class="type">const</span> </span>{ std::cout &lt;&lt; <span class="keyword">this</span>-&gt;weight_ &lt;&lt; std::endl; }</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="function">Fish <span class="title">fish</span><span class="params">(<span class="number">5.0</span>)</span></span>;</span><br><span class="line">  fish.<span class="built_in">ShowWeight</span>();</span><br><span class="line">  fish.<span class="built_in">ModifyWeight</span>(<span class="number">10.0</span>);</span><br><span class="line">  fish.<span class="built_in">ShowWeight</span>();</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="RETURNS-A-CONST"><a href="#RETURNS-A-CONST" class="headerlink" title="RETURNS A CONST"></a>RETURNS A CONST</h3><p>When returning an object, the <code>const</code> before the return type indicates that this object is a constant and is immutable. For example: <code>const int&amp; GetAgeConst()</code>, which returns a rvalue whose referenced content cannot be modified.</p>
-<p>When return a pointer type (or a reference), <code>const</code> helps protect the pointer or reference content from being modified. For example: <code>const char * const Fun()</code>, which returns a pointer to a constant, whose pointed content and the pointer itself cannot be modified.</p>
-<p>Here is an example generated by new bing:</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> {</span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  <span class="type">int</span> age;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="built_in">Person</span>(<span class="type">int</span> a) : <span class="built_in">age</span>(a) {}</span><br><span class="line">  <span class="function"><span class="type">const</span> <span class="type">int</span>&amp; <span class="title">GetAgeConst</span><span class="params">()</span> <span class="type">const</span> </span>{ <span class="keyword">return</span> age; }</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="function">Person <span class="title">p</span><span class="params">(<span class="number">20</span>)</span></span>;</span><br><span class="line">  cout &lt;&lt; <span class="string">"The age is "</span> &lt;&lt; p.<span class="built_in">GetAgeConst</span>() &lt;&lt; endl;</span><br><span class="line">  <span class="comment">// p.GetAgeConst() = 30; // WRONG</span></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="CONSTEXPR-NEW-IN-C-11"><a href="#CONSTEXPR-NEW-IN-C-11" class="headerlink" title="CONSTEXPR (NEW IN C++11)"></a>CONSTEXPR (NEW IN C++11)</h2><p><code>constexpr</code> keyword helps the compiler find those constant expressions at compile stage. A really common place of use is defining an array:</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">constexpr</span> <span class="type">int</span> <span class="title">GetConstexprLen</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">constexpr</span> <span class="type">int</span> <span class="title">Fibonacci</span><span class="params">(<span class="type">const</span> <span class="type">int</span> n)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> variable_len = <span class="number">10</span>;</span><br><span class="line">  <span class="type">const</span> <span class="type">int</span> const_len = <span class="number">10</span>;</span><br><span class="line">  <span class="keyword">constexpr</span> <span class="type">int</span> constexpr_len = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// int arr1[variable_len];    // Illegal. Not OK.</span></span><br><span class="line">  <span class="comment">// int arr2[const_len];       // Illegal. But usually OK.</span></span><br><span class="line">  <span class="type">int</span> arr3[constexpr_len];      <span class="comment">// Legal. OK.</span></span><br><span class="line">  <span class="type">int</span> arr4[<span class="built_in">GetConstexprLen</span>()];  <span class="comment">// Legal. OK.</span></span><br><span class="line">  <span class="type">int</span> arr5[<span class="built_in">Fibonacci</span>(<span class="number">5</span>)];       <span class="comment">// Legal. OK.</span></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">constexpr</span> <span class="type">int</span> <span class="title">GetConstexprLen</span><span class="params">()</span> </span>{ <span class="keyword">return</span> <span class="number">10</span>; }</span><br><span class="line"><span class="function"><span class="keyword">constexpr</span> <span class="type">int</span> <span class="title">Fibonacci</span><span class="params">(<span class="type">const</span> <span class="type">int</span> n)</span> </span>{</span><br><span class="line">  <span class="comment">// These codes are from https://changkun.de/modern-cpp/</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// You can't use local variables, loops,</span></span><br><span class="line">  <span class="comment">// and conditional statements here in C++11</span></span><br><span class="line">  <span class="comment">// But in C++14, that's OK.</span></span><br><span class="line">  <span class="keyword">return</span> n == <span class="number">1</span> || n == <span class="number">2</span> ? <span class="number">1</span> : <span class="built_in">Fibonacci</span>(n - <span class="number">1</span>) + <span class="built_in">Fibonacci</span>(n - <span class="number">2</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>To learn more, you may read <em><a href="https://changkun.de/modern-cpp/">Modern C++ Tutorial</a></em></p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-        <tag>const</tag>
       </tags>
   </entry>
   <entry>
@@ -2484,13 +2626,53 @@
       </tags>
   </entry>
   <entry>
-    <title>Uses std::cin.ignore() to keep the user typing until the input meets the requirements</title>
-    <url>/posts/f96b3358.html</url>
-    <content><![CDATA[<p>I used to control users’ input by making the input a string and process it later. But today, my friend posed this question to me: Can we control input without a char array or string class?</p>
+    <title>值传递、指针传递、引用传递</title>
+    <url>/posts/c8a20144.html</url>
+    <content><![CDATA[<p>接上文<a href="https://blocklune.github.io/posts/50c16b14.html">《一个有关指针传参的问题》</a>，打算结合一些简单的例子系统地梳理一下 C/C++ 中的值传递、指针传递和 C++ 中特有的 引用传递。</p>
 <span id="more"></span>
 
-<p>On <em><a href="https://en.cppreference.com/w/cpp/io/basic_istream/ignore">cppreference.com</a></em>, I found <code>std::cin.ignore()</code>. This function can help us solve the previous question. Here is an example:</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;limits&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> n = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span> (<span class="literal">true</span>) {</span><br><span class="line">    std::cout &lt;&lt; <span class="string">"Please input a number: "</span>;</span><br><span class="line">    std::cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">if</span> (!std::cin.<span class="built_in">good</span>()) {</span><br><span class="line">      std::cerr &lt;&lt; <span class="string">"Error input."</span> &lt;&lt; std::endl;</span><br><span class="line">      std::cin.<span class="built_in">clear</span>();</span><br><span class="line">      std::cin.<span class="built_in">ignore</span>(std::numeric_limits&lt;std::streamsize&gt;::<span class="built_in">max</span>(), <span class="string">'\n'</span>);</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    } <span class="keyword">else</span> {</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  std::cout &lt;&lt; <span class="string">"Your input is: "</span> &lt;&lt; n &lt;&lt; std::endl;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="值传递"><a href="#值传递" class="headerlink" title="值传递"></a>值传递</h2><p><strong>值传递</strong>传递实际上只是在执行函数的时候将实参的值赋给了形参，在此之后函数体内对形参的任何操作都与原来的实参无关了。</p>
+<p>例如下边这个代码 1:</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// 值传递 (C++代码)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"The value of n in func(): "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of n in func(): "</span> &lt;&lt; &amp;n &lt;&lt; endl;</span><br><span class="line">    n++;</span><br><span class="line">    cout &lt;&lt; <span class="string">"Then the value of n in func(): "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">0</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The value of n in main(): "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of n in main(): "</span> &lt;&lt; &amp;n &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(n);</span><br><span class="line">    cout &lt;&lt; <span class="string">"Then the value of n in main(): "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// 值传递 (C代码)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">func</span><span class="params">(<span class="type">int</span> n)</span></span><br><span class="line">{</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"The value of n in func(): %d\n"</span>, n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"The address of n in func(): 0x%x\n"</span>, &amp;n);</span><br><span class="line">    n++;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Then the value of n in func(): %d\n"</span>, n);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"The value of n in main(): %d\n"</span>, n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"The address of n in main(): 0x%x\n"</span>, &amp;n);</span><br><span class="line">    func(n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Then the value of n in main(): %d\n"</span>, n);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>下边是可能的输出：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">The value of n in main(): 0</span><br><span class="line">The address of n in main(): 0x61fe1c</span><br><span class="line">The value of n in func(): 0</span><br><span class="line">The address of n in func(): 0x61fdf0</span><br><span class="line">Then the value of n in func(): 1</span><br><span class="line">Then the value of n in main(): 0</span><br></pre></td></tr></tbody></table></figure>
+
+<p>第二行第四行说明，<code>main()</code> 中的实参 n 与 <code>func()</code> 中的形参 n 存储在内存的不同位置，不是同一个变量。第五第六行说明，对形参 n 的操作，不会影响实参 n。</p>
+<h2 id="指针传递"><a href="#指针传递" class="headerlink" title="指针传递"></a>指针传递</h2><p><strong>指针传递</strong>也就是传参时不直接传某个参数的值，而是传它的地址。把这个地址作为实参，而形参又是复制实参而来的，所以形参也是原来参数的地址，这样再对形参解除引用，实际上就是对同一内存的值进行操作，所以当然在自定函数中的操作会在主函数中反映出来，请看下边的代码 2：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// 指针传递 (C++代码)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"The value of n(*p) in func(): "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of n(p) in func(): "</span> &lt;&lt; p &lt;&lt; endl;</span><br><span class="line">    (*p)++;</span><br><span class="line">    cout &lt;&lt; <span class="string">"Then the value of n(*p) in func(): "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">0</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The value of n in main(): "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of n in main(): "</span> &lt;&lt; &amp;n &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(&amp;n); <span class="comment">// 把想要传递的参数的地址作为实参传入</span></span><br><span class="line">    cout &lt;&lt; <span class="string">"Then the value of n in main(): "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// 指针传递 (C代码)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">func</span><span class="params">(<span class="type">int</span> *p)</span></span><br><span class="line">{</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"The value of n(*p) in func(): %d\n"</span>, *p);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"The address of n(p) in func(): 0x%x\n"</span>, p);</span><br><span class="line">    (*p)++;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Then the value of n(*p) in func(): %d\n"</span>, *p);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"The value of n in main(): %d\n"</span>, n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"The address of n in main(): 0x%x\n"</span>, &amp;n);</span><br><span class="line">    func(&amp;n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Then the value of n in main(): %d\n"</span>, n);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>下边是可能的输出：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">The value of n in main(): 0</span><br><span class="line">The address of n in main(): 0x61fe1c</span><br><span class="line">The value of n(*p) in func(): 0</span><br><span class="line">The address of n(p) in func(): 0x61fe1c</span><br><span class="line">Then the value of n(*p) in func(): 1</span><br><span class="line">Then the value of n in main(): 1</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这实际上就是 <a href="https://blocklune.github.io/posts/50c16b14.html#%E5%88%86%E6%9E%90%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">《一个有关指针传参的问题》- 分析及解决分案</a> 中的代码 2 的思路。只不过这里我们是对 <code>int</code> 类型的普通变量操作，所以函数接受的参数类型是 <code>int*</code>，而在那篇文章中是要对 <code>int*</code> 类型的变量操作，所以自定函数接受的参数类型变成了 <code>int**</code>。</p>
+<h2 id="引用传递"><a href="#引用传递" class="headerlink" title="引用传递"></a>引用传递</h2>
+
+<article class="message message-immersive is-warning">
+<div class="message-body">
+<i class="fas fa-exclamation-triangle mr-2"></i>
+注意引用传递是 C++ 的特性，C 没有这个特性。
+</div>
+</article>
+
+
+<p><strong>引用传递</strong>相当于给实参取了个别名，对形参的操作会同步到实参那边去，还是来看下边的代码 3 吧：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// 引用传递 (C++代码)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> &amp;n2)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"The value of n2 in func(): "</span> &lt;&lt; n2 &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of n2 in func(): "</span> &lt;&lt; &amp;n2 &lt;&lt; endl;</span><br><span class="line">    n2++;</span><br><span class="line">    cout &lt;&lt; <span class="string">"Then the value of n2 in func(): "</span> &lt;&lt; n2 &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n1 = <span class="number">0</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The value of n1 in main(): "</span> &lt;&lt; n1 &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of n1 in main(): "</span> &lt;&lt; &amp;n1 &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(n1);</span><br><span class="line">    cout &lt;&lt; <span class="string">"Then the value of n1 in main(): "</span> &lt;&lt; n1 &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>下边是可能的输出：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">The value of n1 in main(): 0</span><br><span class="line">The address of n1 in main(): 0x61fe1c</span><br><span class="line">The value of n2 in func(): 0</span><br><span class="line">The address of n2 in func(): 0x61fe1c</span><br><span class="line">Then the value of n2 in func(): 1</span><br><span class="line">Then the value of n1 in main(): 1</span><br></pre></td></tr></tbody></table></figure>
+
+<p>类似地，<code>int</code> 类型的引用类型是 <code>int&amp;</code>，<code>int*</code> 的引用类型是 <code>int*&amp;</code>。</p>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><ul>
+<li><p><a href="https://www.jianshu.com/p/2b5594b876ef">C++ 值传递、指针传递、引用传递 - 简书 (jianshu.com)</a></p>
+</li>
+<li><p><a href="https://www.cnblogs.com/dingxiaoqiang/p/8012578.html">C++ 值传递、指针传递、引用传递详解 - zqlucky - 博客园 (cnblogs.com)</a></p>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>CS</category>
@@ -2499,6 +2681,9 @@
       </categories>
       <tags>
         <tag>C/C++</tag>
+        <tag>pass by pointer</tag>
+        <tag>pass by value</tag>
+        <tag>pass by reference</tag>
       </tags>
   </entry>
   <entry>
@@ -2656,67 +2841,6 @@
       <tags>
         <tag>C/C++</tag>
         <tag>Game</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>值传递、指针传递、引用传递</title>
-    <url>/posts/c8a20144.html</url>
-    <content><![CDATA[<p>接上文<a href="https://blocklune.github.io/posts/50c16b14.html">《一个有关指针传参的问题》</a>，打算结合一些简单的例子系统地梳理一下 C/C++ 中的值传递、指针传递和 C++ 中特有的 引用传递。</p>
-<span id="more"></span>
-
-<h2 id="值传递"><a href="#值传递" class="headerlink" title="值传递"></a>值传递</h2><p><strong>值传递</strong>传递实际上只是在执行函数的时候将实参的值赋给了形参，在此之后函数体内对形参的任何操作都与原来的实参无关了。</p>
-<p>例如下边这个代码 1:</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// 值传递 (C++代码)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"The value of n in func(): "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of n in func(): "</span> &lt;&lt; &amp;n &lt;&lt; endl;</span><br><span class="line">    n++;</span><br><span class="line">    cout &lt;&lt; <span class="string">"Then the value of n in func(): "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">0</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The value of n in main(): "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of n in main(): "</span> &lt;&lt; &amp;n &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(n);</span><br><span class="line">    cout &lt;&lt; <span class="string">"Then the value of n in main(): "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// 值传递 (C代码)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">func</span><span class="params">(<span class="type">int</span> n)</span></span><br><span class="line">{</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"The value of n in func(): %d\n"</span>, n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"The address of n in func(): 0x%x\n"</span>, &amp;n);</span><br><span class="line">    n++;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Then the value of n in func(): %d\n"</span>, n);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"The value of n in main(): %d\n"</span>, n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"The address of n in main(): 0x%x\n"</span>, &amp;n);</span><br><span class="line">    func(n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Then the value of n in main(): %d\n"</span>, n);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>下边是可能的输出：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">The value of n in main(): 0</span><br><span class="line">The address of n in main(): 0x61fe1c</span><br><span class="line">The value of n in func(): 0</span><br><span class="line">The address of n in func(): 0x61fdf0</span><br><span class="line">Then the value of n in func(): 1</span><br><span class="line">Then the value of n in main(): 0</span><br></pre></td></tr></tbody></table></figure>
-
-<p>第二行第四行说明，<code>main()</code> 中的实参 n 与 <code>func()</code> 中的形参 n 存储在内存的不同位置，不是同一个变量。第五第六行说明，对形参 n 的操作，不会影响实参 n。</p>
-<h2 id="指针传递"><a href="#指针传递" class="headerlink" title="指针传递"></a>指针传递</h2><p><strong>指针传递</strong>也就是传参时不直接传某个参数的值，而是传它的地址。把这个地址作为实参，而形参又是复制实参而来的，所以形参也是原来参数的地址，这样再对形参解除引用，实际上就是对同一内存的值进行操作，所以当然在自定函数中的操作会在主函数中反映出来，请看下边的代码 2：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// 指针传递 (C++代码)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"The value of n(*p) in func(): "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of n(p) in func(): "</span> &lt;&lt; p &lt;&lt; endl;</span><br><span class="line">    (*p)++;</span><br><span class="line">    cout &lt;&lt; <span class="string">"Then the value of n(*p) in func(): "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">0</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The value of n in main(): "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of n in main(): "</span> &lt;&lt; &amp;n &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(&amp;n); <span class="comment">// 把想要传递的参数的地址作为实参传入</span></span><br><span class="line">    cout &lt;&lt; <span class="string">"Then the value of n in main(): "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// 指针传递 (C代码)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">func</span><span class="params">(<span class="type">int</span> *p)</span></span><br><span class="line">{</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"The value of n(*p) in func(): %d\n"</span>, *p);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"The address of n(p) in func(): 0x%x\n"</span>, p);</span><br><span class="line">    (*p)++;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Then the value of n(*p) in func(): %d\n"</span>, *p);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"The value of n in main(): %d\n"</span>, n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"The address of n in main(): 0x%x\n"</span>, &amp;n);</span><br><span class="line">    func(&amp;n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Then the value of n in main(): %d\n"</span>, n);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>下边是可能的输出：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">The value of n in main(): 0</span><br><span class="line">The address of n in main(): 0x61fe1c</span><br><span class="line">The value of n(*p) in func(): 0</span><br><span class="line">The address of n(p) in func(): 0x61fe1c</span><br><span class="line">Then the value of n(*p) in func(): 1</span><br><span class="line">Then the value of n in main(): 1</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这实际上就是 <a href="https://blocklune.github.io/posts/50c16b14.html#%E5%88%86%E6%9E%90%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">《一个有关指针传参的问题》- 分析及解决分案</a> 中的代码 2 的思路。只不过这里我们是对 <code>int</code> 类型的普通变量操作，所以函数接受的参数类型是 <code>int*</code>，而在那篇文章中是要对 <code>int*</code> 类型的变量操作，所以自定函数接受的参数类型变成了 <code>int**</code>。</p>
-<h2 id="引用传递"><a href="#引用传递" class="headerlink" title="引用传递"></a>引用传递</h2>
-
-<article class="message message-immersive is-warning">
-<div class="message-body">
-<i class="fas fa-exclamation-triangle mr-2"></i>
-注意引用传递是 C++ 的特性，C 没有这个特性。
-</div>
-</article>
-
-
-<p><strong>引用传递</strong>相当于给实参取了个别名，对形参的操作会同步到实参那边去，还是来看下边的代码 3 吧：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// 引用传递 (C++代码)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> &amp;n2)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"The value of n2 in func(): "</span> &lt;&lt; n2 &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of n2 in func(): "</span> &lt;&lt; &amp;n2 &lt;&lt; endl;</span><br><span class="line">    n2++;</span><br><span class="line">    cout &lt;&lt; <span class="string">"Then the value of n2 in func(): "</span> &lt;&lt; n2 &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n1 = <span class="number">0</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The value of n1 in main(): "</span> &lt;&lt; n1 &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of n1 in main(): "</span> &lt;&lt; &amp;n1 &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(n1);</span><br><span class="line">    cout &lt;&lt; <span class="string">"Then the value of n1 in main(): "</span> &lt;&lt; n1 &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>下边是可能的输出：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">The value of n1 in main(): 0</span><br><span class="line">The address of n1 in main(): 0x61fe1c</span><br><span class="line">The value of n2 in func(): 0</span><br><span class="line">The address of n2 in func(): 0x61fe1c</span><br><span class="line">Then the value of n2 in func(): 1</span><br><span class="line">Then the value of n1 in main(): 1</span><br></pre></td></tr></tbody></table></figure>
-
-<p>类似地，<code>int</code> 类型的引用类型是 <code>int&amp;</code>，<code>int*</code> 的引用类型是 <code>int*&amp;</code>。</p>
-<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><ul>
-<li><p><a href="https://www.jianshu.com/p/2b5594b876ef">C++ 值传递、指针传递、引用传递 - 简书 (jianshu.com)</a></p>
-</li>
-<li><p><a href="https://www.cnblogs.com/dingxiaoqiang/p/8012578.html">C++ 值传递、指针传递、引用传递详解 - zqlucky - 博客园 (cnblogs.com)</a></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-        <tag>pass by pointer</tag>
-        <tag>pass by value</tag>
-        <tag>pass by reference</tag>
       </tags>
   </entry>
   <entry>

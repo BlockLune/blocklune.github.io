@@ -22,30 +22,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blocklune.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="一维数组还是比较容易理解的，但是二维数组，我始终没弄清楚这玩意儿是按照什么规则从二维的样子转成一维然后存起来的，也因此常常犯下下标写反了的错误。我觉得是时候详细地理一理这玩意儿到底是个啥了…">
+    <meta name="description" content="2023 年 1 月 12 日更新： 找到了方便地改变 Windows 中终端默认编码的方法，所以原来的改变 C&#x2F;C++ 文件默认编码的方法可以淘汰了。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二维数组到底是啥啊...">
-<meta property="og:url" content="https://blocklune.github.io/posts/57fd79a.html">
+<meta property="og:title" content="VS Code 中文乱码问题">
+<meta property="og:url" content="https://blocklune.github.io/posts/ca05bed5.html">
 <meta property="og:site_name" content="Fish Pond">
-<meta property="og:description" content="一维数组还是比较容易理解的，但是二维数组，我始终没弄清楚这玩意儿是按照什么规则从二维的样子转成一维然后存起来的，也因此常常犯下下标写反了的错误。我觉得是时候详细地理一理这玩意儿到底是个啥了…">
+<meta property="og:description" content="2023 年 1 月 12 日更新： 找到了方便地改变 Windows 中终端默认编码的方法，所以原来的改变 C&#x2F;C++ 文件默认编码的方法可以淘汰了。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-11-16T12:28:15.000Z">
+<meta property="article:published_time" content="2022-10-13T11:33:49.000Z">
 <meta property="article:modified_time" content="2023-04-13T01:38:46.824Z">
 <meta property="article:author" content="BlockLune">
 <meta property="article:tag" content="C&#x2F;C++">
-<meta property="article:tag" content="Pointer">
-<meta property="article:tag" content="Array">
+<meta property="article:tag" content="VS Code">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://blocklune.github.io/posts/57fd79a.html">
+<link rel="canonical" href="https://blocklune.github.io/posts/ca05bed5.html">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blocklune.github.io/posts/57fd79a.html","path":"posts/57fd79a.html","title":"二维数组到底是啥啊..."}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blocklune.github.io/posts/ca05bed5.html","path":"posts/ca05bed5.html","title":"VS Code 中文乱码问题"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>二维数组到底是啥啊... | Fish Pond</title>
+<title>VS Code 中文乱码问题 | Fish Pond</title>
   
 
 
@@ -146,7 +145,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%8E%E4%B9%88%E8%BD%AC%E6%88%90%E4%BA%86%E4%B8%80%E7%BB%B4%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">怎么转成了一维？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B5%8B%E5%88%9D%E5%80%BC%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">赋初值的一些问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8%E6%8C%87%E5%90%91%E6%95%B0%E7%BB%84%E7%9A%84%E6%8C%87%E9%92%88%EF%BC%88%E6%95%B0%E7%BB%84%E6%8C%87%E9%92%88%EF%BC%89%E6%9D%A5%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%85%B6%E4%B8%AD%E4%B8%80%E7%BB%B4%E5%8F%AF%E4%BB%A5%E5%8A%A8%E6%80%81%E8%B0%83%E6%95%B4%E7%9A%84%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">用指向数组的指针（数组指针）来实现一个其中一维可以动态调整的二维数组？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%BD%E4%B8%8D%E8%83%BD%E7%94%A8-int-p-%E6%9D%A5%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%A4%E4%B8%AA%E7%BB%B4%E5%BA%A6%E9%83%BD%E8%83%BD%E5%8F%98%E5%8C%96%E7%9A%84%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%EF%BC%9F"><span class="nav-number">4.</span> <span class="nav-text">能不能用 int** p 来创建一个两个维度都能变化的二维数组？</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">注意：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E8%BF%87%E7%A8%8B"><span class="nav-number"></span> <span class="nav-text">解决过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%96%B9%E5%90%91%EF%BC%9A%E6%9B%B4%E6%94%B9%E7%BB%88%E7%AB%AF%E9%BB%98%E8%AE%A4%E7%BC%96%E7%A0%81"><span class="nav-number"></span> <span class="nav-text">第一个方向：更改终端默认编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E4%B8%AA%E6%96%B9%E5%90%91%EF%BC%9A%E6%9B%B4%E6%94%B9-VS-Code-%E4%B8%AD%E7%9A%84-C-C-%E6%96%87%E4%BB%B6%E7%9A%84%E7%BC%96%E7%A0%81"><span class="nav-number"></span> <span class="nav-text">第二个方向：更改 VS Code 中的 C&#x2F;C++ 文件的编码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number"></span> <span class="nav-text">参考资料</span></a></div>
         </div>
         <!--/noindex-->
 
@@ -222,7 +221,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://blocklune.github.io/posts/57fd79a.html">
+    <link itemprop="mainEntityOfPage" href="https://blocklune.github.io/posts/ca05bed5.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/waifu.png">
@@ -235,12 +234,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="二维数组到底是啥啊... | Fish Pond">
+      <meta itemprop="name" content="VS Code 中文乱码问题 | Fish Pond">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          二维数组到底是啥啊...
+          VS Code 中文乱码问题
         </h1>
 
         <div class="post-meta-container">
@@ -251,7 +250,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2022-11-16 20:28:15" itemprop="dateCreated datePublished" datetime="2022-11-16T20:28:15+08:00">2022-11-16</time>
+      <time title="Created: 2022-10-13 19:33:49" itemprop="dateCreated datePublished" datetime="2022-10-13T19:33:49+08:00">2022-10-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -270,11 +269,7 @@
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/cs/languages/" itemprop="url" rel="index"><span itemprop="name">Languages</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/cs/languages/c-cpp/" itemprop="url" rel="index"><span itemprop="name">C & Cpp</span></a>
+          <a href="/categories/cs/tools/" itemprop="url" rel="index"><span itemprop="name">Tools</span></a>
         </span>
     </span>
 
@@ -288,25 +283,47 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>一维数组还是比较容易理解的，但是二维数组，我始终没弄清楚这玩意儿是按照什么规则从二维的样子转成一维然后存起来的，也因此常常犯下下标写反了的错误。我觉得是时候详细地理一理这玩意儿到底是个啥了…</p>
+        <p><strong>2023 年 1 月 12 日更新：</strong> 找到了方便地改变 Windows 中终端默认编码的方法，所以原来的改变 C/C++ 文件默认编码的方法可以淘汰了。</p>
 <span id="more"></span>
 
-<h2 id="怎么转成了一维？"><a href="#怎么转成了一维？" class="headerlink" title="怎么转成了一维？"></a>怎么转成了一维？</h2><p>要知道二维数组到底是怎么转成了一维存在内存里，或者说，我到底是应该从前往后（前面的一个数字先不动，先让后边的数字动）读这个数组，还是从后往前（后面的一个数字先不动，先让前面的数字动）读这个数组，其实方法很简单 —— 我们只要把数组里每个元素的地址输出来就行了。比如下边这串代码：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> a[<span class="number">2</span>][<span class="number">3</span>] = {<span class="number">0</span>};</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">        {</span><br><span class="line">            cout &lt;&lt; <span class="string">"&amp;a["</span> &lt;&lt; i &lt;&lt; <span class="string">"]"</span></span><br><span class="line">                 &lt;&lt; <span class="string">"["</span> &lt;&lt; j &lt;&lt; <span class="string">"] = "</span> &lt;&lt; &amp;a[i][j] &lt;&lt; <span class="string">" "</span> &lt;&lt; endl;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>现在的新办法是：</p>
+<p>打开 “控制面板 - 时钟和区域 - 区域 - 管理 - 更改系统区域设置 (C)…”</p>
+<p>勾选 “Beta 版：使用 Unicode UTF-8 提供全球语言支持 (U)”</p>
+<p>确定，重启电脑。</p>
+<p>打开 CMD 测试一下，输入 <code>chcp</code> 可以发现已经变成了 <code>65001</code>，说明成功了。</p>
+<p>方法来源：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44285445/article/details/112325994">《Git Bash 中文显示乱码，options 修改为 zh_CN 和 utf-8 还是不行怎么办？》</a></p>
+<div class="note danger no-icon"><h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><p>该方法全局更改 Windows 系统的默认编码，可能引起某些软件运行异常。</p>
+</div>
 
-<p>可能的输出如下：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&amp;a[0][0] = 0x61fe00</span><br><span class="line">&amp;a[0][1] = 0x61fe04</span><br><span class="line">&amp;a[0][2] = 0x61fe08</span><br><span class="line">&amp;a[1][0] = 0x61fe0c</span><br><span class="line">&amp;a[1][1] = 0x61fe10</span><br><span class="line">&amp;a[1][2] = 0x61fe14</span><br></pre></td></tr></tbody></table></figure>
+<p><strong>以下是原来的文章</strong></p>
+<p>开门见山，我最后采用的解决方案是对 C/C++ 文件单独设置默认编码。大致的操作方法是，打开 VS Code 的 <code>settings.json</code> 文件，添加如下配置：</p>
+<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">"[cpp]"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"files.encoding"</span><span class="punctuation">:</span> <span class="string">"gbk"</span></span><br><span class="line"><span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">"[c]"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"files.encoding"</span><span class="punctuation">:</span> <span class="string">"gbk"</span></span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
 
-<p>可以看到，正确的读法应该是：<strong>从前往后，前面的保持不动，从最后一个开始变化。</strong></p>
-<p>也就是说，对于 <code>a[2][3]</code> 这样一个数组，应该这么理解：<code>a[2][3]</code> 前面的 <code>[2]</code> 表示这是一个包含两个元素的数组，后面的 <code>[3]</code> 表示前面所说的两个元素每一个都是包含三个元素的数组。</p>
-<h2 id="赋初值的一些问题"><a href="#赋初值的一些问题" class="headerlink" title="赋初值的一些问题"></a>赋初值的一些问题</h2><p>知道了上边的东西，所以我们知道，我们可以写一个类似 <code>int a[][3] = {0,0,0,0,0,0};</code> 的玩意儿，却不能写一个 <code>int a[2][] = {0,0,0,0,0,0}</code> 的玩意儿 —— 相当于第二个方括号里边是告诉了编译器后边这一串数字按几个为一组，由于 <code>{}</code> 中元素个数不足是会往后边自动补零的，所以少了这个每组几个的参数，编译器就不知道你这到底有多少个元素了。</p>
-<h2 id="用指向数组的指针（数组指针）来实现一个其中一维可以动态调整的二维数组？"><a href="#用指向数组的指针（数组指针）来实现一个其中一维可以动态调整的二维数组？" class="headerlink" title="用指向数组的指针（数组指针）来实现一个其中一维可以动态调整的二维数组？"></a>用指向数组的指针（数组指针）来实现一个其中一维可以动态调整的二维数组？</h2><p>类似上边的赋初值时候的问题，这个动态的二维数组的内层，也就是按几个为一组的那一层，必须是已经确定的，例如，我们依然创建一个 2*3 的二维数组，其中前面的 2 是在运行时确定的：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">2</span>;</span><br><span class="line">    <span class="built_in">int</span>(*p)[<span class="number">3</span>] = <span class="keyword">new</span> <span class="type">int</span>[n][<span class="number">3</span>];</span><br><span class="line">    <span class="type">int</span> now = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">        {</span><br><span class="line">            p[i][j] = now;</span><br><span class="line">            now++;</span><br><span class="line">        }</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">            cout &lt;&lt; p[i][j] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>具体的操作请参见原文：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_45538473/article/details/107258234">《VSCODE C 语言终端输出中文乱码编码设置》</a></p>
+<h2 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h2><p>复盘一下解决这个问题的过程。</p>
+<p>首先了解到的是 VS Code 中文乱码的根本原因 ——VS Code 默认的编码格式是 UTF-8 （这一点可在 VS Code 右下角看到），而 VS Code 调用的终端是 CMD，默认的编码格式是 gbk。所以解决方案就是两个方向：要么是更改终端的默认编码，从默认的 gbk 转为 utf8；要么就是更改 VS Code 中的 C/C++ 文件的编码。</p>
+<p><strong>2022/10/26 更新：</strong></p>
+<p>看到一个有意思的科普视频，贴在这里，可以看看乱码到底是如何产生的。</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1cB4y177QR/">锟斤拷 �⊠ 是怎样炼成的 —— 中文显示 “⼊” 门指南【柴知道】</a></p>
+<h3 id="第一个方向：更改终端默认编码"><a href="#第一个方向：更改终端默认编码" class="headerlink" title="第一个方向：更改终端默认编码"></a>第一个方向：更改终端默认编码</h3><p>了解到更改 CMD 编码为 utf8 的命令如下：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chcp 65001</span><br></pre></td></tr></tbody></table></figure>
 
-<p>输出结果如下:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1 2 3</span><br><span class="line">4 5 6</span><br></pre></td></tr></tbody></table></figure>
+<p>顺便一提，查看当前编码的命令为：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chcp</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="能不能用-int-p-来创建一个两个维度都能变化的二维数组？"><a href="#能不能用-int-p-来创建一个两个维度都能变化的二维数组？" class="headerlink" title="能不能用 int** p 来创建一个两个维度都能变化的二维数组？"></a>能不能用 int** p 来创建一个两个维度都能变化的二维数组？</h2><p>不知道啊就是说…</p>
+<p><code>chcp 65001</code> 这串命令的意思就是更改代码页为 65001，也就是用 utf8 编码。</p>
+<p>这串命令不是永久生效的，所以每次都要输入，比较麻烦。网上也有一些解决方案，比如通过修改注册表每次都自动运行一下上边的命令（<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f40e494dc01d">《修改 Windows10 命令终端 cmd 的编码为 UTF-8》</a>），或者是配置 VS Code 让其自动输入的（<a target="_blank" rel="noopener" href="https://blog.csdn.net/lzyws739307453/article/details/89823900">《永久解决 VS Code 终端中文乱码问题》</a>），可以去看看。</p>
+<h3 id="第二个方向：更改-VS-Code-中的-C-C-文件的编码"><a href="#第二个方向：更改-VS-Code-中的-C-C-文件的编码" class="headerlink" title="第二个方向：更改 VS Code 中的 C/C++ 文件的编码"></a>第二个方向：更改 VS Code 中的 C/C++ 文件的编码</h3><p>最初这个方法我只是想临时解决一下，就比较简单。点一下右下角的 UTF-8，选择 <code>通过编码重新打开</code>，选择 gbk 就行了。但这样只有一次，然后就想看看有没有永久的方法，便看到了上边的文章。</p>
+<p>顺便一提，这里可能还要把 VS Code 设置中的自动猜测编码功能打开，具体操作如下：</p>
+<ol>
+<li>使用 <code>Ctrl + ,</code> 快捷键打开设置；</li>
+<li>在搜索框输入 <code>encoding</code> ，找到 <code>Files:Auto Guess Encoding</code>，勾上它。</li>
+</ol>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_45538473/article/details/107258234">《VSCODE C 语言终端输出中文乱码编码设置》</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f40e494dc01d">《修改 Windows10 命令终端 cmd 的编码为 UTF-8》</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/lzyws739307453/article/details/89823900">《永久解决 VS Code 终端中文乱码问题》</a></li>
+</ul>
 
     </div>
 
@@ -334,21 +351,20 @@
 
           <div class="post-tags">
               <a href="/tags/c-c/" rel="tag"># C/C++</a>
-              <a href="/tags/pointer/" rel="tag"># Pointer</a>
-              <a href="/tags/array/" rel="tag"># Array</a>
+              <a href="/tags/vs-code/" rel="tag"># VS Code</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/posts/1ef1e20b.html" rel="prev" title="当形参、实参是指针变量...">
-                  <i class="fa fa-chevron-left"></i> 当形参、实参是指针变量...
+                <a href="/posts/13d09bbb.html" rel="prev" title="C 语言中与 (&&) 和或 (||) 运算符的短路运算">
+                  <i class="fa fa-chevron-left"></i> C 语言中与 (&&) 和或 (||) 运算符的短路运算
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/posts/7ec6ba38.html" rel="next" title="C++ const 用法汇总">
-                  C++ const 用法汇总 <i class="fa fa-chevron-right"></i>
+                <a href="/posts/f17b3e8b.html" rel="next" title="挖老婆矿！—— NovelAI 初试">
+                  挖老婆矿！—— NovelAI 初试 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -424,7 +440,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"BlockLune","repo":"blocklune.github.io","client_id":"f0d9ff2c460a605d4f3f","client_secret":"9808616eda1afe0741c036b5d5670a490b68f6ef","admin_user":"BlockLune","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"78e4add91d4204ca9704838202fbac05"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"BlockLune","repo":"blocklune.github.io","client_id":"f0d9ff2c460a605d4f3f","client_secret":"9808616eda1afe0741c036b5d5670a490b68f6ef","admin_user":"BlockLune","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"a0a888c43b275f050117cafc3f38dc3b"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>

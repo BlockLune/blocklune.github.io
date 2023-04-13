@@ -9,7 +9,7 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Tue, 11 Apr 2023 15:43:08 GMT</pubDate>
+    <pubDate>Thu, 13 Apr 2023 01:38:46 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -129,8 +129,6 @@
       
       <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
       
-      
-      <category domain="https://blocklune.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
       
       <category domain="https://blocklune.github.io/tags/linux/">Linux</category>
       
@@ -674,6 +672,31 @@
     </item>
     
     <item>
+      <title>VS Code 中文乱码问题</title>
+      <link>https://blocklune.github.io/posts/ca05bed5.html</link>
+      <guid>https://blocklune.github.io/posts/ca05bed5.html</guid>
+      <pubDate>Thu, 13 Oct 2022 11:33:49 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;strong&gt;2023 年 1 月 12 日更新：&lt;/strong&gt; 找到了方便地改变 Windows 中终端默认编码的方法，所以原来的改变 C/C++ 文件默认编码的方法可以淘汰了。&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
+      
+      
+      <category domain="https://blocklune.github.io/tags/c-c/">C/C++</category>
+      
+      <category domain="https://blocklune.github.io/tags/vs-code/">VS Code</category>
+      
+      
+      <comments>https://blocklune.github.io/posts/ca05bed5.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
       <title>C 语言中与 (&amp;&amp;) 和或 (||) 运算符的短路运算</title>
       <link>https://blocklune.github.io/posts/13d09bbb.html</link>
       <guid>https://blocklune.github.io/posts/13d09bbb.html</guid>
@@ -772,6 +795,27 @@
       
       
       <comments>https://blocklune.github.io/posts/848a7d31.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>大一新生的高数预备知识学习笔记</title>
+      <link>https://blocklune.github.io/posts/33435544.html</link>
+      <guid>https://blocklune.github.io/posts/33435544.html</guid>
+      <pubDate>Thu, 15 Sep 2022 01:47:52 GMT</pubDate>
+      
+      <description>&lt;p&gt;这篇文章主要是笔者从&lt;a href=&quot;https://space.bilibili.com/66607740&quot;&gt;宋浩老师&lt;/a&gt;处学习高数高数知识的课堂笔记，也加入了一些笔者自己搜到的东西。具体课程你可以看这里：&lt;a href=&quot;https://www.bilibili.com/video/BV1YU4y1e7Q9/&quot;&gt;大一新生的高数预备知识简介&lt;/a&gt;.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://blocklune.github.io/categories/mathematics/">Mathematics</category>
+      
+      
+      <category domain="https://blocklune.github.io/tags/mathematics/">Mathematics</category>
+      
+      
+      <comments>https://blocklune.github.io/posts/33435544.html#disqus_thread</comments>
       
     </item>
     
