@@ -1602,6 +1602,9 @@
 <p>To push your local changes to your remote repo, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git push &lt;server_name&gt; &lt;remote_branch&gt;</span><br><span class="line">$ git push &lt;server_name&gt; &lt;local_branch&gt;:&lt;remote_branch&gt;</span><br></pre></td></tr></tbody></table></figure>
 
+<p>To make the local branch track the remote branch, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git push -u &lt;server_name&gt; &lt;remote_branch&gt;</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ git push --set-upstream &lt;server_name&gt; &lt;remote_branch&gt;</span><br></pre></td></tr></tbody></table></figure>
+
 <p>To check your remote repo, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git remote show &lt;server_name&gt;</span><br></pre></td></tr></tbody></table></figure>
 
@@ -1620,23 +1623,50 @@
 <p>Learn more on <em><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">Connecting to GitHub with SSH - GitHub Docs</a></em>.</p>
 </div>
 
-<h2 id="BRANCH"><a href="#BRANCH" class="headerlink" title="BRANCH"></a>BRANCH</h2><p>To list all the branches, run:</p>
+<h2 id="BRANCH"><a href="#BRANCH" class="headerlink" title="BRANCH"></a>BRANCH</h2><p>To list all the local branches, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git branch</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To list all the local and the remote branches, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git branch -a</span><br></pre></td></tr></tbody></table></figure>
 
 <p>To show the last commits of every branch, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git branch -v</span><br></pre></td></tr></tbody></table></figure>
 
-<p>To create a new branch, run:</p>
+<p>The local branch is called the <strong>tracking branch</strong>. The corresponding branch on the remote server is called the  <strong>upstream branch</strong>.</p>
+<p>To track a remote branch, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git checkout --track &lt;server_name&gt;/&lt;branch&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>It is equivalent to:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git checkout -b &lt;branch&gt;</span><br><span class="line"></span><br><span class="line">$ git branch -u &lt;server_name&gt;/&lt;branch&gt;</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ git branch --set-upstream &lt;server_name&gt;/&lt;branch&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To stop tracking, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git branch --unset-upstream &lt;branch&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To show the correspondence, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git branch -vv</span><br></pre></td></tr></tbody></table></figure>
+
+
+<p>To create a new local branch, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git branch &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
 
-<p>To checkout to another branch, run:</p>
+<p>To checkout to another local branch, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git checkout &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
 
-<p>You can create a new branch and check out to it with one command:</p>
+<p>You can create a new local branch and check out to it with one command:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git checkout -b &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
 
-<p>To delete a branch, run:</p>
+<p>To rename a local branch, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git branch -m &lt;new_branch_name&gt;</span><br><span class="line">$ git branch -m &lt;old_branch_name&gt; &lt;new_branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To delete a local branch, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git branch -d &lt;branch_name&gt;</span><br><span class="line">$ git branch -D &lt;branch_name&gt;  <span class="comment"># force</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>To delete a remote branch, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git push origin --delete &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<div class="note "><p>There are no direct commands to create a new remote repo or rename a remote repo. But you can rename a remote repo like this:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git pull origin &lt;old_branch_name&gt;</span><br><span class="line">$ git branch -m &lt;old_branch_name&gt; &lt;new_branch_name&gt;</span><br><span class="line">$ git push -u origin &lt;new_branch_name&gt;</span><br><span class="line">$ git push origin --delete &lt;old_branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+</div>
 
 <p>To merge the other branch to this one, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git merge &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
