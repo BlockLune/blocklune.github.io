@@ -9,7 +9,7 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Thu, 13 Apr 2023 01:45:49 GMT</pubDate>
+    <pubDate>Fri, 14 Apr 2023 13:54:10 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -142,12 +142,12 @@
     </item>
     
     <item>
-      <title>Simple git tutorial</title>
+      <title>Simple Git tutorial</title>
       <link>https://blocklune.github.io/posts/9363e311.html</link>
       <guid>https://blocklune.github.io/posts/9363e311.html</guid>
       <pubDate>Sat, 11 Mar 2023 09:55:55 GMT</pubDate>
       
-      <description>&lt;p&gt;This is a simple tutorial of git, also including some info about GitHub.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is a simple tutorial of Git, also including some info about GitHub.&lt;/p&gt;</description>
       
       
       
@@ -159,7 +159,7 @@
       
       <category domain="https://blocklune.github.io/tags/version-control/">Version control</category>
       
-      <category domain="https://blocklune.github.io/tags/git/">git</category>
+      <category domain="https://blocklune.github.io/tags/git/">Git</category>
       
       <category domain="https://blocklune.github.io/tags/github/">GitHub</category>
       

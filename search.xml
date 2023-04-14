@@ -1480,38 +1480,174 @@
       </tags>
   </entry>
   <entry>
-    <title>Simple git tutorial</title>
+    <title>Simple Git tutorial</title>
     <url>/posts/9363e311.html</url>
-    <content><![CDATA[<p>This is a simple tutorial of git, also including some info about GitHub.</p>
+    <content><![CDATA[<p>This is a simple tutorial of Git, also including some info about GitHub.</p>
 <span id="more"></span>
 
-<p>Before we start, there are two questions we must know. What is git? &amp;&amp; What is GitHub?</p>
-<blockquote>
-<p>Git is a free and open-source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</p>
-</blockquote>
-<p>This is an introduction to git on <a href="https://git-scm.com/">its official website</a>. Simply speaking, git is a version control software.<br>And what is GitHub? GitHub is a website, a platform and a community, which provides developers place to store and share their codes. Since it use git as its version control software, it got a name “GitHub”. Here is <a href="https://github.com/">GitHub</a>.</p>
-<h2 id="Creating-a-GitHub-account"><a href="#Creating-a-GitHub-account" class="headerlink" title="Creating a GitHub account"></a>Creating a GitHub account</h2><p>The official tutorial for creating a GitHub account is here: <em><a href="https://docs.github.com/en/get-started/signing-up-for-GitHub/signing-up-for-a-new-GitHub-account">Signing up for a new GitHub account - GitHub Docs</a></em></p>
-<h2 id="Downloading-and-installing-git"><a href="#Downloading-and-installing-git" class="headerlink" title="Downloading and installing git"></a>Downloading and installing git</h2><p>You can download git from <a href="https://git-scm.com/downloads">here</a>.</p>
-<p>For detailed installing steps in windows, this maybe helpful:<br><em><a href="https://blog.csdn.net/mukes/article/details/115693833">Git 详细安装教程（详解 Git 安装过程的每一个步骤）</a></em></p>
-<h2 id="Configuring-git"><a href="#Configuring-git" class="headerlink" title="Configuring git"></a>Configuring git</h2><p>To configure user info for all local repositories:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">"&lt;your_name&gt;"</span></span><br><span class="line">git config --global user.email <span class="string">"&lt;your_email@example.com&gt;"</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="BRIEF"><a href="#BRIEF" class="headerlink" title="BRIEF"></a>BRIEF</h2><p>You may have learnt Git and GitHub before, and also may have confused them because their similar names. What are these two things on earth?</p>
+<p><img data-src="https://software.3metas.com/wp-content/uploads/2017/06/git.png" alt="Git (This picture is from the Internet)"></p>
+<p><img data-src="https://kinsta.com/wp-content/uploads/2018/04/what-is-github-1-1.png" alt="GitHub (This picture is from the Internet)"></p>
+<p>In short, <a href="https://git-scm.com/">Git</a> is a version control system (VCS), which enables you to create a repository of your codes, to track changes in your project and to manage your files efficiently. <a href="https://github.com/">GitHub</a> is a platform used to host remote Git repositories for collaboration and sharing projects.</p>
+<p>In this post, you will learn the basic usage of Git and GitHub.</p>
+<h2 id="CREATING-A-GITHUB-ACCOUNT"><a href="#CREATING-A-GITHUB-ACCOUNT" class="headerlink" title="CREATING A GITHUB ACCOUNT"></a>CREATING A GITHUB ACCOUNT</h2><p>See <em><a href="https://docs.github.com/en/get-started/signing-up-for-GitHub/signing-up-for-a-new-GitHub-accountt">Signing up for a new GitHub account - GitHub Docs</a></em></p>
+<h2 id="DOWNLOADING-AND-INSTALLING-GIT"><a href="#DOWNLOADING-AND-INSTALLING-GIT" class="headerlink" title="DOWNLOADING AND INSTALLING GIT"></a>DOWNLOADING AND INSTALLING GIT</h2><p>Many operations in Git run locally. Before using Git, you need to install it in your local environment.</p>
+<p>Download Git from the official website:</p>
+<p><em><a href="https://git-scm.com/downloads">Git - Downloads (git-scm.com)</a></em></p>
+<h2 id="CONFIGURING"><a href="#CONFIGURING" class="headerlink" title="CONFIGURING"></a>CONFIGURING</h2><p>To configure user info for all local repositories:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"&lt;your_name&gt;"</span></span><br><span class="line">$ git config --global user.email <span class="string">"&lt;your_email@example.com&gt;"</span></span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="Connecting-to-GitHub"><a href="#Connecting-to-GitHub" class="headerlink" title="Connecting to GitHub"></a>Connecting to GitHub</h2><p>Open your git bash, and run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">"&lt;your_email@example.com&gt;"</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="GETTING-HELP"><a href="#GETTING-HELP" class="headerlink" title="GETTING HELP"></a>GETTING HELP</h2><p>To get help when using Git, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git <span class="built_in">help</span> &lt;verb&gt;</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ git &lt;verb&gt; --<span class="built_in">help</span></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ man git-&lt;verb&gt;</span><br></pre></td></tr></tbody></table></figure>
 
-<p>For old system, you may run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">"&lt;your_email@example.com&gt;"</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="GETTING-A-GIT-REPOSITORY"><a href="#GETTING-A-GIT-REPOSITORY" class="headerlink" title="GETTING A GIT REPOSITORY"></a>GETTING A GIT REPOSITORY</h2><h3 id="CREATING-ONE-IN-AN-EXISTING-DIRECTORY"><a href="#CREATING-ONE-IN-AN-EXISTING-DIRECTORY" class="headerlink" title="CREATING ONE IN AN EXISTING DIRECTORY"></a>CREATING ONE IN AN EXISTING DIRECTORY</h3><p>To create a new Git repo in the current directory, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></tbody></table></figure>
+
+<p>This command will create a directory called <code>.git</code>.</p>
+<h3 id="CLONING-ONE-FROM-AN-EXISTING-REPO"><a href="#CLONING-ONE-FROM-AN-EXISTING-REPO" class="headerlink" title="CLONING ONE FROM AN EXISTING REPO"></a>CLONING ONE FROM AN EXISTING REPO</h3><p>To clone an existing repo from a remote server. Run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> &lt;url&gt; &lt;local_directory_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li><code>&lt;url&gt;</code> can be <code>https://</code>, <code>git://</code> and <code>user@server:path/to/repo.git</code> etc.</li>
+<li><code>&lt;local_directory_name&gt;</code> is optional.</li>
+</ul>
+<p>If you want to specify a branch when cloning, you can use <code>-b</code> option:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> -b &lt;branch&gt; &lt;url&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="TRACKING-FILES"><a href="#TRACKING-FILES" class="headerlink" title="TRACKING FILES"></a>TRACKING FILES</h2><p>To add file(s) to your tracked list, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git add &lt;directory&gt;/&lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>This command tells Git to track the file(s) you specified and put them onto the stage. If you mistakenly tracked wrong file(s) (like a lot of log files), run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git <span class="built_in">rm</span> &lt;file&gt;     <span class="comment"># only if these file are newly added</span></span><br><span class="line">$ git <span class="built_in">rm</span> -f &lt;file&gt;  <span class="comment"># to the files in the stage before, -f(force) option is needed</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>git rm</code> command will not only stop tracking the files you specified, but also remove them. If you only want to stop tracking them, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git <span class="built_in">rm</span> --cached &lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<div class="note "><p>There is another command very similar to <code>git rm --cached &lt;file&gt;</code>: <code>git reset HEAD &lt;file&gt;</code>. Both of them will remove the file from the stage. But the former one will also remove the file from the tracked list (stop tracking it), while the latter will keep the file there.</p>
+</div>
+
+<div class="note danger no-icon"><p><code>git reset</code> is a dangerous command, especially when a <code>--hard</code> flag is added.</p>
+</div>
+
+<h2 id="CHECKING-THE-STATUS"><a href="#CHECKING-THE-STATUS" class="headerlink" title="CHECKING THE STATUS"></a>CHECKING THE STATUS</h2><p>To check the status of the files in the repo, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git status</span><br><span class="line"></span><br><span class="line"><span class="comment"># a short version</span></span><br><span class="line">$ git status -s</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ git status --short</span><br></pre></td></tr></tbody></table></figure>
+
+<p>In the short version, there are two columns in the front of every line. The left column shows the status of the stage. The right column shows the status of the working area. The statuses are showed like this:</p>
+<ul>
+<li><code>??</code>: untracked file</li>
+<li><code>A</code>: file newly added to the stage</li>
+<li><code>M</code>: modified file</li>
+</ul>
+<p>To check the modifications in your files, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># to show the files haven't been staged</span></span><br><span class="line">$ git diff</span><br><span class="line"></span><br><span class="line"><span class="comment"># to show the files have been staged</span></span><br><span class="line">$ git diff --staged</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ git diff --cached</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="COMMITTING"><a href="#COMMITTING" class="headerlink" title="COMMITTING"></a>COMMITTING</h2><p>To commit your files, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git commit</span><br></pre></td></tr></tbody></table></figure>
+
+<p>This command will open a editor. You need to edit your commit message here.</p>
+<p>Or, you can simplify this by using <code>-m</code> option:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git commit -m &lt;commit_message&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p><em>Oops, I forgot to add this file!</em> If you meet this issue, you can amend it like this:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git commit -m <span class="string">"a wrong commit message"</span></span><br><span class="line">$ git add &lt;forgotten_file&gt;</span><br><span class="line">$ git commit --amend</span><br></pre></td></tr></tbody></table></figure>
+
+<p>The second commit will <strong>replace</strong> the first commit, as if the first commit never occurred.</p>
+<p>If you are tired of using the stage (<code>git add</code> first,<code>git commit</code> later), you can use <code>-a</code> flag like this to skip it:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git commit -a</span><br></pre></td></tr></tbody></table></figure>
+
+<p>This command is equivalent to these two command bellow:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git add &lt;all_tracked_files_that_have_been_modified&gt;</span><br><span class="line">$ git commit</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="HISTORY"><a href="#HISTORY" class="headerlink" title="HISTORY"></a>HISTORY</h2><p>To review the commit history, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li><p><code>-p</code> or <code>--patch</code> flag make logs output in the patch way.</p>
+</li>
+<li><p><code>-&lt;n&gt;</code> flag to limit the number of logs (e.g. <code>-2</code> only show two latest logs).</p>
+</li>
+<li><p><code>--stat</code> flag shows simple statistics.</p>
+</li>
+<li><p><code>--pretty</code> option provides some different ways to show the history.</p>
+<ul>
+<li><code>--pretty=oneline</code> option make every commit be showed in one line</li>
+<li><code>--pretty=short</code></li>
+<li><code>--pretty=full</code></li>
+<li><code>--pretty=fuller</code></li>
+</ul>
+</li>
+<li><p><code>--graph</code> flag adds some ascii characters to vividly show your history.</p>
+</li>
+</ul>
+<h2 id="UNDO"><a href="#UNDO" class="headerlink" title="UNDO"></a>UNDO</h2><p>To discard changes in working, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git checkout -- &lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>This command will abandon the modifications to the file after your last commit.</p>
+<div class="note danger no-icon"><p>This is a DANGEROUS command. In Git, it’s usually easy to restore the files have been committed, but usually very hard to restore the files haven’t been committed.</p>
+</div>
+
+<h2 id="REMOTE"><a href="#REMOTE" class="headerlink" title="REMOTE"></a>REMOTE</h2><p>To connect your local repo to the remote server, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git remote add &lt;server_name&gt; &lt;server&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>server_name</code> is a short name of your server. Usually we use <code>origin</code>.</p>
+<p>To show all the names, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git remote -v</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To fetch the files in the remote repo, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git fetch &lt;server_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<div class="note "><p>There is a magic called <code>git pull</code>. Usually, it means <code>git fetch</code> and <code>git merge</code>.</p>
+</div>
+
+<p>To push your local changes to your remote repo, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git push &lt;server_name&gt; &lt;remote_branch&gt;</span><br><span class="line">$ git push &lt;server_name&gt; &lt;local_branch&gt;:&lt;remote_branch&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To check your remote repo, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git remote show &lt;server_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To rename your remote repo, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git remote rename &lt;old_server_name&gt; &lt;new_server_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To remove a remote repo, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git remote remove &lt;server_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<div class="note "><p>It’s recommended to connect to GitHub with SSH. You can do it like this:</p>
+<p>Open your Git bash, and run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ ssh-keygen -t ed25519 -C <span class="string">"&lt;your_email@example.com&gt;"</span>      <span class="comment"># for newer system</span></span><br><span class="line">                                                           <span class="comment"># or</span></span><br><span class="line">$ ssh-keygen -t rsa -b 4096 -C <span class="string">"&lt;your_email@example.com&gt;"</span>  <span class="comment"># for older system</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>Go to <a href="https://github.com/settings/profile">Your profile on GitHub</a>. Click <code>SSH and GPG keys</code> on the left. Click <code>New SSH key</code>. Choose a title, and paste all content in <code>~/.ssh/id_ed25519.pub</code>. Then click <code>Add SSH key</code>.</p>
-<p>Learn more from <a href="https://docs.github.com/en/authentication/connecting-to-GitHub-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">here</a>.</p>
-<blockquote>
-<p>Simply explaining what we’ve done. <code>ssh-keygen</code> is a tool that help us create a key(<code>~/.ssh/id_ed25519</code>) and a lock(<code>~/.ssh/id_ed25519.pub</code>). Then, we use the <code>id_ed25519.pub</code> file to lock our repos on GitHub, and leave the <code>id_ed25519</code>, the key, in our PC. We can then avoid repeating login GitHub.</p>
-</blockquote>
-<h2 id="Simple-git-commands"><a href="#Simple-git-commands" class="headerlink" title="Simple git commands"></a>Simple git commands</h2><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Creating a new repo</span></span><br><span class="line">git <span class="built_in">clone</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Checking out a repo</span></span><br><span class="line">git <span class="built_in">clone</span> &lt;username&gt;@&lt;host&gt;:&lt;/path/to/repo&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Connecting to your repo on GitHub</span></span><br><span class="line">git remote add origin &lt;server&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Adding</span></span><br><span class="line">git add &lt;directory&gt;/&lt;file&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Committing</span></span><br><span class="line">git commit -m <span class="string">"&lt;commit_message&gt;"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Pushing</span></span><br><span class="line">git push origin &lt;branch&gt;</span><br></pre></td></tr></tbody></table></figure>
+<p>Simply explaining what we’ve done. <code>ssh-keygen</code> is a tool that help us create a key(<code>~/.ssh/id_ed25519</code>) and a lock(<code>~/.ssh/id_ed25519.pub</code>). Then, we use the <code>id_ed25519.pub</code> file to lock our repos on GitHub, and leave the <code>id_ed25519</code>, the key, in our PC. We can then avoid repeating login GitHub using password.</p>
+<p>Learn more on <em><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">Connecting to GitHub with SSH - GitHub Docs</a></em>.</p>
+</div>
 
-<h2 id="Learn-more"><a href="#Learn-more" class="headerlink" title="Learn more"></a>Learn more</h2><p><em><a href="https://blog.csdn.net/mukes/article/details/115693833">Git 详细安装教程（详解 Git 安装过程的每一个步骤）</a></em></p>
+<h2 id="BRANCH"><a href="#BRANCH" class="headerlink" title="BRANCH"></a>BRANCH</h2><p>To list all the branches, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git branch</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To show the last commits of every branch, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git branch -v</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To create a new branch, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git branch &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To checkout to another branch, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git checkout &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>You can create a new branch and check out to it with one command:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git checkout -b &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To delete a branch, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git branch -d &lt;branch_name&gt;</span><br><span class="line">$ git branch -D &lt;branch_name&gt;  <span class="comment"># force</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>To merge the other branch to this one, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git merge &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>If your current branch is <code>master</code>, this command merge <code>&lt;branch_name&gt;</code> to <code>master</code>.</p>
+<p>To show all the branches that have/haven’t been merged to this branch, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git branch --merged</span><br><span class="line">$ git branch --no-merged</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Learn-more"><a href="#Learn-more" class="headerlink" title="Learn more"></a>Learn more</h2><p><em><a href="https://missing.csail.mit.edu/2020/version-control/">MIT - Missing Semester - Version Control (Git)</a></em></p>
+<p><em><a href="https://git-scm.com/book/en/v2">Pro Git</a></em></p>
 <p><em><a href="http://rogerdudler.github.io/git-guide/index.html">git - the simple guide - no deep shit!</a></em></p>
-<p><em><a href="http://rogerdudler.github.io/git-guide/index.zh.html">git - the simple guide - no deep shit! - zh</a></em></p>
 <p><em><a href="https://training.github.com/">GitHub Training Kit</a></em></p>
 ]]></content>
       <categories>
@@ -1520,7 +1656,7 @@
       </categories>
       <tags>
         <tag>Version control</tag>
-        <tag>git</tag>
+        <tag>Git</tag>
         <tag>GitHub</tag>
       </tags>
   </entry>
