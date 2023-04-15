@@ -1818,6 +1818,90 @@
       </tags>
   </entry>
   <entry>
+    <title>VS Code 的安装与配置基础 C/C++ 开发环境</title>
+    <url>/posts/a7a0ce82.html</url>
+    <content><![CDATA[<p>我以前学习 C++ 的时候，使用的是 DevCpp 。这个软件让我这个初学者比较舒服的点是，我不用太过详细地考虑编译的过程 —— 新建一个 cpp 文件，写一点小程序，按下 F11，程序运行。我不需要管选择编译器啊、配置编译命令啊啥啥的。但是到 VS Code 这边，这都要我自己做了，对于新手并不是那么友好。这里记录一下我配置 VS Code 的 C/C++ 环境的完整过程，希望对你有所帮助。需要注意的是：学习一下基本的编译链接指令还是很有必要的！</p>
+<span id="more"></span>
+
+<h2 id="安装-Visual-Studio-Code"><a href="#安装-Visual-Studio-Code" class="headerlink" title="安装 Visual Studio Code"></a>安装 Visual Studio Code</h2><p>打开 <a href="https://code.visualstudio.com/">VS Code 官网</a>，点击 <code>Download for Windows</code> 按钮（其他平台请选择对应平台的安装包，此处以 Windows 平台为例），等待下载完成。</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xSRlss.png"></p>
+<div class="note "><h4 id="国内-VS-Code-下载速度慢的解决方案"><a href="#国内-VS-Code-下载速度慢的解决方案" class="headerlink" title="国内 VS Code 下载速度慢的解决方案"></a>国内 VS Code 下载速度慢的解决方案</h4><p>此方法来自：<a href="https://zhuanlan.zhihu.com/p/112215618">https://zhuanlan.zhihu.com/p/112215618</a></p>
+<p>在你的下载软件处（我这里是 IDM，你如果是浏览器下载的就去浏览器的下载管理器里找），找到下载地址。将下载地址中的 <code>az764295.vo.msecnd.net</code> 替换为 <code>vscode.cdn.azure.cn</code>，然后取消原任务，用修改过的下载链接新建一个下载。</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xSR8Zq.png" alt="修改前"></p>
+</div>
+
+<p>打开安装包，一路下一步，直到下面这个界面，按照下边的进行选择，直到安装完毕。</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xSWzge.png"></p>
+<h2 id="VS-Code-设置中文"><a href="#VS-Code-设置中文" class="headerlink" title="VS Code 设置中文"></a>VS Code 设置中文</h2><p>打开 VS Code，点击图示左侧第五个图标或使用快捷键 <code>Ctrl+Shift+X</code> 打开 <code>拓展</code> 页面，搜索：<code>Chinese</code>，找到 <code>Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code</code> 这个插件，点击 <code>Install</code> 安装，等待安装完成后按照提示点击右下角 <code>Restart</code> 按钮重启 VS Code。<br><img data-src="https://s1.ax1x.com/2022/09/17/xSf1U0.png"><br><img data-src="https://s1.ax1x.com/2022/09/17/xSfJ8U.png"><br><img data-src="https://s1.ax1x.com/2022/09/17/xSftv4.png"></p>
+<h2 id="安装并检查编译器"><a href="#安装并检查编译器" class="headerlink" title="安装并检查编译器"></a>安装并检查编译器</h2><p>DevCpp 安装的时候也帮我们安装好了编译器，但 VS Code 并没有。所以我们还得自己装一个编译器。这里以 Mingw-w64 为例（参考<a href="https://code.visualstudio.com/docs/languages/cpp#_example-install-mingwx64">官方教程</a>）。</p>
+<p>参考 <a href="https://www.msys2.org/#installation">MSYS2 官网</a>下载安装和安装。</p>
+<div class="note "><h4 id="国内-MSYS2-下载速度慢的解决方案"><a href="#国内-MSYS2-下载速度慢的解决方案" class="headerlink" title="国内 MSYS2 下载速度慢的解决方案"></a>国内 MSYS2 下载速度慢的解决方案</h4><p>在这个按钮上右键，选择<code>复制链接</code>。</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xShuRO.png"></p>
+<p>然后前往 <a href="https://ghproxy.com/">https://ghproxy.com/</a> 这个网站，粘贴上面复制的下载链接，点击下载。</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xShGdI.png"></p>
+</div>
+
+<p>打开安装包，一路默认下一步。耐心等待（国内网络可以！只要耐心等！）直到出现下面的界面：</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xShqfK.png"></p>
+<p>输入下面的命令安装 gcc：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ pacman -S mingw-w64-x86_64-gcc</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xS46nH.png" alt="画横线的是需要自己输入的"></p>
+<p>接下来需要添加环境变量。直接搜索 <code>高级系统设置</code>：</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xS4bHs.png"></p>
+<p>打开后点击环境变量。</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xS4x3T.png"></p>
+<p>添加系统变量。</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xS5VC6.png"></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xS5J8f.png"></p>
+<p>打开 CMD 检查一下是否成功：<br>输入 <code>gcc -v</code>，如果有结果，就安装成功了。</p>
+<h2 id="C-C-扩展的安装"><a href="#C-C-扩展的安装" class="headerlink" title="C/C++ 扩展的安装"></a>C/C++ 扩展的安装</h2><p>按照上面的方法打开扩展，首先是几个 C/C++ 基础扩展，直接搜索 <code>C++</code>。</p>
+<p>第一个：<code>C/C++</code></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xSfhVI.png"></p>
+<p>直接点击安装（我这里截图的时候还没重启，如果按照上述步骤已经安装了中文语言包并重启了 Code，这里的 <code>Install</code> 按钮就会变成 <code>安装</code>）。</p>
+<p>第二个：<code>C/C++ Extension Pack</code></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xSf7RS.png"></p>
+<p>第三个：<code>C/C++ Compile Run</code></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xSfLrj.png"></p>
+<p>这个扩展提供了极其简单的 <code>F6</code> 一键编译运行功能。</p>
+<h2 id="正常运行测试"><a href="#正常运行测试" class="headerlink" title="正常运行测试"></a>正常运行测试</h2><p>新建一个文件夹，就叫 <code>HelloWorld</code> 吧。打开文件夹，右键，选择 <code>通过 Code 打开</code>。新建一个 <code>HelloWorld.cpp</code>，粘贴下面的代码：</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  std::cout &lt;&lt; <span class="string">"Hello world!"</span> &lt;&lt; std::endl;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>Ctrl+S</code> 保存，<code>F6</code> 运行，成功输出结果。</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xS5oPx.png"></p>
+<h2 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h2><p><strong>2022 年 10 月 6 日更新：</strong></p>
+<p>完成上边的步骤之后，你应该可以正常运行程序了。下面的教程是安装调试器以及通过 <code>C/C++ Runner</code> 让调试等工作变得简单。</p>
+<p>首先再次打开 msys2.exe (默认位置是：C:\msys64\msys2.exe)，类似上边安装 gcc ，输入下边的命令安装 gdb。<br>类似的，还需要输入下面的命令安装 gdb:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ pacman -S mingw-w64-x86_64-gdb</span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后在 VS Code 中搜索并安装 <code>C/C++ Runner</code> 插件。</p>
+<div class="note "><h4 id="安装-C-C-Runner-插件时其依赖项-CodeLLDB-无法安装的解决方案"><a href="#安装-C-C-Runner-插件时其依赖项-CodeLLDB-无法安装的解决方案" class="headerlink" title="安装 C/C++ Runner 插件时其依赖项 CodeLLDB 无法安装的解决方案"></a>安装 C/C++ Runner 插件时其依赖项 CodeLLDB 无法安装的解决方案</h4><p>按照右下角的提示手动下载 <code>codelldb-x86_64-windows.vsix</code> 文件。</p>
+<p>在 VS Code 中按下 <code>Ctrl + Shift + P</code>，输入 <code>install</code>，选择<code>从VSIX安装...</code>，选择上边下好的文件，等待安装完成。</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xSTBad.png"></p>
+</div>
+
+<p>安装完成后，左下角点击 <code>Select folder.</code>，选择当前文件夹。</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xSTRsS.png"></p>
+<p>然后按下小齿轮进行编译，按下三角形运行，设置好断点按下小虫子进行 Debug。</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xST4aj.png"></p>
+<h2 id="解决中文乱码问题"><a href="#解决中文乱码问题" class="headerlink" title="解决中文乱码问题"></a>解决中文乱码问题</h2><p><strong>2022 年 10 月 13 日更新：</strong></p>
+<p>参见我的另一篇文章：<a href="https://blocklune.github.io/posts/ca05bed5.html">《VS Code 中文乱码问题》</a></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://zhuanlan.zhihu.com/p/112215618">国内下载 vscode 速度慢问题解决</a></li>
+<li>官方教程：<a href="https://code.visualstudio.com/docs/languages/cpp">C++ programming with Visual Studio Code</a></li>
+<li><a href="https://www.cnblogs.com/zychengzhiit1/p/5776962.html">windows 10 环境下 使用 msys2 + vs code 配置 c++ 的编译环境</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+        <tag>VS Code</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Set up a blog with Hexo</title>
     <url>/posts/4ef0ac98.html</url>
     <content><![CDATA[<p>This is a simple record of my other trial to set up a blog with Hexo. I have built one on GitHub Page before, using Hexo with Icarus theme. This time, I want to try something else. I also cleaned my old blog and selectively migrated some old posts here.</p>
