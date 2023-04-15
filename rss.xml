@@ -9,8 +9,33 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Fri, 14 Apr 2023 16:31:52 GMT</pubDate>
+    <pubDate>Sat, 15 Apr 2023 05:22:19 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Set up a blog with Hexo</title>
+      <link>https://blocklune.github.io/posts/4ef0ac98.html</link>
+      <guid>https://blocklune.github.io/posts/4ef0ac98.html</guid>
+      <pubDate>Sat, 15 Apr 2023 05:16:06 GMT</pubDate>
+      
+      <description>&lt;p&gt;This is a simple record of my other trial to set up a blog with Hexo. I have built one on GitHub Page before, using Hexo with Icarus theme. This time, I want to try something else. I also cleaned my old blog and selectively migrated some old posts here.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/web/">Web</category>
+      
+      
+      <category domain="https://blocklune.github.io/tags/web/">Web</category>
+      
+      <category domain="https://blocklune.github.io/tags/hexo/">Hexo</category>
+      
+      
+      <comments>https://blocklune.github.io/posts/4ef0ac98.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Uses std::cin.ignore() to keep the user typing until the input meets the requirements</title>
@@ -881,6 +906,8 @@
       <category domain="https://blocklune.github.io/categories/cs/web/">Web</category>
       
       
+      <category domain="https://blocklune.github.io/tags/web/">Web</category>
+      
       <category domain="https://blocklune.github.io/tags/vue-js/">Vue.js</category>
       
       <category domain="https://blocklune.github.io/tags/element-ui/">Element UI</category>
@@ -888,8 +915,6 @@
       <category domain="https://blocklune.github.io/tags/html/">Html</category>
       
       <category domain="https://blocklune.github.io/tags/js/">JS</category>
-      
-      <category domain="https://blocklune.github.io/tags/web/">Web</category>
       
       
       <comments>https://blocklune.github.io/posts/6a8a1633.html#disqus_thread</comments>
