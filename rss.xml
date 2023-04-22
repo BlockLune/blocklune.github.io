@@ -9,8 +9,31 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Sat, 15 Apr 2023 06:00:16 GMT</pubDate>
+    <pubDate>Sat, 22 Apr 2023 03:58:15 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>My &quot;.vimrc&quot;</title>
+      <link>https://blocklune.github.io/posts/96f7ff9f.html</link>
+      <guid>https://blocklune.github.io/posts/96f7ff9f.html</guid>
+      <pubDate>Sat, 22 Apr 2023 02:27:09 GMT</pubDate>
+      
+      <description>&lt;p&gt;There are a huge amount of options in Vim. It enables us to customize our own Vim as our wishes.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
+      
+      
+      <category domain="https://blocklune.github.io/tags/vim/">Vim</category>
+      
+      
+      <comments>https://blocklune.github.io/posts/96f7ff9f.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Set up a blog with Hexo</title>
