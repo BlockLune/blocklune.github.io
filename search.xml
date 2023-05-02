@@ -1902,6 +1902,29 @@
       </tags>
   </entry>
   <entry>
+    <title>Installing Ubuntu</title>
+    <url>/posts/ca281680.html</url>
+    <content><![CDATA[<p>This is NOT a tutorial of installing Ubuntu. Just write down some issues I met during my installation.</p>
+<span id="more"></span>
+
+<h2 id="SOFTWARE"><a href="#SOFTWARE" class="headerlink" title="SOFTWARE"></a>SOFTWARE</h2><h3 id="PACKAGE-MANAGER"><a href="#PACKAGE-MANAGER" class="headerlink" title="PACKAGE MANAGER"></a>PACKAGE MANAGER</h3><p>The first thing you need to do is configuring <code>apt</code>‘s mirror.</p>
+<p>If you also want to use the mirror from Tsinghua:</p>
+<p>See <em><a href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/">ubuntu | 镜像使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror</a></em></p>
+<p>To update your <code>apt</code> repository, press <code>Ctrl + Alt + T</code> to run a terminal, and run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt upgrade</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="BROWSER"><a href="#BROWSER" class="headerlink" title="BROWSER"></a>BROWSER</h3><p>I use Microsoft Edge. It’s pretty easy to download the <code>.deb</code> on its <em><a href="https://www.microsoft.com/en-us/edge/download">official website</a></em>. But if you want to install it from command line:</p>
+<p>See <em><a href="https://www.linuxcapable.com/how-to-install-microsoft-edge-on-ubuntu-linux/">How to Install Microsoft Edge on Ubuntu 22.04 | 20.04 - LinuxCapable</a></em></p>
+<h3 id="PROXY"><a href="#PROXY" class="headerlink" title="PROXY"></a>PROXY</h3><p>Maybe <em><a href="https://github.com/zzzgydi/clash-verge">zzzgydi/clash-verge: A Clash GUI based on tauri. Supports Windows, macOS and Linux</a></em></p>
+<h2 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h2><p>Q: The operating system always freezes on the welcome page.<br>A: Install / Update NVIDIA driver.</p>
+<p>See <em><a href="https://www.cnblogs.com/Leozi/p/13281224.html">Ubuntu 下安装 NVIDIA 驱动的三种方法</a></em></p>
+<p>and <em><a href="https://superuser.com/questions/1750975/nouveau-00000100-0-drm-failed-to-idle-channel-0-drm">ubuntu - nouveau 0000:01:00.0: DRM: failed to idle channel 0 [DRM] - Super User</a></em></p>
+<p>Q: Why the Microsoft Edge always show <em>This page is having a problem</em>?</p>
+<p>A: See <em><a href="https://answers.microsoft.com/en-us/microsoftedge/forum/all/this-page-is-having-a-problem-error-code-sigill/e2a09ac0-f243-40cb-a235-41abb2148f07">This page is having a problem Error Code: SIGILL - Microsoft Community</a></em></p>
+<p>and <a href="https://www.linuxcapable.com/how-to-install-microsoft-edge-on-ubuntu-linux/">here</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>My &quot;.vimrc&quot;</title>
     <url>/posts/96f7ff9f.html</url>
     <content><![CDATA[<p>There are a huge amount of options in Vim. It enables us to customize our own Vim as our wishes.</p>

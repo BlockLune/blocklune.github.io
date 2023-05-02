@@ -9,8 +9,25 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Sat, 22 Apr 2023 03:58:15 GMT</pubDate>
+    <pubDate>Tue, 02 May 2023 14:48:25 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Installing Ubuntu</title>
+      <link>https://blocklune.github.io/posts/ca281680.html</link>
+      <guid>https://blocklune.github.io/posts/ca281680.html</guid>
+      <pubDate>Thu, 27 Apr 2023 15:41:50 GMT</pubDate>
+      
+      <description>&lt;p&gt;This is NOT a tutorial of installing Ubuntu. Just write down some issues I met during my installation.&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      
+      <comments>https://blocklune.github.io/posts/ca281680.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>My &quot;.vimrc&quot;</title>
