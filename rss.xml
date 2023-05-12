@@ -9,8 +9,31 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Tue, 02 May 2023 14:48:25 GMT</pubDate>
+    <pubDate>Fri, 12 May 2023 10:32:30 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>My personal summary of Algorithms, Part I on Coursera</title>
+      <link>https://blocklune.github.io/posts/94efd546.html</link>
+      <guid>https://blocklune.github.io/posts/94efd546.html</guid>
+      <pubDate>Fri, 12 May 2023 10:27:12 GMT</pubDate>
+      
+      <description>&lt;p&gt;As the title says, this is my personal summary of &lt;a href=&quot;https://www.coursera.org/learn/algorithms-part1&quot;&gt;Algorithms, Part I&lt;/a&gt; on &lt;a href=&quot;https://www.coursera.org/&quot;&gt;Coursera&lt;/a&gt;.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/algorithms-data-structures/">Algorithms &amp; Data structures</category>
+      
+      
+      <category domain="https://blocklune.github.io/tags/algorithm/">Algorithm</category>
+      
+      
+      <comments>https://blocklune.github.io/posts/94efd546.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Installing Ubuntu</title>
@@ -22,6 +45,10 @@
       
       
       
+      
+      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
       
       
       
