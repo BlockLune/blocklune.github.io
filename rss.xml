@@ -9,8 +9,64 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Wed, 24 May 2023 09:28:13 GMT</pubDate>
+    <pubDate>Sun, 28 May 2023 08:47:02 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Permutations and Combinations in Python (itertools)</title>
+      <link>https://blocklune.github.io/posts/cf2f01b2.html</link>
+      <guid>https://blocklune.github.io/posts/cf2f01b2.html</guid>
+      <pubDate>Sun, 28 May 2023 08:47:02 GMT</pubDate>
+      
+      <description>&lt;p&gt;Extracted from &lt;em&gt;&lt;a href=&quot;https://docs.python.org/3/library/itertools.html&quot;&gt;itertools — Functions creating iterators for efficient looping — Python 3.11.3 documentation&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/languages/python/">Python</category>
+      
+      
+      <category domain="https://blocklune.github.io/tags/python/">Python</category>
+      
+      <category domain="https://blocklune.github.io/tags/itertools/">itertools</category>
+      
+      
+      <comments>https://blocklune.github.io/posts/cf2f01b2.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>static_cast and const_cast in C++</title>
+      <link>https://blocklune.github.io/posts/f5746381.html</link>
+      <guid>https://blocklune.github.io/posts/f5746381.html</guid>
+      <pubDate>Sun, 28 May 2023 08:47:02 GMT</pubDate>
+      
+      <description>&lt;p&gt;This is a note for Lecture 8, &lt;a href=&quot;https://web.stanford.edu/class/cs106l/index.html&quot;&gt;CS106L&lt;/a&gt;, Spring 2023.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
+      
+      
+      <category domain="https://blocklune.github.io/tags/const/">const</category>
+      
+      <category domain="https://blocklune.github.io/tags/cs106l/">CS106L</category>
+      
+      <category domain="https://blocklune.github.io/tags/c/">C++</category>
+      
+      
+      <comments>https://blocklune.github.io/posts/f5746381.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>My personal summary of Algorithms, Part I on Coursera</title>
@@ -556,9 +612,9 @@
       
       <category domain="https://blocklune.github.io/tags/c-c/">C/C++</category>
       
-      <category domain="https://blocklune.github.io/tags/pointer/">Pointer</category>
-      
       <category domain="https://blocklune.github.io/tags/array/">Array</category>
+      
+      <category domain="https://blocklune.github.io/tags/pointer/">Pointer</category>
       
       
       <comments>https://blocklune.github.io/posts/57fd79a.html#disqus_thread</comments>
@@ -998,8 +1054,6 @@
       <category domain="https://blocklune.github.io/categories/cs/web/">Web</category>
       
       
-      <category domain="https://blocklune.github.io/tags/web/">Web</category>
-      
       <category domain="https://blocklune.github.io/tags/vue-js/">Vue.js</category>
       
       <category domain="https://blocklune.github.io/tags/element-ui/">Element UI</category>
@@ -1007,6 +1061,8 @@
       <category domain="https://blocklune.github.io/tags/html/">Html</category>
       
       <category domain="https://blocklune.github.io/tags/js/">JS</category>
+      
+      <category domain="https://blocklune.github.io/tags/web/">Web</category>
       
       
       <comments>https://blocklune.github.io/posts/6a8a1633.html#disqus_thread</comments>
@@ -1029,9 +1085,9 @@
       <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
       
       
-      <category domain="https://blocklune.github.io/tags/browser/">Browser</category>
-      
       <category domain="https://blocklune.github.io/tags/edge/">Edge</category>
+      
+      <category domain="https://blocklune.github.io/tags/browser/">Browser</category>
       
       
       <comments>https://blocklune.github.io/posts/3c91f84e.html#disqus_thread</comments>
@@ -1099,9 +1155,9 @@
       <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
       
       
-      <category domain="https://blocklune.github.io/tags/chrome/">Chrome</category>
-      
       <category domain="https://blocklune.github.io/tags/browser/">Browser</category>
+      
+      <category domain="https://blocklune.github.io/tags/chrome/">Chrome</category>
       
       
       <comments>https://blocklune.github.io/posts/72a59031.html#disqus_thread</comments>

@@ -121,6 +121,48 @@
       </tags>
   </entry>
   <entry>
+    <title>记一次电脑清灰</title>
+    <url>/posts/50b3c006.html</url>
+    <content><![CDATA[<p>电脑是以前的老电脑，初一暑假时候买的 y700。配置低的可怜，毫无性价比的一台机子吧，当年还是电脑小白的时候保意买的，在完全不懂的情况下被忽悠着忽悠着买了，满满的坑啊。</p>
+<p>这电脑之前被我拆开来过，为了加一条固态，后盖螺丝因而已经不全了（拆必丢原则！），不过这次没丢！</p>
+<span id="more"></span>
+
+<p>硅脂买的是 7921，网上说好用就买了，竟然还送了一些刷子垫片啥的，应该是很多人都买了清灰用的所以店家就把清灰附属需要的东西也都附赠了，这点还挺不错的。但是实际涂起来吧，这款硅脂是真的令我痛苦 —— 真的很奇妙的质感，比较像容易断的那种橡皮泥 (?)，反正结果就很尴尬（我知道我涂多了！没办法）</p>
+<p>弄好装完发现点不亮了！吓了我一跳，结果发现是放那儿好久原来一直没接电源所以没电，接上电就能正常进系统了，太懒了，就没烤一下再看看。</p>
+<p><img data-src="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed37f.jpg" alt="所用硅脂——信越7921"></p>
+<p><img data-src="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed388.jpg" alt="商家还送了一些清灰用的玩意儿（这张照片是补拍的）"></p>
+<p><img data-src="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed394.jpg" alt="清灰前的风扇"></p>
+<p><img data-src="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed36a.jpg" alt="清灰前的...这叫啥..."></p>
+<p><img data-src="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed375.jpg" alt="擦掉旧的硅脂（原来这个方方的才是gpu！）"></p>
+<p><img data-src="https://pic.imgdb.cn/item/6308bb6816f2c2beb1fed7e1.jpg" alt="尽力清灰后..."></p>
+<p><img data-src="https://pic.imgdb.cn/item/6308bb6816f2c2beb1fed7e6.jpg" alt="涂多了...希望不要出事"></p>
+]]></content>
+      <categories>
+        <category>Misc</category>
+      </categories>
+      <tags>
+        <tag>Memory</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记一次网络改造</title>
+    <url>/posts/b9a9b40d.html</url>
+    <content><![CDATA[<p>事情的起因是跟爸闲聊我抱怨家里为什么没有预埋到我和我妹房间的网线，结果才知道原来是有的，只不过藏在空面板里没有装接口…… 于是就开始兴致勃勃地想把它装起来 (这样我房间里就有有线网了！)，赶紧买了面板，交换机，网线和一众工具。</p>
+<span id="more"></span>
+
+<p>接网线难在第一个，不过第一个弄会了后面也就快了，此次没有试水晶头的接法，下次有机会试试。</p>
+<p>昨天仅仅是把面板弄完了，交换机今天才到的刚刚也弄上了，现在都做的很方便接上就能用了！不过在等交换机的时候把家里老的路由器小米 WiFi4 整了出来，稀里糊涂地捣鼓了半天刷上了个 openwrt，这个东西似乎是个 linux 发行版？! 反正似乎潜力巨大，可以装好多东西，但现在还没太研究，以前想试的 adguard home 似乎也可以试试去了。</p>
+<p>现在我的房间也终于有千兆网了！</p>
+<p><img data-src="https://s1.ax1x.com/2022/08/28/vWrbPP.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrTUI.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWroVA.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWr75t.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWr5bd.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrOxS.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrL28.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrq8f.jpg"></p>
+]]></content>
+      <categories>
+        <category>Misc</category>
+      </categories>
+      <tags>
+        <tag>Memory</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>手动挡学习笔记</title>
     <url>/posts/66959aa9.html</url>
     <content><![CDATA[<p>最近几天一直在忙着考驾照的事情，8 月份第一次考科二挂了后就开始边练科二边练科三。最近两三天先后把科三、第二次科二、科四过了，顺利拿到了 C1 驾照。但是… 学的是手动挡，家里的车却是自动挡。所以想着如果不记一下的话，以后估计开惯了自动挡手动挡就不会了，便想做些笔记。顺便也记录一下笔者自己的学车过程。</p>
@@ -254,48 +296,6 @@
       <categories>
         <category>Misc</category>
       </categories>
-  </entry>
-  <entry>
-    <title>记一次电脑清灰</title>
-    <url>/posts/50b3c006.html</url>
-    <content><![CDATA[<p>电脑是以前的老电脑，初一暑假时候买的 y700。配置低的可怜，毫无性价比的一台机子吧，当年还是电脑小白的时候保意买的，在完全不懂的情况下被忽悠着忽悠着买了，满满的坑啊。</p>
-<p>这电脑之前被我拆开来过，为了加一条固态，后盖螺丝因而已经不全了（拆必丢原则！），不过这次没丢！</p>
-<span id="more"></span>
-
-<p>硅脂买的是 7921，网上说好用就买了，竟然还送了一些刷子垫片啥的，应该是很多人都买了清灰用的所以店家就把清灰附属需要的东西也都附赠了，这点还挺不错的。但是实际涂起来吧，这款硅脂是真的令我痛苦 —— 真的很奇妙的质感，比较像容易断的那种橡皮泥 (?)，反正结果就很尴尬（我知道我涂多了！没办法）</p>
-<p>弄好装完发现点不亮了！吓了我一跳，结果发现是放那儿好久原来一直没接电源所以没电，接上电就能正常进系统了，太懒了，就没烤一下再看看。</p>
-<p><img data-src="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed37f.jpg" alt="所用硅脂——信越7921"></p>
-<p><img data-src="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed388.jpg" alt="商家还送了一些清灰用的玩意儿（这张照片是补拍的）"></p>
-<p><img data-src="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed394.jpg" alt="清灰前的风扇"></p>
-<p><img data-src="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed36a.jpg" alt="清灰前的...这叫啥..."></p>
-<p><img data-src="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed375.jpg" alt="擦掉旧的硅脂（原来这个方方的才是gpu！）"></p>
-<p><img data-src="https://pic.imgdb.cn/item/6308bb6816f2c2beb1fed7e1.jpg" alt="尽力清灰后..."></p>
-<p><img data-src="https://pic.imgdb.cn/item/6308bb6816f2c2beb1fed7e6.jpg" alt="涂多了...希望不要出事"></p>
-]]></content>
-      <categories>
-        <category>Misc</category>
-      </categories>
-      <tags>
-        <tag>Memory</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>记一次网络改造</title>
-    <url>/posts/b9a9b40d.html</url>
-    <content><![CDATA[<p>事情的起因是跟爸闲聊我抱怨家里为什么没有预埋到我和我妹房间的网线，结果才知道原来是有的，只不过藏在空面板里没有装接口…… 于是就开始兴致勃勃地想把它装起来 (这样我房间里就有有线网了！)，赶紧买了面板，交换机，网线和一众工具。</p>
-<span id="more"></span>
-
-<p>接网线难在第一个，不过第一个弄会了后面也就快了，此次没有试水晶头的接法，下次有机会试试。</p>
-<p>昨天仅仅是把面板弄完了，交换机今天才到的刚刚也弄上了，现在都做的很方便接上就能用了！不过在等交换机的时候把家里老的路由器小米 WiFi4 整了出来，稀里糊涂地捣鼓了半天刷上了个 openwrt，这个东西似乎是个 linux 发行版？! 反正似乎潜力巨大，可以装好多东西，但现在还没太研究，以前想试的 adguard home 似乎也可以试试去了。</p>
-<p>现在我的房间也终于有千兆网了！</p>
-<p><img data-src="https://s1.ax1x.com/2022/08/28/vWrbPP.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrTUI.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWroVA.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWr75t.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWr5bd.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrOxS.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrL28.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrq8f.jpg"></p>
-]]></content>
-      <categories>
-        <category>Misc</category>
-      </categories>
-      <tags>
-        <tag>Memory</tag>
-      </tags>
   </entry>
   <entry>
     <title>挖老婆矿！—— NovelAI 初试</title>
@@ -658,6 +658,39 @@
       </tags>
   </entry>
   <entry>
+    <title>Edge 扩展推荐</title>
+    <url>/posts/3c91f84e.html</url>
+    <content><![CDATA[<p>2019 年 7 月写过一篇 Chrome 插件推荐的文章，那时候我还在用 Chrome 作为我的主要浏览器。一晃三年过去了，我也早已从 Google Chrome 转入全新 Chromium 内核构建的 Edge 浏览器。微软倒蛮有意思，自己从头开发的东西不咋地，在别人的平台上倒是表现得相当好。由于国内的水土不服啊，我用 Chrome 时总会遇到同步不了的情况，这点的体验在 Edge 这儿得到了很好的改善，也是我用 Edge 的主要原因吧。前些天帮很多同学做新机开荒，也推荐他们就用这款 “Win11 原装” 浏览器。当然一个浏览器肯定是离不开扩展的，趁着帮他们开荒这个机会，也顺便整理了我认为必备的一些浏览器扩展。</p>
+<span id="more"></span>
+
+<p><strong>本文更多的从个人角度出发，仅涵盖了笔者的主要需求，自然是粗略的，仅供参考。</strong></p>
+<h2 id="全部用户"><a href="#全部用户" class="headerlink" title="全部用户"></a>全部用户</h2><h3 id="Dark-Reader"><a href="#Dark-Reader" class="headerlink" title="Dark Reader"></a>Dark Reader</h3><p>简介：强制暗黑模式的网页</p>
+<h3 id="Infinity-新标签页-Pro"><a href="#Infinity-新标签页-Pro" class="headerlink" title="Infinity 新标签页 (Pro)"></a>Infinity 新标签页 (Pro)</h3><p>简介：rt，一个新标签页扩展</p>
+<h3 id="OneTab"><a href="#OneTab" class="headerlink" title="OneTab"></a>OneTab</h3><p>简介： 打开了太多网页的时候，按一下可以帮你全部收起来，之后可以自由恢复</p>
+<h3 id="Prevent-Duplicate-Tabs"><a href="#Prevent-Duplicate-Tabs" class="headerlink" title="Prevent Duplicate Tabs"></a>Prevent Duplicate Tabs</h3><p>简介： 帮你干掉那些重复的标签页</p>
+<h3 id="uBlock-Origin"><a href="#uBlock-Origin" class="headerlink" title="uBlock Origin"></a>uBlock Origin</h3><p>简介：干掉广告，且是众多去广告插件中占用相对较少的</p>
+<h3 id="捕捉网页截图-FireShot-的"><a href="#捕捉网页截图-FireShot-的" class="headerlink" title="捕捉网页截图 - FireShot 的"></a>捕捉网页截图 - FireShot 的</h3><p>简介：rt，支持长截图（名字有点怪，可能是翻译问题，搜索 FireShot 就能找到）</p>
+<h3 id="暴力猴"><a href="#暴力猴" class="headerlink" title="暴力猴"></a>暴力猴</h3><p>简介：装脚本的插件，和大名鼎鼎的油猴一样的功能，这个可能 (?) 小巧一点</p>
+<h3 id="沙拉查词-聚合词典划词翻译"><a href="#沙拉查词-聚合词典划词翻译" class="headerlink" title="沙拉查词-聚合词典划词翻译"></a>沙拉查词 - 聚合词典划词翻译</h3><p>简介：rt，划词翻译，可配置内容超多</p>
+<h3 id="Imagus"><a href="#Imagus" class="headerlink" title="Imagus"></a>Imagus</h3><p>简介：可以把网页图片放大了看</p>
+<h3 id="User-Agent-Switcher-for-Chrome"><a href="#User-Agent-Switcher-for-Chrome" class="headerlink" title="User-Agent Switcher for Chrome"></a>User-Agent Switcher for Chrome</h3><p>简介：“伪装” 你自己</p>
+<h3 id="Video-Speed-Controller"><a href="#Video-Speed-Controller" class="headerlink" title="Video Speed Controller"></a>Video Speed Controller</h3><p>简介：rt，但是竟然也可以改视频前广告的播放速度！</p>
+<h2 id="哔哩哔哩用户"><a href="#哔哩哔哩用户" class="headerlink" title="哔哩哔哩用户"></a>哔哩哔哩用户</h2><h3 id="pakku：哔哩哔哩弹幕过滤器"><a href="#pakku：哔哩哔哩弹幕过滤器" class="headerlink" title="pakku：哔哩哔哩弹幕过滤器"></a>pakku：哔哩哔哩弹幕过滤器</h3><p>简介：简化（过滤）你的 b 站弹幕</p>
+<h3 id="哔哩哔哩助手：bilibili-com-综合辅助扩"><a href="#哔哩哔哩助手：bilibili-com-综合辅助扩" class="headerlink" title="哔哩哔哩助手：bilibili.com 综合辅助扩"></a>哔哩哔哩助手：bilibili.com 综合辅助扩</h3><p>简介：功能超多，我主要用来下载 b 站视频了</p>
+<h2 id="Steam-用户"><a href="#Steam-用户" class="headerlink" title="Steam 用户"></a>Steam 用户</h2><h3 id="Augmented-Steam"><a href="#Augmented-Steam" class="headerlink" title="Augmented Steam"></a>Augmented Steam</h3><p>简介：为 steam 官网提供了众多试用的玩意儿</p>
+<h2 id="IT-工作者"><a href="#IT-工作者" class="headerlink" title="IT 工作者"></a>IT 工作者</h2><h3 id="Octotree-GitHub-code-tree"><a href="#Octotree-GitHub-code-tree" class="headerlink" title="Octotree - GitHub code tree"></a>Octotree - GitHub code tree</h3><p>简介：方便地查看 github 上某个 repository 的文件结构</p>
+<h3 id="Surfingkeys"><a href="#Surfingkeys" class="headerlink" title="Surfingkeys"></a>Surfingkeys</h3><p>简介：像 vim 一样的玩意儿，让你完全用你的键盘浏览网页</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Edge</tag>
+        <tag>Browser</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Chrome 插件推荐</title>
     <url>/posts/72a59031.html</url>
     <content><![CDATA[<p>你可能常年使用着国产的一些浏览器，却也常年遭受着各种弹窗、全家桶的侵扰…</p>
@@ -896,41 +929,8 @@
         <category>Tools</category>
       </categories>
       <tags>
+        <tag>Browser</tag>
         <tag>Chrome</tag>
-        <tag>Browser</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Edge 扩展推荐</title>
-    <url>/posts/3c91f84e.html</url>
-    <content><![CDATA[<p>2019 年 7 月写过一篇 Chrome 插件推荐的文章，那时候我还在用 Chrome 作为我的主要浏览器。一晃三年过去了，我也早已从 Google Chrome 转入全新 Chromium 内核构建的 Edge 浏览器。微软倒蛮有意思，自己从头开发的东西不咋地，在别人的平台上倒是表现得相当好。由于国内的水土不服啊，我用 Chrome 时总会遇到同步不了的情况，这点的体验在 Edge 这儿得到了很好的改善，也是我用 Edge 的主要原因吧。前些天帮很多同学做新机开荒，也推荐他们就用这款 “Win11 原装” 浏览器。当然一个浏览器肯定是离不开扩展的，趁着帮他们开荒这个机会，也顺便整理了我认为必备的一些浏览器扩展。</p>
-<span id="more"></span>
-
-<p><strong>本文更多的从个人角度出发，仅涵盖了笔者的主要需求，自然是粗略的，仅供参考。</strong></p>
-<h2 id="全部用户"><a href="#全部用户" class="headerlink" title="全部用户"></a>全部用户</h2><h3 id="Dark-Reader"><a href="#Dark-Reader" class="headerlink" title="Dark Reader"></a>Dark Reader</h3><p>简介：强制暗黑模式的网页</p>
-<h3 id="Infinity-新标签页-Pro"><a href="#Infinity-新标签页-Pro" class="headerlink" title="Infinity 新标签页 (Pro)"></a>Infinity 新标签页 (Pro)</h3><p>简介：rt，一个新标签页扩展</p>
-<h3 id="OneTab"><a href="#OneTab" class="headerlink" title="OneTab"></a>OneTab</h3><p>简介： 打开了太多网页的时候，按一下可以帮你全部收起来，之后可以自由恢复</p>
-<h3 id="Prevent-Duplicate-Tabs"><a href="#Prevent-Duplicate-Tabs" class="headerlink" title="Prevent Duplicate Tabs"></a>Prevent Duplicate Tabs</h3><p>简介： 帮你干掉那些重复的标签页</p>
-<h3 id="uBlock-Origin"><a href="#uBlock-Origin" class="headerlink" title="uBlock Origin"></a>uBlock Origin</h3><p>简介：干掉广告，且是众多去广告插件中占用相对较少的</p>
-<h3 id="捕捉网页截图-FireShot-的"><a href="#捕捉网页截图-FireShot-的" class="headerlink" title="捕捉网页截图 - FireShot 的"></a>捕捉网页截图 - FireShot 的</h3><p>简介：rt，支持长截图（名字有点怪，可能是翻译问题，搜索 FireShot 就能找到）</p>
-<h3 id="暴力猴"><a href="#暴力猴" class="headerlink" title="暴力猴"></a>暴力猴</h3><p>简介：装脚本的插件，和大名鼎鼎的油猴一样的功能，这个可能 (?) 小巧一点</p>
-<h3 id="沙拉查词-聚合词典划词翻译"><a href="#沙拉查词-聚合词典划词翻译" class="headerlink" title="沙拉查词-聚合词典划词翻译"></a>沙拉查词 - 聚合词典划词翻译</h3><p>简介：rt，划词翻译，可配置内容超多</p>
-<h3 id="Imagus"><a href="#Imagus" class="headerlink" title="Imagus"></a>Imagus</h3><p>简介：可以把网页图片放大了看</p>
-<h3 id="User-Agent-Switcher-for-Chrome"><a href="#User-Agent-Switcher-for-Chrome" class="headerlink" title="User-Agent Switcher for Chrome"></a>User-Agent Switcher for Chrome</h3><p>简介：“伪装” 你自己</p>
-<h3 id="Video-Speed-Controller"><a href="#Video-Speed-Controller" class="headerlink" title="Video Speed Controller"></a>Video Speed Controller</h3><p>简介：rt，但是竟然也可以改视频前广告的播放速度！</p>
-<h2 id="哔哩哔哩用户"><a href="#哔哩哔哩用户" class="headerlink" title="哔哩哔哩用户"></a>哔哩哔哩用户</h2><h3 id="pakku：哔哩哔哩弹幕过滤器"><a href="#pakku：哔哩哔哩弹幕过滤器" class="headerlink" title="pakku：哔哩哔哩弹幕过滤器"></a>pakku：哔哩哔哩弹幕过滤器</h3><p>简介：简化（过滤）你的 b 站弹幕</p>
-<h3 id="哔哩哔哩助手：bilibili-com-综合辅助扩"><a href="#哔哩哔哩助手：bilibili-com-综合辅助扩" class="headerlink" title="哔哩哔哩助手：bilibili.com 综合辅助扩"></a>哔哩哔哩助手：bilibili.com 综合辅助扩</h3><p>简介：功能超多，我主要用来下载 b 站视频了</p>
-<h2 id="Steam-用户"><a href="#Steam-用户" class="headerlink" title="Steam 用户"></a>Steam 用户</h2><h3 id="Augmented-Steam"><a href="#Augmented-Steam" class="headerlink" title="Augmented Steam"></a>Augmented Steam</h3><p>简介：为 steam 官网提供了众多试用的玩意儿</p>
-<h2 id="IT-工作者"><a href="#IT-工作者" class="headerlink" title="IT 工作者"></a>IT 工作者</h2><h3 id="Octotree-GitHub-code-tree"><a href="#Octotree-GitHub-code-tree" class="headerlink" title="Octotree - GitHub code tree"></a>Octotree - GitHub code tree</h3><p>简介：方便地查看 github 上某个 repository 的文件结构</p>
-<h3 id="Surfingkeys"><a href="#Surfingkeys" class="headerlink" title="Surfingkeys"></a>Surfingkeys</h3><p>简介：像 vim 一样的玩意儿，让你完全用你的键盘浏览网页</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Browser</tag>
-        <tag>Edge</tag>
       </tags>
   </entry>
   <entry>
@@ -1503,6 +1503,60 @@
       </tags>
   </entry>
   <entry>
+    <title>The chmod command in Linux</title>
+    <url>/posts/a9dc5c1e.html</url>
+    <content><![CDATA[<p>I accidentally ran a wrong <code>chmod</code> command in my Linux, and it messed up everything! I hate the permission management in Linux. :|</p>
+<span id="more"></span>
+
+<h2 id="PERMISSION-MANAGEMENT-IN-LINUX"><a href="#PERMISSION-MANAGEMENT-IN-LINUX" class="headerlink" title="PERMISSION MANAGEMENT IN LINUX"></a>PERMISSION MANAGEMENT IN LINUX</h2><p>When you run <code>ls -l</code> in your terminal, you can always see strings like <code>-rw-r–r–</code> and <code>drwxr-xr-x</code> etc. To understand them, we can always split a such string into four part. The first one is a single character, <code>-</code> if it’s a file and <code>d</code> if it’s a directory. The rest 9 characters can be equally divided into three parts, representing the permission of the owner, the members of the group and other users relatively. Every part contains three characters, showing the permission of <strong>r</strong>(read), <strong>w</strong>(write) and <strong>x</strong>(execute).</p>
+<p><img data-src="https://s1.ax1x.com/2023/03/23/pp0Z5YF.png" alt="When you run `ls -l`"><br><img data-src="https://www.runoob.com/wp-content/uploads/2014/08/file-permissions-rwx.jpg" alt="From www.runoob.com"></p>
+<p>Besides the bit pattern, you can also use octal notation to express these permissions, which uses 4 for <strong>r</strong>, 2 for <strong>w</strong> and 1 for <strong>x</strong>. The sum of these octal numbers then can replace the <code>rwx</code> pattern. For example, using 6 for <strong>rw</strong>.</p>
+<p>Why is 4, 2 and 1? Actually, you can view every 3-character unit as 3 binary bits. So, 100(r–) means 4 in decimal, 010(-w-) means 2, and 001(–x) means 1. You can then understand what dose the sum means.</p>
+<p><img data-src="https://www.runoob.com/wp-content/uploads/2014/08/rwx-standard-unix-permission-bits.png" alt="From www.runoob.com"></p>
+<p>Now, you can read this:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">-rw------- <span class="comment"># (600) Owner:RW</span></span><br><span class="line">-rw-r--r-- <span class="comment"># (644) Owner:RW Group:R Other:R</span></span><br><span class="line">-rw-rw-rw- <span class="comment"># (666) Owner:RW Group:RW Other:RW</span></span><br><span class="line">-rwx------ <span class="comment"># (700) Owner:RWX</span></span><br><span class="line">-rwx--x--x <span class="comment"># (711) Owner:RWX Group:X Other:X</span></span><br><span class="line">-rwxr-xr-x <span class="comment"># (755) Owner:RWX Group:RX Other:RX</span></span><br><span class="line">-rwxrwxrwx <span class="comment"># (777) Owner:RWX Group:RWX Other:RWX</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="DEFAULT-PERMISSION"><a href="#DEFAULT-PERMISSION" class="headerlink" title="DEFAULT PERMISSION"></a>DEFAULT PERMISSION</h2><p>The default permission for a file is 666, which means <code>-rw-rw-rw-</code>, indicating that the owner, group and other users can read and write the file. The default permission for a directory is 777, which means <code>drwxrwxrwx</code>, indicating that the owner, group and other users can read, write and access the directory.</p>
+<p>However, these default permissions are affected by the user’s <strong>umask</strong> setting. The umask is a value that controls which permissions are removed when creating a new file or directory. For example, if the user’s umask is 022, then the write permission for group and other users will be removed when creating a new file, and the write and execute permission for group and other users will be removed when creating a new directory. Therefore:</p>
+<p>The actual default permission for a file is 666 - 022 = 644, which means <code>-rw-r–r–</code>. The actual default permission for a directory is 777 - 022 = 755, which means <code>drwxr-xr-x</code>.</p>
+<p>You can run the <code>umask</code> command to see what your setting is.</p>
+<p><img data-src="https://s1.ax1x.com/2023/03/23/pp0eZtS.png"></p>
+<h2 id="THE-CHMOD-COMMAND"><a href="#THE-CHMOD-COMMAND" class="headerlink" title="THE CHMOD COMMAND"></a>THE CHMOD COMMAND</h2><p><img data-src="https://s1.ax1x.com/2023/03/23/pp0mVD1.png"></p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> [-cfvR] [--<span class="built_in">help</span>] [--version] &lt;mode&gt; &lt;file&gt;...</span><br></pre></td></tr></tbody></table></figure>
+
+<p>The <code>-R</code> means recursively. You will need it.</p>
+<p>The most important part is <code>&lt;mode&gt;</code> obviously. Its pattern is:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">[ugoa...][[+-=][rwxX]...][,...]</span><br></pre></td></tr></tbody></table></figure>
+
+<ol>
+<li>[ugoa…]: <code>u</code> means user, <code>g</code> means group, <code>o</code> means other, and <code>a</code> means all.</li>
+<li>[+-=]: <code>+</code> means adding permission, <code>-</code> means removing, and <code>=</code> means setting the permissions for a specific user type, <strong>regardless of the previous permissions</strong>.</li>
+<li>[rwxX]: You have known <code>rwx</code>, and the <code>X</code> means setting the execute permission only if the file is a directory or already has execute permission for some user.</li>
+</ol>
+<p>For example:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> u+x &lt;file&gt; <span class="comment"># adding execute permission to the owner of the file, and leaving the group and other permissions unchanged</span></span><br><span class="line"><span class="built_in">chmod</span> o-rwx &lt;file&gt; <span class="comment"># removing all permissions from others, and leaving the owner and group permissions unchanged</span></span><br><span class="line"><span class="built_in">chmod</span> a=r &lt;file&gt; <span class="comment"># setting all user types’ permissions to read only, overwriting any previous permissions</span></span><br><span class="line"><span class="built_in">chmod</span> a+X &lt;file&gt; <span class="comment"># adding execute permission to all user types only if file is a directory or already executable by some user</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>You can also use octal pattern represents the <code>&lt;mode&gt;</code>. For example:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 777 &lt;file&gt; <span class="comment"># now everyone can read, write and execute the &lt;file&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="CHANGE-PERMISSIONS-TO-FILE-OR-DIR-INDIVIDUALLY"><a href="#CHANGE-PERMISSIONS-TO-FILE-OR-DIR-INDIVIDUALLY" class="headerlink" title="CHANGE PERMISSIONS TO FILE OR DIR INDIVIDUALLY"></a>CHANGE PERMISSIONS TO FILE OR DIR INDIVIDUALLY</h2><p>To change permissions to file or dir individually, you can use the <code>-exec</code> option of <code>find</code> to execute chmod on each matching file or directory. For example: To find all files in the current directory and its subdirectories and change their permissions to 644, you can use: <code>find . -type f -exec chmod 644 {} ;</code></p>
+<p><code>-type f</code> means file. You can use <code>-type d</code> to find all the dir.</p>
+<h2 id="THANKS"><a href="#THANKS" class="headerlink" title="THANKS"></a>THANKS</h2><p>By the way, this blog was completed with the help of new bing. I asked her many questions and got great answers. She also helped me correct errors and polish my writing. She is just too amazing!</p>
+<h2 id="REFERENCE"><a href="#REFERENCE" class="headerlink" title="REFERENCE"></a>REFERENCE</h2><ul>
+<li><a href="https://www.runoob.com/linux/linux-comm-chmod.html">《Linux chmod 命令 | 菜鸟教程》</a></li>
+<li><a href="https://blog.csdn.net/u013197629/article/details/73608613">《Linux 权限详解（chmod、600、644、700、711、755、777、4755、6755、7755）》</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>chmod</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Simple Git tutorial</title>
     <url>/posts/9363e311.html</url>
     <content><![CDATA[<p>This is a simple tutorial of Git, also including some info about GitHub.</p>
@@ -1714,60 +1768,6 @@
       </tags>
   </entry>
   <entry>
-    <title>The chmod command in Linux</title>
-    <url>/posts/a9dc5c1e.html</url>
-    <content><![CDATA[<p>I accidentally ran a wrong <code>chmod</code> command in my Linux, and it messed up everything! I hate the permission management in Linux. :|</p>
-<span id="more"></span>
-
-<h2 id="PERMISSION-MANAGEMENT-IN-LINUX"><a href="#PERMISSION-MANAGEMENT-IN-LINUX" class="headerlink" title="PERMISSION MANAGEMENT IN LINUX"></a>PERMISSION MANAGEMENT IN LINUX</h2><p>When you run <code>ls -l</code> in your terminal, you can always see strings like <code>-rw-r–r–</code> and <code>drwxr-xr-x</code> etc. To understand them, we can always split a such string into four part. The first one is a single character, <code>-</code> if it’s a file and <code>d</code> if it’s a directory. The rest 9 characters can be equally divided into three parts, representing the permission of the owner, the members of the group and other users relatively. Every part contains three characters, showing the permission of <strong>r</strong>(read), <strong>w</strong>(write) and <strong>x</strong>(execute).</p>
-<p><img data-src="https://s1.ax1x.com/2023/03/23/pp0Z5YF.png" alt="When you run `ls -l`"><br><img data-src="https://www.runoob.com/wp-content/uploads/2014/08/file-permissions-rwx.jpg" alt="From www.runoob.com"></p>
-<p>Besides the bit pattern, you can also use octal notation to express these permissions, which uses 4 for <strong>r</strong>, 2 for <strong>w</strong> and 1 for <strong>x</strong>. The sum of these octal numbers then can replace the <code>rwx</code> pattern. For example, using 6 for <strong>rw</strong>.</p>
-<p>Why is 4, 2 and 1? Actually, you can view every 3-character unit as 3 binary bits. So, 100(r–) means 4 in decimal, 010(-w-) means 2, and 001(–x) means 1. You can then understand what dose the sum means.</p>
-<p><img data-src="https://www.runoob.com/wp-content/uploads/2014/08/rwx-standard-unix-permission-bits.png" alt="From www.runoob.com"></p>
-<p>Now, you can read this:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">-rw------- <span class="comment"># (600) Owner:RW</span></span><br><span class="line">-rw-r--r-- <span class="comment"># (644) Owner:RW Group:R Other:R</span></span><br><span class="line">-rw-rw-rw- <span class="comment"># (666) Owner:RW Group:RW Other:RW</span></span><br><span class="line">-rwx------ <span class="comment"># (700) Owner:RWX</span></span><br><span class="line">-rwx--x--x <span class="comment"># (711) Owner:RWX Group:X Other:X</span></span><br><span class="line">-rwxr-xr-x <span class="comment"># (755) Owner:RWX Group:RX Other:RX</span></span><br><span class="line">-rwxrwxrwx <span class="comment"># (777) Owner:RWX Group:RWX Other:RWX</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="DEFAULT-PERMISSION"><a href="#DEFAULT-PERMISSION" class="headerlink" title="DEFAULT PERMISSION"></a>DEFAULT PERMISSION</h2><p>The default permission for a file is 666, which means <code>-rw-rw-rw-</code>, indicating that the owner, group and other users can read and write the file. The default permission for a directory is 777, which means <code>drwxrwxrwx</code>, indicating that the owner, group and other users can read, write and access the directory.</p>
-<p>However, these default permissions are affected by the user’s <strong>umask</strong> setting. The umask is a value that controls which permissions are removed when creating a new file or directory. For example, if the user’s umask is 022, then the write permission for group and other users will be removed when creating a new file, and the write and execute permission for group and other users will be removed when creating a new directory. Therefore:</p>
-<p>The actual default permission for a file is 666 - 022 = 644, which means <code>-rw-r–r–</code>. The actual default permission for a directory is 777 - 022 = 755, which means <code>drwxr-xr-x</code>.</p>
-<p>You can run the <code>umask</code> command to see what your setting is.</p>
-<p><img data-src="https://s1.ax1x.com/2023/03/23/pp0eZtS.png"></p>
-<h2 id="THE-CHMOD-COMMAND"><a href="#THE-CHMOD-COMMAND" class="headerlink" title="THE CHMOD COMMAND"></a>THE CHMOD COMMAND</h2><p><img data-src="https://s1.ax1x.com/2023/03/23/pp0mVD1.png"></p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> [-cfvR] [--<span class="built_in">help</span>] [--version] &lt;mode&gt; &lt;file&gt;...</span><br></pre></td></tr></tbody></table></figure>
-
-<p>The <code>-R</code> means recursively. You will need it.</p>
-<p>The most important part is <code>&lt;mode&gt;</code> obviously. Its pattern is:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">[ugoa...][[+-=][rwxX]...][,...]</span><br></pre></td></tr></tbody></table></figure>
-
-<ol>
-<li>[ugoa…]: <code>u</code> means user, <code>g</code> means group, <code>o</code> means other, and <code>a</code> means all.</li>
-<li>[+-=]: <code>+</code> means adding permission, <code>-</code> means removing, and <code>=</code> means setting the permissions for a specific user type, <strong>regardless of the previous permissions</strong>.</li>
-<li>[rwxX]: You have known <code>rwx</code>, and the <code>X</code> means setting the execute permission only if the file is a directory or already has execute permission for some user.</li>
-</ol>
-<p>For example:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> u+x &lt;file&gt; <span class="comment"># adding execute permission to the owner of the file, and leaving the group and other permissions unchanged</span></span><br><span class="line"><span class="built_in">chmod</span> o-rwx &lt;file&gt; <span class="comment"># removing all permissions from others, and leaving the owner and group permissions unchanged</span></span><br><span class="line"><span class="built_in">chmod</span> a=r &lt;file&gt; <span class="comment"># setting all user types’ permissions to read only, overwriting any previous permissions</span></span><br><span class="line"><span class="built_in">chmod</span> a+X &lt;file&gt; <span class="comment"># adding execute permission to all user types only if file is a directory or already executable by some user</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>You can also use octal pattern represents the <code>&lt;mode&gt;</code>. For example:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 777 &lt;file&gt; <span class="comment"># now everyone can read, write and execute the &lt;file&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="CHANGE-PERMISSIONS-TO-FILE-OR-DIR-INDIVIDUALLY"><a href="#CHANGE-PERMISSIONS-TO-FILE-OR-DIR-INDIVIDUALLY" class="headerlink" title="CHANGE PERMISSIONS TO FILE OR DIR INDIVIDUALLY"></a>CHANGE PERMISSIONS TO FILE OR DIR INDIVIDUALLY</h2><p>To change permissions to file or dir individually, you can use the <code>-exec</code> option of <code>find</code> to execute chmod on each matching file or directory. For example: To find all files in the current directory and its subdirectories and change their permissions to 644, you can use: <code>find . -type f -exec chmod 644 {} ;</code></p>
-<p><code>-type f</code> means file. You can use <code>-type d</code> to find all the dir.</p>
-<h2 id="THANKS"><a href="#THANKS" class="headerlink" title="THANKS"></a>THANKS</h2><p>By the way, this blog was completed with the help of new bing. I asked her many questions and got great answers. She also helped me correct errors and polish my writing. She is just too amazing!</p>
-<h2 id="REFERENCE"><a href="#REFERENCE" class="headerlink" title="REFERENCE"></a>REFERENCE</h2><ul>
-<li><a href="https://www.runoob.com/linux/linux-comm-chmod.html">《Linux chmod 命令 | 菜鸟教程》</a></li>
-<li><a href="https://blog.csdn.net/u013197629/article/details/73608613">《Linux 权限详解（chmod、600、644、700、711、755、777、4755、6755、7755）》</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>chmod</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>VS Code 中文乱码问题</title>
     <url>/posts/ca05bed5.html</url>
     <content><![CDATA[<p><strong>2023 年 1 月 12 日更新：</strong> 找到了方便地改变 Windows 中终端默认编码的方法，所以原来的改变 C/C++ 文件默认编码的方法可以淘汰了。</p>
@@ -1839,6 +1839,55 @@
       <tags>
         <tag>VS Code</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Installing Ubuntu</title>
+    <url>/posts/ca281680.html</url>
+    <content><![CDATA[<p>This is NOT a tutorial of installing Ubuntu. Just write down some issues I met during my installation.</p>
+<span id="more"></span>
+
+<h2 id="USER"><a href="#USER" class="headerlink" title="USER"></a>USER</h2><p>It’s not recommended to login your ubuntu as <code>root</code>. To create a new user with the default home directory, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ useradd --create-home &lt;username&gt;</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ useradd -m &lt;username&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To add the new user to sudoers, run the command below as <code>root</code>:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># visudo</span></span><br></pre></td></tr></tbody></table></figure>
+
+<div class="note "><p>You may install <code>sudo</code> first. Run the command below as <code>root</code>:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># apt install sudo</span></span><br></pre></td></tr></tbody></table></figure>
+</div>
+
+<h2 id="SOFTWARE"><a href="#SOFTWARE" class="headerlink" title="SOFTWARE"></a>SOFTWARE</h2><h3 id="PACKAGE-MANAGER"><a href="#PACKAGE-MANAGER" class="headerlink" title="PACKAGE MANAGER"></a>PACKAGE MANAGER</h3><p>The first thing you need to do is configuring <code>apt</code>‘s mirror.</p>
+<p>If you also want to use the mirror from Tsinghua:</p>
+<p>See <em><a href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/">ubuntu | 镜像使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror</a></em></p>
+<p>To update your <code>apt</code> repository, press <code>Ctrl + Alt + T</code> to run a terminal, and run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt upgrade</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="SHELL"><a href="#SHELL" class="headerlink" title="SHELL"></a>SHELL</h3><p>I often use fishshell as my default login shell. To install it, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ sudo apt install fish</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To set fishshell for the current user:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ chsh --shell &lt;path/to/fish&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To find out where fishshell is, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ <span class="built_in">which</span> fish</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="APPSTORE"><a href="#APPSTORE" class="headerlink" title="APPSTORE"></a>APPSTORE</h3><p>This one is interesting. You may give it a try.</p>
+<p><em><a href="https://gitee.com/deepin-community-store/spark-store">Spark-Store</a></em></p>
+<h3 id="BROWSER"><a href="#BROWSER" class="headerlink" title="BROWSER"></a>BROWSER</h3><p>I use Microsoft Edge. It’s pretty easy to download the <code>.deb</code> on its <em><a href="https://www.microsoft.com/en-us/edge/download">official website</a></em>. But if you want to install it from command line:</p>
+<p>See <em><a href="https://www.linuxcapable.com/how-to-install-microsoft-edge-on-ubuntu-linux/">How to Install Microsoft Edge on Ubuntu 22.04 | 20.04 - LinuxCapable</a></em></p>
+<h3 id="PROXY"><a href="#PROXY" class="headerlink" title="PROXY"></a>PROXY</h3><p>Maybe <em><a href="https://github.com/zzzgydi/clash-verge">zzzgydi/clash-verge: A Clash GUI based on tauri. Supports Windows, macOS and Linux</a></em> or <em><a href="https://github.com/Fndroid/clash_for_windows_pkg">Fndroid/clash_for_windows_pkg</a></em></p>
+<h2 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h2><p>Q: The operating system always freezes on the welcome page.<br>A: Install / Update NVIDIA driver.</p>
+<p>See <em><a href="https://www.cnblogs.com/Leozi/p/13281224.html">Ubuntu 下安装 NVIDIA 驱动的三种方法</a></em></p>
+<p>and <em><a href="https://superuser.com/questions/1750975/nouveau-00000100-0-drm-failed-to-idle-channel-0-drm">ubuntu - nouveau 0000:01:00.0: DRM: failed to idle channel 0 [DRM] - Super User</a></em></p>
+<p>Q: Why the Microsoft Edge always show <em>This page is having a problem</em>?</p>
+<p>A: See <em><a href="https://answers.microsoft.com/en-us/microsoftedge/forum/all/this-page-is-having-a-problem-error-code-sigill/e2a09ac0-f243-40cb-a235-41abb2148f07">This page is having a problem Error Code: SIGILL - Microsoft Community</a></em></p>
+<p>and <a href="https://www.linuxcapable.com/how-to-install-microsoft-edge-on-ubuntu-linux/">here</a></p>
+<p>Q: Why does the settings disappear?<br>A: Run <code>sudo apt install gnome-control-center</code> to (re)install gnome-control-center.</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
   </entry>
   <entry>
     <title>VS Code 的安装与配置基础 C/C++ 开发环境</title>
@@ -1925,55 +1974,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Installing Ubuntu</title>
-    <url>/posts/ca281680.html</url>
-    <content><![CDATA[<p>This is NOT a tutorial of installing Ubuntu. Just write down some issues I met during my installation.</p>
-<span id="more"></span>
-
-<h2 id="USER"><a href="#USER" class="headerlink" title="USER"></a>USER</h2><p>It’s not recommended to login your ubuntu as <code>root</code>. To create a new user with the default home directory, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ useradd --create-home &lt;username&gt;</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ useradd -m &lt;username&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>To add the new user to sudoers, run the command below as <code>root</code>:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># visudo</span></span><br></pre></td></tr></tbody></table></figure>
-
-<div class="note "><p>You may install <code>sudo</code> first. Run the command below as <code>root</code>:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># apt install sudo</span></span><br></pre></td></tr></tbody></table></figure>
-</div>
-
-<h2 id="SOFTWARE"><a href="#SOFTWARE" class="headerlink" title="SOFTWARE"></a>SOFTWARE</h2><h3 id="PACKAGE-MANAGER"><a href="#PACKAGE-MANAGER" class="headerlink" title="PACKAGE MANAGER"></a>PACKAGE MANAGER</h3><p>The first thing you need to do is configuring <code>apt</code>‘s mirror.</p>
-<p>If you also want to use the mirror from Tsinghua:</p>
-<p>See <em><a href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/">ubuntu | 镜像使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror</a></em></p>
-<p>To update your <code>apt</code> repository, press <code>Ctrl + Alt + T</code> to run a terminal, and run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt upgrade</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="SHELL"><a href="#SHELL" class="headerlink" title="SHELL"></a>SHELL</h3><p>I often use fishshell as my default login shell. To install it, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ sudo apt install fish</span><br></pre></td></tr></tbody></table></figure>
-
-<p>To set fishshell for the current user:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ chsh --shell &lt;path/to/fish&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>To find out where fishshell is, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ <span class="built_in">which</span> fish</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="APPSTORE"><a href="#APPSTORE" class="headerlink" title="APPSTORE"></a>APPSTORE</h3><p>This one is interesting. You may give it a try.</p>
-<p><em><a href="https://gitee.com/deepin-community-store/spark-store">Spark-Store</a></em></p>
-<h3 id="BROWSER"><a href="#BROWSER" class="headerlink" title="BROWSER"></a>BROWSER</h3><p>I use Microsoft Edge. It’s pretty easy to download the <code>.deb</code> on its <em><a href="https://www.microsoft.com/en-us/edge/download">official website</a></em>. But if you want to install it from command line:</p>
-<p>See <em><a href="https://www.linuxcapable.com/how-to-install-microsoft-edge-on-ubuntu-linux/">How to Install Microsoft Edge on Ubuntu 22.04 | 20.04 - LinuxCapable</a></em></p>
-<h3 id="PROXY"><a href="#PROXY" class="headerlink" title="PROXY"></a>PROXY</h3><p>Maybe <em><a href="https://github.com/zzzgydi/clash-verge">zzzgydi/clash-verge: A Clash GUI based on tauri. Supports Windows, macOS and Linux</a></em> or <em><a href="https://github.com/Fndroid/clash_for_windows_pkg">Fndroid/clash_for_windows_pkg</a></em></p>
-<h2 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h2><p>Q: The operating system always freezes on the welcome page.<br>A: Install / Update NVIDIA driver.</p>
-<p>See <em><a href="https://www.cnblogs.com/Leozi/p/13281224.html">Ubuntu 下安装 NVIDIA 驱动的三种方法</a></em></p>
-<p>and <em><a href="https://superuser.com/questions/1750975/nouveau-00000100-0-drm-failed-to-idle-channel-0-drm">ubuntu - nouveau 0000:01:00.0: DRM: failed to idle channel 0 [DRM] - Super User</a></em></p>
-<p>Q: Why the Microsoft Edge always show <em>This page is having a problem</em>?</p>
-<p>A: See <em><a href="https://answers.microsoft.com/en-us/microsoftedge/forum/all/this-page-is-having-a-problem-error-code-sigill/e2a09ac0-f243-40cb-a235-41abb2148f07">This page is having a problem Error Code: SIGILL - Microsoft Community</a></em></p>
-<p>and <a href="https://www.linuxcapable.com/how-to-install-microsoft-edge-on-ubuntu-linux/">here</a></p>
-<p>Q: Why does the settings disappear?<br>A: Run <code>sudo apt install gnome-control-center</code> to (re)install gnome-control-center.</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-  </entry>
-  <entry>
     <title>My &quot;.vimrc&quot;</title>
     <url>/posts/96f7ff9f.html</url>
     <content><![CDATA[<p>There are a huge amount of options in Vim. It enables us to customize our own Vim as our wishes.</p>
@@ -2018,6 +2018,28 @@
       </categories>
       <tags>
         <tag>Vim</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>补记一个用 Vue.js 和 ElementUI 实现的在线抽奖网页</title>
+    <url>/posts/6a8a1633.html</url>
+    <content><![CDATA[<p>这件事儿发生在我的高中某个新学期开始，新来了一个电脑老师。有点打赌或者考验我的性质吧，ta 说 ta 弄了随机数点名的小网页，还能用同学的照片进行抽取，问我能不能实现一个。ta 的实现方法是 jQuery，技术上比较老，界面也不太好看。我想去尝试一下别的方法，正好也试试略微学了一点的 Vue.js，为了好看，用了 Element UI。</p>
+<span id="more"></span>
+
+<p>一两个周末最终实现到现在的效果，能输入名字抽人，能随机数抽人（学号抽人？），还有一个通过图片抽的到今天也还没做。当时对着 Vue.js 和 Element UI 的开发文档勉里勉强做出来这个效果，现在早把那些基础知识忘记了，也不知道以后有没有工夫完善它了。</p>
+<p>你可以<a href="/raw/CatchDog/CatchDog.html">点击这里</a>来玩玩看。</p>
+<p><img data-src="https://pic.imgdb.cn/item/6308b57316f2c2beb1fad0f4.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57316f2c2beb1fad0ec.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad081.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad087.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad091.png"></p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Vue.js</tag>
+        <tag>Element UI</tag>
+        <tag>Html</tag>
+        <tag>JS</tag>
+        <tag>Web</tag>
       </tags>
   </entry>
   <entry>
@@ -2165,28 +2187,6 @@
       </tags>
   </entry>
   <entry>
-    <title>补记一个用 Vue.js 和 ElementUI 实现的在线抽奖网页</title>
-    <url>/posts/6a8a1633.html</url>
-    <content><![CDATA[<p>这件事儿发生在我的高中某个新学期开始，新来了一个电脑老师。有点打赌或者考验我的性质吧，ta 说 ta 弄了随机数点名的小网页，还能用同学的照片进行抽取，问我能不能实现一个。ta 的实现方法是 jQuery，技术上比较老，界面也不太好看。我想去尝试一下别的方法，正好也试试略微学了一点的 Vue.js，为了好看，用了 Element UI。</p>
-<span id="more"></span>
-
-<p>一两个周末最终实现到现在的效果，能输入名字抽人，能随机数抽人（学号抽人？），还有一个通过图片抽的到今天也还没做。当时对着 Vue.js 和 Element UI 的开发文档勉里勉强做出来这个效果，现在早把那些基础知识忘记了，也不知道以后有没有工夫完善它了。</p>
-<p>你可以<a href="/raw/CatchDog/CatchDog.html">点击这里</a>来玩玩看。</p>
-<p><img data-src="https://pic.imgdb.cn/item/6308b57316f2c2beb1fad0f4.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57316f2c2beb1fad0ec.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad081.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad087.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad091.png"></p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>Web</tag>
-        <tag>Vue.js</tag>
-        <tag>Element UI</tag>
-        <tag>Html</tag>
-        <tag>JS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>RLCraft 新手教程一：过渡到你的正常生存</title>
     <url>/posts/a1ada34d.html</url>
     <content><![CDATA[<p>本教程是笔者自己游玩过程中写的，出发点是笔者自己想玩但又不想花费时间看很多实况去了解一些细节，又找不到比较详细的文字版中文教程，以致于无从下手，只能慢慢啃各种模组的百科和 RLCraft Wiki，便以教程形式写下自己的游玩过程，希望对后来者有所帮助。笔者不是什么资深玩家，故难免有疏漏，请大家多多包涵。</p>
@@ -2238,6 +2238,72 @@
       </categories>
       <tags>
         <tag>C/C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ const 用法汇总</title>
+    <url>/posts/7ec6ba38.html</url>
+    <content><![CDATA[<p>最开始只是用 const 来定义常量，学到了指针传参的时候又知道了用 const 来防止一些值的修改，学到类的时候又看到非静态成员函数后边加个 const 来干嘛干嘛，然后么又听说什么顶层 const、底层 const… 真是越学越迷糊了，赶紧做一波整理。</p>
+<span id="more"></span>
+
+<p><strong>[2023 年 3 月 24 日更新：]</strong> 此文章已经重写，请查看：_<a href="https://blocklune.github.io/posts/3358bcc1.html">The const and constexpr in C++ (REMAKE)</a>_</p>
+<h2 id="最基本的用法-——-定义常量"><a href="#最基本的用法-——-定义常量" class="headerlink" title="最基本的用法 —— 定义常量"></a>最基本的用法 —— 定义常量</h2><p>这个不必多说，直接上代码：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> b = <span class="number">1</span>;</span><br><span class="line">a = <span class="number">2</span>; <span class="comment">// 正确：a 没有 const 修饰，可以改变其值</span></span><br><span class="line">b = <span class="number">2</span>; <span class="comment">// 错误：b 有 const 修饰，不能改变其值</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>除了这个，还有一点是，虽然似乎我们可以通过一些 “骚操作” 改变 const 修饰的变量（常量？）的值，但是输出的时候，会发现结果并没有改变。看下边的代码：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> x = <span class="number">7</span>;</span><br><span class="line">    <span class="type">int</span> *p = (<span class="type">int</span> *)&amp;x;</span><br><span class="line">    <span class="comment">// 奇怪的骚操作</span></span><br><span class="line">    <span class="comment">// 直接 int *p = &amp;x; 是不行的</span></span><br><span class="line">    <span class="comment">// 但这样可以</span></span><br><span class="line">    <span class="comment">// 这样我们就可以通过指针 p 来直接操作那块内存</span></span><br><span class="line">    *p = <span class="number">12</span>;</span><br><span class="line">    cout &lt;&lt; x &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment">7</span></span><br><span class="line"><span class="comment">12</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>但是如果加上 <code>volatile</code> 关键词，却可以发现结果也可以跟着变：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">volatile</span> <span class="type">const</span> <span class="type">int</span> x = <span class="number">7</span>;</span><br><span class="line">    <span class="type">int</span> *p = (<span class="type">int</span> *)&amp;x;</span><br><span class="line">    *p = <span class="number">12</span>;</span><br><span class="line">    cout &lt;&lt; x &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment">12</span></span><br><span class="line"><span class="comment">12</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>但是，上边的 <code>const</code> 修饰的都不是全局变量。如果修饰的是全局变量，我们似乎就不能通过指针的小把戏来改变 <code>const</code> 的值了：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// 错误代码：</span></span><br><span class="line"><span class="comment">// 这玩意儿能通过编译，但是压根跑不起来</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> x = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p1 = (<span class="type">int</span> *)&amp;x;</span><br><span class="line">    *p1 = <span class="number">7</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"x = "</span> &lt;&lt; x &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"*p1 = "</span> &lt;&lt; *p1 &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>但如果加上了 <code>volatile</code> 依然可以跑，并且也可以用指针来修改它的值：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">volatile</span> <span class="type">const</span> <span class="type">int</span> y = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p2 = (<span class="type">int</span> *)&amp;y;</span><br><span class="line">    *p2 = <span class="number">8</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"y = "</span> &lt;&lt; y &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"*p2 = "</span> &lt;&lt; *p2 &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">运行结果：</span></span><br><span class="line"><span class="comment">y = 8</span></span><br><span class="line"><span class="comment">*p2 = 8</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>总结一下，就是 ——</p>
+<ol>
+<li>如果是局部的 <code>const</code>，那至少有两方面的保护：一是编译检查，看看我们下边的代码是否显而易见地尝试去改变它的值，如果有那就报错；二是编译器的自动优化，编译器会把这个变量的值复制一份放到寄存器里，所以即使我们用指针改变了原来内存里的值，输出的结果还是原来的值（备份到寄存器的原来的值的拷贝），所以当我们使用 <code>voliatile</code> 关键字关闭了编译器的这种优化，让程序每运行到要用到这个 <code>const</code> 修饰的变量的时候都去原来的地址读取值的时候，我们的小把戏成功了。</li>
+<li>如果是全局的 <code>const</code>，还会有其他的机制，具体还没弄清楚，不过你可以看看<a href="https://zhuanlan.zhihu.com/p/145323002">《Linux 系统编程学习总结 （二）ELF - 知乎》</a>这篇文章，也许会有帮助？</li>
+</ol>
+<h2 id="顶层-const-和底层-const"><a href="#顶层-const-和底层-const" class="headerlink" title="顶层 const 和底层 const"></a>顶层 const 和底层 const</h2><p>首先，讨论顶层底层的 const，一般都是对指针变量才有意义。那么啥是顶层 const？啥是底层 const？</p>
+<blockquote>
+<p><strong>顶层 const</strong>（top-level const）表示指针<strong>本身</strong>是个常量；<br><strong>底层 const</strong>（low-level const）表示指针所指的<strong>对象</strong>是一个常量。</p>
+</blockquote>
+<p>举几个例子：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">7</span>;</span><br><span class="line"><span class="type">int</span> y = <span class="number">12</span>;</span><br><span class="line"><span class="type">int</span> *<span class="type">const</span> p1 = &amp;x;       <span class="comment">// 顶层 const</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> *p2 = &amp;x;       <span class="comment">// 底层 const</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> *<span class="type">const</span> p3 = &amp;x; <span class="comment">// 左边是底层 const, 右边是顶层 const</span></span><br><span class="line">p1 = &amp;y;                  <span class="comment">// 错误，p1 是顶层 const 修饰的，所以 p1 指向的地址是确定的，无法更改它的指向</span></span><br><span class="line">p2 = &amp;y;                  <span class="comment">// 正确，p2 没有被顶层 const 修饰，这意味着我们可以修改它的指向</span></span><br><span class="line">p3 = &amp;y;                  <span class="comment">// 错误</span></span><br><span class="line">*p1 = y;                  <span class="comment">// 正确，p1 没有被底层 const 修饰，这意味着我们可以修改它指向的值</span></span><br><span class="line">*p2 = y;                  <span class="comment">// 错误，p2 是底层 const 修饰的，我们无法改变它指向的值</span></span><br><span class="line">*p3 = y;                  <span class="comment">// 错误</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>也就是说：</p>
+<ul>
+<li>仅仅被顶层 const 修饰，意味着指针变量的指向无法改变，但可以操作指向的值（指针常量？指针（地址）是个常量）；</li>
+<li>仅仅被底层 const 修饰，意味着指针变量的指向可以改变，但无法操作指向的值（常量指针？ 指向常量的指针）；</li>
+<li>如果两重修饰，那么就就没办法改变指针的指向，也没办法操作指向的值。</li>
+</ul>
+<p>顺便一说对于引用的情况。因为引用必须初始化并且初始化完成后（起玩别名后就不能改变它引用的对象了），所以 <code>const int &amp;</code> 就是顶层的，并且没有 <code>int &amp; const</code> 这种写法。</p>
+<h2 id="函数中的-const"><a href="#函数中的-const" class="headerlink" title="函数中的 const"></a>函数中的 const</h2><h3 id="参数列表中的-const"><a href="#参数列表中的-const" class="headerlink" title="参数列表中的 const"></a>参数列表中的 const</h3><p>其实就是希望函数运行过程中不改变这个变量的值。比如写函数原型的时候用 <code>const int &amp;</code>，其中 <code>const</code> 表示这个函数对这个变量的操作是只读的，不会改变原来的值，而 <code>&amp;</code> 的作用就是，既然这里只是要读一读这个变量的值，并不对它进行操作，那我就不创建副本了，直接用它自己。</p>
+<h3 id="返回的-const"><a href="#返回的-const" class="headerlink" title="返回的 const"></a>返回的 const</h3><p>这边还没弄清楚，以后弄清楚了再写。</p>
+<h2 id="类的非静态成员函数后边跟的-const"><a href="#类的非静态成员函数后边跟的-const" class="headerlink" title="类的非静态成员函数后边跟的 const"></a>类的非静态成员函数后边跟的 const</h2><p>这样可以让这个函数的 <code>this</code> 是只读的。</p>
+<p>看这篇文章：<a href="https://blog.51cto.com/u_11495341/3040168">《C\C++ 中函数后面加 const_51CTO 博客_c++ const 函数》</a></p>
+<blockquote>
+<p>非静态成员函数后面加 const（加到非成员函数或静态成员后面会产生编译错误）表示成员函数隐含传入的 this 指针为 const 指针，决定了在该成员函数中， 任意修改它所在的类的成员的操作都是不允许的（因为隐含了对 this 指针的 const 引用）<br>唯一的例外是对于 mutable 修饰的成员。加了 const 的成员函数，可以被非 const 对象和 const 对象调用，但不加 const 的成员函数 只能被非 const 对象调用。</p>
+</blockquote>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://www.cnblogs.com/Forever-Kenlen-Ja/p/3776991.html">《C++ const 用法小结 （欢迎大家拍砖） - karllen - 博客园》</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/145323002">《Linux 系统编程学习总结 （二）ELF - 知乎》</a></li>
+<li><a href="https://blog.51cto.com/u_11495341/3040168">《C\C++ 中函数后面加 const_51CTO 博客_c++ const 函数》</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/499784237">《C++ 顶层 const 和底层 const - 知乎》</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/161560391">《C++ 干货系列 —— 顶层 const 和底层 const - 知乎》</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+        <tag>const</tag>
       </tags>
   </entry>
   <entry>
@@ -2541,72 +2607,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C++ const 用法汇总</title>
-    <url>/posts/7ec6ba38.html</url>
-    <content><![CDATA[<p>最开始只是用 const 来定义常量，学到了指针传参的时候又知道了用 const 来防止一些值的修改，学到类的时候又看到非静态成员函数后边加个 const 来干嘛干嘛，然后么又听说什么顶层 const、底层 const… 真是越学越迷糊了，赶紧做一波整理。</p>
-<span id="more"></span>
-
-<p><strong>[2023 年 3 月 24 日更新：]</strong> 此文章已经重写，请查看：_<a href="https://blocklune.github.io/posts/3358bcc1.html">The const and constexpr in C++ (REMAKE)</a>_</p>
-<h2 id="最基本的用法-——-定义常量"><a href="#最基本的用法-——-定义常量" class="headerlink" title="最基本的用法 —— 定义常量"></a>最基本的用法 —— 定义常量</h2><p>这个不必多说，直接上代码：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> b = <span class="number">1</span>;</span><br><span class="line">a = <span class="number">2</span>; <span class="comment">// 正确：a 没有 const 修饰，可以改变其值</span></span><br><span class="line">b = <span class="number">2</span>; <span class="comment">// 错误：b 有 const 修饰，不能改变其值</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>除了这个，还有一点是，虽然似乎我们可以通过一些 “骚操作” 改变 const 修饰的变量（常量？）的值，但是输出的时候，会发现结果并没有改变。看下边的代码：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> x = <span class="number">7</span>;</span><br><span class="line">    <span class="type">int</span> *p = (<span class="type">int</span> *)&amp;x;</span><br><span class="line">    <span class="comment">// 奇怪的骚操作</span></span><br><span class="line">    <span class="comment">// 直接 int *p = &amp;x; 是不行的</span></span><br><span class="line">    <span class="comment">// 但这样可以</span></span><br><span class="line">    <span class="comment">// 这样我们就可以通过指针 p 来直接操作那块内存</span></span><br><span class="line">    *p = <span class="number">12</span>;</span><br><span class="line">    cout &lt;&lt; x &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment">7</span></span><br><span class="line"><span class="comment">12</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>但是如果加上 <code>volatile</code> 关键词，却可以发现结果也可以跟着变：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">volatile</span> <span class="type">const</span> <span class="type">int</span> x = <span class="number">7</span>;</span><br><span class="line">    <span class="type">int</span> *p = (<span class="type">int</span> *)&amp;x;</span><br><span class="line">    *p = <span class="number">12</span>;</span><br><span class="line">    cout &lt;&lt; x &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment">12</span></span><br><span class="line"><span class="comment">12</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>但是，上边的 <code>const</code> 修饰的都不是全局变量。如果修饰的是全局变量，我们似乎就不能通过指针的小把戏来改变 <code>const</code> 的值了：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// 错误代码：</span></span><br><span class="line"><span class="comment">// 这玩意儿能通过编译，但是压根跑不起来</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> x = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p1 = (<span class="type">int</span> *)&amp;x;</span><br><span class="line">    *p1 = <span class="number">7</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"x = "</span> &lt;&lt; x &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"*p1 = "</span> &lt;&lt; *p1 &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>但如果加上了 <code>volatile</code> 依然可以跑，并且也可以用指针来修改它的值：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">volatile</span> <span class="type">const</span> <span class="type">int</span> y = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p2 = (<span class="type">int</span> *)&amp;y;</span><br><span class="line">    *p2 = <span class="number">8</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"y = "</span> &lt;&lt; y &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"*p2 = "</span> &lt;&lt; *p2 &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">运行结果：</span></span><br><span class="line"><span class="comment">y = 8</span></span><br><span class="line"><span class="comment">*p2 = 8</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>总结一下，就是 ——</p>
-<ol>
-<li>如果是局部的 <code>const</code>，那至少有两方面的保护：一是编译检查，看看我们下边的代码是否显而易见地尝试去改变它的值，如果有那就报错；二是编译器的自动优化，编译器会把这个变量的值复制一份放到寄存器里，所以即使我们用指针改变了原来内存里的值，输出的结果还是原来的值（备份到寄存器的原来的值的拷贝），所以当我们使用 <code>voliatile</code> 关键字关闭了编译器的这种优化，让程序每运行到要用到这个 <code>const</code> 修饰的变量的时候都去原来的地址读取值的时候，我们的小把戏成功了。</li>
-<li>如果是全局的 <code>const</code>，还会有其他的机制，具体还没弄清楚，不过你可以看看<a href="https://zhuanlan.zhihu.com/p/145323002">《Linux 系统编程学习总结 （二）ELF - 知乎》</a>这篇文章，也许会有帮助？</li>
-</ol>
-<h2 id="顶层-const-和底层-const"><a href="#顶层-const-和底层-const" class="headerlink" title="顶层 const 和底层 const"></a>顶层 const 和底层 const</h2><p>首先，讨论顶层底层的 const，一般都是对指针变量才有意义。那么啥是顶层 const？啥是底层 const？</p>
-<blockquote>
-<p><strong>顶层 const</strong>（top-level const）表示指针<strong>本身</strong>是个常量；<br><strong>底层 const</strong>（low-level const）表示指针所指的<strong>对象</strong>是一个常量。</p>
-</blockquote>
-<p>举几个例子：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">7</span>;</span><br><span class="line"><span class="type">int</span> y = <span class="number">12</span>;</span><br><span class="line"><span class="type">int</span> *<span class="type">const</span> p1 = &amp;x;       <span class="comment">// 顶层 const</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> *p2 = &amp;x;       <span class="comment">// 底层 const</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> *<span class="type">const</span> p3 = &amp;x; <span class="comment">// 左边是底层 const, 右边是顶层 const</span></span><br><span class="line">p1 = &amp;y;                  <span class="comment">// 错误，p1 是顶层 const 修饰的，所以 p1 指向的地址是确定的，无法更改它的指向</span></span><br><span class="line">p2 = &amp;y;                  <span class="comment">// 正确，p2 没有被顶层 const 修饰，这意味着我们可以修改它的指向</span></span><br><span class="line">p3 = &amp;y;                  <span class="comment">// 错误</span></span><br><span class="line">*p1 = y;                  <span class="comment">// 正确，p1 没有被底层 const 修饰，这意味着我们可以修改它指向的值</span></span><br><span class="line">*p2 = y;                  <span class="comment">// 错误，p2 是底层 const 修饰的，我们无法改变它指向的值</span></span><br><span class="line">*p3 = y;                  <span class="comment">// 错误</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>也就是说：</p>
-<ul>
-<li>仅仅被顶层 const 修饰，意味着指针变量的指向无法改变，但可以操作指向的值（指针常量？指针（地址）是个常量）；</li>
-<li>仅仅被底层 const 修饰，意味着指针变量的指向可以改变，但无法操作指向的值（常量指针？ 指向常量的指针）；</li>
-<li>如果两重修饰，那么就就没办法改变指针的指向，也没办法操作指向的值。</li>
-</ul>
-<p>顺便一说对于引用的情况。因为引用必须初始化并且初始化完成后（起玩别名后就不能改变它引用的对象了），所以 <code>const int &amp;</code> 就是顶层的，并且没有 <code>int &amp; const</code> 这种写法。</p>
-<h2 id="函数中的-const"><a href="#函数中的-const" class="headerlink" title="函数中的 const"></a>函数中的 const</h2><h3 id="参数列表中的-const"><a href="#参数列表中的-const" class="headerlink" title="参数列表中的 const"></a>参数列表中的 const</h3><p>其实就是希望函数运行过程中不改变这个变量的值。比如写函数原型的时候用 <code>const int &amp;</code>，其中 <code>const</code> 表示这个函数对这个变量的操作是只读的，不会改变原来的值，而 <code>&amp;</code> 的作用就是，既然这里只是要读一读这个变量的值，并不对它进行操作，那我就不创建副本了，直接用它自己。</p>
-<h3 id="返回的-const"><a href="#返回的-const" class="headerlink" title="返回的 const"></a>返回的 const</h3><p>这边还没弄清楚，以后弄清楚了再写。</p>
-<h2 id="类的非静态成员函数后边跟的-const"><a href="#类的非静态成员函数后边跟的-const" class="headerlink" title="类的非静态成员函数后边跟的 const"></a>类的非静态成员函数后边跟的 const</h2><p>这样可以让这个函数的 <code>this</code> 是只读的。</p>
-<p>看这篇文章：<a href="https://blog.51cto.com/u_11495341/3040168">《C\C++ 中函数后面加 const_51CTO 博客_c++ const 函数》</a></p>
-<blockquote>
-<p>非静态成员函数后面加 const（加到非成员函数或静态成员后面会产生编译错误）表示成员函数隐含传入的 this 指针为 const 指针，决定了在该成员函数中， 任意修改它所在的类的成员的操作都是不允许的（因为隐含了对 this 指针的 const 引用）<br>唯一的例外是对于 mutable 修饰的成员。加了 const 的成员函数，可以被非 const 对象和 const 对象调用，但不加 const 的成员函数 只能被非 const 对象调用。</p>
-</blockquote>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="https://www.cnblogs.com/Forever-Kenlen-Ja/p/3776991.html">《C++ const 用法小结 （欢迎大家拍砖） - karllen - 博客园》</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/145323002">《Linux 系统编程学习总结 （二）ELF - 知乎》</a></li>
-<li><a href="https://blog.51cto.com/u_11495341/3040168">《C\C++ 中函数后面加 const_51CTO 博客_c++ const 函数》</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/499784237">《C++ 顶层 const 和底层 const - 知乎》</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/161560391">《C++ 干货系列 —— 顶层 const 和底层 const - 知乎》</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-        <tag>const</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++ 中 cin 与 cout 的转进制输入输出</title>
     <url>/posts/9e863176.html</url>
     <content><![CDATA[<p>笔者的朋友有道输入八进制输出十进制的题目，他是使用数学方法实现的。笔者隐隐约约记得好像 cin 和 cout 有控制输入输出数字进制的方法，查找了一些资料，做一下笔记。</p>
@@ -2794,6 +2794,52 @@
       </tags>
   </entry>
   <entry>
+    <title>The const and constexpr in C++ (REMAKE)</title>
+    <url>/posts/3358bcc1.html</url>
+    <content><![CDATA[<p>I have written a post about <code>const</code> in C++ in Chinese before, but <a href="https://blocklune.github.io/posts/7ec6ba38.html">it</a> was too verbose and unclear. :( So, I decided to rewrite it.</p>
+<span id="more"></span>
+
+<h2 id="BASIC-USAGE-OF-CONST"><a href="#BASIC-USAGE-OF-CONST" class="headerlink" title="BASIC USAGE OF CONST"></a>BASIC USAGE OF CONST</h2><h3 id="MODIFIES-BASIC-DATE-TYPE-WITH-CONST"><a href="#MODIFIES-BASIC-DATE-TYPE-WITH-CONST" class="headerlink" title="MODIFIES BASIC DATE TYPE WITH CONST"></a>MODIFIES BASIC DATE TYPE WITH CONST</h3><p>The most basic usage of <code>const</code> is to define a constant. A constant is a variable whose value cannot be changed after initialization.</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">double</span> b = <span class="number">1.0</span>; <span class="comment">// now b is immutable</span></span><br><span class="line"></span><br><span class="line">a = <span class="number">2</span>; <span class="comment">// a is a variable. It's okay.</span></span><br><span class="line"><span class="comment">// b = 2.0; // WRONG! b is a constant.</span></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="MODIFIES-POINTERS-WITH-CONST"><a href="#MODIFIES-POINTERS-WITH-CONST" class="headerlink" title="MODIFIES POINTERS WITH CONST"></a>MODIFIES POINTERS WITH CONST</h3><p>When it comes to pointers, <code>const</code> can be used in two ways: <strong>top-level const</strong> and <strong>low-level const</strong>.</p>
+<blockquote>
+<p>Top-level const means that the pointer itself is a constant, i.e. you can’t change what it points to.<br>Low-level const means that the object that the pointer points to is a constant, i.e. you can’t change the value of that object through this pointer.</p>
+</blockquote>
+<p>For example:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">1</span>;</span><br><span class="line"><span class="type">int</span> y = <span class="number">2</span>;</span><br><span class="line"><span class="type">int</span> *<span class="type">const</span> p1 = &amp;x;       <span class="comment">// top-level const</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> *p2 = &amp;x;       <span class="comment">// low-level const</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> *<span class="type">const</span> p3 = &amp;x; <span class="comment">// The first is low-level</span></span><br><span class="line">                          <span class="comment">// The second is top-level</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// p1 = &amp;y;               // WRONG! p1 is a constant pointer, it can't change its direction.</span></span><br><span class="line">*p1 = y;                  <span class="comment">// OK</span></span><br><span class="line"></span><br><span class="line">p2 = &amp;y;                  <span class="comment">// OK</span></span><br><span class="line"><span class="comment">// *p2 = y;               // WRONG! p2 points at a constant.</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// p3 = &amp;y;               // WRONG!</span></span><br><span class="line"><span class="comment">// *p3 = y;               // WRONG!</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="MODIFIES-REFERENCE-WITH-CONST"><a href="#MODIFIES-REFERENCE-WITH-CONST" class="headerlink" title="MODIFIES REFERENCE WITH CONST"></a>MODIFIES REFERENCE WITH CONST</h3><p>For reference, there is only one way to use <code>const</code>: <code>const T &amp;</code> (T is type name). Reference itself (like <code>T &amp;</code>) is always top-level, since you can’t change what it refers to after its initialization. So, <code>const T &amp;</code> makes the reference both top-level and low-level.</p>
+<h3 id="MODIFIES-OBJECTS-WITH-CONST"><a href="#MODIFIES-OBJECTS-WITH-CONST" class="headerlink" title="MODIFIES OBJECTS WITH CONST"></a>MODIFIES OBJECTS WITH CONST</h3><p>Modifying an object with <code>const</code> means that this object is immutable after its initialization.</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">const</span> std::string str = <span class="string">"This is an immutable string."</span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="CONST-IN-FUNCTIONS"><a href="#CONST-IN-FUNCTIONS" class="headerlink" title="CONST IN FUNCTIONS"></a>CONST IN FUNCTIONS</h2><h3 id="CONST-IN-PARAMETER-LIST"><a href="#CONST-IN-PARAMETER-LIST" class="headerlink" title="CONST IN PARAMETER LIST"></a>CONST IN PARAMETER LIST</h3><p>A parameter modified with <code>const</code> means it is <strong>read-only</strong> to the function. Usually, we use this feature together with reference. So, when we don’t want a function to change a specific argument, the parameter’s type may look like <code>const T &amp;</code>.</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Show</span><span class="params">(<span class="type">const</span> T &amp;)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  std::string str = <span class="string">"This is an example."</span>;</span><br><span class="line">  <span class="built_in">Show</span>(str);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Show</span><span class="params">(<span class="type">const</span> T &amp;in)</span> </span>{</span><br><span class="line">  <span class="comment">// in is read-only</span></span><br><span class="line">  std::cout &lt;&lt; in &lt;&lt; std::endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="THE-CONST-AFTER-A-MEMBER-FUNCTION"><a href="#THE-CONST-AFTER-A-MEMBER-FUNCTION" class="headerlink" title="THE CONST AFTER A MEMBER FUNCTION"></a>THE CONST AFTER A MEMBER FUNCTION</h3><p>The const after a member function indicates that the function does not modify any non-mutable data members of the class. In other words, this means that the <code>this</code> pointer is const, implying that this member function does not alter the state of this object.</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Fish</span> {</span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  <span class="type">double</span> weight_;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="built_in">Fish</span>() : <span class="built_in">weight_</span>(<span class="number">0</span>) {}</span><br><span class="line">  <span class="built_in">Fish</span>(<span class="type">const</span> <span class="type">double</span>&amp; weight) : <span class="built_in">weight_</span>(weight) {}</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">ModifyWeight</span><span class="params">(<span class="type">const</span> <span class="type">double</span>&amp; weight)</span></span>;</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">ShowWeight</span><span class="params">()</span> <span class="type">const</span></span>; <span class="comment">// Just show the weight. Read-only.</span></span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Fish::ModifyWeight</span><span class="params">(<span class="type">const</span> <span class="type">double</span>&amp; weight)</span> </span>{ <span class="keyword">this</span>-&gt;weight_ = weight; }</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Fish::ShowWeight</span><span class="params">()</span> <span class="type">const</span> </span>{ std::cout &lt;&lt; <span class="keyword">this</span>-&gt;weight_ &lt;&lt; std::endl; }</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="function">Fish <span class="title">fish</span><span class="params">(<span class="number">5.0</span>)</span></span>;</span><br><span class="line">  fish.<span class="built_in">ShowWeight</span>();</span><br><span class="line">  fish.<span class="built_in">ModifyWeight</span>(<span class="number">10.0</span>);</span><br><span class="line">  fish.<span class="built_in">ShowWeight</span>();</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="RETURNS-A-CONST"><a href="#RETURNS-A-CONST" class="headerlink" title="RETURNS A CONST"></a>RETURNS A CONST</h3><p>When returning an object, the <code>const</code> before the return type indicates that this object is a constant and is immutable. For example: <code>const int&amp; GetAgeConst()</code>, which returns a rvalue whose referenced content cannot be modified.</p>
+<p>When return a pointer type (or a reference), <code>const</code> helps protect the pointer or reference content from being modified. For example: <code>const char * const Fun()</code>, which returns a pointer to a constant, whose pointed content and the pointer itself cannot be modified.</p>
+<p>Here is an example generated by new bing:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> {</span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  <span class="type">int</span> age;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="built_in">Person</span>(<span class="type">int</span> a) : <span class="built_in">age</span>(a) {}</span><br><span class="line">  <span class="function"><span class="type">const</span> <span class="type">int</span>&amp; <span class="title">GetAgeConst</span><span class="params">()</span> <span class="type">const</span> </span>{ <span class="keyword">return</span> age; }</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="function">Person <span class="title">p</span><span class="params">(<span class="number">20</span>)</span></span>;</span><br><span class="line">  cout &lt;&lt; <span class="string">"The age is "</span> &lt;&lt; p.<span class="built_in">GetAgeConst</span>() &lt;&lt; endl;</span><br><span class="line">  <span class="comment">// p.GetAgeConst() = 30; // WRONG</span></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="CONSTEXPR-NEW-IN-C-11"><a href="#CONSTEXPR-NEW-IN-C-11" class="headerlink" title="CONSTEXPR (NEW IN C++11)"></a>CONSTEXPR (NEW IN C++11)</h2><p><code>constexpr</code> keyword helps the compiler find those constant expressions at compile stage. A really common place of use is defining an array:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">constexpr</span> <span class="type">int</span> <span class="title">GetConstexprLen</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">constexpr</span> <span class="type">int</span> <span class="title">Fibonacci</span><span class="params">(<span class="type">const</span> <span class="type">int</span> n)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> variable_len = <span class="number">10</span>;</span><br><span class="line">  <span class="type">const</span> <span class="type">int</span> const_len = <span class="number">10</span>;</span><br><span class="line">  <span class="keyword">constexpr</span> <span class="type">int</span> constexpr_len = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// int arr1[variable_len];    // Illegal. Not OK.</span></span><br><span class="line">  <span class="comment">// int arr2[const_len];       // Illegal. But usually OK.</span></span><br><span class="line">  <span class="type">int</span> arr3[constexpr_len];      <span class="comment">// Legal. OK.</span></span><br><span class="line">  <span class="type">int</span> arr4[<span class="built_in">GetConstexprLen</span>()];  <span class="comment">// Legal. OK.</span></span><br><span class="line">  <span class="type">int</span> arr5[<span class="built_in">Fibonacci</span>(<span class="number">5</span>)];       <span class="comment">// Legal. OK.</span></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">constexpr</span> <span class="type">int</span> <span class="title">GetConstexprLen</span><span class="params">()</span> </span>{ <span class="keyword">return</span> <span class="number">10</span>; }</span><br><span class="line"><span class="function"><span class="keyword">constexpr</span> <span class="type">int</span> <span class="title">Fibonacci</span><span class="params">(<span class="type">const</span> <span class="type">int</span> n)</span> </span>{</span><br><span class="line">  <span class="comment">// These codes are from https://changkun.de/modern-cpp/</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// You can't use local variables, loops,</span></span><br><span class="line">  <span class="comment">// and conditional statements here in C++11</span></span><br><span class="line">  <span class="comment">// But in C++14, that's OK.</span></span><br><span class="line">  <span class="keyword">return</span> n == <span class="number">1</span> || n == <span class="number">2</span> ? <span class="number">1</span> : <span class="built_in">Fibonacci</span>(n - <span class="number">1</span>) + <span class="built_in">Fibonacci</span>(n - <span class="number">2</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To learn more, you may read <em><a href="https://changkun.de/modern-cpp/">Modern C++ Tutorial</a></em></p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+        <tag>const</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C 语言文件操作</title>
     <url>/posts/914118ff.html</url>
     <content><![CDATA[<p>简单记录一下 C 语言的文件操作的相关内容。</p>
@@ -2940,52 +2986,6 @@
       </tags>
   </entry>
   <entry>
-    <title>The const and constexpr in C++ (REMAKE)</title>
-    <url>/posts/3358bcc1.html</url>
-    <content><![CDATA[<p>I have written a post about <code>const</code> in C++ in Chinese before, but <a href="https://blocklune.github.io/posts/7ec6ba38.html">it</a> was too verbose and unclear. :( So, I decided to rewrite it.</p>
-<span id="more"></span>
-
-<h2 id="BASIC-USAGE-OF-CONST"><a href="#BASIC-USAGE-OF-CONST" class="headerlink" title="BASIC USAGE OF CONST"></a>BASIC USAGE OF CONST</h2><h3 id="MODIFIES-BASIC-DATE-TYPE-WITH-CONST"><a href="#MODIFIES-BASIC-DATE-TYPE-WITH-CONST" class="headerlink" title="MODIFIES BASIC DATE TYPE WITH CONST"></a>MODIFIES BASIC DATE TYPE WITH CONST</h3><p>The most basic usage of <code>const</code> is to define a constant. A constant is a variable whose value cannot be changed after initialization.</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">double</span> b = <span class="number">1.0</span>; <span class="comment">// now b is immutable</span></span><br><span class="line"></span><br><span class="line">a = <span class="number">2</span>; <span class="comment">// a is a variable. It's okay.</span></span><br><span class="line"><span class="comment">// b = 2.0; // WRONG! b is a constant.</span></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="MODIFIES-POINTERS-WITH-CONST"><a href="#MODIFIES-POINTERS-WITH-CONST" class="headerlink" title="MODIFIES POINTERS WITH CONST"></a>MODIFIES POINTERS WITH CONST</h3><p>When it comes to pointers, <code>const</code> can be used in two ways: <strong>top-level const</strong> and <strong>low-level const</strong>.</p>
-<blockquote>
-<p>Top-level const means that the pointer itself is a constant, i.e. you can’t change what it points to.<br>Low-level const means that the object that the pointer points to is a constant, i.e. you can’t change the value of that object through this pointer.</p>
-</blockquote>
-<p>For example:</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">1</span>;</span><br><span class="line"><span class="type">int</span> y = <span class="number">2</span>;</span><br><span class="line"><span class="type">int</span> *<span class="type">const</span> p1 = &amp;x;       <span class="comment">// top-level const</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> *p2 = &amp;x;       <span class="comment">// low-level const</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> *<span class="type">const</span> p3 = &amp;x; <span class="comment">// The first is low-level</span></span><br><span class="line">                          <span class="comment">// The second is top-level</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// p1 = &amp;y;               // WRONG! p1 is a constant pointer, it can't change its direction.</span></span><br><span class="line">*p1 = y;                  <span class="comment">// OK</span></span><br><span class="line"></span><br><span class="line">p2 = &amp;y;                  <span class="comment">// OK</span></span><br><span class="line"><span class="comment">// *p2 = y;               // WRONG! p2 points at a constant.</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// p3 = &amp;y;               // WRONG!</span></span><br><span class="line"><span class="comment">// *p3 = y;               // WRONG!</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="MODIFIES-REFERENCE-WITH-CONST"><a href="#MODIFIES-REFERENCE-WITH-CONST" class="headerlink" title="MODIFIES REFERENCE WITH CONST"></a>MODIFIES REFERENCE WITH CONST</h3><p>For reference, there is only one way to use <code>const</code>: <code>const T &amp;</code> (T is type name). Reference itself (like <code>T &amp;</code>) is always top-level, since you can’t change what it refers to after its initialization. So, <code>const T &amp;</code> makes the reference both top-level and low-level.</p>
-<h3 id="MODIFIES-OBJECTS-WITH-CONST"><a href="#MODIFIES-OBJECTS-WITH-CONST" class="headerlink" title="MODIFIES OBJECTS WITH CONST"></a>MODIFIES OBJECTS WITH CONST</h3><p>Modifying an object with <code>const</code> means that this object is immutable after its initialization.</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">const</span> std::string str = <span class="string">"This is an immutable string."</span>;</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="CONST-IN-FUNCTIONS"><a href="#CONST-IN-FUNCTIONS" class="headerlink" title="CONST IN FUNCTIONS"></a>CONST IN FUNCTIONS</h2><h3 id="CONST-IN-PARAMETER-LIST"><a href="#CONST-IN-PARAMETER-LIST" class="headerlink" title="CONST IN PARAMETER LIST"></a>CONST IN PARAMETER LIST</h3><p>A parameter modified with <code>const</code> means it is <strong>read-only</strong> to the function. Usually, we use this feature together with reference. So, when we don’t want a function to change a specific argument, the parameter’s type may look like <code>const T &amp;</code>.</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Show</span><span class="params">(<span class="type">const</span> T &amp;)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  std::string str = <span class="string">"This is an example."</span>;</span><br><span class="line">  <span class="built_in">Show</span>(str);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Show</span><span class="params">(<span class="type">const</span> T &amp;in)</span> </span>{</span><br><span class="line">  <span class="comment">// in is read-only</span></span><br><span class="line">  std::cout &lt;&lt; in &lt;&lt; std::endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="THE-CONST-AFTER-A-MEMBER-FUNCTION"><a href="#THE-CONST-AFTER-A-MEMBER-FUNCTION" class="headerlink" title="THE CONST AFTER A MEMBER FUNCTION"></a>THE CONST AFTER A MEMBER FUNCTION</h3><p>The const after a member function indicates that the function does not modify any non-mutable data members of the class. In other words, this means that the <code>this</code> pointer is const, implying that this member function does not alter the state of this object.</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Fish</span> {</span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  <span class="type">double</span> weight_;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="built_in">Fish</span>() : <span class="built_in">weight_</span>(<span class="number">0</span>) {}</span><br><span class="line">  <span class="built_in">Fish</span>(<span class="type">const</span> <span class="type">double</span>&amp; weight) : <span class="built_in">weight_</span>(weight) {}</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">ModifyWeight</span><span class="params">(<span class="type">const</span> <span class="type">double</span>&amp; weight)</span></span>;</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">ShowWeight</span><span class="params">()</span> <span class="type">const</span></span>; <span class="comment">// Just show the weight. Read-only.</span></span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Fish::ModifyWeight</span><span class="params">(<span class="type">const</span> <span class="type">double</span>&amp; weight)</span> </span>{ <span class="keyword">this</span>-&gt;weight_ = weight; }</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Fish::ShowWeight</span><span class="params">()</span> <span class="type">const</span> </span>{ std::cout &lt;&lt; <span class="keyword">this</span>-&gt;weight_ &lt;&lt; std::endl; }</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="function">Fish <span class="title">fish</span><span class="params">(<span class="number">5.0</span>)</span></span>;</span><br><span class="line">  fish.<span class="built_in">ShowWeight</span>();</span><br><span class="line">  fish.<span class="built_in">ModifyWeight</span>(<span class="number">10.0</span>);</span><br><span class="line">  fish.<span class="built_in">ShowWeight</span>();</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="RETURNS-A-CONST"><a href="#RETURNS-A-CONST" class="headerlink" title="RETURNS A CONST"></a>RETURNS A CONST</h3><p>When returning an object, the <code>const</code> before the return type indicates that this object is a constant and is immutable. For example: <code>const int&amp; GetAgeConst()</code>, which returns a rvalue whose referenced content cannot be modified.</p>
-<p>When return a pointer type (or a reference), <code>const</code> helps protect the pointer or reference content from being modified. For example: <code>const char * const Fun()</code>, which returns a pointer to a constant, whose pointed content and the pointer itself cannot be modified.</p>
-<p>Here is an example generated by new bing:</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> {</span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  <span class="type">int</span> age;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="built_in">Person</span>(<span class="type">int</span> a) : <span class="built_in">age</span>(a) {}</span><br><span class="line">  <span class="function"><span class="type">const</span> <span class="type">int</span>&amp; <span class="title">GetAgeConst</span><span class="params">()</span> <span class="type">const</span> </span>{ <span class="keyword">return</span> age; }</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="function">Person <span class="title">p</span><span class="params">(<span class="number">20</span>)</span></span>;</span><br><span class="line">  cout &lt;&lt; <span class="string">"The age is "</span> &lt;&lt; p.<span class="built_in">GetAgeConst</span>() &lt;&lt; endl;</span><br><span class="line">  <span class="comment">// p.GetAgeConst() = 30; // WRONG</span></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="CONSTEXPR-NEW-IN-C-11"><a href="#CONSTEXPR-NEW-IN-C-11" class="headerlink" title="CONSTEXPR (NEW IN C++11)"></a>CONSTEXPR (NEW IN C++11)</h2><p><code>constexpr</code> keyword helps the compiler find those constant expressions at compile stage. A really common place of use is defining an array:</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">constexpr</span> <span class="type">int</span> <span class="title">GetConstexprLen</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">constexpr</span> <span class="type">int</span> <span class="title">Fibonacci</span><span class="params">(<span class="type">const</span> <span class="type">int</span> n)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> variable_len = <span class="number">10</span>;</span><br><span class="line">  <span class="type">const</span> <span class="type">int</span> const_len = <span class="number">10</span>;</span><br><span class="line">  <span class="keyword">constexpr</span> <span class="type">int</span> constexpr_len = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// int arr1[variable_len];    // Illegal. Not OK.</span></span><br><span class="line">  <span class="comment">// int arr2[const_len];       // Illegal. But usually OK.</span></span><br><span class="line">  <span class="type">int</span> arr3[constexpr_len];      <span class="comment">// Legal. OK.</span></span><br><span class="line">  <span class="type">int</span> arr4[<span class="built_in">GetConstexprLen</span>()];  <span class="comment">// Legal. OK.</span></span><br><span class="line">  <span class="type">int</span> arr5[<span class="built_in">Fibonacci</span>(<span class="number">5</span>)];       <span class="comment">// Legal. OK.</span></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">constexpr</span> <span class="type">int</span> <span class="title">GetConstexprLen</span><span class="params">()</span> </span>{ <span class="keyword">return</span> <span class="number">10</span>; }</span><br><span class="line"><span class="function"><span class="keyword">constexpr</span> <span class="type">int</span> <span class="title">Fibonacci</span><span class="params">(<span class="type">const</span> <span class="type">int</span> n)</span> </span>{</span><br><span class="line">  <span class="comment">// These codes are from https://changkun.de/modern-cpp/</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// You can't use local variables, loops,</span></span><br><span class="line">  <span class="comment">// and conditional statements here in C++11</span></span><br><span class="line">  <span class="comment">// But in C++14, that's OK.</span></span><br><span class="line">  <span class="keyword">return</span> n == <span class="number">1</span> || n == <span class="number">2</span> ? <span class="number">1</span> : <span class="built_in">Fibonacci</span>(n - <span class="number">1</span>) + <span class="built_in">Fibonacci</span>(n - <span class="number">2</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>To learn more, you may read <em><a href="https://changkun.de/modern-cpp/">Modern C++ Tutorial</a></em></p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-        <tag>const</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Uses std::cin.ignore() to keep the user typing until the input meets the requirements</title>
     <url>/posts/f96b3358.html</url>
     <content><![CDATA[<p>I used to control users’ input by making the input a string and process it later. But today, my friend posed this question to me: Can we control input without a char array or string class?</p>
@@ -3042,6 +3042,77 @@
         <tag>LLDB</tag>
         <tag>LLVM</tag>
         <tag>Clang</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>static_cast and const_cast in C++</title>
+    <url>/posts/f5746381.html</url>
+    <content><![CDATA[<p>This is a note for Lecture 8, <a href="https://web.stanford.edu/class/cs106l/index.html">CS106L</a>, Spring 2023.</p>
+<span id="more"></span>
+
+<p>In a class like this:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">StrVector</span> {</span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="keyword">using</span> iterator = std::string*;</span><br><span class="line">  <span class="type">const</span> <span class="type">size_t</span> kInitialSize = <span class="number">2</span>;</span><br><span class="line">  <span class="comment">/*...*/</span></span><br><span class="line">  <span class="function"><span class="type">size_t</span> <span class="title">size</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line">  <span class="function"><span class="type">bool</span> <span class="title">empty</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">push_back</span><span class="params">(<span class="type">const</span> std::string&amp; elem)</span></span>;</span><br><span class="line">  <span class="function">std::string&amp; <span class="title">at</span><span class="params">(<span class="type">size_t</span> indx)</span></span>;</span><br><span class="line">  <span class="function"><span class="type">const</span> std::string&amp; <span class="title">at</span><span class="params">(<span class="type">size_t</span> indx)</span> <span class="type">const</span></span>;</span><br><span class="line"></span><br><span class="line">  <span class="function">iterator <span class="title">begin</span><span class="params">()</span></span>;</span><br><span class="line">  <span class="function">iterator <span class="title">end</span><span class="params">()</span></span>;</span><br><span class="line">  <span class="function">iterator <span class="title">cbegin</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line">  <span class="function">iterator <span class="title">cend</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line">  <span class="comment">/*...*/</span></span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
+
+<p>We implement the non-const <code>at</code> method like this:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function">std::string&amp; <span class="title">StrVector::at</span><span class="params">(<span class="type">size_t</span> index)</span> </span>{</span><br><span class="line">  <span class="keyword">if</span> (index &gt;= <span class="built_in">size</span>()) {</span><br><span class="line">    <span class="keyword">throw</span> std::<span class="built_in">out_of_range</span>(<span class="string">"Index out of range in at."</span>);</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">return</span> *(<span class="built_in">begin</span>() + index);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>It is bad to reimplement the same logic when writing the const version of the <code>at</code> method.</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="function"><span class="type">const</span> std::string&amp; <span class="title">StrVector::at</span><span class="params">(<span class="type">size_t</span> index)</span> <span class="type">const</span> </span>{</span><br><span class="line">  <span class="keyword">if</span> (index &gt;= <span class="built_in">size</span>()) {</span><br><span class="line">    <span class="keyword">throw</span> std::<span class="built_in">out_of_range</span>(<span class="string">"Index out of range in at."</span>);</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">return</span> *(<span class="built_in">cbegin</span>() + index);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Instead, we should do this:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">const</span> std::string&amp; <span class="title">StrVector::at</span><span class="params">(<span class="type">size_t</span> index)</span> <span class="type">const</span> </span>{</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">static_cast</span>&lt;<span class="type">const</span> std::string&amp;&gt;(</span><br><span class="line">      <span class="built_in">const_cast</span>&lt;StrVector*&gt;(<span class="keyword">this</span>)-&gt;<span class="built_in">at</span>(index));</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>So, what’s <code>static_cast</code> and <code>const_cast</code>?</p>
+<p><strong>static_cast&lt;new-type&gt;(expression)</strong> is used to convert from one type to another. For example: <code>int my_int = static_cast&lt;int&gt;(3.1)</code>. Note that it CANNOT BE USED WHEN conversion would cast away constness.</p>
+<p>Learn more <a href="https://en.cppreference.com/w/cpp/language/static_cast">here</a></p>
+<p><strong>const_cast&lt;new-type&gt;(expression)</strong> is used to cast away (remove) constness. It allows you to make non-const pointer or reference to const-object like this:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> const_int = <span class="number">3</span>;</span><br><span class="line"><span class="type">int</span>&amp; my_int = <span class="built_in">const_cast</span>&lt;<span class="type">int</span>&amp;&gt;(const_int);</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Learn more <a href="https://en.cppreference.com/w/cpp/language/const_cast">here</a></p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>const</tag>
+        <tag>CS106L</tag>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>二维数组到底是啥啊...</title>
+    <url>/posts/57fd79a.html</url>
+    <content><![CDATA[<p>一维数组还是比较容易理解的，但是二维数组，我始终没弄清楚这玩意儿是按照什么规则从二维的样子转成一维然后存起来的，也因此常常犯下下标写反了的错误。我觉得是时候详细地理一理这玩意儿到底是个啥了…</p>
+<span id="more"></span>
+
+<h2 id="怎么转成了一维？"><a href="#怎么转成了一维？" class="headerlink" title="怎么转成了一维？"></a>怎么转成了一维？</h2><p>要知道二维数组到底是怎么转成了一维存在内存里，或者说，我到底是应该从前往后（前面的一个数字先不动，先让后边的数字动）读这个数组，还是从后往前（后面的一个数字先不动，先让前面的数字动）读这个数组，其实方法很简单 —— 我们只要把数组里每个元素的地址输出来就行了。比如下边这串代码：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> a[<span class="number">2</span>][<span class="number">3</span>] = {<span class="number">0</span>};</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">        {</span><br><span class="line">            cout &lt;&lt; <span class="string">"&amp;a["</span> &lt;&lt; i &lt;&lt; <span class="string">"]"</span></span><br><span class="line">                 &lt;&lt; <span class="string">"["</span> &lt;&lt; j &lt;&lt; <span class="string">"] = "</span> &lt;&lt; &amp;a[i][j] &lt;&lt; <span class="string">" "</span> &lt;&lt; endl;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>可能的输出如下：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&amp;a[0][0] = 0x61fe00</span><br><span class="line">&amp;a[0][1] = 0x61fe04</span><br><span class="line">&amp;a[0][2] = 0x61fe08</span><br><span class="line">&amp;a[1][0] = 0x61fe0c</span><br><span class="line">&amp;a[1][1] = 0x61fe10</span><br><span class="line">&amp;a[1][2] = 0x61fe14</span><br></pre></td></tr></tbody></table></figure>
+
+<p>可以看到，正确的读法应该是：<strong>从前往后，前面的保持不动，从最后一个开始变化。</strong></p>
+<p>也就是说，对于 <code>a[2][3]</code> 这样一个数组，应该这么理解：<code>a[2][3]</code> 前面的 <code>[2]</code> 表示这是一个包含两个元素的数组，后面的 <code>[3]</code> 表示前面所说的两个元素每一个都是包含三个元素的数组。</p>
+<h2 id="赋初值的一些问题"><a href="#赋初值的一些问题" class="headerlink" title="赋初值的一些问题"></a>赋初值的一些问题</h2><p>知道了上边的东西，所以我们知道，我们可以写一个类似 <code>int a[][3] = {0,0,0,0,0,0};</code> 的玩意儿，却不能写一个 <code>int a[2][] = {0,0,0,0,0,0}</code> 的玩意儿 —— 相当于第二个方括号里边是告诉了编译器后边这一串数字按几个为一组，由于 <code>{}</code> 中元素个数不足是会往后边自动补零的，所以少了这个每组几个的参数，编译器就不知道你这到底有多少个元素了。</p>
+<h2 id="用指向数组的指针（数组指针）来实现一个其中一维可以动态调整的二维数组？"><a href="#用指向数组的指针（数组指针）来实现一个其中一维可以动态调整的二维数组？" class="headerlink" title="用指向数组的指针（数组指针）来实现一个其中一维可以动态调整的二维数组？"></a>用指向数组的指针（数组指针）来实现一个其中一维可以动态调整的二维数组？</h2><p>类似上边的赋初值时候的问题，这个动态的二维数组的内层，也就是按几个为一组的那一层，必须是已经确定的，例如，我们依然创建一个 2*3 的二维数组，其中前面的 2 是在运行时确定的：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">2</span>;</span><br><span class="line">    <span class="built_in">int</span>(*p)[<span class="number">3</span>] = <span class="keyword">new</span> <span class="type">int</span>[n][<span class="number">3</span>];</span><br><span class="line">    <span class="type">int</span> now = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">        {</span><br><span class="line">            p[i][j] = now;</span><br><span class="line">            now++;</span><br><span class="line">        }</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">            cout &lt;&lt; p[i][j] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>输出结果如下:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">1 2 3</span><br><span class="line">4 5 6</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="能不能用-int-p-来创建一个两个维度都能变化的二维数组？"><a href="#能不能用-int-p-来创建一个两个维度都能变化的二维数组？" class="headerlink" title="能不能用 int** p 来创建一个两个维度都能变化的二维数组？"></a>能不能用 int** p 来创建一个两个维度都能变化的二维数组？</h2><p>不知道啊就是说…</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+        <tag>Array</tag>
+        <tag>Pointer</tag>
       </tags>
   </entry>
   <entry>
@@ -3105,27 +3176,40 @@
       </tags>
   </entry>
   <entry>
-    <title>二维数组到底是啥啊...</title>
-    <url>/posts/57fd79a.html</url>
-    <content><![CDATA[<p>一维数组还是比较容易理解的，但是二维数组，我始终没弄清楚这玩意儿是按照什么规则从二维的样子转成一维然后存起来的，也因此常常犯下下标写反了的错误。我觉得是时候详细地理一理这玩意儿到底是个啥了…</p>
+    <title>当形参、实参是指针变量...</title>
+    <url>/posts/1ef1e20b.html</url>
+    <content><![CDATA[<p>接<a href="https://blocklune.github.io/posts/50c16b14.html">《一个有关指针传参的问题》</a>，再理一理这里边的一些问题…</p>
 <span id="more"></span>
 
-<h2 id="怎么转成了一维？"><a href="#怎么转成了一维？" class="headerlink" title="怎么转成了一维？"></a>怎么转成了一维？</h2><p>要知道二维数组到底是怎么转成了一维存在内存里，或者说，我到底是应该从前往后（前面的一个数字先不动，先让后边的数字动）读这个数组，还是从后往前（后面的一个数字先不动，先让前面的数字动）读这个数组，其实方法很简单 —— 我们只要把数组里每个元素的地址输出来就行了。比如下边这串代码：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> a[<span class="number">2</span>][<span class="number">3</span>] = {<span class="number">0</span>};</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">        {</span><br><span class="line">            cout &lt;&lt; <span class="string">"&amp;a["</span> &lt;&lt; i &lt;&lt; <span class="string">"]"</span></span><br><span class="line">                 &lt;&lt; <span class="string">"["</span> &lt;&lt; j &lt;&lt; <span class="string">"] = "</span> &lt;&lt; &amp;a[i][j] &lt;&lt; <span class="string">" "</span> &lt;&lt; endl;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>在单向值传递的过程中，我们知道，形参是对实参的值的拷贝。在实参的值传递给形参后，对形参的一切操作，都不会对实参产生什么影响。比如下边这串代码：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">5</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before func(), main(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(n);</span><br><span class="line">    cout &lt;&lt; <span class="string">"After func(), main(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before n++, func(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    n++;</span><br><span class="line">    cout &lt;&lt; <span class="string">"After n++, func(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<p>可能的输出如下：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&amp;a[0][0] = 0x61fe00</span><br><span class="line">&amp;a[0][1] = 0x61fe04</span><br><span class="line">&amp;a[0][2] = 0x61fe08</span><br><span class="line">&amp;a[1][0] = 0x61fe0c</span><br><span class="line">&amp;a[1][1] = 0x61fe10</span><br><span class="line">&amp;a[1][2] = 0x61fe14</span><br></pre></td></tr></tbody></table></figure>
+<p>下边是输出结果：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Before func(), main(): n = 5</span><br><span class="line">Before n++, func(): n = 5</span><br><span class="line">After n++, func(): n = 6</span><br><span class="line">After func(), main(): n = 5</span><br></pre></td></tr></tbody></table></figure>
 
-<p>可以看到，正确的读法应该是：<strong>从前往后，前面的保持不动，从最后一个开始变化。</strong></p>
-<p>也就是说，对于 <code>a[2][3]</code> 这样一个数组，应该这么理解：<code>a[2][3]</code> 前面的 <code>[2]</code> 表示这是一个包含两个元素的数组，后面的 <code>[3]</code> 表示前面所说的两个元素每一个都是包含三个元素的数组。</p>
-<h2 id="赋初值的一些问题"><a href="#赋初值的一些问题" class="headerlink" title="赋初值的一些问题"></a>赋初值的一些问题</h2><p>知道了上边的东西，所以我们知道，我们可以写一个类似 <code>int a[][3] = {0,0,0,0,0,0};</code> 的玩意儿，却不能写一个 <code>int a[2][] = {0,0,0,0,0,0}</code> 的玩意儿 —— 相当于第二个方括号里边是告诉了编译器后边这一串数字按几个为一组，由于 <code>{}</code> 中元素个数不足是会往后边自动补零的，所以少了这个每组几个的参数，编译器就不知道你这到底有多少个元素了。</p>
-<h2 id="用指向数组的指针（数组指针）来实现一个其中一维可以动态调整的二维数组？"><a href="#用指向数组的指针（数组指针）来实现一个其中一维可以动态调整的二维数组？" class="headerlink" title="用指向数组的指针（数组指针）来实现一个其中一维可以动态调整的二维数组？"></a>用指向数组的指针（数组指针）来实现一个其中一维可以动态调整的二维数组？</h2><p>类似上边的赋初值时候的问题，这个动态的二维数组的内层，也就是按几个为一组的那一层，必须是已经确定的，例如，我们依然创建一个 2*3 的二维数组，其中前面的 2 是在运行时确定的：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">2</span>;</span><br><span class="line">    <span class="built_in">int</span>(*p)[<span class="number">3</span>] = <span class="keyword">new</span> <span class="type">int</span>[n][<span class="number">3</span>];</span><br><span class="line">    <span class="type">int</span> now = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">        {</span><br><span class="line">            p[i][j] = now;</span><br><span class="line">            now++;</span><br><span class="line">        }</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">            cout &lt;&lt; p[i][j] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>通过打印它们的地址，我们也可以认识到这一点：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">5</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"In main(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;n = "</span> &lt;&lt; &amp;n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(n);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"In func(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;n = "</span> &lt;&lt; &amp;n &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">In main():</span></span><br><span class="line"><span class="comment">n = 5</span></span><br><span class="line"><span class="comment">&amp;n = 0x61fe1c</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">In func():</span></span><br><span class="line"><span class="comment">n = 5</span></span><br><span class="line"><span class="comment">&amp;n = 0x61fdf0</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></tbody></table></figure>
 
-<p>输出结果如下:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">1 2 3</span><br><span class="line">4 5 6</span><br></pre></td></tr></tbody></table></figure>
+<p>如果把变量类型从普通类型变成指针类型，那么类似的，发生的其实也是一次值传递，也即，<strong>指针变量的值发生了一次拷贝</strong>，请看下边的例子：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"In main(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"p = "</span> &lt;&lt; (<span class="type">int</span> *)p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;p = "</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(p);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"In func(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"p = "</span> &lt;&lt; (<span class="type">int</span> *)p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;p = "</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="能不能用-int-p-来创建一个两个维度都能变化的二维数组？"><a href="#能不能用-int-p-来创建一个两个维度都能变化的二维数组？" class="headerlink" title="能不能用 int** p 来创建一个两个维度都能变化的二维数组？"></a>能不能用 int** p 来创建一个两个维度都能变化的二维数组？</h2><p>不知道啊就是说…</p>
+<p>在我电脑上的输出结果是：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">In main():</span><br><span class="line">p = 0xee61c0</span><br><span class="line">&amp;p = 0x61fe18</span><br><span class="line"></span><br><span class="line">In func():</span><br><span class="line">p = 0xee61c0</span><br><span class="line">&amp;p = 0x61fdf0</span><br></pre></td></tr></tbody></table></figure>
+
+<p>可以看到，<code>int *</code> 类型的指针变量 <code>p</code> 的值是相同的，但地址不同，这是两个变量。</p>
+<p>把上边代码 <code>main()</code> 中的 <code>p</code> 记为 <code>p1</code>，<code>func()</code> 中的记为 <code>p2</code>，那么就可以这样理解为，当调用 <code>func()</code> 时，<code>p2</code> 与 <code>p1</code> <strong>指向了相同的位置</strong>，但它们确实<strong>不是同一个指针</strong>。</p>
+<p>对于<a href="https://blocklune.github.io/posts/50c16b14.html">《一个有关指针传参的问题》</a>中的那段错误代码，其实错误就是，在函数中 <code>new</code> 出来内存后，只是让形参指向了那片内存，而原来的实参并没有同步地指过去。</p>
+<p>但是只要确定形参的指针和实参的指针指向的地址是相同的，那么对这同一片内存进行的操作，就是同步的，比如：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    *p = <span class="number">5</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before func(), main(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(p);</span><br><span class="line">    cout &lt;&lt; <span class="string">"After func(), main(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before (*p)++, func(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    (*p)++;</span><br><span class="line">    cout &lt;&lt; <span class="string">"After (*p)++, func(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>输出结果：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Before func(), main(): (*p) = 5</span><br><span class="line">Before (*p)++, func(): (*p) = 5</span><br><span class="line">After (*p)++, func(): (*p) = 6</span><br><span class="line">After func(), main(): (*p) = 6</span><br></pre></td></tr></tbody></table></figure>
+
+<p>由于数组名其实就是数组第一个元素（下标为 0 的那个元素）的地址，所以类似的，在函数中对数组形参的操作会等效到数组实参上去：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span>[], <span class="type">int</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> a[<span class="number">3</span>] = {<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>};</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> x : a)</span><br><span class="line">        cout &lt;&lt; x &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(a, <span class="number">3</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> x : a)</span><br><span class="line">        cout &lt;&lt; x &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        arr[i]++;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>输出结果：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">0 1 2</span><br><span class="line">1 2 3</span><br></pre></td></tr></tbody></table></figure>
 ]]></content>
       <categories>
         <category>CS</category>
@@ -3135,7 +3219,6 @@
       <tags>
         <tag>C/C++</tag>
         <tag>Pointer</tag>
-        <tag>Array</tag>
       </tags>
   </entry>
   <entry>
@@ -3197,52 +3280,6 @@
         <tag>pass by pointer</tag>
         <tag>pass by value</tag>
         <tag>pass by reference</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>当形参、实参是指针变量...</title>
-    <url>/posts/1ef1e20b.html</url>
-    <content><![CDATA[<p>接<a href="https://blocklune.github.io/posts/50c16b14.html">《一个有关指针传参的问题》</a>，再理一理这里边的一些问题…</p>
-<span id="more"></span>
-
-<p>在单向值传递的过程中，我们知道，形参是对实参的值的拷贝。在实参的值传递给形参后，对形参的一切操作，都不会对实参产生什么影响。比如下边这串代码：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">5</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before func(), main(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(n);</span><br><span class="line">    cout &lt;&lt; <span class="string">"After func(), main(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before n++, func(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    n++;</span><br><span class="line">    cout &lt;&lt; <span class="string">"After n++, func(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>下边是输出结果：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Before func(), main(): n = 5</span><br><span class="line">Before n++, func(): n = 5</span><br><span class="line">After n++, func(): n = 6</span><br><span class="line">After func(), main(): n = 5</span><br></pre></td></tr></tbody></table></figure>
-
-<p>通过打印它们的地址，我们也可以认识到这一点：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">5</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"In main(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;n = "</span> &lt;&lt; &amp;n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(n);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"In func(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;n = "</span> &lt;&lt; &amp;n &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">In main():</span></span><br><span class="line"><span class="comment">n = 5</span></span><br><span class="line"><span class="comment">&amp;n = 0x61fe1c</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">In func():</span></span><br><span class="line"><span class="comment">n = 5</span></span><br><span class="line"><span class="comment">&amp;n = 0x61fdf0</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>如果把变量类型从普通类型变成指针类型，那么类似的，发生的其实也是一次值传递，也即，<strong>指针变量的值发生了一次拷贝</strong>，请看下边的例子：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"In main(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"p = "</span> &lt;&lt; (<span class="type">int</span> *)p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;p = "</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(p);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"In func(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"p = "</span> &lt;&lt; (<span class="type">int</span> *)p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;p = "</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>在我电脑上的输出结果是：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">In main():</span><br><span class="line">p = 0xee61c0</span><br><span class="line">&amp;p = 0x61fe18</span><br><span class="line"></span><br><span class="line">In func():</span><br><span class="line">p = 0xee61c0</span><br><span class="line">&amp;p = 0x61fdf0</span><br></pre></td></tr></tbody></table></figure>
-
-<p>可以看到，<code>int *</code> 类型的指针变量 <code>p</code> 的值是相同的，但地址不同，这是两个变量。</p>
-<p>把上边代码 <code>main()</code> 中的 <code>p</code> 记为 <code>p1</code>，<code>func()</code> 中的记为 <code>p2</code>，那么就可以这样理解为，当调用 <code>func()</code> 时，<code>p2</code> 与 <code>p1</code> <strong>指向了相同的位置</strong>，但它们确实<strong>不是同一个指针</strong>。</p>
-<p>对于<a href="https://blocklune.github.io/posts/50c16b14.html">《一个有关指针传参的问题》</a>中的那段错误代码，其实错误就是，在函数中 <code>new</code> 出来内存后，只是让形参指向了那片内存，而原来的实参并没有同步地指过去。</p>
-<p>但是只要确定形参的指针和实参的指针指向的地址是相同的，那么对这同一片内存进行的操作，就是同步的，比如：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    *p = <span class="number">5</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before func(), main(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(p);</span><br><span class="line">    cout &lt;&lt; <span class="string">"After func(), main(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before (*p)++, func(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    (*p)++;</span><br><span class="line">    cout &lt;&lt; <span class="string">"After (*p)++, func(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>输出结果：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Before func(), main(): (*p) = 5</span><br><span class="line">Before (*p)++, func(): (*p) = 5</span><br><span class="line">After (*p)++, func(): (*p) = 6</span><br><span class="line">After func(), main(): (*p) = 6</span><br></pre></td></tr></tbody></table></figure>
-
-<p>由于数组名其实就是数组第一个元素（下标为 0 的那个元素）的地址，所以类似的，在函数中对数组形参的操作会等效到数组实参上去：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span>[], <span class="type">int</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> a[<span class="number">3</span>] = {<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>};</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> x : a)</span><br><span class="line">        cout &lt;&lt; x &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(a, <span class="number">3</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> x : a)</span><br><span class="line">        cout &lt;&lt; x &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        arr[i]++;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>输出结果：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">0 1 2</span><br><span class="line">1 2 3</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-        <tag>Pointer</tag>
       </tags>
   </entry>
   <entry>
@@ -3588,6 +3625,55 @@
       </categories>
       <tags>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Permutations and Combinations in Python (itertools)</title>
+    <url>/posts/cf2f01b2.html</url>
+    <content><![CDATA[<p>Extracted from <em><a href="https://docs.python.org/3/library/itertools.html">itertools — Functions creating iterators for efficient looping — Python 3.11.3 documentation</a></em></p>
+<span id="more"></span>
+
+<h2 id="PERMUTATIONS"><a href="#PERMUTATIONS" class="headerlink" title="PERMUTATIONS"></a>PERMUTATIONS</h2><p><code>itertools.permutations(iterable, r=None)</code> returns successive <code>r</code> length permutations of elements in the iterable.</p>
+<p>If <code>r</code> is not specified or is <code>None</code>, then <code>r</code> defaults to the length of the iterable and all possible full-length permutations are generated.</p>
+<p><strong>Ex.1.</strong></p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> permutations</span><br><span class="line"></span><br><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> p <span class="keyword">in</span> permutations(a):</span><br><span class="line">  <span class="built_in">print</span>(p)</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<p>Output:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">(1, 2, 3)</span><br><span class="line">(1, 3, 2)</span><br><span class="line">(2, 1, 3)</span><br><span class="line">(2, 3, 1)</span><br><span class="line">(3, 1, 2)</span><br><span class="line">(3, 2, 1)</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>Ex.2.</strong></p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> permutations</span><br><span class="line"></span><br><span class="line">a = [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> p <span class="keyword">in</span> permutations(a, <span class="number">2</span>):</span><br><span class="line">  <span class="built_in">print</span>(p)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Output:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">('A', 'B')</span><br><span class="line">('A', 'C')</span><br><span class="line">('A', 'D')</span><br><span class="line">('B', 'A')</span><br><span class="line">('B', 'C')</span><br><span class="line">('B', 'D')</span><br><span class="line">('C', 'A')</span><br><span class="line">('C', 'B')</span><br><span class="line">('C', 'D')</span><br><span class="line">('D', 'A')</span><br><span class="line">('D', 'B')</span><br><span class="line">('D', 'C')</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Learn more <a href="https://docs.python.org/3/library/itertools.html#itertools.permutations">here</a></p>
+<h2 id="COMBINATIONS"><a href="#COMBINATIONS" class="headerlink" title="COMBINATIONS"></a>COMBINATIONS</h2><p>Notice: <code>r</code> is NOT optional. (Not like <code>permutations</code>)</p>
+<h3 id="WITH-NO-REPLACEMENTS"><a href="#WITH-NO-REPLACEMENTS" class="headerlink" title="WITH NO REPLACEMENTS"></a>WITH NO REPLACEMENTS</h3><p><code>itertools.combinations(iterable, r)</code> returns <code>r</code> length subsequences of elements from the input iterable.</p>
+<p><strong>Ex.</strong></p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> combinations</span><br><span class="line"></span><br><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> c <span class="keyword">in</span> combinations(a, <span class="number">2</span>):</span><br><span class="line">  <span class="built_in">print</span>(c)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Output:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">(1, 2)</span><br><span class="line">(1, 3)</span><br><span class="line">(2, 3)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Learn more <a href="https://docs.python.org/3/library/itertools.html#itertools.combinations">here</a></p>
+<h3 id="WITH-REPLACEMENTS"><a href="#WITH-REPLACEMENTS" class="headerlink" title="WITH REPLACEMENTS"></a>WITH REPLACEMENTS</h3><p><code>itertools.combinations_with_replacement(iterable, r)</code> returns <code>r</code> length subsequences of elements from the input iterable <strong>allowing individual elements to be repeated more than once</strong>.</p>
+<p><strong>Ex.</strong></p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> combinations_with_replacement</span><br><span class="line"></span><br><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> c_with_replacement <span class="keyword">in</span> combinations_with_replacement(a, <span class="number">2</span>):</span><br><span class="line">  <span class="built_in">print</span>(c_with_replacement)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Output:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">(1, 1)</span><br><span class="line">(1, 2)</span><br><span class="line">(1, 3)</span><br><span class="line">(2, 2)</span><br><span class="line">(2, 3)</span><br><span class="line">(3, 3)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Learn more <a href="https://docs.python.org/3/library/itertools.html#itertools.combinations_with_replacement">here</a></p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>itertools</tag>
       </tags>
   </entry>
 </search>
