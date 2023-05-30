@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="google7b9c7ea42a3102a3.html">
+  <meta name="baidu-site-verification" content="baidu_verify_code-53bseLro2G.html">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blocklune.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="This is a note for Lecture 13, CS106L, Spring 2023.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Move Semantics in C++">
+<meta property="og:url" content="https://blocklune.github.io/posts/d5786049.html">
+<meta property="og:site_name" content="Fish Pond">
+<meta property="og:description" content="This is a note for Lecture 13, CS106L, Spring 2023.">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-05-30T14:17:05.641Z">
+<meta property="article:modified_time" content="2023-05-30T14:17:05.641Z">
+<meta property="article:author" content="BlockLune">
+<meta property="article:tag" content="C&#x2F;C++">
+<meta property="article:tag" content="CS106L">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://blocklune.github.io/posts/d5786049.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blocklune.github.io/posts/d5786049.html","path":"posts/d5786049.html","title":"Move Semantics in C++"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Move Semantics in C++ | Fish Pond</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/rss.xml" title="Fish Pond" type="application/rss+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Fish Pond</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Posts swim here.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#DEFINITION"><span class="nav-number">1.</span> <span class="nav-text">DEFINITION</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#L-VALUE"><span class="nav-number">1.1.</span> <span class="nav-text">L-VALUE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#R-VALUE"><span class="nav-number">1.2.</span> <span class="nav-text">R-VALUE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EXAMPLES"><span class="nav-number">1.3.</span> <span class="nav-text">EXAMPLES</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MOVE-SEMANTICS"><span class="nav-number">2.</span> <span class="nav-text">MOVE SEMANTICS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#R-VALUE-REFERENCE"><span class="nav-number">3.</span> <span class="nav-text">R-VALUE REFERENCE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#std-move"><span class="nav-number">4.</span> <span class="nav-text">std::move</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TLDR"><span class="nav-number">5.</span> <span class="nav-text">TLDR</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHILOSOPHY-about-SMFs"><span class="nav-number">6.</span> <span class="nav-text">PHILOSOPHY about SMFs</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#The-6-Special-Member-Functions"><span class="nav-number">6.1.</span> <span class="nav-text">The 6 Special Member Functions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Some-Philosophy-about-SMFs"><span class="nav-number">6.2.</span> <span class="nav-text">Some Philosophy about SMFs</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Rule-of-Zero"><span class="nav-number">6.2.1.</span> <span class="nav-text">Rule of Zero</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Rule-of-Three"><span class="nav-number">6.2.2.</span> <span class="nav-text">Rule of Three</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Rule-of-Five"><span class="nav-number">6.2.3.</span> <span class="nav-text">Rule of Five</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="BlockLune"
+      src="/img/waifu.png">
+  <p class="site-author-name" itemprop="name">BlockLune</p>
+  <div class="site-description" itemprop="description">Here is BlockLune's blog.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">45</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">60</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/BlockLune" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;BlockLune" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:blocklune@gmail.com" title="E-Mail → mailto:blocklune@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          Links
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="http://f-studio.is-best.net/" title="http:&#x2F;&#x2F;f-studio.is-best.net&#x2F;" rel="noopener" target="_blank">F-Studio</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://blog.yunfinibol.top/" title="http:&#x2F;&#x2F;blog.yunfinibol.top&#x2F;" rel="noopener" target="_blank">Yunfinibol's Blog</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blocklune.github.io/posts/d5786049.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/waifu.png">
+      <meta itemprop="name" content="BlockLune">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fish Pond">
+      <meta itemprop="description" content="Here is BlockLune's blog.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Move Semantics in C++ | Fish Pond">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Move Semantics in C++
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-05-30 22:17:05" itemprop="dateCreated datePublished" datetime="2023-05-30T22:17:05+08:00">2023-05-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/" itemprop="url" rel="index"><span itemprop="name">CS</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/languages/" itemprop="url" rel="index"><span itemprop="name">Languages</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/languages/c-cpp/" itemprop="url" rel="index"><span itemprop="name">C & Cpp</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>This is a note for Lecture 13, <a target="_blank" rel="noopener" href="https://web.stanford.edu/class/cs106l/index.html">CS106L</a>, Spring 2023.</p>
+<span id="more"></span>
+
+<h2 id="DEFINITION"><a href="#DEFINITION" class="headerlink" title="DEFINITION"></a>DEFINITION</h2><h3 id="L-VALUE"><a href="#L-VALUE" class="headerlink" title="L-VALUE"></a>L-VALUE</h3><p><strong>l-value</strong> can appear on the <strong>left</strong> or <strong>right</strong> of an <code>=</code>.</p>
+<p>For example, here <code>x</code> is an l-value:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">3</span>;</span><br><span class="line"><span class="type">int</span> y = x;</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>l-values have names</li>
+<li>l-values are <strong>not temporary</strong></li>
+<li>l-values live until the end of the <strong>scope</strong></li>
+</ul>
+<h3 id="R-VALUE"><a href="#R-VALUE" class="headerlink" title="R-VALUE"></a>R-VALUE</h3><p><strong>r-value</strong> can ONLY appear on the <strong>right</strong> of an <code>=</code></p>
+<p>For example, here <code>3</code> is an r-value:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">3</span>;</span><br><span class="line"><span class="type">int</span> y = x;</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>r-values don’t have names</li>
+<li>r-values are <strong>temporary</strong></li>
+<li>r-values live until the end of the <strong>line</strong></li>
+</ul>
+<h3 id="EXAMPLES"><a href="#EXAMPLES" class="headerlink" title="EXAMPLES"></a>EXAMPLES</h3><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">3</span>;                       <span class="comment">// 3 is an r-value</span></span><br><span class="line"><span class="type">int</span> *ptr = <span class="number">0x02248837</span>;           <span class="comment">// 0x02248837 is an r-value</span></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; v1{<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>};         <span class="comment">// {1, 2, 3} is an r-value, v1 is an l-value</span></span><br><span class="line"><span class="keyword">auto</span> v4 = v1 + v2;               <span class="comment">// v1 + v2 is an r-value</span></span><br><span class="line"><span class="type">size_t</span> size = v.<span class="built_in">size</span>();          <span class="comment">// v.size() is an r-value</span></span><br><span class="line">v1[<span class="number">1</span>] = <span class="number">4</span> * i;                   <span class="comment">// 4 * i is an r-value, v1[1] is an l-value</span></span><br><span class="line">ptr = &amp;x;                        <span class="comment">// &amp;x is an r-value</span></span><br><span class="line">v1[<span class="number">2</span>] = *ptr;                    <span class="comment">// *ptr is an l-value</span></span><br><span class="line">MyClass obj;                     <span class="comment">// obj is an l-value</span></span><br><span class="line">x = obj.public_member_variable;  <span class="comment">// obj.public_member_variable is l-value</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="MOVE-SEMANTICS"><a href="#MOVE-SEMANTICS" class="headerlink" title="MOVE SEMANTICS"></a>MOVE SEMANTICS</h2><p>In our generic <code>vector</code> class, we have a vector copy assignment operator like this:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line">vector&lt;T&gt;&amp; vector&lt;T&gt;::<span class="keyword">operator</span>=(<span class="type">const</span> vector&lt;T&gt;&amp; other) {</span><br><span class="line">  <span class="keyword">if</span> (&amp;other == <span class="keyword">this</span>) <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">  _size = other._size;</span><br><span class="line">  _capacity = other._capacity;</span><br><span class="line">  <span class="keyword">delete</span>[] _elems;</span><br><span class="line">  _elems = <span class="keyword">new</span> T[other._capacity];</span><br><span class="line">  std::<span class="built_in">copy</span>(other._elems, other._elems + other._size, _elems);</span><br><span class="line">  <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p><em>Aside: <code>std::copy</code> is a generic copy function used to copy a range of elements from one container to another.</em></p>
+<p>And in the code fragment below:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line">  vec = <span class="built_in">make_me_a_vec</span>(<span class="number">123</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li><code>vec</code> is created using the <strong>default constructor</strong></li>
+<li><code>make_me_a_vec</code> creates a vector using the <strong>default constructor</strong></li>
+<li><code>vec</code> is reassigned to a <strong>copy</strong> of that return value using <strong>copy assignment</strong></li>
+<li><strong>copy assignment</strong> creates a new array and <strong>copies</strong> the contents of the old one</li>
+<li>The original return value’s lifetime ends and it calls its <strong>destructor</strong></li>
+<li><code>vec</code>‘s lifetime ends and it calls its <strong>destructor</strong></li>
+</ul>
+<p>Here is a problem: <code>make_me_a_vec(123)</code> is an r-value, and in <code>vector&lt;T&gt;::operator=(const vector&lt;T&gt;&amp; other)</code>, <code>other</code> should be an l-value (referenced using &amp;). Can r-values be bound to <code>const &amp;</code>?</p>
+<p>The answer is Yes.</p>
+<p>Another problem is that, we creates a vector, copies its content to another and deleted it. Can we do better?</p>
+<p>We can use <strong>move assignment</strong> like this:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line">vector&lt;T&gt;&amp; vector&lt;T&gt;::<span class="keyword">operator</span>=(<span class="type">const</span> vector&lt;T&gt;&amp; other) {</span><br><span class="line">  <span class="keyword">if</span> (&amp;other == <span class="keyword">this</span>) <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">  _size = other._size;</span><br><span class="line">  _capacity = other._capacity;</span><br><span class="line">  _elems = other._elems; <span class="comment">// we don't copy in this version</span></span><br><span class="line">  <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>But what about this?</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  vector&lt;string&gt; vec1 = {<span class="string">"hello"</span>, <span class="string">"world"</span>};</span><br><span class="line">  vector&lt;string&gt; vec2;</span><br><span class="line">  vec2 = vec1;</span><br><span class="line">  vec1.<span class="built_in">push_back</span>(<span class="string">"Sure hope vec2 doesn't see this!"</span>);</span><br><span class="line">} <span class="comment">// BAD!</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>A problem occurs here!<strong>We need both a copy assignment AND a move assignment.</strong></p>
+<p>How do we know when to use move assignment and when to use copy assignment?</p>
+<p><strong>When the item on the right of the = is an r-value we should use move assignment.</strong></p>
+<p>Why? r-values are always about to die, so we can steal their resources.</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line">  vec = <span class="built_in">make_me_a_vec</span>(<span class="number">123</span>); <span class="comment">// using move assignment</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  vector&lt;string&gt; vec1 = {<span class="string">"hello"</span>, <span class="string">"world"</span>};</span><br><span class="line">  vector&lt;string&gt; vec2;</span><br><span class="line">  vec2 = vec1; <span class="comment">// using copy assignment</span></span><br><span class="line">  vec1.<span class="built_in">push_back</span>(<span class="string">"Sure hope vec2 doesn't see this!"</span>);</span><br><span class="line">} <span class="comment">// and vec2 never saw a thing</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>And now the question is: how to make two different assignment operator?</p>
+<p>Answer: Overload <code>vector::operator=</code>!</p>
+<p>Introducing… the r-value reference using <code>&amp;&amp;</code></p>
+<h2 id="R-VALUE-REFERENCE"><a href="#R-VALUE-REFERENCE" class="headerlink" title="R-VALUE REFERENCE"></a>R-VALUE REFERENCE</h2><p>By using r-value reference, we can do this:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> x = <span class="number">1</span>;</span><br><span class="line">  <span class="built_in">change</span>(x); <span class="comment">// this will call version 2</span></span><br><span class="line">  <span class="built_in">change</span>(<span class="number">7</span>); <span class="comment">// this will call version 1</span></span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">change</span><span class="params">(<span class="type">int</span>&amp;&amp; num)</span> </span>{...} <span class="comment">// version 1 takes r-values</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">change</span><span class="params">(<span class="type">int</span>&amp; num)</span> </span>{...}  <span class="comment">// version 2 takes l-values</span></span><br><span class="line"><span class="comment">// num is a reference to int</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>So, we should keep our copy assignment:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;T&gt;&amp; <span class="keyword">operator</span>=(<span class="type">const</span> vector&lt;T&gt;&amp; other) {</span><br><span class="line">  <span class="keyword">if</span> (&amp;other == <span class="keyword">this</span>) <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">  _size = other._size;</span><br><span class="line">  _capacity = other._capacity;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// must **copy** entire array</span></span><br><span class="line">  <span class="keyword">delete</span>[] _elems;</span><br><span class="line">  _elems = <span class="keyword">new</span> T[other._capacity];</span><br><span class="line">  std::<span class="built_in">copy</span>(other._elems, other._elems + other.size, _elems);</span><br><span class="line">  <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>And overload <code>vector::operator=</code> (move assignment) like this:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;T&gt;&amp; <span class="keyword">operator</span>=(vector&lt;T&gt;&amp;&amp; other) {</span><br><span class="line">  <span class="keyword">if</span> (&amp;other == <span class="keyword">this</span>) <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">  _size = other._size;</span><br><span class="line">  _capacity = other._capacity;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// we can **steal** the array</span></span><br><span class="line">  <span class="keyword">delete</span>[] _elems;</span><br><span class="line">  _elems = other._elems;</span><br><span class="line">  <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>But actually, we still copy <code>_size</code> and <code>_capacity</code>, etc.</p>
+<p>Introducing…<code>std::move</code>!</p>
+<h2 id="std-move"><a href="#std-move" class="headerlink" title="std::move"></a>std::move</h2><ul>
+<li><code>std::move(x)</code> <strong>doesn’t do anything</strong> except <strong>cast x as an r-value</strong></li>
+<li>It is a way to force C++ to choose the <code>&amp;&amp;</code> version of a function</li>
+</ul>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> x = <span class="number">1</span>;</span><br><span class="line">  <span class="built_in">change</span>(x);             <span class="comment">// this will call version 2</span></span><br><span class="line">  <span class="built_in">change</span>(std::<span class="built_in">move</span>(x));  <span class="comment">// this will call version 1</span></span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">change</span><span class="params">(<span class="type">int</span>&amp;&amp; num)</span> </span>{...} <span class="comment">// version 1 takes r-values</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">change</span><span class="params">(<span class="type">int</span>&amp; num)</span> </span>{...}  <span class="comment">// version 2 takes l-values</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>We can modify our move assignment like this:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;T&gt;&amp; <span class="keyword">operator</span>=(vector&lt;T&gt;&amp;&amp; other) {</span><br><span class="line">  <span class="keyword">if</span> (&amp;other == <span class="keyword">this</span>) <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">  _size = std::<span class="built_in">move</span>(other._size);          <span class="comment">// force move assignment</span></span><br><span class="line">  _capacity = std::<span class="built_in">move</span>(other._capacity);  <span class="comment">// force move assignment</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// we can **steal** the array</span></span><br><span class="line">  <span class="keyword">delete</span>[] _elems;</span><br><span class="line">  _elems = std::<span class="built_in">move</span>(other._elems);        <span class="comment">// force move assignment</span></span><br><span class="line">  <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>This works!</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line">  vec = <span class="built_in">make_me_a_vec</span>(<span class="number">123</span>); <span class="comment">// this will use move assignment</span></span><br><span class="line">  vector&lt;string&gt; vec1 = {<span class="string">"hello"</span>, <span class="string">"world"</span>};</span><br><span class="line">  vector&lt;string&gt; vec2;</span><br><span class="line">  vec2 = vec1; <span class="comment">// this will use copy assignment</span></span><br><span class="line">  vec1.<span class="built_in">push_back</span>(<span class="string">"Sure hope vec2 doesn't see this!"</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>However, what if we wanted to declare and initialize a vec on the same line?</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line">  vec = <span class="built_in">make_me_a_vec</span>(<span class="number">123</span>); <span class="comment">// this will use move assignment</span></span><br><span class="line">  vector&lt;string&gt; vec1 = {<span class="string">"hello"</span>, <span class="string">"world"</span>};</span><br><span class="line">  vector&lt;string&gt; vec2 = vec1; <span class="comment">// this will use copy constructor</span></span><br><span class="line">  vec1.<span class="built_in">push_back</span>(<span class="string">"Sure hope vec2 doesn't see this!"</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Similarly, <code>vector&lt;string&gt; vec1 = {"hello", "world"};</code> will use <strong>move constructor</strong>.</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;T&gt;(vector&lt;T&gt;&amp;&amp; other) {</span><br><span class="line">  <span class="keyword">if</span> (&amp;other == <span class="keyword">this</span>) <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">  _size = std::<span class="built_in">move</span>(other._size);</span><br><span class="line">  _capacity = std::<span class="built_in">move</span>(other._capacity);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// we can steal the array</span></span><br><span class="line">  <span class="keyword">delete</span>[] _elems;</span><br><span class="line">  _elems = std::<span class="built_in">move</span>(other._elems);</span><br><span class="line">  <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Where else should we use <code>std::move</code>?</p>
+<blockquote>
+<p>Rule of Thumb:<br>Wherever we take in a <code>const &amp;</code> parameter in a class member function and assign it to something else in our function<br>(TO BE CONTINUED)</p>
+</blockquote>
+<p>For example:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// copy push_back</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">push_back</span><span class="params">(<span class="type">const</span> T&amp; element)</span> </span>{</span><br><span class="line">  elems[_size++] = element;</span><br><span class="line">  <span class="comment">// this is copy assignment</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// move push_back</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">push_back</span><span class="params">(T&amp;&amp; element)</span> </span>{</span><br><span class="line">  elems[_size++] = std::<span class="built_in">move</span>(element);</span><br><span class="line">  <span class="comment">// this forces T's move assignment</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Be careful with <code>std::move</code></p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  vector&lt;string&gt; vec1 = {<span class="string">"hello"</span>, <span class="string">"world"</span>};</span><br><span class="line">  vector&lt;string&gt; vec2 = std::<span class="built_in">move</span>(vec1);</span><br><span class="line">  vec1.<span class="built_in">push_back</span>(<span class="string">"Sure hope vec2 doesn't see this!"</span>); <span class="comment">// WRONG</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>Rule of Thumb:<br>Wherever we take in a <code>const &amp;</code> parameter in a class member function and assign it to something else in our function<br>Don’t use <code>std::move</code> outside of class definitions, never use it in application code!</p>
+</blockquote>
+<h2 id="TLDR"><a href="#TLDR" class="headerlink" title="TLDR"></a>TLDR</h2><ul>
+<li><p>If your class has <strong>copy constructor</strong> and <strong>copy assignment</strong> defined, you should also define a <strong>move constructor</strong> and <strong>move assignment</strong></p>
+</li>
+<li><p>Define these by overloading your copy constructor and assignment to be defined for <code>Type&amp;&amp; other</code> as well as <code>Type&amp; other</code></p>
+</li>
+<li><p>Use <code>std::move</code> to force the use of other types’ move assignments and constructors</p>
+</li>
+<li><p>All <code>std::move(x)</code> does is cast <code>x</code> as an r-value</p>
+</li>
+<li><p>By wary of <code>std::move(x)</code> in main function code!</p>
+</li>
+</ul>
+<h2 id="PHILOSOPHY-about-SMFs"><a href="#PHILOSOPHY-about-SMFs" class="headerlink" title="PHILOSOPHY about SMFs"></a>PHILOSOPHY about SMFs</h2><h3 id="The-6-Special-Member-Functions"><a href="#The-6-Special-Member-Functions" class="headerlink" title="The 6 Special Member Functions"></a>The 6 Special Member Functions</h3><ol>
+<li><strong>Default constructor</strong>: Initializes an object to a default state</li>
+<li><strong>Copy constructor</strong>: Creates a new object by copying an existing object</li>
+<li><strong>Move constructor</strong>: Creates a new object by moving the resources of an existing object</li>
+<li><strong>Copy Assignment Operator</strong>: Assigns the contents of one object to another object</li>
+<li><strong>Move Assignment Operator</strong>: Moves the resources of one object to another object</li>
+<li><strong>Destructor</strong>: Frees any dynamically allocated resources owned by an object when it is destroyed</li>
+</ol>
+<h3 id="Some-Philosophy-about-SMFs"><a href="#Some-Philosophy-about-SMFs" class="headerlink" title="Some Philosophy about SMFs"></a>Some Philosophy about SMFs</h3><p>There are three guiding rules:</p>
+<h4 id="Rule-of-Zero"><a href="#Rule-of-Zero" class="headerlink" title="Rule of Zero"></a>Rule of Zero</h4><ul>
+<li><strong>If you can avoid defining default operations, do</strong></li>
+<li><strong>Why?</strong> It’s the simplest and gives the cleanest semantic</li>
+<li><strong>Example:</strong> Since <code>std::map</code> and <code>std::string</code> have all the special functions, no further work is needed.</li>
+</ul>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Class Named_map {</span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="comment">// ...no default operations declared</span></span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  std::string name;</span><br><span class="line">  std::map&lt;<span class="type">int</span>, <span class="type">int</span>&gt; rep;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line">Named_map nm;      <span class="comment">// default construct</span></span><br><span class="line">Named_map nm2{nm}; <span class="comment">// copy construct</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="Rule-of-Three"><a href="#Rule-of-Three" class="headerlink" title="Rule of Three"></a>Rule of Three</h4><ul>
+<li><strong>If you need to implement a custom destructor, you almost certainly need to define a copy constructor and copy assignment operator</strong></li>
+<li><strong>Why?</strong> You are probably managing your own memory somehow, so the shallow copies provided by the default operations won’t work correctly</li>
+</ul>
+<h4 id="Rule-of-Five"><a href="#Rule-of-Five" class="headerlink" title="Rule of Five"></a>Rule of Five</h4><ul>
+<li><strong>If you define custom copy constructor/assignment operator, you should define move constructor/assignment operator as well</strong></li>
+<li><strong>Why?</strong> This is about efficiency rather than correctness. It’s inefficient to make extra copies (although it’s “correct”)</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/rss.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/c-c/" rel="tag"># C/C++</a>
+              <a href="/tags/cs106l/" rel="tag"># CS106L</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/f5746381.html" rel="prev" title="static_cast and const_cast in C++">
+                  <i class="fa fa-chevron-left"></i> static_cast and const_cast in C++
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">BlockLune</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/BlockLune" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.4.3/mermaid.min.js","integrity":"sha256-e0o3JYsdjqKajf9eOe22FhioYSz9WofRY4dLKo3F6do="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"BlockLune","repo":"blocklune.github.io","client_id":"f0d9ff2c460a605d4f3f","client_secret":"9808616eda1afe0741c036b5d5670a490b68f6ef","admin_user":"BlockLune","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"d608f0cb9ce6b9f558a7347317c084d3"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>
