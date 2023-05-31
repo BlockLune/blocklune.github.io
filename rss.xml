@@ -9,14 +9,14 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Tue, 30 May 2023 14:17:05 GMT</pubDate>
+    <pubDate>Wed, 31 May 2023 03:34:54 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
       <title>Move Semantics in C++</title>
       <link>https://blocklune.github.io/posts/d5786049.html</link>
       <guid>https://blocklune.github.io/posts/d5786049.html</guid>
-      <pubDate>Tue, 30 May 2023 14:17:05 GMT</pubDate>
+      <pubDate>Wed, 31 May 2023 03:34:54 GMT</pubDate>
       
       <description>&lt;p&gt;This is a note for Lecture 13, &lt;a href=&quot;https://web.stanford.edu/class/cs106l/index.html&quot;&gt;CS106L&lt;/a&gt;, Spring 2023.&lt;/p&gt;</description>
       
@@ -43,7 +43,7 @@
       <title>static_cast and const_cast in C++</title>
       <link>https://blocklune.github.io/posts/f5746381.html</link>
       <guid>https://blocklune.github.io/posts/f5746381.html</guid>
-      <pubDate>Tue, 30 May 2023 14:17:05 GMT</pubDate>
+      <pubDate>Wed, 31 May 2023 03:34:54 GMT</pubDate>
       
       <description>&lt;p&gt;This is a note for Lecture 8, &lt;a href=&quot;https://web.stanford.edu/class/cs106l/index.html&quot;&gt;CS106L&lt;/a&gt;, Spring 2023.&lt;/p&gt;</description>
       
@@ -69,10 +69,35 @@
     </item>
     
     <item>
+      <title>Type Safety and std::optional in C++</title>
+      <link>https://blocklune.github.io/posts/ab76f233.html</link>
+      <guid>https://blocklune.github.io/posts/ab76f233.html</guid>
+      <pubDate>Wed, 31 May 2023 03:34:54 GMT</pubDate>
+      
+      <description>&lt;p&gt;This is a note for Lecture 13, &lt;a href=&quot;https://web.stanford.edu/class/cs106l/index.html&quot;&gt;CS106L&lt;/a&gt;, Spring 2023.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
+      
+      
+      <category domain="https://blocklune.github.io/tags/c-c/">C/C++</category>
+      
+      
+      <comments>https://blocklune.github.io/posts/ab76f233.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
       <title>Permutations and Combinations in Python (itertools)</title>
       <link>https://blocklune.github.io/posts/cf2f01b2.html</link>
       <guid>https://blocklune.github.io/posts/cf2f01b2.html</guid>
-      <pubDate>Tue, 30 May 2023 14:17:05 GMT</pubDate>
+      <pubDate>Wed, 31 May 2023 03:34:54 GMT</pubDate>
       
       <description>&lt;p&gt;Extracted from &lt;em&gt;&lt;a href=&quot;https://docs.python.org/3/library/itertools.html&quot;&gt;itertools — Functions creating iterators for efficient looping — Python 3.11.3 documentation&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
       
