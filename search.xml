@@ -3234,7 +3234,7 @@
   <entry>
     <title>Type Safety and std::optional in C++</title>
     <url>/posts/ab76f233.html</url>
-    <content><![CDATA[<p>This is a note for Lecture 13, <a href="https://web.stanford.edu/class/cs106l/index.html">CS106L</a>, Spring 2023.</p>
+    <content><![CDATA[<p>This is a note for Lecture 14, <a href="https://web.stanford.edu/class/cs106l/index.html">CS106L</a>, Spring 2023.</p>
 <span id="more"></span>
 
 <h2 id="RECAP-CONST-CORRECTNESS"><a href="#RECAP-CONST-CORRECTNESS" class="headerlink" title="RECAP: CONST-CORRECTNESS"></a>RECAP: CONST-CORRECTNESS</h2><ul>
