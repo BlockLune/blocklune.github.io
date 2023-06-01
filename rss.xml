@@ -9,8 +9,37 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Thu, 01 Jun 2023 14:44:21 GMT</pubDate>
+    <pubDate>Thu, 01 Jun 2023 15:16:09 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>My personal summay of Stanford CS106L</title>
+      <link>https://blocklune.github.io/posts/b16dfec9.html</link>
+      <guid>https://blocklune.github.io/posts/b16dfec9.html</guid>
+      <pubDate>Thu, 01 Jun 2023 15:09:45 GMT</pubDate>
+      
+      <description>&lt;p&gt;This is &lt;a href=&quot;https://web.stanford.edu/class/cs106l/index.html&quot;&gt;CS106L&lt;/a&gt;, an in-depth modern C++ language course from Stanford. I enrolled in it at the beginning of April and almost finished it today.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
+      
+      
+      <category domain="https://blocklune.github.io/tags/online-course-summary/">Online course summary</category>
+      
+      <category domain="https://blocklune.github.io/tags/c-c/">C &amp; C++</category>
+      
+      <category domain="https://blocklune.github.io/tags/cs106l/">CS106L</category>
+      
+      
+      <comments>https://blocklune.github.io/posts/b16dfec9.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Const Correctness in C++</title>
@@ -168,6 +197,8 @@
       
       
       <category domain="https://blocklune.github.io/tags/algorithm/">Algorithm</category>
+      
+      <category domain="https://blocklune.github.io/tags/online-course-summary/">Online course summary</category>
       
       
       <comments>https://blocklune.github.io/posts/94efd546.html#disqus_thread</comments>
