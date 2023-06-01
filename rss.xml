@@ -9,8 +9,35 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Wed, 31 May 2023 14:20:02 GMT</pubDate>
+    <pubDate>Thu, 01 Jun 2023 07:00:11 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Const Correctness in C++</title>
+      <link>https://blocklune.github.io/posts/4eb7504e.html</link>
+      <guid>https://blocklune.github.io/posts/4eb7504e.html</guid>
+      <pubDate>Thu, 01 Jun 2023 06:57:37 GMT</pubDate>
+      
+      <description>&lt;p&gt;This is a note for Lecture 8, &lt;a href=&quot;https://web.stanford.edu/class/cs106l/index.html&quot;&gt;CS106L&lt;/a&gt;, Spring 2023.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
+      
+      
+      <category domain="https://blocklune.github.io/tags/const/">const</category>
+      
+      <category domain="https://blocklune.github.io/tags/c-c/">C &amp; C++</category>
+      
+      
+      <comments>https://blocklune.github.io/posts/4eb7504e.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Type Safety and std::optional in C++</title>
