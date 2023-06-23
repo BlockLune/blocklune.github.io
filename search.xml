@@ -2670,54 +2670,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C++ 中 cin 与 cout 的转进制输入输出</title>
-    <url>/posts/9e863176.html</url>
-    <content><![CDATA[<p>笔者的朋友有道输入八进制输出十进制的题目，他是使用数学方法实现的。笔者隐隐约约记得好像 cin 和 cout 有控制输入输出数字进制的方法，查找了一些资料，做一下笔记。</p>
-<span id="more"></span>
-
-<table>
-<thead>
-<tr>
-<th>进制</th>
-<th>对应缩写</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>二进制</td>
-<td> bin</td>
-</tr>
-<tr>
-<td> 八进制</td>
-<td> oct</td>
-</tr>
-<tr>
-<td> 十进制</td>
-<td> dec</td>
-</tr>
-<tr>
-<td> 十六进制</td>
-<td> hex</td>
-</tr>
-</tbody></table>
-<p>接下来只要在输入 / 输出的时候加上这些缩写就行了。</p>
-<p>比如输入一个八进制数然后以十进制输出它：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> num;</span><br><span class="line">    cin &gt;&gt; oct &gt;&gt; num;</span><br><span class="line">    cout &lt;&lt; dec &lt;&lt; num &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>程序运行结果：</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">1750</span><br><span class="line">1000</span><br></pre></td></tr></tbody></table></figure>
-
-<p>（”1750” 是输入，”1000” 是输出）</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C 标准库中 qsort 和 C++ STL 中 sort 的用法</title>
     <url>/posts/eab95d6e.html</url>
     <content><![CDATA[<p>虽然到现在还是不能完全理解 <code>qsort</code> 和 <code>sort</code> 这两个函数的底层原理，但至少，先学会如何使用吧。</p>
@@ -2804,6 +2756,54 @@
         <tag>C/C++</tag>
         <tag>Sorting</tag>
         <tag>STL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ 中 cin 与 cout 的转进制输入输出</title>
+    <url>/posts/9e863176.html</url>
+    <content><![CDATA[<p>笔者的朋友有道输入八进制输出十进制的题目，他是使用数学方法实现的。笔者隐隐约约记得好像 cin 和 cout 有控制输入输出数字进制的方法，查找了一些资料，做一下笔记。</p>
+<span id="more"></span>
+
+<table>
+<thead>
+<tr>
+<th>进制</th>
+<th>对应缩写</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>二进制</td>
+<td> bin</td>
+</tr>
+<tr>
+<td> 八进制</td>
+<td> oct</td>
+</tr>
+<tr>
+<td> 十进制</td>
+<td> dec</td>
+</tr>
+<tr>
+<td> 十六进制</td>
+<td> hex</td>
+</tr>
+</tbody></table>
+<p>接下来只要在输入 / 输出的时候加上这些缩写就行了。</p>
+<p>比如输入一个八进制数然后以十进制输出它：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> num;</span><br><span class="line">    cin &gt;&gt; oct &gt;&gt; num;</span><br><span class="line">    cout &lt;&lt; dec &lt;&lt; num &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>程序运行结果：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">1750</span><br><span class="line">1000</span><br></pre></td></tr></tbody></table></figure>
+
+<p>（”1750” 是输入，”1000” 是输出）</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
       </tags>
   </entry>
   <entry>
