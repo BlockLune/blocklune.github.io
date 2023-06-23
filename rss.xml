@@ -9,8 +9,31 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Wed, 21 Jun 2023 03:28:36 GMT</pubDate>
+    <pubDate>Fri, 23 Jun 2023 02:40:46 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Better right-click menu in Win11</title>
+      <link>https://blocklune.github.io/posts/798c36fc.html</link>
+      <guid>https://blocklune.github.io/posts/798c36fc.html</guid>
+      <pubDate>Thu, 22 Jun 2023 14:11:51 GMT</pubDate>
+      
+      <description>&lt;p&gt;When the Windows system was updated to version 11, the right-click menu was completely redesigned. Microsoft is apparently trying to make it simpler and more modern, but the way they have chosen to do it is really brute force: hiding everything useful in the secondary menu! I find this really annoying. Luckily, we have a way to bring back the classic, and even customize it and make it better! (This post is in Chinese.)&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
+      
+      
+      <category domain="https://blocklune.github.io/tags/windows/">Windows</category>
+      
+      
+      <comments>https://blocklune.github.io/posts/798c36fc.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>My personal summay of Stanford CS106L</title>
