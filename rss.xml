@@ -9,8 +9,35 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Fri, 23 Jun 2023 02:44:59 GMT</pubDate>
+    <pubDate>Thu, 29 Jun 2023 12:36:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Notes for Matplotlib</title>
+      <link>https://blocklune.github.io/posts/113e4ae1.html</link>
+      <guid>https://blocklune.github.io/posts/113e4ae1.html</guid>
+      <pubDate>Thu, 29 Jun 2023 12:00:50 GMT</pubDate>
+      
+      <description>&lt;p&gt;Here are some notes for Matplotlib.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/languages/python/">Python</category>
+      
+      
+      <category domain="https://blocklune.github.io/tags/python/">Python</category>
+      
+      <category domain="https://blocklune.github.io/tags/matplotlib/">Matplotlib</category>
+      
+      
+      <comments>https://blocklune.github.io/posts/113e4ae1.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Better right-click menu in Win11</title>

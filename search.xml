@@ -2670,6 +2670,54 @@
       </tags>
   </entry>
   <entry>
+    <title>C++ 中 cin 与 cout 的转进制输入输出</title>
+    <url>/posts/9e863176.html</url>
+    <content><![CDATA[<p>笔者的朋友有道输入八进制输出十进制的题目，他是使用数学方法实现的。笔者隐隐约约记得好像 cin 和 cout 有控制输入输出数字进制的方法，查找了一些资料，做一下笔记。</p>
+<span id="more"></span>
+
+<table>
+<thead>
+<tr>
+<th>进制</th>
+<th>对应缩写</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>二进制</td>
+<td> bin</td>
+</tr>
+<tr>
+<td> 八进制</td>
+<td> oct</td>
+</tr>
+<tr>
+<td> 十进制</td>
+<td> dec</td>
+</tr>
+<tr>
+<td> 十六进制</td>
+<td> hex</td>
+</tr>
+</tbody></table>
+<p>接下来只要在输入 / 输出的时候加上这些缩写就行了。</p>
+<p>比如输入一个八进制数然后以十进制输出它：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> num;</span><br><span class="line">    cin &gt;&gt; oct &gt;&gt; num;</span><br><span class="line">    cout &lt;&lt; dec &lt;&lt; num &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>程序运行结果：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">1750</span><br><span class="line">1000</span><br></pre></td></tr></tbody></table></figure>
+
+<p>（”1750” 是输入，”1000” 是输出）</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C 标准库中 qsort 和 C++ STL 中 sort 的用法</title>
     <url>/posts/eab95d6e.html</url>
     <content><![CDATA[<p>虽然到现在还是不能完全理解 <code>qsort</code> 和 <code>sort</code> 这两个函数的底层原理，但至少，先学会如何使用吧。</p>
@@ -2756,54 +2804,6 @@
         <tag>C/C++</tag>
         <tag>Sorting</tag>
         <tag>STL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ 中 cin 与 cout 的转进制输入输出</title>
-    <url>/posts/9e863176.html</url>
-    <content><![CDATA[<p>笔者的朋友有道输入八进制输出十进制的题目，他是使用数学方法实现的。笔者隐隐约约记得好像 cin 和 cout 有控制输入输出数字进制的方法，查找了一些资料，做一下笔记。</p>
-<span id="more"></span>
-
-<table>
-<thead>
-<tr>
-<th>进制</th>
-<th>对应缩写</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>二进制</td>
-<td> bin</td>
-</tr>
-<tr>
-<td> 八进制</td>
-<td> oct</td>
-</tr>
-<tr>
-<td> 十进制</td>
-<td> dec</td>
-</tr>
-<tr>
-<td> 十六进制</td>
-<td> hex</td>
-</tr>
-</tbody></table>
-<p>接下来只要在输入 / 输出的时候加上这些缩写就行了。</p>
-<p>比如输入一个八进制数然后以十进制输出它：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> num;</span><br><span class="line">    cin &gt;&gt; oct &gt;&gt; num;</span><br><span class="line">    cout &lt;&lt; dec &lt;&lt; num &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>程序运行结果：</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">1750</span><br><span class="line">1000</span><br></pre></td></tr></tbody></table></figure>
-
-<p>（”1750” 是输入，”1000” 是输出）</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
       </tags>
   </entry>
   <entry>
@@ -4119,6 +4119,47 @@
       </categories>
       <tags>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Notes for Matplotlib</title>
+    <url>/posts/113e4ae1.html</url>
+    <content><![CDATA[<p>Here are some notes for Matplotlib.</p>
+<span id="more"></span>
+
+<h2 id="USEFUL-WEBSITES"><a href="#USEFUL-WEBSITES" class="headerlink" title="USEFUL WEBSITES"></a>USEFUL WEBSITES</h2><ul>
+<li><em><a href="https://matplotlib.org/">matplotlib.org</a></em></li>
+<li><em><a href="https://www.matplotlib.org.cn/">matplotlib.org.cn</a></em></li>
+</ul>
+<h2 id="TUTORIAL"><a href="#TUTORIAL" class="headerlink" title="TUTORIAL"></a>TUTORIAL</h2><ul>
+<li><em><a href="https://matplotlib.org/stable/tutorials/index.html">Tutorials — Matplotlib 3.7.1 documentation</a></em></li>
+</ul>
+<h2 id="MISC"><a href="#MISC" class="headerlink" title="MISC"></a>MISC</h2><p>The <code>import</code> part:</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib <span class="keyword">as</span> mpl</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></tbody></table></figure>
+
+<p>A useful figure:</p>
+<p><img data-src="https://matplotlib.org/stable/_images/anatomy.png" alt="Parts of a Figure"></p>
+<p>Two coding styles:</p>
+<ul>
+<li>OO-style (Object-oriented style)</li>
+</ul>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">2</span>, <span class="number">100</span>)  <span class="comment"># Sample data.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Note that even in the OO-style, we use `.pyplot.figure` to create the Figure.</span></span><br><span class="line">fig, ax = plt.subplots(figsize=(<span class="number">5</span>, <span class="number">2.7</span>), layout=<span class="string">'constrained'</span>)</span><br><span class="line">ax.plot(x, x, label=<span class="string">'linear'</span>)  <span class="comment"># Plot some data on the axes.</span></span><br><span class="line">ax.plot(x, x**<span class="number">2</span>, label=<span class="string">'quadratic'</span>)  <span class="comment"># Plot more data on the axes...</span></span><br><span class="line">ax.plot(x, x**<span class="number">3</span>, label=<span class="string">'cubic'</span>)  <span class="comment"># ... and some more.</span></span><br><span class="line">ax.set_xlabel(<span class="string">'x label'</span>)  <span class="comment"># Add an x-label to the axes.</span></span><br><span class="line">ax.set_ylabel(<span class="string">'y label'</span>)  <span class="comment"># Add a y-label to the axes.</span></span><br><span class="line">ax.set_title(<span class="string">"Simple Plot"</span>)  <span class="comment"># Add a title to the axes.</span></span><br><span class="line">ax.legend()  <span class="comment"># Add a legend.</span></span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>pyplot-style</li>
+</ul>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">2</span>, <span class="number">100</span>)  <span class="comment"># Sample data.</span></span><br><span class="line"></span><br><span class="line">plt.figure(figsize=(<span class="number">5</span>, <span class="number">2.7</span>), layout=<span class="string">'constrained'</span>)</span><br><span class="line">plt.plot(x, x, label=<span class="string">'linear'</span>)  <span class="comment"># Plot some data on the (implicit) axes.</span></span><br><span class="line">plt.plot(x, x**<span class="number">2</span>, label=<span class="string">'quadratic'</span>)  <span class="comment"># etc.</span></span><br><span class="line">plt.plot(x, x**<span class="number">3</span>, label=<span class="string">'cubic'</span>)</span><br><span class="line">plt.xlabel(<span class="string">'x label'</span>)</span><br><span class="line">plt.ylabel(<span class="string">'y label'</span>)</span><br><span class="line">plt.title(<span class="string">"Simple Plot"</span>)</span><br><span class="line">plt.legend()</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To be continued…</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Matplotlib</tag>
       </tags>
   </entry>
   <entry>
