@@ -9,8 +9,33 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Thu, 29 Jun 2023 12:36:00 GMT</pubDate>
+    <pubDate>Tue, 04 Jul 2023 08:50:29 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Matching IPv4 addresses with RegExp</title>
+      <link>https://blocklune.github.io/posts/1d74bec6.html</link>
+      <guid>https://blocklune.github.io/posts/1d74bec6.html</guid>
+      <pubDate>Tue, 04 Jul 2023 08:03:46 GMT</pubDate>
+      
+      <description>&lt;p&gt;While solving &lt;a href=&quot;https://cs50.harvard.edu/python/2022/psets/7/numb3rs/&quot;&gt;the NUM3RS problem of CS50P&lt;/a&gt;, I was asked to match IPv4 addresses with RegExp.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
+      
+      
+      <category domain="https://blocklune.github.io/tags/regexp/">RegExp</category>
+      
+      <category domain="https://blocklune.github.io/tags/ipv4/">IPv4</category>
+      
+      
+      <comments>https://blocklune.github.io/posts/1d74bec6.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Notes for Matplotlib</title>
