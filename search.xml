@@ -1823,25 +1823,6 @@
       </tags>
   </entry>
   <entry>
-    <title>VS Code 中设置显示最大列数边界线</title>
-    <url>/posts/bb929dc9.html</url>
-    <content><![CDATA[<p>很多时候我们会避免一行代码过长，常见的限制有 80 字符、120 个字符等。我希望能在 VS Code 中显示一条边界线来提醒我已经到达这个限制了，需要换行。下边是设置的方法。</p>
-<span id="more"></span>
-
-<p>打开设置（快捷键 <code>Ctrl+,</code>），搜索 <code>Editor: Rulers</code>，点击 “在 settings.json” 中编辑，添加如下内容：</p>
-<figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">"editor.rulers"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="number">80</span><span class="punctuation">,</span><span class="number">120</span><span class="punctuation">]</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>当然你也可以按照自己的喜好设置字符数。</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>VS Code</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>VS Code 的安装与配置基础 C/C++ 开发环境</title>
     <url>/posts/a7a0ce82.html</url>
     <content><![CDATA[<p>我以前学习 C++ 的时候，使用的是 DevCpp 。这个软件让我这个初学者比较舒服的点是，我不用太过详细地考虑编译的过程 —— 新建一个 cpp 文件，写一点小程序，按下 F11，程序运行。我不需要管选择编译器啊、配置编译命令啊啥啥的。但是到 VS Code 这边，这都要我自己做了，对于新手并不是那么友好。这里记录一下我配置 VS Code 的 C/C++ 环境的完整过程，希望对你有所帮助。需要注意的是：学习一下基本的编译链接指令还是很有必要的！</p>
@@ -1922,6 +1903,25 @@
       </categories>
       <tags>
         <tag>C/C++</tag>
+        <tag>VS Code</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VS Code 中设置显示最大列数边界线</title>
+    <url>/posts/bb929dc9.html</url>
+    <content><![CDATA[<p>很多时候我们会避免一行代码过长，常见的限制有 80 字符、120 个字符等。我希望能在 VS Code 中显示一条边界线来提醒我已经到达这个限制了，需要换行。下边是设置的方法。</p>
+<span id="more"></span>
+
+<p>打开设置（快捷键 <code>Ctrl+,</code>），搜索 <code>Editor: Rulers</code>，点击 “在 settings.json” 中编辑，添加如下内容：</p>
+<figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">"editor.rulers"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="number">80</span><span class="punctuation">,</span><span class="number">120</span><span class="punctuation">]</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>当然你也可以按照自己的喜好设置字符数。</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
         <tag>VS Code</tag>
       </tags>
   </entry>
@@ -2262,28 +2262,6 @@
       </tags>
   </entry>
   <entry>
-    <title>补记一个用 Vue.js 和 ElementUI 实现的在线抽奖网页</title>
-    <url>/posts/6a8a1633.html</url>
-    <content><![CDATA[<p>这件事儿发生在我的高中某个新学期开始，新来了一个电脑老师。有点打赌或者考验我的性质吧，ta 说 ta 弄了随机数点名的小网页，还能用同学的照片进行抽取，问我能不能实现一个。ta 的实现方法是 jQuery，技术上比较老，界面也不太好看。我想去尝试一下别的方法，正好也试试略微学了一点的 Vue.js，为了好看，用了 Element UI。</p>
-<span id="more"></span>
-
-<p>一两个周末最终实现到现在的效果，能输入名字抽人，能随机数抽人（学号抽人？），还有一个通过图片抽的到今天也还没做。当时对着 Vue.js 和 Element UI 的开发文档勉里勉强做出来这个效果，现在早把那些基础知识忘记了，也不知道以后有没有工夫完善它了。</p>
-<p>你可以<a href="/raw/CatchDog/CatchDog.html">点击这里</a>来玩玩看。</p>
-<p><img data-src="https://pic.imgdb.cn/item/6308b57316f2c2beb1fad0f4.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57316f2c2beb1fad0ec.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad081.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad087.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad091.png"></p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>Web</tag>
-        <tag>Vue.js</tag>
-        <tag>Element UI</tag>
-        <tag>Html</tag>
-        <tag>JS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>RLCraft 新手教程一：过渡到你的正常生存</title>
     <url>/posts/a1ada34d.html</url>
     <content><![CDATA[<p>本教程是笔者自己游玩过程中写的，出发点是笔者自己想玩但又不想花费时间看很多实况去了解一些细节，又找不到比较详细的文字版中文教程，以致于无从下手，只能慢慢啃各种模组的百科和 RLCraft Wiki，便以教程形式写下自己的游玩过程，希望对后来者有所帮助。笔者不是什么资深玩家，故难免有疏漏，请大家多多包涵。</p>
@@ -2306,6 +2284,28 @@
         <tag>Game</tag>
         <tag>Minecraft</tag>
         <tag>RLCraft</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>补记一个用 Vue.js 和 ElementUI 实现的在线抽奖网页</title>
+    <url>/posts/6a8a1633.html</url>
+    <content><![CDATA[<p>这件事儿发生在我的高中某个新学期开始，新来了一个电脑老师。有点打赌或者考验我的性质吧，ta 说 ta 弄了随机数点名的小网页，还能用同学的照片进行抽取，问我能不能实现一个。ta 的实现方法是 jQuery，技术上比较老，界面也不太好看。我想去尝试一下别的方法，正好也试试略微学了一点的 Vue.js，为了好看，用了 Element UI。</p>
+<span id="more"></span>
+
+<p>一两个周末最终实现到现在的效果，能输入名字抽人，能随机数抽人（学号抽人？），还有一个通过图片抽的到今天也还没做。当时对着 Vue.js 和 Element UI 的开发文档勉里勉强做出来这个效果，现在早把那些基础知识忘记了，也不知道以后有没有工夫完善它了。</p>
+<p>你可以<a href="/raw/CatchDog/CatchDog.html">点击这里</a>来玩玩看。</p>
+<p><img data-src="https://pic.imgdb.cn/item/6308b57316f2c2beb1fad0f4.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57316f2c2beb1fad0ec.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad081.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad087.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad091.png"></p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Web</tag>
+        <tag>Vue.js</tag>
+        <tag>Element UI</tag>
+        <tag>Html</tag>
+        <tag>JS</tag>
       </tags>
   </entry>
   <entry>
@@ -4295,7 +4295,8 @@
 <p>See <strong><a href="https://cs50.harvard.edu/python/2022/notes/6/#binary-files-and-pil">Binary Files and PIL</a></strong></p>
 <h2 id="WEEK-7-Regular-Expressions"><a href="#WEEK-7-Regular-Expressions" class="headerlink" title="WEEK 7: Regular Expressions"></a>WEEK 7: Regular Expressions</h2><h3 id="re"><a href="#re" class="headerlink" title="re"></a>re</h3><p>See <strong><a href="https://cs50.harvard.edu/python/2022/notes/7/">Notes</a></strong></p>
 <h2 id="WEEK-8-Object-Oriented-Programming"><a href="#WEEK-8-Object-Oriented-Programming" class="headerlink" title="WEEK 8: Object-Oriented Programming"></a>WEEK 8: Object-Oriented Programming</h2><h3 id="fpdf2"><a href="#fpdf2" class="headerlink" title="fpdf2"></a>fpdf2</h3><p>See <strong><a href="https://cs50.harvard.edu/python/2022/psets/8/shirtificate/">CS50 Shirtificate</a></strong></p>
-<h2 id="WEEK-9-Et-Cetera"><a href="#WEEK-9-Et-Cetera" class="headerlink" title="WEEK 9: Et Cetera"></a>WEEK 9: Et Cetera</h2><h3 id="argparse"><a href="#argparse" class="headerlink" title="argparse"></a>argparse</h3><p>See <strong><a href="https://cs50.harvard.edu/python/2022/notes/9/#argparse">argparse</a></strong></p>
+<h2 id="WEEK-9-Et-Cetera"><a href="#WEEK-9-Et-Cetera" class="headerlink" title="WEEK 9: Et Cetera"></a>WEEK 9: Et Cetera</h2><h3 id="mypy"><a href="#mypy" class="headerlink" title="mypy"></a>mypy</h3><p>See <strong><a href="https://cs50.harvard.edu/python/2022/notes/9/#type-hints">Type Hints</a></strong></p>
+<h3 id="argparse"><a href="#argparse" class="headerlink" title="argparse"></a>argparse</h3><p>See <strong><a href="https://cs50.harvard.edu/python/2022/notes/9/#argparse">argparse</a></strong></p>
 <h3 id="pyttsx3"><a href="#pyttsx3" class="headerlink" title="pyttsx3"></a>pyttsx3</h3><p>See <strong><a href="https://cs50.harvard.edu/python/2022/notes/9/#this-was-cs50">This was CS50!</a></strong></p>
 ]]></content>
       <categories>
