@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="google7b9c7ea42a3102a3.html">
+  <meta name="baidu-site-verification" content="baidu_verify_code-53bseLro2G.html">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blocklune.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="This is a list of some Python libraries mentioned in CS50P 2022.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python libraries mentioned in CS50P">
+<meta property="og:url" content="https://blocklune.github.io/posts/22098b25.html">
+<meta property="og:site_name" content="Fish Pond">
+<meta property="og:description" content="This is a list of some Python libraries mentioned in CS50P 2022.">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-07-07T03:27:54.000Z">
+<meta property="article:modified_time" content="2023-07-07T03:30:07.028Z">
+<meta property="article:author" content="BlockLune">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="CS50P">
+<meta property="article:tag" content="pip">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://blocklune.github.io/posts/22098b25.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blocklune.github.io/posts/22098b25.html","path":"posts/22098b25.html","title":"Python libraries mentioned in CS50P"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Python libraries mentioned in CS50P | Fish Pond</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/rss.xml" title="Fish Pond" type="application/rss+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Fish Pond</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Posts swim here.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#WEEK-4-Libraries"><span class="nav-number">1.</span> <span class="nav-text">WEEK 4: Libraries</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#random"><span class="nav-number">1.1.</span> <span class="nav-text">random</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#statistics"><span class="nav-number">1.2.</span> <span class="nav-text">statistics</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sys"><span class="nav-number">1.3.</span> <span class="nav-text">sys</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cowsay"><span class="nav-number">1.4.</span> <span class="nav-text">cowsay</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#emoji"><span class="nav-number">1.5.</span> <span class="nav-text">emoji</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pyfiglet"><span class="nav-number">1.6.</span> <span class="nav-text">pyfiglet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#inflect"><span class="nav-number">1.7.</span> <span class="nav-text">inflect</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#requests"><span class="nav-number">1.8.</span> <span class="nav-text">requests</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pylint"><span class="nav-number">1.9.</span> <span class="nav-text">pylint</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#black"><span class="nav-number">1.10.</span> <span class="nav-text">black</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WEEK-5-Unit-Tests"><span class="nav-number">2.</span> <span class="nav-text">WEEK 5: Unit Tests</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pytest"><span class="nav-number">2.1.</span> <span class="nav-text">pytest</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WEEK-6-File-I-O"><span class="nav-number">3.</span> <span class="nav-text">WEEK 6: File I&#x2F;O</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#csv"><span class="nav-number">3.1.</span> <span class="nav-text">csv</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pillow"><span class="nav-number">3.2.</span> <span class="nav-text">pillow</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WEEK-7-Regular-Expressions"><span class="nav-number">4.</span> <span class="nav-text">WEEK 7: Regular Expressions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#re"><span class="nav-number">4.1.</span> <span class="nav-text">re</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WEEK-8-Object-Oriented-Programming"><span class="nav-number">5.</span> <span class="nav-text">WEEK 8: Object-Oriented Programming</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#fpdf2"><span class="nav-number">5.1.</span> <span class="nav-text">fpdf2</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WEEK-9-Et-Cetera"><span class="nav-number">6.</span> <span class="nav-text">WEEK 9: Et Cetera</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#argparse"><span class="nav-number">6.1.</span> <span class="nav-text">argparse</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pyttsx3"><span class="nav-number">6.2.</span> <span class="nav-text">pyttsx3</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="BlockLune"
+      src="/img/waifu.png">
+  <p class="site-author-name" itemprop="name">BlockLune</p>
+  <div class="site-description" itemprop="description">Here is BlockLune's blog.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">68</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/BlockLune" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;BlockLune" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:blocklune@gmail.com" title="E-Mail → mailto:blocklune@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          Links
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="http://f-studio.is-best.net/" title="http:&#x2F;&#x2F;f-studio.is-best.net&#x2F;" rel="noopener" target="_blank">F-Studio</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://luoyuxuanryan.github.io/" title="https:&#x2F;&#x2F;luoyuxuanryan.github.io&#x2F;" rel="noopener" target="_blank">Radish Garden</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://tommygong.top/" title="https:&#x2F;&#x2F;tommygong.top&#x2F;" rel="noopener" target="_blank">TommyGong's Blog</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://blog.yunfinibol.top/" title="http:&#x2F;&#x2F;blog.yunfinibol.top&#x2F;" rel="noopener" target="_blank">Yunfinibol's Blog</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blocklune.github.io/posts/22098b25.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/waifu.png">
+      <meta itemprop="name" content="BlockLune">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fish Pond">
+      <meta itemprop="description" content="Here is BlockLune's blog.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Python libraries mentioned in CS50P | Fish Pond">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Python libraries mentioned in CS50P
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-07-07 11:27:54" itemprop="dateCreated datePublished" datetime="2023-07-07T11:27:54+08:00">2023-07-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/" itemprop="url" rel="index"><span itemprop="name">CS</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/languages/" itemprop="url" rel="index"><span itemprop="name">Languages</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/languages/python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>This is a list of some Python libraries mentioned in CS50P 2022.</p>
+<span id="more"></span>
+
+<h2 id="WEEK-4-Libraries"><a href="#WEEK-4-Libraries" class="headerlink" title="WEEK 4: Libraries"></a>WEEK 4: Libraries</h2><h3 id="random"><a href="#random" class="headerlink" title="random"></a>random</h3><p>See <strong><a target="_blank" rel="noopener" href="https://cs50.harvard.edu/python/2022/notes/4/#random">Random</a></strong></p>
+<p>Ex.</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line">coin = random.choice([<span class="string">"heads"</span>, <span class="string">"tails"</span>])</span><br><span class="line"><span class="built_in">print</span>(coin)</span><br><span class="line"></span><br><span class="line">number = random.randint(<span class="number">1</span>, <span class="number">10</span>)</span><br><span class="line"><span class="built_in">print</span>(number)</span><br><span class="line"></span><br><span class="line">cards = [<span class="string">"jack"</span>, <span class="string">"queen"</span>, <span class="string">"king"</span>]</span><br><span class="line">random.shuffle(cards)</span><br><span class="line"><span class="keyword">for</span> card <span class="keyword">in</span> cards:</span><br><span class="line">  <span class="built_in">print</span>(card)</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="statistics"><a href="#statistics" class="headerlink" title="statistics"></a>statistics</h3><p>See <strong><a target="_blank" rel="noopener" href="https://cs50.harvard.edu/python/2022/notes/4/#statistics">Statistics</a></strong></p>
+<p>Ex.</p>
+<p>The <code>mean</code> function takes a list of values and print the average of these values.</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> statistics</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(statistics.mean([<span class="number">100</span>, <span class="number">90</span>]))</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="sys"><a href="#sys" class="headerlink" title="sys"></a>sys</h3><p>See <strong><a target="_blank" rel="noopener" href="https://cs50.harvard.edu/python/2022/notes/4/#command-line-arguments">Command-Line Arguments</a></strong></p>
+<h3 id="cowsay"><a href="#cowsay" class="headerlink" title="cowsay"></a>cowsay</h3><p>This library generates ascii arts like this:</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">  ___________</span><br><span class="line">&lt; Hello World &gt;</span><br><span class="line">  ===========</span><br><span class="line">                \</span><br><span class="line">                 \</span><br><span class="line">                   ^__^</span><br><span class="line">                   (oo)\_______</span><br><span class="line">                   (__)\       )\/\</span><br><span class="line">                       ||----w |</span><br><span class="line">                       ||     ||</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<p>See <strong><a target="_blank" rel="noopener" href="https://cs50.harvard.edu/python/2022/notes/4/#packages">Packages</a></strong></p>
+<h3 id="emoji"><a href="#emoji" class="headerlink" title="emoji"></a>emoji</h3><p>This library can convert some specified words to emoji. For instance, <code>:thumbsup:</code> can be converted to 👍.</p>
+<p>See <strong><a target="_blank" rel="noopener" href="https://cs50.harvard.edu/python/2022/psets/4/emojize/">emojize</a></strong></p>
+<p>Ex.</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> emoji</span><br><span class="line"></span><br><span class="line">words = <span class="built_in">input</span>(<span class="string">"Input: "</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f"Output: <span class="subst">{emoji.emojize(words)}</span>"</span>)</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="pyfiglet"><a href="#pyfiglet" class="headerlink" title="pyfiglet"></a>pyfiglet</h3><p>This library can make large letters out of ordinary text:</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> _ _ _          _   _     _</span><br><span class="line">| (_) | _____  | |_| |__ (_)___</span><br><span class="line">| | | |/ / _ \ | __| '_ \| / __|</span><br><span class="line">| | |   &lt;  __/ | |_| | | | \__ \</span><br><span class="line">|_|_|_|\_\___|  \__|_| |_|_|___/</span><br></pre></td></tr></tbody></table></figure>
+
+<p>See <strong><a target="_blank" rel="noopener" href="https://cs50.harvard.edu/python/2022/psets/4/figlet/">Frank, lan and Glen’s Letters</a></strong></p>
+<h3 id="inflect"><a href="#inflect" class="headerlink" title="inflect"></a>inflect</h3><p>This library can correctly generate plurals, singular nouns, ordinals, indefinite articles; convert numbers to words.</p>
+<p>See <strong><a target="_blank" rel="noopener" href="https://cs50.harvard.edu/python/2022/psets/4/adieu/">Adieu, Adieu</a></strong></p>
+<h3 id="requests"><a href="#requests" class="headerlink" title="requests"></a>requests</h3><p>See <strong><a target="_blank" rel="noopener" href="https://cs50.harvard.edu/python/2022/psets/4/bitcoin/">Bitcoin Price Index</a></strong></p>
+<h3 id="pylint"><a href="#pylint" class="headerlink" title="pylint"></a>pylint</h3><p>See <strong><a target="_blank" rel="noopener" href="https://cs50.harvard.edu/python/2022/shorts/style/">Style</a></strong></p>
+<h3 id="black"><a href="#black" class="headerlink" title="black"></a>black</h3><p>See <strong><a target="_blank" rel="noopener" href="https://cs50.harvard.edu/python/2022/shorts/style/">Style</a></strong></p>
+<h2 id="WEEK-5-Unit-Tests"><a href="#WEEK-5-Unit-Tests" class="headerlink" title="WEEK 5: Unit Tests"></a>WEEK 5: Unit Tests</h2><h3 id="pytest"><a href="#pytest" class="headerlink" title="pytest"></a>pytest</h3><p>See <strong><a target="_blank" rel="noopener" href="https://cs50.harvard.edu/python/2022/notes/5/#pytest">Pytest</a></strong></p>
+<p>Ex.1.</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># fuel.py</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        fraction = <span class="built_in">input</span>(<span class="string">"Fraction: "</span>)</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            percentage = convert(fraction)</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">except</span> ValueError:</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line">        <span class="keyword">except</span> ZeroDivisionError:</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line">    <span class="built_in">print</span>(gauge(percentage))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">convert</span>(<span class="params">fraction</span>):</span><br><span class="line">    x, y = [<span class="built_in">int</span>(bit) <span class="keyword">for</span> bit <span class="keyword">in</span> fraction.split(<span class="string">"/"</span>)]</span><br><span class="line">    <span class="keyword">if</span> x &gt; y <span class="keyword">and</span> y != <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">raise</span> ValueError</span><br><span class="line">    <span class="keyword">if</span> y == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">raise</span> ZeroDivisionError</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">int</span>(x / y * <span class="number">100</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gauge</span>(<span class="params">percentage</span>):</span><br><span class="line">    <span class="keyword">if</span> percentage &lt;= <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"E"</span></span><br><span class="line">    <span class="keyword">elif</span> percentage &gt;= <span class="number">99</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"F"</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">f"<span class="subst">{percentage}</span>%"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># test_fuel.py</span></span><br><span class="line"><span class="keyword">from</span> fuel <span class="keyword">import</span> convert, gauge</span><br><span class="line"><span class="keyword">import</span> pytest</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test_covert</span>():</span><br><span class="line">    <span class="keyword">assert</span> convert(<span class="string">"0/4"</span>) == <span class="number">0</span></span><br><span class="line">    <span class="keyword">assert</span> convert(<span class="string">"1/4"</span>) == <span class="number">25</span></span><br><span class="line">    <span class="keyword">assert</span> convert(<span class="string">"3/4"</span>) == <span class="number">75</span></span><br><span class="line">    <span class="keyword">assert</span> convert(<span class="string">"4/4"</span>) == <span class="number">100</span></span><br><span class="line">    <span class="keyword">with</span> pytest.raises(ValueError):</span><br><span class="line">        <span class="keyword">assert</span> convert(<span class="string">"cat/dog"</span>)</span><br><span class="line">        <span class="keyword">assert</span> convert(<span class="string">"three/four"</span>)</span><br><span class="line">        <span class="keyword">assert</span> convert(<span class="string">"1.5/3"</span>)</span><br><span class="line">        <span class="keyword">assert</span> convert(<span class="string">"4/3"</span>)</span><br><span class="line">    <span class="keyword">with</span> pytest.raises(ZeroDivisionError):</span><br><span class="line">        <span class="keyword">assert</span> convert(<span class="string">"4/0"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test_guage</span>():</span><br><span class="line">    <span class="keyword">assert</span> gauge(<span class="number">0</span>) == <span class="string">"E"</span></span><br><span class="line">    <span class="keyword">assert</span> gauge(<span class="number">1</span>) == <span class="string">"E"</span></span><br><span class="line">    <span class="keyword">assert</span> gauge(<span class="number">25</span>) == <span class="string">"25%"</span></span><br><span class="line">    <span class="keyword">assert</span> gauge(<span class="number">99</span>) == <span class="string">"F"</span></span><br><span class="line">    <span class="keyword">assert</span> gauge(<span class="number">100</span>) == <span class="string">"F"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>Ex.2.</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># seasons.py</span></span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> date</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> inflect</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">DATE_REGEXP = <span class="string">r"^(([0-9]{3}[1-9]|[0-9]{2}[1-9][0-9]{1}|[0-9]{1}[1-9][0-9]{2}|[1-9][0-9]{3})-(((0[13578]|1[02])-(0[1-9]|[12][0-9]|3[01]))|((0[469]|11)-(0[1-9]|[12][0-9]|30))|(02-(0[1-9]|[1][0-9]|2[0-8]))))|((([0-9]{2})(0[48]|[2468][048]|[13579][26])|((0[48]|[2468][048]|[3579][26])00))-02-29)$"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    date_str = <span class="built_in">input</span>(<span class="string">"Date of Birth: "</span>)</span><br><span class="line">    <span class="built_in">print</span>(get_ans(date_str))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_ans</span>(<span class="params">date_str</span>):</span><br><span class="line">    <span class="keyword">if</span> is_valid_date(date_str):</span><br><span class="line">        birthday = date.fromisoformat(date_str)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"Invalid date"</span>)</span><br><span class="line">        sys.exit(<span class="number">1</span>)</span><br><span class="line">    today = date.today()</span><br><span class="line">    days = (today - birthday).days</span><br><span class="line">    p = inflect.engine()</span><br><span class="line">    <span class="keyword">return</span> (p.number_to_words(days * <span class="number">24</span> * <span class="number">60</span>, andword=<span class="string">""</span>)).capitalize() + <span class="string">" minutes"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">is_valid_date</span>(<span class="params">s</span>):</span><br><span class="line">    <span class="keyword">return</span> re.search(DATE_REGEXP, s)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># test_seasons.py</span></span><br><span class="line"><span class="keyword">from</span> seasons <span class="keyword">import</span> get_ans</span><br><span class="line"><span class="keyword">import</span> pytest</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test_correctness</span>():</span><br><span class="line">    <span class="keyword">assert</span> get_ans(<span class="string">"2022-07-05"</span>) == <span class="string">"Five hundred twenty-five thousand, six hundred minutes"</span></span><br><span class="line">    <span class="keyword">assert</span> get_ans(<span class="string">"2021-07-05"</span>) == <span class="string">"One million, fifty-one thousand, two hundred minutes"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test_invalid_input</span>():</span><br><span class="line">    <span class="keyword">with</span> pytest.raises(SystemExit):</span><br><span class="line">        get_ans(<span class="string">"January 1, 1999"</span>)</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="WEEK-6-File-I-O"><a href="#WEEK-6-File-I-O" class="headerlink" title="WEEK 6: File I/O"></a>WEEK 6: File I/O</h2><h3 id="csv"><a href="#csv" class="headerlink" title="csv"></a>csv</h3><p>See <strong><a target="_blank" rel="noopener" href="https://cs50.harvard.edu/python/2022/notes/6/#csv">csv</a></strong></p>
+<h3 id="pillow"><a href="#pillow" class="headerlink" title="pillow"></a>pillow</h3><p>This is a popular Python library that works well with image files.</p>
+<p>See <strong><a target="_blank" rel="noopener" href="https://cs50.harvard.edu/python/2022/notes/6/#binary-files-and-pil">Binary Files and PIL</a></strong></p>
+<h2 id="WEEK-7-Regular-Expressions"><a href="#WEEK-7-Regular-Expressions" class="headerlink" title="WEEK 7: Regular Expressions"></a>WEEK 7: Regular Expressions</h2><h3 id="re"><a href="#re" class="headerlink" title="re"></a>re</h3><p>See <strong><a target="_blank" rel="noopener" href="https://cs50.harvard.edu/python/2022/notes/7/">Notes</a></strong></p>
+<h2 id="WEEK-8-Object-Oriented-Programming"><a href="#WEEK-8-Object-Oriented-Programming" class="headerlink" title="WEEK 8: Object-Oriented Programming"></a>WEEK 8: Object-Oriented Programming</h2><h3 id="fpdf2"><a href="#fpdf2" class="headerlink" title="fpdf2"></a>fpdf2</h3><p>See <strong><a target="_blank" rel="noopener" href="https://cs50.harvard.edu/python/2022/psets/8/shirtificate/">CS50 Shirtificate</a></strong></p>
+<h2 id="WEEK-9-Et-Cetera"><a href="#WEEK-9-Et-Cetera" class="headerlink" title="WEEK 9: Et Cetera"></a>WEEK 9: Et Cetera</h2><h3 id="argparse"><a href="#argparse" class="headerlink" title="argparse"></a>argparse</h3><p>See <strong><a target="_blank" rel="noopener" href="https://cs50.harvard.edu/python/2022/notes/9/#argparse">argparse</a></strong></p>
+<h3 id="pyttsx3"><a href="#pyttsx3" class="headerlink" title="pyttsx3"></a>pyttsx3</h3><p>See <strong><a target="_blank" rel="noopener" href="https://cs50.harvard.edu/python/2022/notes/9/#this-was-cs50">This was CS50!</a></strong></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/rss.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/python/" rel="tag"># Python</a>
+              <a href="/tags/cs50p/" rel="tag"># CS50P</a>
+              <a href="/tags/pip/" rel="tag"># pip</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/1d74bec6.html" rel="prev" title="Matching IPv4 addresses with RegExp">
+                  <i class="fa fa-chevron-left"></i> Matching IPv4 addresses with RegExp
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">BlockLune</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/BlockLune" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.2.3/mermaid.min.js","integrity":"sha256-JFptYy4KzJ5OQP+Q9fubNf3cxpPPmZKqUOovyEONKrQ="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"BlockLune","repo":"blocklune.github.io","client_id":"f0d9ff2c460a605d4f3f","client_secret":"9808616eda1afe0741c036b5d5670a490b68f6ef","admin_user":"BlockLune","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"3d8959b024a3f4dd0db7a8c4849aca1c"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

@@ -9,8 +9,37 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Tue, 04 Jul 2023 09:02:20 GMT</pubDate>
+    <pubDate>Fri, 07 Jul 2023 03:30:07 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Python libraries mentioned in CS50P</title>
+      <link>https://blocklune.github.io/posts/22098b25.html</link>
+      <guid>https://blocklune.github.io/posts/22098b25.html</guid>
+      <pubDate>Fri, 07 Jul 2023 03:27:54 GMT</pubDate>
+      
+      <description>&lt;p&gt;This is a list of some Python libraries mentioned in CS50P 2022.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/languages/python/">Python</category>
+      
+      
+      <category domain="https://blocklune.github.io/tags/python/">Python</category>
+      
+      <category domain="https://blocklune.github.io/tags/cs50p/">CS50P</category>
+      
+      <category domain="https://blocklune.github.io/tags/pip/">pip</category>
+      
+      
+      <comments>https://blocklune.github.io/posts/22098b25.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Matching IPv4 addresses with RegExp</title>
