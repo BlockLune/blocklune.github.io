@@ -9,8 +9,37 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Fri, 07 Jul 2023 07:43:51 GMT</pubDate>
+    <pubDate>Sat, 08 Jul 2023 07:10:40 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Notes for Nand2Tetris: Boolean Functions and Gate Logic</title>
+      <link>https://blocklune.github.io/posts/53a0b5ef.html</link>
+      <guid>https://blocklune.github.io/posts/53a0b5ef.html</guid>
+      <pubDate>Sat, 08 Jul 2023 07:06:35 GMT</pubDate>
+      
+      <description>&lt;p&gt;This is a note for Nand2Tetris Unit 1.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/computing-system/">Computing System</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
+      
+      
+      <category domain="https://blocklune.github.io/tags/nand2tetris/">Nand2Tetris</category>
+      
+      <category domain="https://blocklune.github.io/tags/boolean-functions/">Boolean Functions</category>
+      
+      <category domain="https://blocklune.github.io/tags/gate-logic/">Gate Logic</category>
+      
+      
+      <comments>https://blocklune.github.io/posts/53a0b5ef.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Python libraries mentioned in CS50P</title>
