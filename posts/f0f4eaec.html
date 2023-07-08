@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="google7b9c7ea42a3102a3.html">
+  <meta name="baidu-site-verification" content="baidu_verify_code-53bseLro2G.html">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blocklune.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="This is a note for Nand2Tetris Unit 2.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Notes for Nand2Tetris: Boolean Arithmetic and the ALU">
+<meta property="og:url" content="https://blocklune.github.io/posts/f0f4eaec.html">
+<meta property="og:site_name" content="Fish Pond">
+<meta property="og:description" content="This is a note for Nand2Tetris Unit 2.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s1.ax1x.com/2023/07/08/pCgwBcR.jpg">
+<meta property="article:published_time" content="2023-07-08T14:17:06.000Z">
+<meta property="article:modified_time" content="2023-07-08T14:49:13.058Z">
+<meta property="article:author" content="BlockLune">
+<meta property="article:tag" content="Nand2Tetris">
+<meta property="article:tag" content="Boolean Arithmetic">
+<meta property="article:tag" content="ALU">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2023/07/08/pCgwBcR.jpg">
+
+
+<link rel="canonical" href="https://blocklune.github.io/posts/f0f4eaec.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blocklune.github.io/posts/f0f4eaec.html","path":"posts/f0f4eaec.html","title":"Notes for Nand2Tetris: Boolean Arithmetic and the ALU"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Notes for Nand2Tetris: Boolean Arithmetic and the ALU | Fish Pond</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/rss.xml" title="Fish Pond" type="application/rss+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Fish Pond</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Posts swim here.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Unit-2-2"><span class="nav-number">1.</span> <span class="nav-text">Unit 2.2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Half-Adder"><span class="nav-number">1.1.</span> <span class="nav-text">Half Adder</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Full-Adder"><span class="nav-number">1.2.</span> <span class="nav-text">Full Adder</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unit-2-3"><span class="nav-number">2.</span> <span class="nav-text">Unit 2.3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E2%80%99s-complement"><span class="nav-number">2.1.</span> <span class="nav-text">2’s complement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-compute-x"><span class="nav-number">2.2.</span> <span class="nav-text">How to compute -x</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unit-2-4"><span class="nav-number">3.</span> <span class="nav-text">Unit 2.4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Project-2"><span class="nav-number">4.</span> <span class="nav-text">Project 2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HalfAdder"><span class="nav-number">4.1.</span> <span class="nav-text">HalfAdder</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FullAdder"><span class="nav-number">4.2.</span> <span class="nav-text">FullAdder</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Add16"><span class="nav-number">4.3.</span> <span class="nav-text">Add16</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Inc16"><span class="nav-number">4.4.</span> <span class="nav-text">Inc16</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ALU"><span class="nav-number">4.5.</span> <span class="nav-text">ALU</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="BlockLune"
+      src="/img/waifu.png">
+  <p class="site-author-name" itemprop="name">BlockLune</p>
+  <div class="site-description" itemprop="description">Here is BlockLune's blog.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">54</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">73</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/BlockLune" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;BlockLune" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:blocklune@gmail.com" title="E-Mail → mailto:blocklune@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          Links
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="http://f-studio.is-best.net/" title="http:&#x2F;&#x2F;f-studio.is-best.net&#x2F;" rel="noopener" target="_blank">F-Studio</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://luoyuxuanryan.github.io/" title="https:&#x2F;&#x2F;luoyuxuanryan.github.io&#x2F;" rel="noopener" target="_blank">Radish Garden</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://tommygong.top/" title="https:&#x2F;&#x2F;tommygong.top&#x2F;" rel="noopener" target="_blank">TommyGong's Blog</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://blog.yunfinibol.top/" title="http:&#x2F;&#x2F;blog.yunfinibol.top&#x2F;" rel="noopener" target="_blank">Yunfinibol's Blog</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blocklune.github.io/posts/f0f4eaec.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/waifu.png">
+      <meta itemprop="name" content="BlockLune">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fish Pond">
+      <meta itemprop="description" content="Here is BlockLune's blog.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Notes for Nand2Tetris: Boolean Arithmetic and the ALU | Fish Pond">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Notes for Nand2Tetris: Boolean Arithmetic and the ALU
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-07-08 22:17:06" itemprop="dateCreated datePublished" datetime="2023-07-08T22:17:06+08:00">2023-07-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/" itemprop="url" rel="index"><span itemprop="name">CS</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/computing-system/" itemprop="url" rel="index"><span itemprop="name">Computing System</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/computing-system/nand2tetris/" itemprop="url" rel="index"><span itemprop="name">Nand2Tetris</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>This is a note for Nand2Tetris Unit 2.</p>
+<span id="more"></span>
+
+<h2 id="Unit-2-2"><a href="#Unit-2-2" class="headerlink" title="Unit 2.2"></a>Unit 2.2</h2><h3 id="Half-Adder"><a href="#Half-Adder" class="headerlink" title="Half Adder"></a>Half Adder</h3><p>Truth table:</p>
+<table>
+<thead>
+<tr>
+<th>a</th>
+<th>b</th>
+<th>sum</th>
+<th>carry</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<p>Interface:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">CHIP HalfAdder {</span><br><span class="line">    IN a, b;</span><br><span class="line">    OUT sum,</span><br><span class="line">        carry;</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    ...</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Idea:</p>
+<ul>
+<li><code>sum</code> is <code>a XOR b</code></li>
+<li><code>carry</code> is <code>a AND b</code></li>
+</ul>
+<h3 id="Full-Adder"><a href="#Full-Adder" class="headerlink" title="Full Adder"></a>Full Adder</h3><p>Interface:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">CHIP FullAdder {</span><br><span class="line">    IN a, b, c;</span><br><span class="line">    OUT sum,</span><br><span class="line">        carry;</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    ...</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Unit-2-3"><a href="#Unit-2-3" class="headerlink" title="Unit 2.3"></a>Unit 2.3</h2><h3 id="2’s-complement"><a href="#2’s-complement" class="headerlink" title="2’s complement"></a>2’s complement</h3><p>2’s complement represent negative number $-x$ using the positive number $2^{n}-x$.</p>
+<ul>
+<li>Range of positive numbers: $[0, 2^{n-1}-1]$</li>
+<li>Range of negative numbers: $[-2^{n-1}, -1]$</li>
+</ul>
+<h3 id="How-to-compute-x"><a href="#How-to-compute-x" class="headerlink" title="How to compute -x"></a>How to compute -x</h3><p>How to do this quickly?</p>
+<p>$$<br>Input: x<br>$$</p>
+<p>$$<br>Output: -x (in 2’s complement)<br>$$</p>
+<p>The idea is:</p>
+<p>$$<br>2^{n}-x = 1+(2^{n}-1)-x<br>$$</p>
+<p>where $(2^{n}-1)$ is $n$ bits of ones, and using it to minus $x$ equals to flipping every bit of $x$.</p>
+<p>So, the steps to compute -x is:</p>
+<ol>
+<li>Flip every bit of x;</li>
+<li>Plus one.</li>
+</ol>
+<h2 id="Unit-2-4"><a href="#Unit-2-4" class="headerlink" title="Unit 2.4"></a>Unit 2.4</h2><p>ALU: Arithmetic Logic Unit</p>
+<p><img data-src="https://s1.ax1x.com/2023/07/08/pCgwBcR.jpg" alt="alu"></p>
+<h2 id="Project-2"><a href="#Project-2" class="headerlink" title="Project 2"></a>Project 2</h2><h3 id="HalfAdder"><a href="#HalfAdder" class="headerlink" title="HalfAdder"></a>HalfAdder</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">CHIP HalfAdder {</span><br><span class="line">    IN a, b;    // 1-bit inputs</span><br><span class="line">    OUT sum,    // Right bit of a + b</span><br><span class="line">        carry;  // Left bit of a + b</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    Xor(a=a, b=b, out=sum);</span><br><span class="line">    And(a=a, b=b, out=carry);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="FullAdder"><a href="#FullAdder" class="headerlink" title="FullAdder"></a>FullAdder</h3><p>Use two <code>HalfAdder</code>s and a <code>OR</code> to combine a <code>FullAdder</code>, per <a target="_blank" rel="noopener" href="https://www.zhihu.com/question/39925519/answer/1996568103">here</a>.</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">CHIP FullAdder {</span><br><span class="line">    IN a, b, c;  // 1-bit inputs</span><br><span class="line">    OUT sum,     // Right bit of a + b + c</span><br><span class="line">        carry;   // Left bit of a + b + c</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    HalfAdder(a=a, b=b, sum=ab, carry=c1);</span><br><span class="line">    HalfAdder(a=ab, b=c, sum=sum, carry=c2);</span><br><span class="line">    Or(a=c1, b=c2, out=carry);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Add16"><a href="#Add16" class="headerlink" title="Add16"></a>Add16</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">CHIP Add16 {</span><br><span class="line">    IN a[16], b[16];</span><br><span class="line">    OUT out[16];</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    HalfAdder(a=a[0], b=b[0], sum=out[0], carry=c0);</span><br><span class="line">    FullAdder(a=a[1], b=b[1], c=c0, sum=out[1], carry=c1);</span><br><span class="line">    FullAdder(a=a[2], b=b[2], c=c1, sum=out[2], carry=c2);</span><br><span class="line">    FullAdder(a=a[3], b=b[3], c=c2, sum=out[3], carry=c3);</span><br><span class="line">    FullAdder(a=a[4], b=b[4], c=c3, sum=out[4], carry=c4);</span><br><span class="line">    FullAdder(a=a[5], b=b[5], c=c4, sum=out[5], carry=c5);</span><br><span class="line">    FullAdder(a=a[6], b=b[6], c=c5, sum=out[6], carry=c6);</span><br><span class="line">    FullAdder(a=a[7], b=b[7], c=c6, sum=out[7], carry=c7);</span><br><span class="line">    FullAdder(a=a[8], b=b[8], c=c7, sum=out[8], carry=c8);</span><br><span class="line">    FullAdder(a=a[9], b=b[9], c=c8, sum=out[9], carry=c9);</span><br><span class="line">    FullAdder(a=a[10], b=b[10], c=c9, sum=out[10], carry=c10);</span><br><span class="line">    FullAdder(a=a[11], b=b[11], c=c10, sum=out[11], carry=c11);</span><br><span class="line">    FullAdder(a=a[12], b=b[12], c=c11, sum=out[12], carry=c12);</span><br><span class="line">    FullAdder(a=a[13], b=b[13], c=c12, sum=out[13], carry=c13);</span><br><span class="line">    FullAdder(a=a[14], b=b[14], c=c13, sum=out[14], carry=c14);</span><br><span class="line">    FullAdder(a=a[15], b=b[15], c=c14, sum=out[15], carry=null); // null means deprecated</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Inc16"><a href="#Inc16" class="headerlink" title="Inc16"></a>Inc16</h3><p>This is a little tricky.</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">CHIP Inc16 {</span><br><span class="line">    IN in[16];</span><br><span class="line">    OUT out[16];</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    Add16(a=in, b[0]=true, out=out);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="ALU"><a href="#ALU" class="headerlink" title="ALU"></a>ALU</h3><p>There are so many conditionals in this chip. How to make them? The idea is make all the results first, then choose the result we what using <code>Mux</code>.</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * The ALU (Arithmetic Logic Unit).</span><br><span class="line"> * Computes one of the following functions:</span><br><span class="line"> * x+y, x-y, y-x, 0, 1, -1, x, y, -x, -y, !x, !y,</span><br><span class="line"> * x+1, y+1, x-1, y-1, x&amp;y, x|y on two 16-bit inputs,</span><br><span class="line"> * according to 6 input bits denoted zx,nx,zy,ny,f,no.</span><br><span class="line"> * In addition, the ALU computes two 1-bit outputs:</span><br><span class="line"> * if the ALU output == 0, zr is set to 1; otherwise zr is set to 0;</span><br><span class="line"> * if the ALU output &lt; 0, ng is set to 1; otherwise ng is set to 0.</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">// Implementation: the ALU logic manipulates the x and y inputs</span><br><span class="line">// and operates on the resulting values, as follows:</span><br><span class="line">// if (zx == 1) set x = 0        // 16-bit constant</span><br><span class="line">// if (nx == 1) set x = !x       // bitwise not</span><br><span class="line">// if (zy == 1) set y = 0        // 16-bit constant</span><br><span class="line">// if (ny == 1) set y = !y       // bitwise not</span><br><span class="line">// if (f == 1)  set out = x + y  // integer 2's complement addition</span><br><span class="line">// if (f == 0)  set out = x &amp; y  // bitwise and</span><br><span class="line">// if (no == 1) set out = !out   // bitwise not</span><br><span class="line">// if (out == 0) set zr = 1</span><br><span class="line">// if (out &lt; 0) set ng = 1</span><br><span class="line"></span><br><span class="line">CHIP ALU {</span><br><span class="line">    IN</span><br><span class="line">        x[16], y[16],  // 16-bit inputs</span><br><span class="line">        zx, // zero the x input?</span><br><span class="line">        nx, // negate the x input?</span><br><span class="line">        zy, // zero the y input?</span><br><span class="line">        ny, // negate the y input?</span><br><span class="line">        f,  // compute out = x + y (if 1) or x &amp; y (if 0)</span><br><span class="line">        no; // negate the out output?</span><br><span class="line"></span><br><span class="line">    OUT</span><br><span class="line">        out[16], // 16-bit output</span><br><span class="line">        zr, // 1 if (out == 0), 0 otherwise</span><br><span class="line">        ng; // 1 if (out &lt; 0),  0 otherwise</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line"></span><br><span class="line">    // zero the x input?</span><br><span class="line">    Mux16(a=x, b=false, sel=zx, out=zeroStepProcessedX);</span><br><span class="line">    // negate the x input?</span><br><span class="line">    Not16(in=zeroStepProcessedX, out=negateStepProcessedX);</span><br><span class="line">    Mux16(a=zeroStepProcessedX, b=negateStepProcessedX, sel=nx, out=newX);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // zero the y input?</span><br><span class="line">    Mux16(a=y, b=false, sel=zy, out=zeroStepProcessedY);</span><br><span class="line">    // negate the x input?</span><br><span class="line">    Not16(in=zeroStepProcessedY, out=negateStepProcessedY);</span><br><span class="line">    Mux16(a=zeroStepProcessedY, b=negateStepProcessedY, sel=ny, out=newY);</span><br><span class="line"></span><br><span class="line">    // (x + y) or (x &amp; y)</span><br><span class="line">    Add16(a=newX, b=newY, out=xAddY);</span><br><span class="line">    And16(a=newX, b=newY, out=xAndY);</span><br><span class="line">    Mux16(a=xAndY, b=xAddY, sel=f, out=fxy);</span><br><span class="line"></span><br><span class="line">    // negate the out output?</span><br><span class="line">    Not16(in=fxy, out=notFxy);</span><br><span class="line">    Mux16(a=fxy, b=notFxy, sel=no, out=out, out[0..7]=leftOut, out[8..15]=rightOut, out[15]=negFlag);</span><br><span class="line"></span><br><span class="line">    // zr</span><br><span class="line">    // use two Or8Ways to transform 16 bits to 1 bits</span><br><span class="line">    Or8Way(in=leftOut, out=lnzr);  // left not zr</span><br><span class="line">    Or8Way(in=rightOut, out=rnzr); // right not zr</span><br><span class="line">    Or(a=lnzr, b=rnzr, out=nzr);</span><br><span class="line">    Not(in=nzr, out=zr);</span><br><span class="line"></span><br><span class="line">    // ng</span><br><span class="line">    Or(a=negFlag, b=false, out=ng);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/rss.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/nand2tetris/" rel="tag"># Nand2Tetris</a>
+              <a href="/tags/boolean-arithmetic/" rel="tag"># Boolean Arithmetic</a>
+              <a href="/tags/alu/" rel="tag"># ALU</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/53a0b5ef.html" rel="prev" title="Notes for Nand2Tetris: Boolean Functions and Gate Logic">
+                  <i class="fa fa-chevron-left"></i> Notes for Nand2Tetris: Boolean Functions and Gate Logic
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">BlockLune</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/BlockLune" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.2.3/mermaid.min.js","integrity":"sha256-JFptYy4KzJ5OQP+Q9fubNf3cxpPPmZKqUOovyEONKrQ="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"BlockLune","repo":"blocklune.github.io","client_id":"f0d9ff2c460a605d4f3f","client_secret":"9808616eda1afe0741c036b5d5670a490b68f6ef","admin_user":"BlockLune","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"663fc67c6d98606aa584f269ebed26ca"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

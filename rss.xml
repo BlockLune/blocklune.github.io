@@ -9,8 +9,37 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Sat, 08 Jul 2023 14:13:47 GMT</pubDate>
+    <pubDate>Sat, 08 Jul 2023 14:49:13 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Notes for Nand2Tetris: Boolean Arithmetic and the ALU</title>
+      <link>https://blocklune.github.io/posts/f0f4eaec.html</link>
+      <guid>https://blocklune.github.io/posts/f0f4eaec.html</guid>
+      <pubDate>Sat, 08 Jul 2023 14:17:06 GMT</pubDate>
+      
+      <description>&lt;p&gt;This is a note for Nand2Tetris Unit 2.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/computing-system/">Computing System</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
+      
+      
+      <category domain="https://blocklune.github.io/tags/nand2tetris/">Nand2Tetris</category>
+      
+      <category domain="https://blocklune.github.io/tags/boolean-arithmetic/">Boolean Arithmetic</category>
+      
+      <category domain="https://blocklune.github.io/tags/alu/">ALU</category>
+      
+      
+      <comments>https://blocklune.github.io/posts/f0f4eaec.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Notes for Nand2Tetris: Boolean Functions and Gate Logic</title>

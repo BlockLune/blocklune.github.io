@@ -2309,6 +2309,100 @@
       </tags>
   </entry>
   <entry>
+    <title>Notes for Nand2Tetris: Boolean Arithmetic and the ALU</title>
+    <url>/posts/f0f4eaec.html</url>
+    <content><![CDATA[<p>This is a note for Nand2Tetris Unit 2.</p>
+<span id="more"></span>
+
+<h2 id="Unit-2-2"><a href="#Unit-2-2" class="headerlink" title="Unit 2.2"></a>Unit 2.2</h2><h3 id="Half-Adder"><a href="#Half-Adder" class="headerlink" title="Half Adder"></a>Half Adder</h3><p>Truth table:</p>
+<table>
+<thead>
+<tr>
+<th>a</th>
+<th>b</th>
+<th>sum</th>
+<th>carry</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<p>Interface:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">CHIP HalfAdder {</span><br><span class="line">    IN a, b;</span><br><span class="line">    OUT sum,</span><br><span class="line">        carry;</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    ...</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Idea:</p>
+<ul>
+<li><code>sum</code> is <code>a XOR b</code></li>
+<li><code>carry</code> is <code>a AND b</code></li>
+</ul>
+<h3 id="Full-Adder"><a href="#Full-Adder" class="headerlink" title="Full Adder"></a>Full Adder</h3><p>Interface:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">CHIP FullAdder {</span><br><span class="line">    IN a, b, c;</span><br><span class="line">    OUT sum,</span><br><span class="line">        carry;</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    ...</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Unit-2-3"><a href="#Unit-2-3" class="headerlink" title="Unit 2.3"></a>Unit 2.3</h2><h3 id="2’s-complement"><a href="#2’s-complement" class="headerlink" title="2’s complement"></a>2’s complement</h3><p>2’s complement represent negative number $-x$ using the positive number $2^{n}-x$.</p>
+<ul>
+<li>Range of positive numbers: $[0, 2^{n-1}-1]$</li>
+<li>Range of negative numbers: $[-2^{n-1}, -1]$</li>
+</ul>
+<h3 id="How-to-compute-x"><a href="#How-to-compute-x" class="headerlink" title="How to compute -x"></a>How to compute -x</h3><p>How to do this quickly?</p>
+<p>$$<br>Input: x<br>$$</p>
+<p>$$<br>Output: -x (in 2’s complement)<br>$$</p>
+<p>The idea is:</p>
+<p>$$<br>2^{n}-x = 1+(2^{n}-1)-x<br>$$</p>
+<p>where $(2^{n}-1)$ is $n$ bits of ones, and using it to minus $x$ equals to flipping every bit of $x$.</p>
+<p>So, the steps to compute -x is:</p>
+<ol>
+<li>Flip every bit of x;</li>
+<li>Plus one.</li>
+</ol>
+<h2 id="Unit-2-4"><a href="#Unit-2-4" class="headerlink" title="Unit 2.4"></a>Unit 2.4</h2><p>ALU: Arithmetic Logic Unit</p>
+<p><img data-src="https://s1.ax1x.com/2023/07/08/pCgwBcR.jpg" alt="alu"></p>
+<h2 id="Project-2"><a href="#Project-2" class="headerlink" title="Project 2"></a>Project 2</h2><h3 id="HalfAdder"><a href="#HalfAdder" class="headerlink" title="HalfAdder"></a>HalfAdder</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">CHIP HalfAdder {</span><br><span class="line">    IN a, b;    // 1-bit inputs</span><br><span class="line">    OUT sum,    // Right bit of a + b</span><br><span class="line">        carry;  // Left bit of a + b</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    Xor(a=a, b=b, out=sum);</span><br><span class="line">    And(a=a, b=b, out=carry);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="FullAdder"><a href="#FullAdder" class="headerlink" title="FullAdder"></a>FullAdder</h3><p>Use two <code>HalfAdder</code>s and a <code>OR</code> to combine a <code>FullAdder</code>, per <a href="https://www.zhihu.com/question/39925519/answer/1996568103">here</a>.</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">CHIP FullAdder {</span><br><span class="line">    IN a, b, c;  // 1-bit inputs</span><br><span class="line">    OUT sum,     // Right bit of a + b + c</span><br><span class="line">        carry;   // Left bit of a + b + c</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    HalfAdder(a=a, b=b, sum=ab, carry=c1);</span><br><span class="line">    HalfAdder(a=ab, b=c, sum=sum, carry=c2);</span><br><span class="line">    Or(a=c1, b=c2, out=carry);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Add16"><a href="#Add16" class="headerlink" title="Add16"></a>Add16</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">CHIP Add16 {</span><br><span class="line">    IN a[16], b[16];</span><br><span class="line">    OUT out[16];</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    HalfAdder(a=a[0], b=b[0], sum=out[0], carry=c0);</span><br><span class="line">    FullAdder(a=a[1], b=b[1], c=c0, sum=out[1], carry=c1);</span><br><span class="line">    FullAdder(a=a[2], b=b[2], c=c1, sum=out[2], carry=c2);</span><br><span class="line">    FullAdder(a=a[3], b=b[3], c=c2, sum=out[3], carry=c3);</span><br><span class="line">    FullAdder(a=a[4], b=b[4], c=c3, sum=out[4], carry=c4);</span><br><span class="line">    FullAdder(a=a[5], b=b[5], c=c4, sum=out[5], carry=c5);</span><br><span class="line">    FullAdder(a=a[6], b=b[6], c=c5, sum=out[6], carry=c6);</span><br><span class="line">    FullAdder(a=a[7], b=b[7], c=c6, sum=out[7], carry=c7);</span><br><span class="line">    FullAdder(a=a[8], b=b[8], c=c7, sum=out[8], carry=c8);</span><br><span class="line">    FullAdder(a=a[9], b=b[9], c=c8, sum=out[9], carry=c9);</span><br><span class="line">    FullAdder(a=a[10], b=b[10], c=c9, sum=out[10], carry=c10);</span><br><span class="line">    FullAdder(a=a[11], b=b[11], c=c10, sum=out[11], carry=c11);</span><br><span class="line">    FullAdder(a=a[12], b=b[12], c=c11, sum=out[12], carry=c12);</span><br><span class="line">    FullAdder(a=a[13], b=b[13], c=c12, sum=out[13], carry=c13);</span><br><span class="line">    FullAdder(a=a[14], b=b[14], c=c13, sum=out[14], carry=c14);</span><br><span class="line">    FullAdder(a=a[15], b=b[15], c=c14, sum=out[15], carry=null); // null means deprecated</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Inc16"><a href="#Inc16" class="headerlink" title="Inc16"></a>Inc16</h3><p>This is a little tricky.</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">CHIP Inc16 {</span><br><span class="line">    IN in[16];</span><br><span class="line">    OUT out[16];</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    Add16(a=in, b[0]=true, out=out);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="ALU"><a href="#ALU" class="headerlink" title="ALU"></a>ALU</h3><p>There are so many conditionals in this chip. How to make them? The idea is make all the results first, then choose the result we what using <code>Mux</code>.</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * The ALU (Arithmetic Logic Unit).</span><br><span class="line"> * Computes one of the following functions:</span><br><span class="line"> * x+y, x-y, y-x, 0, 1, -1, x, y, -x, -y, !x, !y,</span><br><span class="line"> * x+1, y+1, x-1, y-1, x&amp;y, x|y on two 16-bit inputs,</span><br><span class="line"> * according to 6 input bits denoted zx,nx,zy,ny,f,no.</span><br><span class="line"> * In addition, the ALU computes two 1-bit outputs:</span><br><span class="line"> * if the ALU output == 0, zr is set to 1; otherwise zr is set to 0;</span><br><span class="line"> * if the ALU output &lt; 0, ng is set to 1; otherwise ng is set to 0.</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">// Implementation: the ALU logic manipulates the x and y inputs</span><br><span class="line">// and operates on the resulting values, as follows:</span><br><span class="line">// if (zx == 1) set x = 0        // 16-bit constant</span><br><span class="line">// if (nx == 1) set x = !x       // bitwise not</span><br><span class="line">// if (zy == 1) set y = 0        // 16-bit constant</span><br><span class="line">// if (ny == 1) set y = !y       // bitwise not</span><br><span class="line">// if (f == 1)  set out = x + y  // integer 2's complement addition</span><br><span class="line">// if (f == 0)  set out = x &amp; y  // bitwise and</span><br><span class="line">// if (no == 1) set out = !out   // bitwise not</span><br><span class="line">// if (out == 0) set zr = 1</span><br><span class="line">// if (out &lt; 0) set ng = 1</span><br><span class="line"></span><br><span class="line">CHIP ALU {</span><br><span class="line">    IN</span><br><span class="line">        x[16], y[16],  // 16-bit inputs</span><br><span class="line">        zx, // zero the x input?</span><br><span class="line">        nx, // negate the x input?</span><br><span class="line">        zy, // zero the y input?</span><br><span class="line">        ny, // negate the y input?</span><br><span class="line">        f,  // compute out = x + y (if 1) or x &amp; y (if 0)</span><br><span class="line">        no; // negate the out output?</span><br><span class="line"></span><br><span class="line">    OUT</span><br><span class="line">        out[16], // 16-bit output</span><br><span class="line">        zr, // 1 if (out == 0), 0 otherwise</span><br><span class="line">        ng; // 1 if (out &lt; 0),  0 otherwise</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line"></span><br><span class="line">    // zero the x input?</span><br><span class="line">    Mux16(a=x, b=false, sel=zx, out=zeroStepProcessedX);</span><br><span class="line">    // negate the x input?</span><br><span class="line">    Not16(in=zeroStepProcessedX, out=negateStepProcessedX);</span><br><span class="line">    Mux16(a=zeroStepProcessedX, b=negateStepProcessedX, sel=nx, out=newX);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // zero the y input?</span><br><span class="line">    Mux16(a=y, b=false, sel=zy, out=zeroStepProcessedY);</span><br><span class="line">    // negate the x input?</span><br><span class="line">    Not16(in=zeroStepProcessedY, out=negateStepProcessedY);</span><br><span class="line">    Mux16(a=zeroStepProcessedY, b=negateStepProcessedY, sel=ny, out=newY);</span><br><span class="line"></span><br><span class="line">    // (x + y) or (x &amp; y)</span><br><span class="line">    Add16(a=newX, b=newY, out=xAddY);</span><br><span class="line">    And16(a=newX, b=newY, out=xAndY);</span><br><span class="line">    Mux16(a=xAndY, b=xAddY, sel=f, out=fxy);</span><br><span class="line"></span><br><span class="line">    // negate the out output?</span><br><span class="line">    Not16(in=fxy, out=notFxy);</span><br><span class="line">    Mux16(a=fxy, b=notFxy, sel=no, out=out, out[0..7]=leftOut, out[8..15]=rightOut, out[15]=negFlag);</span><br><span class="line"></span><br><span class="line">    // zr</span><br><span class="line">    // use two Or8Ways to transform 16 bits to 1 bits</span><br><span class="line">    Or8Way(in=leftOut, out=lnzr);  // left not zr</span><br><span class="line">    Or8Way(in=rightOut, out=rnzr); // right not zr</span><br><span class="line">    Or(a=lnzr, b=rnzr, out=nzr);</span><br><span class="line">    Not(in=nzr, out=zr);</span><br><span class="line"></span><br><span class="line">    // ng</span><br><span class="line">    Or(a=negFlag, b=false, out=ng);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Computing System</category>
+        <category>Nand2Tetris</category>
+      </categories>
+      <tags>
+        <tag>Nand2Tetris</tag>
+        <tag>Boolean Arithmetic</tag>
+        <tag>ALU</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Notes for Nand2Tetris: Boolean Functions and Gate Logic</title>
     <url>/posts/53a0b5ef.html</url>
     <content><![CDATA[<p>This is a note for Nand2Tetris Unit 1.</p>
