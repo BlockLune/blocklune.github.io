@@ -2518,7 +2518,9 @@
 <li>Sequential: $out[t]=function(in[t-1])$</li>
 </ul>
 <h2 id="Unit-3-2"><a href="#Unit-3-2" class="headerlink" title="Unit 3.2"></a>Unit 3.2</h2><p>Flip Flops (触发器)</p>
+<p><img data-src="https://s1.ax1x.com/2023/07/09/pC23o4I.jpg" alt="Sequential Logic"></p>
 <p>The Clock Data Flip Flop (DFF):</p>
+<p><img data-src="https://s1.ax1x.com/2023/07/09/pC23qv8.jpg" alt="DFF"></p>
 <p>Implementation of the DFF:</p>
 <ul>
 <li>In this course, it’s a primitive</li>
@@ -2532,12 +2534,38 @@
 </ol>
 </li>
 </ul>
+<p>Bit (1-bit Register):</p>
+<p><img data-src="https://s1.ax1x.com/2023/07/09/pC23H8P.jpg" alt="Bit"></p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> load[t-<span class="number">1</span>]:</span><br><span class="line">    out[t] = <span class="keyword">in</span>[t-<span class="number">1</span>]</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    out[t] = out[t-<span class="number">1</span>]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Register:</p>
+<p><img data-src="https://s1.ax1x.com/2023/07/09/pC2GUw4.jpg" alt="Register"></p>
+<ul>
+<li>w (word width): 16-bit, 32-bit, 64-bit …</li>
+<li>Register’s state: the value which is currently stored in the register</li>
+</ul>
+<p>RAM unit:</p>
+<p>A sequence of $n$ addressable registers, which addresses $0$ to $n-1$.</p>
+<p>At any given point of time, only one register in the RAM is selected.</p>
+<ul>
+<li>k (width of address input): $k = log_{2}n$</li>
+</ul>
+<p><img data-src="https://s1.ax1x.com/2023/07/09/pC2GbnS.jpg" alt="RAM"></p>
 <h2 id="Unit-3-3"><a href="#Unit-3-3" class="headerlink" title="Unit 3.3"></a>Unit 3.3</h2><p>Memory:</p>
 <ul>
 <li>Main memory: RAM …</li>
 <li>Secondary memory: disks …</li>
 <li>volatile / non-volatile</li>
 </ul>
+<h2 id="Unit-3-4"><a href="#Unit-3-4" class="headerlink" title="Unit 3.4"></a>Unit 3.4</h2><p>Counter’s three possible control settings:</p>
+<ul>
+<li>Reset: $PC=0$</li>
+<li>Next: $PC++$</li>
+<li>Goto: $PC=n$</li>
+</ul>
+<p><img data-src="https://s1.ax1x.com/2023/07/09/pC237Ct.jpg" alt="PC"></p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> reset[t] == <span class="number">1</span>:</span><br><span class="line">    out[t+<span class="number">1</span>] = <span class="number">0</span></span><br><span class="line"><span class="keyword">elif</span> load[t] == <span class="number">1</span>:</span><br><span class="line">    out[t+<span class="number">1</span>] = <span class="keyword">in</span>[t]</span><br><span class="line"><span class="keyword">elif</span> inc[t] ==<span class="number">1</span>:</span><br><span class="line">    out[t+<span class="number">1</span>] = out[t] + <span class="number">1</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    out[t+<span class="number">1</span>] = out[t]</span><br></pre></td></tr></tbody></table></figure>
+
 <h2 id="Project-3"><a href="#Project-3" class="headerlink" title="Project 3"></a>Project 3</h2><h3 id="Bit"><a href="#Bit" class="headerlink" title="Bit"></a>Bit</h3><p>Just follow the implementation given in the course, and build a <code>Bit</code> with a <code>Mux</code> and a <code>DFF</code>:</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 1-bit register:</span><br><span class="line"> * If load[t] == 1 then out[t+1] = in[t]</span><br><span class="line"> *                 else out does not change (out[t+1] = out[t])</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">CHIP Bit {</span><br><span class="line">    IN in, load;</span><br><span class="line">    OUT out;</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    Mux(a=dffout, b=in, sel=load, out=dffin);</span><br><span class="line">    DFF(in=dffin, out=out, out=dffout);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
@@ -3380,123 +3408,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Const Correctness in C++</title>
-    <url>/posts/4eb7504e.html</url>
-    <content><![CDATA[<p>This is a note for Lecture 8, <a href="https://web.stanford.edu/class/cs106l/index.html">CS106L</a>, Spring 2023.</p>
-<span id="more"></span>
-
-<h2 id="INTRODUCTION"><a href="#INTRODUCTION" class="headerlink" title="INTRODUCTION"></a>INTRODUCTION</h2><p>What’s const?</p>
-<p><strong>Def.</strong></p>
-<ul>
-<li><code>const</code>: keyword indicating a variable, function or parameter can’t be modified</li>
-</ul>
-<p><code>const</code> variables can be references or not.</p>
-<p><strong>Ex.</strong></p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line">std::vector&lt;<span class="type">int</span>&gt; vec{<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>};</span><br><span class="line"><span class="type">const</span> std::vector&lt;<span class="type">int</span>&gt; c_vec{<span class="number">7</span>, <span class="number">8</span>};  <span class="comment">// a const variable</span></span><br><span class="line">std::vector&lt;<span class="type">int</span>&gt;&amp; ref = vec;         <span class="comment">// a regular reference</span></span><br><span class="line"><span class="type">const</span> std::vector&lt;<span class="type">int</span>&gt;&amp; c_ref = vec; <span class="comment">// a const reference</span></span><br><span class="line"></span><br><span class="line">vec.<span class="built_in">push_back</span>(<span class="number">3</span>);    <span class="comment">// OKAY</span></span><br><span class="line">c_vec.<span class="built_in">push_back</span>(<span class="number">3</span>);  <span class="comment">// BAD - const</span></span><br><span class="line">ref.<span class="built_in">push_back</span>(<span class="number">3</span>);    <span class="comment">// OKAY</span></span><br><span class="line">c_ref.<span class="built_in">push_back</span>(<span class="number">3</span>);  <span class="comment">// BAD - const</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>Why const?</p>
-<p>It helps find out mistakes.</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">f</span><span class="params">(<span class="type">const</span> <span class="type">int</span> x, <span class="type">const</span> <span class="type">int</span> y)</span> </span>{</span><br><span class="line">  <span class="keyword">if</span> ((x==<span class="number">2</span> &amp;&amp; y==<span class="number">3</span>) || (x==<span class="number">1</span>)) {</span><br><span class="line">    cout &lt;&lt; <span class="string">'a'</span> &lt;&lt; endl;</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">if</span> ((y==x<span class="number">-1</span>) &amp;&amp; (x==<span class="number">-1</span> || y=<span class="number">-1</span>)) {</span><br><span class="line">    cout &lt;&lt; <span class="string">'b'</span> &lt;&lt; endl;</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">if</span> ((x==<span class="number">3</span>) &amp;&amp; (y==<span class="number">2</span>*x)) {</span><br><span class="line">    cout &lt;&lt; <span class="string">'c'</span> &lt;&lt; endl;</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Since the variable <code>y</code> is const, <code>y=-1</code> can be found by the compiler.</p>
-<h2 id="CONST-AND-CLASSES"><a href="#CONST-AND-CLASSES" class="headerlink" title="CONST AND CLASSES"></a>CONST AND CLASSES</h2><h3 id="INTRODUCTION-OF-CONST-INTERFACE"><a href="#INTRODUCTION-OF-CONST-INTERFACE" class="headerlink" title="INTRODUCTION OF CONST-INTERFACE"></a>INTRODUCTION OF CONST-INTERFACE</h3><p>Recall our <code>Student</code> class:</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// student.h</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span> {</span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="function">std::string <span class="title">getName</span><span class="params">()</span></span>;</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">setName</span><span class="params">(std::string name)</span></span>;</span><br><span class="line">  <span class="function"><span class="type">int</span> <span class="title">getAge</span><span class="params">()</span></span>;</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">setAge</span><span class="params">(<span class="type">int</span> age)</span></span>;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  std::string name;</span><br><span class="line">  std::string state;</span><br><span class="line">  <span class="type">int</span> age;</span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// student.cpp</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">"student.h"</span></span></span><br><span class="line"><span class="function">std::string <span class="title">Student::getName</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="keyword">return</span> name;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Student::setName</span><span class="params">(string name)</span> </span>{</span><br><span class="line">  <span class="keyword">this</span>-&gt;name = name;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">Student::getAge</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="keyword">return</span> age;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Student::setAge</span><span class="params">(<span class="type">int</span> age)</span> </span>{</span><br><span class="line">  <span class="keyword">if</span> (age &gt;= <span class="number">0</span>) {</span><br><span class="line">    <span class="keyword">this</span>-&gt;age = age;</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">else</span> <span class="built_in">error</span>(<span class="string">"Age cannot be negative!"</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>What if we use a const <code>Student</code>?</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// main.cpp</span></span><br><span class="line"><span class="function">std::string <span class="title">stringify</span><span class="params">(<span class="type">const</span> Student&amp; s)</span> </span>{</span><br><span class="line">  <span class="keyword">return</span> s.<span class="built_in">getName</span>() + <span class="string">"is"</span> + std::<span class="built_in">to_string</span>(s.<span class="built_in">getAge</span>()) + <span class="string">" years old."</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>It causes compile error! The compiler doesn’t know <code>getName</code> and <code>getAge</code> don’t modify <code>s</code>! We need to promise that it doesn’t by defining them as <strong>const functions</strong>, by adding <code>const</code> to the <strong>end</strong> of function.</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// student.h</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span> {</span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="function">std::string <span class="title">getName</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">setName</span><span class="params">(std::string name)</span></span>;</span><br><span class="line">  <span class="function"><span class="type">int</span> <span class="title">getAge</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">setAge</span><span class="params">(<span class="type">int</span> age)</span></span>;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  std::string name;</span><br><span class="line">  std::string state;</span><br><span class="line">  <span class="type">int</span> age;</span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// student.cpp</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">"student.h"</span></span></span><br><span class="line"><span class="function">std::string <span class="title">Student::getName</span><span class="params">()</span> <span class="type">const</span> </span>{</span><br><span class="line">  <span class="keyword">return</span> name;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Student::setName</span><span class="params">(string name)</span> </span>{</span><br><span class="line">  <span class="keyword">this</span>-&gt;name = name;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">Student::getAge</span><span class="params">()</span> <span class="type">const</span> </span>{</span><br><span class="line">  <span class="keyword">return</span> age;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Student::setAge</span><span class="params">(<span class="type">int</span> age)</span> </span>{</span><br><span class="line">  <span class="keyword">if</span> (age &gt;= <span class="number">0</span>) {</span><br><span class="line">    <span class="keyword">this</span>-&gt;age = age;</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">else</span> <span class="built_in">error</span>(<span class="string">"Age cannot be negative!"</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p><strong>Def.</strong></p>
-<ul>
-<li><strong>const-interface</strong>: All member functions marked <code>const</code> in a class definition. Objects of type <code>const ClassName</code> may ONLY use the const-interface.</li>
-</ul>
-<h3 id="PRACTICE"><a href="#PRACTICE" class="headerlink" title="PRACTICE"></a>PRACTICE</h3><p>Let’s make <code>StrVector</code>‘s const-interface!</p>
-<div class="note info"><p>Questions to ask whether a function should be a const-interface:</p>
-<ol>
-<li>Should this function be able available to a const object?<br>1.1. Can I mark the function const as is (i.e. the function doesn’t modify the object)?<br>1.2. Otherwise, can I make a const version of the function?</li>
-</ol>
-</div>
-
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">StrVector</span> {</span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="keyword">using</span> iterator = std::string*;</span><br><span class="line">  <span class="type">const</span> <span class="type">size_t</span> kInitialSize = <span class="number">2</span>;</span><br><span class="line">  <span class="comment">/*...*/</span></span><br><span class="line">  <span class="function"><span class="type">size_t</span> <span class="title">size</span><span class="params">()</span> <span class="type">const</span></span>;  <span class="comment">// const-interface. Yes</span></span><br><span class="line">  <span class="function"><span class="type">bool</span> <span class="title">empty</span><span class="params">()</span> <span class="type">const</span></span>;   <span class="comment">// const-interface. Yes</span></span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">push_back</span><span class="params">(<span class="type">const</span> std::string&amp; elem)</span></span>;</span><br><span class="line">  <span class="function">std::string&amp; <span class="title">at</span><span class="params">(<span class="type">size_t</span> indx)</span></span>; <span class="comment">// like vec[] but with error checking</span></span><br><span class="line"></span><br><span class="line">  <span class="function">iterator <span class="title">begin</span><span class="params">()</span></span>; <span class="comment">// const-interface?</span></span><br><span class="line">  <span class="function">iterator <span class="title">end</span><span class="params">()</span></span>;   <span class="comment">// const-interface?</span></span><br><span class="line">  <span class="comment">/*...*/</span></span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="function">std::string&amp; <span class="title">StrVector::at</span><span class="params">(<span class="type">size_t</span> index)</span> </span>{</span><br><span class="line">  <span class="keyword">if</span> (index &gt;= <span class="built_in">size</span>()) {</span><br><span class="line">    <span class="keyword">throw</span> std::<span class="built_in">out_of_range</span>(<span class="string">"Index out of range in at."</span>);</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">operator</span>[](index); <span class="comment">// operator[] = return *(begin() + index)</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p><code>size()</code> and <code>empty()</code> should be const-interfaces. Of course. What about <code>at()</code>? Seems like <code>at</code> doesn’t modify the vector… can we just mark <code>at</code> const like we did with the other functions?</p>
-<p><strong>NO!</strong></p>
-<p>The problem is that <code>at</code> returns a reference to an element in the vector. That element reference could be modified (thereby modifying the vector). For example:</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// StrVector my_vec = { "sarah", "haven" };</span></span><br><span class="line">std::string&amp; elem_ref = my_vec.<span class="built_in">at</span>(<span class="number">1</span>);</span><br><span class="line">elem_ref = <span class="string">"Now I'm Different"</span>;</span><br><span class="line"><span class="comment">// my_vec = { "sarah", "Now I'm Different" }</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>The solution should be adding a const version <code>at</code> function.</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function">std::string&amp; <span class="title">at</span><span class="params">(<span class="type">size_t</span> indx)</span></span>;</span><br><span class="line"><span class="function"><span class="type">const</span> std::string&amp; <span class="title">at</span><span class="params">(<span class="type">size_t</span> indx)</span> <span class="type">const</span></span>;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>And implement them like this:</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function">std::string&amp; <span class="title">StrVector::at</span><span class="params">(<span class="type">size_t</span> index)</span> </span>{</span><br><span class="line">  <span class="keyword">if</span> (index &gt;= <span class="built_in">size</span>()) {</span><br><span class="line">    <span class="keyword">throw</span> std::<span class="built_in">out_of_range</span>(<span class="string">"Index out of range in at."</span>);</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">return</span> *(<span class="built_in">begin</span>() + index);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">const</span> std::string&amp; <span class="title">StrVector::at</span><span class="params">(<span class="type">size_t</span> index)</span> <span class="type">const</span> </span>{</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">static_cast</span>&lt;<span class="type">const</span> std::string&amp;&gt;(</span><br><span class="line">      <span class="built_in">const_cast</span>&lt;StrVector*&gt;(<span class="keyword">this</span>)-&gt;<span class="built_in">at</span>(index));</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Learn more about <code>static_cast</code> and <code>const_cast</code> <a href="https://blocklune.github.io/posts/f5746381.html">here</a></p>
-<p>Should <code>begin()</code> and <code>end()</code> be <code>const</code>?</p>
-<p>Consider a function with const <code>StrVector</code> param:</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">printVec</span><span class="params">(<span class="type">const</span> StrVector&amp; vec)</span> </span>{</span><br><span class="line">  cout &lt;&lt; <span class="string">"{ "</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> it = vec.<span class="built_in">begin</span>(); it != vec.<span class="built_in">end</span>(); ++it) {</span><br><span class="line">    *it = <span class="string">"dont mind me modifying a const vector :D"</span>;</span><br><span class="line">  }</span><br><span class="line">  cout &lt;&lt; <span class="string">"}"</span> &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>This code will compile! <code>begin()</code> and <code>end</code> don’t explicitly change <code>vec</code>, but they give us an iterator that can! But, we also need a way to iterate through a const <code>vec</code> just to access it.</p>
-<p>The solution is <code>const_iterator</code>:</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">StrVector</span> {</span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="keyword">using</span> iterator = std::string*;</span><br><span class="line">  <span class="keyword">using</span> const_iterator = <span class="type">const</span> std::string*;</span><br><span class="line">  <span class="comment">/*...*/</span></span><br><span class="line">  <span class="function">iterator <span class="title">begin</span><span class="params">()</span></span>;</span><br><span class="line">  <span class="function">iterator <span class="title">end</span><span class="params">()</span></span>;</span><br><span class="line">  <span class="function">const_iterator <span class="title">begin</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line">  <span class="function">const_iterator <span class="title">end</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line">  <span class="comment">/*...*/</span></span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="CONST-ITERATOR-vs-CONST-ITERATOR"><a href="#CONST-ITERATOR-vs-CONST-ITERATOR" class="headerlink" title="CONST ITERATOR vs CONST_ITERATOR"></a>CONST ITERATOR vs CONST_ITERATOR</h3><p>This is tricky!</p>
-<table>
-<thead>
-<tr>
-<th>Iterator Type</th>
-<th>Increment Iterator?</th>
-<th>Change underlying value?</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>iterator</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>const_iterator</td>
-<td>✅</td>
-<td>❌</td>
-</tr>
-<tr>
-<td>const iterator</td>
-<td>❌</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>const const_iterator</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-</tbody></table>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> iterator = std::string*;</span><br><span class="line"><span class="keyword">using</span> const_iterator = <span class="type">const</span> std::string*;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> iterator it_c = vec.<span class="built_in">begin</span>(); <span class="comment">// string * const, const ptr to non-const obj</span></span><br><span class="line">*it_c = <span class="string">"hi"</span>; <span class="comment">// OK! it_c is a const pointer to non-const object</span></span><br><span class="line">it_c++; <span class="comment">// not ok! can't change where a const pointer points!</span></span><br><span class="line"></span><br><span class="line">const_iterator c_it = vec.<span class="built_in">begin</span>(); <span class="comment">// const string*, a non-const ptr to const object</span></span><br><span class="line">c_it++; <span class="comment">// totally ok! The pointer itself is non-const</span></span><br><span class="line">*c_it = <span class="string">"hi"</span>; <span class="comment">// not ok! Can't change underlying const object</span></span><br><span class="line">cout &lt;&lt; *it &lt;&lt; endl; <span class="comment">// allowed! Can always read a const object, just can't change</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// const string * const, const ptr to const obj</span></span><br><span class="line"><span class="type">const</span> const_iterator c_it_c = vec.<span class="built_in">begin</span>();</span><br><span class="line">cout &lt;&lt; c_it_c &lt;&lt; <span class="string">" points to "</span> &lt;&lt; *c_it_c &lt;&lt; endl; <span class="comment">// only reads are allowed!</span></span><br><span class="line">c_it_c++; <span class="comment">// not ok! can't change where a const pointer points!</span></span><br><span class="line">*c_it_c = <span class="string">"hi"</span>; <span class="comment">// not ok! can't change underlying const object</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="RECAP"><a href="#RECAP" class="headerlink" title="RECAP"></a>RECAP</h2><ul>
-<li>Use const parameters and variables wherever you can in application code</li>
-<li>Every member function of a class that doesn’t change it member variables should be marked <code>const</code></li>
-<li><strong>Don’t reinvent the wheel! Use our fancy <code>static_cast</code>/<code>const_cast</code> trick to use the non-const version to implement a const version of a function</strong></li>
-<li><code>auto</code> will drop all <code>const</code> and <code>&amp;</code>, so be sure to specify</li>
-<li>Make iterators and const_iterators for all your classes!</li>
-</ul>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>const</tag>
-        <tag>C &amp; C++</tag>
-        <tag>CS106L</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>error: summary string parsing error 错误解决方法</title>
     <url>/posts/78dc947f.html</url>
     <content><![CDATA[<p>直接先说解决方法：在使用 clang 工具链进行编译的时候，添加编译选项 <code>-fstandalone-debug</code>。</p>
@@ -3707,8 +3618,8 @@
       </categories>
       <tags>
         <tag>Online course summary</tag>
-        <tag>C &amp; C++</tag>
         <tag>CS106L</tag>
+        <tag>C &amp; C++</tag>
       </tags>
   </entry>
   <entry>
@@ -3746,6 +3657,123 @@
         <tag>C/C++</tag>
         <tag>const</tag>
         <tag>CS106L</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Const Correctness in C++</title>
+    <url>/posts/4eb7504e.html</url>
+    <content><![CDATA[<p>This is a note for Lecture 8, <a href="https://web.stanford.edu/class/cs106l/index.html">CS106L</a>, Spring 2023.</p>
+<span id="more"></span>
+
+<h2 id="INTRODUCTION"><a href="#INTRODUCTION" class="headerlink" title="INTRODUCTION"></a>INTRODUCTION</h2><p>What’s const?</p>
+<p><strong>Def.</strong></p>
+<ul>
+<li><code>const</code>: keyword indicating a variable, function or parameter can’t be modified</li>
+</ul>
+<p><code>const</code> variables can be references or not.</p>
+<p><strong>Ex.</strong></p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line">std::vector&lt;<span class="type">int</span>&gt; vec{<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>};</span><br><span class="line"><span class="type">const</span> std::vector&lt;<span class="type">int</span>&gt; c_vec{<span class="number">7</span>, <span class="number">8</span>};  <span class="comment">// a const variable</span></span><br><span class="line">std::vector&lt;<span class="type">int</span>&gt;&amp; ref = vec;         <span class="comment">// a regular reference</span></span><br><span class="line"><span class="type">const</span> std::vector&lt;<span class="type">int</span>&gt;&amp; c_ref = vec; <span class="comment">// a const reference</span></span><br><span class="line"></span><br><span class="line">vec.<span class="built_in">push_back</span>(<span class="number">3</span>);    <span class="comment">// OKAY</span></span><br><span class="line">c_vec.<span class="built_in">push_back</span>(<span class="number">3</span>);  <span class="comment">// BAD - const</span></span><br><span class="line">ref.<span class="built_in">push_back</span>(<span class="number">3</span>);    <span class="comment">// OKAY</span></span><br><span class="line">c_ref.<span class="built_in">push_back</span>(<span class="number">3</span>);  <span class="comment">// BAD - const</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>Why const?</p>
+<p>It helps find out mistakes.</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">f</span><span class="params">(<span class="type">const</span> <span class="type">int</span> x, <span class="type">const</span> <span class="type">int</span> y)</span> </span>{</span><br><span class="line">  <span class="keyword">if</span> ((x==<span class="number">2</span> &amp;&amp; y==<span class="number">3</span>) || (x==<span class="number">1</span>)) {</span><br><span class="line">    cout &lt;&lt; <span class="string">'a'</span> &lt;&lt; endl;</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">if</span> ((y==x<span class="number">-1</span>) &amp;&amp; (x==<span class="number">-1</span> || y=<span class="number">-1</span>)) {</span><br><span class="line">    cout &lt;&lt; <span class="string">'b'</span> &lt;&lt; endl;</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">if</span> ((x==<span class="number">3</span>) &amp;&amp; (y==<span class="number">2</span>*x)) {</span><br><span class="line">    cout &lt;&lt; <span class="string">'c'</span> &lt;&lt; endl;</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Since the variable <code>y</code> is const, <code>y=-1</code> can be found by the compiler.</p>
+<h2 id="CONST-AND-CLASSES"><a href="#CONST-AND-CLASSES" class="headerlink" title="CONST AND CLASSES"></a>CONST AND CLASSES</h2><h3 id="INTRODUCTION-OF-CONST-INTERFACE"><a href="#INTRODUCTION-OF-CONST-INTERFACE" class="headerlink" title="INTRODUCTION OF CONST-INTERFACE"></a>INTRODUCTION OF CONST-INTERFACE</h3><p>Recall our <code>Student</code> class:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// student.h</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span> {</span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="function">std::string <span class="title">getName</span><span class="params">()</span></span>;</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">setName</span><span class="params">(std::string name)</span></span>;</span><br><span class="line">  <span class="function"><span class="type">int</span> <span class="title">getAge</span><span class="params">()</span></span>;</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">setAge</span><span class="params">(<span class="type">int</span> age)</span></span>;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  std::string name;</span><br><span class="line">  std::string state;</span><br><span class="line">  <span class="type">int</span> age;</span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// student.cpp</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">"student.h"</span></span></span><br><span class="line"><span class="function">std::string <span class="title">Student::getName</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="keyword">return</span> name;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Student::setName</span><span class="params">(string name)</span> </span>{</span><br><span class="line">  <span class="keyword">this</span>-&gt;name = name;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">Student::getAge</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="keyword">return</span> age;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Student::setAge</span><span class="params">(<span class="type">int</span> age)</span> </span>{</span><br><span class="line">  <span class="keyword">if</span> (age &gt;= <span class="number">0</span>) {</span><br><span class="line">    <span class="keyword">this</span>-&gt;age = age;</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">else</span> <span class="built_in">error</span>(<span class="string">"Age cannot be negative!"</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>What if we use a const <code>Student</code>?</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// main.cpp</span></span><br><span class="line"><span class="function">std::string <span class="title">stringify</span><span class="params">(<span class="type">const</span> Student&amp; s)</span> </span>{</span><br><span class="line">  <span class="keyword">return</span> s.<span class="built_in">getName</span>() + <span class="string">"is"</span> + std::<span class="built_in">to_string</span>(s.<span class="built_in">getAge</span>()) + <span class="string">" years old."</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>It causes compile error! The compiler doesn’t know <code>getName</code> and <code>getAge</code> don’t modify <code>s</code>! We need to promise that it doesn’t by defining them as <strong>const functions</strong>, by adding <code>const</code> to the <strong>end</strong> of function.</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// student.h</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span> {</span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="function">std::string <span class="title">getName</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">setName</span><span class="params">(std::string name)</span></span>;</span><br><span class="line">  <span class="function"><span class="type">int</span> <span class="title">getAge</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">setAge</span><span class="params">(<span class="type">int</span> age)</span></span>;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  std::string name;</span><br><span class="line">  std::string state;</span><br><span class="line">  <span class="type">int</span> age;</span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// student.cpp</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">"student.h"</span></span></span><br><span class="line"><span class="function">std::string <span class="title">Student::getName</span><span class="params">()</span> <span class="type">const</span> </span>{</span><br><span class="line">  <span class="keyword">return</span> name;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Student::setName</span><span class="params">(string name)</span> </span>{</span><br><span class="line">  <span class="keyword">this</span>-&gt;name = name;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">Student::getAge</span><span class="params">()</span> <span class="type">const</span> </span>{</span><br><span class="line">  <span class="keyword">return</span> age;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Student::setAge</span><span class="params">(<span class="type">int</span> age)</span> </span>{</span><br><span class="line">  <span class="keyword">if</span> (age &gt;= <span class="number">0</span>) {</span><br><span class="line">    <span class="keyword">this</span>-&gt;age = age;</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">else</span> <span class="built_in">error</span>(<span class="string">"Age cannot be negative!"</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>Def.</strong></p>
+<ul>
+<li><strong>const-interface</strong>: All member functions marked <code>const</code> in a class definition. Objects of type <code>const ClassName</code> may ONLY use the const-interface.</li>
+</ul>
+<h3 id="PRACTICE"><a href="#PRACTICE" class="headerlink" title="PRACTICE"></a>PRACTICE</h3><p>Let’s make <code>StrVector</code>‘s const-interface!</p>
+<div class="note info"><p>Questions to ask whether a function should be a const-interface:</p>
+<ol>
+<li>Should this function be able available to a const object?<br>1.1. Can I mark the function const as is (i.e. the function doesn’t modify the object)?<br>1.2. Otherwise, can I make a const version of the function?</li>
+</ol>
+</div>
+
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">StrVector</span> {</span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="keyword">using</span> iterator = std::string*;</span><br><span class="line">  <span class="type">const</span> <span class="type">size_t</span> kInitialSize = <span class="number">2</span>;</span><br><span class="line">  <span class="comment">/*...*/</span></span><br><span class="line">  <span class="function"><span class="type">size_t</span> <span class="title">size</span><span class="params">()</span> <span class="type">const</span></span>;  <span class="comment">// const-interface. Yes</span></span><br><span class="line">  <span class="function"><span class="type">bool</span> <span class="title">empty</span><span class="params">()</span> <span class="type">const</span></span>;   <span class="comment">// const-interface. Yes</span></span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">push_back</span><span class="params">(<span class="type">const</span> std::string&amp; elem)</span></span>;</span><br><span class="line">  <span class="function">std::string&amp; <span class="title">at</span><span class="params">(<span class="type">size_t</span> indx)</span></span>; <span class="comment">// like vec[] but with error checking</span></span><br><span class="line"></span><br><span class="line">  <span class="function">iterator <span class="title">begin</span><span class="params">()</span></span>; <span class="comment">// const-interface?</span></span><br><span class="line">  <span class="function">iterator <span class="title">end</span><span class="params">()</span></span>;   <span class="comment">// const-interface?</span></span><br><span class="line">  <span class="comment">/*...*/</span></span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="function">std::string&amp; <span class="title">StrVector::at</span><span class="params">(<span class="type">size_t</span> index)</span> </span>{</span><br><span class="line">  <span class="keyword">if</span> (index &gt;= <span class="built_in">size</span>()) {</span><br><span class="line">    <span class="keyword">throw</span> std::<span class="built_in">out_of_range</span>(<span class="string">"Index out of range in at."</span>);</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">operator</span>[](index); <span class="comment">// operator[] = return *(begin() + index)</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>size()</code> and <code>empty()</code> should be const-interfaces. Of course. What about <code>at()</code>? Seems like <code>at</code> doesn’t modify the vector… can we just mark <code>at</code> const like we did with the other functions?</p>
+<p><strong>NO!</strong></p>
+<p>The problem is that <code>at</code> returns a reference to an element in the vector. That element reference could be modified (thereby modifying the vector). For example:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// StrVector my_vec = { "sarah", "haven" };</span></span><br><span class="line">std::string&amp; elem_ref = my_vec.<span class="built_in">at</span>(<span class="number">1</span>);</span><br><span class="line">elem_ref = <span class="string">"Now I'm Different"</span>;</span><br><span class="line"><span class="comment">// my_vec = { "sarah", "Now I'm Different" }</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>The solution should be adding a const version <code>at</code> function.</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function">std::string&amp; <span class="title">at</span><span class="params">(<span class="type">size_t</span> indx)</span></span>;</span><br><span class="line"><span class="function"><span class="type">const</span> std::string&amp; <span class="title">at</span><span class="params">(<span class="type">size_t</span> indx)</span> <span class="type">const</span></span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>And implement them like this:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function">std::string&amp; <span class="title">StrVector::at</span><span class="params">(<span class="type">size_t</span> index)</span> </span>{</span><br><span class="line">  <span class="keyword">if</span> (index &gt;= <span class="built_in">size</span>()) {</span><br><span class="line">    <span class="keyword">throw</span> std::<span class="built_in">out_of_range</span>(<span class="string">"Index out of range in at."</span>);</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">return</span> *(<span class="built_in">begin</span>() + index);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">const</span> std::string&amp; <span class="title">StrVector::at</span><span class="params">(<span class="type">size_t</span> index)</span> <span class="type">const</span> </span>{</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">static_cast</span>&lt;<span class="type">const</span> std::string&amp;&gt;(</span><br><span class="line">      <span class="built_in">const_cast</span>&lt;StrVector*&gt;(<span class="keyword">this</span>)-&gt;<span class="built_in">at</span>(index));</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Learn more about <code>static_cast</code> and <code>const_cast</code> <a href="https://blocklune.github.io/posts/f5746381.html">here</a></p>
+<p>Should <code>begin()</code> and <code>end()</code> be <code>const</code>?</p>
+<p>Consider a function with const <code>StrVector</code> param:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">printVec</span><span class="params">(<span class="type">const</span> StrVector&amp; vec)</span> </span>{</span><br><span class="line">  cout &lt;&lt; <span class="string">"{ "</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> it = vec.<span class="built_in">begin</span>(); it != vec.<span class="built_in">end</span>(); ++it) {</span><br><span class="line">    *it = <span class="string">"dont mind me modifying a const vector :D"</span>;</span><br><span class="line">  }</span><br><span class="line">  cout &lt;&lt; <span class="string">"}"</span> &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>This code will compile! <code>begin()</code> and <code>end</code> don’t explicitly change <code>vec</code>, but they give us an iterator that can! But, we also need a way to iterate through a const <code>vec</code> just to access it.</p>
+<p>The solution is <code>const_iterator</code>:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">StrVector</span> {</span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="keyword">using</span> iterator = std::string*;</span><br><span class="line">  <span class="keyword">using</span> const_iterator = <span class="type">const</span> std::string*;</span><br><span class="line">  <span class="comment">/*...*/</span></span><br><span class="line">  <span class="function">iterator <span class="title">begin</span><span class="params">()</span></span>;</span><br><span class="line">  <span class="function">iterator <span class="title">end</span><span class="params">()</span></span>;</span><br><span class="line">  <span class="function">const_iterator <span class="title">begin</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line">  <span class="function">const_iterator <span class="title">end</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line">  <span class="comment">/*...*/</span></span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="CONST-ITERATOR-vs-CONST-ITERATOR"><a href="#CONST-ITERATOR-vs-CONST-ITERATOR" class="headerlink" title="CONST ITERATOR vs CONST_ITERATOR"></a>CONST ITERATOR vs CONST_ITERATOR</h3><p>This is tricky!</p>
+<table>
+<thead>
+<tr>
+<th>Iterator Type</th>
+<th>Increment Iterator?</th>
+<th>Change underlying value?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>iterator</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>const_iterator</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>const iterator</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>const const_iterator</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+</tbody></table>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> iterator = std::string*;</span><br><span class="line"><span class="keyword">using</span> const_iterator = <span class="type">const</span> std::string*;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> iterator it_c = vec.<span class="built_in">begin</span>(); <span class="comment">// string * const, const ptr to non-const obj</span></span><br><span class="line">*it_c = <span class="string">"hi"</span>; <span class="comment">// OK! it_c is a const pointer to non-const object</span></span><br><span class="line">it_c++; <span class="comment">// not ok! can't change where a const pointer points!</span></span><br><span class="line"></span><br><span class="line">const_iterator c_it = vec.<span class="built_in">begin</span>(); <span class="comment">// const string*, a non-const ptr to const object</span></span><br><span class="line">c_it++; <span class="comment">// totally ok! The pointer itself is non-const</span></span><br><span class="line">*c_it = <span class="string">"hi"</span>; <span class="comment">// not ok! Can't change underlying const object</span></span><br><span class="line">cout &lt;&lt; *it &lt;&lt; endl; <span class="comment">// allowed! Can always read a const object, just can't change</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// const string * const, const ptr to const obj</span></span><br><span class="line"><span class="type">const</span> const_iterator c_it_c = vec.<span class="built_in">begin</span>();</span><br><span class="line">cout &lt;&lt; c_it_c &lt;&lt; <span class="string">" points to "</span> &lt;&lt; *c_it_c &lt;&lt; endl; <span class="comment">// only reads are allowed!</span></span><br><span class="line">c_it_c++; <span class="comment">// not ok! can't change where a const pointer points!</span></span><br><span class="line">*c_it_c = <span class="string">"hi"</span>; <span class="comment">// not ok! can't change underlying const object</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="RECAP"><a href="#RECAP" class="headerlink" title="RECAP"></a>RECAP</h2><ul>
+<li>Use const parameters and variables wherever you can in application code</li>
+<li>Every member function of a class that doesn’t change it member variables should be marked <code>const</code></li>
+<li><strong>Don’t reinvent the wheel! Use our fancy <code>static_cast</code>/<code>const_cast</code> trick to use the non-const version to implement a const version of a function</strong></li>
+<li><code>auto</code> will drop all <code>const</code> and <code>&amp;</code>, so be sure to specify</li>
+<li>Make iterators and const_iterators for all your classes!</li>
+</ul>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>const</tag>
+        <tag>CS106L</tag>
+        <tag>C &amp; C++</tag>
       </tags>
   </entry>
   <entry>
