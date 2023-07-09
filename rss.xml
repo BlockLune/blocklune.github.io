@@ -9,8 +9,45 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Sat, 08 Jul 2023 14:49:13 GMT</pubDate>
+    <pubDate>Sun, 09 Jul 2023 12:42:08 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Notes for Nand2Tetris: Memory</title>
+      <link>https://blocklune.github.io/posts/28d92424.html</link>
+      <guid>https://blocklune.github.io/posts/28d92424.html</guid>
+      <pubDate>Sun, 09 Jul 2023 11:44:36 GMT</pubDate>
+      
+      <description>&lt;p&gt;This is a note for Nand2Tetris unit 3.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/computing-system/">Computing System</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
+      
+      
+      <category domain="https://blocklune.github.io/tags/memory/">Memory</category>
+      
+      <category domain="https://blocklune.github.io/tags/nand2tetris/">Nand2Tetris</category>
+      
+      <category domain="https://blocklune.github.io/tags/ram/">RAM</category>
+      
+      <category domain="https://blocklune.github.io/tags/register/">Register</category>
+      
+      <category domain="https://blocklune.github.io/tags/counter/">Counter</category>
+      
+      <category domain="https://blocklune.github.io/tags/sequential-logic/">Sequential Logic</category>
+      
+      <category domain="https://blocklune.github.io/tags/dff/">DFF</category>
+      
+      
+      <comments>https://blocklune.github.io/posts/28d92424.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Notes for Nand2Tetris: Boolean Arithmetic and the ALU</title>
