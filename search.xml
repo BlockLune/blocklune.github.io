@@ -2037,6 +2037,83 @@
       </categories>
   </entry>
   <entry>
+    <title>joshuto: A great file manager in terminal</title>
+    <url>/posts/348795e3.html</url>
+    <content><![CDATA[<p>When in a terminal, sometimes it’s really annoying to keep on typing in <code>cd</code> or something else to browse the files and directories. Can we do it just like what we do in GUI? Then joshuto may be helpful to you.</p>
+<span id="more"></span>
+
+<h2 id="BRIEF"><a href="#BRIEF" class="headerlink" title="BRIEF"></a>BRIEF</h2><p><a href="https://github.com/kamiyaa/joshuto">joshuto</a> is a <a href="https://ranger.github.io/">ranger</a>-like terminal file manager written in Rust. Thanks to rust’s excellent performance, joshuto is much faster than ranger.</p>
+<p>It allows you to explore files in terminal like this:</p>
+<p><img data-src="https://s1.ax1x.com/2023/07/12/pCftl2d.png" alt="joshuto on GitHub"></p>
+<h2 id="INSTALLATION"><a href="#INSTALLATION" class="headerlink" title="INSTALLATION"></a>INSTALLATION</h2><h3 id="ARCH"><a href="#ARCH" class="headerlink" title="ARCH"></a>ARCH</h3><p>In archlinux, I choose to use <code>yay</code>. Run the command below and keep hitting Enter.</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">yay -S joshuto</span><br></pre></td></tr></tbody></table></figure>
+
+<div class="note info"><p>How to install Yay from source?</p>
+<p>First, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo pacman -Sy --needed git base-devel</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Then, download the AUR package:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://aur.archlinux.org/yay.git</span><br></pre></td></tr></tbody></table></figure>
+
+<p>And then, go into the directory:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> yay</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Finally, build it:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">makepkg -si</span><br></pre></td></tr></tbody></table></figure>
+</div>
+
+<h3 id="UBUNTU"><a href="#UBUNTU" class="headerlink" title="UBUNTU"></a>UBUNTU</h3><p>You can install <code>joshuto</code> using <code>cargo</code>:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">cargo install --git https://github.com/kamiyaa/joshuto.git --force</span><br></pre></td></tr></tbody></table></figure>
+
+<div class="note info"><p>To install <code>cargo</code>, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo apt install cargo</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Then add <code>/$HOME/.cargo/bin</code> to PATH in <code>/$HOME/.profile</code>:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$PATH</span>:/<span class="variable">$HOME</span>/.cargo/bin"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>If you don’t use bash, but fishshell, then edit <code>/$HOME/.config/fish/config.fish</code> and add this line:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> -x PATH /<span class="variable">$HOME</span>/.cargo/bin <span class="variable">$PATH</span></span><br></pre></td></tr></tbody></table></figure>
+</div>
+
+<h2 id="USAGE"><a href="#USAGE" class="headerlink" title="USAGE"></a>USAGE</h2><p>First, to open the GUI, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">joshuto</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>joshuto</code> supports vim-like operations:</p>
+<ul>
+<li><p>Move up: <code>k</code></p>
+</li>
+<li><p>Move down: <code>j</code></p>
+</li>
+<li><p>Return to parent directory: <code>h</code></p>
+</li>
+<li><p>Open file or directory: <code>l</code></p>
+</li>
+<li><p>Go to top: <code>gg</code></p>
+</li>
+<li><p>Go to bottom: <code>G</code></p>
+</li>
+<li><p>Page up: <code>&lt;c-u&gt;</code></p>
+</li>
+<li><p>Page down: <code>&lt;c-d&gt;</code></p>
+</li>
+<li><p>Cut / Delete file: <code>dd</code></p>
+</li>
+<li><p>Copy file: <code>yy</code></p>
+</li>
+<li><p>Paste file: <code>pp</code></p>
+</li>
+</ul>
+<p>Learn more <a href="https://github.com/kamiyaa/joshuto/blob/main/README.md#usage">here</a></p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>joshuto</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Matching IPv4 addresses with RegExp</title>
     <url>/posts/1d74bec6.html</url>
     <content><![CDATA[<p>While solving <a href="https://cs50.harvard.edu/python/2022/psets/7/numb3rs/">the NUM3RS problem of CS50P</a>, I was asked to match IPv4 addresses with RegExp.</p>

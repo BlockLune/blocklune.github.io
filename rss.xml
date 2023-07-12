@@ -9,8 +9,31 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Tue, 11 Jul 2023 09:01:51 GMT</pubDate>
+    <pubDate>Wed, 12 Jul 2023 03:43:40 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>joshuto: A great file manager in terminal</title>
+      <link>https://blocklune.github.io/posts/348795e3.html</link>
+      <guid>https://blocklune.github.io/posts/348795e3.html</guid>
+      <pubDate>Wed, 12 Jul 2023 03:39:18 GMT</pubDate>
+      
+      <description>&lt;p&gt;When in a terminal, sometimes it’s really annoying to keep on typing in &lt;code&gt;cd&lt;/code&gt; or something else to browse the files and directories. Can we do it just like what we do in GUI? Then joshuto may be helpful to you.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
+      
+      
+      <category domain="https://blocklune.github.io/tags/joshuto/">joshuto</category>
+      
+      
+      <comments>https://blocklune.github.io/posts/348795e3.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Notes for Nand2Tetris: Machine Language</title>
