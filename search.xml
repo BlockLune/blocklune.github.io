@@ -2583,6 +2583,59 @@
       </tags>
   </entry>
   <entry>
+    <title>Notes for Nand2Tetris: Computer Architecture</title>
+    <url>/posts/9a8ff4a5.html</url>
+    <content><![CDATA[<p>This is a note for Nand2Tetris Unit 5.</p>
+<span id="more"></span>
+
+<h2 id="Unit-5-1"><a href="#Unit-5-1" class="headerlink" title="Unit 5.1"></a>Unit 5.1</h2><p>Same <strong>Hardware</strong> can run many different <strong>Software</strong> programs.</p>
+<ul>
+<li>Theory: Universal Turing Machine</li>
+<li>Practice: Von Neumann Architecture</li>
+</ul>
+<p>Memory stores <strong>Data</strong> and <strong>Program</strong>. CPU is composed of <strong>ALU</strong> and <strong>Registers</strong>.</p>
+<p><img data-src="https://s1.ax1x.com/2023/07/12/pCfU234.png" alt="Information Flows"></p>
+<p>Registers store both Data and Addresses.</p>
+<h2 id="Unit-5-2"><a href="#Unit-5-2" class="headerlink" title="Unit 5.2"></a>Unit 5.2</h2><p>The Fetch-Execute Cycle</p>
+<h3 id="The-basic-CPU-loop"><a href="#The-basic-CPU-loop" class="headerlink" title="The basic CPU loop"></a>The basic CPU loop</h3><ul>
+<li><strong>Fetch</strong> an instruction from the Program memory</li>
+<li><strong>Execute</strong> it</li>
+</ul>
+<h3 id="Fetching"><a href="#Fetching" class="headerlink" title="Fetching"></a>Fetching</h3><ul>
+<li>Put the location of the next instruction into the “address” of the program memory</li>
+<li>Get the instruction code itself by reading the memory contents at that location</li>
+</ul>
+<p>Use program counter.</p>
+<h3 id="Executing"><a href="#Executing" class="headerlink" title="Executing"></a>Executing</h3><p>…</p>
+<h3 id="Fetch-Execute-Clash"><a href="#Fetch-Execute-Clash" class="headerlink" title="Fetch-Execute Clash"></a>Fetch-Execute Clash</h3><p><img data-src="https://s1.ax1x.com/2023/07/12/pCfUbCD.png" alt="Fetch-Execute Clash"></p>
+<p>How to solve that? Do one after the other (Use <code>Mux</code>).</p>
+<h3 id="Solution-Mux-and-Instruction-register"><a href="#Solution-Mux-and-Instruction-register" class="headerlink" title="Solution: Mux and Instruction register"></a>Solution: Mux and Instruction register</h3><p><img data-src="https://s1.ax1x.com/2023/07/12/pCfULgH.png" alt="Solution"></p>
+<h3 id="Simpler-solution-Harvard-Architecture"><a href="#Simpler-solution-Harvard-Architecture" class="headerlink" title="Simpler solution: Harvard Architecture"></a>Simpler solution: Harvard Architecture</h3><ul>
+<li>Variant of Von Neumann Architecture</li>
+<li>Keep Program and Data in two separate memory modules</li>
+<li>Complication avoided</li>
+</ul>
+<h2 id="Unit-5-3"><a href="#Unit-5-3" class="headerlink" title="Unit 5.3"></a>Unit 5.3</h2><h3 id="The-overall-computer-architecture"><a href="#The-overall-computer-architecture" class="headerlink" title="The overall computer architecture"></a>The overall computer architecture</h3><p><img data-src="https://s1.ax1x.com/2023/07/12/pCfanaV.png" alt="The overall computer architecture"></p>
+<h3 id="Hack-CPU-Interface"><a href="#Hack-CPU-Interface" class="headerlink" title="Hack CPU Interface"></a>Hack CPU Interface</h3><p><img data-src="https://s1.ax1x.com/2023/07/12/pCfdvAP.png" alt="Inputs"></p>
+<p><img data-src="https://s1.ax1x.com/2023/07/12/pCfdzh8.png" alt="Outputs"></p>
+<h3 id="Hack-CPU-Implementation"><a href="#Hack-CPU-Implementation" class="headerlink" title="Hack CPU Implementation"></a>Hack CPU Implementation</h3><p><img data-src="https://s1.ax1x.com/2023/07/12/pCfdxtf.png" alt="Hack CPU Implementation"></p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Computing System</category>
+        <category>Nand2Tetris</category>
+      </categories>
+      <tags>
+        <tag>Nand2Tetris</tag>
+        <tag>Computer Architecture</tag>
+        <tag>Fetch-execute cycle</tag>
+        <tag>Date bus</tag>
+        <tag>Instruction bus</tag>
+        <tag>CPU</tag>
+        <tag>Computer design</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Notes for Nand2Tetris: Machine Language</title>
     <url>/posts/a4422da3.html</url>
     <content><![CDATA[<p>This is a note for Nand2Tetris unit 3.</p>

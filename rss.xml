@@ -9,8 +9,45 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Wed, 12 Jul 2023 03:43:40 GMT</pubDate>
+    <pubDate>Wed, 12 Jul 2023 05:25:02 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Notes for Nand2Tetris: Computer Architecture</title>
+      <link>https://blocklune.github.io/posts/9a8ff4a5.html</link>
+      <guid>https://blocklune.github.io/posts/9a8ff4a5.html</guid>
+      <pubDate>Wed, 12 Jul 2023 03:57:51 GMT</pubDate>
+      
+      <description>&lt;p&gt;This is a note for Nand2Tetris Unit 5.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/computing-system/">Computing System</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
+      
+      
+      <category domain="https://blocklune.github.io/tags/nand2tetris/">Nand2Tetris</category>
+      
+      <category domain="https://blocklune.github.io/tags/computer-architecture/">Computer Architecture</category>
+      
+      <category domain="https://blocklune.github.io/tags/fetch-execute-cycle/">Fetch-execute cycle</category>
+      
+      <category domain="https://blocklune.github.io/tags/date-bus/">Date bus</category>
+      
+      <category domain="https://blocklune.github.io/tags/instruction-bus/">Instruction bus</category>
+      
+      <category domain="https://blocklune.github.io/tags/cpu/">CPU</category>
+      
+      <category domain="https://blocklune.github.io/tags/computer-design/">Computer design</category>
+      
+      
+      <comments>https://blocklune.github.io/posts/9a8ff4a5.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>joshuto: A great file manager in terminal</title>
