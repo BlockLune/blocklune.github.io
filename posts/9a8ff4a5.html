@@ -36,8 +36,9 @@
 <meta property="og:image" content="https://s1.ax1x.com/2023/07/12/pCfdvAP.png">
 <meta property="og:image" content="https://s1.ax1x.com/2023/07/12/pCfdzh8.png">
 <meta property="og:image" content="https://s1.ax1x.com/2023/07/12/pCfdxtf.png">
+<meta property="og:image" content="https://s1.ax1x.com/2023/07/14/pC4Wt8H.png">
 <meta property="article:published_time" content="2023-07-12T03:57:51.000Z">
-<meta property="article:modified_time" content="2023-07-14T05:24:27.483Z">
+<meta property="article:modified_time" content="2023-07-14T14:33:30.145Z">
 <meta property="article:author" content="BlockLune">
 <meta property="article:tag" content="Nand2Tetris">
 <meta property="article:tag" content="Computer Architecture">
@@ -158,7 +159,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Unit-5-1"><span class="nav-number">1.</span> <span class="nav-text">Unit 5.1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unit-5-2"><span class="nav-number">2.</span> <span class="nav-text">Unit 5.2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#The-basic-CPU-loop"><span class="nav-number">2.1.</span> <span class="nav-text">The basic CPU loop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fetching"><span class="nav-number">2.2.</span> <span class="nav-text">Fetching</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Executing"><span class="nav-number">2.3.</span> <span class="nav-text">Executing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fetch-Execute-Clash"><span class="nav-number">2.4.</span> <span class="nav-text">Fetch-Execute Clash</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution-Mux-and-Instruction-register"><span class="nav-number">2.5.</span> <span class="nav-text">Solution: Mux and Instruction register</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Simpler-solution-Harvard-Architecture"><span class="nav-number">2.6.</span> <span class="nav-text">Simpler solution: Harvard Architecture</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unit-5-3"><span class="nav-number">3.</span> <span class="nav-text">Unit 5.3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#The-overall-computer-architecture"><span class="nav-number">3.1.</span> <span class="nav-text">The overall computer architecture</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hack-CPU-Interface"><span class="nav-number">3.2.</span> <span class="nav-text">Hack CPU Interface</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hack-CPU-Implementation"><span class="nav-number">3.3.</span> <span class="nav-text">Hack CPU Implementation</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Unit-5-1"><span class="nav-number">1.</span> <span class="nav-text">Unit 5.1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unit-5-2"><span class="nav-number">2.</span> <span class="nav-text">Unit 5.2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#The-basic-CPU-loop"><span class="nav-number">2.1.</span> <span class="nav-text">The basic CPU loop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fetching"><span class="nav-number">2.2.</span> <span class="nav-text">Fetching</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Executing"><span class="nav-number">2.3.</span> <span class="nav-text">Executing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fetch-Execute-Clash"><span class="nav-number">2.4.</span> <span class="nav-text">Fetch-Execute Clash</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution-Mux-and-Instruction-register"><span class="nav-number">2.5.</span> <span class="nav-text">Solution: Mux and Instruction register</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Simpler-solution-Harvard-Architecture"><span class="nav-number">2.6.</span> <span class="nav-text">Simpler solution: Harvard Architecture</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unit-5-3"><span class="nav-number">3.</span> <span class="nav-text">Unit 5.3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Abstraction-of-the-Hack-CPU"><span class="nav-number">3.1.</span> <span class="nav-text">Abstraction of the Hack CPU</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-overall-computer-architecture"><span class="nav-number">3.2.</span> <span class="nav-text">The overall computer architecture</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hack-CPU-Interface"><span class="nav-number">3.3.</span> <span class="nav-text">Hack CPU Interface</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hack-CPU-Implementation"><span class="nav-number">3.4.</span> <span class="nav-text">Hack CPU Implementation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Instruction-handling"><span class="nav-number">3.5.</span> <span class="nav-text">Instruction handling</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ALU-operation"><span class="nav-number">3.6.</span> <span class="nav-text">ALU operation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Jump"><span class="nav-number">3.7.</span> <span class="nav-text">Jump</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unit-5-4"><span class="nav-number">4.</span> <span class="nav-text">Unit 5.4</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hack-CPU-Operation"><span class="nav-number">4.1.</span> <span class="nav-text">Hack CPU Operation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Memory"><span class="nav-number">4.2.</span> <span class="nav-text">Memory</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Instruction-Memory-ROM"><span class="nav-number">4.3.</span> <span class="nav-text">Instruction Memory (ROM)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hack-Computer-implementation"><span class="nav-number">4.4.</span> <span class="nav-text">Hack Computer implementation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unit-5-5"><span class="nav-number">5.</span> <span class="nav-text">Unit 5.5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Project-5"><span class="nav-number">6.</span> <span class="nav-text">Project 5</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -328,11 +329,110 @@
 <li>Keep Program and Data in two separate memory modules</li>
 <li>Complication avoided</li>
 </ul>
-<h2 id="Unit-5-3"><a href="#Unit-5-3" class="headerlink" title="Unit 5.3"></a>Unit 5.3</h2><h3 id="The-overall-computer-architecture"><a href="#The-overall-computer-architecture" class="headerlink" title="The overall computer architecture"></a>The overall computer architecture</h3><p><img data-src="https://s1.ax1x.com/2023/07/12/pCfanaV.png" alt="The overall computer architecture"></p>
+<h2 id="Unit-5-3"><a href="#Unit-5-3" class="headerlink" title="Unit 5.3"></a>Unit 5.3</h2><h3 id="Abstraction-of-the-Hack-CPU"><a href="#Abstraction-of-the-Hack-CPU" class="headerlink" title="Abstraction of the Hack CPU"></a>Abstraction of the Hack CPU</h3><p>A 16-bit processor, designed to:</p>
+<ul>
+<li>Execute the current instruction</li>
+<li>Figure out which instruction to execute next (instructions written in the Hack language)</li>
+</ul>
+<h3 id="The-overall-computer-architecture"><a href="#The-overall-computer-architecture" class="headerlink" title="The overall computer architecture"></a>The overall computer architecture</h3><p><img data-src="https://s1.ax1x.com/2023/07/12/pCfanaV.png" alt="The overall computer architecture"></p>
 <h3 id="Hack-CPU-Interface"><a href="#Hack-CPU-Interface" class="headerlink" title="Hack CPU Interface"></a>Hack CPU Interface</h3><p><img data-src="https://s1.ax1x.com/2023/07/12/pCfdvAP.png" alt="Inputs"></p>
 <p><img data-src="https://s1.ax1x.com/2023/07/12/pCfdzh8.png" alt="Outputs"></p>
 <h3 id="Hack-CPU-Implementation"><a href="#Hack-CPU-Implementation" class="headerlink" title="Hack CPU Implementation"></a>Hack CPU Implementation</h3><p><img data-src="https://s1.ax1x.com/2023/07/12/pCfdxtf.png" alt="Hack CPU Implementation"></p>
+<h3 id="Instruction-handling"><a href="#Instruction-handling" class="headerlink" title="Instruction handling"></a>Instruction handling</h3><p>When handling A-instruction (op-code is 0), the <code>Mux16</code> takes the input from instruction, while handling C-instruction (op-code is 1), it should be from the output of ALU.</p>
+<p>CPU handling of an A-instruction:</p>
+<ul>
+<li>Decodes the instruction into op-code + 15-bit value</li>
+<li>Stores the value in the A-register</li>
+<li>Outputs the value</li>
+</ul>
+<p>CPU handling of a C-instruction:</p>
+<ul>
+<li>Decodes the instruction into four parts (op-code, ALU control bits, Destination load bits and Jump bits)</li>
+</ul>
+<h3 id="ALU-operation"><a href="#ALU-operation" class="headerlink" title="ALU operation"></a>ALU operation</h3><p>ALU data inputs:</p>
+<ul>
+<li>From the D-register</li>
+<li>From the A-register / M-register</li>
+</ul>
+<p>ALU control inputs:</p>
+<ul>
+<li>Control bits (from the instruction)</li>
+</ul>
+<p>ALU data output:</p>
+<ul>
+<li>Result of AlU calculation, fed simultaneously to: D-register, A-register, M-register</li>
+<li>Which register <strong>actually</strong> received the incoming value is determined by the instructions’ destination bits</li>
+</ul>
+<p>ALU control outputs:</p>
+<ul>
+<li>Negative output?</li>
+<li>Zero output?</li>
+</ul>
+<h3 id="Jump"><a href="#Jump" class="headerlink" title="Jump"></a>Jump</h3><p>Program Counter abstraction:</p>
+<p>Emits the address of the next instruction:</p>
+<p>To start / restart the program’s execution: <code>PC=0</code></p>
+<ul>
+<li>no jump: <code>PC++</code></li>
+<li>goto: <code>PC=A</code></li>
+<li>conditional goto: if the condition is true <code>PC=A</code> else <code>PC++</code></li>
+</ul>
+<p><code>PC</code> logic:</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> reset==<span class="number">1</span>:</span><br><span class="line">    PC=<span class="number">0</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="comment"># current instruction</span></span><br><span class="line">    load = f(jump_bits, ALU_control_outputs) <span class="comment"># the load bit of PC</span></span><br><span class="line">    <span class="keyword">if</span> load==<span class="number">1</span>:</span><br><span class="line">        PC=A</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        PC=PC+<span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
 
+<h2 id="Unit-5-4"><a href="#Unit-5-4" class="headerlink" title="Unit 5.4"></a>Unit 5.4</h2><h3 id="Hack-CPU-Operation"><a href="#Hack-CPU-Operation" class="headerlink" title="Hack CPU Operation"></a>Hack CPU Operation</h3><p>Sample Hack instructions:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">D=D-A</span><br><span class="line">@17</span><br><span class="line">M=M+1</span><br></pre></td></tr></tbody></table></figure>
+
+<p>The CPU executes the <strong>instruction</strong> according to the Hack language specification:</p>
+<ul>
+<li>If the instruction includes D and A, the respective values are read from, and/or written to, the CPU-resident D-register and A-register;</li>
+<li>If the instruction is @x, then x is stored in the A-register; this value is emitted by <code>addressM</code></li>
+<li>If the instruction’s RHS includes M, this value is read from <code>inM</code></li>
+<li>If the instruction’s LHS includes M, then the ALU output is emitted by <code>outM</code>, and the <code>writeM</code> bit is asserted</li>
+</ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@100</span><br><span class="line">D=D-1;JEQ</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>If (reset==0):</strong></p>
+<p>The CPU logic uses the instruction’s jump bits and the ALU’s output to decide if there should be a jump.</p>
+<ul>
+<li>If there is a jump: <code>PC</code> is set to the value of the A-register</li>
+<li>Else (no jump): <code>PC++</code></li>
+</ul>
+<p>The updated <code>PC</code> value is emitted by <code>pc</code></p>
+<p><strong>If (reset==1):</strong></p>
+<p><code>PC</code> is set to 0, <code>pc</code> emits 0 (causing a program restart)</p>
+<h3 id="Memory"><a href="#Memory" class="headerlink" title="Memory"></a>Memory</h3><p>We divide the memory to three segments.</p>
+<p>Abstraction:</p>
+<ul>
+<li>Address 0 to 16383: data memory</li>
+<li>Address 16384 to 24575: screen memory map</li>
+<li>Address 24576: keyboard memory map</li>
+</ul>
+<p>Implementation:</p>
+<ul>
+<li>RAM: 16-bit / 16K RAM chip</li>
+<li>Screen: 16-bit / 8K memory chip with a raster display (光栅显示) side-effect</li>
+<li>Keyboard: 16-bit register with a keyboard side-effect</li>
+</ul>
+<p>Screen:</p>
+<p>To turn pixel(row, col) on/off: $w=Screen(row\times32+col\div16)$</p>
+<p>In the Hack Memory context: $w=Memory[16384+row\times32+col\div16]$. Set the $col % 16$ bit of $w$ to 1 or to 0.</p>
+<p>Keyboard:</p>
+<p>To read the keyboard:</p>
+<ul>
+<li>Probe the output of the Keyboard register</li>
+<li>In the Hack Memory context: probe memory register 24576</li>
+</ul>
+<h3 id="Instruction-Memory-ROM"><a href="#Instruction-Memory-ROM" class="headerlink" title="Instruction Memory (ROM)"></a>Instruction Memory (ROM)</h3><p>To run a program on the Hack computer:</p>
+<ul>
+<li>Load the program into the ROM</li>
+<li>Press “reset”</li>
+<li>The program starts running</li>
+</ul>
+<p>Hardware implementation: plug-and-play ROM chips</p>
+<p>Hardware simulation: programs are stored in text files; program loading is emulated by the built-in ROM chip</p>
+<h3 id="Hack-Computer-implementation"><a href="#Hack-Computer-implementation" class="headerlink" title="Hack Computer implementation"></a>Hack Computer implementation</h3><p><img data-src="https://s1.ax1x.com/2023/07/14/pC4Wt8H.png" alt="Hack Computer implementation"></p>
+<h2 id="Unit-5-5"><a href="#Unit-5-5" class="headerlink" title="Unit 5.5"></a>Unit 5.5</h2><p>…</p>
+<h2 id="Project-5"><a href="#Project-5" class="headerlink" title="Project 5"></a>Project 5</h2>
     </div>
 
     
@@ -448,7 +548,7 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
