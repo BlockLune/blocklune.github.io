@@ -9,8 +9,35 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Wed, 12 Jul 2023 05:25:02 GMT</pubDate>
+    <pubDate>Fri, 14 Jul 2023 05:24:27 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Notes for Machine Learning</title>
+      <link>https://blocklune.github.io/posts/a6f57fef.html</link>
+      <guid>https://blocklune.github.io/posts/a6f57fef.html</guid>
+      <pubDate>Fri, 14 Jul 2023 03:59:14 GMT</pubDate>
+      
+      <description>&lt;p&gt;Here are my notes for course &lt;a href=&quot;https://study.163.com/course/courseMain.htm?courseId=1210076550&quot;&gt;Machine Learning&lt;/a&gt; taught by Andrew Ng.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/ai/">AI</category>
+      
+      
+      <category domain="https://blocklune.github.io/tags/ai/">AI</category>
+      
+      <category domain="https://blocklune.github.io/tags/machine-learning/">Machine Learning</category>
+      
+      <category domain="https://blocklune.github.io/tags/andrew-ng/">Andrew Ng</category>
+      
+      
+      <comments>https://blocklune.github.io/posts/a6f57fef.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Notes for Nand2Tetris: Computer Architecture</title>
@@ -1212,9 +1239,9 @@
       <category domain="https://blocklune.github.io/categories/cs/ai/">AI</category>
       
       
-      <category domain="https://blocklune.github.io/tags/novelai/">NovelAI</category>
-      
       <category domain="https://blocklune.github.io/tags/ai/">AI</category>
+      
+      <category domain="https://blocklune.github.io/tags/novelai/">NovelAI</category>
       
       
       <comments>https://blocklune.github.io/posts/f17b3e8b.html#disqus_thread</comments>

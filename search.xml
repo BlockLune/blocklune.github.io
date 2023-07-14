@@ -298,6 +298,57 @@
       </tags>
   </entry>
   <entry>
+    <title>Notes for Machine Learning</title>
+    <url>/posts/a6f57fef.html</url>
+    <content><![CDATA[<p>Here are my notes for course <a href="https://study.163.com/course/courseMain.htm?courseId=1210076550">Machine Learning</a> taught by Andrew Ng.</p>
+<span id="more"></span>
+
+<h2 id="Lesson-1"><a href="#Lesson-1" class="headerlink" title="Lesson 1"></a>Lesson 1</h2><p>Spam: 垃圾邮件<br>Spam filter: 垃圾邮件过滤器</p>
+<p>Examples:</p>
+<ul>
+<li>Database mining (Web click data, medical records, biology, engineering)</li>
+<li>Applications can’t program by hand (Autonomous helicopter, handwriting recognition, most of Natural Language Processing(NLP), Computer Vision)</li>
+<li>Self-customizing programs (Amazon, Netflix product recommendations)</li>
+<li>Understanding human learning (brain, real AI)</li>
+</ul>
+<h2 id="Lesson-2"><a href="#Lesson-2" class="headerlink" title="Lesson 2"></a>Lesson 2</h2><h3 id="Machine-Learning-definition"><a href="#Machine-Learning-definition" class="headerlink" title="Machine Learning definition"></a>Machine Learning definition</h3><ul>
+<li>Arthur Samuel (1959). Machine Learning: Field of study that gives computers the ability to learn without being explicitly programmed.</li>
+<li>Tom Mitchell (1998) Well-posed Learning Problem: A computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experience E. (如果一个计算机程序在任务 T 和性能指标 P 方面的性能指标随着经验 E 的增加而提高，则称该计算机程序从经验 E 中学习。)</li>
+</ul>
+<h3 id="Machine-learning-algorithms"><a href="#Machine-learning-algorithms" class="headerlink" title="Machine learning algorithms"></a>Machine learning algorithms</h3><ul>
+<li>Supervised learning (监督学习)</li>
+<li>Unsupervised learning (无监督学习)</li>
+</ul>
+<p>Others:</p>
+<ul>
+<li>Reinforcement learning (强化学习)</li>
+<li>Recommender systems (推荐系统)</li>
+</ul>
+<h2 id="Lesson-3"><a href="#Lesson-3" class="headerlink" title="Lesson 3"></a>Lesson 3</h2><p>In supervised learning, “right answers” are given.</p>
+<p>A regression (回归) problem: predict continuous valued output</p>
+<p>A classification (分类) problem: discrete valued output</p>
+<h2 id="Lesson-4"><a href="#Lesson-4" class="headerlink" title="Lesson 4"></a>Lesson 4</h2><p>Given data set without labels, the machine finds some structures hiding in it.</p>
+<p>Examples:</p>
+<ul>
+<li>Organize computing clusters (管理计算集群)</li>
+<li>Social network analysis</li>
+<li>Market segmentation</li>
+<li>Astronomical data analysis</li>
+</ul>
+<p>Cocktail party problem (鸡尾酒会问题): extracting two audio from two audio sources</p>
+<h2 id="Lesson-5"><a href="#Lesson-5" class="headerlink" title="Lesson 5"></a>Lesson 5</h2><p>(to be continued)</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+        <tag>Machine Learning</tag>
+        <tag>Andrew Ng</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>挖老婆矿！—— NovelAI 初试</title>
     <url>/posts/f17b3e8b.html</url>
     <content><![CDATA[<p>最近一段时间，感觉突然之间，就有很多很多将现实图片二次元化啊，按照每句歌词生成一副画作啊的 AI 绘画应用的图文视频出现。和室友聊天还说是不是最近一段时间 AI 技术突破什么瓶颈突飞猛进了。后来才知道，原来是 NovelAI 泄露了… 这样一来，本地部署方便了起来，于是整了一个玩玩。由于跑 AI 嘛，GPU 比较呼啸，跟挖矿一样，我就戏称我这是在 “挖老婆矿” 了。</p>
@@ -366,8 +417,8 @@
         <category>AI</category>
       </categories>
       <tags>
-        <tag>NovelAI</tag>
         <tag>AI</tag>
+        <tag>NovelAI</tag>
       </tags>
   </entry>
   <entry>
@@ -935,6 +986,39 @@
       </tags>
   </entry>
   <entry>
+    <title>Makefile 简单笔记</title>
+    <url>/posts/b5f1b38d.html</url>
+    <content><![CDATA[<p>这是一篇笔记，原视频是 <a href="https://space.bilibili.com/519963684">@于仕琪</a> 老师的 <a href="https://www.bilibili.com/video/BV188411L7d2">《Makefile 20 分钟入门，简简单单，展示如何使用 Makefile 管理和编译 C++ 代码》</a>。</p>
+<span id="more"></span>
+
+<h2 id="老师所给的四个版本"><a href="#老师所给的四个版本" class="headerlink" title="老师所给的四个版本"></a>老师所给的四个版本</h2><figure class="highlight makefile"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># 版本一</span></span><br><span class="line"><span class="section">hello: main.cpp printhello.cpp factorial.cpp</span></span><br><span class="line">    g++ -o hello main.cpp printhello.cpp factorial.cpp</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本二</span></span><br><span class="line">CXX = g++</span><br><span class="line">TARGET = hello</span><br><span class="line">OBJ = main.o printhello.o factorial.o</span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJ)</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -o <span class="variable">$(TARGET)</span> <span class="variable">$(OBJ)</span></span><br><span class="line"></span><br><span class="line"><span class="section">main.o: main.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -c main.cpp</span><br><span class="line"></span><br><span class="line"><span class="section">printhello.o: printhello.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -c printhello.cpp</span><br><span class="line"></span><br><span class="line"><span class="section">factorial.o: factorial.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -c factorial.cpp</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本三</span></span><br><span class="line">CXX = g++</span><br><span class="line">TARGET = hello</span><br><span class="line">OBJ = main.o printhello.o factorial.o</span><br><span class="line"></span><br><span class="line">CXXFLAGS = -c -Wall</span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJ)</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -o <span class="variable">$@</span> <span class="variable">$^</span></span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> <span class="variable">$(CXXFLAGS)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">    rm -f *.o <span class="variable">$(TARGET)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本四</span></span><br><span class="line">CXX = g++</span><br><span class="line">TARGET = hello</span><br><span class="line">SRC = <span class="variable">$(<span class="built_in">wildcard</span> *.cpp)</span></span><br><span class="line">OBJ = <span class="variable">$(<span class="built_in">patsubst</span> %.cpp, %.o, <span class="variable">$(SRC)</span>)</span></span><br><span class="line"></span><br><span class="line">CXXFLAGS = -c -Wall</span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJ)</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -o <span class="variable">$@</span> <span class="variable">$^</span></span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> <span class="variable">$(CXXFLAGS)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">    rm -f *.o <span class="variable">$(TARGET)</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><p>首先是关于 g++ 这个 C++ 编译器的一些知识点。</p>
+<ul>
+<li><code>-c</code> 参数表示生成 obj 文件（<code>*.o</code>）；</li>
+<li><code>-o</code> 用于指定生成的可执行文件的名称，比如上边 <code>-o hello</code> 就表示生成的可执行文件叫 hello；</li>
+<li><code>-Wall</code> 表示 Warning all，也就是打开全部的警告。</li>
+</ul>
+<p>接着是 Makefile 文件的大致原理。</p>
+<p>首先看最易理解的版本一。</p>
+<figure class="highlight makefile"><table><tbody><tr><td class="code"><pre><span class="line"><span class="section">hello: main.cpp printhello.cpp factorial.cpp</span></span><br><span class="line">    g++ -o hello main.cpp printhello.cpp factorial.cpp</span><br></pre></td></tr></tbody></table></figure>
+
+<p>第一行冒号前的部分表示我们需要的文件（这里是 <code>hello</code>），冒号后表示冒号前文件的依赖项（这里是三个 <code>.cpp</code> 文件），第二行表示为了生成冒号前的文件，需要执行什么命令。Make 工具通过检测冒号后文件的时间戳是否比冒号前文件更新来判断是否要执行第二行语句。</p>
+<p>在第二个版本中，引入了变量的概念。形似 <code>XXX = YYY</code> 的东西就是在给变量赋值，使用 <code>$(XXX)</code> 来取得值 <code>YYY</code>。</p>
+<p>第三个版本中出现了 <code>$@</code>、<code>$^</code>、<code>$&lt;</code> 等符号，他们分别表示冒号前面的内容、冒号后边的全部内容和冒号后边第一个内容。</p>
+<p>第三个版本中的 <code>.PHONY: clean</code> 标识了 <code>clean</code> 是个命令而不是一个文件，这样结合下边的 <code>clean:</code> 的内容，就可以实现直接在终端输入 <code>make clean</code> 来执行 <code>rm -f *.o $(TARGET)</code> 的命令，清空生成出来的文件。</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Makefile</tag>
+        <tag>GNU Make</tag>
+        <tag>Compiling</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LaTeX 公式基础</title>
     <url>/posts/848a7d31.html</url>
     <content><![CDATA[<p>用 LaTeX 写数学公式的时候，总记不住一些写法，故在此记录学习笔记。</p>
@@ -1357,39 +1441,6 @@
       <tags>
         <tag>Mathematics</tag>
         <tag>LaTeX</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Makefile 简单笔记</title>
-    <url>/posts/b5f1b38d.html</url>
-    <content><![CDATA[<p>这是一篇笔记，原视频是 <a href="https://space.bilibili.com/519963684">@于仕琪</a> 老师的 <a href="https://www.bilibili.com/video/BV188411L7d2">《Makefile 20 分钟入门，简简单单，展示如何使用 Makefile 管理和编译 C++ 代码》</a>。</p>
-<span id="more"></span>
-
-<h2 id="老师所给的四个版本"><a href="#老师所给的四个版本" class="headerlink" title="老师所给的四个版本"></a>老师所给的四个版本</h2><figure class="highlight makefile"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># 版本一</span></span><br><span class="line"><span class="section">hello: main.cpp printhello.cpp factorial.cpp</span></span><br><span class="line">    g++ -o hello main.cpp printhello.cpp factorial.cpp</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本二</span></span><br><span class="line">CXX = g++</span><br><span class="line">TARGET = hello</span><br><span class="line">OBJ = main.o printhello.o factorial.o</span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJ)</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -o <span class="variable">$(TARGET)</span> <span class="variable">$(OBJ)</span></span><br><span class="line"></span><br><span class="line"><span class="section">main.o: main.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -c main.cpp</span><br><span class="line"></span><br><span class="line"><span class="section">printhello.o: printhello.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -c printhello.cpp</span><br><span class="line"></span><br><span class="line"><span class="section">factorial.o: factorial.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -c factorial.cpp</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本三</span></span><br><span class="line">CXX = g++</span><br><span class="line">TARGET = hello</span><br><span class="line">OBJ = main.o printhello.o factorial.o</span><br><span class="line"></span><br><span class="line">CXXFLAGS = -c -Wall</span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJ)</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -o <span class="variable">$@</span> <span class="variable">$^</span></span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> <span class="variable">$(CXXFLAGS)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">    rm -f *.o <span class="variable">$(TARGET)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本四</span></span><br><span class="line">CXX = g++</span><br><span class="line">TARGET = hello</span><br><span class="line">SRC = <span class="variable">$(<span class="built_in">wildcard</span> *.cpp)</span></span><br><span class="line">OBJ = <span class="variable">$(<span class="built_in">patsubst</span> %.cpp, %.o, <span class="variable">$(SRC)</span>)</span></span><br><span class="line"></span><br><span class="line">CXXFLAGS = -c -Wall</span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJ)</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -o <span class="variable">$@</span> <span class="variable">$^</span></span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> <span class="variable">$(CXXFLAGS)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">    rm -f *.o <span class="variable">$(TARGET)</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><p>首先是关于 g++ 这个 C++ 编译器的一些知识点。</p>
-<ul>
-<li><code>-c</code> 参数表示生成 obj 文件（<code>*.o</code>）；</li>
-<li><code>-o</code> 用于指定生成的可执行文件的名称，比如上边 <code>-o hello</code> 就表示生成的可执行文件叫 hello；</li>
-<li><code>-Wall</code> 表示 Warning all，也就是打开全部的警告。</li>
-</ul>
-<p>接着是 Makefile 文件的大致原理。</p>
-<p>首先看最易理解的版本一。</p>
-<figure class="highlight makefile"><table><tbody><tr><td class="code"><pre><span class="line"><span class="section">hello: main.cpp printhello.cpp factorial.cpp</span></span><br><span class="line">    g++ -o hello main.cpp printhello.cpp factorial.cpp</span><br></pre></td></tr></tbody></table></figure>
-
-<p>第一行冒号前的部分表示我们需要的文件（这里是 <code>hello</code>），冒号后表示冒号前文件的依赖项（这里是三个 <code>.cpp</code> 文件），第二行表示为了生成冒号前的文件，需要执行什么命令。Make 工具通过检测冒号后文件的时间戳是否比冒号前文件更新来判断是否要执行第二行语句。</p>
-<p>在第二个版本中，引入了变量的概念。形似 <code>XXX = YYY</code> 的东西就是在给变量赋值，使用 <code>$(XXX)</code> 来取得值 <code>YYY</code>。</p>
-<p>第三个版本中出现了 <code>$@</code>、<code>$^</code>、<code>$&lt;</code> 等符号，他们分别表示冒号前面的内容、冒号后边的全部内容和冒号后边第一个内容。</p>
-<p>第三个版本中的 <code>.PHONY: clean</code> 标识了 <code>clean</code> 是个命令而不是一个文件，这样结合下边的 <code>clean:</code> 的内容，就可以实现直接在终端输入 <code>make clean</code> 来执行 <code>rm -f *.o $(TARGET)</code> 的命令，清空生成出来的文件。</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Makefile</tag>
-        <tag>GNU Make</tag>
-        <tag>Compiling</tag>
       </tags>
   </entry>
   <entry>
@@ -2339,28 +2390,6 @@
       </tags>
   </entry>
   <entry>
-    <title>补记一个用 Vue.js 和 ElementUI 实现的在线抽奖网页</title>
-    <url>/posts/6a8a1633.html</url>
-    <content><![CDATA[<p>这件事儿发生在我的高中某个新学期开始，新来了一个电脑老师。有点打赌或者考验我的性质吧，ta 说 ta 弄了随机数点名的小网页，还能用同学的照片进行抽取，问我能不能实现一个。ta 的实现方法是 jQuery，技术上比较老，界面也不太好看。我想去尝试一下别的方法，正好也试试略微学了一点的 Vue.js，为了好看，用了 Element UI。</p>
-<span id="more"></span>
-
-<p>一两个周末最终实现到现在的效果，能输入名字抽人，能随机数抽人（学号抽人？），还有一个通过图片抽的到今天也还没做。当时对着 Vue.js 和 Element UI 的开发文档勉里勉强做出来这个效果，现在早把那些基础知识忘记了，也不知道以后有没有工夫完善它了。</p>
-<p>你可以<a href="/raw/CatchDog/CatchDog.html">点击这里</a>来玩玩看。</p>
-<p><img data-src="https://pic.imgdb.cn/item/6308b57316f2c2beb1fad0f4.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57316f2c2beb1fad0ec.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad081.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad087.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad091.png"></p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>Web</tag>
-        <tag>Vue.js</tag>
-        <tag>Element UI</tag>
-        <tag>Html</tag>
-        <tag>JS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>RLCraft 新手教程一：过渡到你的正常生存</title>
     <url>/posts/a1ada34d.html</url>
     <content><![CDATA[<p>本教程是笔者自己游玩过程中写的，出发点是笔者自己想玩但又不想花费时间看很多实况去了解一些细节，又找不到比较详细的文字版中文教程，以致于无从下手，只能慢慢啃各种模组的百科和 RLCraft Wiki，便以教程形式写下自己的游玩过程，希望对后来者有所帮助。笔者不是什么资深玩家，故难免有疏漏，请大家多多包涵。</p>
@@ -2383,6 +2412,28 @@
         <tag>Game</tag>
         <tag>Minecraft</tag>
         <tag>RLCraft</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>补记一个用 Vue.js 和 ElementUI 实现的在线抽奖网页</title>
+    <url>/posts/6a8a1633.html</url>
+    <content><![CDATA[<p>这件事儿发生在我的高中某个新学期开始，新来了一个电脑老师。有点打赌或者考验我的性质吧，ta 说 ta 弄了随机数点名的小网页，还能用同学的照片进行抽取，问我能不能实现一个。ta 的实现方法是 jQuery，技术上比较老，界面也不太好看。我想去尝试一下别的方法，正好也试试略微学了一点的 Vue.js，为了好看，用了 Element UI。</p>
+<span id="more"></span>
+
+<p>一两个周末最终实现到现在的效果，能输入名字抽人，能随机数抽人（学号抽人？），还有一个通过图片抽的到今天也还没做。当时对着 Vue.js 和 Element UI 的开发文档勉里勉强做出来这个效果，现在早把那些基础知识忘记了，也不知道以后有没有工夫完善它了。</p>
+<p>你可以<a href="/raw/CatchDog/CatchDog.html">点击这里</a>来玩玩看。</p>
+<p><img data-src="https://pic.imgdb.cn/item/6308b57316f2c2beb1fad0f4.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57316f2c2beb1fad0ec.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad081.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad087.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad091.png"></p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Web</tag>
+        <tag>Vue.js</tag>
+        <tag>Element UI</tag>
+        <tag>Html</tag>
+        <tag>JS</tag>
       </tags>
   </entry>
   <entry>
@@ -3325,37 +3376,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C 语言中使用变量输出小数点位数</title>
-    <url>/posts/45e2d42.html</url>
-    <content><![CDATA[<p>这事儿要从一周前讲起，有人在群里问了这么一道题，要求用 C 实现：</p>
-<span id="more"></span>
-
-<blockquote>
-<p>习题 2-5 分数化小数（decimal）<br>输入正整数 a,b,c，输出 a/b 的小数形式，精确到小数点后 c 位。a,b&lt;=10^6，c&lt;=100。输入包含多组数据，结束标记为 a=b=c=0。<br>样例输入：<br>1 6 4<br>0 0 0<br>样例输出：<br>0.1667</p>
-</blockquote>
-<p>当时我做了个简化的版本 —— 最多处理 1000 组输入，并且 c 比较小（即不需要高精度）的情况的代码，主要是做一个字符串处理，来构造一个传给 <code>printf()</code> 的格式控制字符串，代码如下：</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span> <span class="comment">// 需要用到它的 itoa() 函数</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span> <span class="comment">// 用到strcat拼接字符数组，memset清空字符数组</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    <span class="comment">// 仅实现了最多有 1000 个输入的情况</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> a[<span class="number">1000</span>], b[<span class="number">1000</span>], c[<span class="number">1000</span>], cnt = <span class="number">0</span>;</span><br><span class="line">    <span class="type">double</span> ans[<span class="number">1000</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">if</span> (cnt == <span class="number">1000</span>)</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%u%u%u"</span>, &amp;a[i], &amp;b[i], &amp;c[i]);</span><br><span class="line">        cnt++;</span><br><span class="line">        <span class="keyword">if</span> (!(a[i] == <span class="number">0</span> &amp;&amp; b[i] == <span class="number">0</span> &amp;&amp; c[i] == <span class="number">0</span>))</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">if</span> (b[i] != <span class="number">0</span>)</span><br><span class="line">            {</span><br><span class="line">                ans[i] = a[i] * <span class="number">1.0</span> / b[i];</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; cnt - <span class="number">1</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="type">char</span> formatMsgP1[] = <span class="string">"%."</span>;</span><br><span class="line">        <span class="type">char</span> *formatMsgP2;</span><br><span class="line">        <span class="comment">// 根据位数动态确定 char 数组的大小</span></span><br><span class="line">        <span class="keyword">if</span> (c[i] &gt; <span class="number">99</span>)</span><br><span class="line">        {</span><br><span class="line">            formatMsgP2 = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">char</span>) * <span class="number">3</span>);</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (c[i] &gt; <span class="number">9</span>)</span><br><span class="line">        {</span><br><span class="line">            formatMsgP2 = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">char</span>) * <span class="number">2</span>);</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            formatMsgP2 = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">char</span>));</span><br><span class="line">        }</span><br><span class="line">        itoa(c[i], formatMsgP2, <span class="number">10</span>);</span><br><span class="line">        <span class="type">char</span> formatMsgP3[] = <span class="string">"lf\n"</span>;</span><br><span class="line">        <span class="type">char</span> formatMsg[<span class="number">20</span>];</span><br><span class="line">        <span class="built_in">strcat</span>(formatMsg, formatMsgP1);</span><br><span class="line">        <span class="built_in">strcat</span>(formatMsg, formatMsgP2);</span><br><span class="line">        <span class="built_in">strcat</span>(formatMsg, formatMsgP3);</span><br><span class="line">        <span class="built_in">printf</span>(formatMsg, ans[i]);</span><br><span class="line">        <span class="built_in">memset</span>(formatMsg, <span class="number">0</span>, <span class="keyword">sizeof</span>(formatMsg)); <span class="comment">// 清空数组</span></span><br><span class="line">        <span class="built_in">free</span>(formatMsgP2);                       <span class="comment">// 释放指针</span></span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这样的代码就比较麻烦，大量的代码都用在字符串拼接了。但今天看到一篇文章（<a href="https://mxte.cc/90.html">《使用变量设定小数点位数》</a>），才知道原来根本不需要那么麻烦。</p>
-<p>本来我的目标是构造这么一个格式控制字符串 <code>%.&lt;c&gt;lf</code>，其中 <code>&lt;c&gt;</code> 需要由用户输入。上边的思路就是输入数字之后用 <code>itoa()</code> 函数把输入的数字转成字符串，然后拼一拼。</p>
-<p>但实际上可以这样：</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"%.*lf"</span>, c[i], ans[i]);</span><br></pre></td></tr></tbody></table></figure>
-
-<p>使用 <code>*</code>，<code>printf()</code> 就知道了，需要去后边找这么一个参数。</p>
-<p>所以上边 <code>return 0;</code> 前面那个 <code>for</code> 里那么多东西都只要换成这一句就行了。</p>
-<p>下边贴出一个用动态数组实现的任意组数数据输入的代码（依然没有高精度，我不会啊）：</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">NUMS</span></span></span><br><span class="line"><span class="class">{</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> c;</span><br><span class="line">    <span class="type">double</span> ans;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">NUMS</span> *<span class="title">p</span> =</span> <span class="number">0</span>;</span><br><span class="line"><span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> size = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">append</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span>, <span class="type">double</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    <span class="type">int</span> a = <span class="number">0</span>, b = <span class="number">0</span>, c = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%u%u%u"</span>, &amp;a, &amp;b, &amp;c);</span><br><span class="line">        <span class="keyword">if</span> (a == <span class="number">0</span> &amp;&amp; b == <span class="number">0</span> &amp;&amp; c == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            <span class="type">double</span> tmp_ans = a * <span class="number">1.0</span> / b;</span><br><span class="line">            append(c, tmp_ans);</span><br><span class="line">        }</span><br><span class="line">    } <span class="keyword">while</span> (<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%.*lf\n"</span>, (p + i)-&gt;c, (p + i)-&gt;ans);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">append</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> _c, <span class="type">double</span> _ans)</span></span><br><span class="line">{</span><br><span class="line">    <span class="keyword">if</span> (p == <span class="number">0</span>)</span><br><span class="line">    {</span><br><span class="line">        p = <span class="built_in">calloc</span>(<span class="number">1</span>, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        p-&gt;c = _c;</span><br><span class="line">        p-&gt;ans = _ans;</span><br><span class="line">        size++;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">struct</span> NUMS *tmp = <span class="built_in">calloc</span>(size, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        <span class="built_in">memcpy</span>(tmp, p, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS) * size);</span><br><span class="line">        <span class="built_in">free</span>(p);</span><br><span class="line">        p = <span class="built_in">calloc</span>(size + <span class="number">1</span>, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        <span class="built_in">memcpy</span>(p, tmp, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS) * (size + <span class="number">1</span>));</span><br><span class="line">        (p + size)-&gt;c = _c;</span><br><span class="line">        (p + size)-&gt;ans = _ans;</span><br><span class="line">        size++;</span><br><span class="line">        <span class="built_in">free</span>(tmp);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C 语言文件操作</title>
     <url>/posts/914118ff.html</url>
     <content><![CDATA[<p>简单记录一下 C 语言的文件操作的相关内容。</p>
@@ -3499,6 +3519,37 @@
       <tags>
         <tag>C/C++</tag>
         <tag>File</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C 语言中使用变量输出小数点位数</title>
+    <url>/posts/45e2d42.html</url>
+    <content><![CDATA[<p>这事儿要从一周前讲起，有人在群里问了这么一道题，要求用 C 实现：</p>
+<span id="more"></span>
+
+<blockquote>
+<p>习题 2-5 分数化小数（decimal）<br>输入正整数 a,b,c，输出 a/b 的小数形式，精确到小数点后 c 位。a,b&lt;=10^6，c&lt;=100。输入包含多组数据，结束标记为 a=b=c=0。<br>样例输入：<br>1 6 4<br>0 0 0<br>样例输出：<br>0.1667</p>
+</blockquote>
+<p>当时我做了个简化的版本 —— 最多处理 1000 组输入，并且 c 比较小（即不需要高精度）的情况的代码，主要是做一个字符串处理，来构造一个传给 <code>printf()</code> 的格式控制字符串，代码如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span> <span class="comment">// 需要用到它的 itoa() 函数</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span> <span class="comment">// 用到strcat拼接字符数组，memset清空字符数组</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    <span class="comment">// 仅实现了最多有 1000 个输入的情况</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> a[<span class="number">1000</span>], b[<span class="number">1000</span>], c[<span class="number">1000</span>], cnt = <span class="number">0</span>;</span><br><span class="line">    <span class="type">double</span> ans[<span class="number">1000</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">if</span> (cnt == <span class="number">1000</span>)</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%u%u%u"</span>, &amp;a[i], &amp;b[i], &amp;c[i]);</span><br><span class="line">        cnt++;</span><br><span class="line">        <span class="keyword">if</span> (!(a[i] == <span class="number">0</span> &amp;&amp; b[i] == <span class="number">0</span> &amp;&amp; c[i] == <span class="number">0</span>))</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">if</span> (b[i] != <span class="number">0</span>)</span><br><span class="line">            {</span><br><span class="line">                ans[i] = a[i] * <span class="number">1.0</span> / b[i];</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; cnt - <span class="number">1</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="type">char</span> formatMsgP1[] = <span class="string">"%."</span>;</span><br><span class="line">        <span class="type">char</span> *formatMsgP2;</span><br><span class="line">        <span class="comment">// 根据位数动态确定 char 数组的大小</span></span><br><span class="line">        <span class="keyword">if</span> (c[i] &gt; <span class="number">99</span>)</span><br><span class="line">        {</span><br><span class="line">            formatMsgP2 = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">char</span>) * <span class="number">3</span>);</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (c[i] &gt; <span class="number">9</span>)</span><br><span class="line">        {</span><br><span class="line">            formatMsgP2 = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">char</span>) * <span class="number">2</span>);</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            formatMsgP2 = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">char</span>));</span><br><span class="line">        }</span><br><span class="line">        itoa(c[i], formatMsgP2, <span class="number">10</span>);</span><br><span class="line">        <span class="type">char</span> formatMsgP3[] = <span class="string">"lf\n"</span>;</span><br><span class="line">        <span class="type">char</span> formatMsg[<span class="number">20</span>];</span><br><span class="line">        <span class="built_in">strcat</span>(formatMsg, formatMsgP1);</span><br><span class="line">        <span class="built_in">strcat</span>(formatMsg, formatMsgP2);</span><br><span class="line">        <span class="built_in">strcat</span>(formatMsg, formatMsgP3);</span><br><span class="line">        <span class="built_in">printf</span>(formatMsg, ans[i]);</span><br><span class="line">        <span class="built_in">memset</span>(formatMsg, <span class="number">0</span>, <span class="keyword">sizeof</span>(formatMsg)); <span class="comment">// 清空数组</span></span><br><span class="line">        <span class="built_in">free</span>(formatMsgP2);                       <span class="comment">// 释放指针</span></span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这样的代码就比较麻烦，大量的代码都用在字符串拼接了。但今天看到一篇文章（<a href="https://mxte.cc/90.html">《使用变量设定小数点位数》</a>），才知道原来根本不需要那么麻烦。</p>
+<p>本来我的目标是构造这么一个格式控制字符串 <code>%.&lt;c&gt;lf</code>，其中 <code>&lt;c&gt;</code> 需要由用户输入。上边的思路就是输入数字之后用 <code>itoa()</code> 函数把输入的数字转成字符串，然后拼一拼。</p>
+<p>但实际上可以这样：</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"%.*lf"</span>, c[i], ans[i]);</span><br></pre></td></tr></tbody></table></figure>
+
+<p>使用 <code>*</code>，<code>printf()</code> 就知道了，需要去后边找这么一个参数。</p>
+<p>所以上边 <code>return 0;</code> 前面那个 <code>for</code> 里那么多东西都只要换成这一句就行了。</p>
+<p>下边贴出一个用动态数组实现的任意组数数据输入的代码（依然没有高精度，我不会啊）：</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">NUMS</span></span></span><br><span class="line"><span class="class">{</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> c;</span><br><span class="line">    <span class="type">double</span> ans;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">NUMS</span> *<span class="title">p</span> =</span> <span class="number">0</span>;</span><br><span class="line"><span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> size = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">append</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span>, <span class="type">double</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    <span class="type">int</span> a = <span class="number">0</span>, b = <span class="number">0</span>, c = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%u%u%u"</span>, &amp;a, &amp;b, &amp;c);</span><br><span class="line">        <span class="keyword">if</span> (a == <span class="number">0</span> &amp;&amp; b == <span class="number">0</span> &amp;&amp; c == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            <span class="type">double</span> tmp_ans = a * <span class="number">1.0</span> / b;</span><br><span class="line">            append(c, tmp_ans);</span><br><span class="line">        }</span><br><span class="line">    } <span class="keyword">while</span> (<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%.*lf\n"</span>, (p + i)-&gt;c, (p + i)-&gt;ans);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">append</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> _c, <span class="type">double</span> _ans)</span></span><br><span class="line">{</span><br><span class="line">    <span class="keyword">if</span> (p == <span class="number">0</span>)</span><br><span class="line">    {</span><br><span class="line">        p = <span class="built_in">calloc</span>(<span class="number">1</span>, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        p-&gt;c = _c;</span><br><span class="line">        p-&gt;ans = _ans;</span><br><span class="line">        size++;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">struct</span> NUMS *tmp = <span class="built_in">calloc</span>(size, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        <span class="built_in">memcpy</span>(tmp, p, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS) * size);</span><br><span class="line">        <span class="built_in">free</span>(p);</span><br><span class="line">        p = <span class="built_in">calloc</span>(size + <span class="number">1</span>, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        <span class="built_in">memcpy</span>(p, tmp, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS) * (size + <span class="number">1</span>));</span><br><span class="line">        (p + size)-&gt;c = _c;</span><br><span class="line">        (p + size)-&gt;ans = _ans;</span><br><span class="line">        size++;</span><br><span class="line">        <span class="built_in">free</span>(tmp);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
       </tags>
   </entry>
   <entry>
@@ -3683,47 +3734,6 @@
       </tags>
   </entry>
   <entry>
-    <title>error: summary string parsing error 错误解决方法</title>
-    <url>/posts/78dc947f.html</url>
-    <content><![CDATA[<p>直接先说解决方法：在使用 clang 工具链进行编译的时候，添加编译选项 <code>-fstandalone-debug</code>。</p>
-<span id="more"></span>
-
-<p>下边是完整的发现及解决问题的过程。</p>
-<h1 id="发现问题"><a href="#发现问题" class="headerlink" title="发现问题"></a>发现问题</h1><p>在按照 <a href="https://www.bilibili.com/video/BV1sW411v7VZ">《使用 VS Code + Clangd + CMake 搭建 C/C++ 开发环境》</a> 搭建我在 ArchWSL 内的 C/C++ 开发环境时，我创建了一个用于测试的 HelloWorld 工程。这个工程的文件结构长这样：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── build</span><br><span class="line">├── .clang-format</span><br><span class="line">├── CMakeLists.txt</span><br><span class="line">└── main.cpp</span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight cmake"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># @file CMakeLists.txt</span></span><br><span class="line"><span class="comment"># old</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.10</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">project</span>(HelloWorld)</span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(HelloWorld main.cpp)</span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// @file main.cpp</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line">    std::string str = <span class="string">"你好"</span>;</span><br><span class="line">    std::cout &lt;&lt; str &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>调试的时候发现，int 型变量 a 是可以查看的，但 std::string 型的变量 str 却显示 <code>error: summary string parsing error</code> 错误。</p>
-<h1 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h1><p>在测试中我发现，这个问题只在我使用 clang 工具链编译时产生，使用 g++ 就没有这个问题，所以猜测不是 lldb 调试器的问题，而是 clang 编译器的问题。</p>
-<p>在网上搜索到了类似的问题：</p>
-<ul>
-<li><a href="https://cloud.tencent.com/developer/ask/sof/1542916">无法在 lldb 中检查 std::string 变量 - 问答 - 腾讯云开发者社区</a></li>
-<li><a href="https://github.com/vadimcn/vscode-lldb/issues/415">Cannot inspect any strings · Issue #415 · vadimcn/vscode-lldb</a></li>
-</ul>
-<p>都说要使用 <code>-fstandalone-debug</code> 重新编译。</p>
-<p>于是修改 CMakeLists.txt 为：</p>
-<figure class="highlight cmake"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># @file CMakeLists.txt</span></span><br><span class="line"><span class="comment"># new</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.10</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">project</span>(HelloWorld)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果使用的是 clang 工具链，那么需要添加上 -fstandalone-debug，否则 lldb 无法查看 std::string 的东东</span></span><br><span class="line"><span class="comment"># 见 https://cloud.tencent.com/developer/ask/sof/1542916</span></span><br><span class="line"><span class="comment"># 又见 https://github.com/vadimcn/vscode-lldb/issues/415</span></span><br><span class="line"><span class="keyword">add_compile_options</span>(-fstandalone-debug)</span><br><span class="line"><span class="keyword">message</span>(STATUS <span class="string">"optional: -fstandalone-debug"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(HelloWorld main.cpp)</span><br></pre></td></tr></tbody></table></figure>
-
-<p>至此成功解决。</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>Issue</tag>
-        <tag>Solved</tag>
-        <tag>Debug</tag>
-        <tag>LLDB</tag>
-        <tag>LLVM</tag>
-        <tag>Clang</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Move Semantics in C++</title>
     <url>/posts/d5786049.html</url>
     <content><![CDATA[<p>This is a note for Lecture 13, <a href="https://web.stanford.edu/class/cs106l/index.html">CS106L</a>, Spring 2023.</p>
@@ -3871,6 +3881,47 @@
       <tags>
         <tag>C/C++</tag>
         <tag>CS106L</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>error: summary string parsing error 错误解决方法</title>
+    <url>/posts/78dc947f.html</url>
+    <content><![CDATA[<p>直接先说解决方法：在使用 clang 工具链进行编译的时候，添加编译选项 <code>-fstandalone-debug</code>。</p>
+<span id="more"></span>
+
+<p>下边是完整的发现及解决问题的过程。</p>
+<h1 id="发现问题"><a href="#发现问题" class="headerlink" title="发现问题"></a>发现问题</h1><p>在按照 <a href="https://www.bilibili.com/video/BV1sW411v7VZ">《使用 VS Code + Clangd + CMake 搭建 C/C++ 开发环境》</a> 搭建我在 ArchWSL 内的 C/C++ 开发环境时，我创建了一个用于测试的 HelloWorld 工程。这个工程的文件结构长这样：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── build</span><br><span class="line">├── .clang-format</span><br><span class="line">├── CMakeLists.txt</span><br><span class="line">└── main.cpp</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight cmake"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># @file CMakeLists.txt</span></span><br><span class="line"><span class="comment"># old</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.10</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">project</span>(HelloWorld)</span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(HelloWorld main.cpp)</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// @file main.cpp</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line">    std::string str = <span class="string">"你好"</span>;</span><br><span class="line">    std::cout &lt;&lt; str &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>调试的时候发现，int 型变量 a 是可以查看的，但 std::string 型的变量 str 却显示 <code>error: summary string parsing error</code> 错误。</p>
+<h1 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h1><p>在测试中我发现，这个问题只在我使用 clang 工具链编译时产生，使用 g++ 就没有这个问题，所以猜测不是 lldb 调试器的问题，而是 clang 编译器的问题。</p>
+<p>在网上搜索到了类似的问题：</p>
+<ul>
+<li><a href="https://cloud.tencent.com/developer/ask/sof/1542916">无法在 lldb 中检查 std::string 变量 - 问答 - 腾讯云开发者社区</a></li>
+<li><a href="https://github.com/vadimcn/vscode-lldb/issues/415">Cannot inspect any strings · Issue #415 · vadimcn/vscode-lldb</a></li>
+</ul>
+<p>都说要使用 <code>-fstandalone-debug</code> 重新编译。</p>
+<p>于是修改 CMakeLists.txt 为：</p>
+<figure class="highlight cmake"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># @file CMakeLists.txt</span></span><br><span class="line"><span class="comment"># new</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.10</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">project</span>(HelloWorld)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果使用的是 clang 工具链，那么需要添加上 -fstandalone-debug，否则 lldb 无法查看 std::string 的东东</span></span><br><span class="line"><span class="comment"># 见 https://cloud.tencent.com/developer/ask/sof/1542916</span></span><br><span class="line"><span class="comment"># 又见 https://github.com/vadimcn/vscode-lldb/issues/415</span></span><br><span class="line"><span class="keyword">add_compile_options</span>(-fstandalone-debug)</span><br><span class="line"><span class="keyword">message</span>(STATUS <span class="string">"optional: -fstandalone-debug"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(HelloWorld main.cpp)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>至此成功解决。</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>Issue</tag>
+        <tag>Solved</tag>
+        <tag>Debug</tag>
+        <tag>LLDB</tag>
+        <tag>LLVM</tag>
+        <tag>Clang</tag>
       </tags>
   </entry>
   <entry>
