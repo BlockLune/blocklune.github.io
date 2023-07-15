@@ -2086,6 +2086,7 @@
 <li>lazygit: a TUI <code>git</code> (See <a href="https://github.com/jesseduffield/lazygit">GitHub</a>)</li>
 <li>lsd: a replacement for <code>ls</code> command (See <a href="https://github.com/lsd-rs/lsd">GitHub</a>)</li>
 <li>ripgrep: a replacement for <code>grep</code> command (See <a href="https://github.com/BurntSushi/ripgrep">GitHub</a>)</li>
+<li>shell_gpt: talk to GPT in terminal (See <a href="https://github.com/TheR1D/shell_gpt">GitHub</a>)</li>
 <li>sudo-rs: a memory safe implementation of sudo and su (See <a href="https://github.com/memorysafety/sudo-rs">GitHub</a>)</li>
 <li>tmux: a terminal multiplexer (See <a href="https://github.com/tmux/tmux">GitHub</a>)</li>
 <li>thefuck: an app that corrects errors in the previous commands (See <a href="https://github.com/nvbn/thefuck">GitHub</a>)</li>
