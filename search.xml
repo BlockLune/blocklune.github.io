@@ -2074,6 +2074,24 @@
 <h3 id="BROWSER"><a href="#BROWSER" class="headerlink" title="BROWSER"></a>BROWSER</h3><p>I use Microsoft Edge. It’s pretty easy to download the <code>.deb</code> on its <em><a href="https://www.microsoft.com/en-us/edge/download">official website</a></em>. But if you want to install it from command line:</p>
 <p>See <em><a href="https://www.linuxcapable.com/how-to-install-microsoft-edge-on-ubuntu-linux/">How to Install Microsoft Edge on Ubuntu 22.04 | 20.04 - LinuxCapable</a></em></p>
 <h3 id="PROXY"><a href="#PROXY" class="headerlink" title="PROXY"></a>PROXY</h3><p>Maybe <em><a href="https://github.com/zzzgydi/clash-verge">zzzgydi/clash-verge: A Clash GUI based on tauri. Supports Windows, macOS and Linux</a></em> or <em><a href="https://github.com/Fndroid/clash_for_windows_pkg">Fndroid/clash_for_windows_pkg</a></em></p>
+<h3 id="CLI-APPS"><a href="#CLI-APPS" class="headerlink" title="CLI-APPS"></a>CLI-APPS</h3><ul>
+<li>bat: a replacement for <code>cat</code> (See <a href="https://github.com/sharkdp/bat">GitHub</a>, <a href="https://blocklune.github.io/posts/e7bc2e88.html">my post</a>)</li>
+<li>cloc: a command-line tool to count codes (See <a href="https://github.com/AlDanial/cloc">GitHub</a>)</li>
+<li>exa: a replacement for <code>ls</code> command (See <a href="https://github.com/ogham/exa">GitHub</a>)</li>
+<li>fd: a replacement for <code>find</code> command (See <a href="https://github.com/sharkdp/fd">Github</a>)</li>
+<li>fzf: a command-line fuzzy finder (See <a href="https://github.com/junegunn/fzf">GitHub</a>)</li>
+<li>frogmounth: a TUI Markdown browser (See <a href="https://github.com/Textualize/frogmouth">GitHub</a>)</li>
+<li>hub: a command line tool that wraps <code>git</code> (See <a href="https://github.com/mislav/hub">GitHub</a>)</li>
+<li>joshuto: a TUI file explorer (See <a href="https://github.com/kamiyaa/joshuto">GitHub</a>, <a href="https://blocklune.github.io/posts/348795e3.html">my post</a>)</li>
+<li>lazygit: a TUI <code>git</code> (See <a href="https://github.com/jesseduffield/lazygit">GitHub</a>)</li>
+<li>lsd: a replacement for <code>ls</code> command (See <a href="https://github.com/lsd-rs/lsd">GitHub</a>)</li>
+<li>ripgrep: a replacement for <code>grep</code> command (See <a href="https://github.com/BurntSushi/ripgrep">GitHub</a>)</li>
+<li>sudo-rs: a memory safe implementation of sudo and su (See <a href="https://github.com/memorysafety/sudo-rs">GitHub</a>)</li>
+<li>tmux: a terminal multiplexer (See <a href="https://github.com/tmux/tmux">GitHub</a>)</li>
+<li>thefuck: an app that corrects errors in the previous commands (See <a href="https://github.com/nvbn/thefuck">GitHub</a>)</li>
+<li>tldr: cheatsheets for commands (See <a href="https://github.com/tldr-pages/tldr">GitHub</a>)</li>
+<li>zoxide: a smarter cd command (See <a href="https://github.com/ajeetdsouza/zoxide">Github</a>)</li>
+</ul>
 <h2 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h2><p>Q: The operating system always freezes on the welcome page.<br>A: Install / Update NVIDIA driver.</p>
 <p>See <em><a href="https://www.cnblogs.com/Leozi/p/13281224.html">Ubuntu 下安装 NVIDIA 驱动的三种方法</a></em></p>
 <p>and <em><a href="https://superuser.com/questions/1750975/nouveau-00000100-0-drm-failed-to-idle-channel-0-drm">ubuntu - nouveau 0000:01:00.0: DRM: failed to idle channel 0 [DRM] - Super User</a></em></p>
