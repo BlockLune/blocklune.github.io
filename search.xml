@@ -374,7 +374,7 @@
 <li>Keep changing $\theta_0$, $\theta_1$ to reduce $J(\theta_0, \theta_1)$ until we hopefully end up at a minimum</li>
 </ul>
 <p>Gradient descent algorithm:</p>
-<p>repeat until convergence (收敛) {</p>
+<p>Repeat until convergence (收敛) {</p>
 <p>$$<br>\theta_j := \theta_j - \alpha\frac{\partial}{\partial\theta_j}J(\theta_0, \theta_1)\enspace(for\enspace j = 0\enspace and\enspace j = 1)<br>$$</p>
 <p>}</p>
 <p>$\alpha$: learning rate (学习率). It controls that how big a step we take downhill with gradient descent.</p>
@@ -400,13 +400,72 @@
 <h2 id="Lesson-18"><a href="#Lesson-18" class="headerlink" title="Lesson 18"></a>Lesson 18</h2><p>Matrix multiplication properties</p>
 <p>Identity Matrix (单位矩阵)</p>
 <h2 id="Lesson-19"><a href="#Lesson-19" class="headerlink" title="Lesson 19"></a>Lesson 19</h2><p>Matrix Inverse (逆) and Matrix Transpose (转置)</p>
-<h2 id="Lesson-20"><a href="#Lesson-20" class="headerlink" title="Lesson 20"></a>Lesson 20</h2><p>…</p>
-<h2 id="Lesson-21"><a href="#Lesson-21" class="headerlink" title="Lesson 21"></a>Lesson 21</h2><p>…</p>
-<h2 id="Lesson-22"><a href="#Lesson-22" class="headerlink" title="Lesson 22"></a>Lesson 22</h2><p>…</p>
-<h2 id="Lesson-23"><a href="#Lesson-23" class="headerlink" title="Lesson 23"></a>Lesson 23</h2><p>…</p>
-<h2 id="Lesson-24"><a href="#Lesson-24" class="headerlink" title="Lesson 24"></a>Lesson 24</h2><p>…</p>
-<h2 id="Lesson-25"><a href="#Lesson-25" class="headerlink" title="Lesson 25"></a>Lesson 25</h2><p>…</p>
-<h2 id="Lesson-26"><a href="#Lesson-26" class="headerlink" title="Lesson 26"></a>Lesson 26</h2><p>…</p>
+<h2 id="Lesson-20-26"><a href="#Lesson-20-26" class="headerlink" title="Lesson 20 - 26"></a>Lesson 20 - 26</h2><p>…</p>
+<h2 id="Lesson-27"><a href="#Lesson-27" class="headerlink" title="Lesson 27"></a>Lesson 27</h2><p>Multiple features (variables)</p>
+<p>Notation:</p>
+<ul>
+<li>$n$ = number of features</li>
+<li>$x^{(i)}$ = input (features) of $i^{th}$ training example.</li>
+<li>$x^{(i)}_j$ = value of feature $j$ in $i^{th}$ training example.</li>
+</ul>
+<p>Hypothesis:</p>
+<p>$$<br>h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + …<br>$$</p>
+<p>For convenience of notation, define $x_0 = 1$.</p>
+<p>$$<br>x=[x_0, x_1, x_2, …, x_n]^T \in R^{n+1}<br>$$</p>
+<p>$$<br>\theta=[\theta_0, \theta_1, \theta_2, …, \theta_n]^T \in R^{n+1}<br>$$</p>
+<p>$$<br>h_\theta(x) = \theta_0 x_0 + \theta_1 x_1 + … + \theta_n x_n = \theta^T x<br>$$</p>
+<p>Multivariate linear regression (多元线性回归)</p>
+<h2 id="Lesson-28"><a href="#Lesson-28" class="headerlink" title="Lesson 28"></a>Lesson 28</h2><p>Multivariate gradient descent:</p>
+<ul>
+<li>Hypothesis: $h_\theta(x)=\theta^Tx=\theta_0 x_0 + \theta_1 x_1 + \theta_2 x_2 + … + \theta_n x_n$</li>
+<li>Parameters: $\theta_0$, $\theta_1$, …, $\theta_n$ or (n+1)-dimensioned vector</li>
+<li>Cost function: $J(\theta_0, \theta_1, …, \theta_n) = \frac{1}{2m}\Sigma^m_{i=1}(h_\theta(x^{(i)})-y^{(i)})^2$</li>
+</ul>
+<p>Gradient Descent:</p>
+<p>Repeat: {</p>
+<p>$$<br>\theta_j := \theta_j - \alpha\frac{1}{m}\Sigma^m_{i=1}(h_\theta(x^{(i)})-y^{(i)})\cdot x_j^{(i)}<br>$$</p>
+<p>}</p>
+<h2 id="Lesson-29"><a href="#Lesson-29" class="headerlink" title="Lesson 29"></a>Lesson 29</h2><h3 id="Feature-Scaling-特征缩放"><a href="#Feature-Scaling-特征缩放" class="headerlink" title="Feature Scaling (特征缩放)"></a>Feature Scaling (特征缩放)</h3><p>Idea: Make sure features are on a similar scale. (If you can make sure that the features are on a similar scale, by which I mean make sure that the different features take on similar ranges of values, then gradient descents can converge more quickly.)</p>
+<p>Get every feature into approximately a $-1 \leq x_i \leq 1$ range.</p>
+<h3 id="Mean-normalization-均值归一化"><a href="#Mean-normalization-均值归一化" class="headerlink" title="Mean normalization (均值归一化)"></a>Mean normalization (均值归一化)</h3><p>Replace $x_i$ with $x_i-\mu_i$ to make features have approximately zero mean (Do not apply to $x_0 = 1$).</p>
+<h2 id="Lesson-30"><a href="#Lesson-30" class="headerlink" title="Lesson 30"></a>Lesson 30</h2><h3 id="“Debugging”-How-to-make-sure-gradient-descent-is-working-correctly"><a href="#“Debugging”-How-to-make-sure-gradient-descent-is-working-correctly" class="headerlink" title="“Debugging”: How to make sure gradient descent is working correctly"></a>“Debugging”: How to make sure gradient descent is working correctly</h3><p>画图：纵轴为 $J (\theta)$，横轴为迭代次数，图像应单调递减</p>
+<h3 id="How-to-choose-learning-rate-alpha"><a href="#How-to-choose-learning-rate-alpha" class="headerlink" title="How to choose learning rate $\alpha$"></a>How to choose learning rate $\alpha$</h3><ul>
+<li>If $\alpha$ is too small: slow convergence;</li>
+<li>If $\alpha$ is too large: $J(\theta) may not decrease on every iteration; may not converge.$</li>
+</ul>
+<p>To choose $\alpha$, try:</p>
+<p>$$<br>…,0.001,0.003,0.01,0.03,0.1,0.3,1,…<br>$$</p>
+<h2 id="Lesson-31"><a href="#Lesson-31" class="headerlink" title="Lesson 31"></a>Lesson 31</h2><p>Polynomial regression (多项式回归)</p>
+<p>$$<br>\theta_0 + \theta_1x + \theta_2 x^2 + \theta_3 x^3 + …<br>$$</p>
+<p>Use multivariate linear regression: $x_1 = x, x_2=x^2, x_3=x^3, …$</p>
+<h2 id="Lesson-32"><a href="#Lesson-32" class="headerlink" title="Lesson 32"></a>Lesson 32</h2><p>Normal equation (正规方程)</p>
+<p>不迭代，直接求解 $J (\theta)$ 的最小值。</p>
+<p>$$<br>\theta=(X^TX)^{-1}X^Ty<br>$$</p>
+<p>In Octave: <code>pinv(X'*X)*X'*y</code></p>
+<table>
+<thead>
+<tr>
+<th>Gradient Descent</th>
+<th>Normal Equation</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Need to choose $\alpha$</td>
+<td>No need to choose $\alpha$</td>
+</tr>
+<tr>
+<td>Need many iterations</td>
+<td>Don’t need to iterate</td>
+</tr>
+<tr>
+<td>Work well even when $n$ is large</td>
+<td>Need to compute $(X^TX)^{-1}$, slow if $n$ is very large ($O(n^3)$)</td>
+</tr>
+</tbody></table>
+<h2 id="Lesson-33"><a href="#Lesson-33" class="headerlink" title="Lesson 33"></a>Lesson 33</h2><p>Normal equation and non-invertibility (optional)</p>
+<p>What if $X^TX$ is non-invertible? (singular (奇异) /degenerate (退化))</p>
+<p>In Octave, there is two functions <code>pinv</code> (pseudo-inverse, 伪逆) and <code>inv</code> (inverse, 逆). The former will actually compute the answer you want even if $X^TX$ is non-invertible.</p>
+<h2 id="Lesson-34-35"><a href="#Lesson-34-35" class="headerlink" title="Lesson 34 - 35"></a>Lesson 34 - 35</h2><p>…</p>
 ]]></content>
       <categories>
         <category>CS</category>
