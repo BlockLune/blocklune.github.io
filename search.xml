@@ -336,7 +336,77 @@
 <li>Astronomical data analysis</li>
 </ul>
 <p>Cocktail party problem (鸡尾酒会问题): extracting two audio from two audio sources</p>
-<h2 id="Lesson-5"><a href="#Lesson-5" class="headerlink" title="Lesson 5"></a>Lesson 5</h2><p>(to be continued)</p>
+<h2 id="Lesson-5"><a href="#Lesson-5" class="headerlink" title="Lesson 5"></a>Lesson 5</h2><p>…</p>
+<h2 id="Lesson-6"><a href="#Lesson-6" class="headerlink" title="Lesson 6"></a>Lesson 6</h2><p>Linear Regression (线性回归)</p>
+<p>Notation:</p>
+<ul>
+<li>$m$ = Number of training examples</li>
+<li>$x$’s = “input” variable / features</li>
+<li>$y$’s = “output” variable / “target” variable</li>
+<li>$(x, y)$ = one training example</li>
+<li>$(x^{(i)}, y^{(i)})$ = $i^{th}$ training example</li>
+</ul>
+<p>How does supervised learning work?</p>
+<p><img data-src="https://s1.ax1x.com/2023/07/16/pCIip3F.png" alt="How does supervised learning work"></p>
+<p>$h$ is called hypothesis function (假设函数)。</p>
+<p>How do we represent $h$?</p>
+<p>$$<br>h_{\theta}(x) = \theta_{0}+\theta_{1}x<br>$$</p>
+<p>where $h_{\theta}(x)$ can be shortened to $h(x)$.</p>
+<p>This is Linear regression with one variable, or <strong>Univariate linear regression (单变量线性回归)</strong>.</p>
+<h2 id="Lesson-7"><a href="#Lesson-7" class="headerlink" title="Lesson 7"></a>Lesson 7</h2><p>Cost function (代价函数)</p>
+<p>Hypothesis: $h_{\theta}(x) = \theta_{0}+\theta_{1}x$</p>
+<p>$\theta_{i}$ ‘s: Parameters (参数)</p>
+<p>How to choose $\theta_{i}$?</p>
+<p>Idea: Choose $\theta_0$, $\theta_1$ so that $h_{\theta}(x)$ is close to $y$ for our training examples $(x,y)$.</p>
+<p>Cost function (Square error cost function, 平方误差代价函数): $J (\theta_0, \theta_1)=\frac {1}{2m}\Sigma^m_{i=1}(h_\theta (x^{(i)})-y^{(i)})^2$.</p>
+<p>We want to minimize the cost function.</p>
+<h2 id="Lesson-8"><a href="#Lesson-8" class="headerlink" title="Lesson 8"></a>Lesson 8</h2><p>Hypothesis: $h_{\theta}(x) = \theta_{0}+\theta_{1}x$</p>
+<p>Parameters: $\theta_0, \theta_1$</p>
+<p>Cost Function: $J(\theta_0, \theta_1)=\frac{1}{2m}\Sigma^m_{i=1}(h_\theta(x^{(i)})-y^{(i)})^2$</p>
+<p>Goal: $minimize J(\theta_0, \theta_1)$</p>
+<h2 id="Lesson-9"><a href="#Lesson-9" class="headerlink" title="Lesson 9"></a>Lesson 9</h2><p>contour plots /contour figures (等高线图)</p>
+<p>We use contour plots / contour figures to show $J(\theta_0, \theta_1)$.</p>
+<h2 id="Lesson-10"><a href="#Lesson-10" class="headerlink" title="Lesson 10"></a>Lesson 10</h2><p>Gradient Descent (梯度下降)</p>
+<p>Here we use this algorithm to minimize the cost function.</p>
+<p>Outline:</p>
+<ul>
+<li>Start with some $\theta_0$, $\theta_1$</li>
+<li>Keep changing $\theta_0$, $\theta_1$ to reduce $J(\theta_0, \theta_1)$ until we hopefully end up at a minimum</li>
+</ul>
+<p>Gradient descent algorithm:</p>
+<p>repeat until convergence (收敛) {</p>
+<p>$$<br>\theta_j := \theta_j - \alpha\frac{\partial}{\partial\theta_j}J(\theta_0, \theta_1)\enspace(for\enspace j = 0\enspace and\enspace j = 1)<br>$$</p>
+<p>}</p>
+<p>$\alpha$: learning rate (学习率). It controls that how big a step we take downhill with gradient descent.</p>
+<p>Notice that we need to update $\theta_0$ and $\theta_1$ simultaneously (同时):</p>
+<p>$$<br>temp0 := \theta_0 - \alpha\frac{\partial}{\partial\theta_0}J(\theta_0, \theta_1)<br>$$</p>
+<p>$$<br>temp1 := \theta_1 - \alpha\frac{\partial}{\partial\theta_1}J(\theta_0, \theta_1)<br>$$</p>
+<p>$$<br>\theta_0 := temp0<br>$$</p>
+<p>$$<br>\theta_1 := temp1<br>$$</p>
+<h2 id="Lesson-11"><a href="#Lesson-11" class="headerlink" title="Lesson 11"></a>Lesson 11</h2><ul>
+<li>If $\alpha$ is too small, gradient descent can be slow;</li>
+<li>If $\alpha$ is too large, gradient descent can overshoot the minimum. It may fail to converge (收敛), or even diverge (发散).</li>
+</ul>
+<p>Gradient descent can converge to a local minimum, even with the learning rate $\alpha$ <strong>fixed</strong>, since the derivative term (导数项) becomes smaller as we approach the local minimum.</p>
+<h2 id="Lesson-12"><a href="#Lesson-12" class="headerlink" title="Lesson 12"></a>Lesson 12</h2><p>$$<br>j=0:\frac{\partial}{\partial\theta_0}J(\theta_0, \theta_1)=\frac{1}{m}\Sigma^m_{i=1}(h_\theta(x^{(i)})-y^{(i)})<br>$$</p>
+<p>$$<br>j=1:\frac{\partial}{\partial\theta_1}J(\theta_0, \theta_1)=\frac{1}{m}\Sigma^m_{i=1}(h_\theta(x^{(i)})-y^{(i)}) \cdot x^{(i)}<br>$$</p>
+<p>In linear regression, there is no local optimum except for a global optimum in its cost function.</p>
+<p>“Batch” Gradient Descent (批量梯度下降): which means that each step of gradient descent uses all the training examples.</p>
+<h2 id="Lesson-13"><a href="#Lesson-13" class="headerlink" title="Lesson 13"></a>Lesson 13</h2><p>…</p>
+<h2 id="Lesson-14"><a href="#Lesson-14" class="headerlink" title="Lesson 14"></a>Lesson 14</h2><p>Matrix and Vector</p>
+<h2 id="Lesson-15"><a href="#Lesson-15" class="headerlink" title="Lesson 15"></a>Lesson 15</h2><p>Matrix Addition and Scalar Multiplication (标量乘法)</p>
+<h2 id="Lesson-16"><a href="#Lesson-16" class="headerlink" title="Lesson 16"></a>Lesson 16</h2><p>Matrix-vector multiplication</p>
+<h2 id="Lesson-17"><a href="#Lesson-17" class="headerlink" title="Lesson 17"></a>Lesson 17</h2><p>Matrix-matrix multiplication</p>
+<h2 id="Lesson-18"><a href="#Lesson-18" class="headerlink" title="Lesson 18"></a>Lesson 18</h2><p>Matrix multiplication properties</p>
+<p>Identity Matrix (单位矩阵)</p>
+<h2 id="Lesson-19"><a href="#Lesson-19" class="headerlink" title="Lesson 19"></a>Lesson 19</h2><p>Matrix Inverse (逆) and Matrix Transpose (转置)</p>
+<h2 id="Lesson-20"><a href="#Lesson-20" class="headerlink" title="Lesson 20"></a>Lesson 20</h2><p>…</p>
+<h2 id="Lesson-21"><a href="#Lesson-21" class="headerlink" title="Lesson 21"></a>Lesson 21</h2><p>…</p>
+<h2 id="Lesson-22"><a href="#Lesson-22" class="headerlink" title="Lesson 22"></a>Lesson 22</h2><p>…</p>
+<h2 id="Lesson-23"><a href="#Lesson-23" class="headerlink" title="Lesson 23"></a>Lesson 23</h2><p>…</p>
+<h2 id="Lesson-24"><a href="#Lesson-24" class="headerlink" title="Lesson 24"></a>Lesson 24</h2><p>…</p>
+<h2 id="Lesson-25"><a href="#Lesson-25" class="headerlink" title="Lesson 25"></a>Lesson 25</h2><p>…</p>
+<h2 id="Lesson-26"><a href="#Lesson-26" class="headerlink" title="Lesson 26"></a>Lesson 26</h2><p>…</p>
 ]]></content>
       <categories>
         <category>CS</category>
