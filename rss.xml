@@ -9,7 +9,7 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Sun, 16 Jul 2023 12:09:21 GMT</pubDate>
+    <pubDate>Mon, 17 Jul 2023 06:43:48 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -18,7 +18,8 @@
       <guid>https://blocklune.github.io/posts/a6f57fef.html</guid>
       <pubDate>Fri, 14 Jul 2023 03:59:14 GMT</pubDate>
       
-      <description>&lt;p&gt;Here are my notes for course &lt;a href=&quot;https://study.163.com/course/courseMain.htm?courseId=1210076550&quot;&gt;Machine Learning&lt;/a&gt; taught by Andrew Ng.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Here are my notes for course &lt;a href=&quot;https://study.163.com/course/courseMain.htm?courseId=1210076550&quot;&gt;Machine Learning&lt;/a&gt; taught by Andrew Ng.&lt;/p&gt;
+&lt;p&gt;About exercise: I didn’t do the original version exercise which depends on Octave or Matlab, but a third-party Python version (See &lt;a href=&quot;https://github.com/nsoojin/coursera-ml-py&quot;&gt;nsoojin/coursera-ml-py&lt;/a&gt;).&lt;/p&gt;</description>
       
       
       
