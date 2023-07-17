@@ -9,8 +9,31 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Mon, 17 Jul 2023 06:43:48 GMT</pubDate>
+    <pubDate>Mon, 17 Jul 2023 14:44:01 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Notes for Nand2Tetris: Assembler</title>
+      <link>https://blocklune.github.io/posts/869cdee6.html</link>
+      <guid>https://blocklune.github.io/posts/869cdee6.html</guid>
+      <pubDate>Mon, 17 Jul 2023 12:28:42 GMT</pubDate>
+      
+      <description>&lt;p&gt;This is a note for Nand2Tetris Unit 6.&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://blocklune.github.io/tags/nand2tetris/">Nand2Tetris</category>
+      
+      <category domain="https://blocklune.github.io/tags/assembler/">Assembler</category>
+      
+      <category domain="https://blocklune.github.io/tags/assembly-language/">Assembly Language</category>
+      
+      
+      <comments>https://blocklune.github.io/posts/869cdee6.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Notes for Machine Learning</title>
@@ -106,7 +129,7 @@
       <guid>https://blocklune.github.io/posts/a4422da3.html</guid>
       <pubDate>Tue, 11 Jul 2023 08:49:01 GMT</pubDate>
       
-      <description>&lt;p&gt;This is a note for Nand2Tetris unit 3.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is a note for Nand2Tetris unit 4.&lt;/p&gt;</description>
       
       
       

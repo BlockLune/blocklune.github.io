@@ -22,35 +22,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blocklune.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="I accidentally ran a wrong chmod command in my Linux, and it messed up everything! I hate the permission management in Linux. :|">
+    <meta name="description" content="This is a note for Nand2Tetris Unit 6.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="The chmod command in Linux">
-<meta property="og:url" content="https://blocklune.github.io/posts/a9dc5c1e.html">
+<meta property="og:title" content="Notes for Nand2Tetris: Assembler">
+<meta property="og:url" content="https://blocklune.github.io/posts/869cdee6.html">
 <meta property="og:site_name" content="Fish Pond">
-<meta property="og:description" content="I accidentally ran a wrong chmod command in my Linux, and it messed up everything! I hate the permission management in Linux. :|">
+<meta property="og:description" content="This is a note for Nand2Tetris Unit 6.">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://s1.ax1x.com/2023/03/23/pp0Z5YF.png">
-<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2014/08/file-permissions-rwx.jpg">
-<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2014/08/rwx-standard-unix-permission-bits.png">
-<meta property="og:image" content="https://s1.ax1x.com/2023/03/23/pp0eZtS.png">
-<meta property="og:image" content="https://s1.ax1x.com/2023/03/23/pp0mVD1.png">
-<meta property="article:published_time" content="2023-03-23T14:27:08.000Z">
+<meta property="article:published_time" content="2023-07-17T12:28:42.000Z">
 <meta property="article:modified_time" content="2023-07-17T14:44:01.235Z">
 <meta property="article:author" content="BlockLune">
-<meta property="article:tag" content="Linux">
-<meta property="article:tag" content="chmod">
+<meta property="article:tag" content="Nand2Tetris">
+<meta property="article:tag" content="Assembler">
+<meta property="article:tag" content="Assembly Language">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s1.ax1x.com/2023/03/23/pp0Z5YF.png">
 
 
-<link rel="canonical" href="https://blocklune.github.io/posts/a9dc5c1e.html">
+<link rel="canonical" href="https://blocklune.github.io/posts/869cdee6.html">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blocklune.github.io/posts/a9dc5c1e.html","path":"posts/a9dc5c1e.html","title":"The chmod command in Linux"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blocklune.github.io/posts/869cdee6.html","path":"posts/869cdee6.html","title":"Notes for Nand2Tetris: Assembler"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>The chmod command in Linux | Fish Pond</title>
+<title>Notes for Nand2Tetris: Assembler | Fish Pond</title>
   
 
 
@@ -151,7 +146,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#PERMISSION-MANAGEMENT-IN-LINUX"><span class="nav-number">1.</span> <span class="nav-text">PERMISSION MANAGEMENT IN LINUX</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DEFAULT-PERMISSION"><span class="nav-number">2.</span> <span class="nav-text">DEFAULT PERMISSION</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#THE-CHMOD-COMMAND"><span class="nav-number">3.</span> <span class="nav-text">THE CHMOD COMMAND</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CHANGE-PERMISSIONS-TO-FILE-OR-DIR-INDIVIDUALLY"><span class="nav-number">4.</span> <span class="nav-text">CHANGE PERMISSIONS TO FILE OR DIR INDIVIDUALLY</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#THANKS"><span class="nav-number">5.</span> <span class="nav-text">THANKS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#REFERENCE"><span class="nav-number">6.</span> <span class="nav-text">REFERENCE</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Unit-6-1"><span class="nav-number">1.</span> <span class="nav-text">Unit 6.1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Basic-Assembler-Logic"><span class="nav-number">1.1.</span> <span class="nav-text">Basic Assembler Logic</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Symbols"><span class="nav-number">1.2.</span> <span class="nav-text">Symbols</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Allocation-of-variables"><span class="nav-number">1.2.1.</span> <span class="nav-text">Allocation of variables</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Labels"><span class="nav-number">1.2.2.</span> <span class="nav-text">Labels</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Forward-references"><span class="nav-number">1.2.3.</span> <span class="nav-text">Forward references</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unit-6-2"><span class="nav-number">2.</span> <span class="nav-text">Unit 6.2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unit-6-3"><span class="nav-number">3.</span> <span class="nav-text">Unit 6.3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Translating-A-instruction"><span class="nav-number">3.1.</span> <span class="nav-text">Translating A-instruction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Translating-C-instruction"><span class="nav-number">3.2.</span> <span class="nav-text">Translating C-instruction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-overall-assembly-logic"><span class="nav-number">3.3.</span> <span class="nav-text">The overall assembly logic</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unit-6-4"><span class="nav-number">4.</span> <span class="nav-text">Unit 6.4</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Handling-symbols"><span class="nav-number">4.1.</span> <span class="nav-text">Handling symbols</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Symbol-table"><span class="nav-number">4.2.</span> <span class="nav-text">Symbol table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-assembly-process"><span class="nav-number">4.3.</span> <span class="nav-text">The assembly process</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -233,7 +228,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://blocklune.github.io/posts/a9dc5c1e.html">
+    <link itemprop="mainEntityOfPage" href="https://blocklune.github.io/posts/869cdee6.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/waifu.png">
@@ -246,12 +241,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="The chmod command in Linux | Fish Pond">
+      <meta itemprop="name" content="Notes for Nand2Tetris: Assembler | Fish Pond">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          The chmod command in Linux
+          Notes for Nand2Tetris: Assembler
         </h1>
 
         <div class="post-meta-container">
@@ -262,20 +257,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2023-03-23 22:27:08" itemprop="dateCreated datePublished" datetime="2023-03-23T22:27:08+08:00">2023-03-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/cs/" itemprop="url" rel="index"><span itemprop="name">CS</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/cs/tools/" itemprop="url" rel="index"><span itemprop="name">Tools</span></a>
-        </span>
+      <time title="Created: 2023-07-17 20:28:42" itemprop="dateCreated datePublished" datetime="2023-07-17T20:28:42+08:00">2023-07-17</time>
     </span>
 
   
@@ -287,46 +269,114 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>I accidentally ran a wrong <code>chmod</code> command in my Linux, and it messed up everything! I hate the permission management in Linux. :|</p>
+    <div class="post-body" itemprop="articleBody"><p>This is a note for Nand2Tetris Unit 6.</p>
 <span id="more"></span>
 
-<h2 id="PERMISSION-MANAGEMENT-IN-LINUX"><a href="#PERMISSION-MANAGEMENT-IN-LINUX" class="headerlink" title="PERMISSION MANAGEMENT IN LINUX"></a>PERMISSION MANAGEMENT IN LINUX</h2><p>When you run <code>ls -l</code> in your terminal, you can always see strings like <code>-rw-r–r–</code> and <code>drwxr-xr-x</code> etc. To understand them, we can always split a such string into four part. The first one is a single character, <code>-</code> if it’s a file and <code>d</code> if it’s a directory. The rest 9 characters can be equally divided into three parts, representing the permission of the owner, the members of the group and other users relatively. Every part contains three characters, showing the permission of <strong>r</strong>(read), <strong>w</strong>(write) and <strong>x</strong>(execute).</p>
-<p><img data-src="https://s1.ax1x.com/2023/03/23/pp0Z5YF.png" alt="When you run `ls -l`"><br><img data-src="https://www.runoob.com/wp-content/uploads/2014/08/file-permissions-rwx.jpg" alt="From www.runoob.com"></p>
-<p>Besides the bit pattern, you can also use octal notation to express these permissions, which uses 4 for <strong>r</strong>, 2 for <strong>w</strong> and 1 for <strong>x</strong>. The sum of these octal numbers then can replace the <code>rwx</code> pattern. For example, using 6 for <strong>rw</strong>.</p>
-<p>Why is 4, 2 and 1? Actually, you can view every 3-character unit as 3 binary bits. So, 100(r–) means 4 in decimal, 010(-w-) means 2, and 001(–x) means 1. You can then understand what dose the sum means.</p>
-<p><img data-src="https://www.runoob.com/wp-content/uploads/2014/08/rwx-standard-unix-permission-bits.png" alt="From www.runoob.com"></p>
-<p>Now, you can read this:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-rw------- <span class="comment"># (600) Owner:RW</span></span><br><span class="line">-rw-r--r-- <span class="comment"># (644) Owner:RW Group:R Other:R</span></span><br><span class="line">-rw-rw-rw- <span class="comment"># (666) Owner:RW Group:RW Other:RW</span></span><br><span class="line">-rwx------ <span class="comment"># (700) Owner:RWX</span></span><br><span class="line">-rwx--x--x <span class="comment"># (711) Owner:RWX Group:X Other:X</span></span><br><span class="line">-rwxr-xr-x <span class="comment"># (755) Owner:RWX Group:RX Other:RX</span></span><br><span class="line">-rwxrwxrwx <span class="comment"># (777) Owner:RWX Group:RWX Other:RWX</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="DEFAULT-PERMISSION"><a href="#DEFAULT-PERMISSION" class="headerlink" title="DEFAULT PERMISSION"></a>DEFAULT PERMISSION</h2><p>The default permission for a file is 666, which means <code>-rw-rw-rw-</code>, indicating that the owner, group and other users can read and write the file. The default permission for a directory is 777, which means <code>drwxrwxrwx</code>, indicating that the owner, group and other users can read, write and access the directory.</p>
-<p>However, these default permissions are affected by the user’s <strong>umask</strong> setting. The umask is a value that controls which permissions are removed when creating a new file or directory. For example, if the user’s umask is 022, then the write permission for group and other users will be removed when creating a new file, and the write and execute permission for group and other users will be removed when creating a new directory. Therefore:</p>
-<p>The actual default permission for a file is 666 - 022 = 644, which means <code>-rw-r–r–</code>. The actual default permission for a directory is 777 - 022 = 755, which means <code>drwxr-xr-x</code>.</p>
-<p>You can run the <code>umask</code> command to see what your setting is.</p>
-<p><img data-src="https://s1.ax1x.com/2023/03/23/pp0eZtS.png"></p>
-<h2 id="THE-CHMOD-COMMAND"><a href="#THE-CHMOD-COMMAND" class="headerlink" title="THE CHMOD COMMAND"></a>THE CHMOD COMMAND</h2><p><img data-src="https://s1.ax1x.com/2023/03/23/pp0mVD1.png"></p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> [-cfvR] [--<span class="built_in">help</span>] [--version] &lt;mode&gt; &lt;file&gt;...</span><br></pre></td></tr></tbody></table></figure>
-
-<p>The <code>-R</code> means recursively. You will need it.</p>
-<p>The most important part is <code>&lt;mode&gt;</code> obviously. Its pattern is:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[ugoa...][[+-=][rwxX]...][,...]</span><br></pre></td></tr></tbody></table></figure>
-
-<ol>
-<li>[ugoa…]: <code>u</code> means user, <code>g</code> means group, <code>o</code> means other, and <code>a</code> means all.</li>
-<li>[+-=]: <code>+</code> means adding permission, <code>-</code> means removing, and <code>=</code> means setting the permissions for a specific user type, <strong>regardless of the previous permissions</strong>.</li>
-<li>[rwxX]: You have known <code>rwx</code>, and the <code>X</code> means setting the execute permission only if the file is a directory or already has execute permission for some user.</li>
-</ol>
-<p>For example:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> u+x &lt;file&gt; <span class="comment"># adding execute permission to the owner of the file, and leaving the group and other permissions unchanged</span></span><br><span class="line"><span class="built_in">chmod</span> o-rwx &lt;file&gt; <span class="comment"># removing all permissions from others, and leaving the owner and group permissions unchanged</span></span><br><span class="line"><span class="built_in">chmod</span> a=r &lt;file&gt; <span class="comment"># setting all user types’ permissions to read only, overwriting any previous permissions</span></span><br><span class="line"><span class="built_in">chmod</span> a+X &lt;file&gt; <span class="comment"># adding execute permission to all user types only if file is a directory or already executable by some user</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>You can also use octal pattern represents the <code>&lt;mode&gt;</code>. For example:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 777 &lt;file&gt; <span class="comment"># now everyone can read, write and execute the &lt;file&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="CHANGE-PERMISSIONS-TO-FILE-OR-DIR-INDIVIDUALLY"><a href="#CHANGE-PERMISSIONS-TO-FILE-OR-DIR-INDIVIDUALLY" class="headerlink" title="CHANGE PERMISSIONS TO FILE OR DIR INDIVIDUALLY"></a>CHANGE PERMISSIONS TO FILE OR DIR INDIVIDUALLY</h2><p>To change permissions to file or dir individually, you can use the <code>-exec</code> option of <code>find</code> to execute chmod on each matching file or directory. For example: To find all files in the current directory and its subdirectories and change their permissions to 644, you can use: <code>find . -type f -exec chmod 644 {} ;</code></p>
-<p><code>-type f</code> means file. You can use <code>-type d</code> to find all the dir.</p>
-<h2 id="THANKS"><a href="#THANKS" class="headerlink" title="THANKS"></a>THANKS</h2><p>By the way, this blog was completed with the help of new bing. I asked her many questions and got great answers. She also helped me correct errors and polish my writing. She is just too amazing!</p>
-<h2 id="REFERENCE"><a href="#REFERENCE" class="headerlink" title="REFERENCE"></a>REFERENCE</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-comm-chmod.html">《Linux chmod 命令 | 菜鸟教程》</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/u013197629/article/details/73608613">《Linux 权限详解（chmod、600、644、700、711、755、777、4755、6755、7755）》</a></li>
+<h2 id="Unit-6-1"><a href="#Unit-6-1" class="headerlink" title="Unit 6.1"></a>Unit 6.1</h2><p>Cross compiler: It’s running on one computer and producing code intended for another computer.</p>
+<h3 id="Basic-Assembler-Logic"><a href="#Basic-Assembler-Logic" class="headerlink" title="Basic Assembler Logic"></a>Basic Assembler Logic</h3><p>Repeat:</p>
+<ul>
+<li>Read the next Assembly language command</li>
+<li>Break it into the different fields it is composed of</li>
+<li>Lookup the binary code for each field</li>
+<li>Combine these codes into a single machine language command</li>
+<li>Output this machine language command</li>
+</ul>
+<p>Until end-of-file reached</p>
+<h3 id="Symbols"><a href="#Symbols" class="headerlink" title="Symbols"></a>Symbols</h3><p>Symbols are used for labels and variables.</p>
+<p>Assembler must replace names with addresses.</p>
+<p>Introducing… <strong>Symbol table</strong>.</p>
+<h4 id="Allocation-of-variables"><a href="#Allocation-of-variables" class="headerlink" title="Allocation of variables"></a>Allocation of variables</h4><p>First we look at the table. If the variable has already been in the table, we can just read its address. But if the variable is not there, we must allocate memory to it and record its address.</p>
+<h4 id="Labels"><a href="#Labels" class="headerlink" title="Labels"></a>Labels</h4><p>…</p>
+<h4 id="Forward-references"><a href="#Forward-references" class="headerlink" title="Forward references"></a>Forward references</h4><p>Sometimes we can jump into a label before the label was actually defined.</p>
+<p>Possible solutions:</p>
+<ul>
+<li>Leave blank until label appears, then fix</li>
+<li>In first pass just figure out all addresses</li>
+</ul>
+<h2 id="Unit-6-2"><a href="#Unit-6-2" class="headerlink" title="Unit 6.2"></a>Unit 6.2</h2><p>Assembly program elements:</p>
+<ul>
+<li>White space<ul>
+<li>Empty lines / indentation</li>
+<li>Line comments</li>
+<li>In-line comments</li>
+</ul>
+</li>
+<li>Instructions<ul>
+<li>A-instruction</li>
+<li>C-instruction</li>
+</ul>
+</li>
+<li>Symbols<ul>
+<li>References</li>
+<li>Label declarations</li>
+</ul>
+</li>
+</ul>
+<h2 id="Unit-6-3"><a href="#Unit-6-3" class="headerlink" title="Unit 6.3"></a>Unit 6.3</h2><h3 id="Translating-A-instruction"><a href="#Translating-A-instruction" class="headerlink" title="Translating A-instruction"></a>Translating A-instruction</h3><p>Translation to binary:</p>
+<ul>
+<li>If $value$ is a decimal constant, generate the equivalent 15-bit binary constant</li>
+<li>If $value$ is a symbol, later</li>
+</ul>
+<h3 id="Translating-C-instruction"><a href="#Translating-C-instruction" class="headerlink" title="Translating C-instruction"></a>Translating C-instruction</h3><p>…</p>
+<h3 id="The-overall-assembly-logic"><a href="#The-overall-assembly-logic" class="headerlink" title="The overall assembly logic"></a>The overall assembly logic</h3><p>For each instruction</p>
+<ul>
+<li>Parse the instruction: break it into its underlying fields</li>
+<li>A-instruction: translate the decimal value into a binary value</li>
+<li>C-instruction: for each field in the instruction, generate the corresponding binary code; assemble the translated binary codes into a complete 16-bit machine instruction</li>
+<li>Write the 16-bit instruction to the output file</li>
+</ul>
+<h2 id="Unit-6-4"><a href="#Unit-6-4" class="headerlink" title="Unit 6.4"></a>Unit 6.4</h2><h3 id="Handling-symbols"><a href="#Handling-symbols" class="headerlink" title="Handling symbols"></a>Handling symbols</h3><p>Symbols:</p>
+<ul>
+<li><strong>variable symbols</strong>: represent memory locations where the programmer wants to maintain values</li>
+<li><strong>label symbols</strong>: represent destinations of goto instructions</li>
+<li><strong>pre-defined symbols</strong>: represent special memory locations</li>
+</ul>
+<p>The Hack language specification describes 23 pre-defined symbols: …</p>
+<p>Translating @$preDefinedSymbol$:</p>
+<p>Replace $preDefinedSymbol$ with its value</p>
+<p>Translating @$label$:</p>
+<p>…</p>
+<p>Variable symbols:</p>
+<ul>
+<li>Any symbol XXX appearing in an assembly program which is not pre-defined and is not defined elsewhere using the (XXX) directive is treated as a $variable$</li>
+<li>Each variable is assigned a unique memory address, starting at 16 (specified by the Hack language)</li>
+</ul>
+<p>Translating @$variableSymbol$:</p>
+<ul>
+<li>If you see it for the first time, assign a unique memory address</li>
+<li>Replace $variableSymbol$ with its value</li>
+</ul>
+<h3 id="Symbol-table"><a href="#Symbol-table" class="headerlink" title="Symbol table"></a>Symbol table</h3><ul>
+<li>Initialization: Add the pre-defined symbols</li>
+<li>First pass: Add the label symbols</li>
+<li>Second pass: Add var. symbols</li>
+</ul>
+<p>To resolve a symbol, look up its value in the symbol table.</p>
+<h3 id="The-assembly-process"><a href="#The-assembly-process" class="headerlink" title="The assembly process"></a>The assembly process</h3><ul>
+<li>Initialization<ul>
+<li>Construct an empty symbol table</li>
+<li>Add the pre-defined symbols to the symbol table</li>
+</ul>
+</li>
+<li>First pass<br>Scan the program;<br>For each “instruction” of the form (XXX):<ul>
+<li>Add the pair (XXX, $address$) to the symbol table, where $address$ is the number of the instruction following (XXX)</li>
+</ul>
+</li>
+<li>Second pass<br>Set $n$ to 16<br>Scan the entire program again; for each instruction:<ul>
+<li>If the instruction is @$symbol$, look up $symbol$ in the symbol table;<ul>
+<li>If ($symbol$, $value$) is found, use $value$ to complete the instruction’s translation;</li>
+<li>If not found:<ul>
+<li>Add ($symbol$, $n$) to the symbol table</li>
+<li>Use $n$ to complete the instruction’s translation</li>
+<li>$n$++</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>If the instruction is a C-instruction, complete the instruction’s translation</li>
+<li>Write the translated instruction to the output file</li>
+</ul>
+</li>
 </ul>
 
     </div>
@@ -354,22 +404,20 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/linux/" rel="tag"># Linux</a>
-              <a href="/tags/chmod/" rel="tag"># chmod</a>
+              <a href="/tags/nand2tetris/" rel="tag"># Nand2Tetris</a>
+              <a href="/tags/assembler/" rel="tag"># Assembler</a>
+              <a href="/tags/assembly-language/" rel="tag"># Assembly Language</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/posts/a4746c9.html" rel="prev" title="Useful packages in Java">
-                  <i class="fa fa-chevron-left"></i> Useful packages in Java
+                <a href="/posts/a6f57fef.html" rel="prev" title="Notes for Machine Learning">
+                  <i class="fa fa-chevron-left"></i> Notes for Machine Learning
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/posts/3358bcc1.html" rel="next" title="The const and constexpr in C++ (REMAKE)">
-                  The const and constexpr in C++ (REMAKE) <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -445,7 +493,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"BlockLune","repo":"blocklune.github.io","client_id":"f0d9ff2c460a605d4f3f","client_secret":"9808616eda1afe0741c036b5d5670a490b68f6ef","admin_user":"BlockLune","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"8f944f6af22852dbefc8ba2870b3188b"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"BlockLune","repo":"blocklune.github.io","client_id":"f0d9ff2c460a605d4f3f","client_secret":"9808616eda1afe0741c036b5d5670a490b68f6ef","admin_user":"BlockLune","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"f0246ed5d6d62b23679f060436db1bed"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
