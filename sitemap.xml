@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blocklune.github.io/tags/index.html</loc>
-    
-    <lastmod>2023-07-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blocklune.github.io/posts/1d122915.html</loc>
     
     <lastmod>2023-07-17</lastmod>
@@ -48,33 +39,6 @@
   
   <url>
     <loc>https://blocklune.github.io/posts/b9a9b40d.html</loc>
-    
-    <lastmod>2023-07-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blocklune.github.io/posts/a6f57fef.html</loc>
-    
-    <lastmod>2023-07-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blocklune.github.io/posts/f17b3e8b.html</loc>
-    
-    <lastmod>2023-07-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blocklune.github.io/posts/94efd546.html</loc>
     
     <lastmod>2023-07-17</lastmod>
     
@@ -570,6 +534,42 @@
   
   <url>
     <loc>https://blocklune.github.io/categories/index.html</loc>
+    
+    <lastmod>2023-07-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blocklune.github.io/tags/index.html</loc>
+    
+    <lastmod>2023-07-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blocklune.github.io/posts/a6f57fef.html</loc>
+    
+    <lastmod>2023-07-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blocklune.github.io/posts/f17b3e8b.html</loc>
+    
+    <lastmod>2023-07-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blocklune.github.io/posts/94efd546.html</loc>
     
     <lastmod>2023-07-17</lastmod>
     

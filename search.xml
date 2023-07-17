@@ -2717,6 +2717,11 @@
 </li>
 </ul>
 ]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Computing System</category>
+        <category>Nand2Tetris</category>
+      </categories>
       <tags>
         <tag>Nand2Tetris</tag>
         <tag>Assembler</tag>

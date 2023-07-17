@@ -9,7 +9,7 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Mon, 17 Jul 2023 14:44:01 GMT</pubDate>
+    <pubDate>Mon, 17 Jul 2023 14:47:54 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -22,6 +22,12 @@
       
       
       
+      
+      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/computing-system/">Computing System</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
       
       
       <category domain="https://blocklune.github.io/tags/nand2tetris/">Nand2Tetris</category>
