@@ -2646,7 +2646,7 @@
       </tags>
   </entry>
   <entry>
-    <title>RLCraft 新手教程一：过渡到你的正常生存</title>
+    <title>RLCraft 新手教程 - 一：过渡到你的正常生存</title>
     <url>/posts/a1ada34d.html</url>
     <content><![CDATA[<p>本教程是笔者自己游玩过程中写的，出发点是笔者自己想玩但又不想花费时间看很多实况去了解一些细节，又找不到比较详细的文字版中文教程，以致于无从下手，只能慢慢啃各种模组的百科和 RLCraft Wiki，便以教程形式写下自己的游玩过程，希望对后来者有所帮助。笔者不是什么资深玩家，故难免有疏漏，请大家多多包涵。</p>
 <span id="more"></span>
@@ -2659,6 +2659,73 @@
 <p>恭喜你进入石器时代！现在，你可以开始下矿了！但要时刻注意的一点是照明 —— 恐怖生物会在黑暗中生成… 别自己怎么死的都不知道。你会发现木棍加煤炭不再能合成原版火把，它们现在只能合成熄灭的火把。要点亮它们，你需要的是一颗打火石 —— 将熄灭的火把和打火石放在合成栏里，你就可以获得点燃的火把。但这火把仍然会熄灭 —— 比如一场雨过后，比如燃烧很久之后…</p>
 <p>虽然还有很多路要走，但你现在基本上可以短暂地享受一回类原版的 MC 了。</p>
 <p>To be continue…</p>
+]]></content>
+      <categories>
+        <category>Game</category>
+        <category>Minecraft</category>
+      </categories>
+      <tags>
+        <tag>Game</tag>
+        <tag>Minecraft</tag>
+        <tag>RLCraft</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RLCraft 新手教程 - 零：安装和资源导航</title>
+    <url>/posts/4f52bf7e.html</url>
+    <content><![CDATA[<p>本系列教程是我自己游玩过程中写的。出发点是我没有在网上找到比较好的中文 RLCraft 文字教程，所以在此记录自己的游玩发现。也算留下一些记录，供未来又开坑的自己参考。这是第零篇：安装 RLCraft 整合包，以及资源导航。</p>
+<span id="more"></span>
+
+<h2 id="安装-RLCraft"><a href="#安装-RLCraft" class="headerlink" title="安装 RLCraft"></a>安装 RLCraft</h2><p>目前，RLCraft 借助 CurseForge 进行分发。有多种方式安装这个整合包：</p>
+<ul>
+<li>(官方推荐) <a href="#%E5%80%9F%E5%8A%A9-curseforge-app-%E8%BF%9B%E8%A1%8C%E5%AE%89%E8%A3%85">借助 CurseForge APP 进行安装</a></li>
+<li>借助第三方启动器进行安装<ul>
+<li> (我自己更倾向的) <a href="#%E5%80%9F%E5%8A%A9-pcl-%E8%BF%9B%E8%A1%8C%E5%AE%89%E8%A3%85">借助 PCL2 进行安装</a></li>
+<li>借助 HMCL 进行安装</li>
+<li>…</li>
+</ul>
+</li>
+</ul>
+<p><img data-src="https://s1.ax1x.com/2023/07/19/pC7KwFS.png" alt="RLCraft on CurseForge"></p>
+<h3 id="借助-CurseForge-APP-进行安装"><a href="#借助-CurseForge-APP-进行安装" class="headerlink" title="借助 CurseForge APP 进行安装"></a>借助 CurseForge APP 进行安装</h3><p>进入 <a href="https://www.curseforge.com/download/app">https://www.curseforge.com/download/app</a>，点击 <strong>Download on Overwolf</strong>，安装并启动 CurseForge APP。</p>
+<p><img data-src="https://s1.ax1x.com/2023/07/19/pC7Kao8.png" alt="下载 CurseForge APP"></p>
+<p>打开后，选择 Minecraft，在顶部搜索栏中搜索 <code>RLCraft</code>，点击右侧的<code>安装</code>并等待（此处图片我已安装完成，故显示为<code>播放</code>）。</p>
+<p><img data-src="https://s1.ax1x.com/2023/07/19/pC7KUdf.png" alt="在 CurseForge APP 内安装 RLCraft"></p>
+<p>安装完成后，点击<code>播放</code>，即可启动游戏。</p>
+<h3 id="借助-PCL-进行安装"><a href="#借助-PCL-进行安装" class="headerlink" title="借助 PCL 进行安装"></a>借助 PCL 进行安装</h3><p>先新建一个目录用于存放游戏文件，我的是 <code>D:\Games\RLCraft\</code>。</p>
+<p>进入界面左下角的<code>版本选择</code>，点击<code>添加已有文件夹</code>，选择上边你刚刚新建的目录。</p>
+<p>点击右侧的<code>下载游戏</code>，点击<code>整合包</code>，搜索 <code>RLCraft</code>，点击 <code>RLCraft</code>，选择 <code>1.12.2</code>，选择你想要的版本，输入一个名字，开始下载。</p>
+<p>回到主界面，点击<code>启动游戏</code>即可。</p>
+<h2 id="安装光影"><a href="#安装光影" class="headerlink" title="安装光影"></a>安装光影</h2><p>当前版本（RLCraft v2.9.3，2023 年 6 月 28 日更新）需要最新的 Optifine 或 G5 版本。未来版本的要求请以下载界面的要求为准。</p>
+<ul>
+<li>Optifine G5 下载地址: <em><a href="https://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_G5.jar">https://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_G5.jar</a></em></li>
+</ul>
+<p><img data-src="https://s1.ax1x.com/2023/07/19/pC7KNeP.png" alt="RLCraft OptiFine 需求"></p>
+<p>下载完成后，你会得到名为 <code>OptiFine_1.12.2_HD_U_G5.jar</code> 的 jar 文件。<strong>直接将该文件放入游戏根目录下的 <code>mods</code> 文件夹内</strong>，即完成了 Optifine 的安装。</p>
+<p>附：一个我挺喜欢的光影 Complementary Reimagined (<em><a href="https://www.curseforge.com/minecraft/customization/complementary-reimagined">CurseForge</a></em>)</p>
+<h2 id="可选：增减模组"><a href="#可选：增减模组" class="headerlink" title="可选：增减模组"></a>可选：增减模组</h2><p>由于我比较菜，所以我在游玩中通过增减一些模组来简化游戏难度。</p>
+<h3 id="增加的模组"><a href="#增加的模组" class="headerlink" title="增加的模组"></a>增加的模组</h3><ul>
+<li><em><a href="https://www.mcmod.cn/class/3425.html">Chunk Pre-generator</a></em>: 区块预生成器 </li>
+<li><em><a href="https://www.mcmod.cn/class/1350.html">GraveStone</a></em>: 墓碑（对我这种小白真的降低了很多难度，没有了死亡掉落物消失的烦恼，但代价是掉落物更难拾取了，因为要把墓碑挖掉）</li>
+<li><em><a href="https://www.mcmod.cn/class/1188.html">I18nUpdateMod</a></em>: 自动汉化更新 </li>
+<li><em><a href="https://www.mcmod.cn/class/3395.html">Inventory HUD+</a></em>: 物品栏 HUD+</li>
+<li><em><a href="https://www.mcmod.cn/class/3482.html">Jade</a></em>: 玉模组，用来显示你看向的方块的方块信息（需要 <a href="https://www.mcmod.cn/class/668.html">Hwyla</a> 作为前置）</li>
+<li><em><a href="https://www.mcmod.cn/class/840.html">[JECh] Just Enough Characters</a></em>: 通用拼音搜索，让 JEI 能直接拼音搜索 </li>
+<li><em><a href="https://www.mcmod.cn/class/2077.html">JEI Integration</a></em>: JEI 扩展 </li>
+<li><em><a href="https://www.mcmod.cn/class/855.html">[JER] Just Enough Resources</a></em>: 增强 JEI，使之能查看怪物物品掉落、查看宝箱物品几率、查看矿物生成概率、查看作物掉落等 </li>
+<li><em><a href="https://www.mcmod.cn/class/2754.html">Lan Server Properties</a></em>: 自定义局域网联机 </li>
+<li><em><a href="https://www.mcmod.cn/class/1701.html">[XMM]Xaero’s Minimap</a></em>: Xaero 的小地图 </li>
+<li><em><a href="https://www.mcmod.cn/class/1483.html">[XWM]Xaero’s World Map</a></em>: Xaero 的世界地图</li>
+</ul>
+<h3 id="删减-关闭的模组"><a href="#删减-关闭的模组" class="headerlink" title="删减/关闭的模组"></a>删减 / 关闭的模组</h3><ul>
+<li>Chunk Animator: 我不太喜欢区块加载动画 </li>
+<li><em><a href="https://www.mcmod.cn/class/1135.html">Fancy Block Particles</a></em>: 梦幻方块效果</li>
+</ul>
+<h2 id="可选：修改伽马值"><a href="#可选：修改伽马值" class="headerlink" title="可选：修改伽马值"></a>可选：修改伽马值</h2><p><strong>注意：这个操作产生的效果在光影启用的情况下是无效的。</strong></p>
+<p>通过修改 MC 根目录下的 <code>options.txt</code> 内的 <code>gamma</code> 项，可以获得所谓的” 永久夜视” 效果，也就是晚上的时候不会那么黑，改为 <code>10.0</code> 就行了。具体操作可以看下边 <a href="https://space.bilibili.com/19428259">@黑山大叔</a> 的视频:</p>
+<ul>
+<li><em><a href="https://www.bilibili.com/video/BV1b4411f79o">超实用系列 - 修改 gamma 黑夜变亮 - Minecraft 我的世界</a></em></li>
+</ul>
 ]]></content>
       <categories>
         <category>Game</category>

@@ -22,30 +22,35 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blocklune.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="This is a note for Lecture 8, CS106L, Spring 2023.">
+    <meta name="description" content="本系列教程是我自己游玩过程中写的。出发点是我没有在网上找到比较好的中文 RLCraft 文字教程，所以在此记录自己的游玩发现。也算留下一些记录，供未来又开坑的自己参考。这是第零篇：安装 RLCraft 整合包，以及资源导航。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="static_cast and const_cast in C++">
-<meta property="og:url" content="https://blocklune.github.io/posts/f5746381.html">
+<meta property="og:title" content="RLCraft 新手教程 - 零：安装和资源导航">
+<meta property="og:url" content="https://blocklune.github.io/posts/4f52bf7e.html">
 <meta property="og:site_name" content="Fish Pond">
-<meta property="og:description" content="This is a note for Lecture 8, CS106L, Spring 2023.">
+<meta property="og:description" content="本系列教程是我自己游玩过程中写的。出发点是我没有在网上找到比较好的中文 RLCraft 文字教程，所以在此记录自己的游玩发现。也算留下一些记录，供未来又开坑的自己参考。这是第零篇：安装 RLCraft 整合包，以及资源导航。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-05-30T07:44:00.000Z">
+<meta property="og:image" content="https://s1.ax1x.com/2023/07/19/pC7KwFS.png">
+<meta property="og:image" content="https://s1.ax1x.com/2023/07/19/pC7Kao8.png">
+<meta property="og:image" content="https://s1.ax1x.com/2023/07/19/pC7KUdf.png">
+<meta property="og:image" content="https://s1.ax1x.com/2023/07/19/pC7KNeP.png">
+<meta property="article:published_time" content="2023-07-19T07:18:38.000Z">
 <meta property="article:modified_time" content="2023-07-19T09:34:03.813Z">
 <meta property="article:author" content="BlockLune">
-<meta property="article:tag" content="C&#x2F;C++">
-<meta property="article:tag" content="const">
-<meta property="article:tag" content="CS106L">
+<meta property="article:tag" content="Game">
+<meta property="article:tag" content="Minecraft">
+<meta property="article:tag" content="RLCraft">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2023/07/19/pC7KwFS.png">
 
 
-<link rel="canonical" href="https://blocklune.github.io/posts/f5746381.html">
+<link rel="canonical" href="https://blocklune.github.io/posts/4f52bf7e.html">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blocklune.github.io/posts/f5746381.html","path":"posts/f5746381.html","title":"static_cast and const_cast in C++"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blocklune.github.io/posts/4f52bf7e.html","path":"posts/4f52bf7e.html","title":"RLCraft 新手教程 - 零：安装和资源导航"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>static_cast and const_cast in C++ | Fish Pond</title>
+<title>RLCraft 新手教程 - 零：安装和资源导航 | Fish Pond</title>
   
 
 
@@ -133,7 +138,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -146,6 +151,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-RLCraft"><span class="nav-number">1.</span> <span class="nav-text">安装 RLCraft</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%80%9F%E5%8A%A9-CurseForge-APP-%E8%BF%9B%E8%A1%8C%E5%AE%89%E8%A3%85"><span class="nav-number">1.1.</span> <span class="nav-text">借助 CurseForge APP 进行安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%80%9F%E5%8A%A9-PCL-%E8%BF%9B%E8%A1%8C%E5%AE%89%E8%A3%85"><span class="nav-number">1.2.</span> <span class="nav-text">借助 PCL 进行安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%85%89%E5%BD%B1"><span class="nav-number">2.</span> <span class="nav-text">安装光影</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E9%80%89%EF%BC%9A%E5%A2%9E%E5%87%8F%E6%A8%A1%E7%BB%84"><span class="nav-number">3.</span> <span class="nav-text">可选：增减模组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A2%9E%E5%8A%A0%E7%9A%84%E6%A8%A1%E7%BB%84"><span class="nav-number">3.1.</span> <span class="nav-text">增加的模组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E5%87%8F-%E5%85%B3%E9%97%AD%E7%9A%84%E6%A8%A1%E7%BB%84"><span class="nav-number">3.2.</span> <span class="nav-text">删减 &#x2F; 关闭的模组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E9%80%89%EF%BC%9A%E4%BF%AE%E6%94%B9%E4%BC%BD%E9%A9%AC%E5%80%BC"><span class="nav-number">4.</span> <span class="nav-text">可选：修改伽马值</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -227,7 +233,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://blocklune.github.io/posts/f5746381.html">
+    <link itemprop="mainEntityOfPage" href="https://blocklune.github.io/posts/4f52bf7e.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/waifu.png">
@@ -240,12 +246,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="static_cast and const_cast in C++ | Fish Pond">
+      <meta itemprop="name" content="RLCraft 新手教程 - 零：安装和资源导航 | Fish Pond">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          static_cast and const_cast in C++
+          RLCraft 新手教程 - 零：安装和资源导航
         </h1>
 
         <div class="post-meta-container">
@@ -256,7 +262,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2023-05-30 15:44:00" itemprop="dateCreated datePublished" datetime="2023-05-30T15:44:00+08:00">2023-05-30</time>
+      <time title="Created: 2023-07-19 15:18:38" itemprop="dateCreated datePublished" datetime="2023-07-19T15:18:38+08:00">2023-07-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -264,15 +270,11 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/cs/" itemprop="url" rel="index"><span itemprop="name">CS</span></a>
+          <a href="/categories/game/" itemprop="url" rel="index"><span itemprop="name">Game</span></a>
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/cs/languages/" itemprop="url" rel="index"><span itemprop="name">Languages</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/cs/languages/c-cpp/" itemprop="url" rel="index"><span itemprop="name">C & Cpp</span></a>
+          <a href="/categories/game/minecraft/" itemprop="url" rel="index"><span itemprop="name">Minecraft</span></a>
         </span>
     </span>
 
@@ -285,28 +287,59 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>This is a note for Lecture 8, <a target="_blank" rel="noopener" href="https://web.stanford.edu/class/cs106l/index.html">CS106L</a>, Spring 2023.</p>
+    <div class="post-body" itemprop="articleBody"><p>本系列教程是我自己游玩过程中写的。出发点是我没有在网上找到比较好的中文 RLCraft 文字教程，所以在此记录自己的游玩发现。也算留下一些记录，供未来又开坑的自己参考。这是第零篇：安装 RLCraft 整合包，以及资源导航。</p>
 <span id="more"></span>
 
-<p>In a class like this:</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">StrVector</span> {</span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="keyword">using</span> iterator = std::string*;</span><br><span class="line">  <span class="type">const</span> <span class="type">size_t</span> kInitialSize = <span class="number">2</span>;</span><br><span class="line">  <span class="comment">/*...*/</span></span><br><span class="line">  <span class="function"><span class="type">size_t</span> <span class="title">size</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line">  <span class="function"><span class="type">bool</span> <span class="title">empty</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">push_back</span><span class="params">(<span class="type">const</span> std::string&amp; elem)</span></span>;</span><br><span class="line">  <span class="function">std::string&amp; <span class="title">at</span><span class="params">(<span class="type">size_t</span> indx)</span></span>;</span><br><span class="line">  <span class="function"><span class="type">const</span> std::string&amp; <span class="title">at</span><span class="params">(<span class="type">size_t</span> indx)</span> <span class="type">const</span></span>;</span><br><span class="line"></span><br><span class="line">  <span class="function">iterator <span class="title">begin</span><span class="params">()</span></span>;</span><br><span class="line">  <span class="function">iterator <span class="title">end</span><span class="params">()</span></span>;</span><br><span class="line">  <span class="function">iterator <span class="title">cbegin</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line">  <span class="function">iterator <span class="title">cend</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line">  <span class="comment">/*...*/</span></span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
-
-<p>We implement the non-const <code>at</code> method like this:</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">std::string&amp; <span class="title">StrVector::at</span><span class="params">(<span class="type">size_t</span> index)</span> </span>{</span><br><span class="line">  <span class="keyword">if</span> (index &gt;= <span class="built_in">size</span>()) {</span><br><span class="line">    <span class="keyword">throw</span> std::<span class="built_in">out_of_range</span>(<span class="string">"Index out of range in at."</span>);</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">return</span> *(<span class="built_in">begin</span>() + index);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>It is bad to reimplement the same logic when writing the const version of the <code>at</code> method.</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="function"><span class="type">const</span> std::string&amp; <span class="title">StrVector::at</span><span class="params">(<span class="type">size_t</span> index)</span> <span class="type">const</span> </span>{</span><br><span class="line">  <span class="keyword">if</span> (index &gt;= <span class="built_in">size</span>()) {</span><br><span class="line">    <span class="keyword">throw</span> std::<span class="built_in">out_of_range</span>(<span class="string">"Index out of range in at."</span>);</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">return</span> *(<span class="built_in">cbegin</span>() + index);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Instead, we should do this:</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">const</span> std::string&amp; <span class="title">StrVector::at</span><span class="params">(<span class="type">size_t</span> index)</span> <span class="type">const</span> </span>{</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">static_cast</span>&lt;<span class="type">const</span> std::string&amp;&gt;(</span><br><span class="line">      <span class="built_in">const_cast</span>&lt;StrVector*&gt;(<span class="keyword">this</span>)-&gt;<span class="built_in">at</span>(index));</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>So, what’s <code>static_cast</code> and <code>const_cast</code>?</p>
-<p><strong>static_cast&lt;new-type&gt;(expression)</strong> is used to convert from one type to another. For example: <code>int my_int = static_cast&lt;int&gt;(3.1)</code>. Note that it CANNOT BE USED WHEN conversion would cast away constness.</p>
-<p>Learn more <a target="_blank" rel="noopener" href="https://en.cppreference.com/w/cpp/language/static_cast">here</a></p>
-<p><strong>const_cast&lt;new-type&gt;(expression)</strong> is used to cast away (remove) constness. It allows you to make non-const pointer or reference to const-object like this:</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> const_int = <span class="number">3</span>;</span><br><span class="line"><span class="type">int</span>&amp; my_int = <span class="built_in">const_cast</span>&lt;<span class="type">int</span>&amp;&gt;(const_int);</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Learn more <a target="_blank" rel="noopener" href="https://en.cppreference.com/w/cpp/language/const_cast">here</a></p>
+<h2 id="安装-RLCraft"><a href="#安装-RLCraft" class="headerlink" title="安装 RLCraft"></a>安装 RLCraft</h2><p>目前，RLCraft 借助 CurseForge 进行分发。有多种方式安装这个整合包：</p>
+<ul>
+<li>(官方推荐) <a href="#%E5%80%9F%E5%8A%A9-curseforge-app-%E8%BF%9B%E8%A1%8C%E5%AE%89%E8%A3%85">借助 CurseForge APP 进行安装</a></li>
+<li>借助第三方启动器进行安装<ul>
+<li> (我自己更倾向的) <a href="#%E5%80%9F%E5%8A%A9-pcl-%E8%BF%9B%E8%A1%8C%E5%AE%89%E8%A3%85">借助 PCL2 进行安装</a></li>
+<li>借助 HMCL 进行安装</li>
+<li>…</li>
+</ul>
+</li>
+</ul>
+<p><img data-src="https://s1.ax1x.com/2023/07/19/pC7KwFS.png" alt="RLCraft on CurseForge"></p>
+<h3 id="借助-CurseForge-APP-进行安装"><a href="#借助-CurseForge-APP-进行安装" class="headerlink" title="借助 CurseForge APP 进行安装"></a>借助 CurseForge APP 进行安装</h3><p>进入 <a target="_blank" rel="noopener" href="https://www.curseforge.com/download/app">https://www.curseforge.com/download/app</a>，点击 <strong>Download on Overwolf</strong>，安装并启动 CurseForge APP。</p>
+<p><img data-src="https://s1.ax1x.com/2023/07/19/pC7Kao8.png" alt="下载 CurseForge APP"></p>
+<p>打开后，选择 Minecraft，在顶部搜索栏中搜索 <code>RLCraft</code>，点击右侧的<code>安装</code>并等待（此处图片我已安装完成，故显示为<code>播放</code>）。</p>
+<p><img data-src="https://s1.ax1x.com/2023/07/19/pC7KUdf.png" alt="在 CurseForge APP 内安装 RLCraft"></p>
+<p>安装完成后，点击<code>播放</code>，即可启动游戏。</p>
+<h3 id="借助-PCL-进行安装"><a href="#借助-PCL-进行安装" class="headerlink" title="借助 PCL 进行安装"></a>借助 PCL 进行安装</h3><p>先新建一个目录用于存放游戏文件，我的是 <code>D:\Games\RLCraft\</code>。</p>
+<p>进入界面左下角的<code>版本选择</code>，点击<code>添加已有文件夹</code>，选择上边你刚刚新建的目录。</p>
+<p>点击右侧的<code>下载游戏</code>，点击<code>整合包</code>，搜索 <code>RLCraft</code>，点击 <code>RLCraft</code>，选择 <code>1.12.2</code>，选择你想要的版本，输入一个名字，开始下载。</p>
+<p>回到主界面，点击<code>启动游戏</code>即可。</p>
+<h2 id="安装光影"><a href="#安装光影" class="headerlink" title="安装光影"></a>安装光影</h2><p>当前版本（RLCraft v2.9.3，2023 年 6 月 28 日更新）需要最新的 Optifine 或 G5 版本。未来版本的要求请以下载界面的要求为准。</p>
+<ul>
+<li>Optifine G5 下载地址: <em><a target="_blank" rel="noopener" href="https://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_G5.jar">https://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_G5.jar</a></em></li>
+</ul>
+<p><img data-src="https://s1.ax1x.com/2023/07/19/pC7KNeP.png" alt="RLCraft OptiFine 需求"></p>
+<p>下载完成后，你会得到名为 <code>OptiFine_1.12.2_HD_U_G5.jar</code> 的 jar 文件。<strong>直接将该文件放入游戏根目录下的 <code>mods</code> 文件夹内</strong>，即完成了 Optifine 的安装。</p>
+<p>附：一个我挺喜欢的光影 Complementary Reimagined (<em><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/customization/complementary-reimagined">CurseForge</a></em>)</p>
+<h2 id="可选：增减模组"><a href="#可选：增减模组" class="headerlink" title="可选：增减模组"></a>可选：增减模组</h2><p>由于我比较菜，所以我在游玩中通过增减一些模组来简化游戏难度。</p>
+<h3 id="增加的模组"><a href="#增加的模组" class="headerlink" title="增加的模组"></a>增加的模组</h3><ul>
+<li><em><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/3425.html">Chunk Pre-generator</a></em>: 区块预生成器 </li>
+<li><em><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/1350.html">GraveStone</a></em>: 墓碑（对我这种小白真的降低了很多难度，没有了死亡掉落物消失的烦恼，但代价是掉落物更难拾取了，因为要把墓碑挖掉）</li>
+<li><em><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/1188.html">I18nUpdateMod</a></em>: 自动汉化更新 </li>
+<li><em><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/3395.html">Inventory HUD+</a></em>: 物品栏 HUD+</li>
+<li><em><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/3482.html">Jade</a></em>: 玉模组，用来显示你看向的方块的方块信息（需要 <a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/668.html">Hwyla</a> 作为前置）</li>
+<li><em><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/840.html">[JECh] Just Enough Characters</a></em>: 通用拼音搜索，让 JEI 能直接拼音搜索 </li>
+<li><em><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/2077.html">JEI Integration</a></em>: JEI 扩展 </li>
+<li><em><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/855.html">[JER] Just Enough Resources</a></em>: 增强 JEI，使之能查看怪物物品掉落、查看宝箱物品几率、查看矿物生成概率、查看作物掉落等 </li>
+<li><em><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/2754.html">Lan Server Properties</a></em>: 自定义局域网联机 </li>
+<li><em><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/1701.html">[XMM]Xaero’s Minimap</a></em>: Xaero 的小地图 </li>
+<li><em><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/1483.html">[XWM]Xaero’s World Map</a></em>: Xaero 的世界地图</li>
+</ul>
+<h3 id="删减-关闭的模组"><a href="#删减-关闭的模组" class="headerlink" title="删减/关闭的模组"></a>删减 / 关闭的模组</h3><ul>
+<li>Chunk Animator: 我不太喜欢区块加载动画 </li>
+<li><em><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/1135.html">Fancy Block Particles</a></em>: 梦幻方块效果</li>
+</ul>
+<h2 id="可选：修改伽马值"><a href="#可选：修改伽马值" class="headerlink" title="可选：修改伽马值"></a>可选：修改伽马值</h2><p><strong>注意：这个操作产生的效果在光影启用的情况下是无效的。</strong></p>
+<p>通过修改 MC 根目录下的 <code>options.txt</code> 内的 <code>gamma</code> 项，可以获得所谓的” 永久夜视” 效果，也就是晚上的时候不会那么黑，改为 <code>10.0</code> 就行了。具体操作可以看下边 <a target="_blank" rel="noopener" href="https://space.bilibili.com/19428259">@黑山大叔</a> 的视频:</p>
+<ul>
+<li><em><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1b4411f79o">超实用系列 - 修改 gamma 黑夜变亮 - Minecraft 我的世界</a></em></li>
+</ul>
 
     </div>
 
@@ -333,23 +366,20 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/c-c/" rel="tag"># C/C++</a>
-              <a href="/tags/const/" rel="tag"># const</a>
-              <a href="/tags/cs106l/" rel="tag"># CS106L</a>
+              <a href="/tags/game/" rel="tag"># Game</a>
+              <a href="/tags/minecraft/" rel="tag"># Minecraft</a>
+              <a href="/tags/rlcraft/" rel="tag"># RLCraft</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/posts/cf2f01b2.html" rel="prev" title="Permutations and Combinations in Python (itertools)">
-                  <i class="fa fa-chevron-left"></i> Permutations and Combinations in Python (itertools)
+                <a href="/posts/d8b14680.html" rel="prev" title="Notes for Nand2Tetris: Virtual Machine I: Stack Arithmetic">
+                  <i class="fa fa-chevron-left"></i> Notes for Nand2Tetris: Virtual Machine I: Stack Arithmetic
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/posts/d5786049.html" rel="next" title="Move Semantics in C++">
-                  Move Semantics in C++ <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -425,7 +455,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"BlockLune","repo":"blocklune.github.io","client_id":"f0d9ff2c460a605d4f3f","client_secret":"9808616eda1afe0741c036b5d5670a490b68f6ef","admin_user":"BlockLune","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"1eec170beca546acab62dfa4b26c108e"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"BlockLune","repo":"blocklune.github.io","client_id":"f0d9ff2c460a605d4f3f","client_secret":"9808616eda1afe0741c036b5d5670a490b68f6ef","admin_user":"BlockLune","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"ba14f6cc114cee16f9cf33ba387db5b3"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>

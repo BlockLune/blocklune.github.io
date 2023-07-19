@@ -9,8 +9,35 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Wed, 19 Jul 2023 05:58:39 GMT</pubDate>
+    <pubDate>Wed, 19 Jul 2023 09:34:03 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>RLCraft 新手教程 - 零：安装和资源导航</title>
+      <link>https://blocklune.github.io/posts/4f52bf7e.html</link>
+      <guid>https://blocklune.github.io/posts/4f52bf7e.html</guid>
+      <pubDate>Wed, 19 Jul 2023 07:18:38 GMT</pubDate>
+      
+      <description>&lt;p&gt;本系列教程是我自己游玩过程中写的。出发点是我没有在网上找到比较好的中文 RLCraft 文字教程，所以在此记录自己的游玩发现。也算留下一些记录，供未来又开坑的自己参考。这是第零篇：安装 RLCraft 整合包，以及资源导航。&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://blocklune.github.io/categories/game/">Game</category>
+      
+      <category domain="https://blocklune.github.io/categories/game/minecraft/">Minecraft</category>
+      
+      
+      <category domain="https://blocklune.github.io/tags/game/">Game</category>
+      
+      <category domain="https://blocklune.github.io/tags/minecraft/">Minecraft</category>
+      
+      <category domain="https://blocklune.github.io/tags/rlcraft/">RLCraft</category>
+      
+      
+      <comments>https://blocklune.github.io/posts/4f52bf7e.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Notes for Nand2Tetris: Virtual Machine I: Stack Arithmetic</title>
@@ -1500,7 +1527,7 @@
     </item>
     
     <item>
-      <title>RLCraft 新手教程一：过渡到你的正常生存</title>
+      <title>RLCraft 新手教程 - 一：过渡到你的正常生存</title>
       <link>https://blocklune.github.io/posts/a1ada34d.html</link>
       <guid>https://blocklune.github.io/posts/a1ada34d.html</guid>
       <pubDate>Fri, 26 Aug 2022 11:40:18 GMT</pubDate>
