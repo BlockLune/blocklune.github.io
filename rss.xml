@@ -9,8 +9,37 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Tue, 18 Jul 2023 06:43:21 GMT</pubDate>
+    <pubDate>Wed, 19 Jul 2023 04:05:05 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Notes for Nand2Tetris: Virtual Machine I: Stack Arithmetic</title>
+      <link>https://blocklune.github.io/posts/d8b14680.html</link>
+      <guid>https://blocklune.github.io/posts/d8b14680.html</guid>
+      <pubDate>Wed, 19 Jul 2023 03:25:49 GMT</pubDate>
+      
+      <description>&lt;p&gt;This is a note for Nand2Tetris unit 7 (Part II, Unit 1).&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/computing-system/">Computing System</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
+      
+      
+      <category domain="https://blocklune.github.io/tags/nand2tetris/">Nand2Tetris</category>
+      
+      <category domain="https://blocklune.github.io/tags/virtual-machine/">Virtual Machine</category>
+      
+      <category domain="https://blocklune.github.io/tags/stack-arithmetic/">Stack Arithmetic</category>
+      
+      
+      <comments>https://blocklune.github.io/posts/d8b14680.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Notes for Nand2Tetris: Assembler</title>
@@ -1071,9 +1100,9 @@
       
       <category domain="https://blocklune.github.io/tags/c-c/">C/C++</category>
       
-      <category domain="https://blocklune.github.io/tags/pointer/">Pointer</category>
-      
       <category domain="https://blocklune.github.io/tags/array/">Array</category>
+      
+      <category domain="https://blocklune.github.io/tags/pointer/">Pointer</category>
       
       
       <comments>https://blocklune.github.io/posts/57fd79a.html#disqus_thread</comments>
@@ -1269,9 +1298,9 @@
       <category domain="https://blocklune.github.io/categories/cs/ai/">AI</category>
       
       
-      <category domain="https://blocklune.github.io/tags/ai/">AI</category>
-      
       <category domain="https://blocklune.github.io/tags/novelai/">NovelAI</category>
+      
+      <category domain="https://blocklune.github.io/tags/ai/">AI</category>
       
       
       <comments>https://blocklune.github.io/posts/f17b3e8b.html#disqus_thread</comments>

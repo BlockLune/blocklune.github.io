@@ -298,6 +298,79 @@
       </tags>
   </entry>
   <entry>
+    <title>挖老婆矿！—— NovelAI 初试</title>
+    <url>/posts/f17b3e8b.html</url>
+    <content><![CDATA[<p>最近一段时间，感觉突然之间，就有很多很多将现实图片二次元化啊，按照每句歌词生成一副画作啊的 AI 绘画应用的图文视频出现。和室友聊天还说是不是最近一段时间 AI 技术突破什么瓶颈突飞猛进了。后来才知道，原来是 NovelAI 泄露了… 这样一来，本地部署方便了起来，于是整了一个玩玩。由于跑 AI 嘛，GPU 比较呼啸，跟挖矿一样，我就戏称我这是在 “挖老婆矿” 了。</p>
+<span id="more"></span>
+
+<p>注：这篇文章更偏向于我记录生成时使用的 tag， 不涉及基础操作。我使用的 NovelAI 下载自<a href="https://www.bilibili.com/video/BV1EV4y1L7dX">这里</a>。</p>
+<h1 id="一个头像（一堆头像）"><a href="#一个头像（一堆头像）" class="headerlink" title="一个头像（一堆头像）"></a>一个头像（一堆头像）</h1><p>我最开始只是用几个 tag 生成。经历了一些粗浅的尝试后，发现生成的质量并不高。但是看到了<a href="https://www.yuque.com/longyuye/lmgcwy/goa36x">一篇文章</a>，照着里边的 tag 写，才算真正开始了探索。</p>
+<p>首先是根据上边那篇文章最后的示例增改了点 tag 形成的 prompt:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">blue pen illustration, light blue background, flowers on face, growth, nature, beautiful face, pink hair,shawl hair, zoom in on eyes, apathy, red eye shadow, petite, best quality, masterpiece</span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后生成出了下面这些相当不错的图案：</p>
+<p><img data-src="https://s1.ax1x.com/2022/10/15/x0HgAK.jpg"></p>
+<p><img data-src="https://s1.ax1x.com/2022/10/15/x0H676.jpg"></p>
+<p>下边分类讲讲 tag:</p>
+<p>提高总体质量的：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">masterpiece, best quality, by famous artist, beautiful face</span><br></pre></td></tr></tbody></table></figure>
+
+<p>使整体的风格偏向更具插画感：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">illustration</span><br></pre></td></tr></tbody></table></figure>
+
+<p>限定背景的：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">xxxx + backgroud  (比如上边的淡蓝色背景就是 light blue background )</span><br></pre></td></tr></tbody></table></figure>
+
+<p>让生成出来的 waifu 更幼的：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">petite</span><br></pre></td></tr></tbody></table></figure>
+
+<p>让脸上、头发上出现花朵装饰的：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">flowers on face</span><br></pre></td></tr></tbody></table></figure>
+
+<p>让眼睛更大的：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">zoom in one eyes</span><br></pre></td></tr></tbody></table></figure>
+
+<p>尝到了甜头后，我就想换头像了。但我不想完全抛弃现在的头像，于是就试图拿它做派生。</p>
+<p>首先描述一下原来的头像，让 AI 知道我大概是想要怎样的一个 “老婆”。<del>（虽然其实我描述的时候更感觉是在捏女儿）</del> 顺便一说，我这个原来的头像其实也是 AI 生成的，叫 <a href="https://waifulabs.com/generate">WaifuLabs</a>，是我把原来生成出来的丢进 PS 去了水印，又自己修缮了一下得到的。</p>
+<p><img data-src="https://s1.ax1x.com/2022/10/15/x0I1Z8.jpg" alt="上边是 WaifuLabs 生成出来时候的样子，下边是我自己 PS 改的"></p>
+<p>抛却那些提高质量的，大概给了 <code>披肩发</code>、<code>深灰色头发</code>、<code>深灰色眼睛</code>、<code>红色眼影</code>、<code>白色衬衫</code>、<code>微笑</code> 这些 tag。同时模仿了上边，给了 <code>面部的花</code> 之类的 tag：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">{{masterpiece,best quality}},shawl hair,dark grey hair, dark grey eyes,red eye shadow,  white shirt,illustration,flower on face,growth, nature,beautiful face, smile, zoom in one eyes</span><br></pre></td></tr></tbody></table></figure>
+
+<p>以上边的内容为 prompt，同时把我改的那张扔给 NovelAI，根据生成结果又慢慢改，添加 tag，最终的 prompt 如下:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">{{masterpiece,best quality,by wlop}},shawl hair,dark grey hair, dark grey eyes,red eye shadow, white shirt,{{{illustration}}},flower on face, growth, nature, beautiful face, small smile, zoom in one eyes, {{{{petite}}}}, dramatic shadows, ink,eye-focus, portrait, red hairclip</span><br></pre></td></tr></tbody></table></figure>
+
+<p>跑了大概 100 张，然后挑了挑，下边展示的是部分高质量的：</p>
+<p><img data-src="https://s1.ax1x.com/2022/10/15/x0IgzR.png"></p>
+<p>又是一波奇奇怪怪的调整：</p>
+<p><img data-src="https://s1.ax1x.com/2022/10/15/x0onkF.png"></p>
+<p>最后挑选出了这张我觉得挺有特色的：</p>
+<p><img data-src="https://s1.ax1x.com/2022/10/15/x0o161.png"></p>
+<p>然后开始根据这张进行派生：</p>
+<p><img data-src="https://s1.ax1x.com/2022/10/15/x0jbEn.png"></p>
+<h1 id="一张壁纸（一堆壁纸）"><a href="#一张壁纸（一堆壁纸）" class="headerlink" title="一张壁纸（一堆壁纸）"></a>一张壁纸（一堆壁纸）</h1><p>这事儿开始的挺搞笑的，当时我正在调上边的头像参数，坐我旁边玩 CSGO 的朋友希望我把某把枪拟人，然后发我了下边的图片：</p>
+<p><img data-src="https://s1.ax1x.com/2022/10/15/x0TGgs.jpg"></p>
+<p>然后我加了点描述词生成了，但生成效果并不好，我就又开始研究我上边的头像了。我完全忘记了我还拿着这张图生成的某张图在做派生呢… 我只是改回了我的 prompt，就意外地得到了下边这张图：</p>
+<p><img data-src="https://s1.ax1x.com/2022/10/15/x0TI8H.png"></p>
+<p>似乎是把枪头画成了那条条纹？我也不知道。反正着实是惊艳到我了，扔到 bigjpg 那边提高了一下分辨率，再扔进 PS 调了一下曲线，嘿嘿，新的手机壁纸有了！</p>
+<p><img data-src="https://s1.ax1x.com/2022/10/15/x07eG4.png" alt="拉的曲线"></p>
+<p><img data-src="https://s1.ax1x.com/2022/10/15/x07Prq.png" alt="新的手机壁纸！"></p>
+<p>然后又拿这张图和基于上边改的 prompt 做了派生…</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">{{masterpiece,best quality}},shawl hair,dark grey hair, dark grey eyes,red eye shadow,red scanf,  light grey shirt,{{illustration}},red flower on face,white flower on hair,growth, nature,beautiful face, {{indifferent}}, zoom in one eyes,1girl, red flower background, gold fence background,focus on eye</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img data-src="https://s1.ax1x.com/2022/10/15/x07XO1.jpg"></p>
+<p><img data-src="https://s1.ax1x.com/2022/10/15/x07vex.jpg"></p>
+<p>相当不错！</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>NovelAI</tag>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Notes for Machine Learning</title>
     <url>/posts/a6f57fef.html</url>
     <content><![CDATA[<p>Here are my notes for course <a href="https://study.163.com/course/courseMain.htm?courseId=1210076550">Machine Learning</a> taught by Andrew Ng.</p>
@@ -495,79 +568,6 @@
         <tag>AI</tag>
         <tag>Machine Learning</tag>
         <tag>Andrew Ng</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>挖老婆矿！—— NovelAI 初试</title>
-    <url>/posts/f17b3e8b.html</url>
-    <content><![CDATA[<p>最近一段时间，感觉突然之间，就有很多很多将现实图片二次元化啊，按照每句歌词生成一副画作啊的 AI 绘画应用的图文视频出现。和室友聊天还说是不是最近一段时间 AI 技术突破什么瓶颈突飞猛进了。后来才知道，原来是 NovelAI 泄露了… 这样一来，本地部署方便了起来，于是整了一个玩玩。由于跑 AI 嘛，GPU 比较呼啸，跟挖矿一样，我就戏称我这是在 “挖老婆矿” 了。</p>
-<span id="more"></span>
-
-<p>注：这篇文章更偏向于我记录生成时使用的 tag， 不涉及基础操作。我使用的 NovelAI 下载自<a href="https://www.bilibili.com/video/BV1EV4y1L7dX">这里</a>。</p>
-<h1 id="一个头像（一堆头像）"><a href="#一个头像（一堆头像）" class="headerlink" title="一个头像（一堆头像）"></a>一个头像（一堆头像）</h1><p>我最开始只是用几个 tag 生成。经历了一些粗浅的尝试后，发现生成的质量并不高。但是看到了<a href="https://www.yuque.com/longyuye/lmgcwy/goa36x">一篇文章</a>，照着里边的 tag 写，才算真正开始了探索。</p>
-<p>首先是根据上边那篇文章最后的示例增改了点 tag 形成的 prompt:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">blue pen illustration, light blue background, flowers on face, growth, nature, beautiful face, pink hair,shawl hair, zoom in on eyes, apathy, red eye shadow, petite, best quality, masterpiece</span><br></pre></td></tr></tbody></table></figure>
-
-<p>然后生成出了下面这些相当不错的图案：</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0HgAK.jpg"></p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0H676.jpg"></p>
-<p>下边分类讲讲 tag:</p>
-<p>提高总体质量的：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">masterpiece, best quality, by famous artist, beautiful face</span><br></pre></td></tr></tbody></table></figure>
-
-<p>使整体的风格偏向更具插画感：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">illustration</span><br></pre></td></tr></tbody></table></figure>
-
-<p>限定背景的：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">xxxx + backgroud  (比如上边的淡蓝色背景就是 light blue background )</span><br></pre></td></tr></tbody></table></figure>
-
-<p>让生成出来的 waifu 更幼的：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">petite</span><br></pre></td></tr></tbody></table></figure>
-
-<p>让脸上、头发上出现花朵装饰的：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">flowers on face</span><br></pre></td></tr></tbody></table></figure>
-
-<p>让眼睛更大的：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">zoom in one eyes</span><br></pre></td></tr></tbody></table></figure>
-
-<p>尝到了甜头后，我就想换头像了。但我不想完全抛弃现在的头像，于是就试图拿它做派生。</p>
-<p>首先描述一下原来的头像，让 AI 知道我大概是想要怎样的一个 “老婆”。<del>（虽然其实我描述的时候更感觉是在捏女儿）</del> 顺便一说，我这个原来的头像其实也是 AI 生成的，叫 <a href="https://waifulabs.com/generate">WaifuLabs</a>，是我把原来生成出来的丢进 PS 去了水印，又自己修缮了一下得到的。</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0I1Z8.jpg" alt="上边是 WaifuLabs 生成出来时候的样子，下边是我自己 PS 改的"></p>
-<p>抛却那些提高质量的，大概给了 <code>披肩发</code>、<code>深灰色头发</code>、<code>深灰色眼睛</code>、<code>红色眼影</code>、<code>白色衬衫</code>、<code>微笑</code> 这些 tag。同时模仿了上边，给了 <code>面部的花</code> 之类的 tag：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">{{masterpiece,best quality}},shawl hair,dark grey hair, dark grey eyes,red eye shadow,  white shirt,illustration,flower on face,growth, nature,beautiful face, smile, zoom in one eyes</span><br></pre></td></tr></tbody></table></figure>
-
-<p>以上边的内容为 prompt，同时把我改的那张扔给 NovelAI，根据生成结果又慢慢改，添加 tag，最终的 prompt 如下:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">{{masterpiece,best quality,by wlop}},shawl hair,dark grey hair, dark grey eyes,red eye shadow, white shirt,{{{illustration}}},flower on face, growth, nature, beautiful face, small smile, zoom in one eyes, {{{{petite}}}}, dramatic shadows, ink,eye-focus, portrait, red hairclip</span><br></pre></td></tr></tbody></table></figure>
-
-<p>跑了大概 100 张，然后挑了挑，下边展示的是部分高质量的：</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0IgzR.png"></p>
-<p>又是一波奇奇怪怪的调整：</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0onkF.png"></p>
-<p>最后挑选出了这张我觉得挺有特色的：</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0o161.png"></p>
-<p>然后开始根据这张进行派生：</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0jbEn.png"></p>
-<h1 id="一张壁纸（一堆壁纸）"><a href="#一张壁纸（一堆壁纸）" class="headerlink" title="一张壁纸（一堆壁纸）"></a>一张壁纸（一堆壁纸）</h1><p>这事儿开始的挺搞笑的，当时我正在调上边的头像参数，坐我旁边玩 CSGO 的朋友希望我把某把枪拟人，然后发我了下边的图片：</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0TGgs.jpg"></p>
-<p>然后我加了点描述词生成了，但生成效果并不好，我就又开始研究我上边的头像了。我完全忘记了我还拿着这张图生成的某张图在做派生呢… 我只是改回了我的 prompt，就意外地得到了下边这张图：</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0TI8H.png"></p>
-<p>似乎是把枪头画成了那条条纹？我也不知道。反正着实是惊艳到我了，扔到 bigjpg 那边提高了一下分辨率，再扔进 PS 调了一下曲线，嘿嘿，新的手机壁纸有了！</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x07eG4.png" alt="拉的曲线"></p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x07Prq.png" alt="新的手机壁纸！"></p>
-<p>然后又拿这张图和基于上边改的 prompt 做了派生…</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">{{masterpiece,best quality}},shawl hair,dark grey hair, dark grey eyes,red eye shadow,red scanf,  light grey shirt,{{illustration}},red flower on face,white flower on hair,growth, nature,beautiful face, {{indifferent}}, zoom in one eyes,1girl, red flower background, gold fence background,focus on eye</span><br></pre></td></tr></tbody></table></figure>
-
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x07XO1.jpg"></p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x07vex.jpg"></p>
-<p>相当不错！</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-        <tag>NovelAI</tag>
       </tags>
   </entry>
   <entry>
@@ -1593,6 +1593,54 @@
       </tags>
   </entry>
   <entry>
+    <title>Replace cat with bat</title>
+    <url>/posts/e7bc2e88.html</url>
+    <content><![CDATA[<p>When using Linux, I often use <code>cat</code> to browse some short codes. But it doesn’t support syntax highlighting originally. So, I found one of its replacements: <code>bat</code>.</p>
+<span id="more"></span>
+
+<h2 id="Brief-introduction"><a href="#Brief-introduction" class="headerlink" title="Brief introduction"></a>Brief introduction</h2><p><a href="https://github.com/sharkdp/bat"><img data-src="https://github.com/sharkdp/bat/raw/master/doc/logo-header.svg" alt="BAT Logo"></a></p>
+<p>On <a href="https://github.com/sharkdp/bat">BAT</a>‘s official GitHub page, it defines itself “a cat clone with wings”. In my opinion, one is “syntax highlighting”, and the other is “git integration”.</p>
+<p>Here are some of its important features:</p>
+<ul>
+<li>Syntax highlighting</li>
+<li>Git integration</li>
+<li>Show non-printable characters</li>
+<li>Automatic paging</li>
+</ul>
+<p><img data-src="https://camo.githubusercontent.com/7b7c397acc5b91b4c4cf7756015185fe3c5f700f70d256a212de51294a0cf673/68747470733a2f2f696d6775722e636f6d2f724773646e44652e706e67" alt="BAT's syntax highlighting"></p>
+<p><img data-src="https://camo.githubusercontent.com/c436c206f2c86605ab2f9fb632dd485afc05fccbf14af472770b0c59d876c9cc/68747470733a2f2f692e696d6775722e636f6d2f326c53573452452e706e67" alt="BAT's git integration"></p>
+<p><img data-src="https://camo.githubusercontent.com/643244c46834769e0ea2802e15518c49e0c7cf10aa82d00c7c69a406f2aa161d/68747470733a2f2f692e696d6775722e636f6d2f576e64477039482e706e67" alt="BAT's non-printable characters showing"></p>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>In ArchLinux, you can run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo pacman -S bat</span><br></pre></td></tr></tbody></table></figure>
+
+<p>In Termux, you can run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">pkg install bat</span><br></pre></td></tr></tbody></table></figure>
+
+<p>In Ubuntu, you can run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo apt install bat</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Learn more on <a href="https://github.com/sharkdp/bat">BAT</a>‘s GitHub page.</p>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Display a single file:</span></span><br><span class="line">bat &lt;filename&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Display multi files at once:</span></span><br><span class="line">bat &lt;filename1&gt; &lt;filename2&gt; ...</span><br><span class="line"></span><br><span class="line"><span class="comment"># Show and highlight non-printable characters:</span></span><br><span class="line">bat -A &lt;filename&gt; <span class="comment"># or</span></span><br><span class="line">bat --show-all &lt;filename&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Learn more on <a href="https://github.com/sharkdp/bat">BAT</a>‘s GitHub page.</p>
+<h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><p>You can use BAT’s configuration file to customize your BAT.</p>
+<p>To generate a default config file, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">bat --generate-config-file</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Here is an example:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line"># Set the theme</span><br><span class="line">--theme="Dracula"</span><br><span class="line"></span><br><span class="line"># Use C++ syntax for Arduino .ino files</span><br><span class="line">--map-syntax "*.ino:C++"</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>cat</tag>
+        <tag>bat</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Package managers in Linux (To be continued)</title>
     <url>/posts/4ee6ac78.html</url>
     <content><![CDATA[<p>This post tries to simply introduce some package managers and their basic usage.</p>
@@ -1653,54 +1701,6 @@
         <tag>Ubuntu</tag>
         <tag>pacman</tag>
         <tag>APT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Replace cat with bat</title>
-    <url>/posts/e7bc2e88.html</url>
-    <content><![CDATA[<p>When using Linux, I often use <code>cat</code> to browse some short codes. But it doesn’t support syntax highlighting originally. So, I found one of its replacements: <code>bat</code>.</p>
-<span id="more"></span>
-
-<h2 id="Brief-introduction"><a href="#Brief-introduction" class="headerlink" title="Brief introduction"></a>Brief introduction</h2><p><a href="https://github.com/sharkdp/bat"><img data-src="https://github.com/sharkdp/bat/raw/master/doc/logo-header.svg" alt="BAT Logo"></a></p>
-<p>On <a href="https://github.com/sharkdp/bat">BAT</a>‘s official GitHub page, it defines itself “a cat clone with wings”. In my opinion, one is “syntax highlighting”, and the other is “git integration”.</p>
-<p>Here are some of its important features:</p>
-<ul>
-<li>Syntax highlighting</li>
-<li>Git integration</li>
-<li>Show non-printable characters</li>
-<li>Automatic paging</li>
-</ul>
-<p><img data-src="https://camo.githubusercontent.com/7b7c397acc5b91b4c4cf7756015185fe3c5f700f70d256a212de51294a0cf673/68747470733a2f2f696d6775722e636f6d2f724773646e44652e706e67" alt="BAT's syntax highlighting"></p>
-<p><img data-src="https://camo.githubusercontent.com/c436c206f2c86605ab2f9fb632dd485afc05fccbf14af472770b0c59d876c9cc/68747470733a2f2f692e696d6775722e636f6d2f326c53573452452e706e67" alt="BAT's git integration"></p>
-<p><img data-src="https://camo.githubusercontent.com/643244c46834769e0ea2802e15518c49e0c7cf10aa82d00c7c69a406f2aa161d/68747470733a2f2f692e696d6775722e636f6d2f576e64477039482e706e67" alt="BAT's non-printable characters showing"></p>
-<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>In ArchLinux, you can run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo pacman -S bat</span><br></pre></td></tr></tbody></table></figure>
-
-<p>In Termux, you can run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">pkg install bat</span><br></pre></td></tr></tbody></table></figure>
-
-<p>In Ubuntu, you can run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo apt install bat</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Learn more on <a href="https://github.com/sharkdp/bat">BAT</a>‘s GitHub page.</p>
-<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Display a single file:</span></span><br><span class="line">bat &lt;filename&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Display multi files at once:</span></span><br><span class="line">bat &lt;filename1&gt; &lt;filename2&gt; ...</span><br><span class="line"></span><br><span class="line"><span class="comment"># Show and highlight non-printable characters:</span></span><br><span class="line">bat -A &lt;filename&gt; <span class="comment"># or</span></span><br><span class="line">bat --show-all &lt;filename&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Learn more on <a href="https://github.com/sharkdp/bat">BAT</a>‘s GitHub page.</p>
-<h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><p>You can use BAT’s configuration file to customize your BAT.</p>
-<p>To generate a default config file, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">bat --generate-config-file</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Here is an example:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line"># Set the theme</span><br><span class="line">--theme="Dracula"</span><br><span class="line"></span><br><span class="line"># Use C++ syntax for Arduino .ino files</span><br><span class="line">--map-syntax "*.ino:C++"</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>cat</tag>
-        <tag>bat</tag>
       </tags>
   </entry>
   <entry>
@@ -3294,6 +3294,36 @@
       </tags>
   </entry>
   <entry>
+    <title>Notes for Nand2Tetris: Virtual Machine I: Stack Arithmetic</title>
+    <url>/posts/d8b14680.html</url>
+    <content><![CDATA[<p>This is a note for Nand2Tetris unit 7 (Part II, Unit 1).</p>
+<span id="more"></span>
+
+<h2 id="Unit-7-0"><a href="#Unit-7-0" class="headerlink" title="Unit 7.0"></a>Unit 7.0</h2><p>Jack program:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">class Main {</span><br><span class="line">    function void main() {</span><br><span class="line">        do Output.printString("Hello World!");</span><br><span class="line">        do Output.println(); // New line.</span><br><span class="line">        return;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>What makes the abstraction work?</p>
+<ul>
+<li>Assembler</li>
+<li>Virtual machine</li>
+<li>Compiler</li>
+<li>Operating system</li>
+</ul>
+<p><img data-src="https://s1.ax1x.com/2023/07/19/pC7SA0I.png" alt="From high-level to low-level"></p>
+<p>Nand2Tetris Part II is <strong>more demanding</strong> than Nand2Tetris Part I.</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Computing System</category>
+        <category>Nand2Tetris</category>
+      </categories>
+      <tags>
+        <tag>Nand2Tetris</tag>
+        <tag>Virtual Machine</tag>
+        <tag>Stack Arithmetic</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C/C++ 格式化输入输出汇总</title>
     <url>/posts/b4e7acd7.html</url>
     <content><![CDATA[<p>本文汇总一下 C 语言 <code>scanf</code> 和 <code>printf</code> 的格式控制方法以及 C++ 的 <code>&lt;iomanip&gt;</code> 库。</p>
@@ -3708,6 +3738,25 @@
       </tags>
   </entry>
   <entry>
+    <title>C 语言中与 (&amp;&amp;) 和或 (||) 运算符的短路运算</title>
+    <url>/posts/13d09bbb.html</url>
+    <content><![CDATA[<p>此篇笔记来源于下边的这个题目。<br><img data-src="https://s1.ax1x.com/2022/10/12/xaK5c9.png"></p>
+<span id="more"></span>
+
+<p>本来以为结果为 3，但是实际跑了一下发现结果是 1。请教了一下大佬知道了这叫做或运算符（||）的短路运算。</p>
+<p>正常来说，或运算中只要有一个为真，结果就为真。所谓或的短路运算就是说，如果已经出现了真，那么后续的运算就不会进行了。以上面的题目为例就是，因为第一个 ++x 这个运算结果肯定为真，那么后面的另外两个 ++x 就不会运行。</p>
+<p>类似的，还有与（&amp;&amp;）的短路运算。正常来说，与运算中必须所有均为真，结果才为真。所以与的短路就是，如果前面的运算结果已经有假了，那么就可以确定这个与运算总体的结果为假，也就不会运行后边的运算了。</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C 标准库中 qsort 和 C++ STL 中 sort 的用法</title>
     <url>/posts/eab95d6e.html</url>
     <content><![CDATA[<p>虽然到现在还是不能完全理解 <code>qsort</code> 和 <code>sort</code> 这两个函数的底层原理，但至少，先学会如何使用吧。</p>
@@ -3794,25 +3843,6 @@
         <tag>C/C++</tag>
         <tag>Sorting</tag>
         <tag>STL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C 语言中与 (&amp;&amp;) 和或 (||) 运算符的短路运算</title>
-    <url>/posts/13d09bbb.html</url>
-    <content><![CDATA[<p>此篇笔记来源于下边的这个题目。<br><img data-src="https://s1.ax1x.com/2022/10/12/xaK5c9.png"></p>
-<span id="more"></span>
-
-<p>本来以为结果为 3，但是实际跑了一下发现结果是 1。请教了一下大佬知道了这叫做或运算符（||）的短路运算。</p>
-<p>正常来说，或运算中只要有一个为真，结果就为真。所谓或的短路运算就是说，如果已经出现了真，那么后续的运算就不会进行了。以上面的题目为例就是，因为第一个 ++x 这个运算结果肯定为真，那么后面的另外两个 ++x 就不会运行。</p>
-<p>类似的，还有与（&amp;&amp;）的短路运算。正常来说，与运算中必须所有均为真，结果才为真。所以与的短路就是，如果前面的运算结果已经有假了，那么就可以确定这个与运算总体的结果为假，也就不会运行后边的运算了。</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
       </tags>
   </entry>
   <entry>
@@ -4039,24 +4069,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Uses std::cin.ignore() to keep the user typing until the input meets the requirements</title>
-    <url>/posts/f96b3358.html</url>
-    <content><![CDATA[<p>I used to control users’ input by making the input a string and process it later. But today, my friend posed this question to me: Can we control input without a char array or string class?</p>
-<span id="more"></span>
-
-<p>On <em><a href="https://en.cppreference.com/w/cpp/io/basic_istream/ignore">cppreference.com</a></em>, I found <code>std::cin.ignore()</code>. This function can help us solve the previous question. Here is an example:</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;limits&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> n = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span> (<span class="literal">true</span>) {</span><br><span class="line">    std::cout &lt;&lt; <span class="string">"Please input a number: "</span>;</span><br><span class="line">    std::cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">if</span> (!std::cin.<span class="built_in">good</span>()) {</span><br><span class="line">      std::cerr &lt;&lt; <span class="string">"Error input."</span> &lt;&lt; std::endl;</span><br><span class="line">      std::cin.<span class="built_in">clear</span>();</span><br><span class="line">      std::cin.<span class="built_in">ignore</span>(std::numeric_limits&lt;std::streamsize&gt;::<span class="built_in">max</span>(), <span class="string">'\n'</span>);</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    } <span class="keyword">else</span> {</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  std::cout &lt;&lt; <span class="string">"Your input is: "</span> &lt;&lt; n &lt;&lt; std::endl;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Const Correctness in C++</title>
     <url>/posts/4eb7504e.html</url>
     <content><![CDATA[<p>This is a note for Lecture 8, <a href="https://web.stanford.edu/class/cs106l/index.html">CS106L</a>, Spring 2023.</p>
@@ -4171,6 +4183,24 @@
         <tag>const</tag>
         <tag>C &amp; C++</tag>
         <tag>CS106L</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Uses std::cin.ignore() to keep the user typing until the input meets the requirements</title>
+    <url>/posts/f96b3358.html</url>
+    <content><![CDATA[<p>I used to control users’ input by making the input a string and process it later. But today, my friend posed this question to me: Can we control input without a char array or string class?</p>
+<span id="more"></span>
+
+<p>On <em><a href="https://en.cppreference.com/w/cpp/io/basic_istream/ignore">cppreference.com</a></em>, I found <code>std::cin.ignore()</code>. This function can help us solve the previous question. Here is an example:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;limits&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> n = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span> (<span class="literal">true</span>) {</span><br><span class="line">    std::cout &lt;&lt; <span class="string">"Please input a number: "</span>;</span><br><span class="line">    std::cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">if</span> (!std::cin.<span class="built_in">good</span>()) {</span><br><span class="line">      std::cerr &lt;&lt; <span class="string">"Error input."</span> &lt;&lt; std::endl;</span><br><span class="line">      std::cin.<span class="built_in">clear</span>();</span><br><span class="line">      std::cin.<span class="built_in">ignore</span>(std::numeric_limits&lt;std::streamsize&gt;::<span class="built_in">max</span>(), <span class="string">'\n'</span>);</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    } <span class="keyword">else</span> {</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  std::cout &lt;&lt; <span class="string">"Your input is: "</span> &lt;&lt; n &lt;&lt; std::endl;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
       </tags>
   </entry>
   <entry>
@@ -4566,6 +4596,40 @@
       </tags>
   </entry>
   <entry>
+    <title>二维数组到底是啥啊...</title>
+    <url>/posts/57fd79a.html</url>
+    <content><![CDATA[<p>一维数组还是比较容易理解的，但是二维数组，我始终没弄清楚这玩意儿是按照什么规则从二维的样子转成一维然后存起来的，也因此常常犯下下标写反了的错误。我觉得是时候详细地理一理这玩意儿到底是个啥了…</p>
+<span id="more"></span>
+
+<h2 id="怎么转成了一维？"><a href="#怎么转成了一维？" class="headerlink" title="怎么转成了一维？"></a>怎么转成了一维？</h2><p>要知道二维数组到底是怎么转成了一维存在内存里，或者说，我到底是应该从前往后（前面的一个数字先不动，先让后边的数字动）读这个数组，还是从后往前（后面的一个数字先不动，先让前面的数字动）读这个数组，其实方法很简单 —— 我们只要把数组里每个元素的地址输出来就行了。比如下边这串代码：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> a[<span class="number">2</span>][<span class="number">3</span>] = {<span class="number">0</span>};</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">        {</span><br><span class="line">            cout &lt;&lt; <span class="string">"&amp;a["</span> &lt;&lt; i &lt;&lt; <span class="string">"]"</span></span><br><span class="line">                 &lt;&lt; <span class="string">"["</span> &lt;&lt; j &lt;&lt; <span class="string">"] = "</span> &lt;&lt; &amp;a[i][j] &lt;&lt; <span class="string">" "</span> &lt;&lt; endl;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>可能的输出如下：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&amp;a[0][0] = 0x61fe00</span><br><span class="line">&amp;a[0][1] = 0x61fe04</span><br><span class="line">&amp;a[0][2] = 0x61fe08</span><br><span class="line">&amp;a[1][0] = 0x61fe0c</span><br><span class="line">&amp;a[1][1] = 0x61fe10</span><br><span class="line">&amp;a[1][2] = 0x61fe14</span><br></pre></td></tr></tbody></table></figure>
+
+<p>可以看到，正确的读法应该是：<strong>从前往后，前面的保持不动，从最后一个开始变化。</strong></p>
+<p>也就是说，对于 <code>a[2][3]</code> 这样一个数组，应该这么理解：<code>a[2][3]</code> 前面的 <code>[2]</code> 表示这是一个包含两个元素的数组，后面的 <code>[3]</code> 表示前面所说的两个元素每一个都是包含三个元素的数组。</p>
+<h2 id="赋初值的一些问题"><a href="#赋初值的一些问题" class="headerlink" title="赋初值的一些问题"></a>赋初值的一些问题</h2><p>知道了上边的东西，所以我们知道，我们可以写一个类似 <code>int a[][3] = {0,0,0,0,0,0};</code> 的玩意儿，却不能写一个 <code>int a[2][] = {0,0,0,0,0,0}</code> 的玩意儿 —— 相当于第二个方括号里边是告诉了编译器后边这一串数字按几个为一组，由于 <code>{}</code> 中元素个数不足是会往后边自动补零的，所以少了这个每组几个的参数，编译器就不知道你这到底有多少个元素了。</p>
+<h2 id="用指向数组的指针（数组指针）来实现一个其中一维可以动态调整的二维数组？"><a href="#用指向数组的指针（数组指针）来实现一个其中一维可以动态调整的二维数组？" class="headerlink" title="用指向数组的指针（数组指针）来实现一个其中一维可以动态调整的二维数组？"></a>用指向数组的指针（数组指针）来实现一个其中一维可以动态调整的二维数组？</h2><p>类似上边的赋初值时候的问题，这个动态的二维数组的内层，也就是按几个为一组的那一层，必须是已经确定的，例如，我们依然创建一个 2*3 的二维数组，其中前面的 2 是在运行时确定的：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">2</span>;</span><br><span class="line">    <span class="built_in">int</span>(*p)[<span class="number">3</span>] = <span class="keyword">new</span> <span class="type">int</span>[n][<span class="number">3</span>];</span><br><span class="line">    <span class="type">int</span> now = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">        {</span><br><span class="line">            p[i][j] = now;</span><br><span class="line">            now++;</span><br><span class="line">        }</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">            cout &lt;&lt; p[i][j] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>输出结果如下:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">1 2 3</span><br><span class="line">4 5 6</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="能不能用-int-p-来创建一个两个维度都能变化的二维数组？"><a href="#能不能用-int-p-来创建一个两个维度都能变化的二维数组？" class="headerlink" title="能不能用 int** p 来创建一个两个维度都能变化的二维数组？"></a>能不能用 int** p 来创建一个两个维度都能变化的二维数组？</h2><p>不知道啊就是说…</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+        <tag>Array</tag>
+        <tag>Pointer</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一个有关指针传参的问题</title>
     <url>/posts/50c16b14.html</url>
     <content><![CDATA[<p>这是我学习指针过程中遇到的一个问题，问过大佬才似乎懂了点，在此记录。顺便记下一句大佬说的话：</p>
@@ -4623,40 +4687,6 @@
         <tag>Pointer</tag>
         <tag>pass by pointer</tag>
         <tag>pass by value</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>二维数组到底是啥啊...</title>
-    <url>/posts/57fd79a.html</url>
-    <content><![CDATA[<p>一维数组还是比较容易理解的，但是二维数组，我始终没弄清楚这玩意儿是按照什么规则从二维的样子转成一维然后存起来的，也因此常常犯下下标写反了的错误。我觉得是时候详细地理一理这玩意儿到底是个啥了…</p>
-<span id="more"></span>
-
-<h2 id="怎么转成了一维？"><a href="#怎么转成了一维？" class="headerlink" title="怎么转成了一维？"></a>怎么转成了一维？</h2><p>要知道二维数组到底是怎么转成了一维存在内存里，或者说，我到底是应该从前往后（前面的一个数字先不动，先让后边的数字动）读这个数组，还是从后往前（后面的一个数字先不动，先让前面的数字动）读这个数组，其实方法很简单 —— 我们只要把数组里每个元素的地址输出来就行了。比如下边这串代码：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> a[<span class="number">2</span>][<span class="number">3</span>] = {<span class="number">0</span>};</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">        {</span><br><span class="line">            cout &lt;&lt; <span class="string">"&amp;a["</span> &lt;&lt; i &lt;&lt; <span class="string">"]"</span></span><br><span class="line">                 &lt;&lt; <span class="string">"["</span> &lt;&lt; j &lt;&lt; <span class="string">"] = "</span> &lt;&lt; &amp;a[i][j] &lt;&lt; <span class="string">" "</span> &lt;&lt; endl;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>可能的输出如下：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&amp;a[0][0] = 0x61fe00</span><br><span class="line">&amp;a[0][1] = 0x61fe04</span><br><span class="line">&amp;a[0][2] = 0x61fe08</span><br><span class="line">&amp;a[1][0] = 0x61fe0c</span><br><span class="line">&amp;a[1][1] = 0x61fe10</span><br><span class="line">&amp;a[1][2] = 0x61fe14</span><br></pre></td></tr></tbody></table></figure>
-
-<p>可以看到，正确的读法应该是：<strong>从前往后，前面的保持不动，从最后一个开始变化。</strong></p>
-<p>也就是说，对于 <code>a[2][3]</code> 这样一个数组，应该这么理解：<code>a[2][3]</code> 前面的 <code>[2]</code> 表示这是一个包含两个元素的数组，后面的 <code>[3]</code> 表示前面所说的两个元素每一个都是包含三个元素的数组。</p>
-<h2 id="赋初值的一些问题"><a href="#赋初值的一些问题" class="headerlink" title="赋初值的一些问题"></a>赋初值的一些问题</h2><p>知道了上边的东西，所以我们知道，我们可以写一个类似 <code>int a[][3] = {0,0,0,0,0,0};</code> 的玩意儿，却不能写一个 <code>int a[2][] = {0,0,0,0,0,0}</code> 的玩意儿 —— 相当于第二个方括号里边是告诉了编译器后边这一串数字按几个为一组，由于 <code>{}</code> 中元素个数不足是会往后边自动补零的，所以少了这个每组几个的参数，编译器就不知道你这到底有多少个元素了。</p>
-<h2 id="用指向数组的指针（数组指针）来实现一个其中一维可以动态调整的二维数组？"><a href="#用指向数组的指针（数组指针）来实现一个其中一维可以动态调整的二维数组？" class="headerlink" title="用指向数组的指针（数组指针）来实现一个其中一维可以动态调整的二维数组？"></a>用指向数组的指针（数组指针）来实现一个其中一维可以动态调整的二维数组？</h2><p>类似上边的赋初值时候的问题，这个动态的二维数组的内层，也就是按几个为一组的那一层，必须是已经确定的，例如，我们依然创建一个 2*3 的二维数组，其中前面的 2 是在运行时确定的：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">2</span>;</span><br><span class="line">    <span class="built_in">int</span>(*p)[<span class="number">3</span>] = <span class="keyword">new</span> <span class="type">int</span>[n][<span class="number">3</span>];</span><br><span class="line">    <span class="type">int</span> now = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">        {</span><br><span class="line">            p[i][j] = now;</span><br><span class="line">            now++;</span><br><span class="line">        }</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">            cout &lt;&lt; p[i][j] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>输出结果如下:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">1 2 3</span><br><span class="line">4 5 6</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="能不能用-int-p-来创建一个两个维度都能变化的二维数组？"><a href="#能不能用-int-p-来创建一个两个维度都能变化的二维数组？" class="headerlink" title="能不能用 int** p 来创建一个两个维度都能变化的二维数组？"></a>能不能用 int** p 来创建一个两个维度都能变化的二维数组？</h2><p>不知道啊就是说…</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-        <tag>Pointer</tag>
-        <tag>Array</tag>
       </tags>
   </entry>
   <entry>
