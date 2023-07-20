@@ -519,7 +519,7 @@
 <p>$$<br>h_\theta(x) = \frac{1}{1+e^{-\theta^Tx}}<br>$$</p>
 <h3 id="Interpretation-of-Hypothesis-Output"><a href="#Interpretation-of-Hypothesis-Output" class="headerlink" title="Interpretation of Hypothesis Output"></a>Interpretation of Hypothesis Output</h3><p>$h_\theta(x)$ = estimated probability that $y=1$ on input $x$</p>
 <p>Example: If</p>
-<p>$$<br>x=<br>\left[<br>\begin{matrix}<br>x_0 \<br>x_1<br>\end{matrix}<br>\right]=<br>\left[<br>\begin{matrix}<br>1 \<br>tumorSize<br>\end{matrix}<br>\right]<br>$$</p>
+<p>$$<br>x=<br>\left[<br>\begin{matrix}<br>x_0 \\<br>x_1<br>\end{matrix}<br>\right]=<br>\left[<br>\begin{matrix}<br>1 \\<br>tumorSize<br>\end{matrix}<br>\right]<br>$$</p>
 <p>$h_\theta(x)=0.7$ tells patient that 70% chance of tumor being malignant.</p>
 <p>“Probability that $y=1$, given $x$, parameterized by $\theta$”:</p>
 <p>$$<br>h_\theta(x)=P(y=1|x;\theta)<br>$$</p>
@@ -548,16 +548,16 @@
 </li>
 </ul>
 <p>Logistic regression cost function:</p>
-<p>$$<br>Cost(h_\theta(x), y)=<br>\begin{cases}<br>-log(h_\theta(x)) &amp; \text{if }y=1 \<br>-log(1-h_\theta(x)) &amp; \text{if }y=0 \<br>\end{cases}<br>$$</p>
+<p>$$<br>Cost(h_\theta(x), y)=<br>\begin{cases}<br>-log(h_\theta(x)) &amp; \text{if }y=1 \\<br>-log(1-h_\theta(x)) &amp; \text{if }y=0 \\<br>\end{cases}<br>$$</p>
 <p>$Cost=0$ if $y=1, h_\theta(x)=1$, but as $h_\theta(x) \to 0$, $Cost \to \infin$</p>
 <p>Captures intuition that if $h_\theta(x)=0$, (predict $P(y=1|x;\theta)$), but $y=1$, we’ll penalize learning algorithm by a very large cost.</p>
 <p>(When $y=0$) …</p>
 <h2 id="Lesson-48"><a href="#Lesson-48" class="headerlink" title="Lesson 48"></a>Lesson 48</h2><p>Logistic regression cost function:</p>
 <p>$$<br>J(\theta)=\frac{1}{m}\sum^m_{i=1}Cost(h_\theta(x^{(i)}), y^{(i)})<br>$$</p>
-<p>$$<br>Cost(h_\theta(x), y)=<br>\begin{cases}<br>-log(h_\theta(x)) &amp; \text{if }y=1 \<br>-log(1-h_\theta(x)) &amp; \text{if }y=0 \<br>\end{cases}<br>$$</p>
+<p>$$<br>Cost(h_\theta(x), y)=<br>\begin{cases}<br>-log(h_\theta(x)) &amp; \text{if }y=1 \\<br>-log(1-h_\theta(x)) &amp; \text{if }y=0 \\<br>\end{cases}<br>$$</p>
 <p>Since that $y=0$ or $1$ always:</p>
 <p>$$<br>Cost(h_\theta(x), y)=-y log(h_\theta(x))-(1-y)log(1-h_\theta(x))<br>$$</p>
-<p>$$<br>\begin{aligned}<br>J(\theta)<br>&amp;=\frac{1}{m}\sum^m_{i=1}Cost(h_\theta(x^{(i)}), y^{(i)})\<br>&amp;=-\frac{1}{m}[\sum^m_{i=1}log h_\theta(x^{(i)})+(1-y^{(i)})log(1-h_\theta(x^{(i)}))]<br>\end{aligned}<br>$$</p>
+<p>$$<br>\begin{aligned}<br>J(\theta)<br>&amp;=\frac{1}{m}\sum^m_{i=1}Cost(h_\theta(x^{(i)}), y^{(i)})\\<br>&amp;=-\frac{1}{m}[\sum^m_{i=1}log h_\theta(x^{(i)})+(1-y^{(i)})log(1-h_\theta(x^{(i)}))]<br>\end{aligned}<br>$$</p>
 <p>To fit parameters $\theta$:</p>
 <p>$$<br>\underset{\theta}{min}J(\theta)<br>$$</p>
 <p>To make a prediction given new $x$:</p>
@@ -639,9 +639,9 @@
 <p>Underfitting!</p>
 <h2 id="Lesson-54"><a href="#Lesson-54" class="headerlink" title="Lesson 54"></a>Lesson 54</h2><p>Regularized linear regression</p>
 <h3 id="Gradient-descent"><a href="#Gradient-descent" class="headerlink" title="Gradient descent"></a>Gradient descent</h3><p>Repeat {</p>
-<p>$$<br>\begin{aligned}<br>\theta_0 &amp;:= \theta_0 - \alpha\frac{1}{m}\sum^m_{i=1}(h_\theta(x^{(i)})-y^{(i)})\cdot x_0^{(i)}\<br>\theta_j &amp;:= \theta_j - \alpha[\frac{1}{m}\sum^m_{i=1}(h_\theta(x^{(i)})-y^{(i)})\cdot x_j^{(i)}+\frac{\lambda}{m}\theta_j]\<br>&amp;=\theta_j(1-\alpha\frac{\lambda}{m})-\alpha\frac{1}{m}\sum^m_{i=1}(h_\theta(x^{(i)})-y^{(i)})\cdot x_0^{(i)}<br>\end{aligned}<br>$$</p>
+<p>$$<br>\begin{aligned}<br>\theta_0 &amp;:= \theta_0 - \alpha\frac{1}{m}\sum^m_{i=1}(h_\theta(x^{(i)})-y^{(i)})\cdot x_0^{(i)}\\<br>\theta_j &amp;:= \theta_j - \alpha[\frac{1}{m}\sum^m_{i=1}(h_\theta(x^{(i)})-y^{(i)})\cdot x_j^{(i)}+\frac{\lambda}{m}\theta_j]\\<br>&amp;=\theta_j(1-\alpha\frac{\lambda}{m})-\alpha\frac{1}{m}\sum^m_{i=1}(h_\theta(x^{(i)})-y^{(i)})\cdot x_0^{(i)}<br>\end{aligned}<br>$$</p>
 <p>}</p>
-<h3 id="Normal-equation"><a href="#Normal-equation" class="headerlink" title="Normal equation"></a>Normal equation</h3><p>$$<br>\theta = (X^TX + \lambda<br>\left[<br>\begin{matrix}<br>0      &amp;0      &amp;0      &amp;\cdots &amp;0      \<br>0      &amp;1      &amp;0      &amp;\cdots &amp;0      \<br>0      &amp;0      &amp;1      &amp;\cdots &amp;0      \<br>\vdots &amp;\vdots &amp;\vdots &amp;\ddots &amp;\vdots \<br>0      &amp;0      &amp;0      &amp;\cdots &amp;1<br>\end{matrix}<br>\right]_{n+1}<br>)^{-1}X^Ty<br>$$</p>
+<h3 id="Normal-equation"><a href="#Normal-equation" class="headerlink" title="Normal equation"></a>Normal equation</h3><p>$$<br>\theta = (X^TX + \lambda<br>\left[<br>\begin{matrix}<br>0      &amp;0      &amp;0      &amp;\cdots &amp;0      \\<br>0      &amp;1      &amp;0      &amp;\cdots &amp;0      \\<br>0      &amp;0      &amp;1      &amp;\cdots &amp;0      \\<br>\vdots &amp;\vdots &amp;\vdots &amp;\ddots &amp;\vdots \\<br>0      &amp;0      &amp;0      &amp;\cdots &amp;1<br>\end{matrix}<br>\right]_{n+1}<br>)^{-1}X^Ty<br>$$</p>
 <p>Non-invertibility (optional / advanced)</p>
 <p>…</p>
 <h2 id="Lesson-56"><a href="#Lesson-56" class="headerlink" title="Lesson 56"></a>Lesson 56</h2><p>…</p>
