@@ -50,6 +50,77 @@
       </tags>
   </entry>
   <entry>
+    <title>大一新生的高数预备知识学习笔记</title>
+    <url>/posts/33435544.html</url>
+    <content><![CDATA[<p>这篇文章主要是笔者从<a href="https://space.bilibili.com/66607740">宋浩老师</a>处学习高数高数知识的课堂笔记，也加入了一些笔者自己搜到的东西。具体课程你可以看这里：<a href="https://www.bilibili.com/video/BV1YU4y1e7Q9/">大一新生的高数预备知识简介</a>.</p>
+<span id="more"></span>
+
+<h2 id="反三角函数"><a href="#反三角函数" class="headerlink" title="反三角函数"></a>反三角函数</h2><h3 id="y-arcsinX"><a href="#y-arcsinX" class="headerlink" title="y=arcsinX"></a>y=arcsinX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxa7CV.png"></p>
+<h3 id="y-arccosX"><a href="#y-arccosX" class="headerlink" title="y=arccosX"></a>y=arccosX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxdQxS.png"></p>
+<h3 id="y-arctanX"><a href="#y-arctanX" class="headerlink" title="y=arctanX"></a>y=arctanX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxd8bj.png"></p>
+<h3 id="y-arccotX"><a href="#y-arccotX" class="headerlink" title="y=arccotX"></a>y=arccotX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxdYan.png"></p>
+<h3 id="y-secX"><a href="#y-secX" class="headerlink" title="y=secX"></a>y=secX</h3><p>正割是余弦的倒数：</p>
+<p>$$<br>secX = \frac{1}{cosX}<br>$$</p>
+<p>定义域：显然 $cosX \neq 0$，所以 $y=secX$ 的定义域为：$X\neq k\pi +\frac {\pi}{2},k\in Z$</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/15/vxwCon.png"></p>
+<h3 id="y-cscX"><a href="#y-cscX" class="headerlink" title="y=cscX"></a>y=cscX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxwneJ.png"></p>
+<h3 id="一些补充"><a href="#一些补充" class="headerlink" title="一些补充"></a>一些补充</h3><p>$$<br>sec^2x=1+tan^2x,csc^2x=1+cot^2x<br>$$</p>
+<p>可以使用下面的方法进行记忆：</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/16/vzBKpt.png"></p>
+<p>六边形的中间是 $1$。红色三角形的上边两个角的平方之和等于下边一个的平方，即：</p>
+<p>$$<br>sin^2x+cos^2x=1<br>$$</p>
+<p>$$<br>tan^2x+1=sec^2x<br>$$</p>
+<p>$$<br>cot^2x+1=csc^2x<br>$$</p>
+<h2 id="多项式的除法"><a href="#多项式的除法" class="headerlink" title="多项式的除法"></a>多项式的除法</h2><ul>
+<li>次数高的放前面，低的放后边</li>
+<li>缺项的补出来</li>
+</ul>
+<h3 id="不带余数"><a href="#不带余数" class="headerlink" title="不带余数"></a>不带余数</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vx0m1f.png"></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/15/vx0Mng.png"></p>
+<h3 id="带余数"><a href="#带余数" class="headerlink" title="带余数"></a>带余数</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vx0t3V.png"></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/15/vx0o4I.png"></p>
+<h2 id="有理分式的拆分"><a href="#有理分式的拆分" class="headerlink" title="有理分式的拆分"></a>有理分式的拆分</h2><h3 id="何为有理分式："><a href="#何为有理分式：" class="headerlink" title="何为有理分式："></a>何为有理分式：</h3><p>有理分式就是一个多项式比一个多项式</p>
+<h3 id="何为有理分式的拆分："><a href="#何为有理分式的拆分：" class="headerlink" title="何为有理分式的拆分："></a>何为有理分式的拆分：</h3><p>将相乘的项变成相加减</p>
+<h3 id="过程："><a href="#过程：" class="headerlink" title="过程："></a>过程：</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxBdRP.png"></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/15/vxBWR0.png"></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/15/vxBHo9.png"></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/15/vxDpee.png"></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/15/vxDUw4.png" alt="待定系数法例子之一"></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/15/vxsWRI.png" alt="待定系数法例子之二"></p>
+<h2 id="极坐标"><a href="#极坐标" class="headerlink" title="极坐标"></a>极坐标</h2><h3 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h3><p>首先看转动角度，其次看这个点到原点的距离。</p>
+<p>例如：直角坐标系中 $(2,2)$ 点在极坐标系中表示为 $(2\sqrt {2},\frac {\pi}{4})$；$(-2,2)$ 表示为 $(2\sqrt {2},\frac {3\pi}{4})$。</p>
+<p>极坐标中的原点叫<code>极点</code>，<code>极轴</code>是从极点向 $X$ 轴正方向引入的一条射线（仅正方向有）。极坐标中的点到极点的距离叫做<code>极径</code>，记作 $\rho (\rho\geq0)$（距离肯定是个非负数）；从极轴逆时针转过的角度记作 $\theta (0\leq\theta&lt;2\pi)$（但实际上不一定取这个范围）。所以极坐标中一点 $P$ 的坐标记为 $P (\rho,\theta)$。</p>
+<p>一般先考虑 $\theta$ 再考虑 $\rho$。</p>
+<h3 id="一些常见图像的极坐标表示"><a href="#一些常见图像的极坐标表示" class="headerlink" title="一些常见图像的极坐标表示"></a>一些常见图像的极坐标表示</h3><blockquote>
+<p>括号内范围是默认范围，可写可不写</p>
+</blockquote>
+<h4 id="射线"><a href="#射线" class="headerlink" title="射线"></a>射线</h4><p>例如一条以极点为端点，$\theta=45^\circ$ 的射线表述为：</p>
+<p>$$<br>\theta = 45^\circ(,\rho\geq0)<br>$$</p>
+<h4 id="圆"><a href="#圆" class="headerlink" title="圆"></a>圆</h4><p>例如一个以极点为圆心，$1$ 为半径的圆表述为：</p>
+<p>$$<br>(0\leq\theta&lt;2\pi,)\rho=1<br>$$</p>
+<h4 id="半圆"><a href="#半圆" class="headerlink" title="半圆"></a>半圆</h4><p>例如一个以极点为圆心，$1$ 为半径的位于 $X$ 轴上方的半圆表述为：</p>
+<p>$$<br>0\leq\theta\leq\pi,\rho=1<br>$$</p>
+<h4 id="圆面"><a href="#圆面" class="headerlink" title="圆面"></a>圆面</h4><p>例如一个以极点为圆心，$1$ 为半径的圆面表述为：</p>
+<p>$$<br>(0\leq\theta&lt;2\pi,)0\leq\rho\leq1<br>$$</p>
+<h4 id="半圆面"><a href="#半圆面" class="headerlink" title="半圆面"></a>半圆面</h4><p>例如一个以极点为圆心，$1$ 为半径的位于 $X$ 轴上方的半圆面表述为：</p>
+<p>$$<br>0\leq\theta\leq\pi,0\leq\rho\leq1<br>$$</p>
+<div class="note warning no-icon"><p>又例如这个以 $(1,0)$ 为圆心，$1$ 为半径的位于 $X$ 轴上方的半圆面表述为：</p>
+<p>$$<br>0\leq\theta\leq\frac{\pi}{2},0\leq\rho\leq2cos\theta<br>$$</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/16/vzwCNR.png"></p>
+<p>又例如这个：</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/16/vzwtbQ.png"></p>
+</div>
+
+<h4 id="圆环"><a href="#圆环" class="headerlink" title="圆环"></a>圆环</h4><p><img data-src="https://s1.ax1x.com/2022/09/16/vzdzB4.png"></p>
+]]></content>
+      <categories>
+        <category>Mathematics</category>
+      </categories>
+      <tags>
+        <tag>Mathematics</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>手动挡学习笔记</title>
     <url>/posts/66959aa9.html</url>
     <content><![CDATA[<p>最近几天一直在忙着考驾照的事情，8 月份第一次考科二挂了后就开始边练科二边练科三。最近两三天先后把科三、第二次科二、科四过了，顺利拿到了 C1 驾照。但是… 学的是手动挡，家里的车却是自动挡。所以想着如果不记一下的话，以后估计开惯了自动挡手动挡就不会了，便想做些笔记。顺便也记录一下笔者自己的学车过程。</p>
@@ -183,77 +254,6 @@
       <categories>
         <category>Misc</category>
       </categories>
-  </entry>
-  <entry>
-    <title>大一新生的高数预备知识学习笔记</title>
-    <url>/posts/33435544.html</url>
-    <content><![CDATA[<p>这篇文章主要是笔者从<a href="https://space.bilibili.com/66607740">宋浩老师</a>处学习高数高数知识的课堂笔记，也加入了一些笔者自己搜到的东西。具体课程你可以看这里：<a href="https://www.bilibili.com/video/BV1YU4y1e7Q9/">大一新生的高数预备知识简介</a>.</p>
-<span id="more"></span>
-
-<h2 id="反三角函数"><a href="#反三角函数" class="headerlink" title="反三角函数"></a>反三角函数</h2><h3 id="y-arcsinX"><a href="#y-arcsinX" class="headerlink" title="y=arcsinX"></a>y=arcsinX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxa7CV.png"></p>
-<h3 id="y-arccosX"><a href="#y-arccosX" class="headerlink" title="y=arccosX"></a>y=arccosX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxdQxS.png"></p>
-<h3 id="y-arctanX"><a href="#y-arctanX" class="headerlink" title="y=arctanX"></a>y=arctanX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxd8bj.png"></p>
-<h3 id="y-arccotX"><a href="#y-arccotX" class="headerlink" title="y=arccotX"></a>y=arccotX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxdYan.png"></p>
-<h3 id="y-secX"><a href="#y-secX" class="headerlink" title="y=secX"></a>y=secX</h3><p>正割是余弦的倒数：</p>
-<p>$$<br>secX = \frac{1}{cosX}<br>$$</p>
-<p>定义域：显然 $cosX \neq 0$，所以 $y=secX$ 的定义域为：$X\neq k\pi +\frac {\pi}{2},k\in Z$</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/15/vxwCon.png"></p>
-<h3 id="y-cscX"><a href="#y-cscX" class="headerlink" title="y=cscX"></a>y=cscX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxwneJ.png"></p>
-<h3 id="一些补充"><a href="#一些补充" class="headerlink" title="一些补充"></a>一些补充</h3><p>$$<br>sec^2x=1+tan^2x,csc^2x=1+cot^2x<br>$$</p>
-<p>可以使用下面的方法进行记忆：</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/16/vzBKpt.png"></p>
-<p>六边形的中间是 $1$。红色三角形的上边两个角的平方之和等于下边一个的平方，即：</p>
-<p>$$<br>sin^2x+cos^2x=1<br>$$</p>
-<p>$$<br>tan^2x+1=sec^2x<br>$$</p>
-<p>$$<br>cot^2x+1=csc^2x<br>$$</p>
-<h2 id="多项式的除法"><a href="#多项式的除法" class="headerlink" title="多项式的除法"></a>多项式的除法</h2><ul>
-<li>次数高的放前面，低的放后边</li>
-<li>缺项的补出来</li>
-</ul>
-<h3 id="不带余数"><a href="#不带余数" class="headerlink" title="不带余数"></a>不带余数</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vx0m1f.png"></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/15/vx0Mng.png"></p>
-<h3 id="带余数"><a href="#带余数" class="headerlink" title="带余数"></a>带余数</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vx0t3V.png"></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/15/vx0o4I.png"></p>
-<h2 id="有理分式的拆分"><a href="#有理分式的拆分" class="headerlink" title="有理分式的拆分"></a>有理分式的拆分</h2><h3 id="何为有理分式："><a href="#何为有理分式：" class="headerlink" title="何为有理分式："></a>何为有理分式：</h3><p>有理分式就是一个多项式比一个多项式</p>
-<h3 id="何为有理分式的拆分："><a href="#何为有理分式的拆分：" class="headerlink" title="何为有理分式的拆分："></a>何为有理分式的拆分：</h3><p>将相乘的项变成相加减</p>
-<h3 id="过程："><a href="#过程：" class="headerlink" title="过程："></a>过程：</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxBdRP.png"></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/15/vxBWR0.png"></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/15/vxBHo9.png"></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/15/vxDpee.png"></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/15/vxDUw4.png" alt="待定系数法例子之一"></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/15/vxsWRI.png" alt="待定系数法例子之二"></p>
-<h2 id="极坐标"><a href="#极坐标" class="headerlink" title="极坐标"></a>极坐标</h2><h3 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h3><p>首先看转动角度，其次看这个点到原点的距离。</p>
-<p>例如：直角坐标系中 $(2,2)$ 点在极坐标系中表示为 $(2\sqrt {2},\frac {\pi}{4})$；$(-2,2)$ 表示为 $(2\sqrt {2},\frac {3\pi}{4})$。</p>
-<p>极坐标中的原点叫<code>极点</code>，<code>极轴</code>是从极点向 $X$ 轴正方向引入的一条射线（仅正方向有）。极坐标中的点到极点的距离叫做<code>极径</code>，记作 $\rho (\rho\geq0)$（距离肯定是个非负数）；从极轴逆时针转过的角度记作 $\theta (0\leq\theta&lt;2\pi)$（但实际上不一定取这个范围）。所以极坐标中一点 $P$ 的坐标记为 $P (\rho,\theta)$。</p>
-<p>一般先考虑 $\theta$ 再考虑 $\rho$。</p>
-<h3 id="一些常见图像的极坐标表示"><a href="#一些常见图像的极坐标表示" class="headerlink" title="一些常见图像的极坐标表示"></a>一些常见图像的极坐标表示</h3><blockquote>
-<p>括号内范围是默认范围，可写可不写</p>
-</blockquote>
-<h4 id="射线"><a href="#射线" class="headerlink" title="射线"></a>射线</h4><p>例如一条以极点为端点，$\theta=45^\circ$ 的射线表述为：</p>
-<p>$$<br>\theta = 45^\circ(,\rho\geq0)<br>$$</p>
-<h4 id="圆"><a href="#圆" class="headerlink" title="圆"></a>圆</h4><p>例如一个以极点为圆心，$1$ 为半径的圆表述为：</p>
-<p>$$<br>(0\leq\theta&lt;2\pi,)\rho=1<br>$$</p>
-<h4 id="半圆"><a href="#半圆" class="headerlink" title="半圆"></a>半圆</h4><p>例如一个以极点为圆心，$1$ 为半径的位于 $X$ 轴上方的半圆表述为：</p>
-<p>$$<br>0\leq\theta\leq\pi,\rho=1<br>$$</p>
-<h4 id="圆面"><a href="#圆面" class="headerlink" title="圆面"></a>圆面</h4><p>例如一个以极点为圆心，$1$ 为半径的圆面表述为：</p>
-<p>$$<br>(0\leq\theta&lt;2\pi,)0\leq\rho\leq1<br>$$</p>
-<h4 id="半圆面"><a href="#半圆面" class="headerlink" title="半圆面"></a>半圆面</h4><p>例如一个以极点为圆心，$1$ 为半径的位于 $X$ 轴上方的半圆面表述为：</p>
-<p>$$<br>0\leq\theta\leq\pi,0\leq\rho\leq1<br>$$</p>
-<div class="note warning no-icon"><p>又例如这个以 $(1,0)$ 为圆心，$1$ 为半径的位于 $X$ 轴上方的半圆面表述为：</p>
-<p>$$<br>0\leq\theta\leq\frac{\pi}{2},0\leq\rho\leq2cos\theta<br>$$</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/16/vzwCNR.png"></p>
-<p>又例如这个：</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/16/vzwtbQ.png"></p>
-</div>
-
-<h4 id="圆环"><a href="#圆环" class="headerlink" title="圆环"></a>圆环</h4><p><img data-src="https://s1.ax1x.com/2022/09/16/vzdzB4.png"></p>
-]]></content>
-      <categories>
-        <category>Mathematics</category>
-      </categories>
-      <tags>
-        <tag>Mathematics</tag>
-      </tags>
   </entry>
   <entry>
     <title>记一次电脑清灰</title>
@@ -1054,39 +1054,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Edge 扩展推荐</title>
-    <url>/posts/3c91f84e.html</url>
-    <content><![CDATA[<p>2019 年 7 月写过一篇 Chrome 插件推荐的文章，那时候我还在用 Chrome 作为我的主要浏览器。一晃三年过去了，我也早已从 Google Chrome 转入全新 Chromium 内核构建的 Edge 浏览器。微软倒蛮有意思，自己从头开发的东西不咋地，在别人的平台上倒是表现得相当好。由于国内的水土不服啊，我用 Chrome 时总会遇到同步不了的情况，这点的体验在 Edge 这儿得到了很好的改善，也是我用 Edge 的主要原因吧。前些天帮很多同学做新机开荒，也推荐他们就用这款 “Win11 原装” 浏览器。当然一个浏览器肯定是离不开扩展的，趁着帮他们开荒这个机会，也顺便整理了我认为必备的一些浏览器扩展。</p>
-<span id="more"></span>
-
-<p><strong>本文更多的从个人角度出发，仅涵盖了笔者的主要需求，自然是粗略的，仅供参考。</strong></p>
-<h2 id="全部用户"><a href="#全部用户" class="headerlink" title="全部用户"></a>全部用户</h2><h3 id="Dark-Reader"><a href="#Dark-Reader" class="headerlink" title="Dark Reader"></a>Dark Reader</h3><p>简介：强制暗黑模式的网页</p>
-<h3 id="Infinity-新标签页-Pro"><a href="#Infinity-新标签页-Pro" class="headerlink" title="Infinity 新标签页 (Pro)"></a>Infinity 新标签页 (Pro)</h3><p>简介：rt，一个新标签页扩展</p>
-<h3 id="OneTab"><a href="#OneTab" class="headerlink" title="OneTab"></a>OneTab</h3><p>简介： 打开了太多网页的时候，按一下可以帮你全部收起来，之后可以自由恢复</p>
-<h3 id="Prevent-Duplicate-Tabs"><a href="#Prevent-Duplicate-Tabs" class="headerlink" title="Prevent Duplicate Tabs"></a>Prevent Duplicate Tabs</h3><p>简介： 帮你干掉那些重复的标签页</p>
-<h3 id="uBlock-Origin"><a href="#uBlock-Origin" class="headerlink" title="uBlock Origin"></a>uBlock Origin</h3><p>简介：干掉广告，且是众多去广告插件中占用相对较少的</p>
-<h3 id="捕捉网页截图-FireShot-的"><a href="#捕捉网页截图-FireShot-的" class="headerlink" title="捕捉网页截图 - FireShot 的"></a>捕捉网页截图 - FireShot 的</h3><p>简介：rt，支持长截图（名字有点怪，可能是翻译问题，搜索 FireShot 就能找到）</p>
-<h3 id="暴力猴"><a href="#暴力猴" class="headerlink" title="暴力猴"></a>暴力猴</h3><p>简介：装脚本的插件，和大名鼎鼎的油猴一样的功能，这个可能 (?) 小巧一点</p>
-<h3 id="沙拉查词-聚合词典划词翻译"><a href="#沙拉查词-聚合词典划词翻译" class="headerlink" title="沙拉查词-聚合词典划词翻译"></a>沙拉查词 - 聚合词典划词翻译</h3><p>简介：rt，划词翻译，可配置内容超多</p>
-<h3 id="Imagus"><a href="#Imagus" class="headerlink" title="Imagus"></a>Imagus</h3><p>简介：可以把网页图片放大了看</p>
-<h3 id="User-Agent-Switcher-for-Chrome"><a href="#User-Agent-Switcher-for-Chrome" class="headerlink" title="User-Agent Switcher for Chrome"></a>User-Agent Switcher for Chrome</h3><p>简介：“伪装” 你自己</p>
-<h3 id="Video-Speed-Controller"><a href="#Video-Speed-Controller" class="headerlink" title="Video Speed Controller"></a>Video Speed Controller</h3><p>简介：rt，但是竟然也可以改视频前广告的播放速度！</p>
-<h2 id="哔哩哔哩用户"><a href="#哔哩哔哩用户" class="headerlink" title="哔哩哔哩用户"></a>哔哩哔哩用户</h2><h3 id="pakku：哔哩哔哩弹幕过滤器"><a href="#pakku：哔哩哔哩弹幕过滤器" class="headerlink" title="pakku：哔哩哔哩弹幕过滤器"></a>pakku：哔哩哔哩弹幕过滤器</h3><p>简介：简化（过滤）你的 b 站弹幕</p>
-<h3 id="哔哩哔哩助手：bilibili-com-综合辅助扩"><a href="#哔哩哔哩助手：bilibili-com-综合辅助扩" class="headerlink" title="哔哩哔哩助手：bilibili.com 综合辅助扩"></a>哔哩哔哩助手：bilibili.com 综合辅助扩</h3><p>简介：功能超多，我主要用来下载 b 站视频了</p>
-<h2 id="Steam-用户"><a href="#Steam-用户" class="headerlink" title="Steam 用户"></a>Steam 用户</h2><h3 id="Augmented-Steam"><a href="#Augmented-Steam" class="headerlink" title="Augmented Steam"></a>Augmented Steam</h3><p>简介：为 steam 官网提供了众多试用的玩意儿</p>
-<h2 id="IT-工作者"><a href="#IT-工作者" class="headerlink" title="IT 工作者"></a>IT 工作者</h2><h3 id="Octotree-GitHub-code-tree"><a href="#Octotree-GitHub-code-tree" class="headerlink" title="Octotree - GitHub code tree"></a>Octotree - GitHub code tree</h3><p>简介：方便地查看 github 上某个 repository 的文件结构</p>
-<h3 id="Surfingkeys"><a href="#Surfingkeys" class="headerlink" title="Surfingkeys"></a>Surfingkeys</h3><p>简介：像 vim 一样的玩意儿，让你完全用你的键盘浏览网页</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Edge</tag>
-        <tag>Browser</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Chrome 插件推荐</title>
     <url>/posts/72a59031.html</url>
     <content><![CDATA[<p>你可能常年使用着国产的一些浏览器，却也常年遭受着各种弹窗、全家桶的侵扰…</p>
@@ -1325,8 +1292,41 @@
         <category>Tools</category>
       </categories>
       <tags>
-        <tag>Browser</tag>
         <tag>Chrome</tag>
+        <tag>Browser</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Edge 扩展推荐</title>
+    <url>/posts/3c91f84e.html</url>
+    <content><![CDATA[<p>2019 年 7 月写过一篇 Chrome 插件推荐的文章，那时候我还在用 Chrome 作为我的主要浏览器。一晃三年过去了，我也早已从 Google Chrome 转入全新 Chromium 内核构建的 Edge 浏览器。微软倒蛮有意思，自己从头开发的东西不咋地，在别人的平台上倒是表现得相当好。由于国内的水土不服啊，我用 Chrome 时总会遇到同步不了的情况，这点的体验在 Edge 这儿得到了很好的改善，也是我用 Edge 的主要原因吧。前些天帮很多同学做新机开荒，也推荐他们就用这款 “Win11 原装” 浏览器。当然一个浏览器肯定是离不开扩展的，趁着帮他们开荒这个机会，也顺便整理了我认为必备的一些浏览器扩展。</p>
+<span id="more"></span>
+
+<p><strong>本文更多的从个人角度出发，仅涵盖了笔者的主要需求，自然是粗略的，仅供参考。</strong></p>
+<h2 id="全部用户"><a href="#全部用户" class="headerlink" title="全部用户"></a>全部用户</h2><h3 id="Dark-Reader"><a href="#Dark-Reader" class="headerlink" title="Dark Reader"></a>Dark Reader</h3><p>简介：强制暗黑模式的网页</p>
+<h3 id="Infinity-新标签页-Pro"><a href="#Infinity-新标签页-Pro" class="headerlink" title="Infinity 新标签页 (Pro)"></a>Infinity 新标签页 (Pro)</h3><p>简介：rt，一个新标签页扩展</p>
+<h3 id="OneTab"><a href="#OneTab" class="headerlink" title="OneTab"></a>OneTab</h3><p>简介： 打开了太多网页的时候，按一下可以帮你全部收起来，之后可以自由恢复</p>
+<h3 id="Prevent-Duplicate-Tabs"><a href="#Prevent-Duplicate-Tabs" class="headerlink" title="Prevent Duplicate Tabs"></a>Prevent Duplicate Tabs</h3><p>简介： 帮你干掉那些重复的标签页</p>
+<h3 id="uBlock-Origin"><a href="#uBlock-Origin" class="headerlink" title="uBlock Origin"></a>uBlock Origin</h3><p>简介：干掉广告，且是众多去广告插件中占用相对较少的</p>
+<h3 id="捕捉网页截图-FireShot-的"><a href="#捕捉网页截图-FireShot-的" class="headerlink" title="捕捉网页截图 - FireShot 的"></a>捕捉网页截图 - FireShot 的</h3><p>简介：rt，支持长截图（名字有点怪，可能是翻译问题，搜索 FireShot 就能找到）</p>
+<h3 id="暴力猴"><a href="#暴力猴" class="headerlink" title="暴力猴"></a>暴力猴</h3><p>简介：装脚本的插件，和大名鼎鼎的油猴一样的功能，这个可能 (?) 小巧一点</p>
+<h3 id="沙拉查词-聚合词典划词翻译"><a href="#沙拉查词-聚合词典划词翻译" class="headerlink" title="沙拉查词-聚合词典划词翻译"></a>沙拉查词 - 聚合词典划词翻译</h3><p>简介：rt，划词翻译，可配置内容超多</p>
+<h3 id="Imagus"><a href="#Imagus" class="headerlink" title="Imagus"></a>Imagus</h3><p>简介：可以把网页图片放大了看</p>
+<h3 id="User-Agent-Switcher-for-Chrome"><a href="#User-Agent-Switcher-for-Chrome" class="headerlink" title="User-Agent Switcher for Chrome"></a>User-Agent Switcher for Chrome</h3><p>简介：“伪装” 你自己</p>
+<h3 id="Video-Speed-Controller"><a href="#Video-Speed-Controller" class="headerlink" title="Video Speed Controller"></a>Video Speed Controller</h3><p>简介：rt，但是竟然也可以改视频前广告的播放速度！</p>
+<h2 id="哔哩哔哩用户"><a href="#哔哩哔哩用户" class="headerlink" title="哔哩哔哩用户"></a>哔哩哔哩用户</h2><h3 id="pakku：哔哩哔哩弹幕过滤器"><a href="#pakku：哔哩哔哩弹幕过滤器" class="headerlink" title="pakku：哔哩哔哩弹幕过滤器"></a>pakku：哔哩哔哩弹幕过滤器</h3><p>简介：简化（过滤）你的 b 站弹幕</p>
+<h3 id="哔哩哔哩助手：bilibili-com-综合辅助扩"><a href="#哔哩哔哩助手：bilibili-com-综合辅助扩" class="headerlink" title="哔哩哔哩助手：bilibili.com 综合辅助扩"></a>哔哩哔哩助手：bilibili.com 综合辅助扩</h3><p>简介：功能超多，我主要用来下载 b 站视频了</p>
+<h2 id="Steam-用户"><a href="#Steam-用户" class="headerlink" title="Steam 用户"></a>Steam 用户</h2><h3 id="Augmented-Steam"><a href="#Augmented-Steam" class="headerlink" title="Augmented Steam"></a>Augmented Steam</h3><p>简介：为 steam 官网提供了众多试用的玩意儿</p>
+<h2 id="IT-工作者"><a href="#IT-工作者" class="headerlink" title="IT 工作者"></a>IT 工作者</h2><h3 id="Octotree-GitHub-code-tree"><a href="#Octotree-GitHub-code-tree" class="headerlink" title="Octotree - GitHub code tree"></a>Octotree - GitHub code tree</h3><p>简介：方便地查看 github 上某个 repository 的文件结构</p>
+<h3 id="Surfingkeys"><a href="#Surfingkeys" class="headerlink" title="Surfingkeys"></a>Surfingkeys</h3><p>简介：像 vim 一样的玩意儿，让你完全用你的键盘浏览网页</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Browser</tag>
+        <tag>Edge</tag>
       </tags>
   </entry>
   <entry>
@@ -2110,60 +2110,6 @@
       </tags>
   </entry>
   <entry>
-    <title>The chmod command in Linux</title>
-    <url>/posts/a9dc5c1e.html</url>
-    <content><![CDATA[<p>I accidentally ran a wrong <code>chmod</code> command in my Linux, and it messed up everything! I hate the permission management in Linux. :|</p>
-<span id="more"></span>
-
-<h2 id="PERMISSION-MANAGEMENT-IN-LINUX"><a href="#PERMISSION-MANAGEMENT-IN-LINUX" class="headerlink" title="PERMISSION MANAGEMENT IN LINUX"></a>PERMISSION MANAGEMENT IN LINUX</h2><p>When you run <code>ls -l</code> in your terminal, you can always see strings like <code>-rw-r–r–</code> and <code>drwxr-xr-x</code> etc. To understand them, we can always split a such string into four part. The first one is a single character, <code>-</code> if it’s a file and <code>d</code> if it’s a directory. The rest 9 characters can be equally divided into three parts, representing the permission of the owner, the members of the group and other users relatively. Every part contains three characters, showing the permission of <strong>r</strong>(read), <strong>w</strong>(write) and <strong>x</strong>(execute).</p>
-<p><img data-src="https://s1.ax1x.com/2023/03/23/pp0Z5YF.png" alt="When you run `ls -l`"><br><img data-src="https://www.runoob.com/wp-content/uploads/2014/08/file-permissions-rwx.jpg" alt="From www.runoob.com"></p>
-<p>Besides the bit pattern, you can also use octal notation to express these permissions, which uses 4 for <strong>r</strong>, 2 for <strong>w</strong> and 1 for <strong>x</strong>. The sum of these octal numbers then can replace the <code>rwx</code> pattern. For example, using 6 for <strong>rw</strong>.</p>
-<p>Why is 4, 2 and 1? Actually, you can view every 3-character unit as 3 binary bits. So, 100(r–) means 4 in decimal, 010(-w-) means 2, and 001(–x) means 1. You can then understand what dose the sum means.</p>
-<p><img data-src="https://www.runoob.com/wp-content/uploads/2014/08/rwx-standard-unix-permission-bits.png" alt="From www.runoob.com"></p>
-<p>Now, you can read this:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">-rw------- <span class="comment"># (600) Owner:RW</span></span><br><span class="line">-rw-r--r-- <span class="comment"># (644) Owner:RW Group:R Other:R</span></span><br><span class="line">-rw-rw-rw- <span class="comment"># (666) Owner:RW Group:RW Other:RW</span></span><br><span class="line">-rwx------ <span class="comment"># (700) Owner:RWX</span></span><br><span class="line">-rwx--x--x <span class="comment"># (711) Owner:RWX Group:X Other:X</span></span><br><span class="line">-rwxr-xr-x <span class="comment"># (755) Owner:RWX Group:RX Other:RX</span></span><br><span class="line">-rwxrwxrwx <span class="comment"># (777) Owner:RWX Group:RWX Other:RWX</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="DEFAULT-PERMISSION"><a href="#DEFAULT-PERMISSION" class="headerlink" title="DEFAULT PERMISSION"></a>DEFAULT PERMISSION</h2><p>The default permission for a file is 666, which means <code>-rw-rw-rw-</code>, indicating that the owner, group and other users can read and write the file. The default permission for a directory is 777, which means <code>drwxrwxrwx</code>, indicating that the owner, group and other users can read, write and access the directory.</p>
-<p>However, these default permissions are affected by the user’s <strong>umask</strong> setting. The umask is a value that controls which permissions are removed when creating a new file or directory. For example, if the user’s umask is 022, then the write permission for group and other users will be removed when creating a new file, and the write and execute permission for group and other users will be removed when creating a new directory. Therefore:</p>
-<p>The actual default permission for a file is 666 - 022 = 644, which means <code>-rw-r–r–</code>. The actual default permission for a directory is 777 - 022 = 755, which means <code>drwxr-xr-x</code>.</p>
-<p>You can run the <code>umask</code> command to see what your setting is.</p>
-<p><img data-src="https://s1.ax1x.com/2023/03/23/pp0eZtS.png"></p>
-<h2 id="THE-CHMOD-COMMAND"><a href="#THE-CHMOD-COMMAND" class="headerlink" title="THE CHMOD COMMAND"></a>THE CHMOD COMMAND</h2><p><img data-src="https://s1.ax1x.com/2023/03/23/pp0mVD1.png"></p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> [-cfvR] [--<span class="built_in">help</span>] [--version] &lt;mode&gt; &lt;file&gt;...</span><br></pre></td></tr></tbody></table></figure>
-
-<p>The <code>-R</code> means recursively. You will need it.</p>
-<p>The most important part is <code>&lt;mode&gt;</code> obviously. Its pattern is:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">[ugoa...][[+-=][rwxX]...][,...]</span><br></pre></td></tr></tbody></table></figure>
-
-<ol>
-<li>[ugoa…]: <code>u</code> means user, <code>g</code> means group, <code>o</code> means other, and <code>a</code> means all.</li>
-<li>[+-=]: <code>+</code> means adding permission, <code>-</code> means removing, and <code>=</code> means setting the permissions for a specific user type, <strong>regardless of the previous permissions</strong>.</li>
-<li>[rwxX]: You have known <code>rwx</code>, and the <code>X</code> means setting the execute permission only if the file is a directory or already has execute permission for some user.</li>
-</ol>
-<p>For example:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> u+x &lt;file&gt; <span class="comment"># adding execute permission to the owner of the file, and leaving the group and other permissions unchanged</span></span><br><span class="line"><span class="built_in">chmod</span> o-rwx &lt;file&gt; <span class="comment"># removing all permissions from others, and leaving the owner and group permissions unchanged</span></span><br><span class="line"><span class="built_in">chmod</span> a=r &lt;file&gt; <span class="comment"># setting all user types’ permissions to read only, overwriting any previous permissions</span></span><br><span class="line"><span class="built_in">chmod</span> a+X &lt;file&gt; <span class="comment"># adding execute permission to all user types only if file is a directory or already executable by some user</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>You can also use octal pattern represents the <code>&lt;mode&gt;</code>. For example:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 777 &lt;file&gt; <span class="comment"># now everyone can read, write and execute the &lt;file&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="CHANGE-PERMISSIONS-TO-FILE-OR-DIR-INDIVIDUALLY"><a href="#CHANGE-PERMISSIONS-TO-FILE-OR-DIR-INDIVIDUALLY" class="headerlink" title="CHANGE PERMISSIONS TO FILE OR DIR INDIVIDUALLY"></a>CHANGE PERMISSIONS TO FILE OR DIR INDIVIDUALLY</h2><p>To change permissions to file or dir individually, you can use the <code>-exec</code> option of <code>find</code> to execute chmod on each matching file or directory. For example: To find all files in the current directory and its subdirectories and change their permissions to 644, you can use: <code>find . -type f -exec chmod 644 {} ;</code></p>
-<p><code>-type f</code> means file. You can use <code>-type d</code> to find all the dir.</p>
-<h2 id="THANKS"><a href="#THANKS" class="headerlink" title="THANKS"></a>THANKS</h2><p>By the way, this blog was completed with the help of new bing. I asked her many questions and got great answers. She also helped me correct errors and polish my writing. She is just too amazing!</p>
-<h2 id="REFERENCE"><a href="#REFERENCE" class="headerlink" title="REFERENCE"></a>REFERENCE</h2><ul>
-<li><a href="https://www.runoob.com/linux/linux-comm-chmod.html">《Linux chmod 命令 | 菜鸟教程》</a></li>
-<li><a href="https://blog.csdn.net/u013197629/article/details/73608613">《Linux 权限详解（chmod、600、644、700、711、755、777、4755、6755、7755）》</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>chmod</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>VS Code 中文乱码问题</title>
     <url>/posts/ca05bed5.html</url>
     <content><![CDATA[<p><strong>2023 年 1 月 12 日更新：</strong> 找到了方便地改变 Windows 中终端默认编码的方法，所以原来的改变 C/C++ 文件默认编码的方法可以淘汰了。</p>
@@ -2215,6 +2161,60 @@
       <tags>
         <tag>C/C++</tag>
         <tag>VS Code</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>The chmod command in Linux</title>
+    <url>/posts/a9dc5c1e.html</url>
+    <content><![CDATA[<p>I accidentally ran a wrong <code>chmod</code> command in my Linux, and it messed up everything! I hate the permission management in Linux. :|</p>
+<span id="more"></span>
+
+<h2 id="PERMISSION-MANAGEMENT-IN-LINUX"><a href="#PERMISSION-MANAGEMENT-IN-LINUX" class="headerlink" title="PERMISSION MANAGEMENT IN LINUX"></a>PERMISSION MANAGEMENT IN LINUX</h2><p>When you run <code>ls -l</code> in your terminal, you can always see strings like <code>-rw-r–r–</code> and <code>drwxr-xr-x</code> etc. To understand them, we can always split a such string into four part. The first one is a single character, <code>-</code> if it’s a file and <code>d</code> if it’s a directory. The rest 9 characters can be equally divided into three parts, representing the permission of the owner, the members of the group and other users relatively. Every part contains three characters, showing the permission of <strong>r</strong>(read), <strong>w</strong>(write) and <strong>x</strong>(execute).</p>
+<p><img data-src="https://s1.ax1x.com/2023/03/23/pp0Z5YF.png" alt="When you run `ls -l`"><br><img data-src="https://www.runoob.com/wp-content/uploads/2014/08/file-permissions-rwx.jpg" alt="From www.runoob.com"></p>
+<p>Besides the bit pattern, you can also use octal notation to express these permissions, which uses 4 for <strong>r</strong>, 2 for <strong>w</strong> and 1 for <strong>x</strong>. The sum of these octal numbers then can replace the <code>rwx</code> pattern. For example, using 6 for <strong>rw</strong>.</p>
+<p>Why is 4, 2 and 1? Actually, you can view every 3-character unit as 3 binary bits. So, 100(r–) means 4 in decimal, 010(-w-) means 2, and 001(–x) means 1. You can then understand what dose the sum means.</p>
+<p><img data-src="https://www.runoob.com/wp-content/uploads/2014/08/rwx-standard-unix-permission-bits.png" alt="From www.runoob.com"></p>
+<p>Now, you can read this:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">-rw------- <span class="comment"># (600) Owner:RW</span></span><br><span class="line">-rw-r--r-- <span class="comment"># (644) Owner:RW Group:R Other:R</span></span><br><span class="line">-rw-rw-rw- <span class="comment"># (666) Owner:RW Group:RW Other:RW</span></span><br><span class="line">-rwx------ <span class="comment"># (700) Owner:RWX</span></span><br><span class="line">-rwx--x--x <span class="comment"># (711) Owner:RWX Group:X Other:X</span></span><br><span class="line">-rwxr-xr-x <span class="comment"># (755) Owner:RWX Group:RX Other:RX</span></span><br><span class="line">-rwxrwxrwx <span class="comment"># (777) Owner:RWX Group:RWX Other:RWX</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="DEFAULT-PERMISSION"><a href="#DEFAULT-PERMISSION" class="headerlink" title="DEFAULT PERMISSION"></a>DEFAULT PERMISSION</h2><p>The default permission for a file is 666, which means <code>-rw-rw-rw-</code>, indicating that the owner, group and other users can read and write the file. The default permission for a directory is 777, which means <code>drwxrwxrwx</code>, indicating that the owner, group and other users can read, write and access the directory.</p>
+<p>However, these default permissions are affected by the user’s <strong>umask</strong> setting. The umask is a value that controls which permissions are removed when creating a new file or directory. For example, if the user’s umask is 022, then the write permission for group and other users will be removed when creating a new file, and the write and execute permission for group and other users will be removed when creating a new directory. Therefore:</p>
+<p>The actual default permission for a file is 666 - 022 = 644, which means <code>-rw-r–r–</code>. The actual default permission for a directory is 777 - 022 = 755, which means <code>drwxr-xr-x</code>.</p>
+<p>You can run the <code>umask</code> command to see what your setting is.</p>
+<p><img data-src="https://s1.ax1x.com/2023/03/23/pp0eZtS.png"></p>
+<h2 id="THE-CHMOD-COMMAND"><a href="#THE-CHMOD-COMMAND" class="headerlink" title="THE CHMOD COMMAND"></a>THE CHMOD COMMAND</h2><p><img data-src="https://s1.ax1x.com/2023/03/23/pp0mVD1.png"></p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> [-cfvR] [--<span class="built_in">help</span>] [--version] &lt;mode&gt; &lt;file&gt;...</span><br></pre></td></tr></tbody></table></figure>
+
+<p>The <code>-R</code> means recursively. You will need it.</p>
+<p>The most important part is <code>&lt;mode&gt;</code> obviously. Its pattern is:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">[ugoa...][[+-=][rwxX]...][,...]</span><br></pre></td></tr></tbody></table></figure>
+
+<ol>
+<li>[ugoa…]: <code>u</code> means user, <code>g</code> means group, <code>o</code> means other, and <code>a</code> means all.</li>
+<li>[+-=]: <code>+</code> means adding permission, <code>-</code> means removing, and <code>=</code> means setting the permissions for a specific user type, <strong>regardless of the previous permissions</strong>.</li>
+<li>[rwxX]: You have known <code>rwx</code>, and the <code>X</code> means setting the execute permission only if the file is a directory or already has execute permission for some user.</li>
+</ol>
+<p>For example:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> u+x &lt;file&gt; <span class="comment"># adding execute permission to the owner of the file, and leaving the group and other permissions unchanged</span></span><br><span class="line"><span class="built_in">chmod</span> o-rwx &lt;file&gt; <span class="comment"># removing all permissions from others, and leaving the owner and group permissions unchanged</span></span><br><span class="line"><span class="built_in">chmod</span> a=r &lt;file&gt; <span class="comment"># setting all user types’ permissions to read only, overwriting any previous permissions</span></span><br><span class="line"><span class="built_in">chmod</span> a+X &lt;file&gt; <span class="comment"># adding execute permission to all user types only if file is a directory or already executable by some user</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>You can also use octal pattern represents the <code>&lt;mode&gt;</code>. For example:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 777 &lt;file&gt; <span class="comment"># now everyone can read, write and execute the &lt;file&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="CHANGE-PERMISSIONS-TO-FILE-OR-DIR-INDIVIDUALLY"><a href="#CHANGE-PERMISSIONS-TO-FILE-OR-DIR-INDIVIDUALLY" class="headerlink" title="CHANGE PERMISSIONS TO FILE OR DIR INDIVIDUALLY"></a>CHANGE PERMISSIONS TO FILE OR DIR INDIVIDUALLY</h2><p>To change permissions to file or dir individually, you can use the <code>-exec</code> option of <code>find</code> to execute chmod on each matching file or directory. For example: To find all files in the current directory and its subdirectories and change their permissions to 644, you can use: <code>find . -type f -exec chmod 644 {} ;</code></p>
+<p><code>-type f</code> means file. You can use <code>-type d</code> to find all the dir.</p>
+<h2 id="THANKS"><a href="#THANKS" class="headerlink" title="THANKS"></a>THANKS</h2><p>By the way, this blog was completed with the help of new bing. I asked her many questions and got great answers. She also helped me correct errors and polish my writing. She is just too amazing!</p>
+<h2 id="REFERENCE"><a href="#REFERENCE" class="headerlink" title="REFERENCE"></a>REFERENCE</h2><ul>
+<li><a href="https://www.runoob.com/linux/linux-comm-chmod.html">《Linux chmod 命令 | 菜鸟教程》</a></li>
+<li><a href="https://blog.csdn.net/u013197629/article/details/73608613">《Linux 权限详解（chmod、600、644、700、711、755、777、4755、6755、7755）》</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>chmod</tag>
       </tags>
   </entry>
   <entry>
@@ -3544,6 +3544,74 @@
 </ul>
 <p><img data-src="https://s1.ax1x.com/2023/07/19/pC7SA0I.png" alt="From high-level to low-level"></p>
 <p>Nand2Tetris Part II is <strong>more demanding</strong> than Nand2Tetris Part I.</p>
+<h2 id="Unit-7-1"><a href="#Unit-7-1" class="headerlink" title="Unit 7.1"></a>Unit 7.1</h2><p>Module 1: Virtual Machine</p>
+<ul>
+<li>Understanding the abstraction</li>
+<li>Building the implementation</li>
+</ul>
+<p>Module 1: Take Home Lessons</p>
+<ul>
+<li>Compilation (big picture)</li>
+<li>Virtualization</li>
+<li>VM abstraction</li>
+<li>Stack processing</li>
+<li>VM implementation</li>
+<li>Pointers</li>
+<li>Programming</li>
+</ul>
+<h2 id="Unit-7-2"><a href="#Unit-7-2" class="headerlink" title="Unit 7.2"></a>Unit 7.2</h2><p>VM Abstraction: the Stack</p>
+<p>Stack operations:</p>
+<ul>
+<li>push: add a plate to the stack’s top</li>
+<li>pop: remove the top plate</li>
+</ul>
+<p>Applying a function $f$ on the stack:</p>
+<ul>
+<li>pops the argument(s) from the stack</li>
+<li>computes $f$ on the arguments</li>
+<li>pushes the result onto the stack</li>
+</ul>
+<p>Stack arithmetic:</p>
+<p>high-level:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">x = 17 + 19</span><br></pre></td></tr></tbody></table></figure>
+
+<p>After compilation:</p>
+<p>low-level:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">push 17</span><br><span class="line">push 19</span><br><span class="line">add</span><br><span class="line">pop x</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Stack machine, manipulated by:</p>
+<ul>
+<li>Arithmetic / logical commands</li>
+<li>Memory segment commands</li>
+<li>Branching commands</li>
+<li>Function commands</li>
+</ul>
+<h2 id="Unit-7-3"><a href="#Unit-7-3" class="headerlink" title="Unit 7.3"></a>Unit 7.3</h2><p>VM Abstraction: Memory Segments</p>
+<p>Memory segments:</p>
+<ul>
+<li>local</li>
+<li>argument</li>
+<li>this</li>
+<li>that</li>
+<li>constant</li>
+<li>static</li>
+<li>pointer</li>
+<li>temp</li>
+</ul>
+<p>Syntax:</p>
+<ul>
+<li>push $segment$ $i$:<br>Where $segment$ is: argument, local, static, constant, this, that, pointer, or temp<br>and $i$ is a non-negative integer</li>
+<li>pop $segment$ $i$:<br>Where $segment$ is: argument, local, static, this, that, pointer, or temp<br>and $i$ is a non-negative integer</li>
+</ul>
+<h2 id="Unit-7-4"><a href="#Unit-7-4" class="headerlink" title="Unit 7.4"></a>Unit 7.4</h2><h3 id="Pointer-manipulation"><a href="#Pointer-manipulation" class="headerlink" title="Pointer manipulation"></a>Pointer manipulation</h3><p>asterisk: *</p>
+<h3 id="Stack-machine"><a href="#Stack-machine" class="headerlink" title="Stack machine"></a>Stack machine</h3><p>…</p>
+<h3 id="VM-translator-perspective"><a href="#VM-translator-perspective" class="headerlink" title="VM translator perspective"></a>VM translator perspective</h3><p>VM Translator:</p>
+<ul>
+<li>A program that translates VM code into machine language</li>
+<li>Each VM command generates several assembly commands</li>
+</ul>
+<h2 id="Unit-7-5"><a href="#Unit-7-5" class="headerlink" title="Unit 7.5"></a>Unit 7.5</h2><p>Implementing <strong>local</strong></p>
+<p><img data-src="" alt="Implementing local"></p>
 ]]></content>
       <categories>
         <category>CS</category>
@@ -4657,6 +4725,30 @@
       </tags>
   </entry>
   <entry>
+    <title>My personal summay of Stanford CS106L</title>
+    <url>/posts/b16dfec9.html</url>
+    <content><![CDATA[<p>This is <a href="https://web.stanford.edu/class/cs106l/index.html">CS106L</a>, an in-depth modern C++ language course from Stanford. I enrolled in it at the beginning of April and almost finished it today.</p>
+<span id="more"></span>
+
+<p>This class is amazing. It covers so many interesting and exciting features of modern C++ that I do not get a chance to learn in my school C++ class, including initialization lists, STL containers and algorithms, lambda expressions, templates, all the six SMFs, move semantics, r-value reference, cpp-style casting (static_cast/const_cast), smart pointers, RAII, etc. These make the code modern and robust! These are the real C++ things!</p>
+<p>I learnt this course from the website. This is actually not an open source course. I can’t find the lecture videos and notes. What I am able to read are only the slides. Every week there are two lectures on Tuesday and Thursday. The slides are updated on the website the next day and I download them to my tab. They are not very clear so what I have learnt is really superficial. There are two assignments, I tried to finish the second locally, but the online submission system is only open to Stanford students, so… I don’t really know what level I’m at. But, on the plus side, at least I am learning the direction I should go.</p>
+<p>If you also want to learn more about modern C++, give this course a try.</p>
+<p><img data-src="https://s1.ax1x.com/2023/06/01/p9zRyPP.png" alt="Website of the course"></p>
+<p><img data-src="https://s1.ax1x.com/2023/06/01/p9zRgxS.png" alt="Assignment 2"></p>
+<p><img data-src="https://s1.ax1x.com/2023/06/01/p9zRRKg.jpg" alt="Slides in my Samsung Note"></p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>Online course summary</tag>
+        <tag>C &amp; C++</tag>
+        <tag>CS106L</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>static_cast and const_cast in C++</title>
     <url>/posts/f5746381.html</url>
     <content><![CDATA[<p>This is a note for Lecture 8, <a href="https://web.stanford.edu/class/cs106l/index.html">CS106L</a>, Spring 2023.</p>
@@ -4690,30 +4782,6 @@
       <tags>
         <tag>C/C++</tag>
         <tag>const</tag>
-        <tag>CS106L</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>My personal summay of Stanford CS106L</title>
-    <url>/posts/b16dfec9.html</url>
-    <content><![CDATA[<p>This is <a href="https://web.stanford.edu/class/cs106l/index.html">CS106L</a>, an in-depth modern C++ language course from Stanford. I enrolled in it at the beginning of April and almost finished it today.</p>
-<span id="more"></span>
-
-<p>This class is amazing. It covers so many interesting and exciting features of modern C++ that I do not get a chance to learn in my school C++ class, including initialization lists, STL containers and algorithms, lambda expressions, templates, all the six SMFs, move semantics, r-value reference, cpp-style casting (static_cast/const_cast), smart pointers, RAII, etc. These make the code modern and robust! These are the real C++ things!</p>
-<p>I learnt this course from the website. This is actually not an open source course. I can’t find the lecture videos and notes. What I am able to read are only the slides. Every week there are two lectures on Tuesday and Thursday. The slides are updated on the website the next day and I download them to my tab. They are not very clear so what I have learnt is really superficial. There are two assignments, I tried to finish the second locally, but the online submission system is only open to Stanford students, so… I don’t really know what level I’m at. But, on the plus side, at least I am learning the direction I should go.</p>
-<p>If you also want to learn more about modern C++, give this course a try.</p>
-<p><img data-src="https://s1.ax1x.com/2023/06/01/p9zRyPP.png" alt="Website of the course"></p>
-<p><img data-src="https://s1.ax1x.com/2023/06/01/p9zRgxS.png" alt="Assignment 2"></p>
-<p><img data-src="https://s1.ax1x.com/2023/06/01/p9zRRKg.jpg" alt="Slides in my Samsung Note"></p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>Online course summary</tag>
-        <tag>C &amp; C++</tag>
         <tag>CS106L</tag>
       </tags>
   </entry>
