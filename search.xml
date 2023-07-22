@@ -2781,11 +2781,11 @@
 <span id="more"></span>
 
 <h2 id="燧石装备"><a href="#燧石装备" class="headerlink" title="燧石装备"></a>燧石装备</h2><p>由于 NTP 模组（<a href="https://www.mcmod.cn/class/2138.html">No Tree Punching，无树可撸</a>）的存在，初入 RLCraft，你的第一件事情不再是获取原木，而是撸树叶获取木棍，然后在河边找到沙砾获取燧石。你可以按住鼠标左键徒手破坏树叶和沙砾，然后用右键点击掉落物以拿起它（或者你也可以按下 shift 来吸取附近的掉落物）。</p>
-<p>手拿燧石右击石头 / 圆石等坚硬方块（?）上表面，你可以获取燧石碎块，然后打开背包，在 2*2 的合成栏上边放燧石碎块，下边放木棍，获取一把粗糙的小刀。</p>
-<p><img data-src="https://static.wikia.nocookie.net/shivaxis-rlcraft/images/2/23/Crafting_Flint_Knife.png/revision/latest?cb=20190924000025" alt="粗糙的小刀（图源 RLCraft Wiki）"></p>
+<p>手拿燧石右击石头 / 圆石等坚硬方块（?）上表面，你可以获取燧石碎块，然后打开背包，在 2*2 的合成栏上边放燧石碎块，下边放木棍，获取一把粗糙的小刀。（图源 RLCraft Wiki）</p>
+<p><img data-src="https://s1.ax1x.com/2023/07/22/pCq0pLt.png" alt="粗糙的小刀"></p>
 <p>使用粗糙的小刀破坏草，可以获得植物纤维，在背包合成栏用三个植物纤维合成一个植物绳。然后再使用燧石碎块、植物绳、木棍合成粗糙的斧头。恭喜你获取了这个游戏的第一把斧头，用这把斧头你就可以开采原木了 —— 当心，树倒下来可能会砸死你！</p>
-<p><img data-src="https://static.wikia.nocookie.net/shivaxis-rlcraft/images/0/09/Crafting_Plant_String.png/revision/latest?cb=20190924000241" alt="植物绳"></p>
-<p><img data-src="https://static.wikia.nocookie.net/shivaxis-rlcraft/images/c/cd/Crafting_Flint_Hatchet.png/revision/latest?cb=20190924000820" alt="粗糙的斧头"></p>
+<p><img data-src="https://s1.ax1x.com/2023/07/22/pCq0SsI.png" alt="植物绳"></p>
+<p><img data-src="https://s1.ax1x.com/2023/07/22/pCqwzQA.png" alt="粗糙的斧头"></p>
 <p>你不再能够直接使用背包合成栏分解原木，而是需要把原木竖直放在地上，并用斧头右击其上表面，以获取两块木板。木棍也可以用类似的方式获取 —— 将木板放在地上，然后用斧头右击。</p>
 <p>你可以看 jei 获取更多燧石工具的制作方法，但你更可以开始制作原版的木制工具。用木镐挖石头会掉落石子，四个石子 2*2 摆放可以获取圆石，而挖圆石则会直接掉落圆石。</p>
 <p>恭喜你进入石器时代！现在，你可以开始下矿了！但要时刻注意的一点是照明 —— 恐怖生物会在黑暗中生成… 别自己怎么死的都不知道。你会发现木棍加煤炭不再能合成原版火把，它们现在只能合成” 熄灭的火把”。要想点亮它们，你需要一颗打火石 —— 将熄灭的火把和打火石放在合成栏里，你就可以获得点燃的火把。但这火把仍然会熄灭 —— 比如一场雨过后，比如燃烧很久之后… 制作原版火把相对复杂，但你可以在村庄等地方找到一些。</p>
