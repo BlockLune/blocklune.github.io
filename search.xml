@@ -2110,60 +2110,6 @@
       </tags>
   </entry>
   <entry>
-    <title>VS Code 中文乱码问题</title>
-    <url>/posts/ca05bed5.html</url>
-    <content><![CDATA[<p><strong>2023 年 1 月 12 日更新：</strong> 找到了方便地改变 Windows 中终端默认编码的方法，所以原来的改变 C/C++ 文件默认编码的方法可以淘汰了。</p>
-<span id="more"></span>
-
-<p>现在的新办法是：</p>
-<p>打开 “控制面板 - 时钟和区域 - 区域 - 管理 - 更改系统区域设置 (C)…”</p>
-<p>勾选 “Beta 版：使用 Unicode UTF-8 提供全球语言支持 (U)”</p>
-<p>确定，重启电脑。</p>
-<p>打开 CMD 测试一下，输入 <code>chcp</code> 可以发现已经变成了 <code>65001</code>，说明成功了。</p>
-<p>方法来源：<a href="https://blog.csdn.net/weixin_44285445/article/details/112325994">《Git Bash 中文显示乱码，options 修改为 zh_CN 和 utf-8 还是不行怎么办？》</a></p>
-<div class="note danger no-icon"><h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><p>该方法全局更改 Windows 系统的默认编码，可能引起某些软件运行异常。</p>
-</div>
-
-<p><strong>以下是原来的文章</strong></p>
-<p>开门见山，我最后采用的解决方案是对 C/C++ 文件单独设置默认编码。大致的操作方法是，打开 VS Code 的 <code>settings.json</code> 文件，添加如下配置：</p>
-<figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">"[cpp]"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"files.encoding"</span><span class="punctuation">:</span> <span class="string">"gbk"</span></span><br><span class="line"><span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">"[c]"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"files.encoding"</span><span class="punctuation">:</span> <span class="string">"gbk"</span></span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>具体的操作请参见原文：<a href="https://blog.csdn.net/qq_45538473/article/details/107258234">《VSCODE C 语言终端输出中文乱码编码设置》</a></p>
-<h2 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h2><p>复盘一下解决这个问题的过程。</p>
-<p>首先了解到的是 VS Code 中文乱码的根本原因 ——VS Code 默认的编码格式是 UTF-8 （这一点可在 VS Code 右下角看到），而 VS Code 调用的终端是 CMD，默认的编码格式是 gbk。所以解决方案就是两个方向：要么是更改终端的默认编码，从默认的 gbk 转为 utf8；要么就是更改 VS Code 中的 C/C++ 文件的编码。</p>
-<p><strong>2022/10/26 更新：</strong></p>
-<p>看到一个有意思的科普视频，贴在这里，可以看看乱码到底是如何产生的。</p>
-<p><a href="https://www.bilibili.com/video/BV1cB4y177QR/">锟斤拷 �⊠ 是怎样炼成的 —— 中文显示 “⼊” 门指南【柴知道】</a></p>
-<h3 id="第一个方向：更改终端默认编码"><a href="#第一个方向：更改终端默认编码" class="headerlink" title="第一个方向：更改终端默认编码"></a>第一个方向：更改终端默认编码</h3><p>了解到更改 CMD 编码为 utf8 的命令如下：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">chcp 65001</span><br></pre></td></tr></tbody></table></figure>
-
-<p>顺便一提，查看当前编码的命令为：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">chcp</span><br></pre></td></tr></tbody></table></figure>
-
-<p><code>chcp 65001</code> 这串命令的意思就是更改代码页为 65001，也就是用 utf8 编码。</p>
-<p>这串命令不是永久生效的，所以每次都要输入，比较麻烦。网上也有一些解决方案，比如通过修改注册表每次都自动运行一下上边的命令（<a href="https://www.jianshu.com/p/f40e494dc01d">《修改 Windows10 命令终端 cmd 的编码为 UTF-8》</a>），或者是配置 VS Code 让其自动输入的（<a href="https://blog.csdn.net/lzyws739307453/article/details/89823900">《永久解决 VS Code 终端中文乱码问题》</a>），可以去看看。</p>
-<h3 id="第二个方向：更改-VS-Code-中的-C-C-文件的编码"><a href="#第二个方向：更改-VS-Code-中的-C-C-文件的编码" class="headerlink" title="第二个方向：更改 VS Code 中的 C/C++ 文件的编码"></a>第二个方向：更改 VS Code 中的 C/C++ 文件的编码</h3><p>最初这个方法我只是想临时解决一下，就比较简单。点一下右下角的 UTF-8，选择 <code>通过编码重新打开</code>，选择 gbk 就行了。但这样只有一次，然后就想看看有没有永久的方法，便看到了上边的文章。</p>
-<p>顺便一提，这里可能还要把 VS Code 设置中的自动猜测编码功能打开，具体操作如下：</p>
-<ol>
-<li>使用 <code>Ctrl + ,</code> 快捷键打开设置；</li>
-<li>在搜索框输入 <code>encoding</code> ，找到 <code>Files:Auto Guess Encoding</code>，勾上它。</li>
-</ol>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="https://blog.csdn.net/qq_45538473/article/details/107258234">《VSCODE C 语言终端输出中文乱码编码设置》</a></li>
-<li><a href="https://www.jianshu.com/p/f40e494dc01d">《修改 Windows10 命令终端 cmd 的编码为 UTF-8》</a></li>
-<li><a href="https://blog.csdn.net/lzyws739307453/article/details/89823900">《永久解决 VS Code 终端中文乱码问题》</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-        <tag>VS Code</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>The chmod command in Linux</title>
     <url>/posts/a9dc5c1e.html</url>
     <content><![CDATA[<p>I accidentally ran a wrong <code>chmod</code> command in my Linux, and it messed up everything! I hate the permission management in Linux. :|</p>
@@ -2215,6 +2161,60 @@
       <tags>
         <tag>Linux</tag>
         <tag>chmod</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VS Code 中文乱码问题</title>
+    <url>/posts/ca05bed5.html</url>
+    <content><![CDATA[<p><strong>2023 年 1 月 12 日更新：</strong> 找到了方便地改变 Windows 中终端默认编码的方法，所以原来的改变 C/C++ 文件默认编码的方法可以淘汰了。</p>
+<span id="more"></span>
+
+<p>现在的新办法是：</p>
+<p>打开 “控制面板 - 时钟和区域 - 区域 - 管理 - 更改系统区域设置 (C)…”</p>
+<p>勾选 “Beta 版：使用 Unicode UTF-8 提供全球语言支持 (U)”</p>
+<p>确定，重启电脑。</p>
+<p>打开 CMD 测试一下，输入 <code>chcp</code> 可以发现已经变成了 <code>65001</code>，说明成功了。</p>
+<p>方法来源：<a href="https://blog.csdn.net/weixin_44285445/article/details/112325994">《Git Bash 中文显示乱码，options 修改为 zh_CN 和 utf-8 还是不行怎么办？》</a></p>
+<div class="note danger no-icon"><h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><p>该方法全局更改 Windows 系统的默认编码，可能引起某些软件运行异常。</p>
+</div>
+
+<p><strong>以下是原来的文章</strong></p>
+<p>开门见山，我最后采用的解决方案是对 C/C++ 文件单独设置默认编码。大致的操作方法是，打开 VS Code 的 <code>settings.json</code> 文件，添加如下配置：</p>
+<figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">"[cpp]"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"files.encoding"</span><span class="punctuation">:</span> <span class="string">"gbk"</span></span><br><span class="line"><span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">"[c]"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"files.encoding"</span><span class="punctuation">:</span> <span class="string">"gbk"</span></span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>具体的操作请参见原文：<a href="https://blog.csdn.net/qq_45538473/article/details/107258234">《VSCODE C 语言终端输出中文乱码编码设置》</a></p>
+<h2 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h2><p>复盘一下解决这个问题的过程。</p>
+<p>首先了解到的是 VS Code 中文乱码的根本原因 ——VS Code 默认的编码格式是 UTF-8 （这一点可在 VS Code 右下角看到），而 VS Code 调用的终端是 CMD，默认的编码格式是 gbk。所以解决方案就是两个方向：要么是更改终端的默认编码，从默认的 gbk 转为 utf8；要么就是更改 VS Code 中的 C/C++ 文件的编码。</p>
+<p><strong>2022/10/26 更新：</strong></p>
+<p>看到一个有意思的科普视频，贴在这里，可以看看乱码到底是如何产生的。</p>
+<p><a href="https://www.bilibili.com/video/BV1cB4y177QR/">锟斤拷 �⊠ 是怎样炼成的 —— 中文显示 “⼊” 门指南【柴知道】</a></p>
+<h3 id="第一个方向：更改终端默认编码"><a href="#第一个方向：更改终端默认编码" class="headerlink" title="第一个方向：更改终端默认编码"></a>第一个方向：更改终端默认编码</h3><p>了解到更改 CMD 编码为 utf8 的命令如下：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">chcp 65001</span><br></pre></td></tr></tbody></table></figure>
+
+<p>顺便一提，查看当前编码的命令为：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">chcp</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>chcp 65001</code> 这串命令的意思就是更改代码页为 65001，也就是用 utf8 编码。</p>
+<p>这串命令不是永久生效的，所以每次都要输入，比较麻烦。网上也有一些解决方案，比如通过修改注册表每次都自动运行一下上边的命令（<a href="https://www.jianshu.com/p/f40e494dc01d">《修改 Windows10 命令终端 cmd 的编码为 UTF-8》</a>），或者是配置 VS Code 让其自动输入的（<a href="https://blog.csdn.net/lzyws739307453/article/details/89823900">《永久解决 VS Code 终端中文乱码问题》</a>），可以去看看。</p>
+<h3 id="第二个方向：更改-VS-Code-中的-C-C-文件的编码"><a href="#第二个方向：更改-VS-Code-中的-C-C-文件的编码" class="headerlink" title="第二个方向：更改 VS Code 中的 C/C++ 文件的编码"></a>第二个方向：更改 VS Code 中的 C/C++ 文件的编码</h3><p>最初这个方法我只是想临时解决一下，就比较简单。点一下右下角的 UTF-8，选择 <code>通过编码重新打开</code>，选择 gbk 就行了。但这样只有一次，然后就想看看有没有永久的方法，便看到了上边的文章。</p>
+<p>顺便一提，这里可能还要把 VS Code 设置中的自动猜测编码功能打开，具体操作如下：</p>
+<ol>
+<li>使用 <code>Ctrl + ,</code> 快捷键打开设置；</li>
+<li>在搜索框输入 <code>encoding</code> ，找到 <code>Files:Auto Guess Encoding</code>，勾上它。</li>
+</ol>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://blog.csdn.net/qq_45538473/article/details/107258234">《VSCODE C 语言终端输出中文乱码编码设置》</a></li>
+<li><a href="https://www.jianshu.com/p/f40e494dc01d">《修改 Windows10 命令终端 cmd 的编码为 UTF-8》</a></li>
+<li><a href="https://blog.csdn.net/lzyws739307453/article/details/89823900">《永久解决 VS Code 终端中文乱码问题》</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+        <tag>VS Code</tag>
       </tags>
   </entry>
   <entry>
@@ -2777,17 +2777,32 @@
   <entry>
     <title>RLCraft 新手教程 - 一：过渡到你的正常生存</title>
     <url>/posts/a1ada34d.html</url>
-    <content><![CDATA[<p>本教程是笔者自己游玩过程中写的，出发点是笔者自己想玩但又不想花费时间看很多实况去了解一些细节，又找不到比较详细的文字版中文教程，以致于无从下手，只能慢慢啃各种模组的百科和 RLCraft Wiki，便以教程形式写下自己的游玩过程，希望对后来者有所帮助。笔者不是什么资深玩家，故难免有疏漏，请大家多多包涵。</p>
+    <content><![CDATA[<p>本系列教程是我自己游玩过程中写的。出发点是我没有在网上找到比较好的中文 RLCraft 文字教程，所以在此记录自己的游玩发现。也算留下一些记录，供未来又开坑的自己参考。这是第一篇：过渡到正常的生存。</p>
 <span id="more"></span>
 
-<p>由于 NTP 模组（<a href="https://www.mcmod.cn/class/2138.html">No Tree Punching，无树可撸</a>）的存在，初入 RLCraft，你的第一件事情不再是获取原木，而是撸树叶获取木棍，然后找到沙砾获取燧石。你可以按住鼠标左键徒手破坏树叶和沙砾，然后用右键点击掉落物以拿起它（或者你也可以按下 shift 来吸取附近的掉落物）。</p>
+<h2 id="燧石装备"><a href="#燧石装备" class="headerlink" title="燧石装备"></a>燧石装备</h2><p>由于 NTP 模组（<a href="https://www.mcmod.cn/class/2138.html">No Tree Punching，无树可撸</a>）的存在，初入 RLCraft，你的第一件事情不再是获取原木，而是撸树叶获取木棍，然后在河边找到沙砾获取燧石。你可以按住鼠标左键徒手破坏树叶和沙砾，然后用右键点击掉落物以拿起它（或者你也可以按下 shift 来吸取附近的掉落物）。</p>
 <p>手拿燧石右击石头 / 圆石等坚硬方块（?）上表面，你可以获取燧石碎块，然后打开背包，在 2*2 的合成栏上边放燧石碎块，下边放木棍，获取一把粗糙的小刀。</p>
+<p><img data-src="https://static.wikia.nocookie.net/shivaxis-rlcraft/images/2/23/Crafting_Flint_Knife.png/revision/latest?cb=20190924000025" alt="粗糙的小刀（图源 RLCraft Wiki）"></p>
 <p>使用粗糙的小刀破坏草，可以获得植物纤维，在背包合成栏用三个植物纤维合成一个植物绳。然后再使用燧石碎块、植物绳、木棍合成粗糙的斧头。恭喜你获取了这个游戏的第一把斧头，用这把斧头你就可以开采原木了 —— 当心，树倒下来可能会砸死你！</p>
+<p><img data-src="https://static.wikia.nocookie.net/shivaxis-rlcraft/images/0/09/Crafting_Plant_String.png/revision/latest?cb=20190924000241" alt="植物绳"></p>
+<p><img data-src="https://static.wikia.nocookie.net/shivaxis-rlcraft/images/c/cd/Crafting_Flint_Hatchet.png/revision/latest?cb=20190924000820" alt="粗糙的斧头"></p>
 <p>你不再能够直接使用背包合成栏分解原木，而是需要把原木竖直放在地上，并用斧头右击其上表面，以获取两块木板。木棍也可以用类似的方式获取 —— 将木板放在地上，然后用斧头右击。</p>
 <p>你可以看 jei 获取更多燧石工具的制作方法，但你更可以开始制作原版的木制工具。用木镐挖石头会掉落石子，四个石子 2*2 摆放可以获取圆石，而挖圆石则会直接掉落圆石。</p>
-<p>恭喜你进入石器时代！现在，你可以开始下矿了！但要时刻注意的一点是照明 —— 恐怖生物会在黑暗中生成… 别自己怎么死的都不知道。你会发现木棍加煤炭不再能合成原版火把，它们现在只能合成熄灭的火把。要点亮它们，你需要的是一颗打火石 —— 将熄灭的火把和打火石放在合成栏里，你就可以获得点燃的火把。但这火把仍然会熄灭 —— 比如一场雨过后，比如燃烧很久之后…</p>
-<p>虽然还有很多路要走，但你现在基本上可以短暂地享受一回类原版的 MC 了。</p>
-<p>To be continue…</p>
+<p>恭喜你进入石器时代！现在，你可以开始下矿了！但要时刻注意的一点是照明 —— 恐怖生物会在黑暗中生成… 别自己怎么死的都不知道。你会发现木棍加煤炭不再能合成原版火把，它们现在只能合成” 熄灭的火把”。要想点亮它们，你需要一颗打火石 —— 将熄灭的火把和打火石放在合成栏里，你就可以获得点燃的火把。但这火把仍然会熄灭 —— 比如一场雨过后，比如燃烧很久之后… 制作原版火把相对复杂，但你可以在村庄等地方找到一些。</p>
+<p>虽然还有很多路要走，但你现在基本上可以短暂地享受一会儿类原版的 MC 了。</p>
+<h2 id="定居下来"><a href="#定居下来" class="headerlink" title="定居下来"></a>定居下来</h2><p>RLCraft 的无限随机重生机制只有在你<strong>激活过指路石（传送石碑）</strong>或<strong>在床上睡过一觉</strong>之后才会结束。利用随机出生点，你可以选择搜刮一系列物资，然后激活指路石，然后找床睡觉，再破坏床，回到随机重生的状态。等你找到合适的定居点，再可以利用指路石传回来拿这些物资。</p>
+<p>定居点的选择：</p>
+<ul>
+<li>不能过高（例如山顶）：气温低、风元素等</li>
+<li>不要是沙漠：气温高</li>
+<li>远离龙</li>
+<li>靠近指路石</li>
+<li>…</li>
+</ul>
+<h2 id="前期经验获取方式"><a href="#前期经验获取方式" class="headerlink" title="前期经验获取方式"></a>前期经验获取方式</h2><p>在 RLCraft 中，你必须获取经验提升你的等级，才能解锁破坏某些方块或使用更高级的工具，例如铁质装备需要你的相应属性（攻击、防御等）达到 8 级，而钻石装备需要 16 级等等。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><em><a href="https://rlcraft.fandom.com/wiki/Getting_Started">Getting Started | RLCraft Wiki | Fandom</a></em></li>
+</ul>
 ]]></content>
       <categories>
         <category>Game</category>
