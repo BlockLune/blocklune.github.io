@@ -681,6 +681,20 @@
 <p>Was very widely used in 80s and early 90s; popularity diminished in late 90s.</p>
 <p>Recent resurgence (兴起): State-of-the-art technique for many applications</p>
 <h3 id="The-“one-learning-algorithm”-hypothesis"><a href="#The-“one-learning-algorithm”-hypothesis" class="headerlink" title="The “one learning algorithm” hypothesis"></a>The “one learning algorithm” hypothesis</h3><p>…</p>
+<h2 id="Lesson-60"><a href="#Lesson-60" class="headerlink" title="Lesson 60"></a>Lesson 60</h2><h3 id="Neural-Network"><a href="#Neural-Network" class="headerlink" title="Neural Network"></a>Neural Network</h3><p><img data-src="https://s1.ax1x.com/2023/07/23/pCq573n.png" alt="Neural Network"></p>
+<ul>
+<li>The input layer: the first layer</li>
+<li>The output layer: the last layer</li>
+<li>The hidden layer: the layer(s) between the first and the last layer</li>
+</ul>
+<p>Notations:</p>
+<ul>
+<li>$a_i^{(j)}$ = “activation” of unit $i$ in layer $j$ (activation 的意思是由一个具体神经元计算并输出的值)</li>
+<li>$\Theta^{(j)}$ = matrix of weights controlling function mapping from layer $j$ to layer $j+1$ (权重矩阵)</li>
+</ul>
+<p><img data-src="https://s1.ax1x.com/2023/07/23/pCqIoVO.png" alt="An example"></p>
+<p>If network has $s_j$ units in layer $j$, $s_{j+1}$ units in layer $j+1$, then $\Theta^{j}$ will be of dimension $s_{j+1} \times (s_j + 1)$.</p>
+<h2 id="Lesson-61"><a href="#Lesson-61" class="headerlink" title="Lesson 61"></a>Lesson 61</h2><h3 id="Forward-propagation-前向传播-Vectorized-implementation"><a href="#Forward-propagation-前向传播-Vectorized-implementation" class="headerlink" title="Forward propagation (前向传播): Vectorized implementation"></a>Forward propagation (前向传播): Vectorized implementation</h3><p><img data-src="https://s1.ax1x.com/2023/07/23/pCqoxp9.png" alt="Forward propagation: vectorized implementation"></p>
 ]]></content>
       <categories>
         <category>CS</category>
