@@ -256,6 +256,24 @@
       </categories>
   </entry>
   <entry>
+    <title>记一次网络改造</title>
+    <url>/posts/b9a9b40d.html</url>
+    <content><![CDATA[<p>事情的起因是跟爸闲聊我抱怨家里为什么没有预埋到我和我妹房间的网线，结果才知道原来是有的，只不过藏在空面板里没有装接口…… 于是就开始兴致勃勃地想把它装起来 (这样我房间里就有有线网了！)，赶紧买了面板，交换机，网线和一众工具。</p>
+<span id="more"></span>
+
+<p>接网线难在第一个，不过第一个弄会了后面也就快了，此次没有试水晶头的接法，下次有机会试试。</p>
+<p>昨天仅仅是把面板弄完了，交换机今天才到的刚刚也弄上了，现在都做的很方便接上就能用了！不过在等交换机的时候把家里老的路由器小米 WiFi4 整了出来，稀里糊涂地捣鼓了半天刷上了个 openwrt，这个东西似乎是个 linux 发行版？! 反正似乎潜力巨大，可以装好多东西，但现在还没太研究，以前想试的 adguard home 似乎也可以试试去了。</p>
+<p>现在我的房间也终于有千兆网了！</p>
+<p><img data-src="https://s1.ax1x.com/2022/08/28/vWrbPP.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrTUI.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWroVA.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWr75t.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWr5bd.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrOxS.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrL28.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrq8f.jpg"></p>
+]]></content>
+      <categories>
+        <category>Misc</category>
+      </categories>
+      <tags>
+        <tag>Memory</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>记一次电脑清灰</title>
     <url>/posts/50b3c006.html</url>
     <content><![CDATA[<p>电脑是以前的老电脑，初一暑假时候买的 y700。配置低的可怜，毫无性价比的一台机子吧，当年还是电脑小白的时候保意买的，在完全不懂的情况下被忽悠着忽悠着买了，满满的坑啊。</p>
@@ -271,24 +289,6 @@
 <p><img data-src="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed375.jpg" alt="擦掉旧的硅脂（原来这个方方的才是gpu！）"></p>
 <p><img data-src="https://pic.imgdb.cn/item/6308bb6816f2c2beb1fed7e1.jpg" alt="尽力清灰后..."></p>
 <p><img data-src="https://pic.imgdb.cn/item/6308bb6816f2c2beb1fed7e6.jpg" alt="涂多了...希望不要出事"></p>
-]]></content>
-      <categories>
-        <category>Misc</category>
-      </categories>
-      <tags>
-        <tag>Memory</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>记一次网络改造</title>
-    <url>/posts/b9a9b40d.html</url>
-    <content><![CDATA[<p>事情的起因是跟爸闲聊我抱怨家里为什么没有预埋到我和我妹房间的网线，结果才知道原来是有的，只不过藏在空面板里没有装接口…… 于是就开始兴致勃勃地想把它装起来 (这样我房间里就有有线网了！)，赶紧买了面板，交换机，网线和一众工具。</p>
-<span id="more"></span>
-
-<p>接网线难在第一个，不过第一个弄会了后面也就快了，此次没有试水晶头的接法，下次有机会试试。</p>
-<p>昨天仅仅是把面板弄完了，交换机今天才到的刚刚也弄上了，现在都做的很方便接上就能用了！不过在等交换机的时候把家里老的路由器小米 WiFi4 整了出来，稀里糊涂地捣鼓了半天刷上了个 openwrt，这个东西似乎是个 linux 发行版？! 反正似乎潜力巨大，可以装好多东西，但现在还没太研究，以前想试的 adguard home 似乎也可以试试去了。</p>
-<p>现在我的房间也终于有千兆网了！</p>
-<p><img data-src="https://s1.ax1x.com/2022/08/28/vWrbPP.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrTUI.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWroVA.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWr75t.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWr5bd.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrOxS.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrL28.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrq8f.jpg"></p>
 ]]></content>
       <categories>
         <category>Misc</category>
@@ -2864,9 +2864,11 @@
 <p><img data-src="https://s1.ax1x.com/2023/07/19/pC7KNeP.png" alt="RLCraft OptiFine 需求"></p>
 <p>下载完成后，你会得到名为 <code>OptiFine_1.12.2_HD_U_G5.jar</code> 的 jar 文件。<strong>直接将该文件放入游戏根目录下的 <code>mods</code> 文件夹内</strong>，即完成了 Optifine 的安装。</p>
 <p>附：一个我挺喜欢的光影 Complementary Reimagined (<em><a href="https://www.curseforge.com/minecraft/customization/complementary-reimagined">CurseForge</a></em>)</p>
+<h2 id="汉化"><a href="#汉化" class="headerlink" title="汉化"></a>汉化</h2><p><em><a href="https://www.bilibili.com/read/cv22766528">RLCraft 1.12.2 - Release v2.9.3 正式版，深度汉化任务书 + 物品 + 钓鱼，附汉化替换下载</a></em></p>
 <h2 id="可选：增减模组"><a href="#可选：增减模组" class="headerlink" title="可选：增减模组"></a>可选：增减模组</h2><p>由于我比较菜，所以我在游玩中通过增减一些模组来简化游戏难度。</p>
 <h3 id="增加的模组"><a href="#增加的模组" class="headerlink" title="增加的模组"></a>增加的模组</h3><ul>
 <li><em><a href="https://www.mcmod.cn/class/3425.html">Chunk Pre-generator</a></em>: 区块预生成器 </li>
+<li><em><a href="https://www.mcmod.cn/class/3832.html">Faster Ladder Climbing</a></em>: 更快的爬梯 </li>
 <li><em><a href="https://www.mcmod.cn/class/1350.html">GraveStone</a></em>: 墓碑（对我这种小白真的降低了很多难度，没有了死亡掉落物消失的烦恼，但代价是掉落物更难拾取了，因为要把墓碑挖掉）</li>
 <li><em><a href="https://www.mcmod.cn/class/1188.html">I18nUpdateMod</a></em>: 自动汉化更新 </li>
 <li><em><a href="https://www.mcmod.cn/class/3395.html">Inventory HUD+</a></em>: 物品栏 HUD+</li>
