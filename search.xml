@@ -256,24 +256,6 @@
       </categories>
   </entry>
   <entry>
-    <title>记一次网络改造</title>
-    <url>/posts/b9a9b40d.html</url>
-    <content><![CDATA[<p>事情的起因是跟爸闲聊我抱怨家里为什么没有预埋到我和我妹房间的网线，结果才知道原来是有的，只不过藏在空面板里没有装接口…… 于是就开始兴致勃勃地想把它装起来 (这样我房间里就有有线网了！)，赶紧买了面板，交换机，网线和一众工具。</p>
-<span id="more"></span>
-
-<p>接网线难在第一个，不过第一个弄会了后面也就快了，此次没有试水晶头的接法，下次有机会试试。</p>
-<p>昨天仅仅是把面板弄完了，交换机今天才到的刚刚也弄上了，现在都做的很方便接上就能用了！不过在等交换机的时候把家里老的路由器小米 WiFi4 整了出来，稀里糊涂地捣鼓了半天刷上了个 openwrt，这个东西似乎是个 linux 发行版？! 反正似乎潜力巨大，可以装好多东西，但现在还没太研究，以前想试的 adguard home 似乎也可以试试去了。</p>
-<p>现在我的房间也终于有千兆网了！</p>
-<p><img data-src="https://s1.ax1x.com/2022/08/28/vWrbPP.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrTUI.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWroVA.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWr75t.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWr5bd.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrOxS.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrL28.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrq8f.jpg"></p>
-]]></content>
-      <categories>
-        <category>Misc</category>
-      </categories>
-      <tags>
-        <tag>Memory</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>记一次电脑清灰</title>
     <url>/posts/50b3c006.html</url>
     <content><![CDATA[<p>电脑是以前的老电脑，初一暑假时候买的 y700。配置低的可怜，毫无性价比的一台机子吧，当年还是电脑小白的时候保意买的，在完全不懂的情况下被忽悠着忽悠着买了，满满的坑啊。</p>
@@ -289,6 +271,24 @@
 <p><img data-src="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed375.jpg" alt="擦掉旧的硅脂（原来这个方方的才是gpu！）"></p>
 <p><img data-src="https://pic.imgdb.cn/item/6308bb6816f2c2beb1fed7e1.jpg" alt="尽力清灰后..."></p>
 <p><img data-src="https://pic.imgdb.cn/item/6308bb6816f2c2beb1fed7e6.jpg" alt="涂多了...希望不要出事"></p>
+]]></content>
+      <categories>
+        <category>Misc</category>
+      </categories>
+      <tags>
+        <tag>Memory</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记一次网络改造</title>
+    <url>/posts/b9a9b40d.html</url>
+    <content><![CDATA[<p>事情的起因是跟爸闲聊我抱怨家里为什么没有预埋到我和我妹房间的网线，结果才知道原来是有的，只不过藏在空面板里没有装接口…… 于是就开始兴致勃勃地想把它装起来 (这样我房间里就有有线网了！)，赶紧买了面板，交换机，网线和一众工具。</p>
+<span id="more"></span>
+
+<p>接网线难在第一个，不过第一个弄会了后面也就快了，此次没有试水晶头的接法，下次有机会试试。</p>
+<p>昨天仅仅是把面板弄完了，交换机今天才到的刚刚也弄上了，现在都做的很方便接上就能用了！不过在等交换机的时候把家里老的路由器小米 WiFi4 整了出来，稀里糊涂地捣鼓了半天刷上了个 openwrt，这个东西似乎是个 linux 发行版？! 反正似乎潜力巨大，可以装好多东西，但现在还没太研究，以前想试的 adguard home 似乎也可以试试去了。</p>
+<p>现在我的房间也终于有千兆网了！</p>
+<p><img data-src="https://s1.ax1x.com/2022/08/28/vWrbPP.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrTUI.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWroVA.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWr75t.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWr5bd.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrOxS.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrL28.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrq8f.jpg"></p>
 ]]></content>
       <categories>
         <category>Misc</category>
@@ -687,6 +687,7 @@
 <li>The output layer: the last layer</li>
 <li>The hidden layer: the layer(s) between the first and the last layer</li>
 </ul>
+<p>bias unit: 偏置单元</p>
 <p>Notations:</p>
 <ul>
 <li>$a_i^{(j)}$ = “activation” of unit $i$ in layer $j$ (activation 的意思是由一个具体神经元计算并输出的值)</li>
@@ -695,6 +696,34 @@
 <p><img data-src="https://s1.ax1x.com/2023/07/23/pCqIoVO.png" alt="An example"></p>
 <p>If network has $s_j$ units in layer $j$, $s_{j+1}$ units in layer $j+1$, then $\Theta^{j}$ will be of dimension $s_{j+1} \times (s_j + 1)$.</p>
 <h2 id="Lesson-61"><a href="#Lesson-61" class="headerlink" title="Lesson 61"></a>Lesson 61</h2><h3 id="Forward-propagation-前向传播-Vectorized-implementation"><a href="#Forward-propagation-前向传播-Vectorized-implementation" class="headerlink" title="Forward propagation (前向传播): Vectorized implementation"></a>Forward propagation (前向传播): Vectorized implementation</h3><p><img data-src="https://s1.ax1x.com/2023/07/23/pCqoxp9.png" alt="Forward propagation: vectorized implementation"></p>
+<h2 id="Lesson-62-Exercise-3"><a href="#Lesson-62-Exercise-3" class="headerlink" title="Lesson 62 (Exercise 3)"></a>Lesson 62 (Exercise 3)</h2><p>(Not yet completed)</p>
+<h2 id="Lesson-63-64"><a href="#Lesson-63-64" class="headerlink" title="Lesson 63 - 64"></a>Lesson 63 - 64</h2><p>…</p>
+<h2 id="Lesson-65"><a href="#Lesson-65" class="headerlink" title="Lesson 65"></a>Lesson 65</h2><p><img data-src="https://s1.ax1x.com/2023/07/26/pCjwHFP.png" alt="Example"></p>
+<h2 id="Lesson-66"><a href="#Lesson-66" class="headerlink" title="Lesson 66"></a>Lesson 66</h2><p>…</p>
+<h2 id="Lesson-67"><a href="#Lesson-67" class="headerlink" title="Lesson 67"></a>Lesson 67</h2><p>Cost function in Neural network:</p>
+<p>$$<br>h_\Theta(x) \in \mathbb{R}^K<br>$$</p>
+<p>$$<br>(h_\Theta(x))_i = i^{th} output<br>$$</p>
+<p>$$<br>J(\Theta)=-\frac{1}{m}\left[\sum_{i=1}^m\sum_{k=1}^Ky_k^{(i)}log(h_\Theta(x^{(i)}))<em>k+(1-y_k^{(i)})log(1-(h_\Theta(x^{(i)}))<em>k)\right]+\frac{\lambda}{2m}\sum</em>{l=1}^{L-1}\sum</em>{i=1}^{s_l}\sum_{j=1}^{s_{l+1}}(\Theta_{ji}^{(l)})^2<br>$$</p>
+<h2 id="Lesson-68"><a href="#Lesson-68" class="headerlink" title="Lesson 68"></a>Lesson 68</h2><h3 id="Gradient-computation-Backpropagation-algorithm-反向传播算法"><a href="#Gradient-computation-Backpropagation-algorithm-反向传播算法" class="headerlink" title="Gradient computation: Backpropagation algorithm (反向传播算法)"></a>Gradient computation: Backpropagation algorithm (反向传播算法)</h3><p>Intuition: $\delta_j^{l}$ = “error” (误差) of node $j$ in layer $l$.</p>
+<p>For each output unit (layer L = 4)</p>
+<p>$$<br>\begin{aligned}<br>\delta^{(4)} &amp;= a^{(4)} - y  \\<br>\delta^{(3)} &amp;= (\Theta^{(3)})^T\delta^{(4)} \cdot g’(z^{(3)})\\<br>\delta^{(2)} &amp;= (\Theta^{(2)})^T\delta^{(3)} \cdot g’(z^{(2)})<br>\end{aligned}<br>$$</p>
+<p>where</p>
+<p>$$<br>g’(z^{(3)})=a^{(3)}\cdot(1-a^{(3)}) \\<br>g’(z^{(2)})=a^{(2)}\cdot(1-a^{(2)}) \\<br>$$</p>
+<p>And then we can get:</p>
+<p>$$<br>\frac{\partial}{\partial\Theta_{ij}^{(l)}}J(\Theta)=a_j^{(l)}\delta_i^{l+1}\text{ , ignore }\lambda<br>$$</p>
+<h3 id="Backpropagation-algorithm"><a href="#Backpropagation-algorithm" class="headerlink" title="Backpropagation algorithm"></a>Backpropagation algorithm</h3><ul>
+<li>Training set: ${(x^{(1)}, y^{(1)}), …, (x^{(m)}, y^{(m)})}$</li>
+<li>Set $\Delta_{ij}^{(l)}=0$ for all $l, i, j$ (used to compute $\frac{\partial}{\partial\Theta_{ij}^{(l)}}J(\Theta)$)</li>
+<li>For $i=1$ to $m$<ul>
+<li>Set $a^{(1)}=x^{(i)}$</li>
+<li>Perform forward propagation to compute $a^{(l)}$ for $l=2, 3, …, L$</li>
+<li>Using $y^{(i)}$, compute $\delta^{(L)}=a^{(L)}-y^{(i)}$</li>
+<li>Compute $\delta^{(L-1)},\delta^{(L-2)},…,\delta^{(2)}$</li>
+<li>$\Delta_{ij}^{l}:=\Delta_{ij}^{l}+a_j^{(l)}\delta_i^{(l+1)}$ (Vectorized: $\Delta^{(l)}:=\Delta^{(l)}+\delta^{(l+1)}(a^{(l)})^T$)</li>
+</ul>
+</li>
+<li>$D_{ij}^{(l)}:=\frac{1}{m}\Delta_{ij}^{(l)}+\lambda\Theta_{ij}^{(l)}\text{ if } j \neq 0$<br>$D_{ij}^{(l)}:=\frac{1}{m}\Delta_{ij}^{(l)}\text{ if } j = 0$</li>
+</ul>
 ]]></content>
       <categories>
         <category>CS</category>
@@ -4433,24 +4462,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Uses std::cin.ignore() to keep the user typing until the input meets the requirements</title>
-    <url>/posts/f96b3358.html</url>
-    <content><![CDATA[<p>I used to control users’ input by making the input a string and process it later. But today, my friend posed this question to me: Can we control input without a char array or string class?</p>
-<span id="more"></span>
-
-<p>On <em><a href="https://en.cppreference.com/w/cpp/io/basic_istream/ignore">cppreference.com</a></em>, I found <code>std::cin.ignore()</code>. This function can help us solve the previous question. Here is an example:</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;limits&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> n = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span> (<span class="literal">true</span>) {</span><br><span class="line">    std::cout &lt;&lt; <span class="string">"Please input a number: "</span>;</span><br><span class="line">    std::cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">if</span> (!std::cin.<span class="built_in">good</span>()) {</span><br><span class="line">      std::cerr &lt;&lt; <span class="string">"Error input."</span> &lt;&lt; std::endl;</span><br><span class="line">      std::cin.<span class="built_in">clear</span>();</span><br><span class="line">      std::cin.<span class="built_in">ignore</span>(std::numeric_limits&lt;std::streamsize&gt;::<span class="built_in">max</span>(), <span class="string">'\n'</span>);</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    } <span class="keyword">else</span> {</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  std::cout &lt;&lt; <span class="string">"Your input is: "</span> &lt;&lt; n &lt;&lt; std::endl;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Const Correctness in C++</title>
     <url>/posts/4eb7504e.html</url>
     <content><![CDATA[<p>This is a note for Lecture 8, <a href="https://web.stanford.edu/class/cs106l/index.html">CS106L</a>, Spring 2023.</p>
@@ -4565,6 +4576,24 @@
         <tag>const</tag>
         <tag>C &amp; C++</tag>
         <tag>CS106L</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Uses std::cin.ignore() to keep the user typing until the input meets the requirements</title>
+    <url>/posts/f96b3358.html</url>
+    <content><![CDATA[<p>I used to control users’ input by making the input a string and process it later. But today, my friend posed this question to me: Can we control input without a char array or string class?</p>
+<span id="more"></span>
+
+<p>On <em><a href="https://en.cppreference.com/w/cpp/io/basic_istream/ignore">cppreference.com</a></em>, I found <code>std::cin.ignore()</code>. This function can help us solve the previous question. Here is an example:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;limits&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> n = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span> (<span class="literal">true</span>) {</span><br><span class="line">    std::cout &lt;&lt; <span class="string">"Please input a number: "</span>;</span><br><span class="line">    std::cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">if</span> (!std::cin.<span class="built_in">good</span>()) {</span><br><span class="line">      std::cerr &lt;&lt; <span class="string">"Error input."</span> &lt;&lt; std::endl;</span><br><span class="line">      std::cin.<span class="built_in">clear</span>();</span><br><span class="line">      std::cin.<span class="built_in">ignore</span>(std::numeric_limits&lt;std::streamsize&gt;::<span class="built_in">max</span>(), <span class="string">'\n'</span>);</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    } <span class="keyword">else</span> {</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  std::cout &lt;&lt; <span class="string">"Your input is: "</span> &lt;&lt; n &lt;&lt; std::endl;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
       </tags>
   </entry>
   <entry>
