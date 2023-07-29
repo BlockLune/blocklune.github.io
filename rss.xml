@@ -9,8 +9,43 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Thu, 27 Jul 2023 11:43:50 GMT</pubDate>
+    <pubDate>Sat, 29 Jul 2023 02:22:37 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Notes for Algorithms, Part II: Directed Graphs</title>
+      <link>https://blocklune.github.io/posts/5b849ae3.html</link>
+      <guid>https://blocklune.github.io/posts/5b849ae3.html</guid>
+      <pubDate>Sat, 29 Jul 2023 01:34:51 GMT</pubDate>
+      
+      <description>&lt;p&gt;This is a note for 4.2 Directed Graphs, &lt;em&gt;&lt;a href=&quot;https://www.coursera.org/learn/algorithms-part2/&quot;&gt;Algorithms, Part II&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/algorithms-data-structures/">Algorithms &amp; Data structures</category>
+      
+      
+      <category domain="https://blocklune.github.io/tags/coursera/">Coursera</category>
+      
+      <category domain="https://blocklune.github.io/tags/algorithm/">Algorithm</category>
+      
+      <category domain="https://blocklune.github.io/tags/directed-graph/">Directed Graph</category>
+      
+      <category domain="https://blocklune.github.io/tags/bfs/">BFS</category>
+      
+      <category domain="https://blocklune.github.io/tags/dfs/">DFS</category>
+      
+      <category domain="https://blocklune.github.io/tags/topological-sort/">Topological Sort</category>
+      
+      <category domain="https://blocklune.github.io/tags/strong-components/">Strong Components</category>
+      
+      
+      <comments>https://blocklune.github.io/posts/5b849ae3.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Notes for Algorithms, Part II: Undirected Graphs</title>
@@ -32,11 +67,11 @@
       
       <category domain="https://blocklune.github.io/tags/algorithm/">Algorithm</category>
       
-      <category domain="https://blocklune.github.io/tags/undirected-graph/">Undirected Graph</category>
-      
       <category domain="https://blocklune.github.io/tags/bfs/">BFS</category>
       
       <category domain="https://blocklune.github.io/tags/dfs/">DFS</category>
+      
+      <category domain="https://blocklune.github.io/tags/undirected-graph/">Undirected Graph</category>
       
       <category domain="https://blocklune.github.io/tags/euler-tour/">Euler Tour</category>
       
@@ -340,13 +375,11 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/coursera/">Coursera</category>
+      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/coursera/cs/">CS</category>
+      <category domain="https://blocklune.github.io/categories/cs/computing-system/">Computing System</category>
       
-      <category domain="https://blocklune.github.io/categories/coursera/cs/computing-system/">Computing System</category>
-      
-      <category domain="https://blocklune.github.io/categories/coursera/cs/computing-system/nand2tetris/">Nand2Tetris</category>
+      <category domain="https://blocklune.github.io/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
       
       
       <category domain="https://blocklune.github.io/tags/nand2tetris/">Nand2Tetris</category>
