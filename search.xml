@@ -1956,6 +1956,13 @@
 <figure class="highlight latex"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">\sqrt</span>[b]{a}</span><br></pre></td></tr></tbody></table></figure>
 
 <p>$$<br>\sqrt[b]{a}<br>$$</p>
+<h2 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h2><p>使用 <code>\left</code> 和 <code>\right</code> 来指定左右两边用什么框；<code>&amp;</code> 是对齐符号；<code>\\</code> 表示换行（有的时候要转义的话则是四个）。</p>
+<figure class="highlight latex"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">\left</span>[</span><br><span class="line"><span class="keyword">\begin</span>{matrix}</span><br><span class="line">0      <span class="built_in">&amp;</span>0      <span class="built_in">&amp;</span>0      <span class="built_in">&amp;</span><span class="keyword">\cdots</span> <span class="built_in">&amp;</span>0      <span class="keyword">\\</span><span class="keyword">\\</span></span><br><span class="line">0      <span class="built_in">&amp;</span>1      <span class="built_in">&amp;</span>0      <span class="built_in">&amp;</span><span class="keyword">\cdots</span> <span class="built_in">&amp;</span>0      <span class="keyword">\\</span><span class="keyword">\\</span></span><br><span class="line">0      <span class="built_in">&amp;</span>0      <span class="built_in">&amp;</span>1      <span class="built_in">&amp;</span><span class="keyword">\cdots</span> <span class="built_in">&amp;</span>0      <span class="keyword">\\</span><span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\vdots</span> <span class="built_in">&amp;</span><span class="keyword">\vdots</span> <span class="built_in">&amp;</span><span class="keyword">\vdots</span> <span class="built_in">&amp;</span><span class="keyword">\ddots</span> <span class="built_in">&amp;</span><span class="keyword">\vdots</span> <span class="keyword">\\</span><span class="keyword">\\</span></span><br><span class="line">0      <span class="built_in">&amp;</span>0      <span class="built_in">&amp;</span>0      <span class="built_in">&amp;</span><span class="keyword">\cdots</span> <span class="built_in">&amp;</span>1</span><br><span class="line"><span class="keyword">\end</span>{matrix}</span><br><span class="line"><span class="keyword">\right</span>]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>$$<br>\left[<br>\begin{matrix}<br>0      &amp;0      &amp;0      &amp;\cdots &amp;0      \\<br>0      &amp;1      &amp;0      &amp;\cdots &amp;0      \\<br>0      &amp;0      &amp;1      &amp;\cdots &amp;0      \\<br>\vdots &amp;\vdots &amp;\vdots &amp;\ddots &amp;\vdots \\<br>0      &amp;0      &amp;0      &amp;\cdots &amp;1<br>\end{matrix}<br>\right]<br>$$</p>
+<h2 id="分段"><a href="#分段" class="headerlink" title="分段"></a>分段</h2><figure class="highlight latex"><table><tbody><tr><td class="code"><pre><span class="line">Cost(h<span class="built_in">_</span><span class="keyword">\theta</span>(x), y)=</span><br><span class="line"><span class="keyword">\begin</span>{cases}</span><br><span class="line">-log(h<span class="built_in">_</span><span class="keyword">\theta</span>(x)) <span class="built_in">&amp;</span> <span class="keyword">\text</span>{if }y=1 <span class="keyword">\\</span><span class="keyword">\\</span></span><br><span class="line">-log(1-h<span class="built_in">_</span><span class="keyword">\theta</span>(x)) <span class="built_in">&amp;</span> <span class="keyword">\text</span>{if }y=0 <span class="keyword">\\</span><span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\end</span>{cases}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>$$<br>Cost(h_\theta(x), y)=<br>\begin{cases}<br>-log(h_\theta(x)) &amp; \text{if }y=1 \\<br>-log(1-h_\theta(x)) &amp; \text{if }y=0 \\<br>\end{cases}<br>$$</p>
 <h2 id="其他常用符号写法"><a href="#其他常用符号写法" class="headerlink" title="其他常用符号写法"></a>其他常用符号写法</h2><table>
 <thead>
 <tr>
@@ -1975,8 +1982,23 @@
 <td>” 无穷 “的英文：<strong>inf</strong>ini<strong>ty</strong></td>
 </tr>
 <tr>
+<td>$\sum_{i=0}^{5}$</td>
+<td>\sum_{i=0}^{5}</td>
+<td></td>
+</tr>
+<tr>
 <td>$\lim_{x \to 0}$</td>
 <td>\lim_{x \to 0}</td>
+<td></td>
+</tr>
+<tr>
+<td>$\int_a^b$</td>
+<td>\int_a^b</td>
+<td>“积分” 的英文：<strong>int</strong>egral</td>
+</tr>
+<tr>
+<td>$\partial$</td>
+<td>\partial</td>
 <td></td>
 </tr>
 <tr>
@@ -2015,6 +2037,14 @@
 <td>” 波浪号 “的英文：<strong>tilde</strong></td>
 </tr>
 </tbody></table>
+<h2 id="使用符号的习惯与约定"><a href="#使用符号的习惯与约定" class="headerlink" title="使用符号的习惯与约定"></a>使用符号的习惯与约定</h2><p>来自 <a href="https://www.zhihu.com/question/389601732/answer/1170510919">在数学环境中，\LaTeX 命令是否应该包在 \mathrm 中？ - Emrys 的回答 - 知乎</a> 的参考，再结合我自己的习惯：</p>
+<ul>
+<li>标量 $i$: <code>$i$</code></li>
+<li>向量 $\mathbf {x}$ 或 $\vec {x}$: <code>\mathbf{x}</code> 或 <code>\vec{x}</code></li>
+<li>矩阵 $\mathbf {R}$: <code>\mathbf{R}</code></li>
+<li>用文字表示的变量名 $\mathrm {Duration}$: <code>\mathrm{Duration}</code></li>
+<li>用文字表示的函数名 $\operatorname {Sigmoid}$: <code>\operatorname{Sigmoid}</code></li>
+</ul>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
 <li><a href="https://blog.csdn.net/erciyuan_/article/details/90273268">latex 公式语法_ecy_uooki 的博客 - CSDN 博客_latex 公式语法</a></li>
 <li><a href="https://blog.csdn.net/bagba/article/details/123608562">latex 不等于符号_Bagba 的博客 - CSDN 博客_latex 不等于</a></li>
@@ -2133,7 +2163,7 @@
     <content><![CDATA[<p>When using Linux, I often use <code>cat</code> to browse some short codes. But it doesn’t support syntax highlighting originally. So, I found one of its replacements: <code>bat</code>.</p>
 <span id="more"></span>
 
-<h2 id="Brief-introduction"><a href="#Brief-introduction" class="headerlink" title="Brief introduction"></a>Brief introduction</h2><p><a href="https://github.com/sharkdp/bat"><img data-src="https://github.com/sharkdp/bat/raw/master/doc/logo-header.svg" alt="BAT Logo"></a></p>
+<h2 id="Brief-Introduction"><a href="#Brief-Introduction" class="headerlink" title="Brief Introduction"></a>Brief Introduction</h2><p><a href="https://github.com/sharkdp/bat"><img data-src="https://github.com/sharkdp/bat/raw/master/doc/logo-header.svg" alt="BAT Logo"></a></p>
 <p>On <a href="https://github.com/sharkdp/bat">BAT</a>‘s official GitHub page, it defines itself “a cat clone with wings”. In my opinion, one is “syntax highlighting”, and the other is “git integration”.</p>
 <p>Here are some of its important features:</p>
 <ul>
@@ -2181,43 +2211,43 @@
     <content><![CDATA[<p>This is a simple tutorial of Git, also including some info about GitHub.</p>
 <span id="more"></span>
 
-<h2 id="BRIEF"><a href="#BRIEF" class="headerlink" title="BRIEF"></a>BRIEF</h2><p>You may have learnt Git and GitHub before, and also may have confused them because their similar names. What are these two things on earth?</p>
+<h2 id="Brief"><a href="#Brief" class="headerlink" title="Brief"></a>Brief</h2><p>You may have learnt Git and GitHub before, and also may have confused them because their similar names. What are these two things on earth?</p>
 <p><img data-src="https://software.3metas.com/wp-content/uploads/2017/06/git.png" alt="Git (This picture is from the Internet)"></p>
 <p><img data-src="https://kinsta.com/wp-content/uploads/2018/04/what-is-github-1-1.png" alt="GitHub (This picture is from the Internet)"></p>
 <p>In short, <a href="https://git-scm.com/">Git</a> is a version control system (VCS), which enables you to create a repository of your codes, to track changes in your project and to manage your files efficiently. <a href="https://github.com/">GitHub</a> is a platform used to host remote Git repositories for collaboration and sharing projects.</p>
 <p>In this post, you will learn the basic usage of Git and GitHub.</p>
-<h2 id="CREATING-A-GITHUB-ACCOUNT"><a href="#CREATING-A-GITHUB-ACCOUNT" class="headerlink" title="CREATING A GITHUB ACCOUNT"></a>CREATING A GITHUB ACCOUNT</h2><p>See <em><a href="https://docs.github.com/en/get-started/signing-up-for-GitHub/signing-up-for-a-new-GitHub-accountt">Signing up for a new GitHub account - GitHub Docs</a></em></p>
-<h2 id="DOWNLOADING-AND-INSTALLING-GIT"><a href="#DOWNLOADING-AND-INSTALLING-GIT" class="headerlink" title="DOWNLOADING AND INSTALLING GIT"></a>DOWNLOADING AND INSTALLING GIT</h2><p>Many operations in Git run locally. Before using Git, you need to install it in your local environment.</p>
+<h2 id="Creating-A-Github-Account"><a href="#Creating-A-Github-Account" class="headerlink" title="Creating A Github Account"></a>Creating A Github Account</h2><p>See <em><a href="https://docs.github.com/en/get-started/signing-up-for-GitHub/signing-up-for-a-new-GitHub-accountt">Signing up for a new GitHub account - GitHub Docs</a></em></p>
+<h2 id="Downloading-And-Installing-Git"><a href="#Downloading-And-Installing-Git" class="headerlink" title="Downloading And Installing Git"></a>Downloading And Installing Git</h2><p>Many operations in Git run locally. Before using Git, you need to install it in your local environment.</p>
 <p>Download Git from the official website:</p>
 <p><em><a href="https://git-scm.com/downloads">Git - Downloads (git-scm.com)</a></em></p>
-<h2 id="CONFIGURING"><a href="#CONFIGURING" class="headerlink" title="CONFIGURING"></a>CONFIGURING</h2><p>To configure user info for all local repositories:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"&lt;your_name&gt;"</span></span><br><span class="line">$ git config --global user.email <span class="string">"&lt;your_email@example.com&gt;"</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="Configuring"><a href="#Configuring" class="headerlink" title="Configuring"></a>Configuring</h2><p>To configure user info for all local repositories:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">"&lt;your_name&gt;"</span></span><br><span class="line">git config --global user.email <span class="string">"&lt;your_email@example.com&gt;"</span></span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="GETTING-HELP"><a href="#GETTING-HELP" class="headerlink" title="GETTING HELP"></a>GETTING HELP</h2><p>To get help when using Git, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git <span class="built_in">help</span> &lt;verb&gt;</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ git &lt;verb&gt; --<span class="built_in">help</span></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ man git-&lt;verb&gt;</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="Getting-Help"><a href="#Getting-Help" class="headerlink" title="Getting Help"></a>Getting Help</h2><p>To get help when using Git, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">help</span> &lt;verb&gt;</span><br><span class="line"><span class="comment"># Or</span></span><br><span class="line">git &lt;verb&gt; --<span class="built_in">help</span></span><br><span class="line"><span class="comment"># Or</span></span><br><span class="line">man git-&lt;verb&gt;</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="GETTING-A-GIT-REPOSITORY"><a href="#GETTING-A-GIT-REPOSITORY" class="headerlink" title="GETTING A GIT REPOSITORY"></a>GETTING A GIT REPOSITORY</h2><h3 id="CREATING-ONE-IN-AN-EXISTING-DIRECTORY"><a href="#CREATING-ONE-IN-AN-EXISTING-DIRECTORY" class="headerlink" title="CREATING ONE IN AN EXISTING DIRECTORY"></a>CREATING ONE IN AN EXISTING DIRECTORY</h3><p>To create a new Git repo in the current directory, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="Getting-A-Git-Repository"><a href="#Getting-A-Git-Repository" class="headerlink" title="Getting A Git Repository"></a>Getting A Git Repository</h2><h3 id="Creating-One-In-An-Existing-Directory"><a href="#Creating-One-In-An-Existing-Directory" class="headerlink" title="Creating One In An Existing Directory"></a>Creating One In An Existing Directory</h3><p>To create a new Git repo in the current directory, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></tbody></table></figure>
 
 <p>This command will create a directory called <code>.git</code>.</p>
-<h3 id="CLONING-ONE-FROM-AN-EXISTING-REPO"><a href="#CLONING-ONE-FROM-AN-EXISTING-REPO" class="headerlink" title="CLONING ONE FROM AN EXISTING REPO"></a>CLONING ONE FROM AN EXISTING REPO</h3><p>To clone an existing repo from a remote server. Run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> &lt;url&gt; &lt;local_directory_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="Cloning-One-From-An-Existing-Repo"><a href="#Cloning-One-From-An-Existing-Repo" class="headerlink" title="Cloning One From An Existing Repo"></a>Cloning One From An Existing Repo</h3><p>To clone an existing repo from a remote server. Run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> &lt;url&gt; &lt;local_directory_name&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <ul>
 <li><code>&lt;url&gt;</code> can be <code>https://</code>, <code>git://</code> and <code>user@server:path/to/repo.git</code> etc.</li>
 <li><code>&lt;local_directory_name&gt;</code> is optional.</li>
 </ul>
 <p>If you want to specify a branch when cloning, you can use <code>-b</code> option:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> -b &lt;branch&gt; &lt;url&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> -b &lt;branch&gt; &lt;url&gt;</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="TRACKING-FILES"><a href="#TRACKING-FILES" class="headerlink" title="TRACKING FILES"></a>TRACKING FILES</h2><p>To add file(s) to your tracked list, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git add &lt;directory&gt;/&lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="Tracking-Files"><a href="#Tracking-Files" class="headerlink" title="Tracking Files"></a>Tracking Files</h2><p>To add file(s) to your tracked list, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git add &lt;directory&gt;/&lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <p>This command tells Git to track the file(s) you specified and put them onto the stage. If you mistakenly tracked wrong file(s) (like a lot of log files), run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git <span class="built_in">rm</span> &lt;file&gt;     <span class="comment"># only if these file are newly added</span></span><br><span class="line">$ git <span class="built_in">rm</span> -f &lt;file&gt;  <span class="comment"># to the files in the stage before, -f(force) option is needed</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">rm</span> &lt;file&gt;     <span class="comment"># only if these file are newly added</span></span><br><span class="line">git <span class="built_in">rm</span> -f &lt;file&gt;  <span class="comment"># to the files in the stage before, -f(force) option is needed</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p><code>git rm</code> command will not only stop tracking the files you specified, but also remove them. If you only want to stop tracking them, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git <span class="built_in">rm</span> --cached &lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">rm</span> --cached &lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <div class="note "><p>There is another command very similar to <code>git rm --cached &lt;file&gt;</code>: <code>git reset HEAD &lt;file&gt;</code>. Both of them will remove the file from the stage. But the former one will also remove the file from the tracked list (stop tracking it), while the latter will keep the file there.</p>
 </div>
@@ -2225,8 +2255,8 @@
 <div class="note danger no-icon"><p><code>git reset</code> is a dangerous command, especially when a <code>--hard</code> flag is added.</p>
 </div>
 
-<h2 id="CHECKING-THE-STATUS"><a href="#CHECKING-THE-STATUS" class="headerlink" title="CHECKING THE STATUS"></a>CHECKING THE STATUS</h2><p>To check the status of the files in the repo, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git status</span><br><span class="line"></span><br><span class="line"><span class="comment"># a short version</span></span><br><span class="line">$ git status -s</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ git status --short</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="Checking-The-Status"><a href="#Checking-The-Status" class="headerlink" title="Checking The Status"></a>Checking The Status</h2><p>To check the status of the files in the repo, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git status</span><br><span class="line"></span><br><span class="line"><span class="comment"># A Short Version</span></span><br><span class="line">git status -s</span><br><span class="line"><span class="comment"># Or</span></span><br><span class="line">git status --short</span><br></pre></td></tr></tbody></table></figure>
 
 <p>In the short version, there are two columns in the front of every line. The left column shows the status of the stage. The right column shows the status of the working area. The statuses are showed like this:</p>
 <ul>
@@ -2235,27 +2265,27 @@
 <li><code>M</code>: modified file</li>
 </ul>
 <p>To check the modifications in your files, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># to show the files haven't been staged</span></span><br><span class="line">$ git diff</span><br><span class="line"></span><br><span class="line"><span class="comment"># to show the files have been staged</span></span><br><span class="line">$ git diff --staged</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ git diff --cached</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># To Show The Files Haven'T Been Staged</span></span><br><span class="line">git diff</span><br><span class="line"></span><br><span class="line"><span class="comment"># To Show The Files Have Been Staged</span></span><br><span class="line">git diff --staged</span><br><span class="line"><span class="comment"># Or</span></span><br><span class="line">git diff --cached</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="COMMITTING"><a href="#COMMITTING" class="headerlink" title="COMMITTING"></a>COMMITTING</h2><p>To commit your files, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git commit</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="Committing"><a href="#Committing" class="headerlink" title="Committing"></a>Committing</h2><p>To commit your files, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git commit</span><br></pre></td></tr></tbody></table></figure>
 
 <p>This command will open a editor. You need to edit your commit message here.</p>
 <p>Or, you can simplify this by using <code>-m</code> option:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git commit -m &lt;commit_message&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git commit -m &lt;commit_message&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <p><em>Oops, I forgot to add this file!</em> If you meet this issue, you can amend it like this:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git commit -m <span class="string">"a wrong commit message"</span></span><br><span class="line">$ git add &lt;forgotten_file&gt;</span><br><span class="line">$ git commit --amend</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git commit -m <span class="string">"a wrong commit message"</span></span><br><span class="line">git add &lt;forgotten_file&gt;</span><br><span class="line">git commit --amend</span><br></pre></td></tr></tbody></table></figure>
 
 <p>The second commit will <strong>replace</strong> the first commit, as if the first commit never occurred.</p>
 <p>If you are tired of using the stage (<code>git add</code> first,<code>git commit</code> later), you can use <code>-a</code> flag like this to skip it:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git commit -a</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git commit -a</span><br></pre></td></tr></tbody></table></figure>
 
 <p>This command is equivalent to these two command bellow:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git add &lt;all_tracked_files_that_have_been_modified&gt;</span><br><span class="line">$ git commit</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git add &lt;all_tracked_files_that_have_been_modified&gt;</span><br><span class="line">git commit</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="HISTORY"><a href="#HISTORY" class="headerlink" title="HISTORY"></a>HISTORY</h2><p>To review the commit history, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="History"><a href="#History" class="headerlink" title="History"></a>History</h2><p>To review the commit history, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></tbody></table></figure>
 
 <ul>
 <li><p><code>-p</code> or <code>--patch</code> flag make logs output in the patch way.</p>
@@ -2275,103 +2305,106 @@
 <li><p><code>--graph</code> flag adds some ascii characters to vividly show your history.</p>
 </li>
 </ul>
-<h2 id="UNDO"><a href="#UNDO" class="headerlink" title="UNDO"></a>UNDO</h2><p>To discard changes in working, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git checkout -- &lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="Undo"><a href="#Undo" class="headerlink" title="Undo"></a>Undo</h2><p>To discard changes in working, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git checkout -- &lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <p>This command will abandon the modifications to the file after your last commit.</p>
 <div class="note danger no-icon"><p>This is a DANGEROUS command. In Git, it’s usually easy to restore the files have been committed, but usually very hard to restore the files haven’t been committed.</p>
 </div>
 
-<h2 id="REMOTE"><a href="#REMOTE" class="headerlink" title="REMOTE"></a>REMOTE</h2><p>To connect your local repo to the remote server, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git remote add &lt;server_name&gt; &lt;server&gt;</span><br></pre></td></tr></tbody></table></figure>
+<p>To recall tracking some files added by <code>git add</code>, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">rm</span> --cached &lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Also see <a href="#tracking-files">Tracking Files</a></p>
+<h2 id="Remote"><a href="#Remote" class="headerlink" title="Remote"></a>Remote</h2><p>To connect your local repo to the remote server, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git remote add &lt;server_name&gt; &lt;server&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <p><code>server_name</code> is a short name of your server. Usually we use <code>origin</code>.</p>
 <p>To show all the names, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git remote -v</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></tbody></table></figure>
 
 <p>To fetch the files in the remote repo, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git fetch &lt;server_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git fetch &lt;server_name&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <div class="note "><p>There is a magic called <code>git pull</code>. Usually, it means <code>git fetch</code> and <code>git merge</code>.</p>
 </div>
 
 <p>To push your local changes to your remote repo, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git push &lt;server_name&gt; &lt;remote_branch&gt;</span><br><span class="line">$ git push &lt;server_name&gt; &lt;local_branch&gt;:&lt;remote_branch&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git push &lt;server_name&gt; &lt;remote_branch&gt;</span><br><span class="line">git push &lt;server_name&gt; &lt;local_branch&gt;:&lt;remote_branch&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <p>To make the local branch track the remote branch, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git push -u &lt;server_name&gt; &lt;remote_branch&gt;</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ git push --set-upstream &lt;server_name&gt; &lt;remote_branch&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git push -u &lt;server_name&gt; &lt;remote_branch&gt;</span><br><span class="line"><span class="comment"># Or</span></span><br><span class="line">git push --set-upstream &lt;server_name&gt; &lt;remote_branch&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <p>To check your remote repo, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git remote show &lt;server_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git remote show &lt;server_name&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <p>To rename your remote repo, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git remote rename &lt;old_server_name&gt; &lt;new_server_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git remote rename &lt;old_server_name&gt; &lt;new_server_name&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <p>To remove a remote repo, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git remote remove &lt;server_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git remote remove &lt;server_name&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <div class="note "><p>It’s recommended to connect to GitHub with SSH. You can do it like this:</p>
 <p>Open your Git bash, and run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ ssh-keygen -t ed25519 -C <span class="string">"&lt;your_email@example.com&gt;"</span>      <span class="comment"># for newer system</span></span><br><span class="line">                                                           <span class="comment"># or</span></span><br><span class="line">$ ssh-keygen -t rsa -b 4096 -C <span class="string">"&lt;your_email@example.com&gt;"</span>  <span class="comment"># for older system</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">"&lt;your_email@example.com&gt;"</span>      <span class="comment"># for newer system</span></span><br><span class="line">                                                           <span class="comment"># or</span></span><br><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">"&lt;your_email@example.com&gt;"</span>  <span class="comment"># for older system</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>Go to <a href="https://github.com/settings/profile">Your profile on GitHub</a>. Click <code>SSH and GPG keys</code> on the left. Click <code>New SSH key</code>. Choose a title, and paste all content in <code>~/.ssh/id_ed25519.pub</code>. Then click <code>Add SSH key</code>.</p>
 <p>Simply explaining what we’ve done. <code>ssh-keygen</code> is a tool that help us create a key(<code>~/.ssh/id_ed25519</code>) and a lock(<code>~/.ssh/id_ed25519.pub</code>). Then, we use the <code>id_ed25519.pub</code> file to lock our repos on GitHub, and leave the <code>id_ed25519</code>, the key, in our PC. We can then avoid repeating login GitHub using password.</p>
 <p>Learn more on <em><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">Connecting to GitHub with SSH - GitHub Docs</a></em>.</p>
 </div>
 
-<h2 id="BRANCH"><a href="#BRANCH" class="headerlink" title="BRANCH"></a>BRANCH</h2><p>To list all the local branches, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git branch</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="Branch"><a href="#Branch" class="headerlink" title="Branch"></a>Branch</h2><p>To list all the local branches, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></tbody></table></figure>
 
 <p>To list all the local and the remote branches, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git branch -a</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git branch -a</span><br></pre></td></tr></tbody></table></figure>
 
 <p>To show the last commits of every branch, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git branch -v</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git branch -v</span><br></pre></td></tr></tbody></table></figure>
 
-<p>The local branch is called the <strong>tracking branch</strong>. The corresponding branch on the remote server is called the  <strong>upstream branch</strong>.</p>
+<p>The local branch is called the <strong>tracking branch</strong>. The corresponding branch on the remote server is called the <strong>upstream branch</strong>.</p>
 <p>To track a remote branch, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git checkout --track &lt;server_name&gt;/&lt;branch&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git checkout --track &lt;server_name&gt;/&lt;branch&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <p>It is equivalent to:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git checkout -b &lt;branch&gt;</span><br><span class="line"></span><br><span class="line">$ git branch -u &lt;server_name&gt;/&lt;branch&gt;</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ git branch --set-upstream &lt;server_name&gt;/&lt;branch&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git checkout -b &lt;branch&gt;</span><br><span class="line"></span><br><span class="line">git branch -u &lt;server_name&gt;/&lt;branch&gt;</span><br><span class="line"><span class="comment"># Or</span></span><br><span class="line">git branch --set-upstream &lt;server_name&gt;/&lt;branch&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <p>To stop tracking, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git branch --unset-upstream &lt;branch&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git branch --unset-upstream &lt;branch&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <p>To show the correspondence, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git branch -vv</span><br></pre></td></tr></tbody></table></figure>
-
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git branch -vv</span><br></pre></td></tr></tbody></table></figure>
 
 <p>To create a new local branch, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git branch &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git branch &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <p>To checkout to another local branch, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git checkout &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git checkout &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <p>You can create a new local branch and check out to it with one command:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git checkout -b &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git checkout -b &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <p>To rename a local branch, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git branch -m &lt;new_branch_name&gt;</span><br><span class="line">$ git branch -m &lt;old_branch_name&gt; &lt;new_branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git branch -m &lt;new_branch_name&gt;</span><br><span class="line">git branch -m &lt;old_branch_name&gt; &lt;new_branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <p>To delete a local branch, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git branch -d &lt;branch_name&gt;</span><br><span class="line">$ git branch -D &lt;branch_name&gt;  <span class="comment"># force</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git branch -d &lt;branch_name&gt;</span><br><span class="line">git branch -D &lt;branch_name&gt;  <span class="comment"># force</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>To delete a remote branch, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git push origin --delete &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git push origin --delete &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <div class="note "><p>There are no direct commands to create a new remote repo or rename a remote repo. But you can rename a remote repo like this:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git pull origin &lt;old_branch_name&gt;</span><br><span class="line">$ git branch -m &lt;old_branch_name&gt; &lt;new_branch_name&gt;</span><br><span class="line">$ git push -u origin &lt;new_branch_name&gt;</span><br><span class="line">$ git push origin --delete &lt;old_branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git pull origin &lt;old_branch_name&gt;</span><br><span class="line">git branch -m &lt;old_branch_name&gt; &lt;new_branch_name&gt;</span><br><span class="line">git push -u origin &lt;new_branch_name&gt;</span><br><span class="line">git push origin --delete &lt;old_branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
 </div>
 
 <p>To merge the other branch to this one, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git merge &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git merge &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <p>If your current branch is <code>master</code>, this command merge <code>&lt;branch_name&gt;</code> to <code>master</code>.</p>
 <p>To show all the branches that have/haven’t been merged to this branch, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ git branch --merged</span><br><span class="line">$ git branch --no-merged</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git branch --merged</span><br><span class="line">git branch --no-merged</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="Learn-more"><a href="#Learn-more" class="headerlink" title="Learn more"></a>Learn more</h2><p><em><a href="https://missing.csail.mit.edu/2020/version-control/">MIT - Missing Semester - Version Control (Git)</a></em></p>
+<h2 id="Learn-More"><a href="#Learn-More" class="headerlink" title="Learn More"></a>Learn More</h2><p><em><a href="https://missing.csail.mit.edu/2020/version-control/">MIT - Missing Semester - Version Control (Git)</a></em></p>
 <p><em><a href="https://git-scm.com/book/en/v2">Pro Git</a></em></p>
 <p><em><a href="http://rogerdudler.github.io/git-guide/index.html">git - the simple guide - no deep shit!</a></em></p>
 <p><em><a href="https://training.github.com/">GitHub Training Kit</a></em></p>
@@ -2392,7 +2425,7 @@
     <content><![CDATA[<p>I accidentally ran a wrong <code>chmod</code> command in my Linux, and it messed up everything! I hate the permission management in Linux. :|</p>
 <span id="more"></span>
 
-<h2 id="PERMISSION-MANAGEMENT-IN-LINUX"><a href="#PERMISSION-MANAGEMENT-IN-LINUX" class="headerlink" title="PERMISSION MANAGEMENT IN LINUX"></a>PERMISSION MANAGEMENT IN LINUX</h2><p>When you run <code>ls -l</code> in your terminal, you can always see strings like <code>-rw-r–r–</code> and <code>drwxr-xr-x</code> etc. To understand them, we can always split a such string into four part. The first one is a single character, <code>-</code> if it’s a file and <code>d</code> if it’s a directory. The rest 9 characters can be equally divided into three parts, representing the permission of the owner, the members of the group and other users relatively. Every part contains three characters, showing the permission of <strong>r</strong>(read), <strong>w</strong>(write) and <strong>x</strong>(execute).</p>
+<h2 id="Permission-Management-in-Linux"><a href="#Permission-Management-in-Linux" class="headerlink" title="Permission Management in Linux"></a>Permission Management in Linux</h2><p>When you run <code>ls -l</code> in your terminal, you can always see strings like <code>-rw-r–r–</code> and <code>drwxr-xr-x</code> etc. To understand them, we can always split a such string into four part. The first one is a single character, <code>-</code> if it’s a file and <code>d</code> if it’s a directory. The rest 9 characters can be equally divided into three parts, representing the permission of the owner, the members of the group and other users relatively. Every part contains three characters, showing the permission of <strong>r</strong>(read), <strong>w</strong>(write) and <strong>x</strong>(execute).</p>
 <p><img data-src="https://s1.ax1x.com/2023/03/23/pp0Z5YF.png" alt="When you run `ls -l`"><br><img data-src="https://www.runoob.com/wp-content/uploads/2014/08/file-permissions-rwx.jpg" alt="From www.runoob.com"></p>
 <p>Besides the bit pattern, you can also use octal notation to express these permissions, which uses 4 for <strong>r</strong>, 2 for <strong>w</strong> and 1 for <strong>x</strong>. The sum of these octal numbers then can replace the <code>rwx</code> pattern. For example, using 6 for <strong>rw</strong>.</p>
 <p>Why is 4, 2 and 1? Actually, you can view every 3-character unit as 3 binary bits. So, 100(r–) means 4 in decimal, 010(-w-) means 2, and 001(–x) means 1. You can then understand what dose the sum means.</p>
@@ -2400,12 +2433,12 @@
 <p>Now, you can read this:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">-rw------- <span class="comment"># (600) Owner:RW</span></span><br><span class="line">-rw-r--r-- <span class="comment"># (644) Owner:RW Group:R Other:R</span></span><br><span class="line">-rw-rw-rw- <span class="comment"># (666) Owner:RW Group:RW Other:RW</span></span><br><span class="line">-rwx------ <span class="comment"># (700) Owner:RWX</span></span><br><span class="line">-rwx--x--x <span class="comment"># (711) Owner:RWX Group:X Other:X</span></span><br><span class="line">-rwxr-xr-x <span class="comment"># (755) Owner:RWX Group:RX Other:RX</span></span><br><span class="line">-rwxrwxrwx <span class="comment"># (777) Owner:RWX Group:RWX Other:RWX</span></span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="DEFAULT-PERMISSION"><a href="#DEFAULT-PERMISSION" class="headerlink" title="DEFAULT PERMISSION"></a>DEFAULT PERMISSION</h2><p>The default permission for a file is 666, which means <code>-rw-rw-rw-</code>, indicating that the owner, group and other users can read and write the file. The default permission for a directory is 777, which means <code>drwxrwxrwx</code>, indicating that the owner, group and other users can read, write and access the directory.</p>
+<h2 id="Default-Permission"><a href="#Default-Permission" class="headerlink" title="Default Permission"></a>Default Permission</h2><p>The default permission for a file is 666, which means <code>-rw-rw-rw-</code>, indicating that the owner, group and other users can read and write the file. The default permission for a directory is 777, which means <code>drwxrwxrwx</code>, indicating that the owner, group and other users can read, write and access the directory.</p>
 <p>However, these default permissions are affected by the user’s <strong>umask</strong> setting. The umask is a value that controls which permissions are removed when creating a new file or directory. For example, if the user’s umask is 022, then the write permission for group and other users will be removed when creating a new file, and the write and execute permission for group and other users will be removed when creating a new directory. Therefore:</p>
 <p>The actual default permission for a file is 666 - 022 = 644, which means <code>-rw-r–r–</code>. The actual default permission for a directory is 777 - 022 = 755, which means <code>drwxr-xr-x</code>.</p>
 <p>You can run the <code>umask</code> command to see what your setting is.</p>
 <p><img data-src="https://s1.ax1x.com/2023/03/23/pp0eZtS.png"></p>
-<h2 id="THE-CHMOD-COMMAND"><a href="#THE-CHMOD-COMMAND" class="headerlink" title="THE CHMOD COMMAND"></a>THE CHMOD COMMAND</h2><p><img data-src="https://s1.ax1x.com/2023/03/23/pp0mVD1.png"></p>
+<h2 id="The-chmod-Command"><a href="#The-chmod-Command" class="headerlink" title="The chmod Command"></a>The chmod Command</h2><p><img data-src="https://s1.ax1x.com/2023/03/23/pp0mVD1.png"></p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> [-cfvR] [--<span class="built_in">help</span>] [--version] &lt;mode&gt; &lt;file&gt;...</span><br></pre></td></tr></tbody></table></figure>
 
 <p>The <code>-R</code> means recursively. You will need it.</p>
@@ -2423,10 +2456,10 @@
 <p>You can also use octal pattern represents the <code>&lt;mode&gt;</code>. For example:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 777 &lt;file&gt; <span class="comment"># now everyone can read, write and execute the &lt;file&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="CHANGE-PERMISSIONS-TO-FILE-OR-DIR-INDIVIDUALLY"><a href="#CHANGE-PERMISSIONS-TO-FILE-OR-DIR-INDIVIDUALLY" class="headerlink" title="CHANGE PERMISSIONS TO FILE OR DIR INDIVIDUALLY"></a>CHANGE PERMISSIONS TO FILE OR DIR INDIVIDUALLY</h2><p>To change permissions to file or dir individually, you can use the <code>-exec</code> option of <code>find</code> to execute chmod on each matching file or directory. For example: To find all files in the current directory and its subdirectories and change their permissions to 644, you can use: <code>find . -type f -exec chmod 644 {} ;</code></p>
+<h2 id="Change-Permissions-to-File-or-Dir-Individually"><a href="#Change-Permissions-to-File-or-Dir-Individually" class="headerlink" title="Change Permissions to File or Dir Individually"></a>Change Permissions to File or Dir Individually</h2><p>To change permissions to file or dir individually, you can use the <code>-exec</code> option of <code>find</code> to execute chmod on each matching file or directory. For example: To find all files in the current directory and its subdirectories and change their permissions to 644, you can use: <code>find . -type f -exec chmod 644 {} ;</code></p>
 <p><code>-type f</code> means file. You can use <code>-type d</code> to find all the dir.</p>
-<h2 id="THANKS"><a href="#THANKS" class="headerlink" title="THANKS"></a>THANKS</h2><p>By the way, this blog was completed with the help of new bing. I asked her many questions and got great answers. She also helped me correct errors and polish my writing. She is just too amazing!</p>
-<h2 id="REFERENCE"><a href="#REFERENCE" class="headerlink" title="REFERENCE"></a>REFERENCE</h2><ul>
+<h2 id="Thanks"><a href="#Thanks" class="headerlink" title="Thanks"></a>Thanks</h2><p>By the way, this blog was completed with the help of new bing. I asked her many questions and got great answers. She also helped me correct errors and polish my writing. She is just too amazing!</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
 <li><a href="https://www.runoob.com/linux/linux-comm-chmod.html">《Linux chmod 命令 | 菜鸟教程》</a></li>
 <li><a href="https://blog.csdn.net/u013197629/article/details/73608613">《Linux 权限详解（chmod、600、644、700、711、755、777、4755、6755、7755）》</a></li>
 </ul>
@@ -2452,10 +2485,10 @@
 <p>确定，重启电脑。</p>
 <p>打开 CMD 测试一下，输入 <code>chcp</code> 可以发现已经变成了 <code>65001</code>，说明成功了。</p>
 <p>方法来源：<a href="https://blog.csdn.net/weixin_44285445/article/details/112325994">《Git Bash 中文显示乱码，options 修改为 zh_CN 和 utf-8 还是不行怎么办？》</a></p>
-<div class="note danger no-icon"><h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><p>该方法全局更改 Windows 系统的默认编码，可能引起某些软件运行异常。</p>
+<div class="note danger no-icon"><h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>该方法全局更改 Windows 系统的默认编码，可能引起某些软件运行异常。</p>
 </div>
 
-<p><strong>以下是原来的文章</strong></p>
+<p><strong>以下是原来的文章:</strong></p>
 <p>开门见山，我最后采用的解决方案是对 C/C++ 文件单独设置默认编码。大致的操作方法是，打开 VS Code 的 <code>settings.json</code> 文件，添加如下配置：</p>
 <figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">"[cpp]"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"files.encoding"</span><span class="punctuation">:</span> <span class="string">"gbk"</span></span><br><span class="line"><span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">"[c]"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"files.encoding"</span><span class="punctuation">:</span> <span class="string">"gbk"</span></span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
 
@@ -2466,10 +2499,10 @@
 <p>看到一个有意思的科普视频，贴在这里，可以看看乱码到底是如何产生的。</p>
 <p><a href="https://www.bilibili.com/video/BV1cB4y177QR/">锟斤拷 �⊠ 是怎样炼成的 —— 中文显示 “⼊” 门指南【柴知道】</a></p>
 <h3 id="第一个方向：更改终端默认编码"><a href="#第一个方向：更改终端默认编码" class="headerlink" title="第一个方向：更改终端默认编码"></a>第一个方向：更改终端默认编码</h3><p>了解到更改 CMD 编码为 utf8 的命令如下：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">chcp 65001</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">chcp 65001</span><br></pre></td></tr></tbody></table></figure>
 
 <p>顺便一提，查看当前编码的命令为：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">chcp</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">chcp</span><br></pre></td></tr></tbody></table></figure>
 
 <p><code>chcp 65001</code> 这串命令的意思就是更改代码页为 65001，也就是用 utf8 编码。</p>
 <p>这串命令不是永久生效的，所以每次都要输入，比较麻烦。网上也有一些解决方案，比如通过修改注册表每次都自动运行一下上边的命令（<a href="https://www.jianshu.com/p/f40e494dc01d">《修改 Windows10 命令终端 cmd 的编码为 UTF-8》</a>），或者是配置 VS Code 让其自动输入的（<a href="https://blog.csdn.net/lzyws739307453/article/details/89823900">《永久解决 VS Code 终端中文乱码问题》</a>），可以去看看。</p>
@@ -2540,7 +2573,7 @@
 <p>打开安装包，一路默认下一步。耐心等待（国内网络可以！只要耐心等！）直到出现下面的界面：</p>
 <p><img data-src="https://s1.ax1x.com/2022/09/17/xShqfK.png"></p>
 <p>输入下面的命令安装 gcc：</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ pacman -S mingw-w64-x86_64-gcc</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">pacman -S mingw-w64-x86_64-gcc</span><br></pre></td></tr></tbody></table></figure>
 
 <p><img data-src="https://s1.ax1x.com/2022/09/17/xS46nH.png" alt="画横线的是需要自己输入的"></p>
 <p>接下来需要添加环境变量。直接搜索 <code>高级系统设置</code>：</p>
@@ -2665,37 +2698,37 @@
     <content><![CDATA[<p>This is NOT a tutorial of installing Ubuntu. Just write down some issues I met during my installation.</p>
 <span id="more"></span>
 
-<h2 id="USER"><a href="#USER" class="headerlink" title="USER"></a>USER</h2><p>It’s not recommended to login your ubuntu as <code>root</code>. To create a new user with the default home directory, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ useradd --create-home &lt;username&gt;</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ useradd -m &lt;username&gt;</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="User"><a href="#User" class="headerlink" title="User"></a>User</h2><p>It’s not recommended to login your ubuntu as <code>root</code>. To create a new user with the default home directory, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">useradd --create-home &lt;username&gt;</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">useradd -m &lt;username&gt;</span><br></pre></td></tr></tbody></table></figure>
 
-<p>To add the new user to sudoers, run the command below as <code>root</code>:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># visudo</span></span><br></pre></td></tr></tbody></table></figure>
+<p>To add the new user to sudoers, run the command below <strong>as <code>root</code></strong>:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">visudo</span><br></pre></td></tr></tbody></table></figure>
 
-<div class="note "><p>You may install <code>sudo</code> first. Run the command below as <code>root</code>:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># apt install sudo</span></span><br></pre></td></tr></tbody></table></figure>
+<div class="note "><p>You may install <code>sudo</code> first. Run the command below <strong>as <code>root</code></strong>:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">apt install sudo</span><br></pre></td></tr></tbody></table></figure>
 </div>
 
-<h2 id="SOFTWARE"><a href="#SOFTWARE" class="headerlink" title="SOFTWARE"></a>SOFTWARE</h2><h3 id="PACKAGE-MANAGER"><a href="#PACKAGE-MANAGER" class="headerlink" title="PACKAGE MANAGER"></a>PACKAGE MANAGER</h3><p>The first thing you need to do is configuring <code>apt</code>‘s mirror.</p>
+<h2 id="Software"><a href="#Software" class="headerlink" title="Software"></a>Software</h2><h3 id="Package-Manager"><a href="#Package-Manager" class="headerlink" title="Package Manager"></a>Package Manager</h3><p>The first thing you need to do is configuring <code>apt</code>‘s mirror.</p>
 <p>If you also want to use the mirror from Tsinghua:</p>
 <p>See <em><a href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/">ubuntu | 镜像使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror</a></em></p>
 <p>To update your <code>apt</code> repository, press <code>Ctrl + Alt + T</code> to run a terminal, and run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt upgrade</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="SHELL"><a href="#SHELL" class="headerlink" title="SHELL"></a>SHELL</h3><p>I often use fishshell as my default login shell. To install it, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ sudo apt install fish</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h3><p>I often use fishshell as my default login shell. To install it, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo apt install fish</span><br></pre></td></tr></tbody></table></figure>
 
 <p>To set fishshell for the current user:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ chsh --shell &lt;path/to/fish&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">chsh --shell &lt;path/to/fish&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <p>To find out where fishshell is, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ <span class="built_in">which</span> fish</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">which</span> fish</span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="APPSTORE"><a href="#APPSTORE" class="headerlink" title="APPSTORE"></a>APPSTORE</h3><p>This one is interesting. You may give it a try.</p>
+<h3 id="AppStore"><a href="#AppStore" class="headerlink" title="AppStore"></a>AppStore</h3><p>This one is interesting. You may give it a try.</p>
 <p><em><a href="https://gitee.com/deepin-community-store/spark-store">Spark-Store</a></em></p>
-<h3 id="BROWSER"><a href="#BROWSER" class="headerlink" title="BROWSER"></a>BROWSER</h3><p>I use Microsoft Edge. It’s pretty easy to download the <code>.deb</code> on its <em><a href="https://www.microsoft.com/en-us/edge/download">official website</a></em>. But if you want to install it from command line:</p>
+<h3 id="Browser"><a href="#Browser" class="headerlink" title="Browser"></a>Browser</h3><p>I use Microsoft Edge. It’s pretty easy to download the <code>.deb</code> on its <em><a href="https://www.microsoft.com/en-us/edge/download">official website</a></em>. But if you want to install it from command line:</p>
 <p>See <em><a href="https://www.linuxcapable.com/how-to-install-microsoft-edge-on-ubuntu-linux/">How to Install Microsoft Edge on Ubuntu 22.04 | 20.04 - LinuxCapable</a></em></p>
-<h3 id="PROXY"><a href="#PROXY" class="headerlink" title="PROXY"></a>PROXY</h3><p>Maybe <em><a href="https://github.com/zzzgydi/clash-verge">zzzgydi/clash-verge: A Clash GUI based on tauri. Supports Windows, macOS and Linux</a></em> or <em><a href="https://github.com/Fndroid/clash_for_windows_pkg">Fndroid/clash_for_windows_pkg</a></em></p>
-<h3 id="CLI-APPS"><a href="#CLI-APPS" class="headerlink" title="CLI-APPS"></a>CLI-APPS</h3><ul>
+<h3 id="Proxy"><a href="#Proxy" class="headerlink" title="Proxy"></a>Proxy</h3><p>Maybe <em><a href="https://github.com/zzzgydi/clash-verge">zzzgydi/clash-verge: A Clash GUI based on tauri. Supports Windows, macOS and Linux</a></em> or <em><a href="https://github.com/Fndroid/clash_for_windows_pkg">Fndroid/clash_for_windows_pkg</a></em></p>
+<h3 id="CLI-APPs"><a href="#CLI-APPs" class="headerlink" title="CLI-APPs"></a>CLI-APPs</h3><ul>
 <li>bat: a replacement for <code>cat</code> (See <a href="https://github.com/sharkdp/bat">GitHub</a>, <a href="https://blocklune.github.io/posts/e7bc2e88.html">my post</a>)</li>
 <li>cloc: a command-line tool to count codes (See <a href="https://github.com/AlDanial/cloc">GitHub</a>)</li>
 <li>exa: a replacement for <code>ls</code> command (See <a href="https://github.com/ogham/exa">GitHub</a>)</li>
@@ -2714,7 +2747,7 @@
 <li>tldr: cheatsheets for commands (See <a href="https://github.com/tldr-pages/tldr">GitHub</a>)</li>
 <li>zoxide: a smarter cd command (See <a href="https://github.com/ajeetdsouza/zoxide">Github</a>)</li>
 </ul>
-<h2 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h2><p>Q: The operating system always freezes on the welcome page.<br>A: Install / Update NVIDIA driver.</p>
+<h2 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q &amp; A"></a>Q &amp; A</h2><p>Q: The operating system always freezes on the welcome page.<br>A: Install / Update NVIDIA driver.</p>
 <p>See <em><a href="https://www.cnblogs.com/Leozi/p/13281224.html">Ubuntu 下安装 NVIDIA 驱动的三种方法</a></em></p>
 <p>and <em><a href="https://superuser.com/questions/1750975/nouveau-00000100-0-drm-failed-to-idle-channel-0-drm">ubuntu - nouveau 0000:01:00.0: DRM: failed to idle channel 0 [DRM] - Super User</a></em></p>
 <p>Q: Why the Microsoft Edge always show <em>This page is having a problem</em>?</p>
@@ -2733,10 +2766,10 @@
     <content><![CDATA[<p>When in a terminal, sometimes it’s really annoying to keep on typing in <code>cd</code> or something else to browse the files and directories. Can we do it just like what we do in GUI? Then joshuto may be helpful to you.</p>
 <span id="more"></span>
 
-<h2 id="BRIEF"><a href="#BRIEF" class="headerlink" title="BRIEF"></a>BRIEF</h2><p><a href="https://github.com/kamiyaa/joshuto">joshuto</a> is a <a href="https://ranger.github.io/">ranger</a>-like terminal file manager written in Rust. Thanks to rust’s excellent performance, joshuto is much faster than ranger.</p>
+<h2 id="Brief"><a href="#Brief" class="headerlink" title="Brief"></a>Brief</h2><p><a href="https://github.com/kamiyaa/joshuto">joshuto</a> is a <a href="https://ranger.github.io/">ranger</a>-like terminal file manager written in Rust. Thanks to rust’s excellent performance, joshuto is much faster than ranger.</p>
 <p>It allows you to explore files in terminal like this:</p>
 <p><img data-src="https://s1.ax1x.com/2023/07/12/pCftl2d.png" alt="joshuto on GitHub"></p>
-<h2 id="INSTALLATION"><a href="#INSTALLATION" class="headerlink" title="INSTALLATION"></a>INSTALLATION</h2><h3 id="ARCH"><a href="#ARCH" class="headerlink" title="ARCH"></a>ARCH</h3><p>In archlinux, I choose to use <code>yay</code>. Run the command below and keep hitting Enter.</p>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><h3 id="Arch"><a href="#Arch" class="headerlink" title="Arch"></a>Arch</h3><p>In archlinux, I choose to use <code>yay</code>. Run the command below and keep hitting Enter.</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">yay -S joshuto</span><br></pre></td></tr></tbody></table></figure>
 
 <div class="note info"><p>How to install Yay from source?</p>
@@ -2753,7 +2786,7 @@
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">makepkg -si</span><br></pre></td></tr></tbody></table></figure>
 </div>
 
-<h3 id="UBUNTU"><a href="#UBUNTU" class="headerlink" title="UBUNTU"></a>UBUNTU</h3><p>You can install <code>joshuto</code> using <code>cargo</code>:</p>
+<h3 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h3><p>You can install <code>joshuto</code> using <code>cargo</code>:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">cargo install --git https://github.com/kamiyaa/joshuto.git --force</span><br></pre></td></tr></tbody></table></figure>
 
 <div class="note info"><p>To install <code>cargo</code>, run:</p>
@@ -2766,7 +2799,7 @@
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> -x PATH /<span class="variable">$HOME</span>/.cargo/bin <span class="variable">$PATH</span></span><br></pre></td></tr></tbody></table></figure>
 </div>
 
-<h2 id="USAGE"><a href="#USAGE" class="headerlink" title="USAGE"></a>USAGE</h2><p>First, to open the GUI, run:</p>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p>First, to open the GUI, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">joshuto</span><br></pre></td></tr></tbody></table></figure>
 
 <p><code>joshuto</code> supports vim-like operations:</p>
@@ -2815,7 +2848,7 @@
 <p>where</p>
 <p>$$<br>a,b,c,d \in [0, 255]<br>\<br>e \in [0, 65525]<br>$$</p>
 <p>RegExp doesn’t support the direct expression of a number range. We have to do it some other way.</p>
-<h2 id="THE-0-255-PART"><a href="#THE-0-255-PART" class="headerlink" title="THE 0-255 PART"></a>THE 0-255 PART</h2><p>After some analysis, we can easily see that we can do the 0-255 part this way:</p>
+<h2 id="The-0-255-Part"><a href="#The-0-255-Part" class="headerlink" title="The 0-255 Part"></a>The 0-255 Part</h2><p>After some analysis, we can easily see that we can do the 0-255 part this way:</p>
 <p><img data-src="https://s1.ax1x.com/2023/07/04/pCsg0N8.png" alt="From https://c.runoob.com/front-end/7625/"></p>
 <p>and the RegExp should be like this:</p>
 <figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">[0-9]|([1-9][0-9])|(1[0-9][0-9])|(2[0-4][0-9])|25[0-5]</span><br></pre></td></tr></tbody></table></figure>
@@ -2823,11 +2856,11 @@
 <p>or</p>
 <figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">\d|([1-9]\d)|(1\d\d)|(2[0-4]\d)|(25[0-5])</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="THE-0-65525-PART"><a href="#THE-0-65525-PART" class="headerlink" title="THE 0-65525 PART"></a>THE 0-65525 PART</h2><p>With similar method, we can write the 0-65535 part like this:</p>
+<h2 id="The-0-65525-Part"><a href="#The-0-65525-Part" class="headerlink" title="The 0-65525 Part"></a>The 0-65525 Part</h2><p>With similar method, we can write the 0-65535 part like this:</p>
 <figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">[0-9]|[1-9][0-9]{1,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5]</span><br></pre></td></tr></tbody></table></figure>
 
 <p><img data-src="https://s1.ax1x.com/2023/07/04/pCs2hqI.png" alt="From https://c.runoob.com/front-end/7625/"></p>
-<h2 id="CATENATE-THEM"><a href="#CATENATE-THEM" class="headerlink" title="CATENATE THEM"></a>CATENATE THEM</h2><figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">^((([0-9]|([1-9][0-9])|(1[0-9][0-9])|(2[0-4][0-9])|25[0-5])\.){3}([0-9]|([1-9][0-9])|(1[0-9][0-9])|(2[0-4][0-9])|25[0-5]))((:([0-9]|[1-9][0-9]{1,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5]))?)$</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="Concatenate-Them"><a href="#Concatenate-Them" class="headerlink" title="Concatenate Them"></a>Concatenate Them</h2><figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">^((([0-9]|([1-9][0-9])|(1[0-9][0-9])|(2[0-4][0-9])|25[0-5])\.){3}([0-9]|([1-9][0-9])|(1[0-9][0-9])|(2[0-4][0-9])|25[0-5]))((:([0-9]|[1-9][0-9]{1,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5]))?)$</span><br></pre></td></tr></tbody></table></figure>
 ]]></content>
       <categories>
         <category>CS</category>
@@ -2844,7 +2877,7 @@
     <content><![CDATA[<p>There are a huge amount of options in Vim. It enables us to customize our own Vim as our wishes.</p>
 <span id="more"></span>
 
-<h2 id="BRIEF"><a href="#BRIEF" class="headerlink" title="BRIEF"></a>BRIEF</h2><p>To see the complete option list, run:</p>
+<h2 id="Brief"><a href="#Brief" class="headerlink" title="Brief"></a>Brief</h2><p>To see the complete option list, run:</p>
 <figure class="highlight vim"><table><tbody><tr><td class="code"><pre><span class="line">:<span class="keyword">help</span> option-<span class="keyword">list</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>To change an option only for this time, run:</p>
@@ -2857,12 +2890,12 @@
 <figure class="highlight vim"><table><tbody><tr><td class="code"><pre><span class="line">:<span class="keyword">set</span> <span class="symbol">&lt;option&gt;</span>?</span><br></pre></td></tr></tbody></table></figure>
 
 <p>If you want to save your options, edit <code>~/.vimrc</code>.</p>
-<h2 id="GETTING-STARTED"><a href="#GETTING-STARTED" class="headerlink" title="GETTING STARTED"></a>GETTING STARTED</h2><p>Here is an example <code>.vimrc</code> provided by MIT:</p>
+<h2 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h2><p>Here is an example <code>.vimrc</code> provided by MIT:</p>
 <figure class="highlight vim"><table><tbody><tr><td class="code"><pre><span class="line"><span class="string">" Comments in Vimscript start with a `"</span>`.</span><br><span class="line"></span><br><span class="line"><span class="comment">" If you open this file in Vim, it'll be syntax highlighted for you.</span></span><br><span class="line"></span><br><span class="line"><span class="comment">" Vim is based on Vi. Setting `nocompatible` switches from the default</span></span><br><span class="line"><span class="comment">" Vi-compatibility mode and enables useful Vim functionality. This</span></span><br><span class="line"><span class="comment">" configuration option turns out not to be necessary for the file named</span></span><br><span class="line"><span class="comment">" '~/.vimrc', because Vim automatically enters nocompatible mode if that file</span></span><br><span class="line"><span class="comment">" is present. But we're including it here just in case this config file is</span></span><br><span class="line"><span class="comment">" loaded some other way (e.g. saved as `foo`, and then Vim started with</span></span><br><span class="line"><span class="comment">" `vim -u foo`).</span></span><br><span class="line"><span class="keyword">set</span> nocompatible</span><br><span class="line"></span><br><span class="line"><span class="comment">" Turn on syntax highlighting.</span></span><br><span class="line"><span class="keyword">syntax</span> <span class="keyword">on</span></span><br><span class="line"></span><br><span class="line"><span class="comment">" Disable the default Vim startup message.</span></span><br><span class="line"><span class="keyword">set</span> shortmess+=I</span><br><span class="line"></span><br><span class="line"><span class="comment">" Show line numbers.</span></span><br><span class="line"><span class="keyword">set</span> <span class="keyword">number</span></span><br><span class="line"></span><br><span class="line"><span class="comment">" This enables relative line numbering mode. With both number and</span></span><br><span class="line"><span class="comment">" relativenumber enabled, the current line shows the true line number, while</span></span><br><span class="line"><span class="comment">" all other lines (above and below) are numbered relative to the current line.</span></span><br><span class="line"><span class="comment">" This is useful because you can tell, at a glance, what count is needed to</span></span><br><span class="line"><span class="comment">" jump up or down to a particular line, by {count}k to go up or {count}j to go</span></span><br><span class="line"><span class="comment">" down.</span></span><br><span class="line"><span class="keyword">set</span> relativenumber</span><br><span class="line"></span><br><span class="line"><span class="comment">" Always show the status line at the bottom, even if you only have one window open.</span></span><br><span class="line"><span class="keyword">set</span> laststatus=<span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">" The backspace key has slightly unintuitive behavior by default. For example,</span></span><br><span class="line"><span class="comment">" by default, you can't backspace before the insertion point set with 'i'.</span></span><br><span class="line"><span class="comment">" This configuration makes backspace behave more reasonably, in that you can</span></span><br><span class="line"><span class="comment">" backspace over anything.</span></span><br><span class="line"><span class="keyword">set</span> backspace=<span class="built_in">indent</span>,eol,start</span><br><span class="line"></span><br><span class="line"><span class="comment">" By default, Vim doesn't let you hide a buffer (i.e. have a buffer that isn't</span></span><br><span class="line"><span class="string">" shown in any window) that has unsaved changes. This is to prevent you from "</span></span><br><span class="line"><span class="comment">" forgetting about unsaved changes and then quitting e.g. via `:qa!`. We find</span></span><br><span class="line"><span class="comment">" hidden buffers helpful enough to disable this protection. See `:help hidden`</span></span><br><span class="line"><span class="comment">" for more information on this.</span></span><br><span class="line"><span class="keyword">set</span> hidden</span><br><span class="line"></span><br><span class="line"><span class="comment">" This setting makes search case-insensitive when all characters in the string</span></span><br><span class="line"><span class="comment">" being searched are lowercase. However, the search becomes case-sensitive if</span></span><br><span class="line"><span class="comment">" it contains any capital letters. This makes searching more convenient.</span></span><br><span class="line"><span class="keyword">set</span> ignorecase</span><br><span class="line"><span class="keyword">set</span> smartcase</span><br><span class="line"></span><br><span class="line"><span class="comment">" Enable searching as you type, rather than waiting till you press enter.</span></span><br><span class="line"><span class="keyword">set</span> incsearch</span><br><span class="line"></span><br><span class="line"><span class="comment">" Unbind some useless/annoying default key bindings.</span></span><br><span class="line"><span class="keyword">nmap</span> Q <span class="symbol">&lt;Nop&gt;</span> <span class="comment">" 'Q' in normal mode enters Ex mode. You almost never want this.</span></span><br><span class="line"></span><br><span class="line"><span class="comment">" Disable audible bell because it's annoying.</span></span><br><span class="line"><span class="keyword">set</span> noerrorbells visualbell t_vb=</span><br><span class="line"></span><br><span class="line"><span class="comment">" Enable mouse support. You should avoid relying on this too much, but it can</span></span><br><span class="line"><span class="comment">" sometimes be convenient.</span></span><br><span class="line"><span class="keyword">set</span> mouse+=<span class="keyword">a</span></span><br><span class="line"></span><br><span class="line"><span class="comment">" Try to prevent bad habits like using the arrow keys for movement. This is</span></span><br><span class="line"><span class="comment">" not the only possible bad habit. For example, holding down the h/j/k/l keys</span></span><br><span class="line"><span class="comment">" for movement, rather than using more efficient movement commands, is also a</span></span><br><span class="line"><span class="comment">" bad habit. The former is enforceable through a .vimrc, while we don't know</span></span><br><span class="line"><span class="comment">" how to prevent the latter.</span></span><br><span class="line"><span class="comment">" Do this in normal mode...</span></span><br><span class="line"><span class="keyword">nnoremap</span> <span class="symbol">&lt;Left&gt;</span>  :<span class="keyword">echoe</span> <span class="string">"Use h"</span><span class="symbol">&lt;CR&gt;</span></span><br><span class="line"><span class="keyword">nnoremap</span> <span class="symbol">&lt;Right&gt;</span> :<span class="keyword">echoe</span> <span class="string">"Use l"</span><span class="symbol">&lt;CR&gt;</span></span><br><span class="line"><span class="keyword">nnoremap</span> <span class="symbol">&lt;Up&gt;</span>    :<span class="keyword">echoe</span> <span class="string">"Use k"</span><span class="symbol">&lt;CR&gt;</span></span><br><span class="line"><span class="keyword">nnoremap</span> <span class="symbol">&lt;Down&gt;</span>  :<span class="keyword">echoe</span> <span class="string">"Use j"</span><span class="symbol">&lt;CR&gt;</span></span><br><span class="line"><span class="comment">" ...and in insert mode</span></span><br><span class="line"><span class="keyword">inoremap</span> <span class="symbol">&lt;Left&gt;</span>  <span class="symbol">&lt;ESC&gt;</span>:<span class="keyword">echoe</span> <span class="string">"Use h"</span><span class="symbol">&lt;CR&gt;</span></span><br><span class="line"><span class="keyword">inoremap</span> <span class="symbol">&lt;Right&gt;</span> <span class="symbol">&lt;ESC&gt;</span>:<span class="keyword">echoe</span> <span class="string">"Use l"</span><span class="symbol">&lt;CR&gt;</span></span><br><span class="line"><span class="keyword">inoremap</span> <span class="symbol">&lt;Up&gt;</span>    <span class="symbol">&lt;ESC&gt;</span>:<span class="keyword">echoe</span> <span class="string">"Use k"</span><span class="symbol">&lt;CR&gt;</span></span><br><span class="line"><span class="keyword">inoremap</span> <span class="symbol">&lt;Down&gt;</span>  <span class="symbol">&lt;ESC&gt;</span>:<span class="keyword">echoe</span> <span class="string">"Use j"</span><span class="symbol">&lt;CR&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>Learn more on <em><a href="https://missing.csail.mit.edu/2020/editors/">Editors (Vim) · Missing Semester (mit.edu)</a></em>.</p>
-<h2 id="MY-OPTIONS"><a href="#MY-OPTIONS" class="headerlink" title="MY OPTIONS"></a>MY OPTIONS</h2><p>I use <a href="https://github.com/junegunn/vim-plug">vim-plug</a> as my vim plugin manager. If you also want to use it, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \</span><br><span class="line">    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="My-Options"><a href="#My-Options" class="headerlink" title="My Options"></a>My Options</h2><p>I use <a href="https://github.com/junegunn/vim-plug">vim-plug</a> as my vim plugin manager. If you also want to use it, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">curl -fLo ~/.vim/autoload/plug.vim --create-dirs \</span><br><span class="line">    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim</span><br></pre></td></tr></tbody></table></figure>
 
 <p>Learn more on <em><a href="https://github.com/junegunn/vim-plug">junegunn/vim-plug: Minimalist Vim Plugin Manager</a></em>.</p>
 <p>Then you can use my <code>.vimrc</code>. Attention that it is based on the MIT basic version.</p>
@@ -2871,7 +2904,7 @@
 <p>To use <code>vim-plug</code> to install the plugins, run:</p>
 <figure class="highlight vim"><table><tbody><tr><td class="code"><pre><span class="line">:PlugInstall</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="REFERENCE"><a href="#REFERENCE" class="headerlink" title="REFERENCE"></a>REFERENCE</h2><ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
 <li><em><a href="https://missing.csail.mit.edu/2020/editors/">Editors (Vim) · Missing Semester (mit.edu)</a></em></li>
 <li><em><a href="https://ruanyifeng.com/blog/2018/09/vimrc.html">Vim 配置入门 - 阮一峰的网络日志 (ruanyifeng.com)</a></em></li>
 <li><em><a href="https://dougblack.io/words/a-good-vimrc.html">A Good Vimrc (dougblack.io)</a></em></li>
