@@ -9,7 +9,7 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Wed, 02 Aug 2023 03:13:30 GMT</pubDate>
+    <pubDate>Wed, 02 Aug 2023 03:14:29 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -891,7 +891,7 @@
     </item>
     
     <item>
-      <title>Simple Git tutorial</title>
+      <title>Simple Git Tutorial</title>
       <link>https://blocklune.github.io/posts/9363e311.html</link>
       <guid>https://blocklune.github.io/posts/9363e311.html</guid>
       <pubDate>Sat, 11 Mar 2023 09:55:55 GMT</pubDate>
@@ -906,7 +906,7 @@
       <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
       
       
-      <category domain="https://blocklune.github.io/tags/version-control/">Version control</category>
+      <category domain="https://blocklune.github.io/tags/version-control/">Version Control</category>
       
       <category domain="https://blocklune.github.io/tags/git/">Git</category>
       
@@ -1411,9 +1411,9 @@
       <category domain="https://blocklune.github.io/categories/cs/ai/">AI</category>
       
       
-      <category domain="https://blocklune.github.io/tags/novelai/">NovelAI</category>
-      
       <category domain="https://blocklune.github.io/tags/ai/">AI</category>
+      
+      <category domain="https://blocklune.github.io/tags/novelai/">NovelAI</category>
       
       
       <comments>https://blocklune.github.io/posts/f17b3e8b.html#disqus_thread</comments>
