@@ -30,7 +30,7 @@
 <meta property="og:description" content="用 LaTeX 写数学公式的时候，总记不住一些写法，故在此记录学习笔记。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-09-15T06:11:07.000Z">
-<meta property="article:modified_time" content="2023-08-01T15:48:51.587Z">
+<meta property="article:modified_time" content="2023-08-02T02:24:37.702Z">
 <meta property="article:author" content="BlockLune">
 <meta property="article:tag" content="Mathematics">
 <meta property="article:tag" content="LaTeX">
@@ -284,8 +284,9 @@
     <div class="post-body" itemprop="articleBody"><p>用 LaTeX 写数学公式的时候，总记不住一些写法，故在此记录学习笔记。</p>
 <span id="more"></span>
 
-<h2 id="常见符号"><a href="#常见符号" class="headerlink" title="常见符号"></a>常见符号</h2><h3 id="希腊字母"><a href="#希腊字母" class="headerlink" title="希腊字母"></a>希腊字母</h3><p>大小写希腊字母的写法区别就在于 LaTeX 符号的首字母大小写。</p>
-<p>若要使用斜体只要在前面加上 <code>var</code> 前缀，例如 <code>\varGamma</code> 可以用来显示 $\varGamma$ 。</p>
+<p><strong>注意：由于我博客的一些问题（博客使用 MathJax 渲染，但有些 LaTeX 符号 MathJax 并不支持），这篇文章里有些符号没有被正确渲染出来，请见谅。</strong></p>
+<h2 id="常见符号"><a href="#常见符号" class="headerlink" title="常见符号"></a>常见符号</h2><h3 id="希腊字母"><a href="#希腊字母" class="headerlink" title="希腊字母"></a>希腊字母</h3><p>大小写希腊字母的写法区别就在于 LaTeX 符号的首字母大小写。而如果使用 MathJax，这样直接将小写希腊字母的首字母大写的写法是无效的（表中带有” 或 \mathrm {…}” 的那些），必须使用 <code>\mathrm{...}</code>。</p>
+<p>若要使用斜体可以在前面加上 <code>var</code> 前缀，例如 <code>\varGamma</code> 可以用来显示 $\varGamma$ 。也可以使用 <code>\mathit{...}</code>，例如使用 <code>\mathit{\Gamma}</code> 来显示 $\mathit {\Gamma}$，使用 <code>\mathit{A}</code> 来显示 $\mathit {A}$ 。</p>
 <table>
 <thead>
 <tr>
@@ -296,14 +297,14 @@
 </tr>
 </thead>
 <tbody><tr>
-<td> $\Alpha$</td>
-<td>\Alpha</td>
+<td> $\mathrm{A}$</td>
+<td>\Alpha 或 \mathrm {A}</td>
 <td>$\alpha$</td>
 <td>\alpha</td>
 </tr>
 <tr>
-<td>$\Beta$</td>
-<td>\Beta</td>
+<td>$\mathrm{B}$</td>
+<td>\Beta 或 \mathrm {B}</td>
 <td>$\beta$</td>
 <td>\beta</td>
 </tr>
@@ -320,20 +321,20 @@
 <td>\delta</td>
 </tr>
 <tr>
-<td>$\Epsilon$</td>
-<td>\Epsilon</td>
+<td>$\mathrm{E}$</td>
+<td>\Epsilon 或 \mathrm {E}</td>
 <td>$\epsilon$</td>
 <td>\epsilon</td>
 </tr>
 <tr>
-<td>$\Zeta$</td>
-<td>\Zeta</td>
+<td>$\mathrm{Z}$</td>
+<td>\Zeta 或 \mathrm {Z}</td>
 <td>$\zeta$</td>
 <td>\zeta</td>
 </tr>
 <tr>
-<td>$\Eta$</td>
-<td>\Eta</td>
+<td>$\mathrm{H}$</td>
+<td>\Eta 或 \mathrm {H}</td>
 <td>$\eta$</td>
 <td>\eta</td>
 </tr>
@@ -344,14 +345,14 @@
 <td>\theta</td>
 </tr>
 <tr>
-<td>$\Iota$</td>
-<td>\Iota</td>
+<td>$\mathrm{I}$</td>
+<td>\Iota 或 \mathrm {I}</td>
 <td>$\iota$</td>
 <td>\iota</td>
 </tr>
 <tr>
-<td>$\Kappa$</td>
-<td>\Kappa</td>
+<td>$\mathrm{K}$</td>
+<td>\Kappa 或 \mathrm {K}</td>
 <td>$\kappa$</td>
 <td>\kappa</td>
 </tr>
@@ -362,14 +363,14 @@
 <td>\lambda</td>
 </tr>
 <tr>
-<td>$\Mu$</td>
-<td>\Mu</td>
+<td>$\mathrm{M}$</td>
+<td>\Mu 或 \mathrm {M}</td>
 <td>$\mu$</td>
 <td>\mu</td>
 </tr>
 <tr>
-<td>$\Nu$</td>
-<td>\Nu</td>
+<td>$\mathrm{N}$</td>
+<td>\Nu 或 \mathrm {N}</td>
 <td>$\nu$</td>
 <td>\nu</td>
 </tr>
@@ -380,8 +381,8 @@
 <td>\xi</td>
 </tr>
 <tr>
-<td>$\Omicron$</td>
-<td>\Omicron</td>
+<td>$\mathrm{O}$</td>
+<td>\Omicron 或 \mathrm {O}</td>
 <td>$\omicron$</td>
 <td>\omicron</td>
 </tr>
@@ -392,8 +393,8 @@
 <td>\pi</td>
 </tr>
 <tr>
-<td>$\Rho$</td>
-<td>\Rho</td>
+<td>$\mathrm{P}$</td>
+<td>\Rho 或 \mathrm {P}</td>
 <td>$\rho$</td>
 <td>\rho</td>
 </tr>
@@ -404,8 +405,8 @@
 <td>\sigma</td>
 </tr>
 <tr>
-<td>$\Tau$</td>
-<td>\Tau</td>
+<td>$\mathrm{T}$</td>
+<td>\Tau 或 \mathrm {T}</td>
 <td>$\tau$</td>
 <td>\tau</td>
 </tr>
@@ -422,8 +423,8 @@
 <td>\phi</td>
 </tr>
 <tr>
-<td>$\Chi$</td>
-<td>\Chi</td>
+<td>$\mathrm{X}$</td>
+<td>\Chi 或 \mathrm {X}</td>
 <td>$\chi$</td>
 <td>\chi</td>
 </tr>
@@ -502,8 +503,8 @@
 </tr>
 </thead>
 <tbody><tr>
-<td> $\degree$</td>
-<td>\degree</td>
+<td> $^{\circ}$</td>
+<td>\degree 或 ^{\circ}</td>
 </tr>
 <tr>
 <td>$\circ$</td>
