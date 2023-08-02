@@ -9,7 +9,7 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Wed, 02 Aug 2023 02:24:37 GMT</pubDate>
+    <pubDate>Wed, 02 Aug 2023 03:13:30 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -1411,9 +1411,9 @@
       <category domain="https://blocklune.github.io/categories/cs/ai/">AI</category>
       
       
-      <category domain="https://blocklune.github.io/tags/ai/">AI</category>
-      
       <category domain="https://blocklune.github.io/tags/novelai/">NovelAI</category>
+      
+      <category domain="https://blocklune.github.io/tags/ai/">AI</category>
       
       
       <comments>https://blocklune.github.io/posts/f17b3e8b.html#disqus_thread</comments>
