@@ -942,6 +942,96 @@
       </tags>
   </entry>
   <entry>
+    <title>Notes for Algorithms, Part II: Minimum Spanning Trees</title>
+    <url>/posts/8ca4a3fd.html</url>
+    <content><![CDATA[<p>This is a note for 4.3 Minimum Spanning Trees, <em><a href="https://www.coursera.org/learn/algorithms-part2/">Algorithms, Part II</a></em>.</p>
+<span id="more"></span>
+
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p><strong>Given.</strong> Undirected graph $G$ <strong>with positive edge weights</strong> (connected).</p>
+<p><strong>Def.</strong> A <strong>spanning tree</strong> of $G$ is a subgraph $T$ that is both a <strong>tree</strong> (connected and acyclic) and <strong>spanning</strong> (includes all of the vertices).</p>
+<p><strong>Goal.</strong> Find a min weight spanning tree.</p>
+<h2 id="Greedy-algorithm"><a href="#Greedy-algorithm" class="headerlink" title="Greedy algorithm"></a>Greedy algorithm</h2><p><strong>Def.</strong> A <strong>cut</strong> in a graph is a partition of its vertices into two (nonempty) sets.</p>
+<p><strong>Def.</strong> A <strong>crossing edge</strong> connects a vertex in one set with a vertex in the other.</p>
+<p><strong>Cut property.</strong> Given any cut, the crossing edge of min weight is in the MST.</p>
+<p><img data-src="https://s1.ax1x.com/2023/08/03/pPFmcd0.jpg" alt="Cut property"></p>
+<p>Greedy MST algorithm:</p>
+<ul>
+<li>Start with all edges colored gray.</li>
+<li>Find cut with no black crossing edges; color its min-weight edge black.</li>
+<li>Repeat until $V-1$ edges are colored black.</li>
+</ul>
+<h2 id="Edge-weighted-graph-API"><a href="#Edge-weighted-graph-API" class="headerlink" title="Edge-weighted graph API"></a>Edge-weighted graph API</h2><h3 id="Weighted-edge"><a href="#Weighted-edge" class="headerlink" title="Weighted edge"></a>Weighted edge</h3><p>$$<br>\begin{aligned}<br>\text{public class } &amp;\text{Edge implements Comparable&lt;Edge&gt;}\\<br>&amp;\text{Edge(int v, int w, double weight)} &amp;\text{create a weighted edge v-w} \\<br>\text{int }&amp;\text{either()} &amp;\text{either endpoint} \\<br>\text{int }&amp;\text{other(int v)} &amp;\text{the endpoint that’s not v} \\<br>\text{int }&amp;\text{compareTo(Edge that)} &amp;\text{compare this edge to that edge} \\<br>\text{double }&amp;\text{weight()} &amp;\text{the weight} \\<br>\text{String }&amp;\text{toString()} &amp;\text{string representation} \\<br>\end{aligned}<br>$$</p>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Edge</span> <span class="keyword">implements</span> <span class="title class_">Comparable</span>&lt;Edge&gt; {</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="type">int</span> v, w;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="type">double</span> weight;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Edge</span><span class="params">(<span class="type">int</span> v, <span class="type">int</span> w, <span class="type">double</span> weight)</span> {</span><br><span class="line">        <span class="built_in">this</span>.v = v;</span><br><span class="line">        <span class="built_in">this</span>.w = w;</span><br><span class="line">        <span class="built_in">this</span>.weight = weight;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">either</span><span class="params">()</span> {</span><br><span class="line">        <span class="keyword">return</span> v;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">other</span><span class="params">(<span class="type">int</span> vertex)</span> {</span><br><span class="line">        <span class="keyword">if</span> (vertex == v) {</span><br><span class="line">            <span class="keyword">return</span> w;</span><br><span class="line">        } <span class="keyword">else</span> {</span><br><span class="line">            <span class="keyword">return</span> v;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">compareTo</span><span class="params">(Edge that)</span> {</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">this</span>.weight &lt; that.weight) <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">this</span>.weight &gt; that.weight) <span class="keyword">return</span> +<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Edge-weighted-graph"><a href="#Edge-weighted-graph" class="headerlink" title="Edge-weighted graph"></a>Edge-weighted graph</h3><p>$$<br>\begin{aligned}<br>\text{public class } &amp;\text{EdgeWeightedGraph}\\<br>&amp;\text{EdgeWeightedGraph(int V)} &amp;\text{create an empty graph with V vertices} \\<br>&amp;\text{EdgeWeightedGraph(In in)} &amp;\text{create a graph from input stream} \\<br>\text{void }&amp;\text{addEdge(Edge e)} &amp;\text{add weighted edge e to this graph} \\<br>\text{Iterable&lt;Edge&gt; }&amp;\text{adj(int v)} &amp;\text{edges incident to v} \\<br>\text{Iterable&lt;Edge&gt; }&amp;\text{edges()} &amp;\text{all edges in this graph} \\<br>\text{int }&amp;\text{V()} &amp;\text{number of vertices} \\<br>\text{int }&amp;\text{E()} &amp;\text{number of edges} \\<br>\text{String }&amp;\text{toString()} &amp;\text{string representation} \\<br>\end{aligned}<br>$$</p>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">EdgeWeightedGraph</span> {</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="type">int</span> V;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> Bag&lt;Edge&gt;[] adj; <span class="comment">// same as Graph, but adjacency lists of Edges instead of integers</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">EdgeWeightedGraph</span><span class="params">(<span class="type">int</span> V)</span> {</span><br><span class="line">        <span class="built_in">this</span>.V = V;</span><br><span class="line">        adj = (Bag&lt;Edge&gt;[]) <span class="keyword">new</span> <span class="title class_">Bag</span>[V];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">v</span> <span class="operator">=</span> <span class="number">0</span>; v &lt; V; v++) {</span><br><span class="line">            adj[v] = <span class="keyword">new</span> <span class="title class_">Bag</span>&lt;Edge&gt;();</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addEdge</span><span class="params">(Edge e)</span> {</span><br><span class="line">        <span class="type">int</span> <span class="variable">v</span> <span class="operator">=</span> e.either();</span><br><span class="line">        <span class="type">int</span> <span class="variable">w</span> <span class="operator">=</span> e.other(v);</span><br><span class="line">        adj[v].add(e);</span><br><span class="line">        adj[w].add(e);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Iterable&lt;Edge&gt; <span class="title function_">adj</span><span class="params">(<span class="type">int</span> v)</span> {</span><br><span class="line">        <span class="keyword">return</span> adj[v];</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Minimum-spanning-tree-API"><a href="#Minimum-spanning-tree-API" class="headerlink" title="Minimum spanning tree API"></a>Minimum spanning tree API</h3><p>$$<br>\begin{aligned}<br>\text{public class } &amp;\text{MST}\\<br>&amp;\text{MST(EdgeWeightedGraph G)} &amp;\text{constructor} \\<br>\text{Iterable&lt;Edge&gt; }&amp;\text{edges()} &amp;\text{edges in MST} \\<br>\text{double }&amp;\text{weight()} &amp;\text{weight of MST} \\<br>\end{aligned}<br>$$</p>
+<h2 id="Kruskal’s-algorithm"><a href="#Kruskal’s-algorithm" class="headerlink" title="Kruskal’s algorithm"></a>Kruskal’s algorithm</h2><p>Consider edges in ascending order (升序) of weight.</p>
+<ul>
+<li>Add next edge to tree $T$ <strong>unless doing so would create a cycle</strong>.</li>
+</ul>
+<p>(Kruskal’s algorithm is a special case of the greedy MST algorithm.)</p>
+<h3 id="Kruskal’s-algorithm-implementation-challenge"><a href="#Kruskal’s-algorithm-implementation-challenge" class="headerlink" title="Kruskal’s algorithm: implementation challenge"></a>Kruskal’s algorithm: implementation challenge</h3><p><strong>Challenge.</strong> Would adding edge $v-w$ to tree $T$ create a cycle? If not, add it.</p>
+<p><strong>Difficulty.</strong> Union-find (log* V), DFS (V)</p>
+<p><strong>Efficient solution.</strong> Use the <strong>union-find</strong> data structure.</p>
+<ul>
+<li>Maintain a set for each connected component in $T$.</li>
+<li>If $v$ and $w$ are in same set, then adding $v-w$ would create a cycle.</li>
+<li>To add $v-w$ to $T$, merge sets containing $v$ and $w$.</li>
+</ul>
+<h3 id="Kruskal’s-algorithm-Java-implementation"><a href="#Kruskal’s-algorithm-Java-implementation" class="headerlink" title="Kruskal’s algorithm: Java implementation"></a>Kruskal’s algorithm: Java implementation</h3><figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">KruskalMST</span> {</span><br><span class="line">    <span class="keyword">private</span> Queue&lt;Edge&gt; mst = <span class="keyword">new</span> <span class="title class_">Queue</span>&lt;Edge&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">KruskalMST</span><span class="params">(EdgeWeightedGraph G)</span> {</span><br><span class="line">        MinPQ&lt;Edge&gt; pq = <span class="keyword">new</span> <span class="title class_">MinPQ</span>&lt;Edge&gt;();</span><br><span class="line">        <span class="keyword">for</span> (Edge e : G.edges()) {</span><br><span class="line">            pq.insert(e);</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        <span class="type">UF</span> <span class="variable">uf</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">UF</span>(G.V());</span><br><span class="line">        <span class="keyword">while</span> (!pq.isEmpty() &amp;&amp; mst.size() &lt; G.V() - <span class="number">1</span>) {</span><br><span class="line">            <span class="type">Edge</span> <span class="variable">e</span> <span class="operator">=</span> pq.delMin();</span><br><span class="line">            <span class="type">int</span> <span class="variable">v</span> <span class="operator">=</span> e.either();</span><br><span class="line">            <span class="type">int</span> <span class="variable">w</span> <span class="operator">=</span> e.other(v);</span><br><span class="line">            <span class="keyword">if</span> (!uf.connected(v, w)) {</span><br><span class="line">                uf.union(v, w);</span><br><span class="line">                mst.enqueue(e);</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Iterable&lt;Edge&gt; <span class="title function_">edges</span><span class="params">()</span> {</span><br><span class="line">        <span class="keyword">return</span> mst;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Kruskal’s-algorithm-running-time"><a href="#Kruskal’s-algorithm-running-time" class="headerlink" title="Kruskal’s algorithm: running time"></a>Kruskal’s algorithm: running time</h2><p><strong>Proposition.</strong> Kruskal’s algorithm computes MST in time proportional to $E \log E$ (in the worst case).</p>
+<table>
+<thead>
+<tr>
+<th>operation</th>
+<th>frequency</th>
+<th>time per op</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>build pq</td>
+<td>1</td>
+<td>E log E</td>
+</tr>
+<tr>
+<td>delete-min</td>
+<td>E</td>
+<td>log E</td>
+</tr>
+<tr>
+<td>union</td>
+<td>V</td>
+<td>log* V (*)</td>
+</tr>
+<tr>
+<td>connected</td>
+<td>E</td>
+<td>log* V (*)</td>
+</tr>
+</tbody></table>
+<p>* amortized (摊销的) bound using weighted quick union with path compression</p>
+<h2 id="Prim’s-algorithm"><a href="#Prim’s-algorithm" class="headerlink" title="Prim’s algorithm"></a>Prim’s algorithm</h2><ul>
+<li>Start with vertex $0$ and greedily grow tree $T$.</li>
+<li>Add to $T$ the min weight edge with exactly one endpoint in $T$.</li>
+<li>Repeat until $V-1$ edges.</li>
+</ul>
+<p>(Prim’s algorithm is a special case of the greedy MST algorithm.)</p>
+<p>…</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Algorithms &amp; Data structures</category>
+      </categories>
+      <tags>
+        <tag>Coursera</tag>
+        <tag>Algorithm</tag>
+        <tag>Minimum Spanning Trees</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Notes for Algorithms, Part II: Undirected Graphs</title>
     <url>/posts/d3e12860.html</url>
     <content><![CDATA[<p>This is a note for 4.1 Undirected Graphs, <em><a href="https://www.coursera.org/learn/algorithms-part2/">Algorithms, Part II</a></em>.</p>
