@@ -3161,7 +3161,7 @@
 <p>连接 (attach) 到最后一个会话：</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">tmux a</span><br></pre></td></tr></tbody></table></figure>
 
-<p>现在，请随意使用<a href="https://tmuxcheatsheet.com/">主页</a>上的小抄进行试验。如果发现缺少任何快捷指令，请<a href="https://github.com/l9c/tmux_cheat_sheet_data">告诉我</a> :D</p>
+<p>现在，请随意使用<a href="https://tmuxcheatsheet.com/">主页</a>上的小抄进行试验。如果发现缺少任何快捷指令，请<a href="https://github.com/l9c/tmux_cheat_sheet_data">告诉作者</a> :D</p>
 ]]></content>
       <tags>
         <tag>Tmux</tag>
