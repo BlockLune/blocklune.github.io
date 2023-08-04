@@ -3120,6 +3120,54 @@
       </tags>
   </entry>
   <entry>
+    <title>Tmux Quick Start</title>
+    <url>/posts/c99a1d40.html</url>
+    <content><![CDATA[<p>Chinese translation for <em><a href="https://tmuxcheatsheet.com/how-to-install-tmux/">How to Install and Use Tmux</a></em>.</p>
+<span id="more"></span>
+
+<p><strong>注意</strong>：我翻译这篇文章的时间是 2023 年 8 月 4 日，一切请以源网站最新版本文章为准。</p>
+<h2 id="什么是-tmux"><a href="#什么是-tmux" class="headerlink" title="什么是 tmux"></a>什么是 tmux</h2><p>Tmux 是一个终端复用器，它允许你远程管理多个命令行会话 (sessions)。有了 Tmux，你可以在远程服务器上启动会话，在会话中启动应用程序，然后再从该会话中分离 (detach) 或重新连接 (reattach)。</p>
+<p>使用 Tmux 的主要优势包括:</p>
+<ul>
+<li><strong>无缝恢复远程会话</strong> —— 即使断开连接，也可根据需要分离和重新连接会话。</li>
+<li><strong>提高远程交互性</strong> —— 保持应用程序和进程的远程运行。</li>
+<li><strong>高级会话控制</strong> —— Tmux 支持多窗口 (windows) 和窗格 (panes)。</li>
+<li><strong>提高工作效率</strong> —— 在单个终端高效管理原来多个终端的内容。</li>
+</ul>
+<p>在使用 SSH 进行交互式工作时，强烈推荐您使用 Tmux。” 从远程会话中分离和重新连接” 的功能意味着，即使暂时断开连接，也能无缝恢复工作。Tmux 还能在本地和远程机器上复用终端、应用程序和进程，从而改进工作流程。Tmux 优化的其他使用场景包括远程开发、DevOps、基础设施管理以及任何涉及远程终端或命令行访问的任务。</p>
+<h2 id="为什么使用-tmux"><a href="#为什么使用-tmux" class="headerlink" title="为什么使用 tmux"></a>为什么使用 tmux</h2><p>Tmux 可让你在远程设备上持续运行任务，因此你可以安全地断开和重新连接，而不会中断那些正在运行的任务。它功能强大、可扩展，与<a href="https://tmuxcheatsheet.com/">快捷指令</a>结合使用可节省更多工作时间。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>大多数平台都提供 tmux 的二进制软件包。使用下面的命令从二进制包中安装：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Debian, Ubuntu</span></span><br><span class="line">sudo apt-get install tmux</span><br><span class="line"></span><br><span class="line"><span class="comment"># RHEL/CentOS/Fedora</span></span><br><span class="line">sudo yum install tmux</span><br><span class="line"></span><br><span class="line"><span class="comment"># MacOS</span></span><br><span class="line">brew install tmux</span><br></pre></td></tr></tbody></table></figure>
+
+<p>如果需要最新版本，请使用下面的命令从源代码中安装：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/tmux/tmux.git</span><br><span class="line"><span class="built_in">cd</span> tmux</span><br><span class="line">sh autogen.sh</span><br><span class="line">./configure &amp;&amp; make</span><br></pre></td></tr></tbody></table></figure>
+
+<p>或者直接下载 tmux 并安装（不进行 git 克隆）：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">wget https://github.com/tmux/tmux/releases/download/3.3a/tmux-3.3a.tar.gz</span><br><span class="line">tar xzvf tmux-3.3a.tar.gz</span><br><span class="line"><span class="built_in">cd</span> tmux-3.3a</span><br><span class="line">./configure</span><br><span class="line">make &amp;&amp; sudo make install</span><br></pre></td></tr></tbody></table></figure>
+
+<p>验证下载的版本：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">tmux -V</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="第一个-Tmux-会话"><a href="#第一个-Tmux-会话" class="headerlink" title="第一个 Tmux 会话"></a>第一个 Tmux 会话</h2><p>现在你已经完成了安装。输入 <code>tmux</code> 来启动你的第一个会话：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">tmux</span><br></pre></td></tr></tbody></table></figure>
+
+<p>想要水平分割你的窗格 (pane)，按下：</p>
+<p><code>Ctrl + b</code> 然后 <code>%</code></p>
+<p>想要交换窗格，按下：</p>
+<p><code>Ctrl + b</code> 然后 <code>&lt;-</code></p>
+<p><code>Ctrl + b</code> 然后 <code>-&gt;</code></p>
+<p>分离 (detach) / 退出会话：</p>
+<p><code>Ctrl + b</code> 然后 <code>d</code></p>
+<p>连接 (attach) 到最后一个会话：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">tmux a</span><br></pre></td></tr></tbody></table></figure>
+
+<p>现在，请随意使用<a href="https://tmuxcheatsheet.com/">主页</a>上的小抄进行试验。如果发现缺少任何快捷指令，请<a href="https://github.com/l9c/tmux_cheat_sheet_data">告诉我</a> :D</p>
+]]></content>
+      <tags>
+        <tag>Tmux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Set up a blog with Hexo</title>
     <url>/posts/4ef0ac98.html</url>
     <content><![CDATA[<p>This is a simple record of my other trial to set up a blog with Hexo. I have built one on GitHub Page before, using Hexo with Icarus theme. This time, I want to try something else. I also cleaned my old blog and selectively migrated some old posts here.</p>
