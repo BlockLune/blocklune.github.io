@@ -9,8 +9,31 @@
     <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Fri, 04 Aug 2023 15:35:05 GMT</pubDate>
+    <pubDate>Sat, 05 Aug 2023 05:43:48 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Notes for 《tmux Productive Mouse-Free Development》</title>
+      <link>https://blocklune.github.io/posts/53957db4.html</link>
+      <guid>https://blocklune.github.io/posts/53957db4.html</guid>
+      <pubDate>Sat, 05 Aug 2023 03:47:53 GMT</pubDate>
+      
+      <description>&lt;p&gt;Notes for &lt;em&gt;tmux Productive Mouse-Free Development&lt;/em&gt; written by Brian P. Hogan.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
+      
+      
+      <category domain="https://blocklune.github.io/tags/tmux/">Tmux</category>
+      
+      
+      <comments>https://blocklune.github.io/posts/53957db4.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Tmux Quick Start</title>
@@ -22,6 +45,10 @@
       
       
       
+      
+      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      
+      <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
       
       
       <category domain="https://blocklune.github.io/tags/tmux/">Tmux</category>

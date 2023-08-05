@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="google7b9c7ea42a3102a3.html">
+  <meta name="baidu-site-verification" content="baidu_verify_code-53bseLro2G.html">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blocklune.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Notes for tmux Productive Mouse-Free Development written by Brian P. Hogan.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Notes for 《tmux Productive Mouse-Free Development》">
+<meta property="og:url" content="https://blocklune.github.io/posts/53957db4.html">
+<meta property="og:site_name" content="Fish Pond">
+<meta property="og:description" content="Notes for tmux Productive Mouse-Free Development written by Brian P. Hogan.">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-08-05T03:47:53.000Z">
+<meta property="article:modified_time" content="2023-08-05T05:43:48.616Z">
+<meta property="article:author" content="BlockLune">
+<meta property="article:tag" content="Tmux">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://blocklune.github.io/posts/53957db4.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blocklune.github.io/posts/53957db4.html","path":"posts/53957db4.html","title":"Notes for 《tmux Productive Mouse-Free Development》"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Notes for 《tmux Productive Mouse-Free Development》 | Fish Pond</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/rss.xml" title="Fish Pond" type="application/rss+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Fish Pond</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Posts swim here.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Learning-The-Basics"><span class="nav-number">1.</span> <span class="nav-text">Learning The Basics</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Starting-tmux"><span class="nav-number">1.1.</span> <span class="nav-text">Starting tmux</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Detaching-and-Attaching-Sessions"><span class="nav-number">1.2.</span> <span class="nav-text">Detaching and Attaching Sessions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Reattaching-to-Existing-Sessions"><span class="nav-number">1.2.1.</span> <span class="nav-text">Reattaching to Existing Sessions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Killing-Sessions"><span class="nav-number">1.2.2.</span> <span class="nav-text">Killing Sessions</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Working-with-Windows"><span class="nav-number">1.3.</span> <span class="nav-text">Working with Windows</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Creating-and-Naming-Windows"><span class="nav-number">1.3.1.</span> <span class="nav-text">Creating and Naming Windows</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Moving-Between-Windows"><span class="nav-number">1.3.2.</span> <span class="nav-text">Moving Between Windows</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Working-with-Panes"><span class="nav-number">1.4.</span> <span class="nav-text">Working with Panes</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Closing-Panes"><span class="nav-number">1.4.1.</span> <span class="nav-text">Closing Panes</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Working-with-Command-Mode"><span class="nav-number">1.5.</span> <span class="nav-text">Working with Command Mode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#What%E2%80%99s-Next"><span class="nav-number">1.6.</span> <span class="nav-text">What’s Next?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Configuring-tmux"><span class="nav-number">2.</span> <span class="nav-text">Configuring tmux</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introducing-the-tmux-conf-File"><span class="nav-number">2.1.</span> <span class="nav-text">Introducing the .tmux.conf File</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Defining-an-Easier-Prefix"><span class="nav-number">2.1.1.</span> <span class="nav-text">Defining an Easier Prefix</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Changing-the-Default-Delay"><span class="nav-number">2.1.2.</span> <span class="nav-text">Changing the Default Delay</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Setting-the-Windows-and-Panes-Index"><span class="nav-number">2.1.3.</span> <span class="nav-text">Setting the Windows and Panes Index</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Creating-a-Shortcut-to-Reload-the-Configuration"><span class="nav-number">2.1.4.</span> <span class="nav-text">Creating a Shortcut to Reload the Configuration</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sending-the-Prefix-to-Other-Applications"><span class="nav-number">2.1.5.</span> <span class="nav-text">Sending the Prefix to Other Applications</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Splitting-Panes"><span class="nav-number">2.1.6.</span> <span class="nav-text">Splitting Panes</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Remapping-Movement-Keys"><span class="nav-number">2.1.7.</span> <span class="nav-text">Remapping Movement Keys</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Resizing-Panes"><span class="nav-number">2.1.8.</span> <span class="nav-text">Resizing Panes</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Handling-the-Mouse"><span class="nav-number">2.1.9.</span> <span class="nav-text">Handling the Mouse</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="BlockLune"
+      src="/img/waifu.png">
+  <p class="site-author-name" itemprop="name">BlockLune</p>
+  <div class="site-description" itemprop="description">Here is BlockLune's blog.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">67</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">102</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/BlockLune" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;BlockLune" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:blocklune@gmail.com" title="E-Mail → mailto:blocklune@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          Links
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="http://f-studio.is-best.net/" title="http:&#x2F;&#x2F;f-studio.is-best.net&#x2F;" rel="noopener" target="_blank">F-Studio</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://luoyuxuanryan.github.io/" title="https:&#x2F;&#x2F;luoyuxuanryan.github.io&#x2F;" rel="noopener" target="_blank">Radish Garden</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://tommygong.top/" title="https:&#x2F;&#x2F;tommygong.top&#x2F;" rel="noopener" target="_blank">TommyGong's Blog</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://blog.yfi.moe/" title="http:&#x2F;&#x2F;blog.yfi.moe&#x2F;" rel="noopener" target="_blank">Yunfi's Blog</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blocklune.github.io/posts/53957db4.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/waifu.png">
+      <meta itemprop="name" content="BlockLune">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fish Pond">
+      <meta itemprop="description" content="Here is BlockLune's blog.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Notes for 《tmux Productive Mouse-Free Development》 | Fish Pond">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Notes for 《tmux Productive Mouse-Free Development》
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-08-05 11:47:53" itemprop="dateCreated datePublished" datetime="2023-08-05T11:47:53+08:00">2023-08-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/" itemprop="url" rel="index"><span itemprop="name">CS</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/tools/" itemprop="url" rel="index"><span itemprop="name">Tools</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>Notes for <em>tmux Productive Mouse-Free Development</em> written by Brian P. Hogan.</p>
+<span id="more"></span>
+
+<h2 id="Learning-The-Basics"><a href="#Learning-The-Basics" class="headerlink" title="Learning The Basics"></a>Learning The Basics</h2><h3 id="Starting-tmux"><a href="#Starting-tmux" class="headerlink" title="Starting tmux"></a>Starting tmux</h3><p>To start tmux:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tmux</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To close the tmux session:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>To create named session:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tmux new-session -s basic  <span class="comment"># creates a named session called "basic"</span></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">tmux new -s basic</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Detaching-and-Attaching-Sessions"><a href="#Detaching-and-Attaching-Sessions" class="headerlink" title="Detaching and Attaching Sessions"></a>Detaching and Attaching Sessions</h3><p>To detach from the current tmux session, press:</p>
+<p><code>Ctrl</code>-<code>b</code> then <code>d</code></p>
+<p>where <code>d</code> stands for “detach”.</p>
+<p>If you have changed your <code>Prefix</code>, change <code>Ctrl</code>-<code>b</code> to your own <code>Prefix</code>.</p>
+<h4 id="Reattaching-to-Existing-Sessions"><a href="#Reattaching-to-Existing-Sessions" class="headerlink" title="Reattaching to Existing Sessions"></a>Reattaching to Existing Sessions</h4><p>We can list existing tmux sessions using the command:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tmux list-sessions</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">tmux <span class="built_in">ls</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>To attach to a specific session, we use the <code>attach</code> keyword.</p>
+<p>If we only have one session running, we can simply attach to it with</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tmux attach</span><br></pre></td></tr></tbody></table></figure>
+
+<p>If we create a new tmux instance <strong>in the background</strong> using the command:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tmux new -s second_session -d</span><br></pre></td></tr></tbody></table></figure>
+
+<p>We can attach to this session by using the <code>-t</code> flag:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tmux attach -t second_session</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="Killing-Sessions"><a href="#Killing-Sessions" class="headerlink" title="Killing Sessions"></a>Killing Sessions</h4><p>We can type <code>exit</code> within a session to destroy that session, but we can also kill off sessions with the <code>kill-session</code> command:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tmux kill-session -t basic</span><br><span class="line">tmux kill-session -t second_session</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Working-with-Windows"><a href="#Working-with-Windows" class="headerlink" title="Working with Windows"></a>Working with Windows</h3><p>Windows are similar to tabs in web browsers.</p>
+<p>By using the <code>-n</code> flag, we can name the first window in a session:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tmux new -s windows -n shell  <span class="comment"># creates a session called "windows"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="Creating-and-Naming-Windows"><a href="#Creating-and-Naming-Windows" class="headerlink" title="Creating and Naming Windows"></a>Creating and Naming Windows</h4><p>To create a window in the current session, press:</p>
+<p><code>Prefix</code> <code>c</code></p>
+<p>Creating a window like this automatically brings the new window into focus.</p>
+<p>To rename a windows, press:</p>
+<p><code>Prefix</code> <code>,</code></p>
+<h4 id="Moving-Between-Windows"><a href="#Moving-Between-Windows" class="headerlink" title="Moving Between Windows"></a>Moving Between Windows</h4><p>We can cycle throw the windows with <code>Prefix</code> <code>n</code> (next window) or <code>Prefix</code> <code>p</code> (previous window).</p>
+<p>By default, windows in tmux each have a number, starting at 0. We can quickly jump to the first window with <code>Prefix</code> <code>0</code>, and the second window with <code>Prefix</code> <code>1</code>.</p>
+<p>Press <code>Prefix</code> <code>f</code> to find a window by name (if we named our windows).</p>
+<p>Press <code>Prefix</code> <code>w</code> to display a visual menu of our windows so we can select the one we’d like.</p>
+<p>Press <code>Prefix</code> <code>&amp;</code> or type <code>exit</code> to close the current window.</p>
+<h3 id="Working-with-Panes"><a href="#Working-with-Panes" class="headerlink" title="Working with Panes"></a>Working with Panes</h3><div class="note info"><p><strong>What’s the difference between panes and windows?</strong></p>
+<p>ChatGPT:</p>
+<p>In tmux, panes and windows are two different concepts that refer to distinct components of the terminal multiplexer.</p>
+<ol>
+<li><p>Windows: In tmux, a window is a single “view” or “tab” within the session. Each window occupies the entire terminal screen and can hold one or more panes. Windows are independent entities that can be created, closed, and switched between. They are typically used to organize and manage different tasks or applications within a tmux session. You can think of windows as similar to tabs in a web browser or a terminal emulator.</p>
+</li>
+<li><p>Panes: A pane, on the other hand, is a subdivision of a window. It allows you to split a window into multiple resizable and scrollable regions. Each pane within a window can run its own command or application, effectively allowing you to work on multiple tasks simultaneously within a single window. Panes can be split both horizontally and vertically, and you can resize, rearrange, and interact with them independently.</p>
+</li>
+</ol>
+<p>To summarize, <strong>windows are the main containers that hold one or more panes, while panes are the subdivisions within a window where you can run different commands or applications.</strong> Windows provide a way to switch between different contexts or tasks, while panes enable multitasking within a single window.</p>
+</div>
+
+<p><code>Prefix</code> <code>%</code> splits the current pane with horizontal layout.</p>
+<p><code>Prefix</code> <code>"</code> splits the current pane with vertical layout.</p>
+<p>To cycle through the panes, press <code>Prefix</code> <code>o</code></p>
+<p>Use <code>Prefix</code> <code>Up</code> / <code>Down</code> / <code>Left</code> / <code>Right</code> to move around the panes.</p>
+<h4 id="Closing-Panes"><a href="#Closing-Panes" class="headerlink" title="Closing Panes"></a>Closing Panes</h4><p>Press <code>Prefix</code> <code>x</code> or type <code>exit</code>.</p>
+<h3 id="Working-with-Command-Mode"><a href="#Working-with-Command-Mode" class="headerlink" title="Working with Command Mode"></a>Working with Command Mode</h3><p>To enter Command mode, press <code>Prefix</code> <code>:</code>.</p>
+<h3 id="What’s-Next"><a href="#What’s-Next" class="headerlink" title="What’s Next?"></a>What’s Next?</h3><p>Press <code>Prefix</code> <code>?</code> to get a list of all predefined tmux keybindings and the associated commands.</p>
+<h2 id="Configuring-tmux"><a href="#Configuring-tmux" class="headerlink" title="Configuring tmux"></a>Configuring tmux</h2><h3 id="Introducing-the-tmux-conf-File"><a href="#Introducing-the-tmux-conf-File" class="headerlink" title="Introducing the .tmux.conf File"></a>Introducing the .tmux.conf File</h3><p>By default, tmux looks for configuration settings in two places. It first looks in <code>/etc/tmux.conf</code> for a system-wide configuration. It then looks for a file called <code>.tmux.conf</code> in the current user’s home directory (<code>~</code>).</p>
+<h4 id="Defining-an-Easier-Prefix"><a href="#Defining-an-Easier-Prefix" class="headerlink" title="Defining an Easier Prefix"></a>Defining an Easier Prefix</h4><p>Many tmux users started out using GNU-Screen, which uses <code>Ctrl</code>-<code>a</code> for its command prefix.</p>
+<p>To redefine our tmux prefix to <code>Ctrl</code>-<code>a</code>, add this code to our <code>.tmux.conf</code> file:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">set-option -g prefix C-a</span><br><span class="line"># or</span><br><span class="line">set -g prefix C-a</span><br></pre></td></tr></tbody></table></figure>
+
+<p>where the <code>-g</code> switch, for “global”, sets the option for al tmux sessions we create.</p>
+<p>We can use the <code>unbind-key</code> or <code>unbind</code> command to remove a keybinding:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unbind C-b</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Enter tmux’s Command mode with <code>Prefix</code> <code>:</code> and type this to apply the changes:</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source-file ~/.tmux.conf</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="Changing-the-Default-Delay"><a href="#Changing-the-Default-Delay" class="headerlink" title="Changing the Default Delay"></a>Changing the Default Delay</h4><p>tmux adds a very small delay when sending commands, and this delay can interfere with other programs such as the Vim text editor. We can set this delay so it’s much more responsive:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set -sg escape-time 1</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="Setting-the-Windows-and-Panes-Index"><a href="#Setting-the-Windows-and-Panes-Index" class="headerlink" title="Setting the Windows and Panes Index"></a>Setting the Windows and Panes Index</h4><p>The default index starts at zero. We can set it to one:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set -g base-index 1         # for windows</span><br><span class="line">setw -g pane-base-index 1   # for panes</span><br></pre></td></tr></tbody></table></figure>
+
+<p>where <code>setw</code> is the shortened version of <code>set-window-option</code>.</p>
+<h4 id="Creating-a-Shortcut-to-Reload-the-Configuration"><a href="#Creating-a-Shortcut-to-Reload-the-Configuration" class="headerlink" title="Creating a Shortcut to Reload the Configuration"></a>Creating a Shortcut to Reload the Configuration</h4><p>We can use the <code>bind</code> command to define a new keybinding. Here we set <code>Prefix</code> <code>r</code> so it reloads our main <code>.tmux.conf</code> file in the current session:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bind r source-file ~/.tmux.conf</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Don’t forget to type <code>source-file ~/.tmux.conf</code> to apply the configuration.</p>
+<p>We can use the <code>display</code> command to put a message in the status line when we the reloading finished:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bind r source-file ~/.tmux.conf \; display "Reloaded!"</span><br></pre></td></tr></tbody></table></figure>
+
+<p>You can see that we can bind a series of commands by separating the commands with the <code>\;</code> character combination.</p>
+<p><strong>(Not suggested)</strong> We can define keybindings that don’t require a prefix. For example, this makes <code>Ctrl</code>-<code>r</code> reload the configuration file:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bind-key -n C-r source-file ~/.tmux.conf</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="Sending-the-Prefix-to-Other-Applications"><a href="#Sending-the-Prefix-to-Other-Applications" class="headerlink" title="Sending the Prefix to Other Applications"></a>Sending the Prefix to Other Applications</h4><p>We’ve remapped <code>Ctrl</code>-<code>a</code> as our <code>Prefix</code>, but programs such as Vim, Emacs and even the regular Bash shell also use that combination. <strong>We need to configure tmux to let us send that command through when we need it.</strong> We can also do that by binding the <code>send-prefix</code> command to a keystroke, like this:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bind C-a send-prefix</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="Splitting-Panes"><a href="#Splitting-Panes" class="headerlink" title="Splitting Panes"></a>Splitting Panes</h4><p>The default keys for splitting panes can be difficult to remember, so let’s set our own keys that we won’t be able to forget. We’ll set the horizontal split to <code>Prefix</code> <code>|</code> and the vertical split to <code>Prefix</code> <code>-</code>.</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bind | split-window -h</span><br><span class="line">bind - split-window -v</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>At first glance, this may look backwards. The <code>-v</code> and <code>-h</code> flags on <code>split-window</code> stand for <code>vertical</code> and <code>horizontal</code> splits, but to tmux, <strong>a vertical split means creating a new pane below the existing pane so the panes are stacked vertically on top of each other. A horizontal split means creating a new pane next to the existing one so the panes are stacked horizontally across the screen.</strong> So, in order to divide the window vertically, we use a “horizontal” split, and to divide it horizontally, we use a “vertical” split.</p>
+</blockquote>
+<h4 id="Remapping-Movement-Keys"><a href="#Remapping-Movement-Keys" class="headerlink" title="Remapping Movement Keys"></a>Remapping Movement Keys</h4><p>To use <code>h</code>, <code>j</code>, <code>k</code>, <code>l</code> as movement keys:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">bind h select-pane -L</span><br><span class="line">bind j select-pane -D</span><br><span class="line">bind k select-pane -U</span><br><span class="line">bind l select-pane -R</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To use <code>Prefix</code> <code>Ctrl</code>-<code>h</code> and <code>Prefix</code> <code>Ctrl</code>-<code>l</code> to cycle through the windows:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bind -r C-h select-window -t :-</span><br><span class="line">bind -r C-l select-window -t :+</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="Resizing-Panes"><a href="#Resizing-Panes" class="headerlink" title="Resizing Panes"></a>Resizing Panes</h4><p>To define <code>Prefix</code> <code>H</code>, <code>Prefix</code> <code>J</code>, <code>Prefix</code> <code>K</code> and <code>Prefix</code> <code>L</code> to change the size of the panes:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">bind -r H resize-pane -L 5</span><br><span class="line">bind -r J resize-pane -D 5</span><br><span class="line">bind -r K resize-pane -U 5</span><br><span class="line">bind -r L resize-pane -R 5</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>-r</code> specify that we want the key to be repeatable, meaning we can press the prefix key only once and the continuously press the defined key within the repeat limit.</p>
+<p>The default repeat limit is 500 milliseconds, and we can change that by setting the <code>repeat-time</code> option to a higher value.</p>
+<h4 id="Handling-the-Mouse"><a href="#Handling-the-Mouse" class="headerlink" title="Handling the Mouse"></a>Handling the Mouse</h4><p>To enable mouse mode:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">setw -g mode-mouse on</span><br><span class="line">set -g mouse-select-pane on</span><br><span class="line">set -g mouse-resize-pane on</span><br><span class="line">set -g mouse-select-window on</span><br></pre></td></tr></tbody></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/rss.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/tmux/" rel="tag"># Tmux</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/c99a1d40.html" rel="prev" title="Tmux Quick Start">
+                  <i class="fa fa-chevron-left"></i> Tmux Quick Start
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">BlockLune</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/BlockLune" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.2.3/mermaid.min.js","integrity":"sha256-JFptYy4KzJ5OQP+Q9fubNf3cxpPPmZKqUOovyEONKrQ="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"BlockLune","repo":"blocklune.github.io","client_id":"f0d9ff2c460a605d4f3f","client_secret":"9808616eda1afe0741c036b5d5670a490b68f6ef","admin_user":"BlockLune","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"06073aa5cfac3fbc2ff69d3437893803"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

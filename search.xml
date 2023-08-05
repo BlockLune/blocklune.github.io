@@ -2729,25 +2729,6 @@
       </tags>
   </entry>
   <entry>
-    <title>VS Code 中设置显示最大列数边界线</title>
-    <url>/posts/bb929dc9.html</url>
-    <content><![CDATA[<p>很多时候我们会避免一行代码过长，常见的限制有 80 字符、120 个字符等。我希望能在 VS Code 中显示一条边界线来提醒我已经到达这个限制了，需要换行。下边是设置的方法。</p>
-<span id="more"></span>
-
-<p>打开设置（快捷键 <code>Ctrl+,</code>），搜索 <code>Editor: Rulers</code>，点击 “在 settings.json” 中编辑，添加如下内容：</p>
-<figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">"editor.rulers"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="number">80</span><span class="punctuation">,</span><span class="number">120</span><span class="punctuation">]</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>当然你也可以按照自己的喜好设置字符数。</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>VS Code</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>VS Code 的安装与配置基础 C/C++ 开发环境</title>
     <url>/posts/a7a0ce82.html</url>
     <content><![CDATA[<p>我以前学习 C++ 的时候，使用的是 DevCpp 。这个软件让我这个初学者比较舒服的点是，我不用太过详细地考虑编译的过程 —— 新建一个 cpp 文件，写一点小程序，按下 F11，程序运行。我不需要管选择编译器啊、配置编译命令啊啥啥的。但是到 VS Code 这边，这都要我自己做了，对于新手并不是那么友好。这里记录一下我配置 VS Code 的 C/C++ 环境的完整过程，希望对你有所帮助。需要注意的是：学习一下基本的编译链接指令还是很有必要的！</p>
@@ -2828,6 +2809,25 @@
       </categories>
       <tags>
         <tag>C/C++</tag>
+        <tag>VS Code</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VS Code 中设置显示最大列数边界线</title>
+    <url>/posts/bb929dc9.html</url>
+    <content><![CDATA[<p>很多时候我们会避免一行代码过长，常见的限制有 80 字符、120 个字符等。我希望能在 VS Code 中显示一条边界线来提醒我已经到达这个限制了，需要换行。下边是设置的方法。</p>
+<span id="more"></span>
+
+<p>打开设置（快捷键 <code>Ctrl+,</code>），搜索 <code>Editor: Rulers</code>，点击 “在 settings.json” 中编辑，添加如下内容：</p>
+<figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">"editor.rulers"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="number">80</span><span class="punctuation">,</span><span class="number">120</span><span class="punctuation">]</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>当然你也可以按照自己的喜好设置字符数。</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
         <tag>VS Code</tag>
       </tags>
   </entry>
@@ -3120,6 +3120,135 @@
       </tags>
   </entry>
   <entry>
+    <title>Notes for 《tmux Productive Mouse-Free Development》</title>
+    <url>/posts/53957db4.html</url>
+    <content><![CDATA[<p>Notes for <em>tmux Productive Mouse-Free Development</em> written by Brian P. Hogan.</p>
+<span id="more"></span>
+
+<h2 id="Learning-The-Basics"><a href="#Learning-The-Basics" class="headerlink" title="Learning The Basics"></a>Learning The Basics</h2><h3 id="Starting-tmux"><a href="#Starting-tmux" class="headerlink" title="Starting tmux"></a>Starting tmux</h3><p>To start tmux:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">tmux</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To close the tmux session:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>To create named session:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">tmux new-session -s basic  <span class="comment"># creates a named session called "basic"</span></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">tmux new -s basic</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Detaching-and-Attaching-Sessions"><a href="#Detaching-and-Attaching-Sessions" class="headerlink" title="Detaching and Attaching Sessions"></a>Detaching and Attaching Sessions</h3><p>To detach from the current tmux session, press:</p>
+<p><code>Ctrl</code>-<code>b</code> then <code>d</code></p>
+<p>where <code>d</code> stands for “detach”.</p>
+<p>If you have changed your <code>Prefix</code>, change <code>Ctrl</code>-<code>b</code> to your own <code>Prefix</code>.</p>
+<h4 id="Reattaching-to-Existing-Sessions"><a href="#Reattaching-to-Existing-Sessions" class="headerlink" title="Reattaching to Existing Sessions"></a>Reattaching to Existing Sessions</h4><p>We can list existing tmux sessions using the command:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">tmux list-sessions</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">tmux <span class="built_in">ls</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>To attach to a specific session, we use the <code>attach</code> keyword.</p>
+<p>If we only have one session running, we can simply attach to it with</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">tmux attach</span><br></pre></td></tr></tbody></table></figure>
+
+<p>If we create a new tmux instance <strong>in the background</strong> using the command:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">tmux new -s second_session -d</span><br></pre></td></tr></tbody></table></figure>
+
+<p>We can attach to this session by using the <code>-t</code> flag:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">tmux attach -t second_session</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="Killing-Sessions"><a href="#Killing-Sessions" class="headerlink" title="Killing Sessions"></a>Killing Sessions</h4><p>We can type <code>exit</code> within a session to destroy that session, but we can also kill off sessions with the <code>kill-session</code> command:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">tmux kill-session -t basic</span><br><span class="line">tmux kill-session -t second_session</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Working-with-Windows"><a href="#Working-with-Windows" class="headerlink" title="Working with Windows"></a>Working with Windows</h3><p>Windows are similar to tabs in web browsers.</p>
+<p>By using the <code>-n</code> flag, we can name the first window in a session:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">tmux new -s windows -n shell  <span class="comment"># creates a session called "windows"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="Creating-and-Naming-Windows"><a href="#Creating-and-Naming-Windows" class="headerlink" title="Creating and Naming Windows"></a>Creating and Naming Windows</h4><p>To create a window in the current session, press:</p>
+<p><code>Prefix</code> <code>c</code></p>
+<p>Creating a window like this automatically brings the new window into focus.</p>
+<p>To rename a windows, press:</p>
+<p><code>Prefix</code> <code>,</code></p>
+<h4 id="Moving-Between-Windows"><a href="#Moving-Between-Windows" class="headerlink" title="Moving Between Windows"></a>Moving Between Windows</h4><p>We can cycle throw the windows with <code>Prefix</code> <code>n</code> (next window) or <code>Prefix</code> <code>p</code> (previous window).</p>
+<p>By default, windows in tmux each have a number, starting at 0. We can quickly jump to the first window with <code>Prefix</code> <code>0</code>, and the second window with <code>Prefix</code> <code>1</code>.</p>
+<p>Press <code>Prefix</code> <code>f</code> to find a window by name (if we named our windows).</p>
+<p>Press <code>Prefix</code> <code>w</code> to display a visual menu of our windows so we can select the one we’d like.</p>
+<p>Press <code>Prefix</code> <code>&amp;</code> or type <code>exit</code> to close the current window.</p>
+<h3 id="Working-with-Panes"><a href="#Working-with-Panes" class="headerlink" title="Working with Panes"></a>Working with Panes</h3><div class="note info"><p><strong>What’s the difference between panes and windows?</strong></p>
+<p>ChatGPT:</p>
+<p>In tmux, panes and windows are two different concepts that refer to distinct components of the terminal multiplexer.</p>
+<ol>
+<li><p>Windows: In tmux, a window is a single “view” or “tab” within the session. Each window occupies the entire terminal screen and can hold one or more panes. Windows are independent entities that can be created, closed, and switched between. They are typically used to organize and manage different tasks or applications within a tmux session. You can think of windows as similar to tabs in a web browser or a terminal emulator.</p>
+</li>
+<li><p>Panes: A pane, on the other hand, is a subdivision of a window. It allows you to split a window into multiple resizable and scrollable regions. Each pane within a window can run its own command or application, effectively allowing you to work on multiple tasks simultaneously within a single window. Panes can be split both horizontally and vertically, and you can resize, rearrange, and interact with them independently.</p>
+</li>
+</ol>
+<p>To summarize, <strong>windows are the main containers that hold one or more panes, while panes are the subdivisions within a window where you can run different commands or applications.</strong> Windows provide a way to switch between different contexts or tasks, while panes enable multitasking within a single window.</p>
+</div>
+
+<p><code>Prefix</code> <code>%</code> splits the current pane with horizontal layout.</p>
+<p><code>Prefix</code> <code>"</code> splits the current pane with vertical layout.</p>
+<p>To cycle through the panes, press <code>Prefix</code> <code>o</code></p>
+<p>Use <code>Prefix</code> <code>Up</code> / <code>Down</code> / <code>Left</code> / <code>Right</code> to move around the panes.</p>
+<h4 id="Closing-Panes"><a href="#Closing-Panes" class="headerlink" title="Closing Panes"></a>Closing Panes</h4><p>Press <code>Prefix</code> <code>x</code> or type <code>exit</code>.</p>
+<h3 id="Working-with-Command-Mode"><a href="#Working-with-Command-Mode" class="headerlink" title="Working with Command Mode"></a>Working with Command Mode</h3><p>To enter Command mode, press <code>Prefix</code> <code>:</code>.</p>
+<h3 id="What’s-Next"><a href="#What’s-Next" class="headerlink" title="What’s Next?"></a>What’s Next?</h3><p>Press <code>Prefix</code> <code>?</code> to get a list of all predefined tmux keybindings and the associated commands.</p>
+<h2 id="Configuring-tmux"><a href="#Configuring-tmux" class="headerlink" title="Configuring tmux"></a>Configuring tmux</h2><h3 id="Introducing-the-tmux-conf-File"><a href="#Introducing-the-tmux-conf-File" class="headerlink" title="Introducing the .tmux.conf File"></a>Introducing the .tmux.conf File</h3><p>By default, tmux looks for configuration settings in two places. It first looks in <code>/etc/tmux.conf</code> for a system-wide configuration. It then looks for a file called <code>.tmux.conf</code> in the current user’s home directory (<code>~</code>).</p>
+<h4 id="Defining-an-Easier-Prefix"><a href="#Defining-an-Easier-Prefix" class="headerlink" title="Defining an Easier Prefix"></a>Defining an Easier Prefix</h4><p>Many tmux users started out using GNU-Screen, which uses <code>Ctrl</code>-<code>a</code> for its command prefix.</p>
+<p>To redefine our tmux prefix to <code>Ctrl</code>-<code>a</code>, add this code to our <code>.tmux.conf</code> file:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">set-option -g prefix C-a</span><br><span class="line"># or</span><br><span class="line">set -g prefix C-a</span><br></pre></td></tr></tbody></table></figure>
+
+<p>where the <code>-g</code> switch, for “global”, sets the option for al tmux sessions we create.</p>
+<p>We can use the <code>unbind-key</code> or <code>unbind</code> command to remove a keybinding:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">unbind C-b</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Enter tmux’s Command mode with <code>Prefix</code> <code>:</code> and type this to apply the changes:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">source-file ~/.tmux.conf</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="Changing-the-Default-Delay"><a href="#Changing-the-Default-Delay" class="headerlink" title="Changing the Default Delay"></a>Changing the Default Delay</h4><p>tmux adds a very small delay when sending commands, and this delay can interfere with other programs such as the Vim text editor. We can set this delay so it’s much more responsive:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">set -sg escape-time 1</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="Setting-the-Windows-and-Panes-Index"><a href="#Setting-the-Windows-and-Panes-Index" class="headerlink" title="Setting the Windows and Panes Index"></a>Setting the Windows and Panes Index</h4><p>The default index starts at zero. We can set it to one:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">set -g base-index 1         # for windows</span><br><span class="line">setw -g pane-base-index 1   # for panes</span><br></pre></td></tr></tbody></table></figure>
+
+<p>where <code>setw</code> is the shortened version of <code>set-window-option</code>.</p>
+<h4 id="Creating-a-Shortcut-to-Reload-the-Configuration"><a href="#Creating-a-Shortcut-to-Reload-the-Configuration" class="headerlink" title="Creating a Shortcut to Reload the Configuration"></a>Creating a Shortcut to Reload the Configuration</h4><p>We can use the <code>bind</code> command to define a new keybinding. Here we set <code>Prefix</code> <code>r</code> so it reloads our main <code>.tmux.conf</code> file in the current session:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">bind r source-file ~/.tmux.conf</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Don’t forget to type <code>source-file ~/.tmux.conf</code> to apply the configuration.</p>
+<p>We can use the <code>display</code> command to put a message in the status line when we the reloading finished:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">bind r source-file ~/.tmux.conf \; display "Reloaded!"</span><br></pre></td></tr></tbody></table></figure>
+
+<p>You can see that we can bind a series of commands by separating the commands with the <code>\;</code> character combination.</p>
+<p><strong>(Not suggested)</strong> We can define keybindings that don’t require a prefix. For example, this makes <code>Ctrl</code>-<code>r</code> reload the configuration file:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">bind-key -n C-r source-file ~/.tmux.conf</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="Sending-the-Prefix-to-Other-Applications"><a href="#Sending-the-Prefix-to-Other-Applications" class="headerlink" title="Sending the Prefix to Other Applications"></a>Sending the Prefix to Other Applications</h4><p>We’ve remapped <code>Ctrl</code>-<code>a</code> as our <code>Prefix</code>, but programs such as Vim, Emacs and even the regular Bash shell also use that combination. <strong>We need to configure tmux to let us send that command through when we need it.</strong> We can also do that by binding the <code>send-prefix</code> command to a keystroke, like this:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">bind C-a send-prefix</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="Splitting-Panes"><a href="#Splitting-Panes" class="headerlink" title="Splitting Panes"></a>Splitting Panes</h4><p>The default keys for splitting panes can be difficult to remember, so let’s set our own keys that we won’t be able to forget. We’ll set the horizontal split to <code>Prefix</code> <code>|</code> and the vertical split to <code>Prefix</code> <code>-</code>.</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">bind | split-window -h</span><br><span class="line">bind - split-window -v</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>At first glance, this may look backwards. The <code>-v</code> and <code>-h</code> flags on <code>split-window</code> stand for <code>vertical</code> and <code>horizontal</code> splits, but to tmux, <strong>a vertical split means creating a new pane below the existing pane so the panes are stacked vertically on top of each other. A horizontal split means creating a new pane next to the existing one so the panes are stacked horizontally across the screen.</strong> So, in order to divide the window vertically, we use a “horizontal” split, and to divide it horizontally, we use a “vertical” split.</p>
+</blockquote>
+<h4 id="Remapping-Movement-Keys"><a href="#Remapping-Movement-Keys" class="headerlink" title="Remapping Movement Keys"></a>Remapping Movement Keys</h4><p>To use <code>h</code>, <code>j</code>, <code>k</code>, <code>l</code> as movement keys:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">bind h select-pane -L</span><br><span class="line">bind j select-pane -D</span><br><span class="line">bind k select-pane -U</span><br><span class="line">bind l select-pane -R</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To use <code>Prefix</code> <code>Ctrl</code>-<code>h</code> and <code>Prefix</code> <code>Ctrl</code>-<code>l</code> to cycle through the windows:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">bind -r C-h select-window -t :-</span><br><span class="line">bind -r C-l select-window -t :+</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="Resizing-Panes"><a href="#Resizing-Panes" class="headerlink" title="Resizing Panes"></a>Resizing Panes</h4><p>To define <code>Prefix</code> <code>H</code>, <code>Prefix</code> <code>J</code>, <code>Prefix</code> <code>K</code> and <code>Prefix</code> <code>L</code> to change the size of the panes:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">bind -r H resize-pane -L 5</span><br><span class="line">bind -r J resize-pane -D 5</span><br><span class="line">bind -r K resize-pane -U 5</span><br><span class="line">bind -r L resize-pane -R 5</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>-r</code> specify that we want the key to be repeatable, meaning we can press the prefix key only once and the continuously press the defined key within the repeat limit.</p>
+<p>The default repeat limit is 500 milliseconds, and we can change that by setting the <code>repeat-time</code> option to a higher value.</p>
+<h4 id="Handling-the-Mouse"><a href="#Handling-the-Mouse" class="headerlink" title="Handling the Mouse"></a>Handling the Mouse</h4><p>To enable mouse mode:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">setw -g mode-mouse on</span><br><span class="line">set -g mouse-select-pane on</span><br><span class="line">set -g mouse-resize-pane on</span><br><span class="line">set -g mouse-select-window on</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Tmux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Tmux Quick Start</title>
     <url>/posts/c99a1d40.html</url>
     <content><![CDATA[<p>Chinese translation for <em><a href="https://tmuxcheatsheet.com/how-to-install-tmux/">How to Install and Use Tmux</a></em>.</p>
@@ -3163,6 +3292,10 @@
 
 <p>现在，请随意使用<a href="https://tmuxcheatsheet.com/">主页</a>上的小抄进行试验。如果发现缺少任何快捷指令，请<a href="https://github.com/l9c/tmux_cheat_sheet_data">告诉作者</a> :D</p>
 ]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
       <tags>
         <tag>Tmux</tag>
       </tags>
@@ -4605,54 +4738,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C++ 中 cin 与 cout 的转进制输入输出</title>
-    <url>/posts/9e863176.html</url>
-    <content><![CDATA[<p>笔者的朋友有道输入八进制输出十进制的题目，他是使用数学方法实现的。笔者隐隐约约记得好像 cin 和 cout 有控制输入输出数字进制的方法，查找了一些资料，做一下笔记。</p>
-<span id="more"></span>
-
-<table>
-<thead>
-<tr>
-<th>进制</th>
-<th>对应缩写</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>二进制</td>
-<td> bin</td>
-</tr>
-<tr>
-<td> 八进制</td>
-<td> oct</td>
-</tr>
-<tr>
-<td> 十进制</td>
-<td> dec</td>
-</tr>
-<tr>
-<td> 十六进制</td>
-<td> hex</td>
-</tr>
-</tbody></table>
-<p>接下来只要在输入 / 输出的时候加上这些缩写就行了。</p>
-<p>比如输入一个八进制数然后以十进制输出它：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> num;</span><br><span class="line">    cin &gt;&gt; oct &gt;&gt; num;</span><br><span class="line">    cout &lt;&lt; dec &lt;&lt; num &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>程序运行结果：</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">1750</span><br><span class="line">1000</span><br></pre></td></tr></tbody></table></figure>
-
-<p>（”1750” 是输入，”1000” 是输出）</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C 标准库中 qsort 和 C++ STL 中 sort 的用法</title>
     <url>/posts/eab95d6e.html</url>
     <content><![CDATA[<p>虽然到现在还是不能完全理解 <code>qsort</code> 和 <code>sort</code> 这两个函数的底层原理，但至少，先学会如何使用吧。</p>
@@ -4739,6 +4824,54 @@
         <tag>C/C++</tag>
         <tag>Sorting</tag>
         <tag>STL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ 中 cin 与 cout 的转进制输入输出</title>
+    <url>/posts/9e863176.html</url>
+    <content><![CDATA[<p>笔者的朋友有道输入八进制输出十进制的题目，他是使用数学方法实现的。笔者隐隐约约记得好像 cin 和 cout 有控制输入输出数字进制的方法，查找了一些资料，做一下笔记。</p>
+<span id="more"></span>
+
+<table>
+<thead>
+<tr>
+<th>进制</th>
+<th>对应缩写</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>二进制</td>
+<td> bin</td>
+</tr>
+<tr>
+<td> 八进制</td>
+<td> oct</td>
+</tr>
+<tr>
+<td> 十进制</td>
+<td> dec</td>
+</tr>
+<tr>
+<td> 十六进制</td>
+<td> hex</td>
+</tr>
+</tbody></table>
+<p>接下来只要在输入 / 输出的时候加上这些缩写就行了。</p>
+<p>比如输入一个八进制数然后以十进制输出它：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> num;</span><br><span class="line">    cin &gt;&gt; oct &gt;&gt; num;</span><br><span class="line">    cout &lt;&lt; dec &lt;&lt; num &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>程序运行结果：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">1750</span><br><span class="line">1000</span><br></pre></td></tr></tbody></table></figure>
+
+<p>（”1750” 是输入，”1000” 是输出）</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
       </tags>
   </entry>
   <entry>
@@ -5371,6 +5504,66 @@
       </tags>
   </entry>
   <entry>
+    <title>一个有关指针传参的问题</title>
+    <url>/posts/50c16b14.html</url>
+    <content><![CDATA[<p>这是我学习指针过程中遇到的一个问题，问过大佬才似乎懂了点，在此记录。顺便记下一句大佬说的话：</p>
+<blockquote>
+<p>注意到一点就行，指针其实也就是个存了内存地址的变量，<strong>它本身同时也具有内存地址</strong>。</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="问题的产生"><a href="#问题的产生" class="headerlink" title="问题的产生"></a>问题的产生</h2><p>事情是这样，学习了一点指针，就想自己实现一个会自动变长的数组。我也不期望把它做成一个类什么的，只有一个小目标，就是实现一个函数，能往这个动态数组后边加元素。我本来的 <strong>错误</strong> 代码如下：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">append</span><span class="params">(<span class="type">int</span> *nums, <span class="type">int</span> size, <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">if</span> (nums) <span class="comment">// 如果数组指针不为空</span></span><br><span class="line">    {</span><br><span class="line">        <span class="comment">// 暂存原来的数据</span></span><br><span class="line">        <span class="type">int</span> *tmp_nums = <span class="keyword">new</span> <span class="type">int</span>[size];</span><br><span class="line">        <span class="built_in">memcpy</span>(tmp_nums, nums, <span class="built_in">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line">        <span class="comment">// 释放掉原指针</span></span><br><span class="line">        <span class="keyword">delete</span>[] nums;</span><br><span class="line">        <span class="comment">// 元素数量 + 1</span></span><br><span class="line">        nums = <span class="keyword">new</span> <span class="type">int</span>[size + <span class="number">1</span>];</span><br><span class="line">        <span class="built_in">memcpy</span>(nums, tmp_nums, <span class="built_in">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line">        nums[size] = n;</span><br><span class="line">        <span class="keyword">delete</span>[] tmp_nums;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        nums = <span class="keyword">new</span> <span class="type">int</span>[<span class="number">1</span>];</span><br><span class="line">        nums[<span class="number">0</span>] = n;</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> tmp_n;</span><br><span class="line">    <span class="type">int</span> size = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> *nums = <span class="literal">nullptr</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">51</span>; i &lt;= <span class="number">55</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        tmp_n = i;</span><br><span class="line">        <span class="built_in">append</span>(nums, size, tmp_n);</span><br><span class="line">        size++;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">    {</span><br><span class="line">        cout &lt;&lt;nums[i] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>在调试过程中发现一直会报 <code>Segmentation fault</code>，但是如果改成下边这样，却是可以的：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> *nums = <span class="literal">nullptr</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">append</span><span class="params">(<span class="type">int</span> size, <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">if</span> (nums) <span class="comment">// 如果数组指针不为空</span></span><br><span class="line">    {</span><br><span class="line">        <span class="comment">// 暂存原来的数据</span></span><br><span class="line">        <span class="type">int</span> *tmp_nums = <span class="keyword">new</span> <span class="type">int</span>[size];</span><br><span class="line">        <span class="built_in">memcpy</span>(tmp_nums, nums, <span class="built_in">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line">        <span class="comment">// 释放掉原指针</span></span><br><span class="line">        <span class="keyword">delete</span>[] nums;</span><br><span class="line">        <span class="comment">// 元素数量 + 1</span></span><br><span class="line">        nums = <span class="keyword">new</span> <span class="type">int</span>[size + <span class="number">1</span>];</span><br><span class="line">        <span class="built_in">memcpy</span>(nums, tmp_nums, <span class="built_in">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line">        nums[size] = n;</span><br><span class="line">        <span class="keyword">delete</span>[] tmp_nums;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        nums = <span class="keyword">new</span> <span class="type">int</span>[<span class="number">1</span>];</span><br><span class="line">        nums[<span class="number">0</span>] = n;</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> tmp_n;</span><br><span class="line">    <span class="type">int</span> size = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">51</span>; i &lt;= <span class="number">55</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        tmp_n = i;</span><br><span class="line">        <span class="built_in">append</span>(size, tmp_n);</span><br><span class="line">        size++;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">    {</span><br><span class="line">        cout &lt;&lt;nums[i] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>改动的内容就是把原来的数组变成了全局的。局部的不正常，全局就对了，所以猜测，类似是形参和实参的区别。大佬们帮我分析了分析，提出了下边的解决方案：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">append</span><span class="params">(<span class="type">int</span> **, <span class="type">int</span>, <span class="type">int</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> tmp_n;</span><br><span class="line">    <span class="type">int</span> size = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> *nums = <span class="literal">nullptr</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">51</span>; i &lt;= <span class="number">55</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        tmp_n = i;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        nums 是一个指针，这个指针是我们动态数组的第一个元素的地址</span></span><br><span class="line"><span class="comment">        对 nums 取地址传参，传的是 nums 这个指针的地址</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        <span class="built_in">append</span>(&amp;nums, size, tmp_n);</span><br><span class="line">        size++;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">    {</span><br><span class="line">        cout &lt;&lt;nums[i] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">接上文的注释</span></span><br><span class="line"><span class="comment">ptr 是一个指针，这个指针是上边的 nums 的地址</span></span><br><span class="line"><span class="comment">*ptr 得到了这个地址的值，这个值是指向动态数组第一个元素的指针</span></span><br><span class="line"><span class="comment">**ptr 是第一个元素的值</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">append</span><span class="params">(<span class="type">int</span> **ptr, <span class="type">int</span> size, <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">if</span> (*ptr) <span class="comment">// 如果数组指针不为空</span></span><br><span class="line">    {</span><br><span class="line">        <span class="comment">// 暂存原来的数据</span></span><br><span class="line">        <span class="type">int</span> *tmp_nums = <span class="keyword">new</span> <span class="type">int</span>[size];</span><br><span class="line">        <span class="built_in">memcpy</span>(tmp_nums, *ptr, <span class="built_in">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line">        <span class="comment">// 释放掉原指针</span></span><br><span class="line">        <span class="keyword">delete</span>[] * ptr;</span><br><span class="line">        <span class="comment">// 元素数量 + 1</span></span><br><span class="line">        *ptr = <span class="keyword">new</span> <span class="type">int</span>[size + <span class="number">1</span>];</span><br><span class="line">        <span class="built_in">memcpy</span>(*ptr, tmp_nums, <span class="built_in">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line">        (*ptr)[size] = n;</span><br><span class="line">        <span class="keyword">delete</span>[] tmp_nums;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        (*ptr) = <span class="keyword">new</span> <span class="type">int</span>[<span class="number">1</span>];</span><br><span class="line">        (*ptr)[<span class="number">0</span>] = n;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这样运行结果就正常了。</p>
+<h2 id="分析及解决方案"><a href="#分析及解决方案" class="headerlink" title="分析及解决方案"></a>分析及解决方案</h2><p><strong>2022 年 11 月 16 日更新：</strong>这边写的错误原因有点乱，我重新写了一篇：<a href="https://blocklune.github.io/posts/1ef1e20b.html">《当形参、实参是指针变量…》</a></p>
+<p>下边给出两个简化的代码来解释这个问题。</p>
+<p>首先来看代码 1，是对上边错误代码的简化:</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">getMemory</span><span class="params">(<span class="type">int</span> *p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    p = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    cout &lt;&lt;<span class="string">"The pointer in getMemory() points at:"</span> &lt;&lt; p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt;<span class="string">"The address of the pointer in getMemory():"</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p;</span><br><span class="line">    <span class="built_in">getMemory</span>(p);</span><br><span class="line">    cout &lt;&lt;<span class="string">"The pointer in main() points at:"</span> &lt;&lt; p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt;<span class="string">"The address of the pointer in main():"</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">delete</span> p;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>下边是代码 1 对应的程序的一个可能的输出 (具体内存地址可能不同):</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">The pointer in getMemory() points at: 0x10161c0</span><br><span class="line">The address of the pointer in getMemory(): 0x61fdf0</span><br><span class="line">The pointer in main() points at: 0x10</span><br><span class="line">The address of the pointer in main(): 0x61fe18</span><br></pre></td></tr></tbody></table></figure>
+
+<p>可以看到，在 <code>getMemory()</code> 中的 <code>int*</code> 类型的指针 p 与 <code>main()</code> 中的 <code>int*</code> 类型的指针 p <strong>并不是同一个指针</strong>（存储这两个指针的内存地址不一样，在 <code>getMemory()</code> 中的指针 p 存储在 0x61fdf0，而 <code>main()</code> 中的存储在 0x61fe18），所以虽然我们在 <code>getMemory()</code> 中 new 得了存储空间（<code>getMemory()</code> 中的指针 p 指向了 0x10161c0），但这实际上只是为 <code>getMemory()</code> 中的指针 p 申请了存储空间，<code>main()</code> 中的指针 p 并没有申请到空间（<code>main()</code> 中的指针 p 指向了 0x10）。</p>
+<p>也即，我们自己的函数中的指针是一个副本，给这个指针申请空间的操作并没有实现给 <code>main()</code> 中的同名指针也申请到空间！</p>
+<p>接着是代码 2，类似于上边的正确解法：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">getMemory2</span><span class="params">(<span class="type">int</span> **p2)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    *p2 = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The pointer in getMemory() points at:"</span> &lt;&lt; *p2 &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of the pointer in getMemory():"</span> &lt;&lt; p2 &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p1;</span><br><span class="line">    <span class="built_in">getMemory2</span>(&amp;p1);</span><br><span class="line">    cout &lt;&lt; <span class="string">"The pointer in main() points at:"</span> &lt;&lt; p1 &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of the pointer in main():"</span> &lt;&lt; &amp;p1 &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">delete</span> p1;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>下边是代码 2 对应的程序的一个可能的输出 (具体内存地址可能不同):</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">The pointer in getMemory() points at: 0x7461c0</span><br><span class="line">The address of the pointer in getMemory(): 0x61fe18</span><br><span class="line">The pointer in main() points at: 0x7461c0</span><br><span class="line">The address of the pointer in main(): 0x61fe18</span><br></pre></td></tr></tbody></table></figure>
+
+<p>从 <code>main()</code> 开始看，p1 是一个 <code>int*</code> 类型的指针。与上边代码 1 不同，现在 <code>getMemory2()</code> 这个函数接受的参数是指针的指针，也就是指针的地址，所以我们传入的是 <strong>&amp;p1</strong>，也就是指针 p1 的地址。</p>
+<p>再看 <code>getMemory2()</code> 函数，传入参数后，相当于现在 p2 = &amp;p1，那么 *p2 = p1。这里的 “=” 表示 “就是” 而非赋值，所以我们对于 *p2 进行的任何操作，与对 p1 进行的操作都是等效的。</p>
+<p>还有一种解决方案 —— 使用引用传递，对于上边的问题也就是使用 <code>int* &amp;</code> 类型，代码 3 如下：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">getMemory</span><span class="params">(<span class="type">int</span> *&amp;p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    p = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The pointer in getMemory() points at: "</span> &lt;&lt; p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of the pointer in getMemory(): "</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p;</span><br><span class="line">    <span class="built_in">getMemory</span>(p);</span><br><span class="line">    cout &lt;&lt; <span class="string">"The pointer in main() points at: "</span> &lt;&lt; p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of the pointer in main(): "</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">delete</span> p;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>只要将上边的代码 1 中 <code>void getMemory(int *p)</code> 改为 <code>void getMemory(int *&amp;p)</code> 就行了，下边是可能的输出：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">The pointer in getMemory() points at: 0x10261c0</span><br><span class="line">The address of the pointer in getMemory(): 0x61fe18</span><br><span class="line">The pointer in main() points at: 0x10261c0</span><br><span class="line">The address of the pointer in main(): 0x61fe18</span><br></pre></td></tr></tbody></table></figure>
+
+<p>可以看到已经实现了我们想要的效果。</p>
+<p>也可以参考参考这篇文章：<a href="https://developer.aliyun.com/article/297093">《C++ 函数的传入参数是指针的指针（**）的详解》</a></p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+        <tag>Issue</tag>
+        <tag>Solved</tag>
+        <tag>Pointer</tag>
+        <tag>pass by pointer</tag>
+        <tag>pass by value</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Type Safety and std::optional in C++</title>
     <url>/posts/ab76f233.html</url>
     <content><![CDATA[<p>This is a note for Lecture 14, <a href="https://web.stanford.edu/class/cs106l/index.html">CS106L</a>, Spring 2023.</p>
@@ -5511,66 +5704,6 @@
       </tags>
   </entry>
   <entry>
-    <title>一个有关指针传参的问题</title>
-    <url>/posts/50c16b14.html</url>
-    <content><![CDATA[<p>这是我学习指针过程中遇到的一个问题，问过大佬才似乎懂了点，在此记录。顺便记下一句大佬说的话：</p>
-<blockquote>
-<p>注意到一点就行，指针其实也就是个存了内存地址的变量，<strong>它本身同时也具有内存地址</strong>。</p>
-</blockquote>
-<span id="more"></span>
-
-<h2 id="问题的产生"><a href="#问题的产生" class="headerlink" title="问题的产生"></a>问题的产生</h2><p>事情是这样，学习了一点指针，就想自己实现一个会自动变长的数组。我也不期望把它做成一个类什么的，只有一个小目标，就是实现一个函数，能往这个动态数组后边加元素。我本来的 <strong>错误</strong> 代码如下：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">append</span><span class="params">(<span class="type">int</span> *nums, <span class="type">int</span> size, <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">if</span> (nums) <span class="comment">// 如果数组指针不为空</span></span><br><span class="line">    {</span><br><span class="line">        <span class="comment">// 暂存原来的数据</span></span><br><span class="line">        <span class="type">int</span> *tmp_nums = <span class="keyword">new</span> <span class="type">int</span>[size];</span><br><span class="line">        <span class="built_in">memcpy</span>(tmp_nums, nums, <span class="built_in">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line">        <span class="comment">// 释放掉原指针</span></span><br><span class="line">        <span class="keyword">delete</span>[] nums;</span><br><span class="line">        <span class="comment">// 元素数量 + 1</span></span><br><span class="line">        nums = <span class="keyword">new</span> <span class="type">int</span>[size + <span class="number">1</span>];</span><br><span class="line">        <span class="built_in">memcpy</span>(nums, tmp_nums, <span class="built_in">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line">        nums[size] = n;</span><br><span class="line">        <span class="keyword">delete</span>[] tmp_nums;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        nums = <span class="keyword">new</span> <span class="type">int</span>[<span class="number">1</span>];</span><br><span class="line">        nums[<span class="number">0</span>] = n;</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> tmp_n;</span><br><span class="line">    <span class="type">int</span> size = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> *nums = <span class="literal">nullptr</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">51</span>; i &lt;= <span class="number">55</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        tmp_n = i;</span><br><span class="line">        <span class="built_in">append</span>(nums, size, tmp_n);</span><br><span class="line">        size++;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">    {</span><br><span class="line">        cout &lt;&lt;nums[i] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>在调试过程中发现一直会报 <code>Segmentation fault</code>，但是如果改成下边这样，却是可以的：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> *nums = <span class="literal">nullptr</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">append</span><span class="params">(<span class="type">int</span> size, <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">if</span> (nums) <span class="comment">// 如果数组指针不为空</span></span><br><span class="line">    {</span><br><span class="line">        <span class="comment">// 暂存原来的数据</span></span><br><span class="line">        <span class="type">int</span> *tmp_nums = <span class="keyword">new</span> <span class="type">int</span>[size];</span><br><span class="line">        <span class="built_in">memcpy</span>(tmp_nums, nums, <span class="built_in">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line">        <span class="comment">// 释放掉原指针</span></span><br><span class="line">        <span class="keyword">delete</span>[] nums;</span><br><span class="line">        <span class="comment">// 元素数量 + 1</span></span><br><span class="line">        nums = <span class="keyword">new</span> <span class="type">int</span>[size + <span class="number">1</span>];</span><br><span class="line">        <span class="built_in">memcpy</span>(nums, tmp_nums, <span class="built_in">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line">        nums[size] = n;</span><br><span class="line">        <span class="keyword">delete</span>[] tmp_nums;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        nums = <span class="keyword">new</span> <span class="type">int</span>[<span class="number">1</span>];</span><br><span class="line">        nums[<span class="number">0</span>] = n;</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> tmp_n;</span><br><span class="line">    <span class="type">int</span> size = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">51</span>; i &lt;= <span class="number">55</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        tmp_n = i;</span><br><span class="line">        <span class="built_in">append</span>(size, tmp_n);</span><br><span class="line">        size++;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">    {</span><br><span class="line">        cout &lt;&lt;nums[i] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>改动的内容就是把原来的数组变成了全局的。局部的不正常，全局就对了，所以猜测，类似是形参和实参的区别。大佬们帮我分析了分析，提出了下边的解决方案：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">append</span><span class="params">(<span class="type">int</span> **, <span class="type">int</span>, <span class="type">int</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> tmp_n;</span><br><span class="line">    <span class="type">int</span> size = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> *nums = <span class="literal">nullptr</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">51</span>; i &lt;= <span class="number">55</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        tmp_n = i;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        nums 是一个指针，这个指针是我们动态数组的第一个元素的地址</span></span><br><span class="line"><span class="comment">        对 nums 取地址传参，传的是 nums 这个指针的地址</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        <span class="built_in">append</span>(&amp;nums, size, tmp_n);</span><br><span class="line">        size++;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">    {</span><br><span class="line">        cout &lt;&lt;nums[i] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">接上文的注释</span></span><br><span class="line"><span class="comment">ptr 是一个指针，这个指针是上边的 nums 的地址</span></span><br><span class="line"><span class="comment">*ptr 得到了这个地址的值，这个值是指向动态数组第一个元素的指针</span></span><br><span class="line"><span class="comment">**ptr 是第一个元素的值</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">append</span><span class="params">(<span class="type">int</span> **ptr, <span class="type">int</span> size, <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">if</span> (*ptr) <span class="comment">// 如果数组指针不为空</span></span><br><span class="line">    {</span><br><span class="line">        <span class="comment">// 暂存原来的数据</span></span><br><span class="line">        <span class="type">int</span> *tmp_nums = <span class="keyword">new</span> <span class="type">int</span>[size];</span><br><span class="line">        <span class="built_in">memcpy</span>(tmp_nums, *ptr, <span class="built_in">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line">        <span class="comment">// 释放掉原指针</span></span><br><span class="line">        <span class="keyword">delete</span>[] * ptr;</span><br><span class="line">        <span class="comment">// 元素数量 + 1</span></span><br><span class="line">        *ptr = <span class="keyword">new</span> <span class="type">int</span>[size + <span class="number">1</span>];</span><br><span class="line">        <span class="built_in">memcpy</span>(*ptr, tmp_nums, <span class="built_in">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line">        (*ptr)[size] = n;</span><br><span class="line">        <span class="keyword">delete</span>[] tmp_nums;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        (*ptr) = <span class="keyword">new</span> <span class="type">int</span>[<span class="number">1</span>];</span><br><span class="line">        (*ptr)[<span class="number">0</span>] = n;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这样运行结果就正常了。</p>
-<h2 id="分析及解决方案"><a href="#分析及解决方案" class="headerlink" title="分析及解决方案"></a>分析及解决方案</h2><p><strong>2022 年 11 月 16 日更新：</strong>这边写的错误原因有点乱，我重新写了一篇：<a href="https://blocklune.github.io/posts/1ef1e20b.html">《当形参、实参是指针变量…》</a></p>
-<p>下边给出两个简化的代码来解释这个问题。</p>
-<p>首先来看代码 1，是对上边错误代码的简化:</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">getMemory</span><span class="params">(<span class="type">int</span> *p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    p = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    cout &lt;&lt;<span class="string">"The pointer in getMemory() points at:"</span> &lt;&lt; p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt;<span class="string">"The address of the pointer in getMemory():"</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p;</span><br><span class="line">    <span class="built_in">getMemory</span>(p);</span><br><span class="line">    cout &lt;&lt;<span class="string">"The pointer in main() points at:"</span> &lt;&lt; p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt;<span class="string">"The address of the pointer in main():"</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">delete</span> p;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>下边是代码 1 对应的程序的一个可能的输出 (具体内存地址可能不同):</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">The pointer in getMemory() points at: 0x10161c0</span><br><span class="line">The address of the pointer in getMemory(): 0x61fdf0</span><br><span class="line">The pointer in main() points at: 0x10</span><br><span class="line">The address of the pointer in main(): 0x61fe18</span><br></pre></td></tr></tbody></table></figure>
-
-<p>可以看到，在 <code>getMemory()</code> 中的 <code>int*</code> 类型的指针 p 与 <code>main()</code> 中的 <code>int*</code> 类型的指针 p <strong>并不是同一个指针</strong>（存储这两个指针的内存地址不一样，在 <code>getMemory()</code> 中的指针 p 存储在 0x61fdf0，而 <code>main()</code> 中的存储在 0x61fe18），所以虽然我们在 <code>getMemory()</code> 中 new 得了存储空间（<code>getMemory()</code> 中的指针 p 指向了 0x10161c0），但这实际上只是为 <code>getMemory()</code> 中的指针 p 申请了存储空间，<code>main()</code> 中的指针 p 并没有申请到空间（<code>main()</code> 中的指针 p 指向了 0x10）。</p>
-<p>也即，我们自己的函数中的指针是一个副本，给这个指针申请空间的操作并没有实现给 <code>main()</code> 中的同名指针也申请到空间！</p>
-<p>接着是代码 2，类似于上边的正确解法：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">getMemory2</span><span class="params">(<span class="type">int</span> **p2)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    *p2 = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The pointer in getMemory() points at:"</span> &lt;&lt; *p2 &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of the pointer in getMemory():"</span> &lt;&lt; p2 &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p1;</span><br><span class="line">    <span class="built_in">getMemory2</span>(&amp;p1);</span><br><span class="line">    cout &lt;&lt; <span class="string">"The pointer in main() points at:"</span> &lt;&lt; p1 &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of the pointer in main():"</span> &lt;&lt; &amp;p1 &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">delete</span> p1;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>下边是代码 2 对应的程序的一个可能的输出 (具体内存地址可能不同):</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">The pointer in getMemory() points at: 0x7461c0</span><br><span class="line">The address of the pointer in getMemory(): 0x61fe18</span><br><span class="line">The pointer in main() points at: 0x7461c0</span><br><span class="line">The address of the pointer in main(): 0x61fe18</span><br></pre></td></tr></tbody></table></figure>
-
-<p>从 <code>main()</code> 开始看，p1 是一个 <code>int*</code> 类型的指针。与上边代码 1 不同，现在 <code>getMemory2()</code> 这个函数接受的参数是指针的指针，也就是指针的地址，所以我们传入的是 <strong>&amp;p1</strong>，也就是指针 p1 的地址。</p>
-<p>再看 <code>getMemory2()</code> 函数，传入参数后，相当于现在 p2 = &amp;p1，那么 *p2 = p1。这里的 “=” 表示 “就是” 而非赋值，所以我们对于 *p2 进行的任何操作，与对 p1 进行的操作都是等效的。</p>
-<p>还有一种解决方案 —— 使用引用传递，对于上边的问题也就是使用 <code>int* &amp;</code> 类型，代码 3 如下：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">getMemory</span><span class="params">(<span class="type">int</span> *&amp;p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    p = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The pointer in getMemory() points at: "</span> &lt;&lt; p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of the pointer in getMemory(): "</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p;</span><br><span class="line">    <span class="built_in">getMemory</span>(p);</span><br><span class="line">    cout &lt;&lt; <span class="string">"The pointer in main() points at: "</span> &lt;&lt; p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of the pointer in main(): "</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">delete</span> p;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>只要将上边的代码 1 中 <code>void getMemory(int *p)</code> 改为 <code>void getMemory(int *&amp;p)</code> 就行了，下边是可能的输出：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">The pointer in getMemory() points at: 0x10261c0</span><br><span class="line">The address of the pointer in getMemory(): 0x61fe18</span><br><span class="line">The pointer in main() points at: 0x10261c0</span><br><span class="line">The address of the pointer in main(): 0x61fe18</span><br></pre></td></tr></tbody></table></figure>
-
-<p>可以看到已经实现了我们想要的效果。</p>
-<p>也可以参考参考这篇文章：<a href="https://developer.aliyun.com/article/297093">《C++ 函数的传入参数是指针的指针（**）的详解》</a></p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-        <tag>Issue</tag>
-        <tag>Solved</tag>
-        <tag>Pointer</tag>
-        <tag>pass by pointer</tag>
-        <tag>pass by value</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>二维数组到底是啥啊...</title>
     <url>/posts/57fd79a.html</url>
     <content><![CDATA[<p>一维数组还是比较容易理解的，但是二维数组，我始终没弄清楚这玩意儿是按照什么规则从二维的样子转成一维然后存起来的，也因此常常犯下下标写反了的错误。我觉得是时候详细地理一理这玩意儿到底是个啥了…</p>
@@ -5663,52 +5796,6 @@
         <tag>pass by pointer</tag>
         <tag>pass by value</tag>
         <tag>pass by reference</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>当形参、实参是指针变量...</title>
-    <url>/posts/1ef1e20b.html</url>
-    <content><![CDATA[<p>接<a href="https://blocklune.github.io/posts/50c16b14.html">《一个有关指针传参的问题》</a>，再理一理这里边的一些问题…</p>
-<span id="more"></span>
-
-<p>在单向值传递的过程中，我们知道，形参是对实参的值的拷贝。在实参的值传递给形参后，对形参的一切操作，都不会对实参产生什么影响。比如下边这串代码：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">5</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before func(), main(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(n);</span><br><span class="line">    cout &lt;&lt; <span class="string">"After func(), main(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before n++, func(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    n++;</span><br><span class="line">    cout &lt;&lt; <span class="string">"After n++, func(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>下边是输出结果：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Before func(), main(): n = 5</span><br><span class="line">Before n++, func(): n = 5</span><br><span class="line">After n++, func(): n = 6</span><br><span class="line">After func(), main(): n = 5</span><br></pre></td></tr></tbody></table></figure>
-
-<p>通过打印它们的地址，我们也可以认识到这一点：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">5</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"In main(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;n = "</span> &lt;&lt; &amp;n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(n);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"In func(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;n = "</span> &lt;&lt; &amp;n &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">In main():</span></span><br><span class="line"><span class="comment">n = 5</span></span><br><span class="line"><span class="comment">&amp;n = 0x61fe1c</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">In func():</span></span><br><span class="line"><span class="comment">n = 5</span></span><br><span class="line"><span class="comment">&amp;n = 0x61fdf0</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>如果把变量类型从普通类型变成指针类型，那么类似的，发生的其实也是一次值传递，也即，<strong>指针变量的值发生了一次拷贝</strong>，请看下边的例子：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"In main(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"p = "</span> &lt;&lt; (<span class="type">int</span> *)p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;p = "</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(p);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"In func(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"p = "</span> &lt;&lt; (<span class="type">int</span> *)p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;p = "</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>在我电脑上的输出结果是：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">In main():</span><br><span class="line">p = 0xee61c0</span><br><span class="line">&amp;p = 0x61fe18</span><br><span class="line"></span><br><span class="line">In func():</span><br><span class="line">p = 0xee61c0</span><br><span class="line">&amp;p = 0x61fdf0</span><br></pre></td></tr></tbody></table></figure>
-
-<p>可以看到，<code>int *</code> 类型的指针变量 <code>p</code> 的值是相同的，但地址不同，这是两个变量。</p>
-<p>把上边代码 <code>main()</code> 中的 <code>p</code> 记为 <code>p1</code>，<code>func()</code> 中的记为 <code>p2</code>，那么就可以这样理解为，当调用 <code>func()</code> 时，<code>p2</code> 与 <code>p1</code> <strong>指向了相同的位置</strong>，但它们确实<strong>不是同一个指针</strong>。</p>
-<p>对于<a href="https://blocklune.github.io/posts/50c16b14.html">《一个有关指针传参的问题》</a>中的那段错误代码，其实错误就是，在函数中 <code>new</code> 出来内存后，只是让形参指向了那片内存，而原来的实参并没有同步地指过去。</p>
-<p>但是只要确定形参的指针和实参的指针指向的地址是相同的，那么对这同一片内存进行的操作，就是同步的，比如：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    *p = <span class="number">5</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before func(), main(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(p);</span><br><span class="line">    cout &lt;&lt; <span class="string">"After func(), main(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before (*p)++, func(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    (*p)++;</span><br><span class="line">    cout &lt;&lt; <span class="string">"After (*p)++, func(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>输出结果：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Before func(), main(): (*p) = 5</span><br><span class="line">Before (*p)++, func(): (*p) = 5</span><br><span class="line">After (*p)++, func(): (*p) = 6</span><br><span class="line">After func(), main(): (*p) = 6</span><br></pre></td></tr></tbody></table></figure>
-
-<p>由于数组名其实就是数组第一个元素（下标为 0 的那个元素）的地址，所以类似的，在函数中对数组形参的操作会等效到数组实参上去：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span>[], <span class="type">int</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> a[<span class="number">3</span>] = {<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>};</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> x : a)</span><br><span class="line">        cout &lt;&lt; x &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(a, <span class="number">3</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> x : a)</span><br><span class="line">        cout &lt;&lt; x &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        arr[i]++;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>输出结果：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">0 1 2</span><br><span class="line">1 2 3</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-        <tag>Pointer</tag>
       </tags>
   </entry>
   <entry>
@@ -5820,6 +5907,52 @@
       <tags>
         <tag>C/C++</tag>
         <tag>Game</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>当形参、实参是指针变量...</title>
+    <url>/posts/1ef1e20b.html</url>
+    <content><![CDATA[<p>接<a href="https://blocklune.github.io/posts/50c16b14.html">《一个有关指针传参的问题》</a>，再理一理这里边的一些问题…</p>
+<span id="more"></span>
+
+<p>在单向值传递的过程中，我们知道，形参是对实参的值的拷贝。在实参的值传递给形参后，对形参的一切操作，都不会对实参产生什么影响。比如下边这串代码：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">5</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before func(), main(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(n);</span><br><span class="line">    cout &lt;&lt; <span class="string">"After func(), main(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before n++, func(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    n++;</span><br><span class="line">    cout &lt;&lt; <span class="string">"After n++, func(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>下边是输出结果：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Before func(), main(): n = 5</span><br><span class="line">Before n++, func(): n = 5</span><br><span class="line">After n++, func(): n = 6</span><br><span class="line">After func(), main(): n = 5</span><br></pre></td></tr></tbody></table></figure>
+
+<p>通过打印它们的地址，我们也可以认识到这一点：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">5</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"In main(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;n = "</span> &lt;&lt; &amp;n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(n);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"In func(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;n = "</span> &lt;&lt; &amp;n &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">In main():</span></span><br><span class="line"><span class="comment">n = 5</span></span><br><span class="line"><span class="comment">&amp;n = 0x61fe1c</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">In func():</span></span><br><span class="line"><span class="comment">n = 5</span></span><br><span class="line"><span class="comment">&amp;n = 0x61fdf0</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>如果把变量类型从普通类型变成指针类型，那么类似的，发生的其实也是一次值传递，也即，<strong>指针变量的值发生了一次拷贝</strong>，请看下边的例子：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"In main(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"p = "</span> &lt;&lt; (<span class="type">int</span> *)p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;p = "</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(p);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"In func(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"p = "</span> &lt;&lt; (<span class="type">int</span> *)p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;p = "</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>在我电脑上的输出结果是：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">In main():</span><br><span class="line">p = 0xee61c0</span><br><span class="line">&amp;p = 0x61fe18</span><br><span class="line"></span><br><span class="line">In func():</span><br><span class="line">p = 0xee61c0</span><br><span class="line">&amp;p = 0x61fdf0</span><br></pre></td></tr></tbody></table></figure>
+
+<p>可以看到，<code>int *</code> 类型的指针变量 <code>p</code> 的值是相同的，但地址不同，这是两个变量。</p>
+<p>把上边代码 <code>main()</code> 中的 <code>p</code> 记为 <code>p1</code>，<code>func()</code> 中的记为 <code>p2</code>，那么就可以这样理解为，当调用 <code>func()</code> 时，<code>p2</code> 与 <code>p1</code> <strong>指向了相同的位置</strong>，但它们确实<strong>不是同一个指针</strong>。</p>
+<p>对于<a href="https://blocklune.github.io/posts/50c16b14.html">《一个有关指针传参的问题》</a>中的那段错误代码，其实错误就是，在函数中 <code>new</code> 出来内存后，只是让形参指向了那片内存，而原来的实参并没有同步地指过去。</p>
+<p>但是只要确定形参的指针和实参的指针指向的地址是相同的，那么对这同一片内存进行的操作，就是同步的，比如：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    *p = <span class="number">5</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before func(), main(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(p);</span><br><span class="line">    cout &lt;&lt; <span class="string">"After func(), main(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before (*p)++, func(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    (*p)++;</span><br><span class="line">    cout &lt;&lt; <span class="string">"After (*p)++, func(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>输出结果：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Before func(), main(): (*p) = 5</span><br><span class="line">Before (*p)++, func(): (*p) = 5</span><br><span class="line">After (*p)++, func(): (*p) = 6</span><br><span class="line">After func(), main(): (*p) = 6</span><br></pre></td></tr></tbody></table></figure>
+
+<p>由于数组名其实就是数组第一个元素（下标为 0 的那个元素）的地址，所以类似的，在函数中对数组形参的操作会等效到数组实参上去：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span>[], <span class="type">int</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> a[<span class="number">3</span>] = {<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>};</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> x : a)</span><br><span class="line">        cout &lt;&lt; x &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(a, <span class="number">3</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> x : a)</span><br><span class="line">        cout &lt;&lt; x &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        arr[i]++;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>输出结果：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">0 1 2</span><br><span class="line">1 2 3</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+        <tag>Pointer</tag>
       </tags>
   </entry>
   <entry>
