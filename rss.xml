@@ -4,18 +4,18 @@
   xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Fish Pond</title>
-    <link>https://blocklune.github.io/</link>
+    <link>https://fishg.top/</link>
     
-    <atom:link href="https://blocklune.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Sun, 06 Aug 2023 04:14:30 GMT</pubDate>
+    <pubDate>Sun, 06 Aug 2023 08:56:11 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
       <title>Notes for 《tmux Productive Mouse-Free Development》</title>
-      <link>https://blocklune.github.io/posts/53957db4.html</link>
-      <guid>https://blocklune.github.io/posts/53957db4.html</guid>
+      <link>https://fishg.top/posts/53957db4.html</link>
+      <guid>https://fishg.top/posts/53957db4.html</guid>
       <pubDate>Sat, 05 Aug 2023 03:47:53 GMT</pubDate>
       
       <description>&lt;p&gt;Notes for &lt;em&gt;tmux Productive Mouse-Free Development&lt;/em&gt; written by Brian P. Hogan.&lt;/p&gt;</description>
@@ -23,22 +23,22 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/tmux/">Tmux</category>
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
       
       
-      <comments>https://blocklune.github.io/posts/53957db4.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/tmux/">Tmux</category>
+      
+      
+      <comments>https://fishg.top/posts/53957db4.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Tmux Quick Start</title>
-      <link>https://blocklune.github.io/posts/c99a1d40.html</link>
-      <guid>https://blocklune.github.io/posts/c99a1d40.html</guid>
+      <link>https://fishg.top/posts/c99a1d40.html</link>
+      <guid>https://fishg.top/posts/c99a1d40.html</guid>
       <pubDate>Fri, 04 Aug 2023 15:05:19 GMT</pubDate>
       
       <description>&lt;p&gt;Chinese translation for &lt;em&gt;&lt;a href=&quot;https://tmuxcheatsheet.com/how-to-install-tmux/&quot;&gt;How to Install and Use Tmux&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;</description>
@@ -46,22 +46,22 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/tmux/">Tmux</category>
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
       
       
-      <comments>https://blocklune.github.io/posts/c99a1d40.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/tmux/">Tmux</category>
+      
+      
+      <comments>https://fishg.top/posts/c99a1d40.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Notes for Algorithms, Part II: Minimum Spanning Trees</title>
-      <link>https://blocklune.github.io/posts/8ca4a3fd.html</link>
-      <guid>https://blocklune.github.io/posts/8ca4a3fd.html</guid>
+      <link>https://fishg.top/posts/8ca4a3fd.html</link>
+      <guid>https://fishg.top/posts/8ca4a3fd.html</guid>
       <pubDate>Thu, 03 Aug 2023 13:17:06 GMT</pubDate>
       
       <description>&lt;p&gt;This is a note for 4.3 Minimum Spanning Trees, &lt;em&gt;&lt;a href=&quot;https://www.coursera.org/learn/algorithms-part2/&quot;&gt;Algorithms, Part II&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;</description>
@@ -69,26 +69,26 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/algorithms-data-structures/">Algorithms &amp; Data structures</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/coursera/">Coursera</category>
-      
-      <category domain="https://blocklune.github.io/tags/algorithm/">Algorithm</category>
-      
-      <category domain="https://blocklune.github.io/tags/minimum-spanning-trees/">Minimum Spanning Trees</category>
+      <category domain="https://fishg.top/categories/cs/algorithms-data-structures/">Algorithms &amp; Data structures</category>
       
       
-      <comments>https://blocklune.github.io/posts/8ca4a3fd.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/coursera/">Coursera</category>
+      
+      <category domain="https://fishg.top/tags/algorithm/">Algorithm</category>
+      
+      <category domain="https://fishg.top/tags/minimum-spanning-trees/">Minimum Spanning Trees</category>
+      
+      
+      <comments>https://fishg.top/posts/8ca4a3fd.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Notes for Algorithms, Part II: Directed Graphs</title>
-      <link>https://blocklune.github.io/posts/5b849ae3.html</link>
-      <guid>https://blocklune.github.io/posts/5b849ae3.html</guid>
+      <link>https://fishg.top/posts/5b849ae3.html</link>
+      <guid>https://fishg.top/posts/5b849ae3.html</guid>
       <pubDate>Sat, 29 Jul 2023 01:34:51 GMT</pubDate>
       
       <description>&lt;p&gt;This is a note for 4.2 Directed Graphs, &lt;em&gt;&lt;a href=&quot;https://www.coursera.org/learn/algorithms-part2/&quot;&gt;Algorithms, Part II&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;</description>
@@ -96,34 +96,34 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/algorithms-data-structures/">Algorithms &amp; Data structures</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/coursera/">Coursera</category>
-      
-      <category domain="https://blocklune.github.io/tags/algorithm/">Algorithm</category>
-      
-      <category domain="https://blocklune.github.io/tags/directed-graph/">Directed Graph</category>
-      
-      <category domain="https://blocklune.github.io/tags/bfs/">BFS</category>
-      
-      <category domain="https://blocklune.github.io/tags/dfs/">DFS</category>
-      
-      <category domain="https://blocklune.github.io/tags/topological-sort/">Topological Sort</category>
-      
-      <category domain="https://blocklune.github.io/tags/strong-components/">Strong Components</category>
+      <category domain="https://fishg.top/categories/cs/algorithms-data-structures/">Algorithms &amp; Data structures</category>
       
       
-      <comments>https://blocklune.github.io/posts/5b849ae3.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/coursera/">Coursera</category>
+      
+      <category domain="https://fishg.top/tags/algorithm/">Algorithm</category>
+      
+      <category domain="https://fishg.top/tags/directed-graph/">Directed Graph</category>
+      
+      <category domain="https://fishg.top/tags/bfs/">BFS</category>
+      
+      <category domain="https://fishg.top/tags/dfs/">DFS</category>
+      
+      <category domain="https://fishg.top/tags/topological-sort/">Topological Sort</category>
+      
+      <category domain="https://fishg.top/tags/strong-components/">Strong Components</category>
+      
+      
+      <comments>https://fishg.top/posts/5b849ae3.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Notes for Algorithms, Part II: Undirected Graphs</title>
-      <link>https://blocklune.github.io/posts/d3e12860.html</link>
-      <guid>https://blocklune.github.io/posts/d3e12860.html</guid>
+      <link>https://fishg.top/posts/d3e12860.html</link>
+      <guid>https://fishg.top/posts/d3e12860.html</guid>
       <pubDate>Thu, 27 Jul 2023 08:28:42 GMT</pubDate>
       
       <description>&lt;p&gt;This is a note for 4.1 Undirected Graphs, &lt;em&gt;&lt;a href=&quot;https://www.coursera.org/learn/algorithms-part2/&quot;&gt;Algorithms, Part II&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;</description>
@@ -131,36 +131,36 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/algorithms-data-structures/">Algorithms &amp; Data structures</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/coursera/">Coursera</category>
-      
-      <category domain="https://blocklune.github.io/tags/algorithm/">Algorithm</category>
-      
-      <category domain="https://blocklune.github.io/tags/bfs/">BFS</category>
-      
-      <category domain="https://blocklune.github.io/tags/dfs/">DFS</category>
-      
-      <category domain="https://blocklune.github.io/tags/undirected-graph/">Undirected Graph</category>
-      
-      <category domain="https://blocklune.github.io/tags/euler-tour/">Euler Tour</category>
-      
-      <category domain="https://blocklune.github.io/tags/euler-cycle/">Euler Cycle</category>
-      
-      <category domain="https://blocklune.github.io/tags/connected-component/">Connected Component</category>
+      <category domain="https://fishg.top/categories/cs/algorithms-data-structures/">Algorithms &amp; Data structures</category>
       
       
-      <comments>https://blocklune.github.io/posts/d3e12860.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/coursera/">Coursera</category>
+      
+      <category domain="https://fishg.top/tags/algorithm/">Algorithm</category>
+      
+      <category domain="https://fishg.top/tags/bfs/">BFS</category>
+      
+      <category domain="https://fishg.top/tags/dfs/">DFS</category>
+      
+      <category domain="https://fishg.top/tags/undirected-graph/">Undirected Graph</category>
+      
+      <category domain="https://fishg.top/tags/euler-tour/">Euler Tour</category>
+      
+      <category domain="https://fishg.top/tags/euler-cycle/">Euler Cycle</category>
+      
+      <category domain="https://fishg.top/tags/connected-component/">Connected Component</category>
+      
+      
+      <comments>https://fishg.top/posts/d3e12860.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>RLCraft 新手教程 - 零：安装和资源导航</title>
-      <link>https://blocklune.github.io/posts/4f52bf7e.html</link>
-      <guid>https://blocklune.github.io/posts/4f52bf7e.html</guid>
+      <link>https://fishg.top/posts/4f52bf7e.html</link>
+      <guid>https://fishg.top/posts/4f52bf7e.html</guid>
       <pubDate>Wed, 19 Jul 2023 07:18:38 GMT</pubDate>
       
       <description>&lt;p&gt;本系列教程是我自己游玩过程中写的。出发点是我没有在网上找到比较好的中文 RLCraft 文字教程，所以在此记录自己的游玩发现。也算留下一些记录，供未来又开坑的自己参考。这是第零篇：安装 RLCraft 整合包，以及资源导航。&lt;/p&gt;</description>
@@ -168,26 +168,26 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/game/">Game</category>
+      <category domain="https://fishg.top/categories/game/">Game</category>
       
-      <category domain="https://blocklune.github.io/categories/game/minecraft/">Minecraft</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/game/">Game</category>
-      
-      <category domain="https://blocklune.github.io/tags/minecraft/">Minecraft</category>
-      
-      <category domain="https://blocklune.github.io/tags/rlcraft/">RLCraft</category>
+      <category domain="https://fishg.top/categories/game/minecraft/">Minecraft</category>
       
       
-      <comments>https://blocklune.github.io/posts/4f52bf7e.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/game/">Game</category>
+      
+      <category domain="https://fishg.top/tags/minecraft/">Minecraft</category>
+      
+      <category domain="https://fishg.top/tags/rlcraft/">RLCraft</category>
+      
+      
+      <comments>https://fishg.top/posts/4f52bf7e.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Notes for Nand2Tetris: Virtual Machine I: Stack Arithmetic</title>
-      <link>https://blocklune.github.io/posts/d8b14680.html</link>
-      <guid>https://blocklune.github.io/posts/d8b14680.html</guid>
+      <link>https://fishg.top/posts/d8b14680.html</link>
+      <guid>https://fishg.top/posts/d8b14680.html</guid>
       <pubDate>Wed, 19 Jul 2023 03:25:49 GMT</pubDate>
       
       <description>&lt;p&gt;This is a note for Nand2Tetris unit 7 (Part II, Unit 1).&lt;/p&gt;</description>
@@ -195,30 +195,30 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/computing-system/">Computing System</category>
+      <category domain="https://fishg.top/categories/cs/computing-system/">Computing System</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/coursera/">Coursera</category>
-      
-      <category domain="https://blocklune.github.io/tags/nand2tetris/">Nand2Tetris</category>
-      
-      <category domain="https://blocklune.github.io/tags/virtual-machine/">Virtual Machine</category>
-      
-      <category domain="https://blocklune.github.io/tags/stack-arithmetic/">Stack Arithmetic</category>
+      <category domain="https://fishg.top/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
       
       
-      <comments>https://blocklune.github.io/posts/d8b14680.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/coursera/">Coursera</category>
+      
+      <category domain="https://fishg.top/tags/nand2tetris/">Nand2Tetris</category>
+      
+      <category domain="https://fishg.top/tags/virtual-machine/">Virtual Machine</category>
+      
+      <category domain="https://fishg.top/tags/stack-arithmetic/">Stack Arithmetic</category>
+      
+      
+      <comments>https://fishg.top/posts/d8b14680.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Notes for Nand2Tetris: Assembler</title>
-      <link>https://blocklune.github.io/posts/869cdee6.html</link>
-      <guid>https://blocklune.github.io/posts/869cdee6.html</guid>
+      <link>https://fishg.top/posts/869cdee6.html</link>
+      <guid>https://fishg.top/posts/869cdee6.html</guid>
       <pubDate>Mon, 17 Jul 2023 12:28:42 GMT</pubDate>
       
       <description>&lt;p&gt;This is a note for Nand2Tetris Unit 6.&lt;/p&gt;</description>
@@ -226,30 +226,30 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/computing-system/">Computing System</category>
+      <category domain="https://fishg.top/categories/cs/computing-system/">Computing System</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/coursera/">Coursera</category>
-      
-      <category domain="https://blocklune.github.io/tags/nand2tetris/">Nand2Tetris</category>
-      
-      <category domain="https://blocklune.github.io/tags/assembler/">Assembler</category>
-      
-      <category domain="https://blocklune.github.io/tags/assembly-language/">Assembly Language</category>
+      <category domain="https://fishg.top/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
       
       
-      <comments>https://blocklune.github.io/posts/869cdee6.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/coursera/">Coursera</category>
+      
+      <category domain="https://fishg.top/tags/nand2tetris/">Nand2Tetris</category>
+      
+      <category domain="https://fishg.top/tags/assembler/">Assembler</category>
+      
+      <category domain="https://fishg.top/tags/assembly-language/">Assembly Language</category>
+      
+      
+      <comments>https://fishg.top/posts/869cdee6.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Notes for Machine Learning</title>
-      <link>https://blocklune.github.io/posts/a6f57fef.html</link>
-      <guid>https://blocklune.github.io/posts/a6f57fef.html</guid>
+      <link>https://fishg.top/posts/a6f57fef.html</link>
+      <guid>https://fishg.top/posts/a6f57fef.html</guid>
       <pubDate>Fri, 14 Jul 2023 03:59:14 GMT</pubDate>
       
       <description>&lt;p&gt;Here are my notes for course &lt;a href=&quot;https://study.163.com/course/courseMain.htm?courseId=1210076550&quot;&gt;Machine Learning&lt;/a&gt; taught by Andrew Ng.&lt;/p&gt;
@@ -258,26 +258,26 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/ai/">AI</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/ai/">AI</category>
-      
-      <category domain="https://blocklune.github.io/tags/machine-learning/">Machine Learning</category>
-      
-      <category domain="https://blocklune.github.io/tags/andrew-ng/">Andrew Ng</category>
+      <category domain="https://fishg.top/categories/cs/ai/">AI</category>
       
       
-      <comments>https://blocklune.github.io/posts/a6f57fef.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/ai/">AI</category>
+      
+      <category domain="https://fishg.top/tags/machine-learning/">Machine Learning</category>
+      
+      <category domain="https://fishg.top/tags/andrew-ng/">Andrew Ng</category>
+      
+      
+      <comments>https://fishg.top/posts/a6f57fef.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Notes for Nand2Tetris: Computer Architecture</title>
-      <link>https://blocklune.github.io/posts/9a8ff4a5.html</link>
-      <guid>https://blocklune.github.io/posts/9a8ff4a5.html</guid>
+      <link>https://fishg.top/posts/9a8ff4a5.html</link>
+      <guid>https://fishg.top/posts/9a8ff4a5.html</guid>
       <pubDate>Wed, 12 Jul 2023 03:57:51 GMT</pubDate>
       
       <description>&lt;p&gt;This is a note for Nand2Tetris Unit 5.&lt;/p&gt;</description>
@@ -285,38 +285,38 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/computing-system/">Computing System</category>
+      <category domain="https://fishg.top/categories/cs/computing-system/">Computing System</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/coursera/">Coursera</category>
-      
-      <category domain="https://blocklune.github.io/tags/nand2tetris/">Nand2Tetris</category>
-      
-      <category domain="https://blocklune.github.io/tags/computer-architecture/">Computer Architecture</category>
-      
-      <category domain="https://blocklune.github.io/tags/fetch-execute-cycle/">Fetch-execute cycle</category>
-      
-      <category domain="https://blocklune.github.io/tags/date-bus/">Date bus</category>
-      
-      <category domain="https://blocklune.github.io/tags/instruction-bus/">Instruction bus</category>
-      
-      <category domain="https://blocklune.github.io/tags/cpu/">CPU</category>
-      
-      <category domain="https://blocklune.github.io/tags/computer-design/">Computer design</category>
+      <category domain="https://fishg.top/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
       
       
-      <comments>https://blocklune.github.io/posts/9a8ff4a5.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/coursera/">Coursera</category>
+      
+      <category domain="https://fishg.top/tags/nand2tetris/">Nand2Tetris</category>
+      
+      <category domain="https://fishg.top/tags/computer-architecture/">Computer Architecture</category>
+      
+      <category domain="https://fishg.top/tags/fetch-execute-cycle/">Fetch-execute cycle</category>
+      
+      <category domain="https://fishg.top/tags/date-bus/">Date bus</category>
+      
+      <category domain="https://fishg.top/tags/instruction-bus/">Instruction bus</category>
+      
+      <category domain="https://fishg.top/tags/cpu/">CPU</category>
+      
+      <category domain="https://fishg.top/tags/computer-design/">Computer design</category>
+      
+      
+      <comments>https://fishg.top/posts/9a8ff4a5.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>joshuto: A great file manager in terminal</title>
-      <link>https://blocklune.github.io/posts/348795e3.html</link>
-      <guid>https://blocklune.github.io/posts/348795e3.html</guid>
+      <link>https://fishg.top/posts/348795e3.html</link>
+      <guid>https://fishg.top/posts/348795e3.html</guid>
       <pubDate>Wed, 12 Jul 2023 03:39:18 GMT</pubDate>
       
       <description>&lt;p&gt;When in a terminal, sometimes it’s really annoying to keep on typing in &lt;code&gt;cd&lt;/code&gt; or something else to browse the files and directories. Can we do it just like what we do in GUI? Then joshuto may be helpful to you.&lt;/p&gt;</description>
@@ -324,22 +324,22 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/joshuto/">joshuto</category>
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
       
       
-      <comments>https://blocklune.github.io/posts/348795e3.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/joshuto/">joshuto</category>
+      
+      
+      <comments>https://fishg.top/posts/348795e3.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Notes for Nand2Tetris: Machine Language</title>
-      <link>https://blocklune.github.io/posts/a4422da3.html</link>
-      <guid>https://blocklune.github.io/posts/a4422da3.html</guid>
+      <link>https://fishg.top/posts/a4422da3.html</link>
+      <guid>https://fishg.top/posts/a4422da3.html</guid>
       <pubDate>Tue, 11 Jul 2023 08:49:01 GMT</pubDate>
       
       <description>&lt;p&gt;This is a note for Nand2Tetris unit 4.&lt;/p&gt;</description>
@@ -347,30 +347,30 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/computing-system/">Computing System</category>
+      <category domain="https://fishg.top/categories/cs/computing-system/">Computing System</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/coursera/">Coursera</category>
-      
-      <category domain="https://blocklune.github.io/tags/nand2tetris/">Nand2Tetris</category>
-      
-      <category domain="https://blocklune.github.io/tags/assembly-language/">Assembly Language</category>
-      
-      <category domain="https://blocklune.github.io/tags/machine-language/">Machine Language</category>
+      <category domain="https://fishg.top/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
       
       
-      <comments>https://blocklune.github.io/posts/a4422da3.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/coursera/">Coursera</category>
+      
+      <category domain="https://fishg.top/tags/nand2tetris/">Nand2Tetris</category>
+      
+      <category domain="https://fishg.top/tags/assembly-language/">Assembly Language</category>
+      
+      <category domain="https://fishg.top/tags/machine-language/">Machine Language</category>
+      
+      
+      <comments>https://fishg.top/posts/a4422da3.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Notes for Nand2Tetris: Memory</title>
-      <link>https://blocklune.github.io/posts/28d92424.html</link>
-      <guid>https://blocklune.github.io/posts/28d92424.html</guid>
+      <link>https://fishg.top/posts/28d92424.html</link>
+      <guid>https://fishg.top/posts/28d92424.html</guid>
       <pubDate>Sun, 09 Jul 2023 11:44:36 GMT</pubDate>
       
       <description>&lt;p&gt;This is a note for Nand2Tetris unit 3.&lt;/p&gt;</description>
@@ -378,38 +378,38 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/computing-system/">Computing System</category>
+      <category domain="https://fishg.top/categories/cs/computing-system/">Computing System</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/memory/">Memory</category>
-      
-      <category domain="https://blocklune.github.io/tags/coursera/">Coursera</category>
-      
-      <category domain="https://blocklune.github.io/tags/nand2tetris/">Nand2Tetris</category>
-      
-      <category domain="https://blocklune.github.io/tags/ram/">RAM</category>
-      
-      <category domain="https://blocklune.github.io/tags/register/">Register</category>
-      
-      <category domain="https://blocklune.github.io/tags/counter/">Counter</category>
-      
-      <category domain="https://blocklune.github.io/tags/sequential-logic/">Sequential Logic</category>
-      
-      <category domain="https://blocklune.github.io/tags/dff/">DFF</category>
+      <category domain="https://fishg.top/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
       
       
-      <comments>https://blocklune.github.io/posts/28d92424.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/memory/">Memory</category>
+      
+      <category domain="https://fishg.top/tags/coursera/">Coursera</category>
+      
+      <category domain="https://fishg.top/tags/nand2tetris/">Nand2Tetris</category>
+      
+      <category domain="https://fishg.top/tags/ram/">RAM</category>
+      
+      <category domain="https://fishg.top/tags/register/">Register</category>
+      
+      <category domain="https://fishg.top/tags/counter/">Counter</category>
+      
+      <category domain="https://fishg.top/tags/sequential-logic/">Sequential Logic</category>
+      
+      <category domain="https://fishg.top/tags/dff/">DFF</category>
+      
+      
+      <comments>https://fishg.top/posts/28d92424.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Notes for Nand2Tetris: Boolean Arithmetic and the ALU</title>
-      <link>https://blocklune.github.io/posts/f0f4eaec.html</link>
-      <guid>https://blocklune.github.io/posts/f0f4eaec.html</guid>
+      <link>https://fishg.top/posts/f0f4eaec.html</link>
+      <guid>https://fishg.top/posts/f0f4eaec.html</guid>
       <pubDate>Sat, 08 Jul 2023 14:17:06 GMT</pubDate>
       
       <description>&lt;p&gt;This is a note for Nand2Tetris Unit 2.&lt;/p&gt;</description>
@@ -417,30 +417,30 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/computing-system/">Computing System</category>
+      <category domain="https://fishg.top/categories/cs/computing-system/">Computing System</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/coursera/">Coursera</category>
-      
-      <category domain="https://blocklune.github.io/tags/nand2tetris/">Nand2Tetris</category>
-      
-      <category domain="https://blocklune.github.io/tags/boolean-arithmetic/">Boolean Arithmetic</category>
-      
-      <category domain="https://blocklune.github.io/tags/alu/">ALU</category>
+      <category domain="https://fishg.top/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
       
       
-      <comments>https://blocklune.github.io/posts/f0f4eaec.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/coursera/">Coursera</category>
+      
+      <category domain="https://fishg.top/tags/nand2tetris/">Nand2Tetris</category>
+      
+      <category domain="https://fishg.top/tags/boolean-arithmetic/">Boolean Arithmetic</category>
+      
+      <category domain="https://fishg.top/tags/alu/">ALU</category>
+      
+      
+      <comments>https://fishg.top/posts/f0f4eaec.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Notes for Nand2Tetris: Boolean Functions and Gate Logic</title>
-      <link>https://blocklune.github.io/posts/53a0b5ef.html</link>
-      <guid>https://blocklune.github.io/posts/53a0b5ef.html</guid>
+      <link>https://fishg.top/posts/53a0b5ef.html</link>
+      <guid>https://fishg.top/posts/53a0b5ef.html</guid>
       <pubDate>Sat, 08 Jul 2023 07:06:35 GMT</pubDate>
       
       <description>&lt;p&gt;This is a note for Nand2Tetris Unit 1.&lt;/p&gt;</description>
@@ -448,28 +448,28 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/computing-system/">Computing System</category>
+      <category domain="https://fishg.top/categories/cs/computing-system/">Computing System</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/nand2tetris/">Nand2Tetris</category>
-      
-      <category domain="https://blocklune.github.io/tags/boolean-functions/">Boolean Functions</category>
-      
-      <category domain="https://blocklune.github.io/tags/gate-logic/">Gate Logic</category>
+      <category domain="https://fishg.top/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
       
       
-      <comments>https://blocklune.github.io/posts/53a0b5ef.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/nand2tetris/">Nand2Tetris</category>
+      
+      <category domain="https://fishg.top/tags/boolean-functions/">Boolean Functions</category>
+      
+      <category domain="https://fishg.top/tags/gate-logic/">Gate Logic</category>
+      
+      
+      <comments>https://fishg.top/posts/53a0b5ef.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Python libraries mentioned in CS50P</title>
-      <link>https://blocklune.github.io/posts/22098b25.html</link>
-      <guid>https://blocklune.github.io/posts/22098b25.html</guid>
+      <link>https://fishg.top/posts/22098b25.html</link>
+      <guid>https://fishg.top/posts/22098b25.html</guid>
       <pubDate>Fri, 07 Jul 2023 03:27:54 GMT</pubDate>
       
       <description>&lt;p&gt;This is a list of some Python libraries mentioned in CS50P 2022.&lt;/p&gt;</description>
@@ -477,28 +477,28 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/python/">Python</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/python/">Python</category>
-      
-      <category domain="https://blocklune.github.io/tags/cs50p/">CS50P</category>
-      
-      <category domain="https://blocklune.github.io/tags/pip/">pip</category>
+      <category domain="https://fishg.top/categories/cs/languages/python/">Python</category>
       
       
-      <comments>https://blocklune.github.io/posts/22098b25.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/python/">Python</category>
+      
+      <category domain="https://fishg.top/tags/cs50p/">CS50P</category>
+      
+      <category domain="https://fishg.top/tags/pip/">pip</category>
+      
+      
+      <comments>https://fishg.top/posts/22098b25.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Matching IPv4 addresses with RegExp</title>
-      <link>https://blocklune.github.io/posts/1d74bec6.html</link>
-      <guid>https://blocklune.github.io/posts/1d74bec6.html</guid>
+      <link>https://fishg.top/posts/1d74bec6.html</link>
+      <guid>https://fishg.top/posts/1d74bec6.html</guid>
       <pubDate>Tue, 04 Jul 2023 08:03:46 GMT</pubDate>
       
       <description>&lt;p&gt;While solving &lt;a href=&quot;https://cs50.harvard.edu/python/2022/psets/7/numb3rs/&quot;&gt;the NUM3RS problem of CS50P&lt;/a&gt;, I was asked to match IPv4 addresses with RegExp.&lt;/p&gt;</description>
@@ -506,24 +506,24 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/regexp/">RegExp</category>
-      
-      <category domain="https://blocklune.github.io/tags/ipv4/">IPv4</category>
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
       
       
-      <comments>https://blocklune.github.io/posts/1d74bec6.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/regexp/">RegExp</category>
+      
+      <category domain="https://fishg.top/tags/ipv4/">IPv4</category>
+      
+      
+      <comments>https://fishg.top/posts/1d74bec6.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Notes for Matplotlib</title>
-      <link>https://blocklune.github.io/posts/113e4ae1.html</link>
-      <guid>https://blocklune.github.io/posts/113e4ae1.html</guid>
+      <link>https://fishg.top/posts/113e4ae1.html</link>
+      <guid>https://fishg.top/posts/113e4ae1.html</guid>
       <pubDate>Thu, 29 Jun 2023 12:00:50 GMT</pubDate>
       
       <description>&lt;p&gt;Here are some notes for Matplotlib.&lt;/p&gt;</description>
@@ -531,26 +531,26 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/python/">Python</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/python/">Python</category>
-      
-      <category domain="https://blocklune.github.io/tags/matplotlib/">Matplotlib</category>
+      <category domain="https://fishg.top/categories/cs/languages/python/">Python</category>
       
       
-      <comments>https://blocklune.github.io/posts/113e4ae1.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/python/">Python</category>
+      
+      <category domain="https://fishg.top/tags/matplotlib/">Matplotlib</category>
+      
+      
+      <comments>https://fishg.top/posts/113e4ae1.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Better right-click menu in Win11</title>
-      <link>https://blocklune.github.io/posts/798c36fc.html</link>
-      <guid>https://blocklune.github.io/posts/798c36fc.html</guid>
+      <link>https://fishg.top/posts/798c36fc.html</link>
+      <guid>https://fishg.top/posts/798c36fc.html</guid>
       <pubDate>Thu, 22 Jun 2023 14:11:51 GMT</pubDate>
       
       <description>&lt;p&gt;When the Windows system was updated to version 11, the right-click menu was completely redesigned. Microsoft is apparently trying to make it simpler and more modern, but the way they have chosen to do it is really brute force: hiding everything useful in the secondary menu! I find this really annoying. Luckily, we have a way to bring back the classic, and even customize it and make it better! (This post is in Chinese.)&lt;/p&gt;</description>
@@ -558,22 +558,22 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/windows/">Windows</category>
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
       
       
-      <comments>https://blocklune.github.io/posts/798c36fc.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/windows/">Windows</category>
+      
+      
+      <comments>https://fishg.top/posts/798c36fc.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>My personal summay of Stanford CS106L</title>
-      <link>https://blocklune.github.io/posts/b16dfec9.html</link>
-      <guid>https://blocklune.github.io/posts/b16dfec9.html</guid>
+      <link>https://fishg.top/posts/b16dfec9.html</link>
+      <guid>https://fishg.top/posts/b16dfec9.html</guid>
       <pubDate>Thu, 01 Jun 2023 15:09:45 GMT</pubDate>
       
       <description>&lt;p&gt;This is &lt;a href=&quot;https://web.stanford.edu/class/cs106l/index.html&quot;&gt;CS106L&lt;/a&gt;, an in-depth modern C++ language course from Stanford. I enrolled in it at the beginning of April and almost finished it today.&lt;/p&gt;</description>
@@ -581,28 +581,28 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/online-course-summary/">Online course summary</category>
-      
-      <category domain="https://blocklune.github.io/tags/c-c/">C &amp; C++</category>
-      
-      <category domain="https://blocklune.github.io/tags/cs106l/">CS106L</category>
+      <category domain="https://fishg.top/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
       
       
-      <comments>https://blocklune.github.io/posts/b16dfec9.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/online-course-summary/">Online course summary</category>
+      
+      <category domain="https://fishg.top/tags/c-c/">C &amp; C++</category>
+      
+      <category domain="https://fishg.top/tags/cs106l/">CS106L</category>
+      
+      
+      <comments>https://fishg.top/posts/b16dfec9.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Const Correctness in C++</title>
-      <link>https://blocklune.github.io/posts/4eb7504e.html</link>
-      <guid>https://blocklune.github.io/posts/4eb7504e.html</guid>
+      <link>https://fishg.top/posts/4eb7504e.html</link>
+      <guid>https://fishg.top/posts/4eb7504e.html</guid>
       <pubDate>Thu, 01 Jun 2023 06:57:37 GMT</pubDate>
       
       <description>&lt;p&gt;This is a note for Lecture 8, &lt;a href=&quot;https://web.stanford.edu/class/cs106l/index.html&quot;&gt;CS106L&lt;/a&gt;, Spring 2023.&lt;/p&gt;</description>
@@ -610,28 +610,28 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/const/">const</category>
-      
-      <category domain="https://blocklune.github.io/tags/c-c/">C &amp; C++</category>
-      
-      <category domain="https://blocklune.github.io/tags/cs106l/">CS106L</category>
+      <category domain="https://fishg.top/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
       
       
-      <comments>https://blocklune.github.io/posts/4eb7504e.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/const/">const</category>
+      
+      <category domain="https://fishg.top/tags/c-c/">C &amp; C++</category>
+      
+      <category domain="https://fishg.top/tags/cs106l/">CS106L</category>
+      
+      
+      <comments>https://fishg.top/posts/4eb7504e.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Type Safety and std::optional in C++</title>
-      <link>https://blocklune.github.io/posts/ab76f233.html</link>
-      <guid>https://blocklune.github.io/posts/ab76f233.html</guid>
+      <link>https://fishg.top/posts/ab76f233.html</link>
+      <guid>https://fishg.top/posts/ab76f233.html</guid>
       <pubDate>Wed, 31 May 2023 03:35:00 GMT</pubDate>
       
       <description>&lt;p&gt;This is a note for Lecture 14, &lt;a href=&quot;https://web.stanford.edu/class/cs106l/index.html&quot;&gt;CS106L&lt;/a&gt;, Spring 2023.&lt;/p&gt;</description>
@@ -639,26 +639,26 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/c-c/">C/C++</category>
-      
-      <category domain="https://blocklune.github.io/tags/cs106l/">CS106L</category>
+      <category domain="https://fishg.top/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
       
       
-      <comments>https://blocklune.github.io/posts/ab76f233.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/c-c/">C/C++</category>
+      
+      <category domain="https://fishg.top/tags/cs106l/">CS106L</category>
+      
+      
+      <comments>https://fishg.top/posts/ab76f233.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Move Semantics in C++</title>
-      <link>https://blocklune.github.io/posts/d5786049.html</link>
-      <guid>https://blocklune.github.io/posts/d5786049.html</guid>
+      <link>https://fishg.top/posts/d5786049.html</link>
+      <guid>https://fishg.top/posts/d5786049.html</guid>
       <pubDate>Tue, 30 May 2023 14:14:00 GMT</pubDate>
       
       <description>&lt;p&gt;This is a note for Lecture 13, &lt;a href=&quot;https://web.stanford.edu/class/cs106l/index.html&quot;&gt;CS106L&lt;/a&gt;, Spring 2023.&lt;/p&gt;</description>
@@ -666,26 +666,26 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/c-c/">C/C++</category>
-      
-      <category domain="https://blocklune.github.io/tags/cs106l/">CS106L</category>
+      <category domain="https://fishg.top/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
       
       
-      <comments>https://blocklune.github.io/posts/d5786049.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/c-c/">C/C++</category>
+      
+      <category domain="https://fishg.top/tags/cs106l/">CS106L</category>
+      
+      
+      <comments>https://fishg.top/posts/d5786049.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>static_cast and const_cast in C++</title>
-      <link>https://blocklune.github.io/posts/f5746381.html</link>
-      <guid>https://blocklune.github.io/posts/f5746381.html</guid>
+      <link>https://fishg.top/posts/f5746381.html</link>
+      <guid>https://fishg.top/posts/f5746381.html</guid>
       <pubDate>Tue, 30 May 2023 07:44:00 GMT</pubDate>
       
       <description>&lt;p&gt;This is a note for Lecture 8, &lt;a href=&quot;https://web.stanford.edu/class/cs106l/index.html&quot;&gt;CS106L&lt;/a&gt;, Spring 2023.&lt;/p&gt;</description>
@@ -693,28 +693,28 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/c-c/">C/C++</category>
-      
-      <category domain="https://blocklune.github.io/tags/const/">const</category>
-      
-      <category domain="https://blocklune.github.io/tags/cs106l/">CS106L</category>
+      <category domain="https://fishg.top/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
       
       
-      <comments>https://blocklune.github.io/posts/f5746381.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/c-c/">C/C++</category>
+      
+      <category domain="https://fishg.top/tags/const/">const</category>
+      
+      <category domain="https://fishg.top/tags/cs106l/">CS106L</category>
+      
+      
+      <comments>https://fishg.top/posts/f5746381.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Permutations and Combinations in Python (itertools)</title>
-      <link>https://blocklune.github.io/posts/cf2f01b2.html</link>
-      <guid>https://blocklune.github.io/posts/cf2f01b2.html</guid>
+      <link>https://fishg.top/posts/cf2f01b2.html</link>
+      <guid>https://fishg.top/posts/cf2f01b2.html</guid>
       <pubDate>Sun, 28 May 2023 08:42:00 GMT</pubDate>
       
       <description>&lt;p&gt;Extracted from &lt;em&gt;&lt;a href=&quot;https://docs.python.org/3/library/itertools.html&quot;&gt;itertools — Functions creating iterators for efficient looping — Python 3.11.3 documentation&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
@@ -722,26 +722,26 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/python/">Python</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/python/">Python</category>
-      
-      <category domain="https://blocklune.github.io/tags/itertools/">itertools</category>
+      <category domain="https://fishg.top/categories/cs/languages/python/">Python</category>
       
       
-      <comments>https://blocklune.github.io/posts/cf2f01b2.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/python/">Python</category>
+      
+      <category domain="https://fishg.top/tags/itertools/">itertools</category>
+      
+      
+      <comments>https://fishg.top/posts/cf2f01b2.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>My personal summary of Algorithms, Part I on Coursera</title>
-      <link>https://blocklune.github.io/posts/94efd546.html</link>
-      <guid>https://blocklune.github.io/posts/94efd546.html</guid>
+      <link>https://fishg.top/posts/94efd546.html</link>
+      <guid>https://fishg.top/posts/94efd546.html</guid>
       <pubDate>Fri, 12 May 2023 10:27:12 GMT</pubDate>
       
       <description>&lt;p&gt;As the title says, this is my personal summary of &lt;a href=&quot;https://www.coursera.org/learn/algorithms-part1&quot;&gt;Algorithms, Part I&lt;/a&gt; on &lt;a href=&quot;https://www.coursera.org/&quot;&gt;Coursera&lt;/a&gt;.&lt;/p&gt;</description>
@@ -749,26 +749,26 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/algorithms-data-structures/">Algorithms &amp; Data structures</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/coursera/">Coursera</category>
-      
-      <category domain="https://blocklune.github.io/tags/algorithm/">Algorithm</category>
-      
-      <category domain="https://blocklune.github.io/tags/online-course-summary/">Online course summary</category>
+      <category domain="https://fishg.top/categories/cs/algorithms-data-structures/">Algorithms &amp; Data structures</category>
       
       
-      <comments>https://blocklune.github.io/posts/94efd546.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/coursera/">Coursera</category>
+      
+      <category domain="https://fishg.top/tags/algorithm/">Algorithm</category>
+      
+      <category domain="https://fishg.top/tags/online-course-summary/">Online course summary</category>
+      
+      
+      <comments>https://fishg.top/posts/94efd546.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Installing Ubuntu</title>
-      <link>https://blocklune.github.io/posts/ca281680.html</link>
-      <guid>https://blocklune.github.io/posts/ca281680.html</guid>
+      <link>https://fishg.top/posts/ca281680.html</link>
+      <guid>https://fishg.top/posts/ca281680.html</guid>
       <pubDate>Thu, 27 Apr 2023 15:41:50 GMT</pubDate>
       
       <description>&lt;p&gt;This is NOT a tutorial of installing Ubuntu. Just write down some issues I met during my installation.&lt;/p&gt;</description>
@@ -776,20 +776,20 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
       
       
       
-      <comments>https://blocklune.github.io/posts/ca281680.html#disqus_thread</comments>
+      <comments>https://fishg.top/posts/ca281680.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>My &quot;.vimrc&quot;</title>
-      <link>https://blocklune.github.io/posts/96f7ff9f.html</link>
-      <guid>https://blocklune.github.io/posts/96f7ff9f.html</guid>
+      <link>https://fishg.top/posts/96f7ff9f.html</link>
+      <guid>https://fishg.top/posts/96f7ff9f.html</guid>
       <pubDate>Sat, 22 Apr 2023 02:27:09 GMT</pubDate>
       
       <description>&lt;p&gt;There are a huge amount of options in Vim. It enables us to customize our own Vim as our wishes.&lt;/p&gt;</description>
@@ -797,22 +797,22 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/vim/">Vim</category>
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
       
       
-      <comments>https://blocklune.github.io/posts/96f7ff9f.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/vim/">Vim</category>
+      
+      
+      <comments>https://fishg.top/posts/96f7ff9f.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Set up a blog with Hexo</title>
-      <link>https://blocklune.github.io/posts/4ef0ac98.html</link>
-      <guid>https://blocklune.github.io/posts/4ef0ac98.html</guid>
+      <link>https://fishg.top/posts/4ef0ac98.html</link>
+      <guid>https://fishg.top/posts/4ef0ac98.html</guid>
       <pubDate>Sat, 15 Apr 2023 05:16:06 GMT</pubDate>
       
       <description>&lt;p&gt;This is a simple record of my other trial to set up a blog with Hexo. I have built one on GitHub Page before, using Hexo with Icarus theme. This time, I want to try something else. I also cleaned my old blog and selectively migrated some old posts here.&lt;/p&gt;</description>
@@ -820,24 +820,24 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/web/">Web</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/web/">Web</category>
-      
-      <category domain="https://blocklune.github.io/tags/hexo/">Hexo</category>
+      <category domain="https://fishg.top/categories/cs/web/">Web</category>
       
       
-      <comments>https://blocklune.github.io/posts/4ef0ac98.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/web/">Web</category>
+      
+      <category domain="https://fishg.top/tags/hexo/">Hexo</category>
+      
+      
+      <comments>https://fishg.top/posts/4ef0ac98.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Uses std::cin.ignore() to keep the user typing until the input meets the requirements</title>
-      <link>https://blocklune.github.io/posts/f96b3358.html</link>
-      <guid>https://blocklune.github.io/posts/f96b3358.html</guid>
+      <link>https://fishg.top/posts/f96b3358.html</link>
+      <guid>https://fishg.top/posts/f96b3358.html</guid>
       <pubDate>Sat, 25 Mar 2023 12:12:40 GMT</pubDate>
       
       <description>&lt;p&gt;I used to control users’ input by making the input a string and process it later. But today, my friend posed this question to me: Can we control input without a char array or string class?&lt;/p&gt;</description>
@@ -845,24 +845,24 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/c-c/">C/C++</category>
+      <category domain="https://fishg.top/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
       
       
-      <comments>https://blocklune.github.io/posts/f96b3358.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/c-c/">C/C++</category>
+      
+      
+      <comments>https://fishg.top/posts/f96b3358.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>The const and constexpr in C++ (REMAKE)</title>
-      <link>https://blocklune.github.io/posts/3358bcc1.html</link>
-      <guid>https://blocklune.github.io/posts/3358bcc1.html</guid>
+      <link>https://fishg.top/posts/3358bcc1.html</link>
+      <guid>https://fishg.top/posts/3358bcc1.html</guid>
       <pubDate>Fri, 24 Mar 2023 13:21:42 GMT</pubDate>
       
       <description>&lt;p&gt;I have written a post about &lt;code&gt;const&lt;/code&gt; in C++ in Chinese before, but &lt;a href=&quot;https://blocklune.github.io/posts/7ec6ba38.html&quot;&gt;it&lt;/a&gt; was too verbose and unclear. :( So, I decided to rewrite it.&lt;/p&gt;</description>
@@ -870,26 +870,26 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/c-c/">C/C++</category>
-      
-      <category domain="https://blocklune.github.io/tags/const/">const</category>
+      <category domain="https://fishg.top/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
       
       
-      <comments>https://blocklune.github.io/posts/3358bcc1.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/c-c/">C/C++</category>
+      
+      <category domain="https://fishg.top/tags/const/">const</category>
+      
+      
+      <comments>https://fishg.top/posts/3358bcc1.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>The chmod command in Linux</title>
-      <link>https://blocklune.github.io/posts/a9dc5c1e.html</link>
-      <guid>https://blocklune.github.io/posts/a9dc5c1e.html</guid>
+      <link>https://fishg.top/posts/a9dc5c1e.html</link>
+      <guid>https://fishg.top/posts/a9dc5c1e.html</guid>
       <pubDate>Thu, 23 Mar 2023 14:27:08 GMT</pubDate>
       
       <description>&lt;p&gt;I accidentally ran a wrong &lt;code&gt;chmod&lt;/code&gt; command in my Linux, and it messed up everything! I hate the permission management in Linux. :|&lt;/p&gt;</description>
@@ -897,24 +897,24 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/linux/">Linux</category>
-      
-      <category domain="https://blocklune.github.io/tags/chmod/">chmod</category>
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
       
       
-      <comments>https://blocklune.github.io/posts/a9dc5c1e.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/linux/">Linux</category>
+      
+      <category domain="https://fishg.top/tags/chmod/">chmod</category>
+      
+      
+      <comments>https://fishg.top/posts/a9dc5c1e.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Useful packages in Java</title>
-      <link>https://blocklune.github.io/posts/a4746c9.html</link>
-      <guid>https://blocklune.github.io/posts/a4746c9.html</guid>
+      <link>https://fishg.top/posts/a4746c9.html</link>
+      <guid>https://fishg.top/posts/a4746c9.html</guid>
       <pubDate>Wed, 15 Mar 2023 14:46:17 GMT</pubDate>
       
       <description>&lt;p&gt;A simple conclusion of some useful packages in java.&lt;/p&gt;</description>
@@ -922,24 +922,24 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/java/">Java</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/java/">Java</category>
+      <category domain="https://fishg.top/categories/cs/languages/java/">Java</category>
       
       
-      <comments>https://blocklune.github.io/posts/a4746c9.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/java/">Java</category>
+      
+      
+      <comments>https://fishg.top/posts/a4746c9.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Replace cat with bat</title>
-      <link>https://blocklune.github.io/posts/e7bc2e88.html</link>
-      <guid>https://blocklune.github.io/posts/e7bc2e88.html</guid>
+      <link>https://fishg.top/posts/e7bc2e88.html</link>
+      <guid>https://fishg.top/posts/e7bc2e88.html</guid>
       <pubDate>Sun, 12 Mar 2023 02:28:47 GMT</pubDate>
       
       <description>&lt;p&gt;When using Linux, I often use &lt;code&gt;cat&lt;/code&gt; to browse some short codes. But it doesn’t support syntax highlighting originally. So, I found one of its replacements: &lt;code&gt;bat&lt;/code&gt;.&lt;/p&gt;</description>
@@ -947,26 +947,26 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/linux/">Linux</category>
-      
-      <category domain="https://blocklune.github.io/tags/cat/">cat</category>
-      
-      <category domain="https://blocklune.github.io/tags/bat/">bat</category>
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
       
       
-      <comments>https://blocklune.github.io/posts/e7bc2e88.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/linux/">Linux</category>
+      
+      <category domain="https://fishg.top/tags/cat/">cat</category>
+      
+      <category domain="https://fishg.top/tags/bat/">bat</category>
+      
+      
+      <comments>https://fishg.top/posts/e7bc2e88.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Simple Git Tutorial</title>
-      <link>https://blocklune.github.io/posts/9363e311.html</link>
-      <guid>https://blocklune.github.io/posts/9363e311.html</guid>
+      <link>https://fishg.top/posts/9363e311.html</link>
+      <guid>https://fishg.top/posts/9363e311.html</guid>
       <pubDate>Sat, 11 Mar 2023 09:55:55 GMT</pubDate>
       
       <description>&lt;p&gt;This is a simple tutorial of Git, also including some info about GitHub.&lt;/p&gt;</description>
@@ -974,26 +974,26 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/version-control/">Version Control</category>
-      
-      <category domain="https://blocklune.github.io/tags/git/">Git</category>
-      
-      <category domain="https://blocklune.github.io/tags/github/">GitHub</category>
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
       
       
-      <comments>https://blocklune.github.io/posts/9363e311.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/version-control/">Version Control</category>
+      
+      <category domain="https://fishg.top/tags/git/">Git</category>
+      
+      <category domain="https://fishg.top/tags/github/">GitHub</category>
+      
+      
+      <comments>https://fishg.top/posts/9363e311.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Package managers in Linux (To be continued)</title>
-      <link>https://blocklune.github.io/posts/4ee6ac78.html</link>
-      <guid>https://blocklune.github.io/posts/4ee6ac78.html</guid>
+      <link>https://fishg.top/posts/4ee6ac78.html</link>
+      <guid>https://fishg.top/posts/4ee6ac78.html</guid>
       <pubDate>Sat, 11 Mar 2023 06:23:18 GMT</pubDate>
       
       <description>&lt;p&gt;This post tries to simply introduce some package managers and their basic usage.&lt;/p&gt;</description>
@@ -1001,32 +1001,32 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/linux/">Linux</category>
-      
-      <category domain="https://blocklune.github.io/tags/package-manager/">Package manager</category>
-      
-      <category domain="https://blocklune.github.io/tags/archlinux/">ArchLinux</category>
-      
-      <category domain="https://blocklune.github.io/tags/ubuntu/">Ubuntu</category>
-      
-      <category domain="https://blocklune.github.io/tags/pacman/">pacman</category>
-      
-      <category domain="https://blocklune.github.io/tags/apt/">APT</category>
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
       
       
-      <comments>https://blocklune.github.io/posts/4ee6ac78.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/linux/">Linux</category>
+      
+      <category domain="https://fishg.top/tags/package-manager/">Package manager</category>
+      
+      <category domain="https://fishg.top/tags/archlinux/">ArchLinux</category>
+      
+      <category domain="https://fishg.top/tags/ubuntu/">Ubuntu</category>
+      
+      <category domain="https://fishg.top/tags/pacman/">pacman</category>
+      
+      <category domain="https://fishg.top/tags/apt/">APT</category>
+      
+      
+      <comments>https://fishg.top/posts/4ee6ac78.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>VS Code 中设置显示最大列数边界线</title>
-      <link>https://blocklune.github.io/posts/bb929dc9.html</link>
-      <guid>https://blocklune.github.io/posts/bb929dc9.html</guid>
+      <link>https://fishg.top/posts/bb929dc9.html</link>
+      <guid>https://fishg.top/posts/bb929dc9.html</guid>
       <pubDate>Fri, 13 Jan 2023 02:30:04 GMT</pubDate>
       
       <description>&lt;p&gt;很多时候我们会避免一行代码过长，常见的限制有 80 字符、120 个字符等。我希望能在 VS Code 中显示一条边界线来提醒我已经到达这个限制了，需要换行。下边是设置的方法。&lt;/p&gt;</description>
@@ -1034,22 +1034,22 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/vs-code/">VS Code</category>
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
       
       
-      <comments>https://blocklune.github.io/posts/bb929dc9.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/vs-code/">VS Code</category>
+      
+      
+      <comments>https://fishg.top/posts/bb929dc9.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>C 语言文件操作</title>
-      <link>https://blocklune.github.io/posts/914118ff.html</link>
-      <guid>https://blocklune.github.io/posts/914118ff.html</guid>
+      <link>https://fishg.top/posts/914118ff.html</link>
+      <guid>https://fishg.top/posts/914118ff.html</guid>
       <pubDate>Thu, 12 Jan 2023 06:53:51 GMT</pubDate>
       
       <description>&lt;p&gt;简单记录一下 C 语言的文件操作的相关内容。&lt;/p&gt;</description>
@@ -1057,26 +1057,26 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/c-c/">C/C++</category>
-      
-      <category domain="https://blocklune.github.io/tags/file/">File</category>
+      <category domain="https://fishg.top/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
       
       
-      <comments>https://blocklune.github.io/posts/914118ff.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/c-c/">C/C++</category>
+      
+      <category domain="https://fishg.top/tags/file/">File</category>
+      
+      
+      <comments>https://fishg.top/posts/914118ff.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>error: summary string parsing error 错误解决方法</title>
-      <link>https://blocklune.github.io/posts/78dc947f.html</link>
-      <guid>https://blocklune.github.io/posts/78dc947f.html</guid>
+      <link>https://fishg.top/posts/78dc947f.html</link>
+      <guid>https://fishg.top/posts/78dc947f.html</guid>
       <pubDate>Wed, 11 Jan 2023 04:34:16 GMT</pubDate>
       
       <description>&lt;p&gt;直接先说解决方法：在使用 clang 工具链进行编译的时候，添加编译选项 &lt;code&gt;-fstandalone-debug&lt;/code&gt;。&lt;/p&gt;</description>
@@ -1084,34 +1084,34 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/issue/">Issue</category>
-      
-      <category domain="https://blocklune.github.io/tags/solved/">Solved</category>
-      
-      <category domain="https://blocklune.github.io/tags/debug/">Debug</category>
-      
-      <category domain="https://blocklune.github.io/tags/lldb/">LLDB</category>
-      
-      <category domain="https://blocklune.github.io/tags/llvm/">LLVM</category>
-      
-      <category domain="https://blocklune.github.io/tags/clang/">Clang</category>
+      <category domain="https://fishg.top/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
       
       
-      <comments>https://blocklune.github.io/posts/78dc947f.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/issue/">Issue</category>
+      
+      <category domain="https://fishg.top/tags/solved/">Solved</category>
+      
+      <category domain="https://fishg.top/tags/debug/">Debug</category>
+      
+      <category domain="https://fishg.top/tags/lldb/">LLDB</category>
+      
+      <category domain="https://fishg.top/tags/llvm/">LLVM</category>
+      
+      <category domain="https://fishg.top/tags/clang/">Clang</category>
+      
+      
+      <comments>https://fishg.top/posts/78dc947f.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Makefile 简单笔记</title>
-      <link>https://blocklune.github.io/posts/b5f1b38d.html</link>
-      <guid>https://blocklune.github.io/posts/b5f1b38d.html</guid>
+      <link>https://fishg.top/posts/b5f1b38d.html</link>
+      <guid>https://fishg.top/posts/b5f1b38d.html</guid>
       <pubDate>Sun, 08 Jan 2023 02:52:48 GMT</pubDate>
       
       <description>&lt;p&gt;这是一篇笔记，原视频是 &lt;a href=&quot;https://space.bilibili.com/519963684&quot;&gt;@于仕琪&lt;/a&gt; 老师的 &lt;a href=&quot;https://www.bilibili.com/video/BV188411L7d2&quot;&gt;《Makefile 20 分钟入门，简简单单，展示如何使用 Makefile 管理和编译 C++ 代码》&lt;/a&gt;。&lt;/p&gt;</description>
@@ -1119,26 +1119,26 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/makefile/">Makefile</category>
-      
-      <category domain="https://blocklune.github.io/tags/gnu-make/">GNU Make</category>
-      
-      <category domain="https://blocklune.github.io/tags/compiling/">Compiling</category>
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
       
       
-      <comments>https://blocklune.github.io/posts/b5f1b38d.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/makefile/">Makefile</category>
+      
+      <category domain="https://fishg.top/tags/gnu-make/">GNU Make</category>
+      
+      <category domain="https://fishg.top/tags/compiling/">Compiling</category>
+      
+      
+      <comments>https://fishg.top/posts/b5f1b38d.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>C 标准库中 qsort 和 C++ STL 中 sort 的用法</title>
-      <link>https://blocklune.github.io/posts/eab95d6e.html</link>
-      <guid>https://blocklune.github.io/posts/eab95d6e.html</guid>
+      <link>https://fishg.top/posts/eab95d6e.html</link>
+      <guid>https://fishg.top/posts/eab95d6e.html</guid>
       <pubDate>Thu, 08 Dec 2022 13:41:18 GMT</pubDate>
       
       <description>&lt;p&gt;虽然到现在还是不能完全理解 &lt;code&gt;qsort&lt;/code&gt; 和 &lt;code&gt;sort&lt;/code&gt; 这两个函数的底层原理，但至少，先学会如何使用吧。&lt;/p&gt;</description>
@@ -1146,28 +1146,28 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/c-c/">C/C++</category>
-      
-      <category domain="https://blocklune.github.io/tags/sorting/">Sorting</category>
-      
-      <category domain="https://blocklune.github.io/tags/stl/">STL</category>
+      <category domain="https://fishg.top/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
       
       
-      <comments>https://blocklune.github.io/posts/eab95d6e.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/c-c/">C/C++</category>
+      
+      <category domain="https://fishg.top/tags/sorting/">Sorting</category>
+      
+      <category domain="https://fishg.top/tags/stl/">STL</category>
+      
+      
+      <comments>https://fishg.top/posts/eab95d6e.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>求解最大公约数的四种算法</title>
-      <link>https://blocklune.github.io/posts/504f038d.html</link>
-      <guid>https://blocklune.github.io/posts/504f038d.html</guid>
+      <link>https://fishg.top/posts/504f038d.html</link>
+      <guid>https://fishg.top/posts/504f038d.html</guid>
       <pubDate>Sun, 04 Dec 2022 11:37:17 GMT</pubDate>
       
       <description>&lt;p&gt;这是一次计算机导论课的作业。本来对于最大公约数的求解算法，我就只知道一个&lt;strong&gt;辗转相除法&lt;/strong&gt;。原来，其实还有别的一些 …&lt;/p&gt;</description>
@@ -1175,24 +1175,24 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/algorithms-data-structures/">Algorithms &amp; Data structures</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/algorithm/">Algorithm</category>
-      
-      <category domain="https://blocklune.github.io/tags/gcd/">GCD</category>
+      <category domain="https://fishg.top/categories/cs/algorithms-data-structures/">Algorithms &amp; Data structures</category>
       
       
-      <comments>https://blocklune.github.io/posts/504f038d.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/algorithm/">Algorithm</category>
+      
+      <category domain="https://fishg.top/tags/gcd/">GCD</category>
+      
+      
+      <comments>https://fishg.top/posts/504f038d.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>初探深度优先搜索（DFS）和广度优先搜索（BFS）</title>
-      <link>https://blocklune.github.io/posts/a336c1b8.html</link>
-      <guid>https://blocklune.github.io/posts/a336c1b8.html</guid>
+      <link>https://fishg.top/posts/a336c1b8.html</link>
+      <guid>https://fishg.top/posts/a336c1b8.html</guid>
       <pubDate>Tue, 22 Nov 2022 06:25:21 GMT</pubDate>
       
       <description>&lt;p&gt;&lt;strong&gt;深度优先搜索&lt;/strong&gt;（DFS，Depth First Search）和&lt;strong&gt;广度优先搜索&lt;/strong&gt;（BFS，Breadth First Search），我从来没弄明白过。是时候努力去好好理解一下了。&lt;/p&gt;</description>
@@ -1200,28 +1200,28 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/algorithms-data-structures/">Algorithms &amp; Data structures</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/algorithm/">Algorithm</category>
-      
-      <category domain="https://blocklune.github.io/tags/bfs/">BFS</category>
-      
-      <category domain="https://blocklune.github.io/tags/dfs/">DFS</category>
-      
-      <category domain="https://blocklune.github.io/tags/searching/">Searching</category>
+      <category domain="https://fishg.top/categories/cs/algorithms-data-structures/">Algorithms &amp; Data structures</category>
       
       
-      <comments>https://blocklune.github.io/posts/a336c1b8.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/algorithm/">Algorithm</category>
+      
+      <category domain="https://fishg.top/tags/bfs/">BFS</category>
+      
+      <category domain="https://fishg.top/tags/dfs/">DFS</category>
+      
+      <category domain="https://fishg.top/tags/searching/">Searching</category>
+      
+      
+      <comments>https://fishg.top/posts/a336c1b8.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>为何说三进制是效率最高的进制？以及其他一些与三进制有关的东西...</title>
-      <link>https://blocklune.github.io/posts/1d122915.html</link>
-      <guid>https://blocklune.github.io/posts/1d122915.html</guid>
+      <link>https://fishg.top/posts/1d122915.html</link>
+      <guid>https://fishg.top/posts/1d122915.html</guid>
       <pubDate>Sun, 20 Nov 2022 11:26:03 GMT</pubDate>
       
       <description>&lt;p&gt;这是一次计算机导论的作业。老师提供了很多课题供我们选择，我选择的是 “有人说三进制是被证明理论上效率最高的进制，请广泛搜集相关资料，撰写关于三进制的科普报告，或者对其他进制进行对比和评价。&lt;/p&gt;</description>
@@ -1229,20 +1229,20 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/mathematics/">Mathematics</category>
+      <category domain="https://fishg.top/categories/mathematics/">Mathematics</category>
       
       
-      <category domain="https://blocklune.github.io/tags/mathematics/">Mathematics</category>
+      <category domain="https://fishg.top/tags/mathematics/">Mathematics</category>
       
       
-      <comments>https://blocklune.github.io/posts/1d122915.html#disqus_thread</comments>
+      <comments>https://fishg.top/posts/1d122915.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>C++ const 用法汇总</title>
-      <link>https://blocklune.github.io/posts/7ec6ba38.html</link>
-      <guid>https://blocklune.github.io/posts/7ec6ba38.html</guid>
+      <link>https://fishg.top/posts/7ec6ba38.html</link>
+      <guid>https://fishg.top/posts/7ec6ba38.html</guid>
       <pubDate>Thu, 17 Nov 2022 12:05:00 GMT</pubDate>
       
       <description>&lt;p&gt;最开始只是用 const 来定义常量，学到了指针传参的时候又知道了用 const 来防止一些值的修改，学到类的时候又看到非静态成员函数后边加个 const 来干嘛干嘛，然后么又听说什么顶层 const、底层 const… 真是越学越迷糊了，赶紧做一波整理。&lt;/p&gt;</description>
@@ -1250,26 +1250,26 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/c-c/">C/C++</category>
-      
-      <category domain="https://blocklune.github.io/tags/const/">const</category>
+      <category domain="https://fishg.top/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
       
       
-      <comments>https://blocklune.github.io/posts/7ec6ba38.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/c-c/">C/C++</category>
+      
+      <category domain="https://fishg.top/tags/const/">const</category>
+      
+      
+      <comments>https://fishg.top/posts/7ec6ba38.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>二维数组到底是啥啊...</title>
-      <link>https://blocklune.github.io/posts/57fd79a.html</link>
-      <guid>https://blocklune.github.io/posts/57fd79a.html</guid>
+      <link>https://fishg.top/posts/57fd79a.html</link>
+      <guid>https://fishg.top/posts/57fd79a.html</guid>
       <pubDate>Wed, 16 Nov 2022 12:28:15 GMT</pubDate>
       
       <description>&lt;p&gt;一维数组还是比较容易理解的，但是二维数组，我始终没弄清楚这玩意儿是按照什么规则从二维的样子转成一维然后存起来的，也因此常常犯下下标写反了的错误。我觉得是时候详细地理一理这玩意儿到底是个啥了…&lt;/p&gt;</description>
@@ -1277,28 +1277,28 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/c-c/">C/C++</category>
-      
-      <category domain="https://blocklune.github.io/tags/pointer/">Pointer</category>
-      
-      <category domain="https://blocklune.github.io/tags/array/">Array</category>
+      <category domain="https://fishg.top/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
       
       
-      <comments>https://blocklune.github.io/posts/57fd79a.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/c-c/">C/C++</category>
+      
+      <category domain="https://fishg.top/tags/pointer/">Pointer</category>
+      
+      <category domain="https://fishg.top/tags/array/">Array</category>
+      
+      
+      <comments>https://fishg.top/posts/57fd79a.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>当形参、实参是指针变量...</title>
-      <link>https://blocklune.github.io/posts/1ef1e20b.html</link>
-      <guid>https://blocklune.github.io/posts/1ef1e20b.html</guid>
+      <link>https://fishg.top/posts/1ef1e20b.html</link>
+      <guid>https://fishg.top/posts/1ef1e20b.html</guid>
       <pubDate>Wed, 16 Nov 2022 06:46:44 GMT</pubDate>
       
       <description>&lt;p&gt;接&lt;a href=&quot;https://blocklune.github.io/posts/50c16b14.html&quot;&gt;《一个有关指针传参的问题》&lt;/a&gt;，再理一理这里边的一些问题…&lt;/p&gt;</description>
@@ -1306,26 +1306,26 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/c-c/">C/C++</category>
-      
-      <category domain="https://blocklune.github.io/tags/pointer/">Pointer</category>
+      <category domain="https://fishg.top/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
       
       
-      <comments>https://blocklune.github.io/posts/1ef1e20b.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/c-c/">C/C++</category>
+      
+      <category domain="https://fishg.top/tags/pointer/">Pointer</category>
+      
+      
+      <comments>https://fishg.top/posts/1ef1e20b.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>C 语言中使用变量输出小数点位数</title>
-      <link>https://blocklune.github.io/posts/45e2d42.html</link>
-      <guid>https://blocklune.github.io/posts/45e2d42.html</guid>
+      <link>https://fishg.top/posts/45e2d42.html</link>
+      <guid>https://fishg.top/posts/45e2d42.html</guid>
       <pubDate>Sat, 05 Nov 2022 08:15:25 GMT</pubDate>
       
       <description>&lt;p&gt;这事儿要从一周前讲起，有人在群里问了这么一道题，要求用 C 实现：&lt;/p&gt;</description>
@@ -1333,24 +1333,24 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/c-c/">C/C++</category>
+      <category domain="https://fishg.top/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
       
       
-      <comments>https://blocklune.github.io/posts/45e2d42.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/c-c/">C/C++</category>
+      
+      
+      <comments>https://fishg.top/posts/45e2d42.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>值传递、指针传递、引用传递</title>
-      <link>https://blocklune.github.io/posts/c8a20144.html</link>
-      <guid>https://blocklune.github.io/posts/c8a20144.html</guid>
+      <link>https://fishg.top/posts/c8a20144.html</link>
+      <guid>https://fishg.top/posts/c8a20144.html</guid>
       <pubDate>Sat, 05 Nov 2022 06:48:31 GMT</pubDate>
       
       <description>&lt;p&gt;接上文&lt;a href=&quot;https://blocklune.github.io/posts/50c16b14.html&quot;&gt;《一个有关指针传参的问题》&lt;/a&gt;，打算结合一些简单的例子系统地梳理一下 C/C++ 中的值传递、指针传递和 C++ 中特有的 引用传递。&lt;/p&gt;</description>
@@ -1358,30 +1358,30 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/c-c/">C/C++</category>
-      
-      <category domain="https://blocklune.github.io/tags/pass-by-pointer/">pass by pointer</category>
-      
-      <category domain="https://blocklune.github.io/tags/pass-by-value/">pass by value</category>
-      
-      <category domain="https://blocklune.github.io/tags/pass-by-reference/">pass by reference</category>
+      <category domain="https://fishg.top/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
       
       
-      <comments>https://blocklune.github.io/posts/c8a20144.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/c-c/">C/C++</category>
+      
+      <category domain="https://fishg.top/tags/pass-by-pointer/">pass by pointer</category>
+      
+      <category domain="https://fishg.top/tags/pass-by-value/">pass by value</category>
+      
+      <category domain="https://fishg.top/tags/pass-by-reference/">pass by reference</category>
+      
+      
+      <comments>https://fishg.top/posts/c8a20144.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>一个有关指针传参的问题</title>
-      <link>https://blocklune.github.io/posts/50c16b14.html</link>
-      <guid>https://blocklune.github.io/posts/50c16b14.html</guid>
+      <link>https://fishg.top/posts/50c16b14.html</link>
+      <guid>https://fishg.top/posts/50c16b14.html</guid>
       <pubDate>Thu, 03 Nov 2022 12:52:38 GMT</pubDate>
       
       <description>&lt;p&gt;这是我学习指针过程中遇到的一个问题，问过大佬才似乎懂了点，在此记录。顺便记下一句大佬说的话：&lt;/p&gt;
@@ -1392,34 +1392,34 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/c-c/">C/C++</category>
-      
-      <category domain="https://blocklune.github.io/tags/issue/">Issue</category>
-      
-      <category domain="https://blocklune.github.io/tags/solved/">Solved</category>
-      
-      <category domain="https://blocklune.github.io/tags/pointer/">Pointer</category>
-      
-      <category domain="https://blocklune.github.io/tags/pass-by-pointer/">pass by pointer</category>
-      
-      <category domain="https://blocklune.github.io/tags/pass-by-value/">pass by value</category>
+      <category domain="https://fishg.top/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
       
       
-      <comments>https://blocklune.github.io/posts/50c16b14.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/c-c/">C/C++</category>
+      
+      <category domain="https://fishg.top/tags/issue/">Issue</category>
+      
+      <category domain="https://fishg.top/tags/solved/">Solved</category>
+      
+      <category domain="https://fishg.top/tags/pointer/">Pointer</category>
+      
+      <category domain="https://fishg.top/tags/pass-by-pointer/">pass by pointer</category>
+      
+      <category domain="https://fishg.top/tags/pass-by-value/">pass by value</category>
+      
+      
+      <comments>https://fishg.top/posts/50c16b14.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>C/C++ 中赋值语句的返回值问题</title>
-      <link>https://blocklune.github.io/posts/9693ba6.html</link>
-      <guid>https://blocklune.github.io/posts/9693ba6.html</guid>
+      <link>https://fishg.top/posts/9693ba6.html</link>
+      <guid>https://fishg.top/posts/9693ba6.html</guid>
       <pubDate>Thu, 27 Oct 2022 11:52:56 GMT</pubDate>
       
       <description>&lt;p&gt;我曾经一直以为 C/C++ 中赋值语句的返回值不是 0 就是 1 —— 成功执行赋值操作返回 1，没有成功执行就返回 0。直到今天课上的一个例子，才让我知道，原来&lt;strong&gt;赋值语句的返回值就是赋的值的大小&lt;/strong&gt;！&lt;/p&gt;</description>
@@ -1427,24 +1427,24 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/c-c/">C/C++</category>
+      <category domain="https://fishg.top/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
       
       
-      <comments>https://blocklune.github.io/posts/9693ba6.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/c-c/">C/C++</category>
+      
+      
+      <comments>https://fishg.top/posts/9693ba6.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>C/C++ 格式化输入输出汇总</title>
-      <link>https://blocklune.github.io/posts/b4e7acd7.html</link>
-      <guid>https://blocklune.github.io/posts/b4e7acd7.html</guid>
+      <link>https://fishg.top/posts/b4e7acd7.html</link>
+      <guid>https://fishg.top/posts/b4e7acd7.html</guid>
       <pubDate>Wed, 19 Oct 2022 12:19:14 GMT</pubDate>
       
       <description>&lt;p&gt;本文汇总一下 C 语言 &lt;code&gt;scanf&lt;/code&gt; 和 &lt;code&gt;printf&lt;/code&gt; 的格式控制方法以及 C++ 的 &lt;code&gt;&amp;lt;iomanip&amp;gt;&lt;/code&gt; 库。&lt;/p&gt;</description>
@@ -1452,26 +1452,26 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/c-c/">C/C++</category>
-      
-      <category domain="https://blocklune.github.io/tags/iomanip/">iomanip</category>
+      <category domain="https://fishg.top/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
       
       
-      <comments>https://blocklune.github.io/posts/b4e7acd7.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/c-c/">C/C++</category>
+      
+      <category domain="https://fishg.top/tags/iomanip/">iomanip</category>
+      
+      
+      <comments>https://fishg.top/posts/b4e7acd7.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>挖老婆矿！—— NovelAI 初试</title>
-      <link>https://blocklune.github.io/posts/f17b3e8b.html</link>
-      <guid>https://blocklune.github.io/posts/f17b3e8b.html</guid>
+      <link>https://fishg.top/posts/f17b3e8b.html</link>
+      <guid>https://fishg.top/posts/f17b3e8b.html</guid>
       <pubDate>Sat, 15 Oct 2022 12:36:02 GMT</pubDate>
       
       <description>&lt;p&gt;最近一段时间，感觉突然之间，就有很多很多将现实图片二次元化啊，按照每句歌词生成一副画作啊的 AI 绘画应用的图文视频出现。和室友聊天还说是不是最近一段时间 AI 技术突破什么瓶颈突飞猛进了。后来才知道，原来是 NovelAI 泄露了… 这样一来，本地部署方便了起来，于是整了一个玩玩。由于跑 AI 嘛，GPU 比较呼啸，跟挖矿一样，我就戏称我这是在 “挖老婆矿” 了。&lt;/p&gt;</description>
@@ -1479,24 +1479,24 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/ai/">AI</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/ai/">AI</category>
-      
-      <category domain="https://blocklune.github.io/tags/novelai/">NovelAI</category>
+      <category domain="https://fishg.top/categories/cs/ai/">AI</category>
       
       
-      <comments>https://blocklune.github.io/posts/f17b3e8b.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/ai/">AI</category>
+      
+      <category domain="https://fishg.top/tags/novelai/">NovelAI</category>
+      
+      
+      <comments>https://fishg.top/posts/f17b3e8b.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>VS Code 中文乱码问题</title>
-      <link>https://blocklune.github.io/posts/ca05bed5.html</link>
-      <guid>https://blocklune.github.io/posts/ca05bed5.html</guid>
+      <link>https://fishg.top/posts/ca05bed5.html</link>
+      <guid>https://fishg.top/posts/ca05bed5.html</guid>
       <pubDate>Thu, 13 Oct 2022 11:33:49 GMT</pubDate>
       
       <description>&lt;p&gt;&lt;strong&gt;2023 年 1 月 12 日更新：&lt;/strong&gt; 找到了方便地改变 Windows 中终端默认编码的方法，所以原来的改变 C/C++ 文件默认编码的方法可以淘汰了。&lt;/p&gt;</description>
@@ -1504,24 +1504,24 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/c-c/">C/C++</category>
-      
-      <category domain="https://blocklune.github.io/tags/vs-code/">VS Code</category>
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
       
       
-      <comments>https://blocklune.github.io/posts/ca05bed5.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/c-c/">C/C++</category>
+      
+      <category domain="https://fishg.top/tags/vs-code/">VS Code</category>
+      
+      
+      <comments>https://fishg.top/posts/ca05bed5.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>C 语言中与 (&amp;&amp;) 和或 (||) 运算符的短路运算</title>
-      <link>https://blocklune.github.io/posts/13d09bbb.html</link>
-      <guid>https://blocklune.github.io/posts/13d09bbb.html</guid>
+      <link>https://fishg.top/posts/13d09bbb.html</link>
+      <guid>https://fishg.top/posts/13d09bbb.html</guid>
       <pubDate>Tue, 11 Oct 2022 13:23:55 GMT</pubDate>
       
       <description>&lt;p&gt;此篇笔记来源于下边的这个题目。&lt;br&gt;&lt;img data-src=&quot;https://s1.ax1x.com/2022/10/12/xaK5c9.png&quot;&gt;&lt;/p&gt;</description>
@@ -1529,24 +1529,24 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/c-c/">C/C++</category>
+      <category domain="https://fishg.top/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
       
       
-      <comments>https://blocklune.github.io/posts/13d09bbb.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/c-c/">C/C++</category>
+      
+      
+      <comments>https://fishg.top/posts/13d09bbb.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>补记一个用 C++ 实现的 2048 小游戏</title>
-      <link>https://blocklune.github.io/posts/10d14c30.html</link>
-      <guid>https://blocklune.github.io/posts/10d14c30.html</guid>
+      <link>https://fishg.top/posts/10d14c30.html</link>
+      <guid>https://fishg.top/posts/10d14c30.html</guid>
       <pubDate>Thu, 06 Oct 2022 04:07:45 GMT</pubDate>
       
       <description>&lt;p&gt;校科协的加入有条件，面试前一步是笔试。免去笔试的方法也不是没有，可以做免试题。看了各个组的免试题，发现都好难好难，只有前端组的 2048 敢去尝试尝试。但我有没怎么学过 JS，便想着先用 C++ 实现一下逻辑，再把代码改过去。&lt;/p&gt;</description>
@@ -1554,26 +1554,26 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/c-c/">C/C++</category>
-      
-      <category domain="https://blocklune.github.io/tags/game/">Game</category>
+      <category domain="https://fishg.top/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
       
       
-      <comments>https://blocklune.github.io/posts/10d14c30.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/c-c/">C/C++</category>
+      
+      <category domain="https://fishg.top/tags/game/">Game</category>
+      
+      
+      <comments>https://fishg.top/posts/10d14c30.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>C++ 中 cin 与 cout 的转进制输入输出</title>
-      <link>https://blocklune.github.io/posts/9e863176.html</link>
-      <guid>https://blocklune.github.io/posts/9e863176.html</guid>
+      <link>https://fishg.top/posts/9e863176.html</link>
+      <guid>https://fishg.top/posts/9e863176.html</guid>
       <pubDate>Thu, 29 Sep 2022 09:30:25 GMT</pubDate>
       
       <description>&lt;p&gt;笔者的朋友有道输入八进制输出十进制的题目，他是使用数学方法实现的。笔者隐隐约约记得好像 cin 和 cout 有控制输入输出数字进制的方法，查找了一些资料，做一下笔记。&lt;/p&gt;</description>
@@ -1581,24 +1581,24 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/">Languages</category>
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/c-c/">C/C++</category>
+      <category domain="https://fishg.top/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
       
       
-      <comments>https://blocklune.github.io/posts/9e863176.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/c-c/">C/C++</category>
+      
+      
+      <comments>https://fishg.top/posts/9e863176.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>VS Code 的安装与配置基础 C/C++ 开发环境</title>
-      <link>https://blocklune.github.io/posts/a7a0ce82.html</link>
-      <guid>https://blocklune.github.io/posts/a7a0ce82.html</guid>
+      <link>https://fishg.top/posts/a7a0ce82.html</link>
+      <guid>https://fishg.top/posts/a7a0ce82.html</guid>
       <pubDate>Sat, 17 Sep 2022 05:13:18 GMT</pubDate>
       
       <description>&lt;p&gt;我以前学习 C++ 的时候，使用的是 DevCpp 。这个软件让我这个初学者比较舒服的点是，我不用太过详细地考虑编译的过程 —— 新建一个 cpp 文件，写一点小程序，按下 F11，程序运行。我不需要管选择编译器啊、配置编译命令啊啥啥的。但是到 VS Code 这边，这都要我自己做了，对于新手并不是那么友好。这里记录一下我配置 VS Code 的 C/C++ 环境的完整过程，希望对你有所帮助。需要注意的是：学习一下基本的编译链接指令还是很有必要的！&lt;/p&gt;</description>
@@ -1606,24 +1606,24 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/c-c/">C/C++</category>
-      
-      <category domain="https://blocklune.github.io/tags/vs-code/">VS Code</category>
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
       
       
-      <comments>https://blocklune.github.io/posts/a7a0ce82.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/c-c/">C/C++</category>
+      
+      <category domain="https://fishg.top/tags/vs-code/">VS Code</category>
+      
+      
+      <comments>https://fishg.top/posts/a7a0ce82.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>LaTeX 公式基础</title>
-      <link>https://blocklune.github.io/posts/848a7d31.html</link>
-      <guid>https://blocklune.github.io/posts/848a7d31.html</guid>
+      <link>https://fishg.top/posts/848a7d31.html</link>
+      <guid>https://fishg.top/posts/848a7d31.html</guid>
       <pubDate>Thu, 15 Sep 2022 06:11:07 GMT</pubDate>
       
       <description>&lt;p&gt;用 LaTeX 写数学公式的时候，总记不住一些写法，故在此记录学习笔记。&lt;/p&gt;</description>
@@ -1631,24 +1631,24 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/mathematics/">Mathematics</category>
-      
-      <category domain="https://blocklune.github.io/tags/latex/">LaTeX</category>
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
       
       
-      <comments>https://blocklune.github.io/posts/848a7d31.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/mathematics/">Mathematics</category>
+      
+      <category domain="https://fishg.top/tags/latex/">LaTeX</category>
+      
+      
+      <comments>https://fishg.top/posts/848a7d31.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>大一新生的高数预备知识学习笔记</title>
-      <link>https://blocklune.github.io/posts/33435544.html</link>
-      <guid>https://blocklune.github.io/posts/33435544.html</guid>
+      <link>https://fishg.top/posts/33435544.html</link>
+      <guid>https://fishg.top/posts/33435544.html</guid>
       <pubDate>Thu, 15 Sep 2022 01:47:52 GMT</pubDate>
       
       <description>&lt;p&gt;这篇文章主要是笔者从&lt;a href=&quot;https://space.bilibili.com/66607740&quot;&gt;宋浩老师&lt;/a&gt;处学习高数高数知识的课堂笔记，也加入了一些笔者自己搜到的东西。具体课程你可以看这里：&lt;a href=&quot;https://www.bilibili.com/video/BV1YU4y1e7Q9/&quot;&gt;大一新生的高数预备知识简介&lt;/a&gt;.&lt;/p&gt;</description>
@@ -1656,20 +1656,20 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/mathematics/">Mathematics</category>
+      <category domain="https://fishg.top/categories/mathematics/">Mathematics</category>
       
       
-      <category domain="https://blocklune.github.io/tags/mathematics/">Mathematics</category>
+      <category domain="https://fishg.top/tags/mathematics/">Mathematics</category>
       
       
-      <comments>https://blocklune.github.io/posts/33435544.html#disqus_thread</comments>
+      <comments>https://fishg.top/posts/33435544.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>手动挡学习笔记</title>
-      <link>https://blocklune.github.io/posts/66959aa9.html</link>
-      <guid>https://blocklune.github.io/posts/66959aa9.html</guid>
+      <link>https://fishg.top/posts/66959aa9.html</link>
+      <guid>https://fishg.top/posts/66959aa9.html</guid>
       <pubDate>Sat, 10 Sep 2022 02:59:13 GMT</pubDate>
       
       <description>&lt;p&gt;最近几天一直在忙着考驾照的事情，8 月份第一次考科二挂了后就开始边练科二边练科三。最近两三天先后把科三、第二次科二、科四过了，顺利拿到了 C1 驾照。但是… 学的是手动挡，家里的车却是自动挡。所以想着如果不记一下的话，以后估计开惯了自动挡手动挡就不会了，便想做些笔记。顺便也记录一下笔者自己的学车过程。&lt;/p&gt;</description>
@@ -1677,18 +1677,18 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/misc/">Misc</category>
+      <category domain="https://fishg.top/categories/misc/">Misc</category>
       
       
       
-      <comments>https://blocklune.github.io/posts/66959aa9.html#disqus_thread</comments>
+      <comments>https://fishg.top/posts/66959aa9.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>RLCraft 新手教程 - 一：过渡到你的正常生存</title>
-      <link>https://blocklune.github.io/posts/a1ada34d.html</link>
-      <guid>https://blocklune.github.io/posts/a1ada34d.html</guid>
+      <link>https://fishg.top/posts/a1ada34d.html</link>
+      <guid>https://fishg.top/posts/a1ada34d.html</guid>
       <pubDate>Fri, 26 Aug 2022 11:40:18 GMT</pubDate>
       
       <description>&lt;p&gt;本系列教程是我自己游玩过程中写的。出发点是我没有在网上找到比较好的中文 RLCraft 文字教程，所以在此记录自己的游玩发现。也算留下一些记录，供未来又开坑的自己参考。这是第一篇：过渡到正常的生存。&lt;/p&gt;</description>
@@ -1696,26 +1696,26 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/game/">Game</category>
+      <category domain="https://fishg.top/categories/game/">Game</category>
       
-      <category domain="https://blocklune.github.io/categories/game/minecraft/">Minecraft</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/game/">Game</category>
-      
-      <category domain="https://blocklune.github.io/tags/minecraft/">Minecraft</category>
-      
-      <category domain="https://blocklune.github.io/tags/rlcraft/">RLCraft</category>
+      <category domain="https://fishg.top/categories/game/minecraft/">Minecraft</category>
       
       
-      <comments>https://blocklune.github.io/posts/a1ada34d.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/game/">Game</category>
+      
+      <category domain="https://fishg.top/tags/minecraft/">Minecraft</category>
+      
+      <category domain="https://fishg.top/tags/rlcraft/">RLCraft</category>
+      
+      
+      <comments>https://fishg.top/posts/a1ada34d.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>补记一个用 Vue.js 和 ElementUI 实现的在线抽奖网页</title>
-      <link>https://blocklune.github.io/posts/6a8a1633.html</link>
-      <guid>https://blocklune.github.io/posts/6a8a1633.html</guid>
+      <link>https://fishg.top/posts/6a8a1633.html</link>
+      <guid>https://fishg.top/posts/6a8a1633.html</guid>
       <pubDate>Fri, 26 Aug 2022 06:58:40 GMT</pubDate>
       
       <description>&lt;p&gt;这件事儿发生在我的高中某个新学期开始，新来了一个电脑老师。有点打赌或者考验我的性质吧，ta 说 ta 弄了随机数点名的小网页，还能用同学的照片进行抽取，问我能不能实现一个。ta 的实现方法是 jQuery，技术上比较老，界面也不太好看。我想去尝试一下别的方法，正好也试试略微学了一点的 Vue.js，为了好看，用了 Element UI。&lt;/p&gt;</description>
@@ -1723,30 +1723,30 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/web/">Web</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/web/">Web</category>
-      
-      <category domain="https://blocklune.github.io/tags/vue-js/">Vue.js</category>
-      
-      <category domain="https://blocklune.github.io/tags/element-ui/">Element UI</category>
-      
-      <category domain="https://blocklune.github.io/tags/html/">Html</category>
-      
-      <category domain="https://blocklune.github.io/tags/js/">JS</category>
+      <category domain="https://fishg.top/categories/cs/web/">Web</category>
       
       
-      <comments>https://blocklune.github.io/posts/6a8a1633.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/web/">Web</category>
+      
+      <category domain="https://fishg.top/tags/vue-js/">Vue.js</category>
+      
+      <category domain="https://fishg.top/tags/element-ui/">Element UI</category>
+      
+      <category domain="https://fishg.top/tags/html/">Html</category>
+      
+      <category domain="https://fishg.top/tags/js/">JS</category>
+      
+      
+      <comments>https://fishg.top/posts/6a8a1633.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Edge 扩展推荐</title>
-      <link>https://blocklune.github.io/posts/3c91f84e.html</link>
-      <guid>https://blocklune.github.io/posts/3c91f84e.html</guid>
+      <link>https://fishg.top/posts/3c91f84e.html</link>
+      <guid>https://fishg.top/posts/3c91f84e.html</guid>
       <pubDate>Thu, 25 Aug 2022 13:06:12 GMT</pubDate>
       
       <description>&lt;p&gt;2019 年 7 月写过一篇 Chrome 插件推荐的文章，那时候我还在用 Chrome 作为我的主要浏览器。一晃三年过去了，我也早已从 Google Chrome 转入全新 Chromium 内核构建的 Edge 浏览器。微软倒蛮有意思，自己从头开发的东西不咋地，在别人的平台上倒是表现得相当好。由于国内的水土不服啊，我用 Chrome 时总会遇到同步不了的情况，这点的体验在 Edge 这儿得到了很好的改善，也是我用 Edge 的主要原因吧。前些天帮很多同学做新机开荒，也推荐他们就用这款 “Win11 原装” 浏览器。当然一个浏览器肯定是离不开扩展的，趁着帮他们开荒这个机会，也顺便整理了我认为必备的一些浏览器扩展。&lt;/p&gt;</description>
@@ -1754,24 +1754,24 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/browser/">Browser</category>
-      
-      <category domain="https://blocklune.github.io/tags/edge/">Edge</category>
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
       
       
-      <comments>https://blocklune.github.io/posts/3c91f84e.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/browser/">Browser</category>
+      
+      <category domain="https://fishg.top/tags/edge/">Edge</category>
+      
+      
+      <comments>https://fishg.top/posts/3c91f84e.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>记一次电脑清灰</title>
-      <link>https://blocklune.github.io/posts/50b3c006.html</link>
-      <guid>https://blocklune.github.io/posts/50b3c006.html</guid>
+      <link>https://fishg.top/posts/50b3c006.html</link>
+      <guid>https://fishg.top/posts/50b3c006.html</guid>
       <pubDate>Wed, 24 Aug 2022 14:00:00 GMT</pubDate>
       
       <description>&lt;p&gt;电脑是以前的老电脑，初一暑假时候买的 y700。配置低的可怜，毫无性价比的一台机子吧，当年还是电脑小白的时候保意买的，在完全不懂的情况下被忽悠着忽悠着买了，满满的坑啊。&lt;/p&gt;
@@ -1780,20 +1780,20 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/misc/">Misc</category>
+      <category domain="https://fishg.top/categories/misc/">Misc</category>
       
       
-      <category domain="https://blocklune.github.io/tags/memory/">Memory</category>
+      <category domain="https://fishg.top/tags/memory/">Memory</category>
       
       
-      <comments>https://blocklune.github.io/posts/50b3c006.html#disqus_thread</comments>
+      <comments>https://fishg.top/posts/50b3c006.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>记一次网络改造</title>
-      <link>https://blocklune.github.io/posts/b9a9b40d.html</link>
-      <guid>https://blocklune.github.io/posts/b9a9b40d.html</guid>
+      <link>https://fishg.top/posts/b9a9b40d.html</link>
+      <guid>https://fishg.top/posts/b9a9b40d.html</guid>
       <pubDate>Sat, 23 Jul 2022 06:34:00 GMT</pubDate>
       
       <description>&lt;p&gt;事情的起因是跟爸闲聊我抱怨家里为什么没有预埋到我和我妹房间的网线，结果才知道原来是有的，只不过藏在空面板里没有装接口…… 于是就开始兴致勃勃地想把它装起来 (这样我房间里就有有线网了！)，赶紧买了面板，交换机，网线和一众工具。&lt;/p&gt;</description>
@@ -1801,20 +1801,20 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/misc/">Misc</category>
+      <category domain="https://fishg.top/categories/misc/">Misc</category>
       
       
-      <category domain="https://blocklune.github.io/tags/memory/">Memory</category>
+      <category domain="https://fishg.top/tags/memory/">Memory</category>
       
       
-      <comments>https://blocklune.github.io/posts/b9a9b40d.html#disqus_thread</comments>
+      <comments>https://fishg.top/posts/b9a9b40d.html#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Chrome 插件推荐</title>
-      <link>https://blocklune.github.io/posts/72a59031.html</link>
-      <guid>https://blocklune.github.io/posts/72a59031.html</guid>
+      <link>https://fishg.top/posts/72a59031.html</link>
+      <guid>https://fishg.top/posts/72a59031.html</guid>
       <pubDate>Sat, 13 Jul 2019 14:00:00 GMT</pubDate>
       
       <description>&lt;p&gt;你可能常年使用着国产的一些浏览器，却也常年遭受着各种弹窗、全家桶的侵扰…&lt;/p&gt;
@@ -1824,17 +1824,17 @@
       
       
       
-      <category domain="https://blocklune.github.io/categories/cs/">CS</category>
+      <category domain="https://fishg.top/categories/cs/">CS</category>
       
-      <category domain="https://blocklune.github.io/categories/cs/tools/">Tools</category>
-      
-      
-      <category domain="https://blocklune.github.io/tags/chrome/">Chrome</category>
-      
-      <category domain="https://blocklune.github.io/tags/browser/">Browser</category>
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
       
       
-      <comments>https://blocklune.github.io/posts/72a59031.html#disqus_thread</comments>
+      <category domain="https://fishg.top/tags/chrome/">Chrome</category>
+      
+      <category domain="https://fishg.top/tags/browser/">Browser</category>
+      
+      
+      <comments>https://fishg.top/posts/72a59031.html#disqus_thread</comments>
       
     </item>
     
