@@ -9,8 +9,37 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Sun, 06 Aug 2023 08:56:11 GMT</pubDate>
+    <pubDate>Wed, 09 Aug 2023 03:26:14 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Notes for Machine Learning Specialization: Vectorization</title>
+      <link>https://fishg.top/posts/266471d7.html</link>
+      <guid>https://fishg.top/posts/266471d7.html</guid>
+      <pubDate>Wed, 09 Aug 2023 02:56:35 GMT</pubDate>
+      
+      <description>&lt;p&gt;This is a note for the &lt;a href=&quot;https://www.coursera.org/specializations/machine-learning-introduction&quot;&gt;Machine Learning Specialization&lt;/a&gt;.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://fishg.top/categories/cs/">CS</category>
+      
+      <category domain="https://fishg.top/categories/cs/ai/">AI</category>
+      
+      
+      <category domain="https://fishg.top/tags/coursera/">Coursera</category>
+      
+      <category domain="https://fishg.top/tags/machine-learning-specialization/">Machine Learning Specialization</category>
+      
+      <category domain="https://fishg.top/tags/vectorization/">Vectorization</category>
+      
+      <category domain="https://fishg.top/tags/numpy/">NumPy</category>
+      
+      
+      <comments>https://fishg.top/posts/266471d7.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Notes for 《tmux Productive Mouse-Free Development》</title>
