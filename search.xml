@@ -298,6 +298,40 @@
       </tags>
   </entry>
   <entry>
+    <title>Notes for Machine Learning Specialization: More numerically accurate code examples</title>
+    <url>/posts/44801878.html</url>
+    <content><![CDATA[<p>This is a note for the <a href="https://www.coursera.org/specializations/machine-learning-introduction">Machine Learning Specialization</a>.</p>
+<span id="more"></span>
+
+<p>From:</p>
+<ul>
+<li><em><a href="https://www.bilibili.com/video/BV19B4y1W76i?p=59">P59 7.1 TensorFlow 实现</a></em></li>
+<li><em><a href="https://www.bilibili.com/video/BV19B4y1W76i?p=66">P66 9.3 神经网络的 softmax 输出</a></em></li>
+<li><em><a href="https://www.bilibili.com/video/BV19B4y1W76i?p=67">P67 9.4 softmax 的改进实现</a></em></li>
+</ul>
+<h2 id="MNIST"><a href="#MNIST" class="headerlink" title="MNIST"></a>MNIST</h2><p>Original:</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># model</span></span><br><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="keyword">from</span> tensorflow.keras <span class="keyword">import</span> Sequential</span><br><span class="line"><span class="keyword">from</span> tensorflow.keras.layers <span class="keyword">import</span> Dense</span><br><span class="line">model = Sequential([</span><br><span class="line">    Dense(units=<span class="number">25</span>, activation=<span class="string">'relu'</span>)</span><br><span class="line">    Dense(units=<span class="number">15</span>, activation=<span class="string">'relu'</span>)</span><br><span class="line">    Dense(units=<span class="number">10</span>, activation=<span class="string">'softmax'</span>)</span><br><span class="line">])</span><br><span class="line"><span class="comment"># loss and cost</span></span><br><span class="line"><span class="keyword">from</span> tensorflow.keras.losses <span class="keyword">import</span> SparseCategoricalCrossentropy</span><br><span class="line">model.<span class="built_in">compile</span>(loss=SparseCategoricalCrossentropy())</span><br><span class="line"><span class="comment"># training</span></span><br><span class="line">model.fit(X, Y, epochs=<span class="number">100</span>)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>More numerically accurate:</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># model</span></span><br><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="keyword">from</span> tensorflow.keras <span class="keyword">import</span> Sequential</span><br><span class="line"><span class="keyword">from</span> tensorflow.keras.layers <span class="keyword">import</span> Dense</span><br><span class="line">model = Sequential([</span><br><span class="line">    Dense(units=<span class="number">25</span>, activation=<span class="string">'relu'</span>)</span><br><span class="line">    Dense(units=<span class="number">15</span>, activation=<span class="string">'relu'</span>)</span><br><span class="line">    Dense(units=<span class="number">10</span>, activation=<span class="string">'linear'</span>)  <span class="comment"># the final layer no longer outputs</span></span><br><span class="line">                                          <span class="comment"># these probabilities a_1 through a_10</span></span><br><span class="line">                                          <span class="comment"># it's instead outputting z_1 through z_10</span></span><br><span class="line">])</span><br><span class="line"><span class="comment"># loss</span></span><br><span class="line"><span class="keyword">from</span> tensorflow.keras.losses <span class="keyword">import</span> SparseCategoricalCrossentropy</span><br><span class="line">model.<span class="built_in">compile</span>(...,loss=SparseCategoricalCrossentropy(from_logits=<span class="literal">True</span>))  <span class="comment"># from_logits is the key</span></span><br><span class="line"><span class="comment"># fit</span></span><br><span class="line">model.fit(X, Y, epochs=<span class="number">100</span>)</span><br><span class="line"><span class="comment"># predict</span></span><br><span class="line">logits = model(X)  <span class="comment"># not a_1...a_10, is z_1...z_10</span></span><br><span class="line">f_x = tf.nn.softmax(logits)</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Logistic-regression"><a href="#Logistic-regression" class="headerlink" title="Logistic regression"></a>Logistic regression</h2><p>Original:</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="keyword">from</span> tensorflow.keras <span class="keyword">import</span> Sequential</span><br><span class="line"><span class="keyword">from</span> tensorflow.keras.layers <span class="keyword">import</span> Dense</span><br><span class="line">model = Sequential([</span><br><span class="line">    Dense(units=<span class="number">25</span>, activation=<span class="string">'sigmoid'</span>)</span><br><span class="line">    Dense(units=<span class="number">15</span>, activation=<span class="string">'sigmoid'</span>)</span><br><span class="line">    Dense(units=<span class="number">1</span>, activation=<span class="string">'sigmoid'</span>)</span><br><span class="line">])</span><br><span class="line"><span class="keyword">from</span> tensorflow.keras.losses <span class="keyword">import</span> BinaryCrossentropy</span><br><span class="line">model.<span class="built_in">compile</span>(loss=BinaryCrossentropy())</span><br><span class="line">model.fit(X, Y, epochs=<span class="number">100</span>)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>More numerically accurate:</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># model</span></span><br><span class="line">model = Sequential([</span><br><span class="line">    Dense(units=<span class="number">25</span>, activation=<span class="string">'sigmoid'</span>)</span><br><span class="line">    Dense(units=<span class="number">15</span>, activation=<span class="string">'sigmoid'</span>)</span><br><span class="line">    Dense(units=<span class="number">1</span>, activation=<span class="string">'linear'</span>)</span><br><span class="line">])</span><br><span class="line"><span class="comment"># loss</span></span><br><span class="line"><span class="keyword">from</span> tensorflow.keras.losses <span class="keyword">import</span> BinaryCrossentropy</span><br><span class="line">model.<span class="built_in">compile</span>(..., loss=BinaryCrossentropy(from_logits=<span class="literal">True</span>))</span><br><span class="line"><span class="comment"># fit</span></span><br><span class="line">model.fit(X, Y, epochs=<span class="number">100</span>)</span><br><span class="line"><span class="comment"># predict</span></span><br><span class="line">logit = model(X)</span><br><span class="line">f_x = tf.nn.sigmoid(logit)</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>Coursera</tag>
+        <tag>Machine Learning Specialization</tag>
+        <tag>TensorFlow</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Notes for Machine Learning Specialization: Vectorization</title>
     <url>/posts/266471d7.html</url>
     <content><![CDATA[<p>This is a note for the <a href="https://www.coursera.org/specializations/machine-learning-introduction">Machine Learning Specialization</a>.</p>
@@ -996,131 +1030,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Notes for Algorithms, Part II: Undirected Graphs</title>
-    <url>/posts/d3e12860.html</url>
-    <content><![CDATA[<p>This is a note for 4.1 Undirected Graphs, <em><a href="https://www.coursera.org/learn/algorithms-part2/">Algorithms, Part II</a></em>.</p>
-<span id="more"></span>
-
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><h3 id="Some-graph-processing-problems"><a href="#Some-graph-processing-problems" class="headerlink" title="Some graph-processing problems"></a>Some graph-processing problems</h3><ul>
-<li>Path. Is there a path between $s$ and $t$?</li>
-<li>Shortest path. What is the shortest path between $s$ and $t$?</li>
-<li>Cycle. Is there a cycle in the graph?</li>
-<li>Euler tour. Is there a cycle that uses each edge exactly once?</li>
-<li>Hamilton tour. Is there a cycle that uses each vertex exactly once? (classical NP-complete problem)</li>
-<li>Connectivity. Is there a way to connect all of the vertices?</li>
-<li>MST (Minimal Spanning Tree, 最小生成树). What is the best way to connect all of the vertices?</li>
-<li>Biconnectivity (双连通性). Is there a vertex whose removal disconnects the graph? (DFS)</li>
-<li>Planarity. Can you draw the graph in the plane with no crossing edges? (linear-time DFS-based planarity algorithm discovered by Tarjan in 1970s)</li>
-<li>Graph isomorphism (同构). Do two adjacency lists represent the same graph? (graph isomorphism is longstanding open problem, 长期悬而未决)</li>
-</ul>
-<h2 id="Graph-API"><a href="#Graph-API" class="headerlink" title="Graph API"></a>Graph API</h2><p>$$<br>\begin{aligned}<br>\text{public class } &amp;\text{Graph} \\<br>                     &amp;\text{Graph(int V)}    &amp;\text{create an empty graph with V vertices}\\<br>                     &amp;\text{Graph(In in)}    &amp;\text{create a graph from input stream}\\<br>       \text{void }  &amp;\text{addEdge(int v, int w)} &amp;\text{add an edge v-w}\\<br>       \text{Iterable&lt;Integer&gt; }  &amp;\text{adj(int v)} &amp;\text{vertices adjacent to v}\\<br>       \text{int }  &amp;\text{V()} &amp;\text{number of vertices}\\<br>       \text{int }  &amp;\text{E()} &amp;\text{number of edges}\\<br>       \text{String }  &amp;\text{toString()} &amp;\text{string representation}\\<br>\end{aligned}<br>$$</p>
-<h3 id="Typical-graph-processing-code"><a href="#Typical-graph-processing-code" class="headerlink" title="Typical graph-processing code"></a>Typical graph-processing code</h3><ul>
-<li>compute the degree of $v$</li>
-</ul>
-<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> in <span class="title function_">degree</span><span class="params">(Graph G, <span class="type">int</span> v)</span> {</span><br><span class="line">    <span class="type">int</span> <span class="variable">degree</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> w : G.adj(v)) degree++;</span><br><span class="line">    <span class="keyword">return</span> degree;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<ul>
-<li>compute maximum degree</li>
-</ul>
-<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">maxDegree</span><span class="params">(Graph G)</span> {</span><br><span class="line">    <span class="type">int</span> <span class="variable">max</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">v</span> <span class="operator">=</span> <span class="number">0</span>; v &lt; G.V(); v++) {</span><br><span class="line">        <span class="keyword">if</span> (degree(G, v) &gt; max) {</span><br><span class="line">            max = degree(G, v);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> max;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<ul>
-<li>compute average degree</li>
-</ul>
-<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">double</span> <span class="title function_">averageDegree</span><span class="params">(Graph G)</span> {</span><br><span class="line">    <span class="keyword">return</span> <span class="number">2.0</span> * G.E() / G.V();</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<ul>
-<li>compute self-loops</li>
-</ul>
-<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">numberOfSelfLoops</span><span class="params">(Graph G)</span> {</span><br><span class="line">    <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">v</span> <span class="operator">=</span> <span class="number">0</span>; v &lt; G.V(); v++) {</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> w : G.adj(v)) {</span><br><span class="line">            <span class="keyword">if</span> (v == w) {</span><br><span class="line">                count++;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> count / <span class="number">2</span>;  <span class="comment">// each edge counted twice</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="Representations"><a href="#Representations" class="headerlink" title="Representations"></a>Representations</h3><ul>
-<li>Set-of-edges graph representation</li>
-<li>Adjacency-matrix graph representation</li>
-<li><strong>Adjacency-list graph representation</strong></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>representation</th>
-<th>space</th>
-<th>add edge</th>
-<th>edge between v and w?</th>
-<th>iterate over vertices adjacent to v?</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>list of edges</td>
-<td>E</td>
-<td>1</td>
-<td>E</td>
-<td>E</td>
-</tr>
-<tr>
-<td>adjacency matrix</td>
-<td>V^2</td>
-<td>1*</td>
-<td>1</td>
-<td>V</td>
-</tr>
-<tr>
-<td>adjacency lists</td>
-<td>E+V</td>
-<td>1</td>
-<td>degree(v)</td>
-<td>degree(v)</td>
-</tr>
-</tbody></table>
-<p>* disallows parallel edges</p>
-<h4 id="Adjacency-list-graph-representation-Java-implementation"><a href="#Adjacency-list-graph-representation-Java-implementation" class="headerlink" title="Adjacency-list graph representation: Java implementation"></a>Adjacency-list graph representation: Java implementation</h4><figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Graph</span> {</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="type">int</span> V;</span><br><span class="line">    <span class="keyword">private</span> Bag&lt;Integer&gt;[] adj;  <span class="comment">// adjacency lists (using Bag data type)</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Graph</span><span class="params">(<span class="type">int</span> V)</span> {</span><br><span class="line">        <span class="built_in">this</span>.V = V;</span><br><span class="line">        adj = (Bag&lt;Integer&gt;[]) <span class="keyword">new</span> <span class="title class_">Bag</span>[V];  <span class="comment">// create empty graph with V vertices</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">v</span> <span class="operator">=</span> <span class="number">0</span>; v &lt; V; v++) {</span><br><span class="line">            adj[v] = <span class="keyword">new</span> <span class="title class_">Bag</span>&lt;Integer&gt;();</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addEdge</span><span class="params">(<span class="type">int</span> v, <span class="type">int</span> w)</span> {</span><br><span class="line">        adj[v].add(w);  <span class="comment">// add edge v-w</span></span><br><span class="line">        adj[w].add(v);  <span class="comment">// (parallel edges and self-loops allowed)</span></span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Iterable&lt;Integer&gt; <span class="title function_">adj</span><span class="params">(<span class="type">int</span> v)</span> {</span><br><span class="line">        <span class="keyword">return</span> adj[v];</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="Depth-first-search"><a href="#Depth-first-search" class="headerlink" title="Depth-first search"></a>Depth-first search</h2><p><strong>DFS</strong> (to visit a vertex $v$):</p>
-<ul>
-<li>Mark $v$ as visited</li>
-<li>Recursively visit all unmarked vertices $w$ adjacent to $v$</li>
-</ul>
-<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DepthFirstPaths</span> {</span><br><span class="line">    <span class="keyword">private</span> <span class="type">boolean</span>[] marked;  <span class="comment">// marked[v] = true if v connected to s</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span>[] edgeTo;      <span class="comment">// edgeTo[v] = previous vertex on path from s to v</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> s;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">DepthFirstPaths</span><span class="params">(Graph G, <span class="type">int</span> s)</span> {</span><br><span class="line">        ...                    <span class="comment">// initialize data structures</span></span><br><span class="line">        dfs(G, s);             <span class="comment">// find vertices connected to s</span></span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">dfs</span><span class="params">(Graph G, <span class="type">int</span> v)</span> {</span><br><span class="line">        marked[v] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> w : G.adj(v)) {</span><br><span class="line">            <span class="keyword">if</span> (!marked[w]) {</span><br><span class="line">                dfs(G, w);</span><br><span class="line">                edgeTo[w] = v;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>DFS marks all vertices connected to $s$ in time proportional to the sum of their degrees.</p>
-<p>After DFS, can find vertices connected to $s$ in constant time and can find a pth to $s$ (if one exists) in time proportional to its length.</p>
-<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">hasPathTo</span><span class="params">(<span class="type">int</span> v)</span> {</span><br><span class="line">    <span class="keyword">return</span> marked[v];</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> Iterable&lt;Integer&gt; <span class="title function_">pathTo</span><span class="params">(<span class="type">int</span> v)</span> {</span><br><span class="line">    <span class="keyword">if</span> (!hasPathTo(v)) <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    Stack&lt;Integer&gt; path = <span class="keyword">new</span> <span class="title class_">Stack</span>&lt;Integer&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">x</span> <span class="operator">=</span> v; x != s; x = edgeTo[x])</span><br><span class="line">        path.push(x);</span><br><span class="line">    path.push(s);</span><br><span class="line">    <span class="keyword">return</span> path;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="Breadth-first-search"><a href="#Breadth-first-search" class="headerlink" title="Breadth-first search"></a>Breadth-first search</h2><p><strong>BFS</strong> (from source vertex $s$):</p>
-<ul>
-<li>Put $s$ onto a FIFO queue, and mark $s$ as visited</li>
-<li>Repeat until the queue is empty:<ul>
-<li>remove the least recently added vertex $v$</li>
-<li>add each of $v$’s unvisited neighbors to the queue, and mark them as visited</li>
-</ul>
-</li>
-</ul>
-<p>BFS computes shortest paths from $s$ to all other vertices in a graph in time proportional to $E+V$</p>
-<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BreadthFirstPaths</span> {</span><br><span class="line">    <span class="keyword">private</span> <span class="type">boolean</span>[] marked;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span>[] edgeTo;</span><br><span class="line">    ...</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">bfs</span><span class="params">(Graph G, <span class="type">int</span> s)</span> {</span><br><span class="line">        Queue&lt;Integer&gt; q = <span class="keyword">new</span> <span class="title class_">Queue</span>&lt;Integer&gt;();</span><br><span class="line">        q.enqueue(s);</span><br><span class="line">        marked[s] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">while</span> (!q.isEmpty()) {</span><br><span class="line">            <span class="type">int</span> <span class="variable">v</span> <span class="operator">=</span> q.dequeue();</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> w : G.adj(v)) {</span><br><span class="line">                <span class="keyword">if</span> (!marked[w]) {</span><br><span class="line">                    q.enqueue(w);</span><br><span class="line">                    marked[w] = <span class="literal">true</span>;</span><br><span class="line">                    edgeTo[w] = v;</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="Connected-components"><a href="#Connected-components" class="headerlink" title="Connected components"></a>Connected components</h2><p>$$<br>\begin{aligned}<br>\text{public class } &amp;\text{CC}\\<br>&amp;\text{CC(Graph G)} &amp;\text{find connected components in G} \\<br>\text{boolean }&amp;\text{connected(int v, int w)} &amp;\text{are v and w connected?} \\<br>\text{int }&amp;\text{count()} &amp;\text{number of connected components} \\<br>\text{int }&amp;\text{id(int v)} &amp;\text{component identifier for v} \\<br>\end{aligned}<br>$$</p>
-<p><strong>Connected components</strong>:</p>
-<ul>
-<li>Initialize all vertices $v$ as unmarked</li>
-<li>For each unmarked vertex $v$, run DFS to identify all vertices discovered as part of the same component</li>
-</ul>
-<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CC</span> {</span><br><span class="line">    <span class="keyword">private</span> <span class="type">boolean</span>[] marked;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span>[] id;   <span class="comment">// id[v] = id of component containing v</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> count;  <span class="comment">// number of components</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">CC</span><span class="params">(Graph G)</span> {</span><br><span class="line">        marked = <span class="keyword">new</span> <span class="title class_">boolean</span>[G.V()];</span><br><span class="line">        id = <span class="keyword">new</span> <span class="title class_">int</span>[G.V()];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">v</span> <span class="operator">=</span> <span class="number">0</span>; v &lt; G.V(); v++) {</span><br><span class="line">            <span class="keyword">if</span> (!marked[v]) {</span><br><span class="line">                dfs(G, v);</span><br><span class="line">                count++;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">count</span><span class="params">()</span> {</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">id</span><span class="params">(<span class="type">int</span> v)</span> {</span><br><span class="line">        <span class="keyword">return</span> id[v];</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">dfs</span><span class="params">(Graph G, <span class="type">int</span> v)</span> {</span><br><span class="line">        marked[v] = <span class="literal">true</span>;</span><br><span class="line">        id[v] = count;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> w : G.adj(v)) {</span><br><span class="line">            <span class="keyword">if</span> (!marked[w]) {</span><br><span class="line">                dfs(G, w);</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Algorithms &amp; Data structures</category>
-      </categories>
-      <tags>
-        <tag>Coursera</tag>
-        <tag>Algorithm</tag>
-        <tag>BFS</tag>
-        <tag>DFS</tag>
-        <tag>Undirected Graph</tag>
-        <tag>Euler Tour</tag>
-        <tag>Euler Cycle</tag>
-        <tag>Connected Component</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Notes for Algorithms, Part II: Minimum Spanning Trees</title>
     <url>/posts/8ca4a3fd.html</url>
     <content><![CDATA[<p>This is a note for 4.3 Minimum Spanning Trees, <em><a href="https://www.coursera.org/learn/algorithms-part2/">Algorithms, Part II</a></em>.</p>
@@ -1317,6 +1226,131 @@
         <tag>Coursera</tag>
         <tag>Algorithm</tag>
         <tag>Minimum Spanning Trees</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Notes for Algorithms, Part II: Undirected Graphs</title>
+    <url>/posts/d3e12860.html</url>
+    <content><![CDATA[<p>This is a note for 4.1 Undirected Graphs, <em><a href="https://www.coursera.org/learn/algorithms-part2/">Algorithms, Part II</a></em>.</p>
+<span id="more"></span>
+
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><h3 id="Some-graph-processing-problems"><a href="#Some-graph-processing-problems" class="headerlink" title="Some graph-processing problems"></a>Some graph-processing problems</h3><ul>
+<li>Path. Is there a path between $s$ and $t$?</li>
+<li>Shortest path. What is the shortest path between $s$ and $t$?</li>
+<li>Cycle. Is there a cycle in the graph?</li>
+<li>Euler tour. Is there a cycle that uses each edge exactly once?</li>
+<li>Hamilton tour. Is there a cycle that uses each vertex exactly once? (classical NP-complete problem)</li>
+<li>Connectivity. Is there a way to connect all of the vertices?</li>
+<li>MST (Minimal Spanning Tree, 最小生成树). What is the best way to connect all of the vertices?</li>
+<li>Biconnectivity (双连通性). Is there a vertex whose removal disconnects the graph? (DFS)</li>
+<li>Planarity. Can you draw the graph in the plane with no crossing edges? (linear-time DFS-based planarity algorithm discovered by Tarjan in 1970s)</li>
+<li>Graph isomorphism (同构). Do two adjacency lists represent the same graph? (graph isomorphism is longstanding open problem, 长期悬而未决)</li>
+</ul>
+<h2 id="Graph-API"><a href="#Graph-API" class="headerlink" title="Graph API"></a>Graph API</h2><p>$$<br>\begin{aligned}<br>\text{public class } &amp;\text{Graph} \\<br>                     &amp;\text{Graph(int V)}    &amp;\text{create an empty graph with V vertices}\\<br>                     &amp;\text{Graph(In in)}    &amp;\text{create a graph from input stream}\\<br>       \text{void }  &amp;\text{addEdge(int v, int w)} &amp;\text{add an edge v-w}\\<br>       \text{Iterable&lt;Integer&gt; }  &amp;\text{adj(int v)} &amp;\text{vertices adjacent to v}\\<br>       \text{int }  &amp;\text{V()} &amp;\text{number of vertices}\\<br>       \text{int }  &amp;\text{E()} &amp;\text{number of edges}\\<br>       \text{String }  &amp;\text{toString()} &amp;\text{string representation}\\<br>\end{aligned}<br>$$</p>
+<h3 id="Typical-graph-processing-code"><a href="#Typical-graph-processing-code" class="headerlink" title="Typical graph-processing code"></a>Typical graph-processing code</h3><ul>
+<li>compute the degree of $v$</li>
+</ul>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> in <span class="title function_">degree</span><span class="params">(Graph G, <span class="type">int</span> v)</span> {</span><br><span class="line">    <span class="type">int</span> <span class="variable">degree</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> w : G.adj(v)) degree++;</span><br><span class="line">    <span class="keyword">return</span> degree;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>compute maximum degree</li>
+</ul>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">maxDegree</span><span class="params">(Graph G)</span> {</span><br><span class="line">    <span class="type">int</span> <span class="variable">max</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">v</span> <span class="operator">=</span> <span class="number">0</span>; v &lt; G.V(); v++) {</span><br><span class="line">        <span class="keyword">if</span> (degree(G, v) &gt; max) {</span><br><span class="line">            max = degree(G, v);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> max;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>compute average degree</li>
+</ul>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">double</span> <span class="title function_">averageDegree</span><span class="params">(Graph G)</span> {</span><br><span class="line">    <span class="keyword">return</span> <span class="number">2.0</span> * G.E() / G.V();</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>compute self-loops</li>
+</ul>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">numberOfSelfLoops</span><span class="params">(Graph G)</span> {</span><br><span class="line">    <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">v</span> <span class="operator">=</span> <span class="number">0</span>; v &lt; G.V(); v++) {</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> w : G.adj(v)) {</span><br><span class="line">            <span class="keyword">if</span> (v == w) {</span><br><span class="line">                count++;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> count / <span class="number">2</span>;  <span class="comment">// each edge counted twice</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Representations"><a href="#Representations" class="headerlink" title="Representations"></a>Representations</h3><ul>
+<li>Set-of-edges graph representation</li>
+<li>Adjacency-matrix graph representation</li>
+<li><strong>Adjacency-list graph representation</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>representation</th>
+<th>space</th>
+<th>add edge</th>
+<th>edge between v and w?</th>
+<th>iterate over vertices adjacent to v?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>list of edges</td>
+<td>E</td>
+<td>1</td>
+<td>E</td>
+<td>E</td>
+</tr>
+<tr>
+<td>adjacency matrix</td>
+<td>V^2</td>
+<td>1*</td>
+<td>1</td>
+<td>V</td>
+</tr>
+<tr>
+<td>adjacency lists</td>
+<td>E+V</td>
+<td>1</td>
+<td>degree(v)</td>
+<td>degree(v)</td>
+</tr>
+</tbody></table>
+<p>* disallows parallel edges</p>
+<h4 id="Adjacency-list-graph-representation-Java-implementation"><a href="#Adjacency-list-graph-representation-Java-implementation" class="headerlink" title="Adjacency-list graph representation: Java implementation"></a>Adjacency-list graph representation: Java implementation</h4><figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Graph</span> {</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="type">int</span> V;</span><br><span class="line">    <span class="keyword">private</span> Bag&lt;Integer&gt;[] adj;  <span class="comment">// adjacency lists (using Bag data type)</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Graph</span><span class="params">(<span class="type">int</span> V)</span> {</span><br><span class="line">        <span class="built_in">this</span>.V = V;</span><br><span class="line">        adj = (Bag&lt;Integer&gt;[]) <span class="keyword">new</span> <span class="title class_">Bag</span>[V];  <span class="comment">// create empty graph with V vertices</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">v</span> <span class="operator">=</span> <span class="number">0</span>; v &lt; V; v++) {</span><br><span class="line">            adj[v] = <span class="keyword">new</span> <span class="title class_">Bag</span>&lt;Integer&gt;();</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addEdge</span><span class="params">(<span class="type">int</span> v, <span class="type">int</span> w)</span> {</span><br><span class="line">        adj[v].add(w);  <span class="comment">// add edge v-w</span></span><br><span class="line">        adj[w].add(v);  <span class="comment">// (parallel edges and self-loops allowed)</span></span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Iterable&lt;Integer&gt; <span class="title function_">adj</span><span class="params">(<span class="type">int</span> v)</span> {</span><br><span class="line">        <span class="keyword">return</span> adj[v];</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Depth-first-search"><a href="#Depth-first-search" class="headerlink" title="Depth-first search"></a>Depth-first search</h2><p><strong>DFS</strong> (to visit a vertex $v$):</p>
+<ul>
+<li>Mark $v$ as visited</li>
+<li>Recursively visit all unmarked vertices $w$ adjacent to $v$</li>
+</ul>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DepthFirstPaths</span> {</span><br><span class="line">    <span class="keyword">private</span> <span class="type">boolean</span>[] marked;  <span class="comment">// marked[v] = true if v connected to s</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span>[] edgeTo;      <span class="comment">// edgeTo[v] = previous vertex on path from s to v</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> s;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">DepthFirstPaths</span><span class="params">(Graph G, <span class="type">int</span> s)</span> {</span><br><span class="line">        ...                    <span class="comment">// initialize data structures</span></span><br><span class="line">        dfs(G, s);             <span class="comment">// find vertices connected to s</span></span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">dfs</span><span class="params">(Graph G, <span class="type">int</span> v)</span> {</span><br><span class="line">        marked[v] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> w : G.adj(v)) {</span><br><span class="line">            <span class="keyword">if</span> (!marked[w]) {</span><br><span class="line">                dfs(G, w);</span><br><span class="line">                edgeTo[w] = v;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>DFS marks all vertices connected to $s$ in time proportional to the sum of their degrees.</p>
+<p>After DFS, can find vertices connected to $s$ in constant time and can find a pth to $s$ (if one exists) in time proportional to its length.</p>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">hasPathTo</span><span class="params">(<span class="type">int</span> v)</span> {</span><br><span class="line">    <span class="keyword">return</span> marked[v];</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> Iterable&lt;Integer&gt; <span class="title function_">pathTo</span><span class="params">(<span class="type">int</span> v)</span> {</span><br><span class="line">    <span class="keyword">if</span> (!hasPathTo(v)) <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    Stack&lt;Integer&gt; path = <span class="keyword">new</span> <span class="title class_">Stack</span>&lt;Integer&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">x</span> <span class="operator">=</span> v; x != s; x = edgeTo[x])</span><br><span class="line">        path.push(x);</span><br><span class="line">    path.push(s);</span><br><span class="line">    <span class="keyword">return</span> path;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Breadth-first-search"><a href="#Breadth-first-search" class="headerlink" title="Breadth-first search"></a>Breadth-first search</h2><p><strong>BFS</strong> (from source vertex $s$):</p>
+<ul>
+<li>Put $s$ onto a FIFO queue, and mark $s$ as visited</li>
+<li>Repeat until the queue is empty:<ul>
+<li>remove the least recently added vertex $v$</li>
+<li>add each of $v$’s unvisited neighbors to the queue, and mark them as visited</li>
+</ul>
+</li>
+</ul>
+<p>BFS computes shortest paths from $s$ to all other vertices in a graph in time proportional to $E+V$</p>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BreadthFirstPaths</span> {</span><br><span class="line">    <span class="keyword">private</span> <span class="type">boolean</span>[] marked;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span>[] edgeTo;</span><br><span class="line">    ...</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">bfs</span><span class="params">(Graph G, <span class="type">int</span> s)</span> {</span><br><span class="line">        Queue&lt;Integer&gt; q = <span class="keyword">new</span> <span class="title class_">Queue</span>&lt;Integer&gt;();</span><br><span class="line">        q.enqueue(s);</span><br><span class="line">        marked[s] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">while</span> (!q.isEmpty()) {</span><br><span class="line">            <span class="type">int</span> <span class="variable">v</span> <span class="operator">=</span> q.dequeue();</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> w : G.adj(v)) {</span><br><span class="line">                <span class="keyword">if</span> (!marked[w]) {</span><br><span class="line">                    q.enqueue(w);</span><br><span class="line">                    marked[w] = <span class="literal">true</span>;</span><br><span class="line">                    edgeTo[w] = v;</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Connected-components"><a href="#Connected-components" class="headerlink" title="Connected components"></a>Connected components</h2><p>$$<br>\begin{aligned}<br>\text{public class } &amp;\text{CC}\\<br>&amp;\text{CC(Graph G)} &amp;\text{find connected components in G} \\<br>\text{boolean }&amp;\text{connected(int v, int w)} &amp;\text{are v and w connected?} \\<br>\text{int }&amp;\text{count()} &amp;\text{number of connected components} \\<br>\text{int }&amp;\text{id(int v)} &amp;\text{component identifier for v} \\<br>\end{aligned}<br>$$</p>
+<p><strong>Connected components</strong>:</p>
+<ul>
+<li>Initialize all vertices $v$ as unmarked</li>
+<li>For each unmarked vertex $v$, run DFS to identify all vertices discovered as part of the same component</li>
+</ul>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CC</span> {</span><br><span class="line">    <span class="keyword">private</span> <span class="type">boolean</span>[] marked;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span>[] id;   <span class="comment">// id[v] = id of component containing v</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> count;  <span class="comment">// number of components</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">CC</span><span class="params">(Graph G)</span> {</span><br><span class="line">        marked = <span class="keyword">new</span> <span class="title class_">boolean</span>[G.V()];</span><br><span class="line">        id = <span class="keyword">new</span> <span class="title class_">int</span>[G.V()];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">v</span> <span class="operator">=</span> <span class="number">0</span>; v &lt; G.V(); v++) {</span><br><span class="line">            <span class="keyword">if</span> (!marked[v]) {</span><br><span class="line">                dfs(G, v);</span><br><span class="line">                count++;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">count</span><span class="params">()</span> {</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">id</span><span class="params">(<span class="type">int</span> v)</span> {</span><br><span class="line">        <span class="keyword">return</span> id[v];</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">dfs</span><span class="params">(Graph G, <span class="type">int</span> v)</span> {</span><br><span class="line">        marked[v] = <span class="literal">true</span>;</span><br><span class="line">        id[v] = count;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> w : G.adj(v)) {</span><br><span class="line">            <span class="keyword">if</span> (!marked[w]) {</span><br><span class="line">                dfs(G, w);</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Algorithms &amp; Data structures</category>
+      </categories>
+      <tags>
+        <tag>Coursera</tag>
+        <tag>Algorithm</tag>
+        <tag>BFS</tag>
+        <tag>DFS</tag>
+        <tag>Undirected Graph</tag>
+        <tag>Euler Tour</tag>
+        <tag>Euler Cycle</tag>
+        <tag>Connected Component</tag>
       </tags>
   </entry>
   <entry>

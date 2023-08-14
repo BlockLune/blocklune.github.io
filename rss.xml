@@ -9,8 +9,35 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Thu, 10 Aug 2023 03:35:21 GMT</pubDate>
+    <pubDate>Mon, 14 Aug 2023 03:39:46 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Notes for Machine Learning Specialization: More numerically accurate code examples</title>
+      <link>https://fishg.top/posts/44801878.html</link>
+      <guid>https://fishg.top/posts/44801878.html</guid>
+      <pubDate>Mon, 14 Aug 2023 03:03:44 GMT</pubDate>
+      
+      <description>&lt;p&gt;This is a note for the &lt;a href=&quot;https://www.coursera.org/specializations/machine-learning-introduction&quot;&gt;Machine Learning Specialization&lt;/a&gt;.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://fishg.top/categories/cs/">CS</category>
+      
+      <category domain="https://fishg.top/categories/cs/ai/">AI</category>
+      
+      
+      <category domain="https://fishg.top/tags/coursera/">Coursera</category>
+      
+      <category domain="https://fishg.top/tags/machine-learning-specialization/">Machine Learning Specialization</category>
+      
+      <category domain="https://fishg.top/tags/tensorflow/">TensorFlow</category>
+      
+      
+      <comments>https://fishg.top/posts/44801878.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Notes for Machine Learning Specialization: Vectorization</title>
