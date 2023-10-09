@@ -3029,6 +3029,105 @@
       </tags>
   </entry>
   <entry>
+    <title>Awesome CLI Apps</title>
+    <url>/posts/d64ccd8c.html</url>
+    <content><![CDATA[<p>This is a list of some awesome CLI (command-line interface) apps.</p>
+<span id="more"></span>
+
+<h2 id="Enhanced"><a href="#Enhanced" class="headerlink" title="Enhanced"></a>Enhanced</h2><p>The following list consists of enhanced versions of some basic command-line tools.</p>
+<table>
+<thead>
+<tr>
+<th>Basic</th>
+<th>Enhanced</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>cat</td>
+<td><a href="https://github.com/sharkdp/bat">bat</a></td>
+<td>Also see <a href="https://blocklune.github.io/posts/e7bc2e88.html">my Post</a></td>
+</tr>
+<tr>
+<td>cd</td>
+<td><a href="https://github.com/ajeetdsouza/zoxide">zoxide</a></td>
+<td></td>
+</tr>
+<tr>
+<td>du</td>
+<td><a href="https://github.com/bootandy/dust">dust</a></td>
+<td></td>
+</tr>
+<tr>
+<td>find</td>
+<td><a href="https://github.com/sharkdp/fd">fd</a>, <a href="https://github.com/junegunn/fzf">fzf</a></td>
+<td></td>
+</tr>
+<tr>
+<td>git</td>
+<td><del><a href="https://github.com/jesseduffield/lazygit">lazygit</a></del>, <a href="%5Bhttps://github.com/extrawurst/gitui">gitui</a>, <a href="https://github.com/mislav/hub">hub</a></td>
+<td></td>
+</tr>
+<tr>
+<td>grep</td>
+<td><a href="https://github.com/BurntSushi/ripgrep">ripgrep</a></td>
+<td></td>
+</tr>
+<tr>
+<td>ls</td>
+<td><a href="https://github.com/lsd-rs/lsd">lsd</a>, <a href="https://github.com/ogham/exa">exa</a></td>
+<td></td>
+</tr>
+<tr>
+<td>man</td>
+<td><del><a href="https://github.com/tldr-pages/tldr">tldr</a></del>, <a href="https://github.com/dbrgn/tealdeer">tealdeer</a></td>
+<td></td>
+</tr>
+<tr>
+<td>sed</td>
+<td><a href="https://github.com/chmln/sd">sd</a></td>
+<td></td>
+</tr>
+<tr>
+<td>sudo</td>
+<td><a href="https://github.com/memorysafety/sudo-rs">sudo-rs</a></td>
+<td></td>
+</tr>
+<tr>
+<td>top</td>
+<td><a href="https://github.com/ClementTsang/bottom">bottom</a></td>
+<td></td>
+</tr>
+<tr>
+<td>tree</td>
+<td><a href="https://github.com/lsd-rs/lsd">lsd</a></td>
+<td>Use <code>lsd --tree</code></td>
+</tr>
+</tbody></table>
+<h2 id="Other-Tools"><a href="#Other-Tools" class="headerlink" title="Other Tools"></a>Other Tools</h2><ul>
+<li><p>cloc: a command-line tool to count codes (See <a href="https://github.com/AlDanial/cloc">GitHub</a>)</p>
+</li>
+<li><p>frogmounth: a TUI Markdown browser (See <a href="https://github.com/Textualize/frogmouth">GitHub</a>)</p>
+</li>
+<li><p>joshuto: a TUI file explorer (See <a href="https://github.com/kamiyaa/joshuto">GitHub</a>, <a href="https://blocklune.github.io/posts/348795e3.html">my post</a>)</p>
+</li>
+<li><p>shell_gpt: talk to GPT in terminal (See <a href="https://github.com/TheR1D/shell_gpt">GitHub</a>)</p>
+</li>
+<li><p>tmux: a terminal multiplexer (See <a href="https://github.com/tmux/tmux">GitHub</a>)</p>
+</li>
+<li><p>thefuck: an app that corrects errors in the previous commands (See <a href="https://github.com/nvbn/thefuck">GitHub</a>)</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>CLI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Better right-click menu in Win11</title>
     <url>/posts/798c36fc.html</url>
     <content><![CDATA[<p>When the Windows system was updated to version 11, the right-click menu was completely redesigned. Microsoft is apparently trying to make it simpler and more modern, but the way they have chosen to do it is really brute force: hiding everything useful in the secondary menu! I find this really annoying. Luckily, we have a way to bring back the classic, and even customize it and make it better! (This post is in Chinese.)</p>
@@ -3126,25 +3225,7 @@
 <h3 id="Browser"><a href="#Browser" class="headerlink" title="Browser"></a>Browser</h3><p>I use Microsoft Edge. It’s pretty easy to download the <code>.deb</code> on its <em><a href="https://www.microsoft.com/en-us/edge/download">official website</a></em>. But if you want to install it from command line:</p>
 <p>See <em><a href="https://www.linuxcapable.com/how-to-install-microsoft-edge-on-ubuntu-linux/">How to Install Microsoft Edge on Ubuntu 22.04 | 20.04 - LinuxCapable</a></em></p>
 <h3 id="Proxy"><a href="#Proxy" class="headerlink" title="Proxy"></a>Proxy</h3><p>Maybe <em><a href="https://github.com/zzzgydi/clash-verge">zzzgydi/clash-verge: A Clash GUI based on tauri. Supports Windows, macOS and Linux</a></em> or <em><a href="https://github.com/Fndroid/clash_for_windows_pkg">Fndroid/clash_for_windows_pkg</a></em></p>
-<h3 id="CLI-APPs"><a href="#CLI-APPs" class="headerlink" title="CLI-APPs"></a>CLI-APPs</h3><ul>
-<li>bat: a replacement for <code>cat</code> (See <a href="https://github.com/sharkdp/bat">GitHub</a>, <a href="https://blocklune.github.io/posts/e7bc2e88.html">my post</a>)</li>
-<li>cloc: a command-line tool to count codes (See <a href="https://github.com/AlDanial/cloc">GitHub</a>)</li>
-<li>exa: a replacement for <code>ls</code> command (See <a href="https://github.com/ogham/exa">GitHub</a>)</li>
-<li>fd: a replacement for <code>find</code> command (See <a href="https://github.com/sharkdp/fd">Github</a>)</li>
-<li>fzf: a command-line fuzzy finder (See <a href="https://github.com/junegunn/fzf">GitHub</a>)</li>
-<li>frogmounth: a TUI Markdown browser (See <a href="https://github.com/Textualize/frogmouth">GitHub</a>)</li>
-<li>hub: a command line tool that wraps <code>git</code> (See <a href="https://github.com/mislav/hub">GitHub</a>)</li>
-<li>joshuto: a TUI file explorer (See <a href="https://github.com/kamiyaa/joshuto">GitHub</a>, <a href="https://blocklune.github.io/posts/348795e3.html">my post</a>)</li>
-<li>lazygit: a TUI <code>git</code> (See <a href="https://github.com/jesseduffield/lazygit">GitHub</a>)</li>
-<li>lsd: a replacement for <code>ls</code> command (See <a href="https://github.com/lsd-rs/lsd">GitHub</a>)</li>
-<li>ripgrep: a replacement for <code>grep</code> command (See <a href="https://github.com/BurntSushi/ripgrep">GitHub</a>)</li>
-<li>shell_gpt: talk to GPT in terminal (See <a href="https://github.com/TheR1D/shell_gpt">GitHub</a>)</li>
-<li>sudo-rs: a memory safe implementation of sudo and su (See <a href="https://github.com/memorysafety/sudo-rs">GitHub</a>)</li>
-<li>tmux: a terminal multiplexer (See <a href="https://github.com/tmux/tmux">GitHub</a>)</li>
-<li>thefuck: an app that corrects errors in the previous commands (See <a href="https://github.com/nvbn/thefuck">GitHub</a>)</li>
-<li>tldr: cheatsheets for commands (See <a href="https://github.com/tldr-pages/tldr">GitHub</a>)</li>
-<li>zoxide: a smarter cd command (See <a href="https://github.com/ajeetdsouza/zoxide">Github</a>)</li>
-</ul>
+<h3 id="CLI-APPs"><a href="#CLI-APPs" class="headerlink" title="CLI-APPs"></a>CLI-APPs</h3><p>See <a href="https://blocklune.github.io/posts/d64ccd8c.html">Awesome CLI Apps</a>.</p>
 <h2 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q &amp; A"></a>Q &amp; A</h2><p>Q: The operating system always freezes on the welcome page.<br>A: Install / Update NVIDIA driver.</p>
 <p>See <em><a href="https://www.cnblogs.com/Leozi/p/13281224.html">Ubuntu 下安装 NVIDIA 驱动的三种方法</a></em></p>
 <p>and <em><a href="https://superuser.com/questions/1750975/nouveau-00000100-0-drm-failed-to-idle-channel-0-drm">ubuntu - nouveau 0000:01:00.0: DRM: failed to idle channel 0 [DRM] - Super User</a></em></p>

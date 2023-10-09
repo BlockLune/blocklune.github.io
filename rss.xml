@@ -9,8 +9,31 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Mon, 14 Aug 2023 03:39:46 GMT</pubDate>
+    <pubDate>Mon, 09 Oct 2023 10:50:35 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Awesome CLI Apps</title>
+      <link>https://fishg.top/posts/d64ccd8c.html</link>
+      <guid>https://fishg.top/posts/d64ccd8c.html</guid>
+      <pubDate>Mon, 09 Oct 2023 10:10:26 GMT</pubDate>
+      
+      <description>&lt;p&gt;This is a list of some awesome CLI (command-line interface) apps.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://fishg.top/categories/cs/">CS</category>
+      
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
+      
+      
+      <category domain="https://fishg.top/tags/cli/">CLI</category>
+      
+      
+      <comments>https://fishg.top/posts/d64ccd8c.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Notes for Machine Learning Specialization: More numerically accurate code examples</title>
