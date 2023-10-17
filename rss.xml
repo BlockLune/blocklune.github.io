@@ -9,8 +9,37 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Mon, 09 Oct 2023 10:50:35 GMT</pubDate>
+    <pubDate>Tue, 17 Oct 2023 08:37:41 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Getter and Setter in Python</title>
+      <link>https://fishg.top/posts/9b4ad8c6.html</link>
+      <guid>https://fishg.top/posts/9b4ad8c6.html</guid>
+      <pubDate>Tue, 17 Oct 2023 08:01:54 GMT</pubDate>
+      
+      <description>&lt;p&gt;Chinese translation for &lt;em&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/getter-and-setter-in-python/&quot;&gt;Getter and Setter in Python&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://fishg.top/categories/cs/">CS</category>
+      
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
+      
+      <category domain="https://fishg.top/categories/cs/languages/python/">Python</category>
+      
+      
+      <category domain="https://fishg.top/tags/python/">Python</category>
+      
+      <category domain="https://fishg.top/tags/object-oriented-programming/">Object-oriented Programming</category>
+      
+      <category domain="https://fishg.top/tags/translation/">Translation</category>
+      
+      
+      <comments>https://fishg.top/posts/9b4ad8c6.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Awesome CLI Apps</title>
