@@ -9,7 +9,7 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Tue, 17 Oct 2023 08:37:41 GMT</pubDate>
+    <pubDate>Sat, 21 Oct 2023 05:18:38 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -895,12 +895,12 @@
     </item>
     
     <item>
-      <title>My &quot;.vimrc&quot;</title>
+      <title>My Vim Config</title>
       <link>https://fishg.top/posts/96f7ff9f.html</link>
       <guid>https://fishg.top/posts/96f7ff9f.html</guid>
       <pubDate>Sat, 22 Apr 2023 02:27:09 GMT</pubDate>
       
-      <description>&lt;p&gt;There are a huge amount of options in Vim. It enables us to customize our own Vim as our wishes.&lt;/p&gt;</description>
+      <description>&lt;p&gt;There are a huge amount of options in Vim. It enables us to customize our own Vim as our wishes. Here’s my config.&lt;/p&gt;</description>
       
       
       
