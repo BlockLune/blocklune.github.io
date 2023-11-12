@@ -9,8 +9,31 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Sat, 21 Oct 2023 05:18:38 GMT</pubDate>
+    <pubDate>Sun, 12 Nov 2023 11:29:58 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Note for Intro to Machine Learning</title>
+      <link>https://fishg.top/posts/d1584ae1.html</link>
+      <guid>https://fishg.top/posts/d1584ae1.html</guid>
+      <pubDate>Sun, 12 Nov 2023 11:20:26 GMT</pubDate>
+      
+      <description>&lt;p&gt;This is a note for &lt;em&gt;&lt;a href=&quot;https://www.kaggle.com/learn/intro-to-machine-learning&quot;&gt;Intro to Machine Learning&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://fishg.top/categories/cs/">CS</category>
+      
+      <category domain="https://fishg.top/categories/cs/ai/">AI</category>
+      
+      
+      <category domain="https://fishg.top/tags/kaggle/">Kaggle</category>
+      
+      
+      <comments>https://fishg.top/posts/d1584ae1.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Getter and Setter in Python</title>
@@ -1836,8 +1859,6 @@
       <category domain="https://fishg.top/categories/cs/web/">Web</category>
       
       
-      <category domain="https://fishg.top/tags/web/">Web</category>
-      
       <category domain="https://fishg.top/tags/vue-js/">Vue.js</category>
       
       <category domain="https://fishg.top/tags/element-ui/">Element UI</category>
@@ -1845,6 +1866,8 @@
       <category domain="https://fishg.top/tags/html/">Html</category>
       
       <category domain="https://fishg.top/tags/js/">JS</category>
+      
+      <category domain="https://fishg.top/tags/web/">Web</category>
       
       
       <comments>https://fishg.top/posts/6a8a1633.html#disqus_thread</comments>

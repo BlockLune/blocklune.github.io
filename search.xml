@@ -1,77 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>大一新生的高数预备知识学习笔记</title>
-    <url>/posts/33435544.html</url>
-    <content><![CDATA[<p>这篇文章主要是笔者从<a href="https://space.bilibili.com/66607740">宋浩老师</a>处学习高数高数知识的课堂笔记，也加入了一些笔者自己搜到的东西。具体课程你可以看这里：<a href="https://www.bilibili.com/video/BV1YU4y1e7Q9/">大一新生的高数预备知识简介</a>.</p>
-<span id="more"></span>
-
-<h2 id="反三角函数"><a href="#反三角函数" class="headerlink" title="反三角函数"></a>反三角函数</h2><h3 id="y-arcsinX"><a href="#y-arcsinX" class="headerlink" title="y=arcsinX"></a>y=arcsinX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxa7CV.png"></p>
-<h3 id="y-arccosX"><a href="#y-arccosX" class="headerlink" title="y=arccosX"></a>y=arccosX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxdQxS.png"></p>
-<h3 id="y-arctanX"><a href="#y-arctanX" class="headerlink" title="y=arctanX"></a>y=arctanX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxd8bj.png"></p>
-<h3 id="y-arccotX"><a href="#y-arccotX" class="headerlink" title="y=arccotX"></a>y=arccotX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxdYan.png"></p>
-<h3 id="y-secX"><a href="#y-secX" class="headerlink" title="y=secX"></a>y=secX</h3><p>正割是余弦的倒数：</p>
-<p>$$<br>secX = \frac{1}{cosX}<br>$$</p>
-<p>定义域：显然 $cosX \neq 0$，所以 $y=secX$ 的定义域为：$X\neq k\pi +\frac {\pi}{2},k\in Z$</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/15/vxwCon.png"></p>
-<h3 id="y-cscX"><a href="#y-cscX" class="headerlink" title="y=cscX"></a>y=cscX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxwneJ.png"></p>
-<h3 id="一些补充"><a href="#一些补充" class="headerlink" title="一些补充"></a>一些补充</h3><p>$$<br>sec^2x=1+tan^2x,csc^2x=1+cot^2x<br>$$</p>
-<p>可以使用下面的方法进行记忆：</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/16/vzBKpt.png"></p>
-<p>六边形的中间是 $1$。红色三角形的上边两个角的平方之和等于下边一个的平方，即：</p>
-<p>$$<br>sin^2x+cos^2x=1<br>$$</p>
-<p>$$<br>tan^2x+1=sec^2x<br>$$</p>
-<p>$$<br>cot^2x+1=csc^2x<br>$$</p>
-<h2 id="多项式的除法"><a href="#多项式的除法" class="headerlink" title="多项式的除法"></a>多项式的除法</h2><ul>
-<li>次数高的放前面，低的放后边</li>
-<li>缺项的补出来</li>
-</ul>
-<h3 id="不带余数"><a href="#不带余数" class="headerlink" title="不带余数"></a>不带余数</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vx0m1f.png"></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/15/vx0Mng.png"></p>
-<h3 id="带余数"><a href="#带余数" class="headerlink" title="带余数"></a>带余数</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vx0t3V.png"></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/15/vx0o4I.png"></p>
-<h2 id="有理分式的拆分"><a href="#有理分式的拆分" class="headerlink" title="有理分式的拆分"></a>有理分式的拆分</h2><h3 id="何为有理分式："><a href="#何为有理分式：" class="headerlink" title="何为有理分式："></a>何为有理分式：</h3><p>有理分式就是一个多项式比一个多项式</p>
-<h3 id="何为有理分式的拆分："><a href="#何为有理分式的拆分：" class="headerlink" title="何为有理分式的拆分："></a>何为有理分式的拆分：</h3><p>将相乘的项变成相加减</p>
-<h3 id="过程："><a href="#过程：" class="headerlink" title="过程："></a>过程：</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxBdRP.png"></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/15/vxBWR0.png"></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/15/vxBHo9.png"></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/15/vxDpee.png"></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/15/vxDUw4.png" alt="待定系数法例子之一"></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/15/vxsWRI.png" alt="待定系数法例子之二"></p>
-<h2 id="极坐标"><a href="#极坐标" class="headerlink" title="极坐标"></a>极坐标</h2><h3 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h3><p>首先看转动角度，其次看这个点到原点的距离。</p>
-<p>例如：直角坐标系中 $(2,2)$ 点在极坐标系中表示为 $(2\sqrt {2},\frac {\pi}{4})$；$(-2,2)$ 表示为 $(2\sqrt {2},\frac {3\pi}{4})$。</p>
-<p>极坐标中的原点叫<code>极点</code>，<code>极轴</code>是从极点向 $X$ 轴正方向引入的一条射线（仅正方向有）。极坐标中的点到极点的距离叫做<code>极径</code>，记作 $\rho (\rho\geq0)$（距离肯定是个非负数）；从极轴逆时针转过的角度记作 $\theta (0\leq\theta&lt;2\pi)$（但实际上不一定取这个范围）。所以极坐标中一点 $P$ 的坐标记为 $P (\rho,\theta)$。</p>
-<p>一般先考虑 $\theta$ 再考虑 $\rho$。</p>
-<h3 id="一些常见图像的极坐标表示"><a href="#一些常见图像的极坐标表示" class="headerlink" title="一些常见图像的极坐标表示"></a>一些常见图像的极坐标表示</h3><blockquote>
-<p>括号内范围是默认范围，可写可不写</p>
-</blockquote>
-<h4 id="射线"><a href="#射线" class="headerlink" title="射线"></a>射线</h4><p>例如一条以极点为端点，$\theta=45^\circ$ 的射线表述为：</p>
-<p>$$<br>\theta = 45^\circ(,\rho\geq0)<br>$$</p>
-<h4 id="圆"><a href="#圆" class="headerlink" title="圆"></a>圆</h4><p>例如一个以极点为圆心，$1$ 为半径的圆表述为：</p>
-<p>$$<br>(0\leq\theta&lt;2\pi,)\rho=1<br>$$</p>
-<h4 id="半圆"><a href="#半圆" class="headerlink" title="半圆"></a>半圆</h4><p>例如一个以极点为圆心，$1$ 为半径的位于 $X$ 轴上方的半圆表述为：</p>
-<p>$$<br>0\leq\theta\leq\pi,\rho=1<br>$$</p>
-<h4 id="圆面"><a href="#圆面" class="headerlink" title="圆面"></a>圆面</h4><p>例如一个以极点为圆心，$1$ 为半径的圆面表述为：</p>
-<p>$$<br>(0\leq\theta&lt;2\pi,)0\leq\rho\leq1<br>$$</p>
-<h4 id="半圆面"><a href="#半圆面" class="headerlink" title="半圆面"></a>半圆面</h4><p>例如一个以极点为圆心，$1$ 为半径的位于 $X$ 轴上方的半圆面表述为：</p>
-<p>$$<br>0\leq\theta\leq\pi,0\leq\rho\leq1<br>$$</p>
-<div class="note warning no-icon"><p>又例如这个以 $(1,0)$ 为圆心，$1$ 为半径的位于 $X$ 轴上方的半圆面表述为：</p>
-<p>$$<br>0\leq\theta\leq\frac{\pi}{2},0\leq\rho\leq2cos\theta<br>$$</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/16/vzwCNR.png"></p>
-<p>又例如这个：</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/16/vzwtbQ.png"></p>
-</div>
-
-<h4 id="圆环"><a href="#圆环" class="headerlink" title="圆环"></a>圆环</h4><p><img data-src="https://s1.ax1x.com/2022/09/16/vzdzB4.png"></p>
-]]></content>
-      <categories>
-        <category>Mathematics</category>
-      </categories>
-      <tags>
-        <tag>Mathematics</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>为何说三进制是效率最高的进制？以及其他一些与三进制有关的东西...</title>
     <url>/posts/1d122915.html</url>
     <content><![CDATA[<p>这是一次计算机导论的作业。老师提供了很多课题供我们选择，我选择的是 “有人说三进制是被证明理论上效率最高的进制，请广泛搜集相关资料，撰写关于三进制的科普报告，或者对其他进制进行对比和评价。</p>
@@ -256,6 +185,77 @@
       </categories>
   </entry>
   <entry>
+    <title>大一新生的高数预备知识学习笔记</title>
+    <url>/posts/33435544.html</url>
+    <content><![CDATA[<p>这篇文章主要是笔者从<a href="https://space.bilibili.com/66607740">宋浩老师</a>处学习高数高数知识的课堂笔记，也加入了一些笔者自己搜到的东西。具体课程你可以看这里：<a href="https://www.bilibili.com/video/BV1YU4y1e7Q9/">大一新生的高数预备知识简介</a>.</p>
+<span id="more"></span>
+
+<h2 id="反三角函数"><a href="#反三角函数" class="headerlink" title="反三角函数"></a>反三角函数</h2><h3 id="y-arcsinX"><a href="#y-arcsinX" class="headerlink" title="y=arcsinX"></a>y=arcsinX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxa7CV.png"></p>
+<h3 id="y-arccosX"><a href="#y-arccosX" class="headerlink" title="y=arccosX"></a>y=arccosX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxdQxS.png"></p>
+<h3 id="y-arctanX"><a href="#y-arctanX" class="headerlink" title="y=arctanX"></a>y=arctanX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxd8bj.png"></p>
+<h3 id="y-arccotX"><a href="#y-arccotX" class="headerlink" title="y=arccotX"></a>y=arccotX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxdYan.png"></p>
+<h3 id="y-secX"><a href="#y-secX" class="headerlink" title="y=secX"></a>y=secX</h3><p>正割是余弦的倒数：</p>
+<p>$$<br>secX = \frac{1}{cosX}<br>$$</p>
+<p>定义域：显然 $cosX \neq 0$，所以 $y=secX$ 的定义域为：$X\neq k\pi +\frac {\pi}{2},k\in Z$</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/15/vxwCon.png"></p>
+<h3 id="y-cscX"><a href="#y-cscX" class="headerlink" title="y=cscX"></a>y=cscX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxwneJ.png"></p>
+<h3 id="一些补充"><a href="#一些补充" class="headerlink" title="一些补充"></a>一些补充</h3><p>$$<br>sec^2x=1+tan^2x,csc^2x=1+cot^2x<br>$$</p>
+<p>可以使用下面的方法进行记忆：</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/16/vzBKpt.png"></p>
+<p>六边形的中间是 $1$。红色三角形的上边两个角的平方之和等于下边一个的平方，即：</p>
+<p>$$<br>sin^2x+cos^2x=1<br>$$</p>
+<p>$$<br>tan^2x+1=sec^2x<br>$$</p>
+<p>$$<br>cot^2x+1=csc^2x<br>$$</p>
+<h2 id="多项式的除法"><a href="#多项式的除法" class="headerlink" title="多项式的除法"></a>多项式的除法</h2><ul>
+<li>次数高的放前面，低的放后边</li>
+<li>缺项的补出来</li>
+</ul>
+<h3 id="不带余数"><a href="#不带余数" class="headerlink" title="不带余数"></a>不带余数</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vx0m1f.png"></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/15/vx0Mng.png"></p>
+<h3 id="带余数"><a href="#带余数" class="headerlink" title="带余数"></a>带余数</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vx0t3V.png"></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/15/vx0o4I.png"></p>
+<h2 id="有理分式的拆分"><a href="#有理分式的拆分" class="headerlink" title="有理分式的拆分"></a>有理分式的拆分</h2><h3 id="何为有理分式："><a href="#何为有理分式：" class="headerlink" title="何为有理分式："></a>何为有理分式：</h3><p>有理分式就是一个多项式比一个多项式</p>
+<h3 id="何为有理分式的拆分："><a href="#何为有理分式的拆分：" class="headerlink" title="何为有理分式的拆分："></a>何为有理分式的拆分：</h3><p>将相乘的项变成相加减</p>
+<h3 id="过程："><a href="#过程：" class="headerlink" title="过程："></a>过程：</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxBdRP.png"></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/15/vxBWR0.png"></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/15/vxBHo9.png"></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/15/vxDpee.png"></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/15/vxDUw4.png" alt="待定系数法例子之一"></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/15/vxsWRI.png" alt="待定系数法例子之二"></p>
+<h2 id="极坐标"><a href="#极坐标" class="headerlink" title="极坐标"></a>极坐标</h2><h3 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h3><p>首先看转动角度，其次看这个点到原点的距离。</p>
+<p>例如：直角坐标系中 $(2,2)$ 点在极坐标系中表示为 $(2\sqrt {2},\frac {\pi}{4})$；$(-2,2)$ 表示为 $(2\sqrt {2},\frac {3\pi}{4})$。</p>
+<p>极坐标中的原点叫<code>极点</code>，<code>极轴</code>是从极点向 $X$ 轴正方向引入的一条射线（仅正方向有）。极坐标中的点到极点的距离叫做<code>极径</code>，记作 $\rho (\rho\geq0)$（距离肯定是个非负数）；从极轴逆时针转过的角度记作 $\theta (0\leq\theta&lt;2\pi)$（但实际上不一定取这个范围）。所以极坐标中一点 $P$ 的坐标记为 $P (\rho,\theta)$。</p>
+<p>一般先考虑 $\theta$ 再考虑 $\rho$。</p>
+<h3 id="一些常见图像的极坐标表示"><a href="#一些常见图像的极坐标表示" class="headerlink" title="一些常见图像的极坐标表示"></a>一些常见图像的极坐标表示</h3><blockquote>
+<p>括号内范围是默认范围，可写可不写</p>
+</blockquote>
+<h4 id="射线"><a href="#射线" class="headerlink" title="射线"></a>射线</h4><p>例如一条以极点为端点，$\theta=45^\circ$ 的射线表述为：</p>
+<p>$$<br>\theta = 45^\circ(,\rho\geq0)<br>$$</p>
+<h4 id="圆"><a href="#圆" class="headerlink" title="圆"></a>圆</h4><p>例如一个以极点为圆心，$1$ 为半径的圆表述为：</p>
+<p>$$<br>(0\leq\theta&lt;2\pi,)\rho=1<br>$$</p>
+<h4 id="半圆"><a href="#半圆" class="headerlink" title="半圆"></a>半圆</h4><p>例如一个以极点为圆心，$1$ 为半径的位于 $X$ 轴上方的半圆表述为：</p>
+<p>$$<br>0\leq\theta\leq\pi,\rho=1<br>$$</p>
+<h4 id="圆面"><a href="#圆面" class="headerlink" title="圆面"></a>圆面</h4><p>例如一个以极点为圆心，$1$ 为半径的圆面表述为：</p>
+<p>$$<br>(0\leq\theta&lt;2\pi,)0\leq\rho\leq1<br>$$</p>
+<h4 id="半圆面"><a href="#半圆面" class="headerlink" title="半圆面"></a>半圆面</h4><p>例如一个以极点为圆心，$1$ 为半径的位于 $X$ 轴上方的半圆面表述为：</p>
+<p>$$<br>0\leq\theta\leq\pi,0\leq\rho\leq1<br>$$</p>
+<div class="note warning no-icon"><p>又例如这个以 $(1,0)$ 为圆心，$1$ 为半径的位于 $X$ 轴上方的半圆面表述为：</p>
+<p>$$<br>0\leq\theta\leq\frac{\pi}{2},0\leq\rho\leq2cos\theta<br>$$</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/16/vzwCNR.png"></p>
+<p>又例如这个：</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/16/vzwtbQ.png"></p>
+</div>
+
+<h4 id="圆环"><a href="#圆环" class="headerlink" title="圆环"></a>圆环</h4><p><img data-src="https://s1.ax1x.com/2022/09/16/vzdzB4.png"></p>
+]]></content>
+      <categories>
+        <category>Mathematics</category>
+      </categories>
+      <tags>
+        <tag>Mathematics</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>记一次电脑清灰</title>
     <url>/posts/50b3c006.html</url>
     <content><![CDATA[<p>电脑是以前的老电脑，初一暑假时候买的 y700。配置低的可怜，毫无性价比的一台机子吧，当年还是电脑小白的时候保意买的，在完全不懂的情况下被忽悠着忽悠着买了，满满的坑啊。</p>
@@ -298,6 +298,22 @@
       </tags>
   </entry>
   <entry>
+    <title>Note for Intro to Machine Learning</title>
+    <url>/posts/d1584ae1.html</url>
+    <content><![CDATA[<p>This is a note for <em><a href="https://www.kaggle.com/learn/intro-to-machine-learning">Intro to Machine Learning</a></em>.</p>
+<span id="more"></span>
+
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> mean_absolute_error</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeRegressor</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Path of the file to read</span></span><br><span class="line">iowa_file_path = <span class="string">'../input/home-data-for-ml-course/train.csv'</span></span><br><span class="line"></span><br><span class="line">home_data = pd.read_csv(iowa_file_path)</span><br><span class="line"><span class="comment"># Create target object and call it y</span></span><br><span class="line">y = home_data.SalePrice</span><br><span class="line"><span class="comment"># Create X</span></span><br><span class="line">features = [<span class="string">'LotArea'</span>, <span class="string">'YearBuilt'</span>, <span class="string">'1stFlrSF'</span>, <span class="string">'2ndFlrSF'</span>, <span class="string">'FullBath'</span>, <span class="string">'BedroomAbvGr'</span>, <span class="string">'TotRmsAbvGrd'</span>]</span><br><span class="line">X = home_data[features]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Split into validation and training data</span></span><br><span class="line">train_X, val_X, train_y, val_y = train_test_split(X, y, random_state=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Specify Model</span></span><br><span class="line">iowa_model = DecisionTreeRegressor(random_state=<span class="number">1</span>)</span><br><span class="line"><span class="comment"># Fit Model</span></span><br><span class="line">iowa_model.fit(train_X, train_y)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Make validation predictions and calculate mean absolute error</span></span><br><span class="line">val_predictions = iowa_model.predict(val_X)</span><br><span class="line">val_mae = mean_absolute_error(val_predictions, val_y)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"Validation MAE when not specifying max_leaf_nodes: {:,.0f}"</span>.<span class="built_in">format</span>(val_mae))</span><br><span class="line"></span><br><span class="line"><span class="comment"># Using best value for max_leaf_nodes</span></span><br><span class="line">iowa_model = DecisionTreeRegressor(max_leaf_nodes=<span class="number">100</span>, random_state=<span class="number">1</span>)</span><br><span class="line">iowa_model.fit(train_X, train_y)</span><br><span class="line">val_predictions = iowa_model.predict(val_X)</span><br><span class="line">val_mae = mean_absolute_error(val_predictions, val_y)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"Validation MAE for best value of max_leaf_nodes: {:,.0f}"</span>.<span class="built_in">format</span>(val_mae))```</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestRegressor</span><br><span class="line"></span><br><span class="line"><span class="comment"># Define the model. Set random_state to 1</span></span><br><span class="line">rf_model = RandomForestRegressor(random_state=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># fit your model</span></span><br><span class="line">rf_model.fit(train_X, train_y)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Calculate the mean absolute error of your Random Forest model on the validation data</span></span><br><span class="line">rf_val_mae = mean_absolute_error(val_y, rf_model.predict(val_X))</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">"Validation MAE for Random Forest Model: {}"</span>.<span class="built_in">format</span>(rf_val_mae))</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>Kaggle</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Notes for Machine Learning Specialization: More numerically accurate code examples</title>
     <url>/posts/44801878.html</url>
     <content><![CDATA[<p>This is a note for the <a href="https://www.coursera.org/specializations/machine-learning-introduction">Machine Learning Specialization</a>.</p>
@@ -329,6 +345,60 @@
         <tag>Coursera</tag>
         <tag>Machine Learning Specialization</tag>
         <tag>TensorFlow</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Notes for Machine Learning Specialization: Vectorization</title>
+    <url>/posts/266471d7.html</url>
+    <content><![CDATA[<p>This is a note for the <a href="https://www.coursera.org/specializations/machine-learning-introduction">Machine Learning Specialization</a>.</p>
+<span id="more"></span>
+
+<p>From:</p>
+<ul>
+<li><em><a href="https://www.bilibili.com/video/BV19B4y1W76i?p=22">P22 5.2 向量化 part 1</a></em></li>
+<li><em><a href="https://www.bilibili.com/video/BV19B4y1W76i?p=23">P23 5.3 向量化 part 2</a></em></li>
+<li><em><a href="https://www.bilibili.com/video/BV19B4y1W76i?p=24">P24 5.4 多元线性回归的梯度下降法</a></em></li>
+<li><em><a href="https://www.bilibili.com/video/BV19B4y1W76i?p=55">P55 6.1 神经网络如何高效实现</a></em></li>
+</ul>
+<h2 id="P22-and-P23"><a href="#P22-and-P23" class="headerlink" title="P22 and P23"></a>P22 and P23</h2><p>Here are our parameters and features:</p>
+<p>$$<br>\vec{w} =<br>\left[<br>\begin{matrix}<br>w_1 &amp; w_2 &amp; w_3<br>\end{matrix}<br>\right]<br>$$</p>
+<p>$$<br>b \text{ is a number}<br>$$</p>
+<p>$$<br>\vec{x} =<br>\left[<br>\begin{matrix}<br>x_1 &amp; x_2 &amp; x_3<br>\end{matrix}<br>\right]<br>$$</p>
+<p>So here $n=3$.</p>
+<p>In linear algebra, the index or the counting starts from 1.</p>
+<p>In Python code, the index starts from 0.</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">w = np.array([<span class="number">1.0</span>, <span class="number">2.5</span>, -<span class="number">3.3</span>])</span><br><span class="line">b = <span class="number">4</span></span><br><span class="line">x = np.array([<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>])</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Without vectorization $f_{\vec{w}, b}=w_1x_1+w_2x_2+w_3x_3+b$</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">f = w[<span class="number">0</span>] * x[<span class="number">0</span>] +</span><br><span class="line">    w[<span class="number">1</span>] * x[<span class="number">1</span>] +</span><br><span class="line">    w[<span class="number">2</span>] * x[<span class="number">2</span>] + b</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Without vectorization $f_{\vec{w}, b}=\sum_{j=1}^nw_jx_j$ + b</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">f = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, n):</span><br><span class="line">    f = f + w[j] * x[j]</span><br><span class="line">f = f + b</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Vectorization $f_{\vec{w}, b}=\vec{w}\cdot\vec{x} + b$</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">f = np.dot(w, x) + b</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Vectorization’s benefits:</p>
+<ul>
+<li>Shorter code</li>
+<li>Faster running (parallel hardware)</li>
+</ul>
+<h2 id="P24"><a href="#P24" class="headerlink" title="P24"></a>P24</h2><p><strong>Ex.</strong></p>
+<p><img data-src="https://s1.ax1x.com/2023/08/09/pPZdP7n.png" alt="Vectorization for Gradient descent"></p>
+<h2 id="P55"><a href="#P55" class="headerlink" title="P55"></a>P55</h2><p>For loops vs. vectorization</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># For loops</span></span><br><span class="line">x = np.array([<span class="number">200</span>, <span class="number">17</span>])</span><br><span class="line">W = np.array([[<span class="number">1</span>, -<span class="number">3</span>, <span class="number">5</span>],</span><br><span class="line">              [-<span class="number">2</span>, <span class="number">4</span>, -<span class="number">6</span>]])</span><br><span class="line">b = np.array([-<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">dense</span>(<span class="params">a_in, W, b</span>):</span><br><span class="line">    a_out = np.zeros(units)</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(units):</span><br><span class="line">        w = W[:,j]</span><br><span class="line">        z = np.dot(w, x) + b[j]</span><br><span class="line">        a_out[j] = g(z)</span><br><span class="line">    <span class="keyword">return</span> a_out</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Vectorization</span></span><br><span class="line">X = np.array([[<span class="number">200</span>, <span class="number">17</span>]])  <span class="comment"># 2d-array</span></span><br><span class="line">W = np.array([[<span class="number">1</span>, -<span class="number">3</span>, <span class="number">5</span>],</span><br><span class="line">              [-<span class="number">2</span>, <span class="number">4</span>, -<span class="number">6</span>]])</span><br><span class="line">B = np.array([[-<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>]])  <span class="comment"># 1*3 2d-array</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">dense</span>(<span class="params">A_in, W, B</span>):</span><br><span class="line">    Z = np.matmul(A_in, W) + B  <span class="comment"># matrix multiplication</span></span><br><span class="line">    A_out = g(Z)</span><br><span class="line">    <span class="keyword">return</span> A_out</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>Coursera</tag>
+        <tag>Machine Learning Specialization</tag>
+        <tag>Vectorization</tag>
+        <tag>NumPy</tag>
       </tags>
   </entry>
   <entry>
@@ -770,60 +840,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Notes for Machine Learning Specialization: Vectorization</title>
-    <url>/posts/266471d7.html</url>
-    <content><![CDATA[<p>This is a note for the <a href="https://www.coursera.org/specializations/machine-learning-introduction">Machine Learning Specialization</a>.</p>
-<span id="more"></span>
-
-<p>From:</p>
-<ul>
-<li><em><a href="https://www.bilibili.com/video/BV19B4y1W76i?p=22">P22 5.2 向量化 part 1</a></em></li>
-<li><em><a href="https://www.bilibili.com/video/BV19B4y1W76i?p=23">P23 5.3 向量化 part 2</a></em></li>
-<li><em><a href="https://www.bilibili.com/video/BV19B4y1W76i?p=24">P24 5.4 多元线性回归的梯度下降法</a></em></li>
-<li><em><a href="https://www.bilibili.com/video/BV19B4y1W76i?p=55">P55 6.1 神经网络如何高效实现</a></em></li>
-</ul>
-<h2 id="P22-and-P23"><a href="#P22-and-P23" class="headerlink" title="P22 and P23"></a>P22 and P23</h2><p>Here are our parameters and features:</p>
-<p>$$<br>\vec{w} =<br>\left[<br>\begin{matrix}<br>w_1 &amp; w_2 &amp; w_3<br>\end{matrix}<br>\right]<br>$$</p>
-<p>$$<br>b \text{ is a number}<br>$$</p>
-<p>$$<br>\vec{x} =<br>\left[<br>\begin{matrix}<br>x_1 &amp; x_2 &amp; x_3<br>\end{matrix}<br>\right]<br>$$</p>
-<p>So here $n=3$.</p>
-<p>In linear algebra, the index or the counting starts from 1.</p>
-<p>In Python code, the index starts from 0.</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">w = np.array([<span class="number">1.0</span>, <span class="number">2.5</span>, -<span class="number">3.3</span>])</span><br><span class="line">b = <span class="number">4</span></span><br><span class="line">x = np.array([<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>])</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Without vectorization $f_{\vec{w}, b}=w_1x_1+w_2x_2+w_3x_3+b$</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">f = w[<span class="number">0</span>] * x[<span class="number">0</span>] +</span><br><span class="line">    w[<span class="number">1</span>] * x[<span class="number">1</span>] +</span><br><span class="line">    w[<span class="number">2</span>] * x[<span class="number">2</span>] + b</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Without vectorization $f_{\vec{w}, b}=\sum_{j=1}^nw_jx_j$ + b</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">f = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, n):</span><br><span class="line">    f = f + w[j] * x[j]</span><br><span class="line">f = f + b</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Vectorization $f_{\vec{w}, b}=\vec{w}\cdot\vec{x} + b$</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">f = np.dot(w, x) + b</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Vectorization’s benefits:</p>
-<ul>
-<li>Shorter code</li>
-<li>Faster running (parallel hardware)</li>
-</ul>
-<h2 id="P24"><a href="#P24" class="headerlink" title="P24"></a>P24</h2><p><strong>Ex.</strong></p>
-<p><img data-src="https://s1.ax1x.com/2023/08/09/pPZdP7n.png" alt="Vectorization for Gradient descent"></p>
-<h2 id="P55"><a href="#P55" class="headerlink" title="P55"></a>P55</h2><p>For loops vs. vectorization</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># For loops</span></span><br><span class="line">x = np.array([<span class="number">200</span>, <span class="number">17</span>])</span><br><span class="line">W = np.array([[<span class="number">1</span>, -<span class="number">3</span>, <span class="number">5</span>],</span><br><span class="line">              [-<span class="number">2</span>, <span class="number">4</span>, -<span class="number">6</span>]])</span><br><span class="line">b = np.array([-<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">dense</span>(<span class="params">a_in, W, b</span>):</span><br><span class="line">    a_out = np.zeros(units)</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(units):</span><br><span class="line">        w = W[:,j]</span><br><span class="line">        z = np.dot(w, x) + b[j]</span><br><span class="line">        a_out[j] = g(z)</span><br><span class="line">    <span class="keyword">return</span> a_out</span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Vectorization</span></span><br><span class="line">X = np.array([[<span class="number">200</span>, <span class="number">17</span>]])  <span class="comment"># 2d-array</span></span><br><span class="line">W = np.array([[<span class="number">1</span>, -<span class="number">3</span>, <span class="number">5</span>],</span><br><span class="line">              [-<span class="number">2</span>, <span class="number">4</span>, -<span class="number">6</span>]])</span><br><span class="line">B = np.array([[-<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>]])  <span class="comment"># 1*3 2d-array</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">dense</span>(<span class="params">A_in, W, B</span>):</span><br><span class="line">    Z = np.matmul(A_in, W) + B  <span class="comment"># matrix multiplication</span></span><br><span class="line">    A_out = g(Z)</span><br><span class="line">    <span class="keyword">return</span> A_out</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>Coursera</tag>
-        <tag>Machine Learning Specialization</tag>
-        <tag>Vectorization</tag>
-        <tag>NumPy</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>挖老婆矿！—— NovelAI 初试</title>
     <url>/posts/f17b3e8b.html</url>
     <content><![CDATA[<p>最近一段时间，感觉突然之间，就有很多很多将现实图片二次元化啊，按照每句歌词生成一副画作啊的 AI 绘画应用的图文视频出现。和室友聊天还说是不是最近一段时间 AI 技术突破什么瓶颈突飞猛进了。后来才知道，原来是 NovelAI 泄露了… 这样一来，本地部署方便了起来，于是整了一个玩玩。由于跑 AI 嘛，GPU 比较呼啸，跟挖矿一样，我就戏称我这是在 “挖老婆矿” 了。</p>
@@ -894,31 +910,6 @@
       <tags>
         <tag>AI</tag>
         <tag>NovelAI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>My personal summary of Algorithms, Part I on Coursera</title>
-    <url>/posts/94efd546.html</url>
-    <content><![CDATA[<p>As the title says, this is my personal summary of <a href="https://www.coursera.org/learn/algorithms-part1">Algorithms, Part I</a> on <a href="https://www.coursera.org/">Coursera</a>.</p>
-<span id="more"></span>
-
-<p>Finally! q(≧▽≦q)</p>
-<p>I enrolled in this course about a month ago and have just finished it. Although the system decided that I had completed the course when my last assignment was due on the 2nd of May, I actually finished Week 06 about ten days later. No deadline, no motivation. &gt;_&lt;</p>
-<p>The course is called Algorithms, Part I. (There is Part II, of course, but I haven’t signed up for it yet.) The teacher is Prof. Robert Sedgewick from Princeton University, also the author of the famous book Algorithms. Although this course is from a few years ago, it’s still one of the top courses today.</p>
-<p>The biggest feature of this course is that it ties algorithms so closely to real-world problems. Almost all topics are introduced this way: Here we have a problem. To solve it, we can easily use … But we can’t do that because it’s too expensive, so we can try to use … to solve it. By using this algorithm, we can ensure that … in the case of …. Also, we can use this algorithm to solve … problems. I think this kind of combination between theory and practice is really valuable.</p>
-<p>The five projects are amazing. Instead of writing stupid experiment reports, uploading them to the QQ group and not knowing whether my codes are good or not, this online platform provides an incredible evaluation system that not only checks the correctness of your codes, but also the style! The style! Much better than some Chinese reference books! After each submission, the evaluation system gives you a detailed report on what’s wrong with your codes, and you can then correct or polish your codes and submit them again. I submitted the last project thirteen times to pass it, with the help of GPT and even some reference codes! Orz</p>
-<p>I’d highly recommend any CS student to take this course on Coursera. It’s free and in my opinion it’s actually much easier than the listening section of the national college entrance examination or CET-4.</p>
-<p><img data-src="https://s1.ax1x.com/2023/05/12/p9yWH3t.png"></p>
-<p><img data-src="https://s1.ax1x.com/2023/05/12/p9yWqjf.png"></p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Algorithms &amp; Data structures</category>
-      </categories>
-      <tags>
-        <tag>Coursera</tag>
-        <tag>Algorithm</tag>
-        <tag>Online course summary</tag>
       </tags>
   </entry>
   <entry>
@@ -1027,6 +1018,31 @@
         <tag>DFS</tag>
         <tag>Topological Sort</tag>
         <tag>Strong Components</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>My personal summary of Algorithms, Part I on Coursera</title>
+    <url>/posts/94efd546.html</url>
+    <content><![CDATA[<p>As the title says, this is my personal summary of <a href="https://www.coursera.org/learn/algorithms-part1">Algorithms, Part I</a> on <a href="https://www.coursera.org/">Coursera</a>.</p>
+<span id="more"></span>
+
+<p>Finally! q(≧▽≦q)</p>
+<p>I enrolled in this course about a month ago and have just finished it. Although the system decided that I had completed the course when my last assignment was due on the 2nd of May, I actually finished Week 06 about ten days later. No deadline, no motivation. &gt;_&lt;</p>
+<p>The course is called Algorithms, Part I. (There is Part II, of course, but I haven’t signed up for it yet.) The teacher is Prof. Robert Sedgewick from Princeton University, also the author of the famous book Algorithms. Although this course is from a few years ago, it’s still one of the top courses today.</p>
+<p>The biggest feature of this course is that it ties algorithms so closely to real-world problems. Almost all topics are introduced this way: Here we have a problem. To solve it, we can easily use … But we can’t do that because it’s too expensive, so we can try to use … to solve it. By using this algorithm, we can ensure that … in the case of …. Also, we can use this algorithm to solve … problems. I think this kind of combination between theory and practice is really valuable.</p>
+<p>The five projects are amazing. Instead of writing stupid experiment reports, uploading them to the QQ group and not knowing whether my codes are good or not, this online platform provides an incredible evaluation system that not only checks the correctness of your codes, but also the style! The style! Much better than some Chinese reference books! After each submission, the evaluation system gives you a detailed report on what’s wrong with your codes, and you can then correct or polish your codes and submit them again. I submitted the last project thirteen times to pass it, with the help of GPT and even some reference codes! Orz</p>
+<p>I’d highly recommend any CS student to take this course on Coursera. It’s free and in my opinion it’s actually much easier than the listening section of the national college entrance examination or CET-4.</p>
+<p><img data-src="https://s1.ax1x.com/2023/05/12/p9yWH3t.png"></p>
+<p><img data-src="https://s1.ax1x.com/2023/05/12/p9yWqjf.png"></p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Algorithms &amp; Data structures</category>
+      </categories>
+      <tags>
+        <tag>Coursera</tag>
+        <tag>Algorithm</tag>
+        <tag>Online course summary</tag>
       </tags>
   </entry>
   <entry>
@@ -1894,6 +1910,39 @@
       </tags>
   </entry>
   <entry>
+    <title>Makefile 简单笔记</title>
+    <url>/posts/b5f1b38d.html</url>
+    <content><![CDATA[<p>这是一篇笔记，原视频是 <a href="https://space.bilibili.com/519963684">@于仕琪</a> 老师的 <a href="https://www.bilibili.com/video/BV188411L7d2">《Makefile 20 分钟入门，简简单单，展示如何使用 Makefile 管理和编译 C++ 代码》</a>。</p>
+<span id="more"></span>
+
+<h2 id="老师所给的四个版本"><a href="#老师所给的四个版本" class="headerlink" title="老师所给的四个版本"></a>老师所给的四个版本</h2><figure class="highlight makefile"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># 版本一</span></span><br><span class="line"><span class="section">hello: main.cpp printhello.cpp factorial.cpp</span></span><br><span class="line">    g++ -o hello main.cpp printhello.cpp factorial.cpp</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本二</span></span><br><span class="line">CXX = g++</span><br><span class="line">TARGET = hello</span><br><span class="line">OBJ = main.o printhello.o factorial.o</span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJ)</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -o <span class="variable">$(TARGET)</span> <span class="variable">$(OBJ)</span></span><br><span class="line"></span><br><span class="line"><span class="section">main.o: main.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -c main.cpp</span><br><span class="line"></span><br><span class="line"><span class="section">printhello.o: printhello.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -c printhello.cpp</span><br><span class="line"></span><br><span class="line"><span class="section">factorial.o: factorial.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -c factorial.cpp</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本三</span></span><br><span class="line">CXX = g++</span><br><span class="line">TARGET = hello</span><br><span class="line">OBJ = main.o printhello.o factorial.o</span><br><span class="line"></span><br><span class="line">CXXFLAGS = -c -Wall</span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJ)</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -o <span class="variable">$@</span> <span class="variable">$^</span></span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> <span class="variable">$(CXXFLAGS)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">    rm -f *.o <span class="variable">$(TARGET)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本四</span></span><br><span class="line">CXX = g++</span><br><span class="line">TARGET = hello</span><br><span class="line">SRC = <span class="variable">$(<span class="built_in">wildcard</span> *.cpp)</span></span><br><span class="line">OBJ = <span class="variable">$(<span class="built_in">patsubst</span> %.cpp, %.o, <span class="variable">$(SRC)</span>)</span></span><br><span class="line"></span><br><span class="line">CXXFLAGS = -c -Wall</span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJ)</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -o <span class="variable">$@</span> <span class="variable">$^</span></span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> <span class="variable">$(CXXFLAGS)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">    rm -f *.o <span class="variable">$(TARGET)</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><p>首先是关于 g++ 这个 C++ 编译器的一些知识点。</p>
+<ul>
+<li><code>-c</code> 参数表示生成 obj 文件（<code>*.o</code>）；</li>
+<li><code>-o</code> 用于指定生成的可执行文件的名称，比如上边 <code>-o hello</code> 就表示生成的可执行文件叫 hello；</li>
+<li><code>-Wall</code> 表示 Warning all，也就是打开全部的警告。</li>
+</ul>
+<p>接着是 Makefile 文件的大致原理。</p>
+<p>首先看最易理解的版本一。</p>
+<figure class="highlight makefile"><table><tbody><tr><td class="code"><pre><span class="line"><span class="section">hello: main.cpp printhello.cpp factorial.cpp</span></span><br><span class="line">    g++ -o hello main.cpp printhello.cpp factorial.cpp</span><br></pre></td></tr></tbody></table></figure>
+
+<p>第一行冒号前的部分表示我们需要的文件（这里是 <code>hello</code>），冒号后表示冒号前文件的依赖项（这里是三个 <code>.cpp</code> 文件），第二行表示为了生成冒号前的文件，需要执行什么命令。Make 工具通过检测冒号后文件的时间戳是否比冒号前文件更新来判断是否要执行第二行语句。</p>
+<p>在第二个版本中，引入了变量的概念。形似 <code>XXX = YYY</code> 的东西就是在给变量赋值，使用 <code>$(XXX)</code> 来取得值 <code>YYY</code>。</p>
+<p>第三个版本中出现了 <code>$@</code>、<code>$^</code>、<code>$&lt;</code> 等符号，他们分别表示冒号前面的内容、冒号后边的全部内容和冒号后边第一个内容。</p>
+<p>第三个版本中的 <code>.PHONY: clean</code> 标识了 <code>clean</code> 是个命令而不是一个文件，这样结合下边的 <code>clean:</code> 的内容，就可以实现直接在终端输入 <code>make clean</code> 来执行 <code>rm -f *.o $(TARGET)</code> 的命令，清空生成出来的文件。</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Makefile</tag>
+        <tag>GNU Make</tag>
+        <tag>Compiling</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LaTeX 公式基础</title>
     <url>/posts/848a7d31.html</url>
     <content><![CDATA[<p>用 LaTeX 写数学公式的时候，总记不住一些写法，故在此记录学习笔记。</p>
@@ -2457,39 +2506,6 @@
       <tags>
         <tag>Mathematics</tag>
         <tag>LaTeX</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Makefile 简单笔记</title>
-    <url>/posts/b5f1b38d.html</url>
-    <content><![CDATA[<p>这是一篇笔记，原视频是 <a href="https://space.bilibili.com/519963684">@于仕琪</a> 老师的 <a href="https://www.bilibili.com/video/BV188411L7d2">《Makefile 20 分钟入门，简简单单，展示如何使用 Makefile 管理和编译 C++ 代码》</a>。</p>
-<span id="more"></span>
-
-<h2 id="老师所给的四个版本"><a href="#老师所给的四个版本" class="headerlink" title="老师所给的四个版本"></a>老师所给的四个版本</h2><figure class="highlight makefile"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># 版本一</span></span><br><span class="line"><span class="section">hello: main.cpp printhello.cpp factorial.cpp</span></span><br><span class="line">    g++ -o hello main.cpp printhello.cpp factorial.cpp</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本二</span></span><br><span class="line">CXX = g++</span><br><span class="line">TARGET = hello</span><br><span class="line">OBJ = main.o printhello.o factorial.o</span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJ)</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -o <span class="variable">$(TARGET)</span> <span class="variable">$(OBJ)</span></span><br><span class="line"></span><br><span class="line"><span class="section">main.o: main.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -c main.cpp</span><br><span class="line"></span><br><span class="line"><span class="section">printhello.o: printhello.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -c printhello.cpp</span><br><span class="line"></span><br><span class="line"><span class="section">factorial.o: factorial.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -c factorial.cpp</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本三</span></span><br><span class="line">CXX = g++</span><br><span class="line">TARGET = hello</span><br><span class="line">OBJ = main.o printhello.o factorial.o</span><br><span class="line"></span><br><span class="line">CXXFLAGS = -c -Wall</span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJ)</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -o <span class="variable">$@</span> <span class="variable">$^</span></span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> <span class="variable">$(CXXFLAGS)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">    rm -f *.o <span class="variable">$(TARGET)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本四</span></span><br><span class="line">CXX = g++</span><br><span class="line">TARGET = hello</span><br><span class="line">SRC = <span class="variable">$(<span class="built_in">wildcard</span> *.cpp)</span></span><br><span class="line">OBJ = <span class="variable">$(<span class="built_in">patsubst</span> %.cpp, %.o, <span class="variable">$(SRC)</span>)</span></span><br><span class="line"></span><br><span class="line">CXXFLAGS = -c -Wall</span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJ)</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -o <span class="variable">$@</span> <span class="variable">$^</span></span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> <span class="variable">$(CXXFLAGS)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">    rm -f *.o <span class="variable">$(TARGET)</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><p>首先是关于 g++ 这个 C++ 编译器的一些知识点。</p>
-<ul>
-<li><code>-c</code> 参数表示生成 obj 文件（<code>*.o</code>）；</li>
-<li><code>-o</code> 用于指定生成的可执行文件的名称，比如上边 <code>-o hello</code> 就表示生成的可执行文件叫 hello；</li>
-<li><code>-Wall</code> 表示 Warning all，也就是打开全部的警告。</li>
-</ul>
-<p>接着是 Makefile 文件的大致原理。</p>
-<p>首先看最易理解的版本一。</p>
-<figure class="highlight makefile"><table><tbody><tr><td class="code"><pre><span class="line"><span class="section">hello: main.cpp printhello.cpp factorial.cpp</span></span><br><span class="line">    g++ -o hello main.cpp printhello.cpp factorial.cpp</span><br></pre></td></tr></tbody></table></figure>
-
-<p>第一行冒号前的部分表示我们需要的文件（这里是 <code>hello</code>），冒号后表示冒号前文件的依赖项（这里是三个 <code>.cpp</code> 文件），第二行表示为了生成冒号前的文件，需要执行什么命令。Make 工具通过检测冒号后文件的时间戳是否比冒号前文件更新来判断是否要执行第二行语句。</p>
-<p>在第二个版本中，引入了变量的概念。形似 <code>XXX = YYY</code> 的东西就是在给变量赋值，使用 <code>$(XXX)</code> 来取得值 <code>YYY</code>。</p>
-<p>第三个版本中出现了 <code>$@</code>、<code>$^</code>、<code>$&lt;</code> 等符号，他们分别表示冒号前面的内容、冒号后边的全部内容和冒号后边第一个内容。</p>
-<p>第三个版本中的 <code>.PHONY: clean</code> 标识了 <code>clean</code> 是个命令而不是一个文件，这样结合下边的 <code>clean:</code> 的内容，就可以实现直接在终端输入 <code>make clean</code> 来执行 <code>rm -f *.o $(TARGET)</code> 的命令，清空生成出来的文件。</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Makefile</tag>
-        <tag>GNU Make</tag>
-        <tag>Compiling</tag>
       </tags>
   </entry>
   <entry>
@@ -3653,6 +3669,28 @@
       </tags>
   </entry>
   <entry>
+    <title>补记一个用 Vue.js 和 ElementUI 实现的在线抽奖网页</title>
+    <url>/posts/6a8a1633.html</url>
+    <content><![CDATA[<p>这件事儿发生在我的高中某个新学期开始，新来了一个电脑老师。有点打赌或者考验我的性质吧，ta 说 ta 弄了随机数点名的小网页，还能用同学的照片进行抽取，问我能不能实现一个。ta 的实现方法是 jQuery，技术上比较老，界面也不太好看。我想去尝试一下别的方法，正好也试试略微学了一点的 Vue.js，为了好看，用了 Element UI。</p>
+<span id="more"></span>
+
+<p>一两个周末最终实现到现在的效果，能输入名字抽人，能随机数抽人（学号抽人？），还有一个通过图片抽的到今天也还没做。当时对着 Vue.js 和 Element UI 的开发文档勉里勉强做出来这个效果，现在早把那些基础知识忘记了，也不知道以后有没有工夫完善它了。</p>
+<p>你可以<a href="/raw/CatchDog/CatchDog.html">点击这里</a>来玩玩看。</p>
+<p><img data-src="https://pic.imgdb.cn/item/6308b57316f2c2beb1fad0f4.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57316f2c2beb1fad0ec.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad081.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad087.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad091.png"></p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Vue.js</tag>
+        <tag>Element UI</tag>
+        <tag>Html</tag>
+        <tag>JS</tag>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Set up a blog with Hexo</title>
     <url>/posts/4ef0ac98.html</url>
     <content><![CDATA[<p>This is a simple record of my other trial to set up a blog with Hexo. I have built one on GitHub Page before, using Hexo with Icarus theme. This time, I want to try something else. I also cleaned my old blog and selectively migrated some old posts here.</p>
@@ -3794,28 +3832,6 @@
       <tags>
         <tag>Web</tag>
         <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>补记一个用 Vue.js 和 ElementUI 实现的在线抽奖网页</title>
-    <url>/posts/6a8a1633.html</url>
-    <content><![CDATA[<p>这件事儿发生在我的高中某个新学期开始，新来了一个电脑老师。有点打赌或者考验我的性质吧，ta 说 ta 弄了随机数点名的小网页，还能用同学的照片进行抽取，问我能不能实现一个。ta 的实现方法是 jQuery，技术上比较老，界面也不太好看。我想去尝试一下别的方法，正好也试试略微学了一点的 Vue.js，为了好看，用了 Element UI。</p>
-<span id="more"></span>
-
-<p>一两个周末最终实现到现在的效果，能输入名字抽人，能随机数抽人（学号抽人？），还有一个通过图片抽的到今天也还没做。当时对着 Vue.js 和 Element UI 的开发文档勉里勉强做出来这个效果，现在早把那些基础知识忘记了，也不知道以后有没有工夫完善它了。</p>
-<p>你可以<a href="/raw/CatchDog/CatchDog.html">点击这里</a>来玩玩看。</p>
-<p><img data-src="https://pic.imgdb.cn/item/6308b57316f2c2beb1fad0f4.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57316f2c2beb1fad0ec.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad081.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad087.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad091.png"></p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>Web</tag>
-        <tag>Vue.js</tag>
-        <tag>Element UI</tag>
-        <tag>Html</tag>
-        <tag>JS</tag>
       </tags>
   </entry>
   <entry>
@@ -4485,105 +4501,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Notes for Nand2Tetris: Virtual Machine I: Stack Arithmetic</title>
-    <url>/posts/d8b14680.html</url>
-    <content><![CDATA[<p>This is a note for Nand2Tetris unit 7 (Part II, Unit 1).</p>
-<span id="more"></span>
-
-<h2 id="Unit-7-0"><a href="#Unit-7-0" class="headerlink" title="Unit 7.0"></a>Unit 7.0</h2><p>Jack program:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">class Main {</span><br><span class="line">    function void main() {</span><br><span class="line">        do Output.printString("Hello World!");</span><br><span class="line">        do Output.println(); // New line.</span><br><span class="line">        return;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>What makes the abstraction work?</p>
-<ul>
-<li>Assembler</li>
-<li>Virtual machine</li>
-<li>Compiler</li>
-<li>Operating system</li>
-</ul>
-<p><img data-src="https://s1.ax1x.com/2023/07/19/pC7SA0I.png" alt="From high-level to low-level"></p>
-<p>Nand2Tetris Part II is <strong>more demanding</strong> than Nand2Tetris Part I.</p>
-<h2 id="Unit-7-1"><a href="#Unit-7-1" class="headerlink" title="Unit 7.1"></a>Unit 7.1</h2><p>Module 1: Virtual Machine</p>
-<ul>
-<li>Understanding the abstraction</li>
-<li>Building the implementation</li>
-</ul>
-<p>Module 1: Take Home Lessons</p>
-<ul>
-<li>Compilation (big picture)</li>
-<li>Virtualization</li>
-<li>VM abstraction</li>
-<li>Stack processing</li>
-<li>VM implementation</li>
-<li>Pointers</li>
-<li>Programming</li>
-</ul>
-<h2 id="Unit-7-2"><a href="#Unit-7-2" class="headerlink" title="Unit 7.2"></a>Unit 7.2</h2><p>VM Abstraction: the Stack</p>
-<p>Stack operations:</p>
-<ul>
-<li>push: add a plate to the stack’s top</li>
-<li>pop: remove the top plate</li>
-</ul>
-<p>Applying a function $f$ on the stack:</p>
-<ul>
-<li>pops the argument(s) from the stack</li>
-<li>computes $f$ on the arguments</li>
-<li>pushes the result onto the stack</li>
-</ul>
-<p>Stack arithmetic:</p>
-<p>high-level:</p>
-<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">x = 17 + 19</span><br></pre></td></tr></tbody></table></figure>
-
-<p>After compilation:</p>
-<p>low-level:</p>
-<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">push 17</span><br><span class="line">push 19</span><br><span class="line">add</span><br><span class="line">pop x</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Stack machine, manipulated by:</p>
-<ul>
-<li>Arithmetic / logical commands</li>
-<li>Memory segment commands</li>
-<li>Branching commands</li>
-<li>Function commands</li>
-</ul>
-<h2 id="Unit-7-3"><a href="#Unit-7-3" class="headerlink" title="Unit 7.3"></a>Unit 7.3</h2><p>VM Abstraction: Memory Segments</p>
-<p>Memory segments:</p>
-<ul>
-<li>local</li>
-<li>argument</li>
-<li>this</li>
-<li>that</li>
-<li>constant</li>
-<li>static</li>
-<li>pointer</li>
-<li>temp</li>
-</ul>
-<p>Syntax:</p>
-<ul>
-<li>push $segment$ $i$:<br>Where $segment$ is: argument, local, static, constant, this, that, pointer, or temp<br>and $i$ is a non-negative integer</li>
-<li>pop $segment$ $i$:<br>Where $segment$ is: argument, local, static, this, that, pointer, or temp<br>and $i$ is a non-negative integer</li>
-</ul>
-<h2 id="Unit-7-4"><a href="#Unit-7-4" class="headerlink" title="Unit 7.4"></a>Unit 7.4</h2><h3 id="Pointer-manipulation"><a href="#Pointer-manipulation" class="headerlink" title="Pointer manipulation"></a>Pointer manipulation</h3><p>asterisk: *</p>
-<h3 id="Stack-machine"><a href="#Stack-machine" class="headerlink" title="Stack machine"></a>Stack machine</h3><p>…</p>
-<h3 id="VM-translator-perspective"><a href="#VM-translator-perspective" class="headerlink" title="VM translator perspective"></a>VM translator perspective</h3><p>VM Translator:</p>
-<ul>
-<li>A program that translates VM code into machine language</li>
-<li>Each VM command generates several assembly commands</li>
-</ul>
-<h2 id="Unit-7-5"><a href="#Unit-7-5" class="headerlink" title="Unit 7.5"></a>Unit 7.5</h2><p>Implementing <strong>local</strong></p>
-<p><img data-src="" alt="Implementing local"></p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Computing System</category>
-        <category>Nand2Tetris</category>
-      </categories>
-      <tags>
-        <tag>Coursera</tag>
-        <tag>Nand2Tetris</tag>
-        <tag>Virtual Machine</tag>
-        <tag>Stack Arithmetic</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Notes for Nand2Tetris: Memory</title>
     <url>/posts/28d92424.html</url>
     <content><![CDATA[<p>This is a note for Nand2Tetris unit 3.</p>
@@ -4695,32 +4612,102 @@
       </tags>
   </entry>
   <entry>
-    <title>C/C++ 中赋值语句的返回值问题</title>
-    <url>/posts/9693ba6.html</url>
-    <content><![CDATA[<p>我曾经一直以为 C/C++ 中赋值语句的返回值不是 0 就是 1 —— 成功执行赋值操作返回 1，没有成功执行就返回 0。直到今天课上的一个例子，才让我知道，原来<strong>赋值语句的返回值就是赋的值的大小</strong>！</p>
+    <title>Notes for Nand2Tetris: Virtual Machine I: Stack Arithmetic</title>
+    <url>/posts/d8b14680.html</url>
+    <content><![CDATA[<p>This is a note for Nand2Tetris unit 7 (Part II, Unit 1).</p>
 <span id="more"></span>
 
-<p>起因是下边的这道题目：</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> i;</span><br><span class="line"><span class="comment">// 下边各个循环的执行次数是多少：</span></span><br><span class="line"><span class="comment">// 1: 死循环</span></span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>;; i++)</span><br><span class="line">{</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>, i);</span><br><span class="line">}</span><br><span class="line"><span class="comment">// 2：0 次循环</span></span><br><span class="line"><span class="keyword">for</span> (; i = <span class="number">0</span>; i++)</span><br><span class="line">{</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>, i);</span><br><span class="line">}</span><br><span class="line"><span class="comment">// 3：0 次循环</span></span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">0</span>; i++)</span><br><span class="line">{</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>, i);</span><br><span class="line">}</span><br><span class="line"><span class="comment">// 4：死循环</span></span><br><span class="line"><span class="keyword">while</span> (i = <span class="number">1</span>)</span><br><span class="line">{</span><br><span class="line">    i++;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="Unit-7-0"><a href="#Unit-7-0" class="headerlink" title="Unit 7.0"></a>Unit 7.0</h2><p>Jack program:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">class Main {</span><br><span class="line">    function void main() {</span><br><span class="line">        do Output.printString("Hello World!");</span><br><span class="line">        do Output.println(); // New line.</span><br><span class="line">        return;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<p>第一个因为 for 语句的第二个参数缺失，所以该循环不会停止；第三个初值 <code>i=0;</code> 即不满足 <code>i&lt;0;</code>，故不执行。</p>
-<p>第四个，按照我错误的理解，赋值成功返回 1，所以说得通是 <code>while(true)</code> 永远执行，但四二个却无法这么解释了。去试了试写个下边两个东西输出赋值语句的返回值，才发现原来<strong>赋值语句的返回值就是赋的值</strong>。</p>
-<p>C 代码：</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    <span class="type">int</span> a = <span class="number">0</span>, b = <span class="number">5</span>, c = <span class="number">-5</span>, d;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, (<span class="type">int</span>)(d = a));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, (<span class="type">int</span>)(d = b));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, (<span class="type">int</span>)(d = c));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>What makes the abstraction work?</p>
+<ul>
+<li>Assembler</li>
+<li>Virtual machine</li>
+<li>Compiler</li>
+<li>Operating system</li>
+</ul>
+<p><img data-src="https://s1.ax1x.com/2023/07/19/pC7SA0I.png" alt="From high-level to low-level"></p>
+<p>Nand2Tetris Part II is <strong>more demanding</strong> than Nand2Tetris Part I.</p>
+<h2 id="Unit-7-1"><a href="#Unit-7-1" class="headerlink" title="Unit 7.1"></a>Unit 7.1</h2><p>Module 1: Virtual Machine</p>
+<ul>
+<li>Understanding the abstraction</li>
+<li>Building the implementation</li>
+</ul>
+<p>Module 1: Take Home Lessons</p>
+<ul>
+<li>Compilation (big picture)</li>
+<li>Virtualization</li>
+<li>VM abstraction</li>
+<li>Stack processing</li>
+<li>VM implementation</li>
+<li>Pointers</li>
+<li>Programming</li>
+</ul>
+<h2 id="Unit-7-2"><a href="#Unit-7-2" class="headerlink" title="Unit 7.2"></a>Unit 7.2</h2><p>VM Abstraction: the Stack</p>
+<p>Stack operations:</p>
+<ul>
+<li>push: add a plate to the stack’s top</li>
+<li>pop: remove the top plate</li>
+</ul>
+<p>Applying a function $f$ on the stack:</p>
+<ul>
+<li>pops the argument(s) from the stack</li>
+<li>computes $f$ on the arguments</li>
+<li>pushes the result onto the stack</li>
+</ul>
+<p>Stack arithmetic:</p>
+<p>high-level:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">x = 17 + 19</span><br></pre></td></tr></tbody></table></figure>
 
-<p>C++ 代码：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> a = <span class="number">0</span>, b = <span class="number">5</span>, c = <span class="number">-5</span>, d;</span><br><span class="line">    cout &lt;&lt; <span class="built_in">int</span>(d = a) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="built_in">int</span>(d = b) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="built_in">int</span>(d = c) &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>After compilation:</p>
+<p>low-level:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">push 17</span><br><span class="line">push 19</span><br><span class="line">add</span><br><span class="line">pop x</span><br></pre></td></tr></tbody></table></figure>
 
-<p>输出结果均如下：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">0</span><br><span class="line">5</span><br><span class="line">-5</span><br></pre></td></tr></tbody></table></figure>
+<p>Stack machine, manipulated by:</p>
+<ul>
+<li>Arithmetic / logical commands</li>
+<li>Memory segment commands</li>
+<li>Branching commands</li>
+<li>Function commands</li>
+</ul>
+<h2 id="Unit-7-3"><a href="#Unit-7-3" class="headerlink" title="Unit 7.3"></a>Unit 7.3</h2><p>VM Abstraction: Memory Segments</p>
+<p>Memory segments:</p>
+<ul>
+<li>local</li>
+<li>argument</li>
+<li>this</li>
+<li>that</li>
+<li>constant</li>
+<li>static</li>
+<li>pointer</li>
+<li>temp</li>
+</ul>
+<p>Syntax:</p>
+<ul>
+<li>push $segment$ $i$:<br>Where $segment$ is: argument, local, static, constant, this, that, pointer, or temp<br>and $i$ is a non-negative integer</li>
+<li>pop $segment$ $i$:<br>Where $segment$ is: argument, local, static, this, that, pointer, or temp<br>and $i$ is a non-negative integer</li>
+</ul>
+<h2 id="Unit-7-4"><a href="#Unit-7-4" class="headerlink" title="Unit 7.4"></a>Unit 7.4</h2><h3 id="Pointer-manipulation"><a href="#Pointer-manipulation" class="headerlink" title="Pointer manipulation"></a>Pointer manipulation</h3><p>asterisk: *</p>
+<h3 id="Stack-machine"><a href="#Stack-machine" class="headerlink" title="Stack machine"></a>Stack machine</h3><p>…</p>
+<h3 id="VM-translator-perspective"><a href="#VM-translator-perspective" class="headerlink" title="VM translator perspective"></a>VM translator perspective</h3><p>VM Translator:</p>
+<ul>
+<li>A program that translates VM code into machine language</li>
+<li>Each VM command generates several assembly commands</li>
+</ul>
+<h2 id="Unit-7-5"><a href="#Unit-7-5" class="headerlink" title="Unit 7.5"></a>Unit 7.5</h2><p>Implementing <strong>local</strong></p>
+<p><img data-src="" alt="Implementing local"></p>
 ]]></content>
       <categories>
         <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
+        <category>Computing System</category>
+        <category>Nand2Tetris</category>
       </categories>
       <tags>
-        <tag>C/C++</tag>
+        <tag>Coursera</tag>
+        <tag>Nand2Tetris</tag>
+        <tag>Virtual Machine</tag>
+        <tag>Stack Arithmetic</tag>
       </tags>
   </entry>
   <entry>
@@ -5024,6 +5011,35 @@
       </tags>
   </entry>
   <entry>
+    <title>C/C++ 中赋值语句的返回值问题</title>
+    <url>/posts/9693ba6.html</url>
+    <content><![CDATA[<p>我曾经一直以为 C/C++ 中赋值语句的返回值不是 0 就是 1 —— 成功执行赋值操作返回 1，没有成功执行就返回 0。直到今天课上的一个例子，才让我知道，原来<strong>赋值语句的返回值就是赋的值的大小</strong>！</p>
+<span id="more"></span>
+
+<p>起因是下边的这道题目：</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> i;</span><br><span class="line"><span class="comment">// 下边各个循环的执行次数是多少：</span></span><br><span class="line"><span class="comment">// 1: 死循环</span></span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>;; i++)</span><br><span class="line">{</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>, i);</span><br><span class="line">}</span><br><span class="line"><span class="comment">// 2：0 次循环</span></span><br><span class="line"><span class="keyword">for</span> (; i = <span class="number">0</span>; i++)</span><br><span class="line">{</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>, i);</span><br><span class="line">}</span><br><span class="line"><span class="comment">// 3：0 次循环</span></span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">0</span>; i++)</span><br><span class="line">{</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>, i);</span><br><span class="line">}</span><br><span class="line"><span class="comment">// 4：死循环</span></span><br><span class="line"><span class="keyword">while</span> (i = <span class="number">1</span>)</span><br><span class="line">{</span><br><span class="line">    i++;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>第一个因为 for 语句的第二个参数缺失，所以该循环不会停止；第三个初值 <code>i=0;</code> 即不满足 <code>i&lt;0;</code>，故不执行。</p>
+<p>第四个，按照我错误的理解，赋值成功返回 1，所以说得通是 <code>while(true)</code> 永远执行，但四二个却无法这么解释了。去试了试写个下边两个东西输出赋值语句的返回值，才发现原来<strong>赋值语句的返回值就是赋的值</strong>。</p>
+<p>C 代码：</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    <span class="type">int</span> a = <span class="number">0</span>, b = <span class="number">5</span>, c = <span class="number">-5</span>, d;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, (<span class="type">int</span>)(d = a));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, (<span class="type">int</span>)(d = b));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, (<span class="type">int</span>)(d = c));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>C++ 代码：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> a = <span class="number">0</span>, b = <span class="number">5</span>, c = <span class="number">-5</span>, d;</span><br><span class="line">    cout &lt;&lt; <span class="built_in">int</span>(d = a) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="built_in">int</span>(d = b) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="built_in">int</span>(d = c) &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>输出结果均如下：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">0</span><br><span class="line">5</span><br><span class="line">-5</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++ const 用法汇总</title>
     <url>/posts/7ec6ba38.html</url>
     <content><![CDATA[<p>最开始只是用 const 来定义常量，学到了指针传参的时候又知道了用 const 来防止一些值的修改，学到类的时候又看到非静态成员函数后边加个 const 来干嘛干嘛，然后么又听说什么顶层 const、底层 const… 真是越学越迷糊了，赶紧做一波整理。</p>
@@ -5227,25 +5243,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C 语言中与 (&amp;&amp;) 和或 (||) 运算符的短路运算</title>
-    <url>/posts/13d09bbb.html</url>
-    <content><![CDATA[<p>此篇笔记来源于下边的这个题目。<br><img data-src="https://s1.ax1x.com/2022/10/12/xaK5c9.png"></p>
-<span id="more"></span>
-
-<p>本来以为结果为 3，但是实际跑了一下发现结果是 1。请教了一下大佬知道了这叫做或运算符（||）的短路运算。</p>
-<p>正常来说，或运算中只要有一个为真，结果就为真。所谓或的短路运算就是说，如果已经出现了真，那么后续的运算就不会进行了。以上面的题目为例就是，因为第一个 ++x 这个运算结果肯定为真，那么后面的另外两个 ++x 就不会运行。</p>
-<p>类似的，还有与（&amp;&amp;）的短路运算。正常来说，与运算中必须所有均为真，结果才为真。所以与的短路就是，如果前面的运算结果已经有假了，那么就可以确定这个与运算总体的结果为假，也就不会运行后边的运算了。</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C 语言中使用变量输出小数点位数</title>
     <url>/posts/45e2d42.html</url>
     <content><![CDATA[<p>这事儿要从一周前讲起，有人在群里问了这么一道题，要求用 C 实现：</p>
@@ -5266,6 +5263,25 @@
 <p>所以上边 <code>return 0;</code> 前面那个 <code>for</code> 里那么多东西都只要换成这一句就行了。</p>
 <p>下边贴出一个用动态数组实现的任意组数数据输入的代码（依然没有高精度，我不会啊）：</p>
 <figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">NUMS</span></span></span><br><span class="line"><span class="class">{</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> c;</span><br><span class="line">    <span class="type">double</span> ans;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">NUMS</span> *<span class="title">p</span> =</span> <span class="number">0</span>;</span><br><span class="line"><span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> size = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">append</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span>, <span class="type">double</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    <span class="type">int</span> a = <span class="number">0</span>, b = <span class="number">0</span>, c = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%u%u%u"</span>, &amp;a, &amp;b, &amp;c);</span><br><span class="line">        <span class="keyword">if</span> (a == <span class="number">0</span> &amp;&amp; b == <span class="number">0</span> &amp;&amp; c == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            <span class="type">double</span> tmp_ans = a * <span class="number">1.0</span> / b;</span><br><span class="line">            append(c, tmp_ans);</span><br><span class="line">        }</span><br><span class="line">    } <span class="keyword">while</span> (<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%.*lf\n"</span>, (p + i)-&gt;c, (p + i)-&gt;ans);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">append</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> _c, <span class="type">double</span> _ans)</span></span><br><span class="line">{</span><br><span class="line">    <span class="keyword">if</span> (p == <span class="number">0</span>)</span><br><span class="line">    {</span><br><span class="line">        p = <span class="built_in">calloc</span>(<span class="number">1</span>, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        p-&gt;c = _c;</span><br><span class="line">        p-&gt;ans = _ans;</span><br><span class="line">        size++;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">struct</span> NUMS *tmp = <span class="built_in">calloc</span>(size, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        <span class="built_in">memcpy</span>(tmp, p, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS) * size);</span><br><span class="line">        <span class="built_in">free</span>(p);</span><br><span class="line">        p = <span class="built_in">calloc</span>(size + <span class="number">1</span>, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        <span class="built_in">memcpy</span>(p, tmp, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS) * (size + <span class="number">1</span>));</span><br><span class="line">        (p + size)-&gt;c = _c;</span><br><span class="line">        (p + size)-&gt;ans = _ans;</span><br><span class="line">        size++;</span><br><span class="line">        <span class="built_in">free</span>(tmp);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C 语言中与 (&amp;&amp;) 和或 (||) 运算符的短路运算</title>
+    <url>/posts/13d09bbb.html</url>
+    <content><![CDATA[<p>此篇笔记来源于下边的这个题目。<br><img data-src="https://s1.ax1x.com/2022/10/12/xaK5c9.png"></p>
+<span id="more"></span>
+
+<p>本来以为结果为 3，但是实际跑了一下发现结果是 1。请教了一下大佬知道了这叫做或运算符（||）的短路运算。</p>
+<p>正常来说，或运算中只要有一个为真，结果就为真。所谓或的短路运算就是说，如果已经出现了真，那么后续的运算就不会进行了。以上面的题目为例就是，因为第一个 ++x 这个运算结果肯定为真，那么后面的另外两个 ++x 就不会运行。</p>
+<p>类似的，还有与（&amp;&amp;）的短路运算。正常来说，与运算中必须所有均为真，结果才为真。所以与的短路就是，如果前面的运算结果已经有假了，那么就可以确定这个与运算总体的结果为假，也就不会运行后边的运算了。</p>
 ]]></content>
       <categories>
         <category>CS</category>
@@ -6090,6 +6106,52 @@
       </tags>
   </entry>
   <entry>
+    <title>当形参、实参是指针变量...</title>
+    <url>/posts/1ef1e20b.html</url>
+    <content><![CDATA[<p>接<a href="https://blocklune.github.io/posts/50c16b14.html">《一个有关指针传参的问题》</a>，再理一理这里边的一些问题…</p>
+<span id="more"></span>
+
+<p>在单向值传递的过程中，我们知道，形参是对实参的值的拷贝。在实参的值传递给形参后，对形参的一切操作，都不会对实参产生什么影响。比如下边这串代码：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">5</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before func(), main(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(n);</span><br><span class="line">    cout &lt;&lt; <span class="string">"After func(), main(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before n++, func(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    n++;</span><br><span class="line">    cout &lt;&lt; <span class="string">"After n++, func(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>下边是输出结果：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Before func(), main(): n = 5</span><br><span class="line">Before n++, func(): n = 5</span><br><span class="line">After n++, func(): n = 6</span><br><span class="line">After func(), main(): n = 5</span><br></pre></td></tr></tbody></table></figure>
+
+<p>通过打印它们的地址，我们也可以认识到这一点：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">5</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"In main(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;n = "</span> &lt;&lt; &amp;n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(n);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"In func(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;n = "</span> &lt;&lt; &amp;n &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">In main():</span></span><br><span class="line"><span class="comment">n = 5</span></span><br><span class="line"><span class="comment">&amp;n = 0x61fe1c</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">In func():</span></span><br><span class="line"><span class="comment">n = 5</span></span><br><span class="line"><span class="comment">&amp;n = 0x61fdf0</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>如果把变量类型从普通类型变成指针类型，那么类似的，发生的其实也是一次值传递，也即，<strong>指针变量的值发生了一次拷贝</strong>，请看下边的例子：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"In main(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"p = "</span> &lt;&lt; (<span class="type">int</span> *)p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;p = "</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(p);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"In func(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"p = "</span> &lt;&lt; (<span class="type">int</span> *)p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;p = "</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>在我电脑上的输出结果是：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">In main():</span><br><span class="line">p = 0xee61c0</span><br><span class="line">&amp;p = 0x61fe18</span><br><span class="line"></span><br><span class="line">In func():</span><br><span class="line">p = 0xee61c0</span><br><span class="line">&amp;p = 0x61fdf0</span><br></pre></td></tr></tbody></table></figure>
+
+<p>可以看到，<code>int *</code> 类型的指针变量 <code>p</code> 的值是相同的，但地址不同，这是两个变量。</p>
+<p>把上边代码 <code>main()</code> 中的 <code>p</code> 记为 <code>p1</code>，<code>func()</code> 中的记为 <code>p2</code>，那么就可以这样理解为，当调用 <code>func()</code> 时，<code>p2</code> 与 <code>p1</code> <strong>指向了相同的位置</strong>，但它们确实<strong>不是同一个指针</strong>。</p>
+<p>对于<a href="https://blocklune.github.io/posts/50c16b14.html">《一个有关指针传参的问题》</a>中的那段错误代码，其实错误就是，在函数中 <code>new</code> 出来内存后，只是让形参指向了那片内存，而原来的实参并没有同步地指过去。</p>
+<p>但是只要确定形参的指针和实参的指针指向的地址是相同的，那么对这同一片内存进行的操作，就是同步的，比如：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    *p = <span class="number">5</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before func(), main(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(p);</span><br><span class="line">    cout &lt;&lt; <span class="string">"After func(), main(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before (*p)++, func(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    (*p)++;</span><br><span class="line">    cout &lt;&lt; <span class="string">"After (*p)++, func(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>输出结果：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Before func(), main(): (*p) = 5</span><br><span class="line">Before (*p)++, func(): (*p) = 5</span><br><span class="line">After (*p)++, func(): (*p) = 6</span><br><span class="line">After func(), main(): (*p) = 6</span><br></pre></td></tr></tbody></table></figure>
+
+<p>由于数组名其实就是数组第一个元素（下标为 0 的那个元素）的地址，所以类似的，在函数中对数组形参的操作会等效到数组实参上去：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span>[], <span class="type">int</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> a[<span class="number">3</span>] = {<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>};</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> x : a)</span><br><span class="line">        cout &lt;&lt; x &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(a, <span class="number">3</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> x : a)</span><br><span class="line">        cout &lt;&lt; x &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        arr[i]++;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>输出结果：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">0 1 2</span><br><span class="line">1 2 3</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+        <tag>Pointer</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>值传递、指针传递、引用传递</title>
     <url>/posts/c8a20144.html</url>
     <content><![CDATA[<p>接上文<a href="https://blocklune.github.io/posts/50c16b14.html">《一个有关指针传参的问题》</a>，打算结合一些简单的例子系统地梳理一下 C/C++ 中的值传递、指针传递和 C++ 中特有的 引用传递。</p>
@@ -6148,52 +6210,6 @@
         <tag>pass by pointer</tag>
         <tag>pass by value</tag>
         <tag>pass by reference</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>当形参、实参是指针变量...</title>
-    <url>/posts/1ef1e20b.html</url>
-    <content><![CDATA[<p>接<a href="https://blocklune.github.io/posts/50c16b14.html">《一个有关指针传参的问题》</a>，再理一理这里边的一些问题…</p>
-<span id="more"></span>
-
-<p>在单向值传递的过程中，我们知道，形参是对实参的值的拷贝。在实参的值传递给形参后，对形参的一切操作，都不会对实参产生什么影响。比如下边这串代码：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">5</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before func(), main(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(n);</span><br><span class="line">    cout &lt;&lt; <span class="string">"After func(), main(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before n++, func(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    n++;</span><br><span class="line">    cout &lt;&lt; <span class="string">"After n++, func(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>下边是输出结果：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Before func(), main(): n = 5</span><br><span class="line">Before n++, func(): n = 5</span><br><span class="line">After n++, func(): n = 6</span><br><span class="line">After func(), main(): n = 5</span><br></pre></td></tr></tbody></table></figure>
-
-<p>通过打印它们的地址，我们也可以认识到这一点：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">5</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"In main(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;n = "</span> &lt;&lt; &amp;n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(n);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"In func(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;n = "</span> &lt;&lt; &amp;n &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">In main():</span></span><br><span class="line"><span class="comment">n = 5</span></span><br><span class="line"><span class="comment">&amp;n = 0x61fe1c</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">In func():</span></span><br><span class="line"><span class="comment">n = 5</span></span><br><span class="line"><span class="comment">&amp;n = 0x61fdf0</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>如果把变量类型从普通类型变成指针类型，那么类似的，发生的其实也是一次值传递，也即，<strong>指针变量的值发生了一次拷贝</strong>，请看下边的例子：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"In main(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"p = "</span> &lt;&lt; (<span class="type">int</span> *)p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;p = "</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(p);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"In func(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"p = "</span> &lt;&lt; (<span class="type">int</span> *)p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;p = "</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>在我电脑上的输出结果是：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">In main():</span><br><span class="line">p = 0xee61c0</span><br><span class="line">&amp;p = 0x61fe18</span><br><span class="line"></span><br><span class="line">In func():</span><br><span class="line">p = 0xee61c0</span><br><span class="line">&amp;p = 0x61fdf0</span><br></pre></td></tr></tbody></table></figure>
-
-<p>可以看到，<code>int *</code> 类型的指针变量 <code>p</code> 的值是相同的，但地址不同，这是两个变量。</p>
-<p>把上边代码 <code>main()</code> 中的 <code>p</code> 记为 <code>p1</code>，<code>func()</code> 中的记为 <code>p2</code>，那么就可以这样理解为，当调用 <code>func()</code> 时，<code>p2</code> 与 <code>p1</code> <strong>指向了相同的位置</strong>，但它们确实<strong>不是同一个指针</strong>。</p>
-<p>对于<a href="https://blocklune.github.io/posts/50c16b14.html">《一个有关指针传参的问题》</a>中的那段错误代码，其实错误就是，在函数中 <code>new</code> 出来内存后，只是让形参指向了那片内存，而原来的实参并没有同步地指过去。</p>
-<p>但是只要确定形参的指针和实参的指针指向的地址是相同的，那么对这同一片内存进行的操作，就是同步的，比如：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    *p = <span class="number">5</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before func(), main(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(p);</span><br><span class="line">    cout &lt;&lt; <span class="string">"After func(), main(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before (*p)++, func(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    (*p)++;</span><br><span class="line">    cout &lt;&lt; <span class="string">"After (*p)++, func(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>输出结果：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Before func(), main(): (*p) = 5</span><br><span class="line">Before (*p)++, func(): (*p) = 5</span><br><span class="line">After (*p)++, func(): (*p) = 6</span><br><span class="line">After func(), main(): (*p) = 6</span><br></pre></td></tr></tbody></table></figure>
-
-<p>由于数组名其实就是数组第一个元素（下标为 0 的那个元素）的地址，所以类似的，在函数中对数组形参的操作会等效到数组实参上去：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span>[], <span class="type">int</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> a[<span class="number">3</span>] = {<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>};</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> x : a)</span><br><span class="line">        cout &lt;&lt; x &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(a, <span class="number">3</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> x : a)</span><br><span class="line">        cout &lt;&lt; x &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        arr[i]++;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>输出结果：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">0 1 2</span><br><span class="line">1 2 3</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-        <tag>Pointer</tag>
       </tags>
   </entry>
   <entry>
