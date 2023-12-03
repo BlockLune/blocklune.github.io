@@ -9,8 +9,33 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Sun, 12 Nov 2023 11:29:58 GMT</pubDate>
+    <pubDate>Sun, 03 Dec 2023 04:33:18 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>A Simple CMake Example</title>
+      <link>https://fishg.top/posts/badca0d4.html</link>
+      <guid>https://fishg.top/posts/badca0d4.html</guid>
+      <pubDate>Sun, 03 Dec 2023 04:30:07 GMT</pubDate>
+      
+      <description>&lt;p&gt;A simple CMake example for reviewing.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://fishg.top/categories/cs/">CS</category>
+      
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
+      
+      
+      <category domain="https://fishg.top/tags/compiling/">Compiling</category>
+      
+      <category domain="https://fishg.top/tags/cmake/">CMake</category>
+      
+      
+      <comments>https://fishg.top/posts/badca0d4.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Note for Intro to Machine Learning</title>
@@ -1859,6 +1884,8 @@
       <category domain="https://fishg.top/categories/cs/web/">Web</category>
       
       
+      <category domain="https://fishg.top/tags/web/">Web</category>
+      
       <category domain="https://fishg.top/tags/vue-js/">Vue.js</category>
       
       <category domain="https://fishg.top/tags/element-ui/">Element UI</category>
@@ -1866,8 +1893,6 @@
       <category domain="https://fishg.top/tags/html/">Html</category>
       
       <category domain="https://fishg.top/tags/js/">JS</category>
-      
-      <category domain="https://fishg.top/tags/web/">Web</category>
       
       
       <comments>https://fishg.top/posts/6a8a1633.html#disqus_thread</comments>
