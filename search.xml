@@ -3139,6 +3139,7 @@
 <td>Use <code>lsd --tree</code></td>
 </tr>
 </tbody></table>
+<p>Also see <a href="https://github.com/ibraheemdev/modern-unix">Modern Unix</a></p>
 <h2 id="Other-Tools"><a href="#Other-Tools" class="headerlink" title="Other Tools"></a>Other Tools</h2><ul>
 <li><p>cloc: a command-line tool to count codes (See <a href="https://github.com/AlDanial/cloc">GitHub</a>)</p>
 </li>
