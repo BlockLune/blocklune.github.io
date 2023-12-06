@@ -3045,25 +3045,6 @@
       </tags>
   </entry>
   <entry>
-    <title>A Simple CMake Example</title>
-    <url>/posts/badca0d4.html</url>
-    <content><![CDATA[<p>A simple CMake example for reviewing.</p>
-<span id="more"></span>
-
-<h2 id="File-Structure"><a href="#File-Structure" class="headerlink" title="File Structure"></a>File Structure</h2><figure class="highlight txt"><table><tbody><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── CMakeLists.txt</span><br><span class="line">├── src</span><br><span class="line">│&nbsp;&nbsp; ├── adj_list_graph.c</span><br><span class="line">│&nbsp;&nbsp; ├── adj_list_graph.h</span><br><span class="line">│&nbsp;&nbsp; ├── best_path.c</span><br><span class="line">│&nbsp;&nbsp; ├── mat_graph.c</span><br><span class="line">│&nbsp;&nbsp; ├── queue.c</span><br><span class="line">│&nbsp;&nbsp; ├── queue.h</span><br><span class="line">│&nbsp;&nbsp; └── searching.c</span><br><span class="line">└── test</span><br><span class="line">    ├── best_path</span><br><span class="line">    │&nbsp;&nbsp; ├── test.in</span><br><span class="line">    │&nbsp;&nbsp; └── test_output.txt</span><br><span class="line">    └── searching</span><br><span class="line">        ├── test.in</span><br><span class="line">        └── test_output.txt</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="CMakeLists-txt"><a href="#CMakeLists-txt" class="headerlink" title="CMakeLists.txt"></a>CMakeLists.txt</h2><figure class="highlight cmake"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.12</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># c11 standard</span></span><br><span class="line"><span class="keyword">set</span>(CMAKE_C_STANDARD <span class="number">11</span>)</span><br><span class="line"><span class="keyword">set</span>(CMAKE_C_STANDARD_REQUIRED <span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Project 1: mat_graph_basic</span></span><br><span class="line"><span class="keyword">project</span>(mat_graph_basic)</span><br><span class="line"><span class="keyword">set</span>(PROJ_SOURCE_FILES</span><br><span class="line">        src/queue.c</span><br><span class="line">        src/mat_graph.c</span><br><span class="line">        )</span><br><span class="line"><span class="keyword">add_executable</span>(<span class="variable">${PROJECT_NAME}</span> <span class="variable">${PROJ_SOURCE_FILES}</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Project 2: searching</span></span><br><span class="line"><span class="keyword">project</span>(searching)</span><br><span class="line"><span class="keyword">set</span>(PROJ_SOURCE_FILES</span><br><span class="line">        src/searching.c</span><br><span class="line">        src/adj_list_graph.c</span><br><span class="line">        src/queue.c</span><br><span class="line">        )</span><br><span class="line"><span class="keyword">add_executable</span>(<span class="variable">${PROJECT_NAME}</span> <span class="variable">${PROJ_SOURCE_FILES}</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Project 3: best_path</span></span><br><span class="line"><span class="keyword">project</span>(best_path)</span><br><span class="line"><span class="keyword">set</span>(PROJ_SOURCE_FILES</span><br><span class="line">        src/best_path.c</span><br><span class="line">        src/adj_list_graph.c</span><br><span class="line">        src/queue.c</span><br><span class="line">        )</span><br><span class="line"><span class="keyword">add_executable</span>(<span class="variable">${PROJECT_NAME}</span> <span class="variable">${PROJ_SOURCE_FILES}</span>)</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Compiling</tag>
-        <tag>CMake</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Awesome CLI Apps</title>
     <url>/posts/d64ccd8c.html</url>
     <content><![CDATA[<p>This is a list of some awesome CLI (command-line interface) apps.</p>
