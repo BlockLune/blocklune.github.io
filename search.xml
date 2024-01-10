@@ -3147,56 +3147,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Installing Ubuntu</title>
-    <url>/posts/ca281680.html</url>
-    <content><![CDATA[<p>This is NOT a tutorial of installing Ubuntu. Just write down some issues I met during my installation.</p>
-<span id="more"></span>
-
-<h2 id="User"><a href="#User" class="headerlink" title="User"></a>User</h2><p>It’s not recommended to login your ubuntu as <code>root</code>. To create a new user with the default home directory, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">useradd --create-home &lt;username&gt;</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">useradd -m &lt;username&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>To add the new user to sudoers, run the command below <strong>as <code>root</code></strong>:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">visudo</span><br></pre></td></tr></tbody></table></figure>
-
-<div class="note "><p>You may install <code>sudo</code> first. Run the command below <strong>as <code>root</code></strong>:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">apt install sudo</span><br></pre></td></tr></tbody></table></figure>
-</div>
-
-<h2 id="Software"><a href="#Software" class="headerlink" title="Software"></a>Software</h2><h3 id="Package-Manager"><a href="#Package-Manager" class="headerlink" title="Package Manager"></a>Package Manager</h3><p>The first thing you need to do is configuring <code>apt</code>‘s mirror.</p>
-<p>If you also want to use the mirror from Tsinghua:</p>
-<p>See <em><a href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/">ubuntu | 镜像使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror</a></em></p>
-<p>To update your <code>apt</code> repository, press <code>Ctrl + Alt + T</code> to run a terminal, and run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h3><p>I often use fishshell as my default login shell. To install it, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo apt install fish</span><br></pre></td></tr></tbody></table></figure>
-
-<p>To set fishshell for the current user:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">chsh --shell &lt;path/to/fish&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>To find out where fishshell is, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">which</span> fish</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="AppStore"><a href="#AppStore" class="headerlink" title="AppStore"></a>AppStore</h3><p>This one is interesting. You may give it a try.</p>
-<p><em><a href="https://gitee.com/deepin-community-store/spark-store">Spark-Store</a></em></p>
-<h3 id="Browser"><a href="#Browser" class="headerlink" title="Browser"></a>Browser</h3><p>I use Microsoft Edge. It’s pretty easy to download the <code>.deb</code> on its <em><a href="https://www.microsoft.com/en-us/edge/download">official website</a></em>. But if you want to install it from command line:</p>
-<p>See <em><a href="https://www.linuxcapable.com/how-to-install-microsoft-edge-on-ubuntu-linux/">How to Install Microsoft Edge on Ubuntu 22.04 | 20.04 - LinuxCapable</a></em></p>
-<h3 id="Proxy"><a href="#Proxy" class="headerlink" title="Proxy"></a>Proxy</h3><p>Maybe <em><a href="https://github.com/zzzgydi/clash-verge">zzzgydi/clash-verge: A Clash GUI based on tauri. Supports Windows, macOS and Linux</a></em> or <em><a href="https://github.com/Fndroid/clash_for_windows_pkg">Fndroid/clash_for_windows_pkg</a></em></p>
-<h3 id="CLI-APPs"><a href="#CLI-APPs" class="headerlink" title="CLI-APPs"></a>CLI-APPs</h3><p>See <a href="https://blocklune.github.io/posts/d64ccd8c.html">Awesome CLI Apps</a>.</p>
-<h2 id="Q-A"><a href="#Q-A" class="headerlink" title="Q &amp; A"></a>Q &amp; A</h2><p>Q: The operating system always freezes on the welcome page.<br>A: Install / Update NVIDIA driver.</p>
-<p>See <em><a href="https://www.cnblogs.com/Leozi/p/13281224.html">Ubuntu 下安装 NVIDIA 驱动的三种方法</a></em></p>
-<p>and <em><a href="https://superuser.com/questions/1750975/nouveau-00000100-0-drm-failed-to-idle-channel-0-drm">ubuntu - nouveau 0000:01:00.0: DRM: failed to idle channel 0 [DRM] - Super User</a></em></p>
-<p>Q: Why the Microsoft Edge always show <em>This page is having a problem</em>?</p>
-<p>A: See <em><a href="https://answers.microsoft.com/en-us/microsoftedge/forum/all/this-page-is-having-a-problem-error-code-sigill/e2a09ac0-f243-40cb-a235-41abb2148f07">This page is having a problem Error Code: SIGILL - Microsoft Community</a></em></p>
-<p>and <a href="https://www.linuxcapable.com/how-to-install-microsoft-edge-on-ubuntu-linux/">here</a></p>
-<p>Q: Why does the settings disappear?<br>A: Run <code>sudo apt install gnome-control-center</code> to (re)install gnome-control-center.</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Better right-click menu in Win11</title>
     <url>/posts/798c36fc.html</url>
     <content><![CDATA[<p>When the Windows system was updated to version 11, the right-click menu was completely redesigned. Microsoft is apparently trying to make it simpler and more modern, but the way they have chosen to do it is really brute force: hiding everything useful in the secondary menu! I find this really annoying. Luckily, we have a way to bring back the classic, and even customize it and make it better! (This post is in Chinese.)</p>
@@ -3257,6 +3207,56 @@
       <tags>
         <tag>Windows</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Installing Ubuntu</title>
+    <url>/posts/ca281680.html</url>
+    <content><![CDATA[<p>This is NOT a tutorial of installing Ubuntu. Just write down some issues I met during my installation.</p>
+<span id="more"></span>
+
+<h2 id="User"><a href="#User" class="headerlink" title="User"></a>User</h2><p>It’s not recommended to login your ubuntu as <code>root</code>. To create a new user with the default home directory, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">useradd --create-home &lt;username&gt;</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">useradd -m &lt;username&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To add the new user to sudoers, run the command below <strong>as <code>root</code></strong>:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">visudo</span><br></pre></td></tr></tbody></table></figure>
+
+<div class="note "><p>You may install <code>sudo</code> first. Run the command below <strong>as <code>root</code></strong>:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">apt install sudo</span><br></pre></td></tr></tbody></table></figure>
+</div>
+
+<h2 id="Software"><a href="#Software" class="headerlink" title="Software"></a>Software</h2><h3 id="Package-Manager"><a href="#Package-Manager" class="headerlink" title="Package Manager"></a>Package Manager</h3><p>The first thing you need to do is configuring <code>apt</code>‘s mirror.</p>
+<p>If you also want to use the mirror from Tsinghua:</p>
+<p>See <em><a href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/">ubuntu | 镜像使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror</a></em></p>
+<p>To update your <code>apt</code> repository, press <code>Ctrl + Alt + T</code> to run a terminal, and run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h3><p>I often use fishshell as my default login shell. To install it, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo apt install fish</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To set fishshell for the current user:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">chsh --shell &lt;path/to/fish&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To find out where fishshell is, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">which</span> fish</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="AppStore"><a href="#AppStore" class="headerlink" title="AppStore"></a>AppStore</h3><p>This one is interesting. You may give it a try.</p>
+<p><em><a href="https://gitee.com/deepin-community-store/spark-store">Spark-Store</a></em></p>
+<h3 id="Browser"><a href="#Browser" class="headerlink" title="Browser"></a>Browser</h3><p>I use Microsoft Edge. It’s pretty easy to download the <code>.deb</code> on its <em><a href="https://www.microsoft.com/en-us/edge/download">official website</a></em>. But if you want to install it from command line:</p>
+<p>See <em><a href="https://www.linuxcapable.com/how-to-install-microsoft-edge-on-ubuntu-linux/">How to Install Microsoft Edge on Ubuntu 22.04 | 20.04 - LinuxCapable</a></em></p>
+<h3 id="Proxy"><a href="#Proxy" class="headerlink" title="Proxy"></a>Proxy</h3><p>Maybe <em><a href="https://github.com/zzzgydi/clash-verge">zzzgydi/clash-verge: A Clash GUI based on tauri. Supports Windows, macOS and Linux</a></em> or <em><a href="https://github.com/Fndroid/clash_for_windows_pkg">Fndroid/clash_for_windows_pkg</a></em></p>
+<h3 id="CLI-APPs"><a href="#CLI-APPs" class="headerlink" title="CLI-APPs"></a>CLI-APPs</h3><p>See <a href="https://blocklune.github.io/posts/d64ccd8c.html">Awesome CLI Apps</a>.</p>
+<h2 id="Q-A"><a href="#Q-A" class="headerlink" title="Q &amp; A"></a>Q &amp; A</h2><p>Q: The operating system always freezes on the welcome page.<br>A: Install / Update NVIDIA driver.</p>
+<p>See <em><a href="https://www.cnblogs.com/Leozi/p/13281224.html">Ubuntu 下安装 NVIDIA 驱动的三种方法</a></em></p>
+<p>and <em><a href="https://superuser.com/questions/1750975/nouveau-00000100-0-drm-failed-to-idle-channel-0-drm">ubuntu - nouveau 0000:01:00.0: DRM: failed to idle channel 0 [DRM] - Super User</a></em></p>
+<p>Q: Why the Microsoft Edge always show <em>This page is having a problem</em>?</p>
+<p>A: See <em><a href="https://answers.microsoft.com/en-us/microsoftedge/forum/all/this-page-is-having-a-problem-error-code-sigill/e2a09ac0-f243-40cb-a235-41abb2148f07">This page is having a problem Error Code: SIGILL - Microsoft Community</a></em></p>
+<p>and <a href="https://www.linuxcapable.com/how-to-install-microsoft-edge-on-ubuntu-linux/">here</a></p>
+<p>Q: Why does the settings disappear?<br>A: Run <code>sudo apt install gnome-control-center</code> to (re)install gnome-control-center.</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
   </entry>
   <entry>
     <title>joshuto: A great file manager in terminal</title>
@@ -3508,6 +3508,10 @@
 <h2 id="Vim-Mode-in-Other-Editors"><a href="#Vim-Mode-in-Other-Editors" class="headerlink" title="Vim Mode in Other Editors"></a>Vim Mode in Other Editors</h2><h3 id="Vim-in-Code"><a href="#Vim-in-Code" class="headerlink" title="Vim in Code"></a>Vim in Code</h3><p>In VS Code, I use <a href="https://marketplace.visualstudio.com/items?itemName=vscodevim.vim">vscodevim</a> and configure it in <code>settings.json</code> like this:</p>
 <figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line"><span class="punctuation">{</span></span><br><span class="line">  <span class="attr">"vim.camelCaseMotion.enable"</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"vim.easymotion"</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"vim.history"</span><span class="punctuation">:</span> <span class="number">200</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"vim.hlsearch"</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"vim.incsearch"</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"vim.insertModeKeyBindings"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">{</span> <span class="attr">"after"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">"&lt;esc&gt;"</span><span class="punctuation">]</span><span class="punctuation">,</span> <span class="attr">"before"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">"j"</span><span class="punctuation">,</span> <span class="string">"k"</span><span class="punctuation">]</span> <span class="punctuation">}</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"vim.ignorecase"</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"vim.smartcase"</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"vim.leader"</span><span class="punctuation">:</span> <span class="string">" "</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"vim.normalModeKeyBindings"</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">{</span> <span class="attr">"after"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">"g"</span><span class="punctuation">,</span> <span class="string">"j"</span><span class="punctuation">]</span><span class="punctuation">,</span> <span class="attr">"before"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">"j"</span><span class="punctuation">]</span> <span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">{</span> <span class="attr">"after"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">"g"</span><span class="punctuation">,</span> <span class="string">"k"</span><span class="punctuation">]</span><span class="punctuation">,</span> <span class="attr">"before"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">"k"</span><span class="punctuation">]</span> <span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">{</span> <span class="attr">"before"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">"&lt;leader&gt;"</span><span class="punctuation">,</span> <span class="string">"-"</span><span class="punctuation">]</span><span class="punctuation">,</span> <span class="attr">"commands"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">":sp"</span><span class="punctuation">]</span> <span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">{</span> <span class="attr">"before"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">"&lt;leader&gt;"</span><span class="punctuation">,</span> <span class="string">"|"</span><span class="punctuation">]</span><span class="punctuation">,</span> <span class="attr">"commands"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">":vsp"</span><span class="punctuation">]</span> <span class="punctuation">}</span></span><br><span class="line">  <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"vim.useCtrlKeys"</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"vim.useSystemClipboard"</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"vim.visualstar"</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"vim.visualModeKeyBindings"</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">{</span> <span class="attr">"after"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">"g"</span><span class="punctuation">,</span> <span class="string">"j"</span><span class="punctuation">]</span><span class="punctuation">,</span> <span class="attr">"before"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">"j"</span><span class="punctuation">]</span> <span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">{</span> <span class="attr">"after"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">"g"</span><span class="punctuation">,</span> <span class="string">"k"</span><span class="punctuation">]</span><span class="punctuation">,</span> <span class="attr">"before"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">"k"</span><span class="punctuation">]</span> <span class="punctuation">}</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
 
+<p>If you want to auto switch input method, the configuration should be:</p>
+<figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">"vim.autoSwitchInputMethod.enable"</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">"vim.autoSwitchInputMethod.defaultIM"</span><span class="punctuation">:</span> <span class="string">"com.apple.keylayout.US"</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">"vim.autoSwitchInputMethod.obtainIMCmd"</span><span class="punctuation">:</span> <span class="string">"/usr/local/bin/im-select"</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">"vim.autoSwitchInputMethod.switchIMCmd"</span><span class="punctuation">:</span> <span class="string">"/usr/local/bin/im-select {im}"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>Learn more <a href="https://github.com/VSCodeVim/Vim/blob/master/README.md/#input-method">here</a>.</p>
 <p>And in <code>keybindings.json</code> like this:</p>
 <figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line"><span class="punctuation">[</span></span><br><span class="line">  <span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"key"</span><span class="punctuation">:</span> <span class="string">"ctrl+h"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"command"</span><span class="punctuation">:</span> <span class="string">"workbench.action.navigateLeft"</span></span><br><span class="line">  <span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"key"</span><span class="punctuation">:</span> <span class="string">"ctrl+j"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"command"</span><span class="punctuation">:</span> <span class="string">"workbench.action.navigateDown"</span></span><br><span class="line">  <span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"key"</span><span class="punctuation">:</span> <span class="string">"ctrl+k"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"command"</span><span class="punctuation">:</span> <span class="string">"workbench.action.navigateUp"</span></span><br><span class="line">  <span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"key"</span><span class="punctuation">:</span> <span class="string">"ctrl+l"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"command"</span><span class="punctuation">:</span> <span class="string">"workbench.action.navigateRight"</span></span><br><span class="line">  <span class="punctuation">}</span></span><br><span class="line"><span class="punctuation">]</span></span><br></pre></td></tr></tbody></table></figure>
 
