@@ -9,7 +9,7 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Fri, 26 Jan 2024 10:13:20 GMT</pubDate>
+    <pubDate>Fri, 26 Jan 2024 16:56:51 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -463,7 +463,7 @@
       <pubDate>Fri, 14 Jul 2023 03:59:14 GMT</pubDate>
       
       <description>&lt;p&gt;Here are my notes for course &lt;a href=&quot;https://study.163.com/course/courseMain.htm?courseId=1210076550&quot;&gt;Machine Learning&lt;/a&gt; taught by Andrew Ng.&lt;/p&gt;
-&lt;p&gt;About exercise: I didn’t do the original version exercise which depends on Octave or Matlab, but a third-party Python version (See &lt;a href=&quot;https://github.com/nsoojin/coursera-ml-py&quot;&gt;nsoojin/coursera-ml-py&lt;/a&gt;).&lt;/p&gt;</description>
+&lt;p&gt;About exercise: I didn&#39;t do the original version exercise which depends on Octave or Matlab, but a third-party Python version (See &lt;a href=&quot;https://github.com/nsoojin/coursera-ml-py&quot;&gt;nsoojin/coursera-ml-py&lt;/a&gt;).&lt;/p&gt;</description>
       
       
       
@@ -529,7 +529,7 @@
       <guid>https://fishg.top/posts/348795e3.html</guid>
       <pubDate>Wed, 12 Jul 2023 03:39:18 GMT</pubDate>
       
-      <description>&lt;p&gt;When in a terminal, sometimes it’s really annoying to keep on typing in &lt;code&gt;cd&lt;/code&gt; or something else to browse the files and directories. Can we do it just like what we do in GUI? Then joshuto may be helpful to you.&lt;/p&gt;</description>
+      <description>&lt;p&gt;When in a terminal, sometimes it&#39;s really annoying to keep on typing in &lt;code&gt;cd&lt;/code&gt; or something else to browse the files and directories. Can we do it just like what we do in GUI? Then joshuto may be helpful to you.&lt;/p&gt;</description>
       
       
       
@@ -1002,7 +1002,7 @@
       <guid>https://fishg.top/posts/96f7ff9f.html</guid>
       <pubDate>Sat, 22 Apr 2023 02:27:09 GMT</pubDate>
       
-      <description>&lt;p&gt;There are a huge amount of options in Vim. It enables us to customize our own Vim as our wishes. Here’s my config.&lt;/p&gt;</description>
+      <description>&lt;p&gt;There are a huge amount of options in Vim. It enables us to customize our own Vim as our wishes. Here&#39;s my config.&lt;/p&gt;</description>
       
       
       
@@ -1052,7 +1052,7 @@
       <guid>https://fishg.top/posts/f96b3358.html</guid>
       <pubDate>Sat, 25 Mar 2023 12:12:40 GMT</pubDate>
       
-      <description>&lt;p&gt;I used to control users’ input by making the input a string and process it later. But today, my friend posed this question to me: Can we control input without a char array or string class?&lt;/p&gt;</description>
+      <description>&lt;p&gt;I used to control users&#39; input by making the input a string and process it later. But today, my friend posed this question to me: Can we control input without a char array or string class?&lt;/p&gt;</description>
       
       
       
@@ -1154,7 +1154,7 @@
       <guid>https://fishg.top/posts/e7bc2e88.html</guid>
       <pubDate>Sun, 12 Mar 2023 02:28:47 GMT</pubDate>
       
-      <description>&lt;p&gt;When using Linux, I often use &lt;code&gt;cat&lt;/code&gt; to browse some short codes. But it doesn’t support syntax highlighting originally. So, I found one of its replacements: &lt;code&gt;bat&lt;/code&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;When using Linux, I often use &lt;code&gt;cat&lt;/code&gt; to browse some short codes. But it doesn&#39;t support syntax highlighting originally. So, I found one of its replacements: &lt;code&gt;bat&lt;/code&gt;.&lt;/p&gt;</description>
       
       
       
@@ -1382,7 +1382,7 @@
       <guid>https://fishg.top/posts/504f038d.html</guid>
       <pubDate>Sun, 04 Dec 2022 11:37:17 GMT</pubDate>
       
-      <description>&lt;p&gt;这是一次计算机导论课的作业。本来对于最大公约数的求解算法，我就只知道一个&lt;strong&gt;辗转相除法&lt;/strong&gt;。原来，其实还有别的一些 …&lt;/p&gt;</description>
+      <description>&lt;p&gt;这是一次计算机导论课的作业。本来对于最大公约数的求解算法，我就只知道一个&lt;strong&gt;辗转相除法&lt;/strong&gt;。原来，其实还有别的一些 ...&lt;/p&gt;</description>
       
       
       
@@ -1457,7 +1457,7 @@
       <guid>https://fishg.top/posts/7ec6ba38.html</guid>
       <pubDate>Thu, 17 Nov 2022 12:05:00 GMT</pubDate>
       
-      <description>&lt;p&gt;最开始只是用 const 来定义常量，学到了指针传参的时候又知道了用 const 来防止一些值的修改，学到类的时候又看到非静态成员函数后边加个 const 来干嘛干嘛，然后么又听说什么顶层 const、底层 const… 真是越学越迷糊了，赶紧做一波整理。&lt;/p&gt;</description>
+      <description>&lt;p&gt;最开始只是用 const 来定义常量，学到了指针传参的时候又知道了用 const 来防止一些值的修改，学到类的时候又看到非静态成员函数后边加个 const 来干嘛干嘛，然后么又听说什么顶层 const、底层 const... 真是越学越迷糊了，赶紧做一波整理。&lt;/p&gt;</description>
       
       
       
@@ -1484,7 +1484,7 @@
       <guid>https://fishg.top/posts/57fd79a.html</guid>
       <pubDate>Wed, 16 Nov 2022 12:28:15 GMT</pubDate>
       
-      <description>&lt;p&gt;一维数组还是比较容易理解的，但是二维数组，我始终没弄清楚这玩意儿是按照什么规则从二维的样子转成一维然后存起来的，也因此常常犯下下标写反了的错误。我觉得是时候详细地理一理这玩意儿到底是个啥了…&lt;/p&gt;</description>
+      <description>&lt;p&gt;一维数组还是比较容易理解的，但是二维数组，我始终没弄清楚这玩意儿是按照什么规则从二维的样子转成一维然后存起来的，也因此常常犯下下标写反了的错误。我觉得是时候详细地理一理这玩意儿到底是个啥了...&lt;/p&gt;</description>
       
       
       
@@ -1513,7 +1513,7 @@
       <guid>https://fishg.top/posts/1ef1e20b.html</guid>
       <pubDate>Wed, 16 Nov 2022 06:46:44 GMT</pubDate>
       
-      <description>&lt;p&gt;接&lt;a href=&quot;https://blocklune.github.io/posts/50c16b14.html&quot;&gt;《一个有关指针传参的问题》&lt;/a&gt;，再理一理这里边的一些问题…&lt;/p&gt;</description>
+      <description>&lt;p&gt;接&lt;a href=&quot;https://blocklune.github.io/posts/50c16b14.html&quot;&gt;《一个有关指针传参的问题》&lt;/a&gt;，再理一理这里边的一些问题...&lt;/p&gt;</description>
       
       
       
@@ -1686,7 +1686,7 @@
       <guid>https://fishg.top/posts/f17b3e8b.html</guid>
       <pubDate>Sat, 15 Oct 2022 12:36:02 GMT</pubDate>
       
-      <description>&lt;p&gt;最近一段时间，感觉突然之间，就有很多很多将现实图片二次元化啊，按照每句歌词生成一副画作啊的 AI 绘画应用的图文视频出现。和室友聊天还说是不是最近一段时间 AI 技术突破什么瓶颈突飞猛进了。后来才知道，原来是 NovelAI 泄露了… 这样一来，本地部署方便了起来，于是整了一个玩玩。由于跑 AI 嘛，GPU 比较呼啸，跟挖矿一样，我就戏称我这是在 “挖老婆矿” 了。&lt;/p&gt;</description>
+      <description>&lt;p&gt;最近一段时间，感觉突然之间，就有很多很多将现实图片二次元化啊，按照每句歌词生成一副画作啊的 AI 绘画应用的图文视频出现。和室友聊天还说是不是最近一段时间 AI 技术突破什么瓶颈突飞猛进了。后来才知道，原来是 NovelAI 泄露了... 这样一来，本地部署方便了起来，于是整了一个玩玩。由于跑 AI 嘛，GPU 比较呼啸，跟挖矿一样，我就戏称我这是在 “挖老婆矿” 了。&lt;/p&gt;</description>
       
       
       
@@ -1884,7 +1884,7 @@
       <guid>https://fishg.top/posts/66959aa9.html</guid>
       <pubDate>Sat, 10 Sep 2022 02:59:13 GMT</pubDate>
       
-      <description>&lt;p&gt;最近几天一直在忙着考驾照的事情，8 月份第一次考科二挂了后就开始边练科二边练科三。最近两三天先后把科三、第二次科二、科四过了，顺利拿到了 C1 驾照。但是… 学的是手动挡，家里的车却是自动挡。所以想着如果不记一下的话，以后估计开惯了自动挡手动挡就不会了，便想做些笔记。顺便也记录一下笔者自己的学车过程。&lt;/p&gt;</description>
+      <description>&lt;p&gt;最近几天一直在忙着考驾照的事情，8 月份第一次考科二挂了后就开始边练科二边练科三。最近两三天先后把科三、第二次科二、科四过了，顺利拿到了 C1 驾照。但是... 学的是手动挡，家里的车却是自动挡。所以想着如果不记一下的话，以后估计开惯了自动挡手动挡就不会了，便想做些笔记。顺便也记录一下笔者自己的学车过程。&lt;/p&gt;</description>
       
       
       
@@ -2008,7 +2008,7 @@
       <guid>https://fishg.top/posts/b9a9b40d.html</guid>
       <pubDate>Sat, 23 Jul 2022 06:34:00 GMT</pubDate>
       
-      <description>&lt;p&gt;事情的起因是跟爸闲聊我抱怨家里为什么没有预埋到我和我妹房间的网线，结果才知道原来是有的，只不过藏在空面板里没有装接口…… 于是就开始兴致勃勃地想把它装起来 (这样我房间里就有有线网了！)，赶紧买了面板，交换机，网线和一众工具。&lt;/p&gt;</description>
+      <description>&lt;p&gt;事情的起因是跟爸闲聊我抱怨家里为什么没有预埋到我和我妹房间的网线，结果才知道原来是有的，只不过藏在空面板里没有装接口...... 于是就开始兴致勃勃地想把它装起来 (这样我房间里就有有线网了！)，赶紧买了面板，交换机，网线和一众工具。&lt;/p&gt;</description>
       
       
       
@@ -2029,8 +2029,8 @@
       <guid>https://fishg.top/posts/72a59031.html</guid>
       <pubDate>Sat, 13 Jul 2019 14:00:00 GMT</pubDate>
       
-      <description>&lt;p&gt;你可能常年使用着国产的一些浏览器，却也常年遭受着各种弹窗、全家桶的侵扰…&lt;/p&gt;
-&lt;p&gt;你也可能不止一次地听过”Chrome”，安装下来后却发现他空空如也，又默默地装回那些国产…&lt;/p&gt;
+      <description>&lt;p&gt;你可能常年使用着国产的一些浏览器，却也常年遭受着各种弹窗、全家桶的侵扰...&lt;/p&gt;
+&lt;p&gt;你也可能不止一次地听过 &quot;Chrome&quot;，安装下来后却发现他空空如也，又默默地装回那些国产...&lt;/p&gt;
 &lt;p&gt;那么，让这些插件来拯救你吧&lt;/p&gt;</description>
       
       

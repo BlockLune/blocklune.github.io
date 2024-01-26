@@ -30,7 +30,7 @@
 <meta property="og:description" content="This is a note for Lecture 8, CS106L, Spring 2023.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-05-30T07:44:00.000Z">
-<meta property="article:modified_time" content="2024-01-26T10:13:20.840Z">
+<meta property="article:modified_time" content="2024-01-26T16:56:51.911Z">
 <meta property="article:author" content="BlockLune">
 <meta property="article:tag" content="C&#x2F;C++">
 <meta property="article:tag" content="const">
@@ -304,7 +304,7 @@
 <p>Instead, we should do this:</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">const</span> std::string&amp; <span class="title">StrVector::at</span><span class="params">(<span class="type">size_t</span> index)</span> <span class="type">const</span> </span>{</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">static_cast</span>&lt;<span class="type">const</span> std::string&amp;&gt;(</span><br><span class="line">      <span class="built_in">const_cast</span>&lt;StrVector*&gt;(<span class="keyword">this</span>)-&gt;<span class="built_in">at</span>(index));</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<p>So, what’s <code>static_cast</code> and <code>const_cast</code>?</p>
+<p>So, what's <code>static_cast</code> and <code>const_cast</code>?</p>
 <p><strong>static_cast&lt;new-type&gt;(expression)</strong> is used to convert from one type to another. For example: <code>int my_int = static_cast&lt;int&gt;(3.1)</code>. Note that it CANNOT BE USED WHEN conversion would cast away constness.</p>
 <p>Learn more <a target="_blank" rel="noopener" href="https://en.cppreference.com/w/cpp/language/static_cast">here</a></p>
 <p><strong>const_cast&lt;new-type&gt;(expression)</strong> is used to cast away (remove) constness. It allows you to make non-const pointer or reference to const-object like this:</p>

@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://s1.ax1x.com/2023/03/23/pp0eZtS.png">
 <meta property="og:image" content="https://s1.ax1x.com/2023/03/23/pp0mVD1.png">
 <meta property="article:published_time" content="2023-03-23T14:27:08.000Z">
-<meta property="article:modified_time" content="2024-01-26T10:13:20.840Z">
+<meta property="article:modified_time" content="2024-01-26T16:56:51.911Z">
 <meta property="article:author" content="BlockLune">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="chmod">
@@ -294,10 +294,10 @@
     <div class="post-body" itemprop="articleBody"><p>I accidentally ran a wrong <code>chmod</code> command in my Linux, and it messed up everything! I hate the permission management in Linux. :|</p>
 <span id="more"></span>
 
-<h2 id="Permission-Management-in-Linux"><a href="#Permission-Management-in-Linux" class="headerlink" title="Permission Management in Linux"></a>Permission Management in Linux</h2><p>When you run <code>ls -l</code> in your terminal, you can always see strings like <code>-rw-r–r–</code> and <code>drwxr-xr-x</code> etc. To understand them, we can always split a such string into four part. The first one is a single character, <code>-</code> if it’s a file and <code>d</code> if it’s a directory. The rest 9 characters can be equally divided into three parts, representing the permission of the owner, the members of the group and other users relatively. Every part contains three characters, showing the permission of <strong>r</strong>(read), <strong>w</strong>(write) and <strong>x</strong>(execute).</p>
+<h2 id="Permission-Management-in-Linux"><a href="#Permission-Management-in-Linux" class="headerlink" title="Permission Management in Linux"></a>Permission Management in Linux</h2><p>When you run <code>ls -l</code> in your terminal, you can always see strings like <code>-rw-r–r–</code> and <code>drwxr-xr-x</code> etc. To understand them, we can always split a such string into four part. The first one is a single character, <code>-</code> if it's a file and <code>d</code> if it's a directory. The rest 9 characters can be equally divided into three parts, representing the permission of the owner, the members of the group and other users relatively. Every part contains three characters, showing the permission of <strong>r</strong>(read), <strong>w</strong>(write) and <strong>x</strong>(execute).</p>
 <p><img data-src="https://s1.ax1x.com/2023/03/23/pp0Z5YF.png" alt="When you run `ls -l`"><br><img data-src="https://www.runoob.com/wp-content/uploads/2014/08/file-permissions-rwx.jpg" alt="From www.runoob.com"></p>
 <p>Besides the bit pattern, you can also use octal notation to express these permissions, which uses 4 for <strong>r</strong>, 2 for <strong>w</strong> and 1 for <strong>x</strong>. The sum of these octal numbers then can replace the <code>rwx</code> pattern. For example, using 6 for <strong>rw</strong>.</p>
-<p>Why is 4, 2 and 1? Actually, you can view every 3-character unit as 3 binary bits. So, 100(r–) means 4 in decimal, 010(-w-) means 2, and 001(–x) means 1. You can then understand what dose the sum means.</p>
+<p>Why is 4, 2 and 1? Actually, you can view every 3-character unit as 3 binary bits. So, 100(r--) means 4 in decimal, 010(-w-) means 2, and 001(--x) means 1. You can then understand what dose the sum means.</p>
 <p><img data-src="https://www.runoob.com/wp-content/uploads/2014/08/rwx-standard-unix-permission-bits.png" alt="From www.runoob.com"></p>
 <p>Now, you can read this:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-rw------- <span class="comment"># (600) Owner:RW</span></span><br><span class="line">-rw-r--r-- <span class="comment"># (644) Owner:RW Group:R Other:R</span></span><br><span class="line">-rw-rw-rw- <span class="comment"># (666) Owner:RW Group:RW Other:RW</span></span><br><span class="line">-rwx------ <span class="comment"># (700) Owner:RWX</span></span><br><span class="line">-rwx--x--x <span class="comment"># (711) Owner:RWX Group:X Other:X</span></span><br><span class="line">-rwxr-xr-x <span class="comment"># (755) Owner:RWX Group:RX Other:RX</span></span><br><span class="line">-rwxrwxrwx <span class="comment"># (777) Owner:RWX Group:RWX Other:RWX</span></span><br></pre></td></tr></tbody></table></figure>
@@ -315,7 +315,7 @@
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[ugoa...][[+-=][rwxX]...][,...]</span><br></pre></td></tr></tbody></table></figure>
 
 <ol>
-<li>[ugoa…]: <code>u</code> means user, <code>g</code> means group, <code>o</code> means other, and <code>a</code> means all.</li>
+<li>[ugoa...]: <code>u</code> means user, <code>g</code> means group, <code>o</code> means other, and <code>a</code> means all.</li>
 <li>[+-=]: <code>+</code> means adding permission, <code>-</code> means removing, and <code>=</code> means setting the permissions for a specific user type, <strong>regardless of the previous permissions</strong>.</li>
 <li>[rwxX]: You have known <code>rwx</code>, and the <code>X</code> means setting the execute permission only if the file is a directory or already has execute permission for some user.</li>
 </ol>

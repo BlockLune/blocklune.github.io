@@ -30,7 +30,7 @@
 <meta property="og:description" content="This is a note for Lecture 14, CS106L, Spring 2023.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-05-31T03:35:00.000Z">
-<meta property="article:modified_time" content="2024-01-26T10:13:20.840Z">
+<meta property="article:modified_time" content="2024-01-26T16:56:51.911Z">
 <meta property="article:author" content="BlockLune">
 <meta property="article:tag" content="C&#x2F;C++">
 <meta property="article:tag" content="CS106L">
@@ -295,15 +295,15 @@
 <h2 id="RECAP-CONST-CORRECTNESS"><a href="#RECAP-CONST-CORRECTNESS" class="headerlink" title="RECAP: CONST-CORRECTNESS"></a>RECAP: CONST-CORRECTNESS</h2><ul>
 <li>We pass big pieces of data <strong>by reference</strong> into helper functions by to avoid making copies of that data</li>
 <li>If this function accidentally or sneakily changes that piece of data, it can lead to hard to find bugs!</li>
-<li><strong>Solution</strong>: mark those reference parameters <code>const</code> to guarantee they won’t be changed in function</li>
+<li><strong>Solution</strong>: mark those reference parameters <code>const</code> to guarantee they won't be changed in function</li>
 </ul>
-<p>How does the compiler know when it’s safe to call member functions of <code>const</code> variables?</p>
+<p>How does the compiler know when it's safe to call member functions of <code>const</code> variables?</p>
 <p><strong>Def.</strong></p>
 <ul>
 <li><strong>const-interface</strong>: All member functions marked <code>const</code> in a class definition. Objects of type <code>const ClassName</code> may only use the const-interface.</li>
 </ul>
 <p><strong>Ex.</strong></p>
-<p><code>RealVector</code>‘s const-interface</p>
+<p><code>RealVector</code>'s const-interface</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> <span class="title class_">ValueType</span>&gt;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">RealVector</span> {</span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="keyword">using</span> iterator = ValueType*;</span><br><span class="line">  <span class="keyword">using</span> const_iterator = <span class="type">const</span> ValueType*;</span><br><span class="line">  <span class="comment">/*...*/</span></span><br><span class="line">  <span class="function"><span class="type">size_t</span> <span class="title">size</span><span class="params">()</span> <span class="type">const</span></span>;  <span class="comment">// const-interface</span></span><br><span class="line">  <span class="function"><span class="type">bool</span> <span class="title">empty</span><span class="params">()</span> <span class="type">const</span></span>;   <span class="comment">// const-interface</span></span><br><span class="line">  <span class="comment">/*...*/</span></span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">push_back</span><span class="params">(<span class="type">const</span> ValueType&amp; elem)</span></span>;</span><br><span class="line">  <span class="function">iterator <span class="title">begin</span><span class="params">()</span></span>;</span><br><span class="line">  <span class="function">iterator <span class="title">end</span><span class="params">()</span></span>;</span><br><span class="line">  <span class="function">const_iterator <span class="title">cbegin</span><span class="params">()</span> <span class="type">const</span></span>; <span class="comment">// const-interface</span></span><br><span class="line">  <span class="function">const_iterator <span class="title">cend</span><span class="params">()</span> <span class="type">const</span></span>;   <span class="comment">// const-interface</span></span><br><span class="line">  <span class="comment">/*...*/</span></span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
 
 <p><strong>KeyIdea.</strong></p>
@@ -318,7 +318,7 @@
 <ul>
 <li><strong>Type Safety</strong>: The extent to which a language prevents typing errors and <strong>guarantees the behavior of programs</strong></li>
 </ul>
-<h3 id="INTRODUCTION"><a href="#INTRODUCTION" class="headerlink" title="INTRODUCTION"></a>INTRODUCTION</h3><p>Let’s look at the code below:</p>
+<h3 id="INTRODUCTION"><a href="#INTRODUCTION" class="headerlink" title="INTRODUCTION"></a>INTRODUCTION</h3><p>Let's look at the code below:</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">removeOddsFromEnd</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; vec)</span> </span>{</span><br><span class="line">  <span class="keyword">while</span> (vec.<span class="built_in">back</span>() % <span class="number">2</span> == <span class="number">1</span>) {</span><br><span class="line">    vec.<span class="built_in">pop_back</span>();</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <p><em>Aside:</em><br><em><code>vector::back()</code> returns a reference to the last element in the vector</em><br><em><code>vector::pop_back()</code> is like the opposite of <code>vector::push_back(elem)</code>. It removes the last element from the vector</em></p>
@@ -328,8 +328,8 @@
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">removeOddsFromEnd</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; vec)</span> </span>{</span><br><span class="line">  <span class="keyword">while</span> (!vec.<span class="built_in">empty</span>() &amp;&amp; vec.<span class="built_in">back</span>() % <span class="number">2</span> == <span class="number">1</span>) {</span><br><span class="line">    vec.<span class="built_in">pop_back</span>();</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <p><strong>KeyIdea.</strong></p>
-<p>It’s the <strong>programmers’ job</strong> to enforce the <strong>precondition</strong> that <code>vec</code> be non-empty, otherwise we get undefined behavior!</p>
-<h3 id="GO-DEEP"><a href="#GO-DEEP" class="headerlink" title="GO DEEP"></a>GO DEEP</h3><p>The problem here is, there may or may not be a “last element” in <code>vec</code>. How can <code>vec.back()</code> have deterministic behavior in either case?</p>
+<p>It's the <strong>programmers' job</strong> to enforce the <strong>precondition</strong> that <code>vec</code> be non-empty, otherwise we get undefined behavior!</p>
+<h3 id="GO-DEEP"><a href="#GO-DEEP" class="headerlink" title="GO DEEP"></a>GO DEEP</h3><p>The problem here is, there may or may not be a "last element" in <code>vec</code>. How can <code>vec.back()</code> have deterministic behavior in either case?</p>
 <p>Can this work?</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// WRONG</span></span><br><span class="line">valueType&amp; vector&lt;valueType&gt;::<span class="built_in">back</span>() {</span><br><span class="line">  <span class="keyword">return</span> *(<span class="built_in">begin</span>() + <span class="built_in">size</span>() - <span class="number">1</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
@@ -338,7 +338,7 @@
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">valueType&amp; vector&lt;valueType&gt;::<span class="built_in">back</span>() {</span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">empty</span>()) <span class="keyword">throw</span> std::<span class="built_in">out_of_range</span>(); <span class="comment">// check if empty first</span></span><br><span class="line">  <span class="keyword">return</span> *(<span class="built_in">begin</span>() + <span class="built_in">size</span>() - <span class="number">1</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <p>Now, we will at least reliably error and stop the program <strong>or</strong> return the last element whenever <code>back()</code> is called.</p>
-<p>Can we do better? Can <code>vec.back()</code> <strong>warn us</strong> if there may not be a “last element” when we call it?</p>
+<p>Can we do better? Can <code>vec.back()</code> <strong>warn us</strong> if there may not be a "last element" when we call it?</p>
 <p><strong>Def.</strong></p>
 <ul>
 <li><strong>Type Safety</strong>: The extent to which a <strong>function signature</strong> guarantees the behavior of a <strong>function</strong></li>
@@ -353,12 +353,12 @@
 <li>Even if it does, calling constructors is <strong>expensive</strong></li>
 </ul>
 <p>What should <code>back()</code> return?</p>
-<p>Introducing…<code>std::optional</code></p>
+<p>Introducing...<code>std::optional</code></p>
 <h3 id="std-optional"><a href="#std-optional" class="headerlink" title="std::optional"></a>std::optional</h3><p>What is <code>std::optional&lt;T&gt;</code>?</p>
 <ul>
 <li><code>std::optional</code> is a template class which will either contain a value of type T or contain nothing (expressed as <code>nullopt</code>)</li>
 </ul>
-<div class="note warning"><p>Pay attention to <code>nullopt</code>! That’s NOT <code>nullptr</code>!</p>
+<div class="note warning"><p>Pay attention to <code>nullopt</code>! That's NOT <code>nullptr</code>!</p>
 <ul>
 <li><code>nullptr</code>: an object that can be converted to a value of any <strong>pointer</strong> type</li>
 <li><code>nullopt</code>: an object that can be converted to a value of any <strong>optional</strong> type</li>
@@ -371,7 +371,7 @@
 <p>With <code>std::optional</code>, we can make <code>back()</code> return an optional:</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">std::optional&lt;valueType&gt; vector&lt;valueType&gt;::<span class="built_in">back</span>() {</span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">empty</span>()) {</span><br><span class="line">    <span class="keyword">return</span> {};</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">return</span> *(<span class="built_in">begin</span>() + <span class="built_in">size</span>() - <span class="number">1</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<p>To use this version of <code>back()</code>, let’s first look at some of <code>std::optional</code>‘s interfaces:</p>
+<p>To use this version of <code>back()</code>, let's first look at some of <code>std::optional</code>'s interfaces:</p>
 <ul>
 <li><code>.value()</code> returns the contained value or throws <code>bad_optional_access</code> error</li>
 <li><code>.value_or(valueType val)</code> returns the contained value or default value, parameter <code>val</code></li>
@@ -381,10 +381,10 @@
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">removeOddsFromEnd</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; vec)</span> </span>{</span><br><span class="line">  <span class="keyword">while</span> (vec.<span class="built_in">back</span>().<span class="built_in">has_value</span>() &amp;&amp; vec.<span class="built_in">back</span>().<span class="built_in">value</span>() % <span class="number">2</span> == <span class="number">1</span>) {</span><br><span class="line">    vec.<span class="built_in">pop_back</span>();</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <p>This will no longer error, but it is pretty unwieldy :/</p>
-<p>Let’s do this:</p>
+<p>Let's do this:</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">removeOddsFromEnd</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; vec)</span> </span>{</span><br><span class="line">  <span class="keyword">while</span> (vec.<span class="built_in">back</span>() &amp;&amp; vec.<span class="built_in">back</span>().<span class="built_in">value</span>() % <span class="number">2</span> == <span class="number">1</span>) {</span><br><span class="line">    vec.<span class="built_in">pop_back</span>();</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<p>Is this…good?</p>
+<p>Is this...good?</p>
 <p>Pros of using <code>std::optional</code> returns:</p>
 <ul>
 <li>Function signatures create more informative contracts</li>
@@ -393,12 +393,12 @@
 <p>Cons:</p>
 <ul>
 <li>You will need to use <code>.value()</code> EVERYWHERE</li>
-<li>(In cpp) It’s still possible to do a <code>bad_optional_access</code></li>
+<li>(In cpp) It's still possible to do a <code>bad_optional_access</code></li>
 <li>(In cpp) optionals can have undefined behavior too (*optional does same thing as <code>.value()</code> with no error checking)</li>
-<li>In a lot of cases we want <code>std::optional&lt;T&amp;&gt;</code>… which we don’t have</li>
+<li>In a lot of cases we want <code>std::optional&lt;T&amp;&gt;</code>... which we don't have</li>
 </ul>
 <p>Why even bother with optionals?</p>
-<p>Introducing… <code>std::optional</code> “monadic” interface (C++23)</p>
+<p>Introducing... <code>std::optional</code> "monadic" interface (C++23)</p>
 <ul>
 <li><code>.and_then(function f)</code> returns the result of calling <code>f(value)</code> if contained value exists, otherwise <code>nullopt</code> (<code>f</code> must return <code>optional</code>)</li>
 <li><code>.transform(function f)</code> returns the result of calling <code>f(value)</code> if contained value exists, otherwise <code>nullopt</code> (<code>f</code> must return <code>optional&lt;valueType&gt;</code>)</li>
@@ -414,7 +414,7 @@
 <p><strong>Ex.</strong></p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">removeOddsFromEnd</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; vec)</span> </span>{</span><br><span class="line">  <span class="keyword">auto</span> isOdd = [](optional&lt;<span class="type">int</span>&gt; num) {</span><br><span class="line">    <span class="keyword">return</span> num ? (num % <span class="number">2</span> == <span class="number">1</span>) : {};</span><br><span class="line">  };</span><br><span class="line">  <span class="keyword">while</span> (vec.<span class="built_in">back</span>().<span class="built_in">and_then</span>(isOdd)) {</span><br><span class="line">    vec.<span class="built_in">pop_back</span>();</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<p><strong>Disclaimer:</strong> <code>std::vector::back()</code> doesn’t actually return an optional (and probably never will)</p>
+<p><strong>Disclaimer:</strong> <code>std::vector::back()</code> doesn't actually return an optional (and probably never will)</p>
 
     </div>
 

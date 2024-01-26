@@ -30,7 +30,7 @@
 <meta property="og:description" content="This is a note for Nand2Tetris Unit 6.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-07-17T12:28:42.000Z">
-<meta property="article:modified_time" content="2024-01-26T10:13:20.840Z">
+<meta property="article:modified_time" content="2024-01-26T16:56:51.911Z">
 <meta property="article:author" content="BlockLune">
 <meta property="article:tag" content="Coursera">
 <meta property="article:tag" content="Nand2Tetris">
@@ -294,7 +294,7 @@
     <div class="post-body" itemprop="articleBody"><p>This is a note for Nand2Tetris Unit 6.</p>
 <span id="more"></span>
 
-<h2 id="Unit-6-1"><a href="#Unit-6-1" class="headerlink" title="Unit 6.1"></a>Unit 6.1</h2><p>Cross compiler: It’s running on one computer and producing code intended for another computer.</p>
+<h2 id="Unit-6-1"><a href="#Unit-6-1" class="headerlink" title="Unit 6.1"></a>Unit 6.1</h2><p>Cross compiler: It's running on one computer and producing code intended for another computer.</p>
 <h3 id="Basic-Assembler-Logic"><a href="#Basic-Assembler-Logic" class="headerlink" title="Basic Assembler Logic"></a>Basic Assembler Logic</h3><p>Repeat:</p>
 <ul>
 <li>Read the next Assembly language command</li>
@@ -306,9 +306,9 @@
 <p>Until end-of-file reached</p>
 <h3 id="Symbols"><a href="#Symbols" class="headerlink" title="Symbols"></a>Symbols</h3><p>Symbols are used for labels and variables.</p>
 <p>Assembler must replace names with addresses.</p>
-<p>Introducing… <strong>Symbol table</strong>.</p>
+<p>Introducing... <strong>Symbol table</strong>.</p>
 <h4 id="Allocation-of-variables"><a href="#Allocation-of-variables" class="headerlink" title="Allocation of variables"></a>Allocation of variables</h4><p>First we look at the table. If the variable has already been in the table, we can just read its address. But if the variable is not there, we must allocate memory to it and record its address.</p>
-<h4 id="Labels"><a href="#Labels" class="headerlink" title="Labels"></a>Labels</h4><p>…</p>
+<h4 id="Labels"><a href="#Labels" class="headerlink" title="Labels"></a>Labels</h4><p>...</p>
 <h4 id="Forward-references"><a href="#Forward-references" class="headerlink" title="Forward references"></a>Forward references</h4><p>Sometimes we can jump into a label before the label was actually defined.</p>
 <p>Possible solutions:</p>
 <ul>
@@ -339,7 +339,7 @@
 <li>If $value$ is a decimal constant, generate the equivalent 15-bit binary constant</li>
 <li>If $value$ is a symbol, later</li>
 </ul>
-<h3 id="Translating-C-instruction"><a href="#Translating-C-instruction" class="headerlink" title="Translating C-instruction"></a>Translating C-instruction</h3><p>…</p>
+<h3 id="Translating-C-instruction"><a href="#Translating-C-instruction" class="headerlink" title="Translating C-instruction"></a>Translating C-instruction</h3><p>...</p>
 <h3 id="The-overall-assembly-logic"><a href="#The-overall-assembly-logic" class="headerlink" title="The overall assembly logic"></a>The overall assembly logic</h3><p>For each instruction</p>
 <ul>
 <li>Parse the instruction: break it into its underlying fields</li>
@@ -353,11 +353,11 @@
 <li><strong>label symbols</strong>: represent destinations of goto instructions</li>
 <li><strong>pre-defined symbols</strong>: represent special memory locations</li>
 </ul>
-<p>The Hack language specification describes 23 pre-defined symbols: …</p>
+<p>The Hack language specification describes 23 pre-defined symbols: ...</p>
 <p>Translating @$preDefinedSymbol$:</p>
 <p>Replace $preDefinedSymbol$ with its value</p>
 <p>Translating @$label$:</p>
-<p>…</p>
+<p>...</p>
 <p>Variable symbols:</p>
 <ul>
 <li>Any symbol XXX appearing in an assembly program which is not pre-defined and is not defined elsewhere using the (XXX) directive is treated as a $variable$</li>
@@ -380,22 +380,22 @@
 <li>Add the pre-defined symbols to the symbol table</li>
 </ul>
 </li>
-<li>First pass<br>Scan the program;<br>For each “instruction” of the form (XXX):<ul>
+<li>First pass<br>Scan the program;<br>For each "instruction" of the form (XXX):<ul>
 <li>Add the pair (XXX, $address$) to the symbol table, where $address$ is the number of the instruction following (XXX)</li>
 </ul>
 </li>
 <li>Second pass<br>Set $n$ to 16<br>Scan the entire program again; for each instruction:<ul>
 <li>If the instruction is @$symbol$, look up $symbol$ in the symbol table;<ul>
-<li>If ($symbol$, $value$) is found, use $value$ to complete the instruction’s translation;</li>
+<li>If ($symbol$, $value$) is found, use $value$ to complete the instruction's translation;</li>
 <li>If not found:<ul>
 <li>Add ($symbol$, $n$) to the symbol table</li>
-<li>Use $n$ to complete the instruction’s translation</li>
+<li>Use $n$ to complete the instruction's translation</li>
 <li>$n$++</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>If the instruction is a C-instruction, complete the instruction’s translation</li>
+<li>If the instruction is a C-instruction, complete the instruction's translation</li>
 <li>Write the translated instruction to the output file</li>
 </ul>
 </li>

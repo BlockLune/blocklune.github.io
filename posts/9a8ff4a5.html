@@ -40,7 +40,7 @@
 <meta property="og:image" content="https://s1.ax1x.com/2023/07/15/pC5hesA.jpg">
 <meta property="og:image" content="https://s1.ax1x.com/2023/07/15/pC5hmqI.jpg">
 <meta property="article:published_time" content="2023-07-12T03:57:51.000Z">
-<meta property="article:modified_time" content="2024-01-26T10:13:20.840Z">
+<meta property="article:modified_time" content="2024-01-26T16:56:51.911Z">
 <meta property="article:author" content="BlockLune">
 <meta property="article:tag" content="Coursera">
 <meta property="article:tag" content="Nand2Tetris">
@@ -323,11 +323,11 @@
 <li><strong>Execute</strong> it</li>
 </ul>
 <h3 id="Fetching"><a href="#Fetching" class="headerlink" title="Fetching"></a>Fetching</h3><ul>
-<li>Put the location of the next instruction into the “address” of the program memory</li>
+<li>Put the location of the next instruction into the "address" of the program memory</li>
 <li>Get the instruction code itself by reading the memory contents at that location</li>
 </ul>
 <p>Use program counter.</p>
-<h3 id="Executing"><a href="#Executing" class="headerlink" title="Executing"></a>Executing</h3><p>…</p>
+<h3 id="Executing"><a href="#Executing" class="headerlink" title="Executing"></a>Executing</h3><p>...</p>
 <h3 id="Fetch-Execute-Clash"><a href="#Fetch-Execute-Clash" class="headerlink" title="Fetch-Execute Clash"></a>Fetch-Execute Clash</h3><p><img data-src="https://s1.ax1x.com/2023/07/12/pCfUbCD.png" alt="Fetch-Execute Clash"></p>
 <p>How to solve that? Do one after the other (Use <code>Mux</code>).</p>
 <h3 id="Solution-Mux-and-Instruction-register"><a href="#Solution-Mux-and-Instruction-register" class="headerlink" title="Solution: Mux and Instruction register"></a>Solution: Mux and Instruction register</h3><p><img data-src="https://s1.ax1x.com/2023/07/12/pCfULgH.png" alt="Solution"></p>
@@ -355,7 +355,7 @@
 <p>CPU handling of a C-instruction:</p>
 <ul>
 <li>Decodes the instruction into four parts (op-code, ALU control bits, Destination load bits and Jump bits)</li>
-<li>…</li>
+<li>...</li>
 </ul>
 <h3 id="ALU-operation"><a href="#ALU-operation" class="headerlink" title="ALU operation"></a>ALU operation</h3><p>ALU data inputs:</p>
 <ul>
@@ -369,7 +369,7 @@
 <p>ALU data output:</p>
 <ul>
 <li>Result of AlU calculation, fed simultaneously to: D-register, A-register, M-register</li>
-<li>Which register <strong>actually</strong> received the incoming value is determined by the instructions’ destination bits</li>
+<li>Which register <strong>actually</strong> received the incoming value is determined by the instructions' destination bits</li>
 </ul>
 <p>ALU control outputs:</p>
 <ul>
@@ -378,7 +378,7 @@
 </ul>
 <h3 id="Jump"><a href="#Jump" class="headerlink" title="Jump"></a>Jump</h3><p>Program Counter abstraction:</p>
 <p>Emits the address of the next instruction:</p>
-<p>To start / restart the program’s execution: <code>PC=0</code></p>
+<p>To start / restart the program's execution: <code>PC=0</code></p>
 <ul>
 <li>no jump: <code>PC++</code></li>
 <li>goto: <code>PC=A</code></li>
@@ -394,13 +394,13 @@
 <ul>
 <li>If the instruction includes D and A, the respective values are read from, and/or written to, the CPU-resident D-register and A-register;</li>
 <li>If the instruction is @x, then x is stored in the A-register; this value is emitted by <code>addressM</code></li>
-<li>If the instruction’s RHS includes M, this value is read from <code>inM</code></li>
-<li>If the instruction’s LHS includes M, then the ALU output is emitted by <code>outM</code>, and the <code>writeM</code> bit is asserted</li>
+<li>If the instruction's RHS includes M, this value is read from <code>inM</code></li>
+<li>If the instruction's LHS includes M, then the ALU output is emitted by <code>outM</code>, and the <code>writeM</code> bit is asserted</li>
 </ul>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@100</span><br><span class="line">D=D-1;JEQ</span><br></pre></td></tr></tbody></table></figure>
 
 <p><strong>If (reset==0):</strong></p>
-<p>The CPU logic uses the instruction’s jump bits and the ALU’s output to decide if there should be a jump.</p>
+<p>The CPU logic uses the instruction's jump bits and the ALU's output to decide if there should be a jump.</p>
 <ul>
 <li>If there is a jump: <code>PC</code> is set to the value of the A-register</li>
 <li>Else (no jump): <code>PC++</code></li>
@@ -433,13 +433,13 @@
 <h3 id="Instruction-Memory-ROM"><a href="#Instruction-Memory-ROM" class="headerlink" title="Instruction Memory (ROM)"></a>Instruction Memory (ROM)</h3><p>To run a program on the Hack computer:</p>
 <ul>
 <li>Load the program into the ROM</li>
-<li>Press “reset”</li>
+<li>Press "reset"</li>
 <li>The program starts running</li>
 </ul>
 <p>Hardware implementation: plug-and-play ROM chips</p>
 <p>Hardware simulation: programs are stored in text files; program loading is emulated by the built-in ROM chip</p>
 <h3 id="Hack-Computer-implementation"><a href="#Hack-Computer-implementation" class="headerlink" title="Hack Computer implementation"></a>Hack Computer implementation</h3><p><img data-src="https://s1.ax1x.com/2023/07/14/pC4Wt8H.png" alt="Hack Computer implementation"></p>
-<h2 id="Unit-5-5"><a href="#Unit-5-5" class="headerlink" title="Unit 5.5"></a>Unit 5.5</h2><p>…</p>
+<h2 id="Unit-5-5"><a href="#Unit-5-5" class="headerlink" title="Unit 5.5"></a>Unit 5.5</h2><p>...</p>
 <h2 id="Project-5"><a href="#Project-5" class="headerlink" title="Project 5"></a>Project 5</h2><h3 id="CPU-hdl"><a href="#CPU-hdl" class="headerlink" title="CPU.hdl"></a>CPU.hdl</h3><p><del>吐槽：一开始我想的是，连设计图都给我了，我还能做不出来吗？前人已经载好了树，我这乘凉还不容易吗？实际上手才发现，CPU 不愧是 CPU，即使是这样一个非常简化的版本，也是相当复杂的。这凉，还真不是那么好乘。:x</del></p>
 <p>记录一下制作这个 CPU 的思考过程：</p>
 <p>首先，按照设计图，把 <code>ALU</code>、<code>ARegister</code>、<code>DRegister</code>、<code>PC</code> 和两个 <code>Mux16</code> 摆出来；</p>

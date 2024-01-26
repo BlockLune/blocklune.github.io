@@ -30,7 +30,7 @@
 <meta property="og:description" content="This is a note for Lecture 13, CS106L, Spring 2023.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-05-30T14:14:00.000Z">
-<meta property="article:modified_time" content="2024-01-26T10:13:20.840Z">
+<meta property="article:modified_time" content="2024-01-26T16:56:51.911Z">
 <meta property="article:author" content="BlockLune">
 <meta property="article:tag" content="C&#x2F;C++">
 <meta property="article:tag" content="CS106L">
@@ -306,7 +306,7 @@
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">3</span>;</span><br><span class="line"><span class="type">int</span> y = x;</span><br></pre></td></tr></tbody></table></figure>
 
 <ul>
-<li>r-values don’t have names</li>
+<li>r-values don't have names</li>
 <li>r-values are <strong>temporary</strong></li>
 <li>r-values live until the end of the <strong>line</strong></li>
 </ul>
@@ -324,8 +324,8 @@
 <li><code>make_me_a_vec</code> creates a vector using the <strong>default constructor</strong></li>
 <li><code>vec</code> is reassigned to a <strong>copy</strong> of that return value using <strong>copy assignment</strong></li>
 <li><strong>copy assignment</strong> creates a new array and <strong>copies</strong> the contents of the old one</li>
-<li>The original return value’s lifetime ends and it calls its <strong>destructor</strong></li>
-<li><code>vec</code>‘s lifetime ends and it calls its <strong>destructor</strong></li>
+<li>The original return value's lifetime ends and it calls its <strong>destructor</strong></li>
+<li><code>vec</code>'s lifetime ends and it calls its <strong>destructor</strong></li>
 </ul>
 <p>Here is a problem: <code>make_me_a_vec(123)</code> is an r-value, and in <code>vector&lt;T&gt;::operator=(const vector&lt;T&gt;&amp; other)</code>, <code>other</code> should be an l-value (referenced using &amp;). Can r-values be bound to <code>const &amp;</code>?</p>
 <p>The answer is Yes.</p>
@@ -346,7 +346,7 @@
 
 <p>And now the question is: how to make two different assignment operator?</p>
 <p>Answer: Overload <code>vector::operator=</code>!</p>
-<p>Introducing… the r-value reference using <code>&amp;&amp;</code></p>
+<p>Introducing... the r-value reference using <code>&amp;&amp;</code></p>
 <h2 id="R-VALUE-REFERENCE"><a href="#R-VALUE-REFERENCE" class="headerlink" title="R-VALUE REFERENCE"></a>R-VALUE REFERENCE</h2><p>By using r-value reference, we can do this:</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> x = <span class="number">1</span>;</span><br><span class="line">  <span class="built_in">change</span>(x); <span class="comment">// this will call version 2</span></span><br><span class="line">  <span class="built_in">change</span>(<span class="number">7</span>); <span class="comment">// this will call version 1</span></span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">change</span><span class="params">(<span class="type">int</span>&amp;&amp; num)</span> </span>{...} <span class="comment">// version 1 takes r-values</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">change</span><span class="params">(<span class="type">int</span>&amp; num)</span> </span>{...}  <span class="comment">// version 2 takes l-values</span></span><br><span class="line"><span class="comment">// num is a reference to int</span></span><br></pre></td></tr></tbody></table></figure>
 
@@ -357,9 +357,9 @@
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;T&gt;&amp; <span class="keyword">operator</span>=(vector&lt;T&gt;&amp;&amp; other) {</span><br><span class="line">  <span class="keyword">if</span> (&amp;other == <span class="keyword">this</span>) <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">  _size = other._size;</span><br><span class="line">  _capacity = other._capacity;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// we can **steal** the array</span></span><br><span class="line">  <span class="keyword">delete</span>[] _elems;</span><br><span class="line">  _elems = other._elems;</span><br><span class="line">  <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <p>But actually, we still copy <code>_size</code> and <code>_capacity</code>, etc.</p>
-<p>Introducing…<code>std::move</code>!</p>
+<p>Introducing...<code>std::move</code>!</p>
 <h2 id="std-move"><a href="#std-move" class="headerlink" title="std::move"></a>std::move</h2><ul>
-<li><code>std::move(x)</code> <strong>doesn’t do anything</strong> except <strong>cast x as an r-value</strong></li>
+<li><code>std::move(x)</code> <strong>doesn't do anything</strong> except <strong>cast x as an r-value</strong></li>
 <li>It is a way to force C++ to choose the <code>&amp;&amp;</code> version of a function</li>
 </ul>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> x = <span class="number">1</span>;</span><br><span class="line">  <span class="built_in">change</span>(x);             <span class="comment">// this will call version 2</span></span><br><span class="line">  <span class="built_in">change</span>(std::<span class="built_in">move</span>(x));  <span class="comment">// this will call version 1</span></span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">change</span><span class="params">(<span class="type">int</span>&amp;&amp; num)</span> </span>{...} <span class="comment">// version 1 takes r-values</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">change</span><span class="params">(<span class="type">int</span>&amp; num)</span> </span>{...}  <span class="comment">// version 2 takes l-values</span></span><br></pre></td></tr></tbody></table></figure>
@@ -387,14 +387,14 @@
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  vector&lt;string&gt; vec1 = {<span class="string">"hello"</span>, <span class="string">"world"</span>};</span><br><span class="line">  vector&lt;string&gt; vec2 = std::<span class="built_in">move</span>(vec1);</span><br><span class="line">  vec1.<span class="built_in">push_back</span>(<span class="string">"Sure hope vec2 doesn't see this!"</span>); <span class="comment">// WRONG</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <blockquote>
-<p>Rule of Thumb:<br>Wherever we take in a <code>const &amp;</code> parameter in a class member function and assign it to something else in our function<br>Don’t use <code>std::move</code> outside of class definitions, never use it in application code!</p>
+<p>Rule of Thumb:<br>Wherever we take in a <code>const &amp;</code> parameter in a class member function and assign it to something else in our function<br>Don't use <code>std::move</code> outside of class definitions, never use it in application code!</p>
 </blockquote>
 <h2 id="TLDR"><a href="#TLDR" class="headerlink" title="TLDR"></a>TLDR</h2><ul>
 <li><p>If your class has <strong>copy constructor</strong> and <strong>copy assignment</strong> defined, you should also define a <strong>move constructor</strong> and <strong>move assignment</strong></p>
 </li>
 <li><p>Define these by overloading your copy constructor and assignment to be defined for <code>Type&amp;&amp; other</code> as well as <code>Type&amp; other</code></p>
 </li>
-<li><p>Use <code>std::move</code> to force the use of other types’ move assignments and constructors</p>
+<li><p>Use <code>std::move</code> to force the use of other types' move assignments and constructors</p>
 </li>
 <li><p>All <code>std::move(x)</code> does is cast <code>x</code> as an r-value</p>
 </li>
@@ -412,18 +412,18 @@
 <h3 id="Some-Philosophy-about-SMFs"><a href="#Some-Philosophy-about-SMFs" class="headerlink" title="Some Philosophy about SMFs"></a>Some Philosophy about SMFs</h3><p>There are three guiding rules:</p>
 <h4 id="Rule-of-Zero"><a href="#Rule-of-Zero" class="headerlink" title="Rule of Zero"></a>Rule of Zero</h4><ul>
 <li><strong>If you can avoid defining default operations, do</strong></li>
-<li><strong>Why?</strong> It’s the simplest and gives the cleanest semantic</li>
+<li><strong>Why?</strong> It's the simplest and gives the cleanest semantic</li>
 <li><strong>Example:</strong> Since <code>std::map</code> and <code>std::string</code> have all the special functions, no further work is needed.</li>
 </ul>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Class Named_map {</span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="comment">// ...no default operations declared</span></span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  std::string name;</span><br><span class="line">  std::map&lt;<span class="type">int</span>, <span class="type">int</span>&gt; rep;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line">Named_map nm;      <span class="comment">// default construct</span></span><br><span class="line">Named_map nm2{nm}; <span class="comment">// copy construct</span></span><br></pre></td></tr></tbody></table></figure>
 
 <h4 id="Rule-of-Three"><a href="#Rule-of-Three" class="headerlink" title="Rule of Three"></a>Rule of Three</h4><ul>
 <li><strong>If you need to implement a custom destructor, you almost certainly need to define a copy constructor and copy assignment operator</strong></li>
-<li><strong>Why?</strong> You are probably managing your own memory somehow, so the shallow copies provided by the default operations won’t work correctly</li>
+<li><strong>Why?</strong> You are probably managing your own memory somehow, so the shallow copies provided by the default operations won't work correctly</li>
 </ul>
 <h4 id="Rule-of-Five"><a href="#Rule-of-Five" class="headerlink" title="Rule of Five"></a>Rule of Five</h4><ul>
 <li><strong>If you define custom copy constructor/assignment operator, you should define move constructor/assignment operator as well</strong></li>
-<li><strong>Why?</strong> This is about efficiency rather than correctness. It’s inefficient to make extra copies (although it’s “correct”)</li>
+<li><strong>Why?</strong> This is about efficiency rather than correctness. It's inefficient to make extra copies (although it's "correct")</li>
 </ul>
 
     </div>
