@@ -9,8 +9,37 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Fri, 26 Jan 2024 05:16:36 GMT</pubDate>
+    <pubDate>Fri, 26 Jan 2024 08:26:17 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Two Way Binding in Vue3</title>
+      <link>https://fishg.top/posts/8fc81ed9.html</link>
+      <guid>https://fishg.top/posts/8fc81ed9.html</guid>
+      <pubDate>Fri, 26 Jan 2024 05:24:50 GMT</pubDate>
+      
+      <description>&lt;p&gt;A simple two way binding example in vue3.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://fishg.top/categories/cs/">CS</category>
+      
+      <category domain="https://fishg.top/categories/cs/web/">Web</category>
+      
+      
+      <category domain="https://fishg.top/tags/web/">Web</category>
+      
+      <category domain="https://fishg.top/tags/html/">Html</category>
+      
+      <category domain="https://fishg.top/tags/js/">JS</category>
+      
+      <category domain="https://fishg.top/tags/vue-js/">Vue.js</category>
+      
+      
+      <comments>https://fishg.top/posts/8fc81ed9.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>My Zsh Config</title>
@@ -1913,13 +1942,13 @@
       
       <category domain="https://fishg.top/tags/web/">Web</category>
       
-      <category domain="https://fishg.top/tags/vue-js/">Vue.js</category>
-      
-      <category domain="https://fishg.top/tags/element-ui/">Element UI</category>
-      
       <category domain="https://fishg.top/tags/html/">Html</category>
       
       <category domain="https://fishg.top/tags/js/">JS</category>
+      
+      <category domain="https://fishg.top/tags/vue-js/">Vue.js</category>
+      
+      <category domain="https://fishg.top/tags/element-ui/">Element UI</category>
       
       
       <comments>https://fishg.top/posts/6a8a1633.html#disqus_thread</comments>
