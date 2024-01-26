@@ -3544,7 +3544,7 @@
   <entry>
     <title>My Zsh Config</title>
     <url>/posts/3e5630f.html</url>
-    <content><![CDATA[<p>My personal config for Zsh (Z Shell), noting for next configuration.</p>
+    <content><![CDATA[<p>My personal config for Zsh (Z Shell), noting for next time.</p>
 <span id="more"></span>
 
 <h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><p>Helpful resources:</p>
@@ -3552,29 +3552,139 @@
 <li><a href="https://zhuanlan.zhihu.com/p/625583037">Windows 安装 Zsh 终端 - 知乎</a></li>
 <li><a href="https://dominikrys.com/posts/zsh-in-git-bash-on-windows/">Installing Zsh (and oh-my-zsh) in Windows Git Bash</a></li>
 </ul>
-<h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><p>To install Z Shell on Arch Linux, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo pacman -S zsh</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><p>Use your favorite package manager to install <code>zsh</code> and then run <code>chsh -s &lt;path_to_zsh&gt;</code> to set Z Shell as your default shell.</p>
+<h3 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h3><p>It’s installed by default.</p>
+<h2 id="Themes-and-Plugins"><a href="#Themes-and-Plugins" class="headerlink" title="Themes and Plugins"></a>Themes and Plugins</h2><p>Firstly, install <a href="https://github.com/ohmyzsh/ohmyzsh">oh-my-zsh</a> and <a href="https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#oh-my-zsh">powerlevel10k</a>.</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># installs oh-my-zsh using curl</span></span><br><span class="line">sh -c <span class="string">"<span class="subst">$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>"</span></span><br><span class="line"><span class="comment"># clones powerlevel10k</span></span><br><span class="line">git <span class="built_in">clone</span> --depth=1 https://github.com/romkatv/powerlevel10k.git <span class="variable">${ZSH_CUSTOM:-<span class="variable">$HOME</span>/.oh-my-zsh/custom}</span>/themes/powerlevel10k</span><br></pre></td></tr></tbody></table></figure>
 
-<p>Then run <code>chsh -s &lt;path_to_zsh&gt;</code> to set Z Shell as your default shell.</p>
-<h2 id="Config"><a href="#Config" class="headerlink" title="Config"></a>Config</h2><h3 id="oh-my-zsh"><a href="#oh-my-zsh" class="headerlink" title="oh-my-zsh"></a>oh-my-zsh</h3><ul>
-<li><a href="https://github.com/ohmyzsh/ohmyzsh">oh-my-zsh on GitHub</a></li>
-</ul>
-<p>Run the command below to install oh-my-zsh using <code>curl</code>:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sh -c <span class="string">"<span class="subst">$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>"</span></span><br></pre></td></tr></tbody></table></figure>
+<p>Then, to set <code>powerlevel10k</code> as the theme, edit in <code>~/.zshrc</code>:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">ZSH_THEME="powerlevel10k/powerlevel10k"</span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="powerlevel10k"><a href="#powerlevel10k" class="headerlink" title="powerlevel10k"></a>powerlevel10k</h3><ul>
-<li><a href="https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#oh-my-zsh">powerlevel10k on GitHub</a></li>
-</ul>
-<p>You can install powerlevel10k with oh-my-zsh easily. Firstly, clone the repo:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --depth=1 https://github.com/romkatv/powerlevel10k.git <span class="variable">${ZSH_CUSTOM:-<span class="variable">$HOME</span>/.oh-my-zsh/custom}</span>/themes/powerlevel10k</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Then, set <code>ZSH_THEME="powerlevel10k/powerlevel10k"</code> in <code>~/.zshrc</code>.</p>
-<h2 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h2><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions.git <span class="variable">$ZSH_CUSTOM</span>/plugins/zsh-autosuggestions</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-history-substring-search <span class="variable">${ZSH_CUSTOM:-~/.oh-my-zsh/custom}</span>/plugins/zsh-history-substring-search</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-syntax-highlighting.git <span class="variable">${ZSH_CUSTOM:-~/.oh-my-zsh/custom}</span>/plugins/zsh-syntax-highlighting</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h3><p>Oh-my-zsh provides many plugins (See the <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins">list</a>), and you can install more by yourself.</p>
+<p>I installed some plugins not provided by oh-my-zsh:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions.git <span class="variable">$ZSH_CUSTOM</span>/plugins/zsh-autosuggestions --depth=1</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-history-substring-search <span class="variable">${ZSH_CUSTOM:-~/.oh-my-zsh/custom}</span>/plugins/zsh-history-substring-search --depth=1</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-syntax-highlighting.git <span class="variable">${ZSH_CUSTOM:-~/.oh-my-zsh/custom}</span>/plugins/zsh-syntax-highlighting --depth=1</span><br></pre></td></tr></tbody></table></figure>
 
 <p>Edit in <code>~/.zshrc</code>:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">plugins=(</span><br><span class="line">    git</span><br><span class="line">    history-substring-search</span><br><span class="line">    z</span><br><span class="line">    zsh-autosuggestions</span><br><span class="line">    zsh-syntax-highlighting</span><br><span class="line">)</span><br><span class="line">ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=white'</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">plugins=(</span><br><span class="line">    fd</span><br><span class="line">    fzf</span><br><span class="line">    git</span><br><span class="line">    git-commit</span><br><span class="line">    history-substring-search</span><br><span class="line">    pip</span><br><span class="line">    ripgrep</span><br><span class="line">    z</span><br><span class="line">    zsh-autosuggestions</span><br><span class="line">    zsh-syntax-highlighting</span><br><span class="line">)</span><br><span class="line">ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=white'</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="Troubleshooting"><a href="#Troubleshooting" class="headerlink" title="Troubleshooting"></a>Troubleshooting</h2><ul>
+<p>Usage of some plugins:</p>
+<ul>
+<li><code>git</code>: <a href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git">GitHub</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Alias</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>g</td>
+<td>git</td>
+</tr>
+<tr>
+<td>ga</td>
+<td>git add</td>
+</tr>
+<tr>
+<td>gaa</td>
+<td>git add –all</td>
+</tr>
+<tr>
+<td>gapa</td>
+<td>git add –patch</td>
+</tr>
+<tr>
+<td>gau</td>
+<td>git add –update</td>
+</tr>
+<tr>
+<td>gav</td>
+<td>git add –verbose</td>
+</tr>
+<tr>
+<td>gb</td>
+<td>git branch</td>
+</tr>
+<tr>
+<td>gco</td>
+<td>git checkout</td>
+</tr>
+<tr>
+<td>gcl</td>
+<td>git clone –recurse-submodules</td>
+</tr>
+<tr>
+<td>gcam</td>
+<td>git commit –all –message</td>
+</tr>
+<tr>
+<td>gc</td>
+<td>git commit –verbose</td>
+</tr>
+<tr>
+<td>gc!</td>
+<td>git commit –verbose –amend</td>
+</tr>
+<tr>
+<td>glog</td>
+<td>git log –oneline –decorate –graph</td>
+</tr>
+<tr>
+<td>gl</td>
+<td>git pull</td>
+</tr>
+<tr>
+<td>gp</td>
+<td>git push</td>
+</tr>
+<tr>
+<td>gst</td>
+<td>git status</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody></table>
+<ul>
+<li><code>git-commit</code>: <a href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git-commit">GitHub</a></li>
+</ul>
+<p>Syntax: <code>git &lt;type&gt; [(-s, --scope) "&lt;scope&gt;"] "&lt;message&gt;"</code>, where <code>&lt;type&gt;</code> is:</p>
+<ol>
+<li><code>build</code>（构建）：表示与构建系统、外部依赖或编译过程相关的更改。这可能包括构建脚本、配置文件或构建工具的更新。</li>
+<li><code>chore</code>（杂务）：表示与代码库维护相关的杂项任务，如格式化代码、重命名文件、更新依赖项等。这些更改通常不会影响代码的运行或功能。</li>
+<li><code>ci</code>（持续集成）：表示与持续集成系统相关的更改。这可能涉及构建、测试、部署流程的改进或配置变更。</li>
+<li><code>docs</code>（文档）：表示与文档相关的更改。这可能包括更新 README 文件、添加或修改文档注释、更新 API 文档等。</li>
+<li><code>feat</code>（功能）：表示添加新功能或功能改进的更改。这通常是最常用的关键词之一。</li>
+<li><code>fix</code>（修复）：表示修复 bug 或错误的更改。这些更改主要是为了修复现有功能的问题。</li>
+<li><code>perf</code>（性能）：表示与性能优化相关的更改。这些更改旨在改进代码的执行速度、资源利用率或性能指标。</li>
+<li><code>refactor</code>（重构）：表示对现有代码进行重构，目的是改善代码的结构、可读性或可维护性，而不涉及功能更改。</li>
+<li><code>rev</code>（修订）：表示对先前提交的更改进行修订或修改。</li>
+<li><code>style</code>（样式）：表示与代码样式、格式或命名约定相关的更改。这些更改不会影响代码的功能，但会使其更易于阅读和理解。</li>
+<li><code>test</code>（测试）：表示与测试相关的更改。这可能包括添加、修改或删除单元测试、集成测试或端到端测试等。</li>
+</ol>
+<p>(The notes here are generated by ChatGPT.)</p>
+<blockquote>
+<p>NOTE: the alias for <code>revert</code> type is <code>rev</code>, as otherwise it conflicts with the git command of the same name.<br>It will still generate a commit message in the format <code>revert: &lt;message&gt;</code></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Alias</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>git style “remove trailing whitespace”</td>
+<td>git commit -m “style: remove trailing whitespace”</td>
+</tr>
+<tr>
+<td>git fix -s “router” “correct redirect link”</td>
+<td>git commit -m “fix(router): correct redirect link”</td>
+</tr>
+</tbody></table>
+<h2 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h2><ul>
 <li><a href="https://github.com/zsh-users/zsh-syntax-highlighting/issues/790">syntax highlighting is super slow in WSL2 · Issue #790 · zsh-users/zsh-syntax-highlighting</a></li>
 </ul>
 <h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ul>
@@ -4023,49 +4133,6 @@
       </tags>
   </entry>
   <entry>
-    <title>RLCraft 新手教程 - 一：过渡到你的正常生存</title>
-    <url>/posts/a1ada34d.html</url>
-    <content><![CDATA[<p>本系列教程是我自己游玩过程中写的。出发点是我没有在网上找到比较好的中文 RLCraft 文字教程，所以在此记录自己的游玩发现。也算留下一些记录，供未来又开坑的自己参考。这是第一篇：过渡到正常的生存。</p>
-<span id="more"></span>
-
-<h2 id="燧石装备"><a href="#燧石装备" class="headerlink" title="燧石装备"></a>燧石装备</h2><p>由于 NTP 模组（<a href="https://www.mcmod.cn/class/2138.html">No Tree Punching，无树可撸</a>）的存在，初入 RLCraft，你的第一件事情不再是获取原木，而是撸树叶获取木棍，然后在河边找到沙砾获取燧石。你可以按住鼠标左键徒手破坏树叶和沙砾，然后用右键点击掉落物以拿起它（或者你也可以按下 shift 来吸取附近的掉落物）。</p>
-<p>手拿燧石右击石头 / 圆石等坚硬方块（?）上表面，你可以获取燧石碎块，然后打开背包，在 2*2 的合成栏上边放燧石碎块，下边放木棍，获取一把粗糙的小刀。（图源 RLCraft Wiki）</p>
-<p><img data-src="https://s1.ax1x.com/2023/07/22/pCq0pLt.png" alt="粗糙的小刀"></p>
-<p>使用粗糙的小刀破坏草，可以获得植物纤维，在背包合成栏用三个植物纤维合成一个植物绳。然后再使用燧石碎块、植物绳、木棍合成粗糙的斧头。恭喜你获取了这个游戏的第一把斧头，用这把斧头你就可以开采原木了 —— 当心，树倒下来可能会砸死你！</p>
-<p><img data-src="https://s1.ax1x.com/2023/07/22/pCq0SsI.png" alt="植物绳"></p>
-<p><img data-src="https://s1.ax1x.com/2023/07/22/pCqwzQA.png" alt="粗糙的斧头"></p>
-<p>你不再能够直接使用背包合成栏分解原木，而是需要把原木竖直放在地上，并用斧头右击其上表面，以获取两块木板。木棍也可以用类似的方式获取 —— 将木板放在地上，然后用斧头右击。</p>
-<p>你可以看 jei 获取更多燧石工具的制作方法，但你更可以开始制作原版的木制工具。用木镐挖石头会掉落石子，四个石子 2*2 摆放可以获取圆石，而挖圆石则会直接掉落圆石。</p>
-<p>恭喜你进入石器时代！现在，你可以开始下矿了！但要时刻注意的一点是照明 —— 恐怖生物会在黑暗中生成… 别自己怎么死的都不知道。你会发现木棍加煤炭不再能合成原版火把，它们现在只能合成” 熄灭的火把”。要想点亮它们，你需要一颗打火石 —— 将熄灭的火把和打火石放在合成栏里，你就可以获得点燃的火把。但这火把仍然会熄灭 —— 比如一场雨过后，比如燃烧很久之后… 制作原版火把相对复杂，但你可以在村庄等地方找到一些。</p>
-<p>虽然还有很多路要走，但你现在基本上可以短暂地享受一会儿类原版的 MC 了。</p>
-<h2 id="定居下来"><a href="#定居下来" class="headerlink" title="定居下来"></a>定居下来</h2><p>RLCraft 的无限随机重生机制只有在你<strong>激活过指路石（传送石碑）</strong>或<strong>在床上睡过一觉</strong>之后才会结束。利用随机出生点，你可以选择搜刮一系列物资，然后激活指路石，然后找床睡觉，再破坏床，回到随机重生的状态。等你找到合适的定居点，再可以利用指路石传回来拿这些物资。</p>
-<p>定居点的选择：</p>
-<ul>
-<li>不能过高（例如山顶）：气温低、风元素等</li>
-<li>不要是沙漠：气温高</li>
-<li>远离龙</li>
-<li>靠近指路石</li>
-<li>…</li>
-</ul>
-<h2 id="前期经验获取方式"><a href="#前期经验获取方式" class="headerlink" title="前期经验获取方式"></a>前期经验获取方式</h2><p>在 RLCraft 中，你必须获取经验提升你的等级，才能解锁破坏某些方块或使用更高级的工具，例如铁质装备需要你的相应属性（攻击、防御等）达到 8 级，而钻石装备需要 16 级等等。下边介绍几种经验获取方法：</p>
-<h3 id="经验田"><a href="#经验田" class="headerlink" title="经验田"></a>经验田</h3><p>当农耕点到二级，就可以种植小麦了。种植一大片小麦田，收割的时候就会获得大量经验。类似的，养殖动物也可以获得大量经验。</p>
-<p>下图为我的 30 级经验田。这片田大约是 13 格水的满浇灌面积的大小（1 格水最多能浇灌 9*9-1=80 面积的田，所以总共大约为 1000 格），能提供我从 0 级升到大约 30 级所需的经验。（注意一下不要让水源露天，否则冬天会结冰，图中忘记了）</p>
-<p><img data-src="https://s1.ax1x.com/2023/07/22/pCqwHZ6.png" alt="经验田"></p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><em><a href="https://rlcraft.fandom.com/wiki/Getting_Started">Getting Started | RLCraft Wiki | Fandom</a></em></li>
-</ul>
-]]></content>
-      <categories>
-        <category>Game</category>
-        <category>Minecraft</category>
-      </categories>
-      <tags>
-        <tag>Game</tag>
-        <tag>Minecraft</tag>
-        <tag>RLCraft</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>RLCraft 新手教程 - 零：安装和资源导航</title>
     <url>/posts/4f52bf7e.html</url>
     <content><![CDATA[<p>本系列教程是我自己游玩过程中写的。出发点是我没有在网上找到比较好的中文 RLCraft 文字教程，所以在此记录自己的游玩发现。也算留下一些记录，供未来又开坑的自己参考。这是第零篇：安装 RLCraft 整合包，以及资源导航。</p>
@@ -4122,6 +4189,49 @@
 <p>通过修改 MC 根目录下的 <code>options.txt</code> 内的 <code>gamma</code> 项，可以获得所谓的” 永久夜视” 效果，也就是晚上的时候不会那么黑，改为 <code>10.0</code> 就行了。具体操作可以看下边 <a href="https://space.bilibili.com/19428259">@黑山大叔</a> 的视频:</p>
 <ul>
 <li><em><a href="https://www.bilibili.com/video/BV1b4411f79o">超实用系列 - 修改 gamma 黑夜变亮 - Minecraft 我的世界</a></em></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Game</category>
+        <category>Minecraft</category>
+      </categories>
+      <tags>
+        <tag>Game</tag>
+        <tag>Minecraft</tag>
+        <tag>RLCraft</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RLCraft 新手教程 - 一：过渡到你的正常生存</title>
+    <url>/posts/a1ada34d.html</url>
+    <content><![CDATA[<p>本系列教程是我自己游玩过程中写的。出发点是我没有在网上找到比较好的中文 RLCraft 文字教程，所以在此记录自己的游玩发现。也算留下一些记录，供未来又开坑的自己参考。这是第一篇：过渡到正常的生存。</p>
+<span id="more"></span>
+
+<h2 id="燧石装备"><a href="#燧石装备" class="headerlink" title="燧石装备"></a>燧石装备</h2><p>由于 NTP 模组（<a href="https://www.mcmod.cn/class/2138.html">No Tree Punching，无树可撸</a>）的存在，初入 RLCraft，你的第一件事情不再是获取原木，而是撸树叶获取木棍，然后在河边找到沙砾获取燧石。你可以按住鼠标左键徒手破坏树叶和沙砾，然后用右键点击掉落物以拿起它（或者你也可以按下 shift 来吸取附近的掉落物）。</p>
+<p>手拿燧石右击石头 / 圆石等坚硬方块（?）上表面，你可以获取燧石碎块，然后打开背包，在 2*2 的合成栏上边放燧石碎块，下边放木棍，获取一把粗糙的小刀。（图源 RLCraft Wiki）</p>
+<p><img data-src="https://s1.ax1x.com/2023/07/22/pCq0pLt.png" alt="粗糙的小刀"></p>
+<p>使用粗糙的小刀破坏草，可以获得植物纤维，在背包合成栏用三个植物纤维合成一个植物绳。然后再使用燧石碎块、植物绳、木棍合成粗糙的斧头。恭喜你获取了这个游戏的第一把斧头，用这把斧头你就可以开采原木了 —— 当心，树倒下来可能会砸死你！</p>
+<p><img data-src="https://s1.ax1x.com/2023/07/22/pCq0SsI.png" alt="植物绳"></p>
+<p><img data-src="https://s1.ax1x.com/2023/07/22/pCqwzQA.png" alt="粗糙的斧头"></p>
+<p>你不再能够直接使用背包合成栏分解原木，而是需要把原木竖直放在地上，并用斧头右击其上表面，以获取两块木板。木棍也可以用类似的方式获取 —— 将木板放在地上，然后用斧头右击。</p>
+<p>你可以看 jei 获取更多燧石工具的制作方法，但你更可以开始制作原版的木制工具。用木镐挖石头会掉落石子，四个石子 2*2 摆放可以获取圆石，而挖圆石则会直接掉落圆石。</p>
+<p>恭喜你进入石器时代！现在，你可以开始下矿了！但要时刻注意的一点是照明 —— 恐怖生物会在黑暗中生成… 别自己怎么死的都不知道。你会发现木棍加煤炭不再能合成原版火把，它们现在只能合成” 熄灭的火把”。要想点亮它们，你需要一颗打火石 —— 将熄灭的火把和打火石放在合成栏里，你就可以获得点燃的火把。但这火把仍然会熄灭 —— 比如一场雨过后，比如燃烧很久之后… 制作原版火把相对复杂，但你可以在村庄等地方找到一些。</p>
+<p>虽然还有很多路要走，但你现在基本上可以短暂地享受一会儿类原版的 MC 了。</p>
+<h2 id="定居下来"><a href="#定居下来" class="headerlink" title="定居下来"></a>定居下来</h2><p>RLCraft 的无限随机重生机制只有在你<strong>激活过指路石（传送石碑）</strong>或<strong>在床上睡过一觉</strong>之后才会结束。利用随机出生点，你可以选择搜刮一系列物资，然后激活指路石，然后找床睡觉，再破坏床，回到随机重生的状态。等你找到合适的定居点，再可以利用指路石传回来拿这些物资。</p>
+<p>定居点的选择：</p>
+<ul>
+<li>不能过高（例如山顶）：气温低、风元素等</li>
+<li>不要是沙漠：气温高</li>
+<li>远离龙</li>
+<li>靠近指路石</li>
+<li>…</li>
+</ul>
+<h2 id="前期经验获取方式"><a href="#前期经验获取方式" class="headerlink" title="前期经验获取方式"></a>前期经验获取方式</h2><p>在 RLCraft 中，你必须获取经验提升你的等级，才能解锁破坏某些方块或使用更高级的工具，例如铁质装备需要你的相应属性（攻击、防御等）达到 8 级，而钻石装备需要 16 级等等。下边介绍几种经验获取方法：</p>
+<h3 id="经验田"><a href="#经验田" class="headerlink" title="经验田"></a>经验田</h3><p>当农耕点到二级，就可以种植小麦了。种植一大片小麦田，收割的时候就会获得大量经验。类似的，养殖动物也可以获得大量经验。</p>
+<p>下图为我的 30 级经验田。这片田大约是 13 格水的满浇灌面积的大小（1 格水最多能浇灌 9*9-1=80 面积的田，所以总共大约为 1000 格），能提供我从 0 级升到大约 30 级所需的经验。（注意一下不要让水源露天，否则冬天会结冰，图中忘记了）</p>
+<p><img data-src="https://s1.ax1x.com/2023/07/22/pCqwHZ6.png" alt="经验田"></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><em><a href="https://rlcraft.fandom.com/wiki/Getting_Started">Getting Started | RLCraft Wiki | Fandom</a></em></li>
 </ul>
 ]]></content>
       <categories>
