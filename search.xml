@@ -3538,6 +3538,59 @@
       </categories>
       <tags>
         <tag>Vim</tag>
+        <tag>Config</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>My Zsh Config</title>
+    <url>/posts/3e5630f.html</url>
+    <content><![CDATA[<p>My personal config for Zsh (Z Shell), noting for next configuration.</p>
+<span id="more"></span>
+
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><p>Helpful resources:</p>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/625583037">Windows 安装 Zsh 终端 - 知乎</a></li>
+<li><a href="https://dominikrys.com/posts/zsh-in-git-bash-on-windows/">Installing Zsh (and oh-my-zsh) in Windows Git Bash</a></li>
+</ul>
+<h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><p>To install Z Shell on Arch Linux, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo pacman -S zsh</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Then run <code>chsh -s &lt;path_to_zsh&gt;</code> to set Z Shell as your default shell.</p>
+<h2 id="Config"><a href="#Config" class="headerlink" title="Config"></a>Config</h2><h3 id="oh-my-zsh"><a href="#oh-my-zsh" class="headerlink" title="oh-my-zsh"></a>oh-my-zsh</h3><ul>
+<li><a href="https://github.com/ohmyzsh/ohmyzsh">oh-my-zsh on GitHub</a></li>
+</ul>
+<p>Run the command below to install oh-my-zsh using <code>curl</code>:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sh -c <span class="string">"<span class="subst">$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="powerlevel10k"><a href="#powerlevel10k" class="headerlink" title="powerlevel10k"></a>powerlevel10k</h3><ul>
+<li><a href="https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#oh-my-zsh">powerlevel10k on GitHub</a></li>
+</ul>
+<p>You can install powerlevel10k with oh-my-zsh easily. Firstly, clone the repo:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --depth=1 https://github.com/romkatv/powerlevel10k.git <span class="variable">${ZSH_CUSTOM:-<span class="variable">$HOME</span>/.oh-my-zsh/custom}</span>/themes/powerlevel10k</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Then, set <code>ZSH_THEME="powerlevel10k/powerlevel10k"</code> in <code>~/.zshrc</code>.</p>
+<h2 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h2><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions.git <span class="variable">$ZSH_CUSTOM</span>/plugins/zsh-autosuggestions</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-history-substring-search <span class="variable">${ZSH_CUSTOM:-~/.oh-my-zsh/custom}</span>/plugins/zsh-history-substring-search</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-syntax-highlighting.git <span class="variable">${ZSH_CUSTOM:-~/.oh-my-zsh/custom}</span>/plugins/zsh-syntax-highlighting</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Edit in <code>~/.zshrc</code>:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">plugins=(</span><br><span class="line">    git</span><br><span class="line">    history-substring-search</span><br><span class="line">    z</span><br><span class="line">    zsh-autosuggestions</span><br><span class="line">    zsh-syntax-highlighting</span><br><span class="line">)</span><br><span class="line">ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=white'</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Troubleshooting"><a href="#Troubleshooting" class="headerlink" title="Troubleshooting"></a>Troubleshooting</h2><ul>
+<li><a href="https://github.com/zsh-users/zsh-syntax-highlighting/issues/790">syntax highlighting is super slow in WSL2 · Issue #790 · zsh-users/zsh-syntax-highlighting</a></li>
+</ul>
+<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ul>
+<li><a href="https://dominikrys.com/posts/zsh-in-git-bash-on-windows/">Installing Zsh (and oh-my-zsh) in Windows Git Bash</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/625583037">Windows 安装 Zsh 终端 - 知乎</a></li>
+<li><a href="https://github.com/abhigenie92/zsh_to_fish">abhigenie92/zsh_to_fish: How to make zsh like fish?</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/19556676">终极 Shell——ZSH - 知乎</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Config</tag>
+        <tag>Zsh</tag>
       </tags>
   </entry>
   <entry>
