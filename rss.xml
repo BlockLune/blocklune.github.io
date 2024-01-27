@@ -9,8 +9,33 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Sat, 27 Jan 2024 10:17:09 GMT</pubDate>
+    <pubDate>Sat, 27 Jan 2024 11:18:02 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Dyson Sphere Program Resources</title>
+      <link>https://fishg.top/posts/1b0501ea.html</link>
+      <guid>https://fishg.top/posts/1b0501ea.html</guid>
+      <pubDate>Sat, 27 Jan 2024 10:28:21 GMT</pubDate>
+      
+      <description>&lt;p&gt;A resource summary post for game &lt;a href=&quot;https://store.steampowered.com/app/1366540/Dyson_Sphere_Program/&quot;&gt;Dyson Sphere Program (DSP)&lt;/a&gt;.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://fishg.top/categories/game/">Game</category>
+      
+      <category domain="https://fishg.top/categories/game/dsp/">dsp</category>
+      
+      
+      <category domain="https://fishg.top/tags/game/">Game</category>
+      
+      <category domain="https://fishg.top/tags/dsp/">DSP</category>
+      
+      
+      <comments>https://fishg.top/posts/1b0501ea.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Git Commit Message Cheat Sheet (CN)</title>
@@ -22,6 +47,10 @@
       
       
       
+      
+      <category domain="https://fishg.top/categories/cs/">CS</category>
+      
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
       
       
       <category domain="https://fishg.top/tags/git/">Git</category>

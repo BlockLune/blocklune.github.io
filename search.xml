@@ -1877,39 +1877,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Edge 扩展推荐</title>
-    <url>/posts/3c91f84e.html</url>
-    <content><![CDATA[<p>2019 年 7 月写过一篇 Chrome 插件推荐的文章，那时候我还在用 Chrome 作为我的主要浏览器。一晃三年过去了，我也早已从 Google Chrome 转入全新 Chromium 内核构建的 Edge 浏览器。微软倒蛮有意思，自己从头开发的东西不咋地，在别人的平台上倒是表现得相当好。由于国内的水土不服啊，我用 Chrome 时总会遇到同步不了的情况，这点的体验在 Edge 这儿得到了很好的改善，也是我用 Edge 的主要原因吧。前些天帮很多同学做新机开荒，也推荐他们就用这款 “Win11 原装” 浏览器。当然一个浏览器肯定是离不开扩展的，趁着帮他们开荒这个机会，也顺便整理了我认为必备的一些浏览器扩展。</p>
-<span id="more"></span>
-
-<p><strong>本文更多的从个人角度出发，仅涵盖了笔者的主要需求，自然是粗略的，仅供参考。</strong></p>
-<h2 id="全部用户"><a href="#全部用户" class="headerlink" title="全部用户"></a>全部用户</h2><h3 id="Dark-Reader"><a href="#Dark-Reader" class="headerlink" title="Dark Reader"></a>Dark Reader</h3><p>简介：强制暗黑模式的网页</p>
-<h3 id="Infinity-新标签页-Pro"><a href="#Infinity-新标签页-Pro" class="headerlink" title="Infinity 新标签页 (Pro)"></a>Infinity 新标签页 (Pro)</h3><p>简介：rt，一个新标签页扩展</p>
-<h3 id="OneTab"><a href="#OneTab" class="headerlink" title="OneTab"></a>OneTab</h3><p>简介： 打开了太多网页的时候，按一下可以帮你全部收起来，之后可以自由恢复</p>
-<h3 id="Prevent-Duplicate-Tabs"><a href="#Prevent-Duplicate-Tabs" class="headerlink" title="Prevent Duplicate Tabs"></a>Prevent Duplicate Tabs</h3><p>简介： 帮你干掉那些重复的标签页</p>
-<h3 id="uBlock-Origin"><a href="#uBlock-Origin" class="headerlink" title="uBlock Origin"></a>uBlock Origin</h3><p>简介：干掉广告，且是众多去广告插件中占用相对较少的</p>
-<h3 id="捕捉网页截图-FireShot-的"><a href="#捕捉网页截图-FireShot-的" class="headerlink" title="捕捉网页截图 - FireShot 的"></a>捕捉网页截图 - FireShot 的</h3><p>简介：rt，支持长截图（名字有点怪，可能是翻译问题，搜索 FireShot 就能找到）</p>
-<h3 id="暴力猴"><a href="#暴力猴" class="headerlink" title="暴力猴"></a>暴力猴</h3><p>简介：装脚本的插件，和大名鼎鼎的油猴一样的功能，这个可能 (?) 小巧一点</p>
-<h3 id="沙拉查词-聚合词典划词翻译"><a href="#沙拉查词-聚合词典划词翻译" class="headerlink" title="沙拉查词-聚合词典划词翻译"></a>沙拉查词 - 聚合词典划词翻译</h3><p>简介：rt，划词翻译，可配置内容超多</p>
-<h3 id="Imagus"><a href="#Imagus" class="headerlink" title="Imagus"></a>Imagus</h3><p>简介：可以把网页图片放大了看</p>
-<h3 id="User-Agent-Switcher-for-Chrome"><a href="#User-Agent-Switcher-for-Chrome" class="headerlink" title="User-Agent Switcher for Chrome"></a>User-Agent Switcher for Chrome</h3><p>简介：“伪装” 你自己</p>
-<h3 id="Video-Speed-Controller"><a href="#Video-Speed-Controller" class="headerlink" title="Video Speed Controller"></a>Video Speed Controller</h3><p>简介：rt，但是竟然也可以改视频前广告的播放速度！</p>
-<h2 id="哔哩哔哩用户"><a href="#哔哩哔哩用户" class="headerlink" title="哔哩哔哩用户"></a>哔哩哔哩用户</h2><h3 id="pakku：哔哩哔哩弹幕过滤器"><a href="#pakku：哔哩哔哩弹幕过滤器" class="headerlink" title="pakku：哔哩哔哩弹幕过滤器"></a>pakku：哔哩哔哩弹幕过滤器</h3><p>简介：简化（过滤）你的 b 站弹幕</p>
-<h3 id="哔哩哔哩助手：bilibili-com-综合辅助扩"><a href="#哔哩哔哩助手：bilibili-com-综合辅助扩" class="headerlink" title="哔哩哔哩助手：bilibili.com 综合辅助扩"></a>哔哩哔哩助手：bilibili.com 综合辅助扩</h3><p>简介：功能超多，我主要用来下载 b 站视频了</p>
-<h2 id="Steam-用户"><a href="#Steam-用户" class="headerlink" title="Steam 用户"></a>Steam 用户</h2><h3 id="Augmented-Steam"><a href="#Augmented-Steam" class="headerlink" title="Augmented Steam"></a>Augmented Steam</h3><p>简介：为 steam 官网提供了众多试用的玩意儿</p>
-<h2 id="IT-工作者"><a href="#IT-工作者" class="headerlink" title="IT 工作者"></a>IT 工作者</h2><h3 id="Octotree-GitHub-code-tree"><a href="#Octotree-GitHub-code-tree" class="headerlink" title="Octotree - GitHub code tree"></a>Octotree - GitHub code tree</h3><p>简介：方便地查看 github 上某个 repository 的文件结构</p>
-<h3 id="Surfingkeys"><a href="#Surfingkeys" class="headerlink" title="Surfingkeys"></a>Surfingkeys</h3><p>简介：像 vim 一样的玩意儿，让你完全用你的键盘浏览网页</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Browser</tag>
-        <tag>Edge</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>LaTeX 公式基础</title>
     <url>/posts/848a7d31.html</url>
     <content><![CDATA[<p>用 LaTeX 写数学公式的时候，总记不住一些写法，故在此记录学习笔记。</p>
@@ -2765,6 +2732,39 @@
       </tags>
   </entry>
   <entry>
+    <title>Edge 扩展推荐</title>
+    <url>/posts/3c91f84e.html</url>
+    <content><![CDATA[<p>2019 年 7 月写过一篇 Chrome 插件推荐的文章，那时候我还在用 Chrome 作为我的主要浏览器。一晃三年过去了，我也早已从 Google Chrome 转入全新 Chromium 内核构建的 Edge 浏览器。微软倒蛮有意思，自己从头开发的东西不咋地，在别人的平台上倒是表现得相当好。由于国内的水土不服啊，我用 Chrome 时总会遇到同步不了的情况，这点的体验在 Edge 这儿得到了很好的改善，也是我用 Edge 的主要原因吧。前些天帮很多同学做新机开荒，也推荐他们就用这款 “Win11 原装” 浏览器。当然一个浏览器肯定是离不开扩展的，趁着帮他们开荒这个机会，也顺便整理了我认为必备的一些浏览器扩展。</p>
+<span id="more"></span>
+
+<p><strong>本文更多的从个人角度出发，仅涵盖了笔者的主要需求，自然是粗略的，仅供参考。</strong></p>
+<h2 id="全部用户"><a href="#全部用户" class="headerlink" title="全部用户"></a>全部用户</h2><h3 id="Dark-Reader"><a href="#Dark-Reader" class="headerlink" title="Dark Reader"></a>Dark Reader</h3><p>简介：强制暗黑模式的网页</p>
+<h3 id="Infinity-新标签页-Pro"><a href="#Infinity-新标签页-Pro" class="headerlink" title="Infinity 新标签页 (Pro)"></a>Infinity 新标签页 (Pro)</h3><p>简介：rt，一个新标签页扩展</p>
+<h3 id="OneTab"><a href="#OneTab" class="headerlink" title="OneTab"></a>OneTab</h3><p>简介： 打开了太多网页的时候，按一下可以帮你全部收起来，之后可以自由恢复</p>
+<h3 id="Prevent-Duplicate-Tabs"><a href="#Prevent-Duplicate-Tabs" class="headerlink" title="Prevent Duplicate Tabs"></a>Prevent Duplicate Tabs</h3><p>简介： 帮你干掉那些重复的标签页</p>
+<h3 id="uBlock-Origin"><a href="#uBlock-Origin" class="headerlink" title="uBlock Origin"></a>uBlock Origin</h3><p>简介：干掉广告，且是众多去广告插件中占用相对较少的</p>
+<h3 id="捕捉网页截图-FireShot-的"><a href="#捕捉网页截图-FireShot-的" class="headerlink" title="捕捉网页截图 - FireShot 的"></a>捕捉网页截图 - FireShot 的</h3><p>简介：rt，支持长截图（名字有点怪，可能是翻译问题，搜索 FireShot 就能找到）</p>
+<h3 id="暴力猴"><a href="#暴力猴" class="headerlink" title="暴力猴"></a>暴力猴</h3><p>简介：装脚本的插件，和大名鼎鼎的油猴一样的功能，这个可能 (?) 小巧一点</p>
+<h3 id="沙拉查词-聚合词典划词翻译"><a href="#沙拉查词-聚合词典划词翻译" class="headerlink" title="沙拉查词-聚合词典划词翻译"></a>沙拉查词 - 聚合词典划词翻译</h3><p>简介：rt，划词翻译，可配置内容超多</p>
+<h3 id="Imagus"><a href="#Imagus" class="headerlink" title="Imagus"></a>Imagus</h3><p>简介：可以把网页图片放大了看</p>
+<h3 id="User-Agent-Switcher-for-Chrome"><a href="#User-Agent-Switcher-for-Chrome" class="headerlink" title="User-Agent Switcher for Chrome"></a>User-Agent Switcher for Chrome</h3><p>简介：“伪装” 你自己</p>
+<h3 id="Video-Speed-Controller"><a href="#Video-Speed-Controller" class="headerlink" title="Video Speed Controller"></a>Video Speed Controller</h3><p>简介：rt，但是竟然也可以改视频前广告的播放速度！</p>
+<h2 id="哔哩哔哩用户"><a href="#哔哩哔哩用户" class="headerlink" title="哔哩哔哩用户"></a>哔哩哔哩用户</h2><h3 id="pakku：哔哩哔哩弹幕过滤器"><a href="#pakku：哔哩哔哩弹幕过滤器" class="headerlink" title="pakku：哔哩哔哩弹幕过滤器"></a>pakku：哔哩哔哩弹幕过滤器</h3><p>简介：简化（过滤）你的 b 站弹幕</p>
+<h3 id="哔哩哔哩助手：bilibili-com-综合辅助扩"><a href="#哔哩哔哩助手：bilibili-com-综合辅助扩" class="headerlink" title="哔哩哔哩助手：bilibili.com 综合辅助扩"></a>哔哩哔哩助手：bilibili.com 综合辅助扩</h3><p>简介：功能超多，我主要用来下载 b 站视频了</p>
+<h2 id="Steam-用户"><a href="#Steam-用户" class="headerlink" title="Steam 用户"></a>Steam 用户</h2><h3 id="Augmented-Steam"><a href="#Augmented-Steam" class="headerlink" title="Augmented Steam"></a>Augmented Steam</h3><p>简介：为 steam 官网提供了众多试用的玩意儿</p>
+<h2 id="IT-工作者"><a href="#IT-工作者" class="headerlink" title="IT 工作者"></a>IT 工作者</h2><h3 id="Octotree-GitHub-code-tree"><a href="#Octotree-GitHub-code-tree" class="headerlink" title="Octotree - GitHub code tree"></a>Octotree - GitHub code tree</h3><p>简介：方便地查看 github 上某个 repository 的文件结构</p>
+<h3 id="Surfingkeys"><a href="#Surfingkeys" class="headerlink" title="Surfingkeys"></a>Surfingkeys</h3><p>简介：像 vim 一样的玩意儿，让你完全用你的键盘浏览网页</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Browser</tag>
+        <tag>Edge</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>The chmod command in Linux</title>
     <url>/posts/a9dc5c1e.html</url>
     <content><![CDATA[<p>I accidentally ran a wrong <code>chmod</code> command in my Linux, and it messed up everything! I hate the permission management in Linux. :|</p>
@@ -3164,6 +3164,10 @@
 <li><em><a href="https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/">How to Write Better Git Commit Messages – A Step-By-Step Guide</a></em></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
       <tags>
         <tag>Git</tag>
         <tag>Version Control</tag>
@@ -4298,6 +4302,43 @@
         <tag>Game</tag>
         <tag>Minecraft</tag>
         <tag>RLCraft</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Dyson Sphere Program Resources</title>
+    <url>/posts/1b0501ea.html</url>
+    <content><![CDATA[<p>A resource summary post for game <a href="https://store.steampowered.com/app/1366540/Dyson_Sphere_Program/">Dyson Sphere Program (DSP)</a>.</p>
+<span id="more"></span>
+
+<h2 id="Blueprints"><a href="#Blueprints" class="headerlink" title="Blueprints"></a>Blueprints</h2><ul>
+<li><a href="https://www.dysonsphereblueprints.com/">Dyson Sphere Blueprints</a></li>
+</ul>
+<h2 id="Mods"><a href="#Mods" class="headerlink" title="Mods"></a>Mods</h2><ul>
+<li><a href="https://dsp.thunderstore.io/package/CommonAPI/CommonAPI/">CommonAPI-CommonAPI</a></li>
+<li><a href="https://dsp.thunderstore.io/package/CommonAPI/DSPModSave/">CommonAPI-DSPModSave</a></li>
+<li><a href="https://dsp.thunderstore.io/package/OutCraft_Mods/BetterPathfinding/">OutCraft_Mods-BetterPathfinding</a></li>
+<li><a href="https://dsp.thunderstore.io/package/appuns/DSPHideEverything/">appuns-DSPHideEverything</a></li>
+<li><a href="https://dsp.thunderstore.io/package/appuns/DSPRecipeFinder/">appuns-DSPRecipeFinder</a></li>
+<li><a href="https://dsp.thunderstore.io/package/blacksnipebiu/MoreStatInfo/">blacksnipebiu-MoreStatInfo</a></li>
+<li><a href="https://dsp.thunderstore.io/package/kremnev8/BlueprintTweaks/">kremnev8-BlueprintTweaks</a></li>
+<li><a href="https://dsp.thunderstore.io/package/nebula/NebulaMultiplayerModApi/">nebula-NebulaMultiplayerModApi</a></li>
+<li><a href="https://dsp.thunderstore.io/package/soarqin/CompressSave/">soarqin-CompressSave</a></li>
+<li><a href="https://dsp.thunderstore.io/package/soarqin/UXAssist/">soarqin-UXAssist</a></li>
+<li><a href="https://dsp.thunderstore.io/package/starfi5h/Bottleneck/">starfi5h-Bottleneck</a></li>
+<li><a href="https://dsp.thunderstore.io/package/starfi5h/FactoryLocator/">starfi5h-FactoryLocator</a></li>
+<li><a href="https://dsp.thunderstore.io/package/starfi5h/SF_ChinesePatch/">starfi5h-SF_ChinesePatch</a></li>
+<li><a href="https://dsp.thunderstore.io/package/starfi5h/StatsUITweaks/">starfi5h-StatsUITweaks</a></li>
+<li><a href="https://dsp.thunderstore.io/package/xiaoye97/BepInEx/">xiaoye97-BepInEx</a></li>
+<li><a href="https://dsp.thunderstore.io/package/xiaoye97/LDBTool/">xiaoye97-LDBTool</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Game</category>
+        <category>dsp</category>
+      </categories>
+      <tags>
+        <tag>Game</tag>
+        <tag>DSP</tag>
       </tags>
   </entry>
   <entry>
