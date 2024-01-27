@@ -9,8 +9,29 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Sat, 27 Jan 2024 09:59:00 GMT</pubDate>
+    <pubDate>Sat, 27 Jan 2024 10:14:06 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Git Commit Message Cheat Sheet (CN)</title>
+      <link>https://fishg.top/posts/8a5a50bb.html</link>
+      <guid>https://fishg.top/posts/8a5a50bb.html</guid>
+      <pubDate>Sat, 27 Jan 2024 10:09:10 GMT</pubDate>
+      
+      <description>&lt;p&gt;A Git commit message cheat sheet in Chinese.&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://fishg.top/tags/git/">Git</category>
+      
+      <category domain="https://fishg.top/tags/version-control/">Version Control</category>
+      
+      
+      <comments>https://fishg.top/posts/8a5a50bb.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Simple GitHub Tutorial</title>
