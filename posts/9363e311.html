@@ -22,21 +22,22 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"fishg.top","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="This is a simple tutorial of Git, also including some info about GitHub.">
+    <meta name="description" content="This is mainly a simple tutorial of Git. Some info about GitHub also included. You may also read Simple GitHub Tutorial.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Simple Git Tutorial">
 <meta property="og:url" content="https://fishg.top/posts/9363e311.html">
 <meta property="og:site_name" content="Fish Pond">
-<meta property="og:description" content="This is a simple tutorial of Git, also including some info about GitHub.">
+<meta property="og:description" content="This is mainly a simple tutorial of Git. Some info about GitHub also included. You may also read Simple GitHub Tutorial.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://software.3metas.com/wp-content/uploads/2017/06/git.png">
 <meta property="og:image" content="https://kinsta.com/wp-content/uploads/2018/04/what-is-github-1-1.png">
 <meta property="article:published_time" content="2023-03-11T09:55:55.000Z">
-<meta property="article:modified_time" content="2024-01-26T16:56:51.911Z">
+<meta property="article:modified_time" content="2024-01-27T09:59:00.585Z">
 <meta property="article:author" content="BlockLune">
-<meta property="article:tag" content="Version Control">
 <meta property="article:tag" content="Git">
+<meta property="article:tag" content="Version Control">
 <meta property="article:tag" content="GitHub">
+<meta property="article:tag" content="VCS">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://software.3metas.com/wp-content/uploads/2017/06/git.png">
 
@@ -153,7 +154,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Brief"><span class="nav-number">1.</span> <span class="nav-text">Brief</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Creating-A-Github-Account"><span class="nav-number">2.</span> <span class="nav-text">Creating A Github Account</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Downloading-And-Installing-Git"><span class="nav-number">3.</span> <span class="nav-text">Downloading And Installing Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Configuring"><span class="nav-number">4.</span> <span class="nav-text">Configuring</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Getting-Help"><span class="nav-number">5.</span> <span class="nav-text">Getting Help</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Getting-A-Git-Repository"><span class="nav-number">6.</span> <span class="nav-text">Getting A Git Repository</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Creating-One-In-An-Existing-Directory"><span class="nav-number">6.1.</span> <span class="nav-text">Creating One In An Existing Directory</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cloning-One-From-An-Existing-Repo"><span class="nav-number">6.2.</span> <span class="nav-text">Cloning One From An Existing Repo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tracking-Files"><span class="nav-number">7.</span> <span class="nav-text">Tracking Files</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Checking-The-Status"><span class="nav-number">8.</span> <span class="nav-text">Checking The Status</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Committing"><span class="nav-number">9.</span> <span class="nav-text">Committing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#History"><span class="nav-number">10.</span> <span class="nav-text">History</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Undo"><span class="nav-number">11.</span> <span class="nav-text">Undo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Remote"><span class="nav-number">12.</span> <span class="nav-text">Remote</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Branch"><span class="nav-number">13.</span> <span class="nav-text">Branch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Learn-More"><span class="nav-number">14.</span> <span class="nav-text">Learn More</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Brief"><span class="nav-number">1.</span> <span class="nav-text">Brief</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Installing-Git"><span class="nav-number">2.</span> <span class="nav-text">Installing Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic-Configuration"><span class="nav-number">3.</span> <span class="nav-text">Basic Configuration</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Getting-Help"><span class="nav-number">4.</span> <span class="nav-text">Getting Help</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Getting-A-Git-Repository"><span class="nav-number">5.</span> <span class="nav-text">Getting A Git Repository</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Creating-One-In-An-Existing-Directory"><span class="nav-number">5.1.</span> <span class="nav-text">Creating One In An Existing Directory</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cloning-One-from-An-Existing-Repo"><span class="nav-number">5.2.</span> <span class="nav-text">Cloning One from An Existing Repo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Files-States-in-a-Git-Project"><span class="nav-number">6.</span> <span class="nav-text">Files&#39; States in a Git Project</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tracking-Files"><span class="nav-number">7.</span> <span class="nav-text">Tracking Files</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Checking-Status"><span class="nav-number">8.</span> <span class="nav-text">Checking Status</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Checking-Differences"><span class="nav-number">9.</span> <span class="nav-text">Checking Differences</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Committing"><span class="nav-number">10.</span> <span class="nav-text">Committing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#History"><span class="nav-number">11.</span> <span class="nav-text">History</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Discarding-Changes-in-Working"><span class="nav-number">12.</span> <span class="nav-text">Discarding Changes in Working</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Next-Steps"><span class="nav-number">13.</span> <span class="nav-text">Next Steps</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Resources"><span class="nav-number">14.</span> <span class="nav-text">Resources</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -168,7 +169,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">75</span>
+          <span class="site-state-item-count">76</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -179,7 +180,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">113</span>
+        <span class="site-state-item-count">114</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -289,21 +290,29 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>This is a simple tutorial of Git, also including some info about GitHub.</p>
+    <div class="post-body" itemprop="articleBody"><p>This is mainly a simple tutorial of Git. Some info about GitHub also included. You may also read <em><a target="_blank" rel="noopener" href="https://blocklune.github.io/posts/1cce885f.html">Simple GitHub Tutorial</a></em>.</p>
 <span id="more"></span>
 
 <h2 id="Brief"><a href="#Brief" class="headerlink" title="Brief"></a>Brief</h2><p>You may have learnt Git and GitHub before, and also may have confused them because their similar names. What are these two things on earth?</p>
 <p><img data-src="https://software.3metas.com/wp-content/uploads/2017/06/git.png" alt="Git (This picture is from the Internet)"></p>
 <p><img data-src="https://kinsta.com/wp-content/uploads/2018/04/what-is-github-1-1.png" alt="GitHub (This picture is from the Internet)"></p>
-<p>In short, <a target="_blank" rel="noopener" href="https://git-scm.com/">Git</a> is a version control system (VCS), which enables you to create a repository of your codes, to track changes in your project and to manage your files efficiently. <a target="_blank" rel="noopener" href="https://github.com/">GitHub</a> is a platform used to host remote Git repositories for collaboration and sharing projects.</p>
-<p>In this post, you will learn the basic usage of Git and GitHub.</p>
-<h2 id="Creating-A-Github-Account"><a href="#Creating-A-Github-Account" class="headerlink" title="Creating A Github Account"></a>Creating A Github Account</h2><p>See <em><a target="_blank" rel="noopener" href="https://docs.github.com/en/get-started/signing-up-for-GitHub/signing-up-for-a-new-GitHub-accountt">Signing up for a new GitHub account - GitHub Docs</a></em></p>
-<h2 id="Downloading-And-Installing-Git"><a href="#Downloading-And-Installing-Git" class="headerlink" title="Downloading And Installing Git"></a>Downloading And Installing Git</h2><p>Many operations in Git run locally. Before using Git, you need to install it in your local environment.</p>
-<p>Download Git from the official website:</p>
+<p>In short, <a target="_blank" rel="noopener" href="https://git-scm.com/">Git</a> is a Version Control System (VCS), which enables you to create a repository of your codes, to track changes in your project and to manage your files efficiently. <a target="_blank" rel="noopener" href="https://github.com/">GitHub</a> is a platform used to host remote Git repositories for collaboration and sharing projects.</p>
+<p>In this post, you will learn the basic usage of Git. If you are looking for info about working with GitHub, see _<a target="_blank" rel="noopener" href="https://blocklune.github.io/posts/1cce885f.html">Simple GitHub Tutorial</a>.</p>
+<p>Want to go deeper? See <a href="#resources">Resources</a>.</p>
+<h2 id="Installing-Git"><a href="#Installing-Git" class="headerlink" title="Installing Git"></a>Installing Git</h2><p>Download Git from the official website:</p>
 <p><em><a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git - Downloads (git-scm.com)</a></em></p>
-<h2 id="Configuring"><a href="#Configuring" class="headerlink" title="Configuring"></a>Configuring</h2><p>To configure user info for all local repositories:</p>
+<p>Or use your favorite package manager by yourself.</p>
+<h2 id="Basic-Configuration"><a href="#Basic-Configuration" class="headerlink" title="Basic Configuration"></a>Basic Configuration</h2><p>Before starting to use Git, you should tell Git your name and email. The commands below set your name and email globally (which means they are visible to all your local repositories).</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"&lt;your_name&gt;"</span></span><br><span class="line">git config --global user.email <span class="string">"&lt;your_email@example.com&gt;"</span></span><br></pre></td></tr></tbody></table></figure>
 
+<blockquote>
+<p>It's highly recommended that you set <code>&lt;your_name&gt;</code> to be your GitHub username and set <code>&lt;your_email@example.com&gt;</code> to be your GitHub no-reply email, which looks like <code>ID+USERNAME@users.noreply.github.com</code>. You can find the no-reply email <a target="_blank" rel="noopener" href="https://github.com/settings/emails">here</a> (under the <code>Primary email address</code> section).</p>
+</blockquote>
+<p>Learn more:</p>
+<ul>
+<li><em><a target="_blank" rel="noopener" href="https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git">Setting your username in Git - GitHub Docs</a></em></li>
+<li><em><a target="_blank" rel="noopener" href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address">Setting your commit email address - GitHub Docs</a></em></li>
+</ul>
 <h2 id="Getting-Help"><a href="#Getting-Help" class="headerlink" title="Getting Help"></a>Getting Help</h2><p>To get help when using Git, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">help</span> &lt;verb&gt;</span><br><span class="line"><span class="comment"># Or</span></span><br><span class="line">git &lt;verb&gt; --<span class="built_in">help</span></span><br><span class="line"><span class="comment"># Or</span></span><br><span class="line">man git-&lt;verb&gt;</span><br></pre></td></tr></tbody></table></figure>
 
@@ -311,51 +320,53 @@
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></tbody></table></figure>
 
 <p>This command will create a directory called <code>.git</code>.</p>
-<h3 id="Cloning-One-From-An-Existing-Repo"><a href="#Cloning-One-From-An-Existing-Repo" class="headerlink" title="Cloning One From An Existing Repo"></a>Cloning One From An Existing Repo</h3><p>To clone an existing repo from a remote server. Run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> &lt;url&gt; &lt;local_directory_name&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<ul>
-<li><code>&lt;url&gt;</code> can be <code>https://</code>, <code>git://</code> and <code>user@server:path/to/repo.git</code> etc.</li>
-<li><code>&lt;local_directory_name&gt;</code> is optional.</li>
-</ul>
-<p>If you want to specify a branch when cloning, you can use <code>-b</code> option:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> -b &lt;branch&gt; &lt;url&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="Tracking-Files"><a href="#Tracking-Files" class="headerlink" title="Tracking Files"></a>Tracking Files</h2><p>To add file(s) to your tracked list, run:</p>
+<h3 id="Cloning-One-from-An-Existing-Repo"><a href="#Cloning-One-from-An-Existing-Repo" class="headerlink" title="Cloning One from An Existing Repo"></a>Cloning One from An Existing Repo</h3><p>See <em><a target="_blank" rel="noopener" href="https://blocklune.github.io/posts/1cce885f.html">Simple GitHub Tutorial</a></em></p>
+<h2 id="Files-States-in-a-Git-Project"><a href="#Files-States-in-a-Git-Project" class="headerlink" title="Files' States in a Git Project"></a>Files' States in a Git Project</h2><p>There are three main states in Git: <strong>modified</strong>, <strong>staged</strong>, and <strong>committed</strong>. And this leads us to three main sections of a Git project: the <code>Working Directory</code>, the <code>Staging Area</code> and the <code>Git Directory</code>.</p>
+<p>You modify your files in the <code>Working Directory</code>, stage them (using <code>git add</code>) to the <code>Staging Area</code>, and commit them (using <code>git commit</code>) to the <code>Git Directory</code>.</p>
+<p>Also see <em><a target="_blank" rel="noopener" href="https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F">Git - What is Git?</a></em>.</p>
+<h2 id="Tracking-Files"><a href="#Tracking-Files" class="headerlink" title="Tracking Files"></a>Tracking Files</h2><p>To add file(s) to your tracked list (or more precisely, put file(s) onto the <code>Staging Area</code>), run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add &lt;directory&gt;/&lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
 
-<p>This command tells Git to track the file(s) you specified and put them onto the stage. If you mistakenly tracked wrong file(s) (like a lot of log files), run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">rm</span> &lt;file&gt;     <span class="comment"># only if these file are newly added</span></span><br><span class="line">git <span class="built_in">rm</span> -f &lt;file&gt;  <span class="comment"># to the files in the stage before, -f(force) option is needed</span></span><br></pre></td></tr></tbody></table></figure>
+<p>To undo <code>git add</code> (unstage file(s)):</p>
+<ul>
+<li>Use <code>git reset</code>:</li>
+</ul>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git reset         <span class="comment"># unstage everything</span></span><br><span class="line">git reset &lt;file&gt;  <span class="comment"># unstage specific file(s)</span></span><br></pre></td></tr></tbody></table></figure>
 
-<p><code>git rm</code> command will not only stop tracking the files you specified, but also remove them. If you only want to stop tracking them, run:</p>
+<ul>
+<li>Use <code>git restore</code>:</li>
+</ul>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git restore --staged &lt;file&gt;  <span class="comment"># unstage specific file(s)</span></span><br><span class="line">git restore --staged :/      <span class="comment"># unstage all files</span></span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>Use <code>git rm</code>:</li>
+</ul>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">rm</span> --cached &lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
 
-<div class="note "><p>There is another command very similar to <code>git rm --cached &lt;file&gt;</code>: <code>git reset HEAD &lt;file&gt;</code>. Both of them will remove the file from the stage. But the former one will also remove the file from the tracked list (stop tracking it), while the latter will keep the file there.</p>
-</div>
-
-<div class="note danger no-icon"><p><code>git reset</code> is a dangerous command, especially when a <code>--hard</code> flag is added.</p>
-</div>
-
-<h2 id="Checking-The-Status"><a href="#Checking-The-Status" class="headerlink" title="Checking The Status"></a>Checking The Status</h2><p>To check the status of the files in the repo, run:</p>
+<blockquote>
+<p><strong>Warning</strong>: <code>git reset</code> is equivalent to <code>git restore --staged :/</code>. <code>git reset &lt;file&gt;</code> is equivalent to <code>git restore --staged &lt;file&gt;</code>. But <code>git rm --cached &lt;file&gt;</code> is unique. Actually, it means remove <code>&lt;file&gt;</code> from the <code>Staging Area</code>, while the other two commands move <code>&lt;file&gt;</code> in the <code>Staging Area</code> back to the <code>Working Directory</code>.</p>
+</blockquote>
+<h2 id="Checking-Status"><a href="#Checking-Status" class="headerlink" title="Checking Status"></a>Checking Status</h2><p>To check the status of the files in the repo, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br><span class="line"></span><br><span class="line"><span class="comment"># A Short Version</span></span><br><span class="line">git status -s</span><br><span class="line"><span class="comment"># Or</span></span><br><span class="line">git status --short</span><br></pre></td></tr></tbody></table></figure>
 
-<p>In the short version, there are two columns in the front of every line. The left column shows the status of the stage. The right column shows the status of the working area. The statuses are showed like this:</p>
+<p>In the short version, there are two columns in the front of every line. The left column shows the status of the <code>Staging Area</code>. The right column shows the status of the <code>Working Directory</code>. For example:</p>
 <ul>
 <li><code>??</code>: untracked file</li>
 <li><code>A</code>: file newly added to the stage</li>
 <li><code>M</code>: modified file</li>
 </ul>
-<p>To check the modifications in your files, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># To Show The Files Haven'T Been Staged</span></span><br><span class="line">git diff</span><br><span class="line"></span><br><span class="line"><span class="comment"># To Show The Files Have Been Staged</span></span><br><span class="line">git diff --staged</span><br><span class="line"><span class="comment"># Or</span></span><br><span class="line">git diff --cached</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="Checking-Differences"><a href="#Checking-Differences" class="headerlink" title="Checking Differences"></a>Checking Differences</h2><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># shows unstaged, uncommitted changes</span></span><br><span class="line">git diff</span><br><span class="line"></span><br><span class="line"><span class="comment"># shows all uncommitted changes (including staged ones):</span></span><br><span class="line">git diff HEAD</span><br><span class="line"></span><br><span class="line"><span class="comment"># shows only staged changes</span></span><br><span class="line">git diff --staged</span><br><span class="line">git diff --cached</span><br></pre></td></tr></tbody></table></figure>
 
 <h2 id="Committing"><a href="#Committing" class="headerlink" title="Committing"></a>Committing</h2><p>To commit your files, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit</span><br></pre></td></tr></tbody></table></figure>
 
-<p>This command will open a editor. You need to edit your commit message here.</p>
+<p>This command will open a editor. You need to edit your commit message here. Use the command below to set a default editor:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global core.editor &lt;path_to_editor_or_command_to_open_editor&gt;</span><br></pre></td></tr></tbody></table></figure>
+
 <p>Or, you can simplify this by using <code>-m</code> option:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &lt;commit_message&gt;</span><br></pre></td></tr></tbody></table></figure>
 
-<p><em>Oops, I forgot to add this file!</em> If you meet this issue, you can amend it like this:</p>
+<p><em>Oops, I forgot to add this file!</em> If you meet this problem, you can amend it like this:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"a wrong commit message"</span></span><br><span class="line">git add &lt;forgotten_file&gt;</span><br><span class="line">git commit --amend</span><br></pre></td></tr></tbody></table></figure>
 
 <p>The second commit will <strong>replace</strong> the first commit, as if the first commit never occurred.</p>
@@ -365,6 +376,13 @@
 <p>This command is equivalent to these two command bellow:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add &lt;all_tracked_files_that_have_been_modified&gt;</span><br><span class="line">git commit</span><br></pre></td></tr></tbody></table></figure>
 
+<blockquote>
+<p>How to write a commit message? The links below maybe helpful:</p>
+<ul>
+<li>_<a target="_blank" rel="noopener" href="https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/">How to Write Better Git Commit Messages – A Step-By-Step Guide</a></li>
+<li><em><a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git-commit">ohmyzsh/plugins/git-commit at master · ohmyzsh/ohmyzsh</a></em></li>
+</ul>
+</blockquote>
 <h2 id="History"><a href="#History" class="headerlink" title="History"></a>History</h2><p>To review the commit history, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></tbody></table></figure>
 
@@ -386,109 +404,22 @@
 <li><p><code>--graph</code> flag adds some ascii characters to vividly show your history.</p>
 </li>
 </ul>
-<h2 id="Undo"><a href="#Undo" class="headerlink" title="Undo"></a>Undo</h2><p>To discard changes in working, run:</p>
+<h2 id="Discarding-Changes-in-Working"><a href="#Discarding-Changes-in-Working" class="headerlink" title="Discarding Changes in Working"></a>Discarding Changes in Working</h2><div class="note danger no-icon"><p>In Git, it's usually easy to restore the files have been committed, but usually <strong>very hard</strong> to restore the files haven't been committed.</p>
+</div>
+
+<p>To discard changes in working, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -- &lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
 
-<p>This command will abandon the modifications to the file after your last commit.</p>
-<div class="note danger no-icon"><p>This is a DANGEROUS command. In Git, it's usually easy to restore the files have been committed, but usually very hard to restore the files haven't been committed.</p>
-</div>
-
-<p>To recall tracking some files added by <code>git add</code>, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">rm</span> --cached &lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Also see <a href="#tracking-files">Tracking Files</a></p>
-<h2 id="Remote"><a href="#Remote" class="headerlink" title="Remote"></a>Remote</h2><p>To connect your local repo to the remote server, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add &lt;server_name&gt; &lt;server&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p><code>server_name</code> is a short name of your server. Usually we use <code>origin</code>.</p>
-<p>To show all the names, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></tbody></table></figure>
-
-<p>To fetch the files in the remote repo, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch &lt;server_name&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<div class="note "><p>There is a magic called <code>git pull</code>. Usually, it means <code>git fetch</code> and <code>git merge</code>.</p>
-</div>
-
-<p>To push your local changes to your remote repo, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push &lt;server_name&gt; &lt;remote_branch&gt;</span><br><span class="line">git push &lt;server_name&gt; &lt;local_branch&gt;:&lt;remote_branch&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>To make the local branch track the remote branch, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git push -u &lt;server_name&gt; &lt;remote_branch&gt;</span><br><span class="line"><span class="comment"># Or</span></span><br><span class="line">git push --set-upstream &lt;server_name&gt; &lt;remote_branch&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>To check your remote repo, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote show &lt;server_name&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>To rename your remote repo, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote rename &lt;old_server_name&gt; &lt;new_server_name&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>To remove a remote repo, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote remove &lt;server_name&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<div class="note "><p>It's recommended to connect to GitHub with SSH. You can do it like this:</p>
-<p>Open your Git bash, and run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">"&lt;your_email@example.com&gt;"</span>      <span class="comment"># for newer system</span></span><br><span class="line">                                                           <span class="comment"># or</span></span><br><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">"&lt;your_email@example.com&gt;"</span>  <span class="comment"># for older system</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>Go to <a target="_blank" rel="noopener" href="https://github.com/settings/profile">Your profile on GitHub</a>. Click <code>SSH and GPG keys</code> on the left. Click <code>New SSH key</code>. Choose a title, and paste all content in <code>~/.ssh/id_ed25519.pub</code>. Then click <code>Add SSH key</code>.</p>
-<p>Simply explaining what we've done. <code>ssh-keygen</code> is a tool that help us create a key(<code>~/.ssh/id_ed25519</code>) and a lock(<code>~/.ssh/id_ed25519.pub</code>). Then, we use the <code>id_ed25519.pub</code> file to lock our repos on GitHub, and leave the <code>id_ed25519</code>, the key, in our PC. We can then avoid repeating login GitHub using password.</p>
-<p>Learn more on <em><a target="_blank" rel="noopener" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">Connecting to GitHub with SSH - GitHub Docs</a></em>.</p>
-</div>
-
-<h2 id="Branch"><a href="#Branch" class="headerlink" title="Branch"></a>Branch</h2><p>To list all the local branches, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></tbody></table></figure>
-
-<p>To list all the local and the remote branches, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -a</span><br></pre></td></tr></tbody></table></figure>
-
-<p>To show the last commits of every branch, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -v</span><br></pre></td></tr></tbody></table></figure>
-
-<p>The local branch is called the <strong>tracking branch</strong>. The corresponding branch on the remote server is called the <strong>upstream branch</strong>.</p>
-<p>To track a remote branch, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout --track &lt;server_name&gt;/&lt;branch&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>It is equivalent to:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b &lt;branch&gt;</span><br><span class="line"></span><br><span class="line">git branch -u &lt;server_name&gt;/&lt;branch&gt;</span><br><span class="line"><span class="comment"># Or</span></span><br><span class="line">git branch --set-upstream &lt;server_name&gt;/&lt;branch&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>To stop tracking, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch --unset-upstream &lt;branch&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>To show the correspondence, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -vv</span><br></pre></td></tr></tbody></table></figure>
-
-<p>To create a new local branch, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>To checkout to another local branch, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>You can create a new local branch and check out to it with one command:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>To rename a local branch, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch -m &lt;new_branch_name&gt;</span><br><span class="line">git branch -m &lt;old_branch_name&gt; &lt;new_branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>To delete a local branch, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch -d &lt;branch_name&gt;</span><br><span class="line">git branch -D &lt;branch_name&gt;  <span class="comment"># force</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>To delete a remote branch, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin --delete &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<div class="note "><p>There are no direct commands to create a new remote repo or rename a remote repo. But you can rename a remote repo like this:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git pull origin &lt;old_branch_name&gt;</span><br><span class="line">git branch -m &lt;old_branch_name&gt; &lt;new_branch_name&gt;</span><br><span class="line">git push -u origin &lt;new_branch_name&gt;</span><br><span class="line">git push origin --delete &lt;old_branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
-</div>
-
-<p>To merge the other branch to this one, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>If your current branch is <code>master</code>, this command merge <code>&lt;branch_name&gt;</code> to <code>master</code>.</p>
-<p>To show all the branches that have/haven't been merged to this branch, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch --merged</span><br><span class="line">git branch --no-merged</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="Learn-More"><a href="#Learn-More" class="headerlink" title="Learn More"></a>Learn More</h2><p><em><a target="_blank" rel="noopener" href="https://missing.csail.mit.edu/2020/version-control/">MIT - Missing Semester - Version Control (Git)</a></em></p>
-<p><em><a target="_blank" rel="noopener" href="https://git-scm.com/book/en/v2">Pro Git</a></em></p>
-<p><em><a target="_blank" rel="noopener" href="http://rogerdudler.github.io/git-guide/index.html">git - the simple guide - no deep shit!</a></em></p>
-<p><em><a target="_blank" rel="noopener" href="https://training.github.com/">GitHub Training Kit</a></em></p>
+<p>This command will abandon the modifications to the file after your last commit, where <code>--</code> indicates that the following content should be treated as file parameters, even if they resemble options.</p>
+<h2 id="Next-Steps"><a href="#Next-Steps" class="headerlink" title="Next Steps"></a>Next Steps</h2><p>TODO</p>
+<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ul>
+<li><em><a target="_blank" rel="noopener" href="https://git-scm.com/docs">Git - Reference</a></em></li>
+<li><em><a target="_blank" rel="noopener" href="https://docs.github.com/">GitHub Docs</a></em></li>
+<li><em><a target="_blank" rel="noopener" href="https://training.github.com/">GitHub Training Kit</a></em></li>
+<li><em><a target="_blank" rel="noopener" href="https://missing.csail.mit.edu/2020/version-control/">MIT - Missing Semester - Version Control (Git)</a></em></li>
+<li><em><a target="_blank" rel="noopener" href="https://git-scm.com/book/en/v2">Pro Git</a></em></li>
+<li><em><a target="_blank" rel="noopener" href="http://rogerdudler.github.io/git-guide/index.html">git - the simple guide - no deep shit!</a></em></li>
+</ul>
 
     </div>
 
@@ -515,9 +446,10 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/version-control/" rel="tag"># Version Control</a>
               <a href="/tags/git/" rel="tag"># Git</a>
+              <a href="/tags/version-control/" rel="tag"># Version Control</a>
               <a href="/tags/github/" rel="tag"># GitHub</a>
+              <a href="/tags/vcs/" rel="tag"># VCS</a>
           </div>
 
         

@@ -9,8 +9,33 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Fri, 26 Jan 2024 16:56:51 GMT</pubDate>
+    <pubDate>Sat, 27 Jan 2024 09:59:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Simple GitHub Tutorial</title>
+      <link>https://fishg.top/posts/1cce885f.html</link>
+      <guid>https://fishg.top/posts/1cce885f.html</guid>
+      <pubDate>Sat, 27 Jan 2024 04:50:29 GMT</pubDate>
+      
+      <description>&lt;p&gt;I have posted a tutorial of Git (See &lt;em&gt;&lt;a href=&quot;https://blocklune.github.io/posts/9363e311.html&quot;&gt;Simple Git Tutorial&lt;/a&gt;&lt;/em&gt;). But it mixed up using Git and using GitHub together. I post this new tutorial to draw a line and make things clear.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://fishg.top/categories/cs/">CS</category>
+      
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
+      
+      
+      <category domain="https://fishg.top/tags/version-control/">Version Control</category>
+      
+      <category domain="https://fishg.top/tags/github/">GitHub</category>
+      
+      
+      <comments>https://fishg.top/posts/1cce885f.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Two Way Binding in Vue3</title>
@@ -1181,7 +1206,7 @@
       <guid>https://fishg.top/posts/9363e311.html</guid>
       <pubDate>Sat, 11 Mar 2023 09:55:55 GMT</pubDate>
       
-      <description>&lt;p&gt;This is a simple tutorial of Git, also including some info about GitHub.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is mainly a simple tutorial of Git. Some info about GitHub also included. You may also read &lt;em&gt;&lt;a href=&quot;https://blocklune.github.io/posts/1cce885f.html&quot;&gt;Simple GitHub Tutorial&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;</description>
       
       
       
@@ -1191,11 +1216,13 @@
       <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
       
       
-      <category domain="https://fishg.top/tags/version-control/">Version Control</category>
-      
       <category domain="https://fishg.top/tags/git/">Git</category>
       
+      <category domain="https://fishg.top/tags/version-control/">Version Control</category>
+      
       <category domain="https://fishg.top/tags/github/">GitHub</category>
+      
+      <category domain="https://fishg.top/tags/vcs/">VCS</category>
       
       
       <comments>https://fishg.top/posts/9363e311.html#disqus_thread</comments>
