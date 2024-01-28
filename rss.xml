@@ -9,8 +9,33 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Sat, 27 Jan 2024 11:18:02 GMT</pubDate>
+    <pubDate>Sun, 28 Jan 2024 05:23:24 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>A very interesting VimGolf</title>
+      <link>https://fishg.top/posts/6023bfa0.html</link>
+      <guid>https://fishg.top/posts/6023bfa0.html</guid>
+      <pubDate>Sun, 28 Jan 2024 04:32:52 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;a href=&quot;https://www.vimgolf.com/&quot;&gt;VimGolf.com&lt;/a&gt; is a good place for vimers to practice and improve their vim skills. This post records my experience of solving a very interesting VimGolf game -- &lt;a href=&quot;https://www.vimgolf.com/challenges/9v00651eb20100000000025b&quot;&gt;Quicksort&lt;/a&gt;.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://fishg.top/categories/cs/">CS</category>
+      
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
+      
+      
+      <category domain="https://fishg.top/tags/vim/">Vim</category>
+      
+      <category domain="https://fishg.top/tags/vimgolf/">VimGolf</category>
+      
+      
+      <comments>https://fishg.top/posts/6023bfa0.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Dyson Sphere Program Resources</title>
