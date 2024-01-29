@@ -3945,6 +3945,23 @@
       </tags>
   </entry>
   <entry>
+    <title>Simple Git Tutorial: Working with Remote Server</title>
+    <url>/posts/85390c91.html</url>
+    <content><![CDATA[<p>Use remote servers to work with collaborators better.</p>
+<span id="more"></span>
+
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># connects to a remote server. Usually &lt;server_name&gt; is `origin`</span></span><br><span class="line">git remote add &lt;server_name&gt; &lt;server&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># removes a specific remote server</span></span><br><span class="line">git remote remove &lt;server_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># shows all the remote servers</span></span><br><span class="line">git remote -v</span><br><span class="line"></span><br><span class="line"><span class="comment"># renames</span></span><br><span class="line">git remote rename &lt;old_server_name&gt; &lt;new_server_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># shows some info about a specific remote server</span></span><br><span class="line">git remote show &lt;server_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># pushes files</span></span><br><span class="line">git push -u &lt;server_name&gt; &lt;branch&gt; <span class="comment"># or `git push --set-upstream &lt;server_name&gt; &lt;branch&gt;`</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># fetches files</span></span><br><span class="line">git fetch  <span class="comment"># from the default remote upstream repo</span></span><br><span class="line">git fetch &lt;server_name&gt;  <span class="comment"># from a specific remote upstream repo</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># combines the `fetch` and `merge` together</span></span><br><span class="line">git pull</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>Version Control</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Simple GitHub Tutorial</title>
     <url>/posts/1cce885f.html</url>
     <content><![CDATA[<p>I have posted a tutorial of Git (See <em><a href="https://blocklune.github.io/posts/9363e311.html">Simple Git Tutorial</a></em>). But it mixed up using Git and using GitHub together. I post this new tutorial to draw a line and make things clear.</p>

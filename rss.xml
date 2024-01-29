@@ -9,8 +9,33 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Mon, 29 Jan 2024 05:39:59 GMT</pubDate>
+    <pubDate>Mon, 29 Jan 2024 06:09:31 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Simple Git Tutorial: Working with Remote Server</title>
+      <link>https://fishg.top/posts/85390c91.html</link>
+      <guid>https://fishg.top/posts/85390c91.html</guid>
+      <pubDate>Mon, 29 Jan 2024 06:05:25 GMT</pubDate>
+      
+      <description>&lt;p&gt;Use remote servers to work with collaborators better.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://fishg.top/categories/cs/">CS</category>
+      
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
+      
+      
+      <category domain="https://fishg.top/tags/git/">Git</category>
+      
+      <category domain="https://fishg.top/tags/version-control/">Version Control</category>
+      
+      
+      <comments>https://fishg.top/posts/85390c91.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Simple Git Tutorial: Branching and Merging</title>
