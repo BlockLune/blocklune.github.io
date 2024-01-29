@@ -256,24 +256,6 @@
       </categories>
   </entry>
   <entry>
-    <title>记一次网络改造</title>
-    <url>/posts/b9a9b40d.html</url>
-    <content><![CDATA[<p>事情的起因是跟爸闲聊我抱怨家里为什么没有预埋到我和我妹房间的网线，结果才知道原来是有的，只不过藏在空面板里没有装接口...... 于是就开始兴致勃勃地想把它装起来 (这样我房间里就有有线网了！)，赶紧买了面板，交换机，网线和一众工具。</p>
-<span id="more"></span>
-
-<p>接网线难在第一个，不过第一个弄会了后面也就快了，此次没有试水晶头的接法，下次有机会试试。</p>
-<p>昨天仅仅是把面板弄完了，交换机今天才到的刚刚也弄上了，现在都做的很方便接上就能用了！不过在等交换机的时候把家里老的路由器小米 WiFi4 整了出来，稀里糊涂地捣鼓了半天刷上了个 openwrt，这个东西似乎是个 linux 发行版？! 反正似乎潜力巨大，可以装好多东西，但现在还没太研究，以前想试的 adguard home 似乎也可以试试去了。</p>
-<p>现在我的房间也终于有千兆网了！</p>
-<p><img data-src="https://s1.ax1x.com/2022/08/28/vWrbPP.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrTUI.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWroVA.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWr75t.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWr5bd.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrOxS.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrL28.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrq8f.jpg"></p>
-]]></content>
-      <categories>
-        <category>Misc</category>
-      </categories>
-      <tags>
-        <tag>Memory</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>记一次电脑清灰</title>
     <url>/posts/50b3c006.html</url>
     <content><![CDATA[<p>电脑是以前的老电脑，初一暑假时候买的 y700。配置低的可怜，毫无性价比的一台机子吧，当年还是电脑小白的时候保意买的，在完全不懂的情况下被忽悠着忽悠着买了，满满的坑啊。</p>
@@ -289,6 +271,24 @@
 <p><img data-src="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed375.jpg" alt="擦掉旧的硅脂（原来这个方方的才是gpu！）"></p>
 <p><img data-src="https://pic.imgdb.cn/item/6308bb6816f2c2beb1fed7e1.jpg" alt="尽力清灰后..."></p>
 <p><img data-src="https://pic.imgdb.cn/item/6308bb6816f2c2beb1fed7e6.jpg" alt="涂多了...希望不要出事"></p>
+]]></content>
+      <categories>
+        <category>Misc</category>
+      </categories>
+      <tags>
+        <tag>Memory</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记一次网络改造</title>
+    <url>/posts/b9a9b40d.html</url>
+    <content><![CDATA[<p>事情的起因是跟爸闲聊我抱怨家里为什么没有预埋到我和我妹房间的网线，结果才知道原来是有的，只不过藏在空面板里没有装接口...... 于是就开始兴致勃勃地想把它装起来 (这样我房间里就有有线网了！)，赶紧买了面板，交换机，网线和一众工具。</p>
+<span id="more"></span>
+
+<p>接网线难在第一个，不过第一个弄会了后面也就快了，此次没有试水晶头的接法，下次有机会试试。</p>
+<p>昨天仅仅是把面板弄完了，交换机今天才到的刚刚也弄上了，现在都做的很方便接上就能用了！不过在等交换机的时候把家里老的路由器小米 WiFi4 整了出来，稀里糊涂地捣鼓了半天刷上了个 openwrt，这个东西似乎是个 linux 发行版？! 反正似乎潜力巨大，可以装好多东西，但现在还没太研究，以前想试的 adguard home 似乎也可以试试去了。</p>
+<p>现在我的房间也终于有千兆网了！</p>
+<p><img data-src="https://s1.ax1x.com/2022/08/28/vWrbPP.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrTUI.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWroVA.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWr75t.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWr5bd.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrOxS.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrL28.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrq8f.jpg"></p>
 ]]></content>
       <categories>
         <category>Misc</category>
@@ -840,31 +840,6 @@
       </tags>
   </entry>
   <entry>
-    <title>My personal summary of Algorithms, Part I on Coursera</title>
-    <url>/posts/94efd546.html</url>
-    <content><![CDATA[<p>As the title says, this is my personal summary of <a href="https://www.coursera.org/learn/algorithms-part1">Algorithms, Part I</a> on <a href="https://www.coursera.org/">Coursera</a>.</p>
-<span id="more"></span>
-
-<p>Finally! q(≧▽≦q)</p>
-<p>I enrolled in this course about a month ago and have just finished it. Although the system decided that I had completed the course when my last assignment was due on the 2nd of May, I actually finished Week 06 about ten days later. No deadline, no motivation. &gt;_&lt;</p>
-<p>The course is called Algorithms, Part I. (There is Part II, of course, but I haven't signed up for it yet.) The teacher is Prof. Robert Sedgewick from Princeton University, also the author of the famous book Algorithms. Although this course is from a few years ago, it's still one of the top courses today.</p>
-<p>The biggest feature of this course is that it ties algorithms so closely to real-world problems. Almost all topics are introduced this way: Here we have a problem. To solve it, we can easily use ... But we can't do that because it's too expensive, so we can try to use ... to solve it. By using this algorithm, we can ensure that ... in the case of .... Also, we can use this algorithm to solve ... problems. I think this kind of combination between theory and practice is really valuable.</p>
-<p>The five projects are amazing. Instead of writing stupid experiment reports, uploading them to the QQ group and not knowing whether my codes are good or not, this online platform provides an incredible evaluation system that not only checks the correctness of your codes, but also the style! The style! Much better than some Chinese reference books! After each submission, the evaluation system gives you a detailed report on what's wrong with your codes, and you can then correct or polish your codes and submit them again. I submitted the last project thirteen times to pass it, with the help of GPT and even some reference codes! Orz</p>
-<p>I'd highly recommend any CS student to take this course on Coursera. It's free and in my opinion it's actually much easier than the listening section of the national college entrance examination or CET-4.</p>
-<p><img data-src="https://s1.ax1x.com/2023/05/12/p9yWH3t.png"></p>
-<p><img data-src="https://s1.ax1x.com/2023/05/12/p9yWqjf.png"></p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Algorithms &amp; Data structures</category>
-      </categories>
-      <tags>
-        <tag>Coursera</tag>
-        <tag>Algorithm</tag>
-        <tag>Online course summary</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>挖老婆矿！—— NovelAI 初试</title>
     <url>/posts/f17b3e8b.html</url>
     <content><![CDATA[<p>最近一段时间，感觉突然之间，就有很多很多将现实图片二次元化啊，按照每句歌词生成一副画作啊的 AI 绘画应用的图文视频出现。和室友聊天还说是不是最近一段时间 AI 技术突破什么瓶颈突飞猛进了。后来才知道，原来是 NovelAI 泄露了... 这样一来，本地部署方便了起来，于是整了一个玩玩。由于跑 AI 嘛，GPU 比较呼啸，跟挖矿一样，我就戏称我这是在 “挖老婆矿” 了。</p>
@@ -935,6 +910,31 @@
       <tags>
         <tag>AI</tag>
         <tag>NovelAI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>My personal summary of Algorithms, Part I on Coursera</title>
+    <url>/posts/94efd546.html</url>
+    <content><![CDATA[<p>As the title says, this is my personal summary of <a href="https://www.coursera.org/learn/algorithms-part1">Algorithms, Part I</a> on <a href="https://www.coursera.org/">Coursera</a>.</p>
+<span id="more"></span>
+
+<p>Finally! q(≧▽≦q)</p>
+<p>I enrolled in this course about a month ago and have just finished it. Although the system decided that I had completed the course when my last assignment was due on the 2nd of May, I actually finished Week 06 about ten days later. No deadline, no motivation. &gt;_&lt;</p>
+<p>The course is called Algorithms, Part I. (There is Part II, of course, but I haven't signed up for it yet.) The teacher is Prof. Robert Sedgewick from Princeton University, also the author of the famous book Algorithms. Although this course is from a few years ago, it's still one of the top courses today.</p>
+<p>The biggest feature of this course is that it ties algorithms so closely to real-world problems. Almost all topics are introduced this way: Here we have a problem. To solve it, we can easily use ... But we can't do that because it's too expensive, so we can try to use ... to solve it. By using this algorithm, we can ensure that ... in the case of .... Also, we can use this algorithm to solve ... problems. I think this kind of combination between theory and practice is really valuable.</p>
+<p>The five projects are amazing. Instead of writing stupid experiment reports, uploading them to the QQ group and not knowing whether my codes are good or not, this online platform provides an incredible evaluation system that not only checks the correctness of your codes, but also the style! The style! Much better than some Chinese reference books! After each submission, the evaluation system gives you a detailed report on what's wrong with your codes, and you can then correct or polish your codes and submit them again. I submitted the last project thirteen times to pass it, with the help of GPT and even some reference codes! Orz</p>
+<p>I'd highly recommend any CS student to take this course on Coursera. It's free and in my opinion it's actually much easier than the listening section of the national college entrance examination or CET-4.</p>
+<p><img data-src="https://s1.ax1x.com/2023/05/12/p9yWH3t.png"></p>
+<p><img data-src="https://s1.ax1x.com/2023/05/12/p9yWqjf.png"></p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Algorithms &amp; Data structures</category>
+      </categories>
+      <tags>
+        <tag>Coursera</tag>
+        <tag>Algorithm</tag>
+        <tag>Online course summary</tag>
       </tags>
   </entry>
   <entry>
@@ -2759,8 +2759,8 @@
       </categories>
       <tags>
         <tag>Git</tag>
-        <tag>Version Control</tag>
         <tag>GitHub</tag>
+        <tag>Version Control</tag>
         <tag>VCS</tag>
       </tags>
   </entry>
@@ -3894,6 +3894,57 @@
       </tags>
   </entry>
   <entry>
+    <title>Simple Git Tutorial: Branching and Merging</title>
+    <url>/posts/aa010e90.html</url>
+    <content><![CDATA[<p>Git's powerful branching and merging capabilities can help you deal with parallel collaborative development processes. Let's take a look.</p>
+<span id="more"></span>
+
+<p>So far, we've been working on a single default branch created by Git. The name of this branch is <code>main</code>. (It used to be <code>master</code>. See <em><a href="https://github.com/github/renaming">github/renaming: Guidance for changing the default branch name for GitHub repositories</a></em>) Our every commit becomes a new node on this branch.</p>
+<p>When we want to add a new feature, but aren't sure if the new feature is good enough to use, the natural thought is that we want to <strong>branch</strong> out based on our current location and do our new feature development and experimentation on the new branch. If it's good, <strong>merge</strong> it into the main branch. Otherwise discard it.</p>
+<h2 id="Branching"><a href="#Branching" class="headerlink" title="Branching"></a>Branching</h2><p>The basic commands for working on local branches are listed below:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># lists all the local branches</span></span><br><span class="line">git branch</span><br><span class="line"></span><br><span class="line"><span class="comment"># creates a new local branch named &lt;branch_name&gt;</span></span><br><span class="line">git branch &lt;branch_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># checks out branch &lt;branch_name&gt;</span></span><br><span class="line">git checkout &lt;branch_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># combines the create and check-out commands into one:</span></span><br><span class="line">git checkout -b &lt;branch_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># shows the latest commits of every branch</span></span><br><span class="line">git branch -v</span><br><span class="line"></span><br><span class="line"><span class="comment"># renames a local branch</span></span><br><span class="line">git branch -m &lt;new_branch_name&gt;</span><br><span class="line">git branch -m &lt;old_branch_name&gt; &lt;new_branch_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># deletes a local branch</span></span><br><span class="line">git branch -d &lt;branch_name&gt;</span><br><span class="line">git branch -D &lt;branch_name&gt;  <span class="comment"># force</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>All of the above commands work on the <strong>local</strong> branch(es). Then let's take a look at the remote branch(es).</p>
+<p>To list all the local and remote branches, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git branch --all</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">git branch -a</span><br></pre></td></tr></tbody></table></figure>
+
+<p>When you clone a repo from the Internet, you may find that there is a <code>main</code> branch and an <code>origin/main</code> branch. Here, <code>main</code> is a local branch, and <code>origin/main</code> is a remote branch (where <code>origin</code> means a remote server called <code>origin</code> and <code>main</code> means a branch of the same name on that remote server).</p>
+<p>In this case, the local branch <code>main</code> and the remote branch <code>origin/main</code> are related in some way, called <strong>tracking</strong>. The local branch is called the <strong>tracking branch</strong>. The corresponding branch on the remote server is called the <strong>upstream branch</strong>. Usually, the tracking branch shares a name with its upstream branch (e.g., the upstream branch of a local branch <code>feature</code> is <code>origin/feature</code>), but that's not a requirement.</p>
+<p>For example, the commands below create a new local branch <code>feature</code> and its upstream branch <code>origin/feature</code>:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git checkout -b feature</span><br><span class="line">git push -u origin feature  <span class="comment"># or `git push --set-upstream origin feature`</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>Run the command below to show the connection:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git branch -vv</span><br></pre></td></tr></tbody></table></figure>
+
+<p>More commands may be helpful:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># sets up a new tracking</span></span><br><span class="line">git checkout --track &lt;server_name&gt;/&lt;branch&gt;</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">git checkout -b &lt;branch&gt;</span><br><span class="line">git branch -u &lt;server_name&gt;/&lt;branch&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># stops tracking</span></span><br><span class="line">git brach --unset-upstream &lt;branch&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># deletes a remote branch</span></span><br><span class="line">git push origin --delete &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>There is no direct command to rename a remote branch. But you can do it like this:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git pull origin &lt;old_branch_name&gt;</span><br><span class="line">git push origin --delete &lt;old_branch_name&gt;</span><br><span class="line">git branch -m &lt;old_branch_name&gt; &lt;new_branch_name&gt;</span><br><span class="line">git push -u origin &lt;new_branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+</blockquote>
+<h2 id="Merging"><a href="#Merging" class="headerlink" title="Merging"></a>Merging</h2><p>To merge the other branch to this one, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git merge &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>If your current branch is <code>master</code>, this command merge <code>&lt;branch_name&gt;</code> to <code>master</code>.</p>
+<p>To show all the branches that have/haven't been merged to this branch, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git branch --merged</span><br><span class="line">git branch --no-merged</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ul>
+<li><em><a href="https://git-scm.com/docs">Git - Reference</a></em></li>
+<li><em><a href="https://stackoverflow.com/questions/4693588/what-is-a-tracking-branch">git - What is a tracking branch? - Stack Overflow</a></em></li>
+</ul>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>Version Control</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Simple GitHub Tutorial</title>
     <url>/posts/1cce885f.html</url>
     <content><![CDATA[<p>I have posted a tutorial of Git (See <em><a href="https://blocklune.github.io/posts/9363e311.html">Simple Git Tutorial</a></em>). But it mixed up using Git and using GitHub together. I post this new tutorial to draw a line and make things clear.</p>
@@ -3981,8 +4032,8 @@
         <category>Tools</category>
       </categories>
       <tags>
-        <tag>Version Control</tag>
         <tag>GitHub</tag>
+        <tag>Version Control</tag>
       </tags>
   </entry>
   <entry>

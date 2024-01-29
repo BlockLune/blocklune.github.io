@@ -9,8 +9,33 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Sun, 28 Jan 2024 05:23:24 GMT</pubDate>
+    <pubDate>Mon, 29 Jan 2024 05:39:59 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Simple Git Tutorial: Branching and Merging</title>
+      <link>https://fishg.top/posts/aa010e90.html</link>
+      <guid>https://fishg.top/posts/aa010e90.html</guid>
+      <pubDate>Mon, 29 Jan 2024 05:37:07 GMT</pubDate>
+      
+      <description>&lt;p&gt;Git&#39;s powerful branching and merging capabilities can help you deal with parallel collaborative development processes. Let&#39;s take a look.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://fishg.top/categories/cs/">CS</category>
+      
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
+      
+      
+      <category domain="https://fishg.top/tags/git/">Git</category>
+      
+      <category domain="https://fishg.top/tags/version-control/">Version Control</category>
+      
+      
+      <comments>https://fishg.top/posts/aa010e90.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>A very interesting VimGolf</title>
@@ -103,9 +128,9 @@
       <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
       
       
-      <category domain="https://fishg.top/tags/version-control/">Version Control</category>
-      
       <category domain="https://fishg.top/tags/github/">GitHub</category>
+      
+      <category domain="https://fishg.top/tags/version-control/">Version Control</category>
       
       
       <comments>https://fishg.top/posts/1cce885f.html#disqus_thread</comments>
@@ -1293,9 +1318,9 @@
       
       <category domain="https://fishg.top/tags/git/">Git</category>
       
-      <category domain="https://fishg.top/tags/version-control/">Version Control</category>
-      
       <category domain="https://fishg.top/tags/github/">GitHub</category>
+      
+      <category domain="https://fishg.top/tags/version-control/">Version Control</category>
       
       <category domain="https://fishg.top/tags/vcs/">VCS</category>
       
