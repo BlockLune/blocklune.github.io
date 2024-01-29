@@ -4440,6 +4440,35 @@
       </tags>
   </entry>
   <entry>
+    <title>Notes for Nand2Tetris: Machine Language</title>
+    <url>/posts/a4422da3.html</url>
+    <content><![CDATA[<p>This is a note for Nand2Tetris unit 4.</p>
+<span id="more"></span>
+
+<p><img data-src="https://s1.ax1x.com/2023/07/11/pCW6n7d.jpg" alt="The Hack Machine Language"></p>
+<h2 id="Project-4"><a href="#Project-4" class="headerlink" title="Project 4"></a>Project 4</h2><h3 id="Mult-asm"><a href="#Mult-asm" class="headerlink" title="Mult.asm"></a>Mult.asm</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">// Multiplies R0 and R1 and stores the result in R2.</span><br><span class="line">// (R0, R1, R2 refer to RAM[0], RAM[1], and RAM[2], respectively.)</span><br><span class="line">//</span><br><span class="line">// This program only needs to handle arguments that satisfy</span><br><span class="line">// R0 &gt;= 0, R1 &gt;= 0, and R0*R1 &lt; 32768.</span><br><span class="line"></span><br><span class="line">  // i = 0</span><br><span class="line">  @i</span><br><span class="line">  M=0</span><br><span class="line"></span><br><span class="line">  // RAM[2] = 0</span><br><span class="line">  @R2</span><br><span class="line">  M=0</span><br><span class="line"></span><br><span class="line">(LOOP)</span><br><span class="line">  // if (i &gt;= RAM[1]) goto END</span><br><span class="line">  @i</span><br><span class="line">  D=M</span><br><span class="line">  @R1</span><br><span class="line">  D=D-M</span><br><span class="line">  @END</span><br><span class="line">  D;JGE</span><br><span class="line">  // RAM[2] = RAM[2] + RAM[0]</span><br><span class="line">  @R2</span><br><span class="line">  D=M</span><br><span class="line">  @R0</span><br><span class="line">  D=D+M</span><br><span class="line">  @R2</span><br><span class="line">  M=D</span><br><span class="line">  // i = i + 1</span><br><span class="line">  @i</span><br><span class="line">  M=M+1</span><br><span class="line">  // goto LOOP</span><br><span class="line">  @LOOP</span><br><span class="line">  0;JMP</span><br><span class="line">(END)</span><br><span class="line">  @END</span><br><span class="line">  0;JMP</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Fill-asm"><a href="#Fill-asm" class="headerlink" title="Fill.asm"></a>Fill.asm</h3><p>The size of the screen is 512 * 256, which is made of 8192 16-bit registers.</p>
+<p>Notice that here something as follows is NOT supported:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">@total</span><br><span class="line">M=8192</span><br></pre></td></tr></tbody></table></figure>
+
+<p>The right side of the equals sign can only be 0, 1, -1, or a value from another register.</p>
+<p>Note that we can't make two loops to completely draw the screen and then listen the next input! If do that, since it doesn't listen during the loop, the program will never hear the input!</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">// Runs an infinite loop that listens to the keyboard input.</span><br><span class="line">// When a key is pressed (any key), the program blackens the screen,</span><br><span class="line">// i.e. writes "black" in every pixel;</span><br><span class="line">// the screen should remain fully black as long as the key is pressed.</span><br><span class="line">// When no key is pressed, the program clears the screen, i.e. writes</span><br><span class="line">// "white" in every pixel;</span><br><span class="line">// the screen should remain fully clear as long as no key is pressed.</span><br><span class="line"></span><br><span class="line">(RESET)</span><br><span class="line">  @8192</span><br><span class="line">  D=A</span><br><span class="line">  @i</span><br><span class="line">  M=D</span><br><span class="line">  @MAINLOOP</span><br><span class="line">  0;JMP</span><br><span class="line"></span><br><span class="line">(MAINLOOP)</span><br><span class="line">  // i=i-1</span><br><span class="line">  @i</span><br><span class="line">  M=M-1</span><br><span class="line">  D=M</span><br><span class="line">  // if (i &lt; 0) goto RESET</span><br><span class="line">  @RESET</span><br><span class="line">  D?JLT</span><br><span class="line">  // listen</span><br><span class="line">  @KBD</span><br><span class="line">  D=M</span><br><span class="line">  @WHITE</span><br><span class="line">  D;JEQ</span><br><span class="line">  @BLACK</span><br><span class="line">  0;JMP</span><br><span class="line"></span><br><span class="line">(WHITE)</span><br><span class="line">  @SCREEN</span><br><span class="line">  D=A</span><br><span class="line">  @i</span><br><span class="line">  A=D+M</span><br><span class="line">  M=0  // white</span><br><span class="line">  @MAINLOOP</span><br><span class="line">  0;JMP</span><br><span class="line"></span><br><span class="line">(BLACK)</span><br><span class="line">  @SCREEN</span><br><span class="line">  D=A</span><br><span class="line">  @i</span><br><span class="line">  A=D+M</span><br><span class="line">  M=-1  // black</span><br><span class="line">  @MAINLOOP</span><br><span class="line">  0;JMP</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Computing System</category>
+        <category>Nand2Tetris</category>
+      </categories>
+      <tags>
+        <tag>Coursera</tag>
+        <tag>Nand2Tetris</tag>
+        <tag>Assembly Language</tag>
+        <tag>Machine Language</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Notes for Nand2Tetris: Computer Architecture</title>
     <url>/posts/9a8ff4a5.html</url>
     <content><![CDATA[<p>This is a note for Nand2Tetris Unit 5.</p>
@@ -4637,35 +4666,6 @@
         <tag>Instruction bus</tag>
         <tag>CPU</tag>
         <tag>Computer design</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Notes for Nand2Tetris: Machine Language</title>
-    <url>/posts/a4422da3.html</url>
-    <content><![CDATA[<p>This is a note for Nand2Tetris unit 4.</p>
-<span id="more"></span>
-
-<p><img data-src="https://s1.ax1x.com/2023/07/11/pCW6n7d.jpg" alt="The Hack Machine Language"></p>
-<h2 id="Project-4"><a href="#Project-4" class="headerlink" title="Project 4"></a>Project 4</h2><h3 id="Mult-asm"><a href="#Mult-asm" class="headerlink" title="Mult.asm"></a>Mult.asm</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">// Multiplies R0 and R1 and stores the result in R2.</span><br><span class="line">// (R0, R1, R2 refer to RAM[0], RAM[1], and RAM[2], respectively.)</span><br><span class="line">//</span><br><span class="line">// This program only needs to handle arguments that satisfy</span><br><span class="line">// R0 &gt;= 0, R1 &gt;= 0, and R0*R1 &lt; 32768.</span><br><span class="line"></span><br><span class="line">  // i = 0</span><br><span class="line">  @i</span><br><span class="line">  M=0</span><br><span class="line"></span><br><span class="line">  // RAM[2] = 0</span><br><span class="line">  @R2</span><br><span class="line">  M=0</span><br><span class="line"></span><br><span class="line">(LOOP)</span><br><span class="line">  // if (i &gt;= RAM[1]) goto END</span><br><span class="line">  @i</span><br><span class="line">  D=M</span><br><span class="line">  @R1</span><br><span class="line">  D=D-M</span><br><span class="line">  @END</span><br><span class="line">  D;JGE</span><br><span class="line">  // RAM[2] = RAM[2] + RAM[0]</span><br><span class="line">  @R2</span><br><span class="line">  D=M</span><br><span class="line">  @R0</span><br><span class="line">  D=D+M</span><br><span class="line">  @R2</span><br><span class="line">  M=D</span><br><span class="line">  // i = i + 1</span><br><span class="line">  @i</span><br><span class="line">  M=M+1</span><br><span class="line">  // goto LOOP</span><br><span class="line">  @LOOP</span><br><span class="line">  0;JMP</span><br><span class="line">(END)</span><br><span class="line">  @END</span><br><span class="line">  0;JMP</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="Fill-asm"><a href="#Fill-asm" class="headerlink" title="Fill.asm"></a>Fill.asm</h3><p>The size of the screen is 512 * 256, which is made of 8192 16-bit registers.</p>
-<p>Notice that here something as follows is NOT supported:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">@total</span><br><span class="line">M=8192</span><br></pre></td></tr></tbody></table></figure>
-
-<p>The right side of the equals sign can only be 0, 1, -1, or a value from another register.</p>
-<p>Note that we can't make two loops to completely draw the screen and then listen the next input! If do that, since it doesn't listen during the loop, the program will never hear the input!</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">// Runs an infinite loop that listens to the keyboard input.</span><br><span class="line">// When a key is pressed (any key), the program blackens the screen,</span><br><span class="line">// i.e. writes "black" in every pixel;</span><br><span class="line">// the screen should remain fully black as long as the key is pressed.</span><br><span class="line">// When no key is pressed, the program clears the screen, i.e. writes</span><br><span class="line">// "white" in every pixel;</span><br><span class="line">// the screen should remain fully clear as long as no key is pressed.</span><br><span class="line"></span><br><span class="line">(RESET)</span><br><span class="line">  @8192</span><br><span class="line">  D=A</span><br><span class="line">  @i</span><br><span class="line">  M=D</span><br><span class="line">  @MAINLOOP</span><br><span class="line">  0;JMP</span><br><span class="line"></span><br><span class="line">(MAINLOOP)</span><br><span class="line">  // i=i-1</span><br><span class="line">  @i</span><br><span class="line">  M=M-1</span><br><span class="line">  D=M</span><br><span class="line">  // if (i &lt; 0) goto RESET</span><br><span class="line">  @RESET</span><br><span class="line">  D?JLT</span><br><span class="line">  // listen</span><br><span class="line">  @KBD</span><br><span class="line">  D=M</span><br><span class="line">  @WHITE</span><br><span class="line">  D;JEQ</span><br><span class="line">  @BLACK</span><br><span class="line">  0;JMP</span><br><span class="line"></span><br><span class="line">(WHITE)</span><br><span class="line">  @SCREEN</span><br><span class="line">  D=A</span><br><span class="line">  @i</span><br><span class="line">  A=D+M</span><br><span class="line">  M=0  // white</span><br><span class="line">  @MAINLOOP</span><br><span class="line">  0;JMP</span><br><span class="line"></span><br><span class="line">(BLACK)</span><br><span class="line">  @SCREEN</span><br><span class="line">  D=A</span><br><span class="line">  @i</span><br><span class="line">  A=D+M</span><br><span class="line">  M=-1  // black</span><br><span class="line">  @MAINLOOP</span><br><span class="line">  0;JMP</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Computing System</category>
-        <category>Nand2Tetris</category>
-      </categories>
-      <tags>
-        <tag>Coursera</tag>
-        <tag>Nand2Tetris</tag>
-        <tag>Assembly Language</tag>
-        <tag>Machine Language</tag>
       </tags>
   </entry>
   <entry>
@@ -7057,6 +7057,13 @@
 <ul>
 <li><em><a href="https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git">Setting your username in Git - GitHub Docs</a></em></li>
 <li><em><a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address">Setting your commit email address - GitHub Docs</a></em></li>
+</ul>
+<p>You may also set your default editor and default diff and merge tools. Here I set to VS Code.</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># default editor</span></span><br><span class="line">git config --global core.editor <span class="string">'code --wait'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># default diff tool</span></span><br><span class="line">git config --global diff.tool vscode</span><br><span class="line">git config --global difftool.vscode.cmd <span class="string">'code --wait --diff $LOCAL $REMOTE'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># default merge tool</span></span><br><span class="line">git config --global merge.tool vscode</span><br><span class="line">git config --global mergetool.vscode.cmd <span class="string">'code --wait $MERGED'</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>Learn more:</p>
+<ul>
+<li><em><a href="https://www.roboleary.net/vscode/2020/09/15/vscode-git.html">How to use VS Code as your Git editor, difftool, and mergetool</a></em></li>
 </ul>
 <h2 id="Getting-Help"><a href="#Getting-Help" class="headerlink" title="Getting Help"></a>Getting Help</h2><p>To get help when using Git, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">help</span> &lt;verb&gt;</span><br><span class="line"><span class="comment"># Or</span></span><br><span class="line">git &lt;verb&gt; --<span class="built_in">help</span></span><br><span class="line"><span class="comment"># Or</span></span><br><span class="line">man git-&lt;verb&gt;</span><br></pre></td></tr></tbody></table></figure>
