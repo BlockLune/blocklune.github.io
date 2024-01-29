@@ -2572,54 +2572,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Replace cat with bat</title>
-    <url>/posts/e7bc2e88.html</url>
-    <content><![CDATA[<p>When using Linux, I often use <code>cat</code> to browse some short codes. But it doesn't support syntax highlighting originally. So, I found one of its replacements: <code>bat</code>.</p>
-<span id="more"></span>
-
-<h2 id="Brief-Introduction"><a href="#Brief-Introduction" class="headerlink" title="Brief Introduction"></a>Brief Introduction</h2><p><a href="https://github.com/sharkdp/bat"><img data-src="https://github.com/sharkdp/bat/raw/master/doc/logo-header.svg" alt="BAT Logo"></a></p>
-<p>On <a href="https://github.com/sharkdp/bat">BAT</a>'s official GitHub page, it defines itself "a cat clone with wings". In my opinion, one is "syntax highlighting", and the other is "git integration".</p>
-<p>Here are some of its important features:</p>
-<ul>
-<li>Syntax highlighting</li>
-<li>Git integration</li>
-<li>Show non-printable characters</li>
-<li>Automatic paging</li>
-</ul>
-<p><img data-src="https://camo.githubusercontent.com/7b7c397acc5b91b4c4cf7756015185fe3c5f700f70d256a212de51294a0cf673/68747470733a2f2f696d6775722e636f6d2f724773646e44652e706e67" alt="BAT's syntax highlighting"></p>
-<p><img data-src="https://camo.githubusercontent.com/c436c206f2c86605ab2f9fb632dd485afc05fccbf14af472770b0c59d876c9cc/68747470733a2f2f692e696d6775722e636f6d2f326c53573452452e706e67" alt="BAT's git integration"></p>
-<p><img data-src="https://camo.githubusercontent.com/643244c46834769e0ea2802e15518c49e0c7cf10aa82d00c7c69a406f2aa161d/68747470733a2f2f692e696d6775722e636f6d2f576e64477039482e706e67" alt="BAT's non-printable characters showing"></p>
-<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>In ArchLinux, you can run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo pacman -S bat</span><br></pre></td></tr></tbody></table></figure>
-
-<p>In Termux, you can run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">pkg install bat</span><br></pre></td></tr></tbody></table></figure>
-
-<p>In Ubuntu, you can run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo apt install bat</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Learn more on <a href="https://github.com/sharkdp/bat">BAT</a>'s GitHub page.</p>
-<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Display a single file:</span></span><br><span class="line">bat &lt;filename&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Display multi files at once:</span></span><br><span class="line">bat &lt;filename1&gt; &lt;filename2&gt; ...</span><br><span class="line"></span><br><span class="line"><span class="comment"># Show and highlight non-printable characters:</span></span><br><span class="line">bat -A &lt;filename&gt; <span class="comment"># or</span></span><br><span class="line">bat --show-all &lt;filename&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Learn more on <a href="https://github.com/sharkdp/bat">BAT</a>'s GitHub page.</p>
-<h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><p>You can use BAT's configuration file to customize your BAT.</p>
-<p>To generate a default config file, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">bat --generate-config-file</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Here is an example:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line"># Set the theme</span><br><span class="line">--theme="Dracula"</span><br><span class="line"></span><br><span class="line"># Use C++ syntax for Arduino .ino files</span><br><span class="line">--map-syntax "*.ino:C++"</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>cat</tag>
-        <tag>bat</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>The chmod command in Linux</title>
     <url>/posts/a9dc5c1e.html</url>
     <content><![CDATA[<p>I accidentally ran a wrong <code>chmod</code> command in my Linux, and it messed up everything! I hate the permission management in Linux. :|</p>
@@ -2671,6 +2623,54 @@
       <tags>
         <tag>Linux</tag>
         <tag>chmod</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Replace cat with bat</title>
+    <url>/posts/e7bc2e88.html</url>
+    <content><![CDATA[<p>When using Linux, I often use <code>cat</code> to browse some short codes. But it doesn't support syntax highlighting originally. So, I found one of its replacements: <code>bat</code>.</p>
+<span id="more"></span>
+
+<h2 id="Brief-Introduction"><a href="#Brief-Introduction" class="headerlink" title="Brief Introduction"></a>Brief Introduction</h2><p><a href="https://github.com/sharkdp/bat"><img data-src="https://github.com/sharkdp/bat/raw/master/doc/logo-header.svg" alt="BAT Logo"></a></p>
+<p>On <a href="https://github.com/sharkdp/bat">BAT</a>'s official GitHub page, it defines itself "a cat clone with wings". In my opinion, one is "syntax highlighting", and the other is "git integration".</p>
+<p>Here are some of its important features:</p>
+<ul>
+<li>Syntax highlighting</li>
+<li>Git integration</li>
+<li>Show non-printable characters</li>
+<li>Automatic paging</li>
+</ul>
+<p><img data-src="https://camo.githubusercontent.com/7b7c397acc5b91b4c4cf7756015185fe3c5f700f70d256a212de51294a0cf673/68747470733a2f2f696d6775722e636f6d2f724773646e44652e706e67" alt="BAT's syntax highlighting"></p>
+<p><img data-src="https://camo.githubusercontent.com/c436c206f2c86605ab2f9fb632dd485afc05fccbf14af472770b0c59d876c9cc/68747470733a2f2f692e696d6775722e636f6d2f326c53573452452e706e67" alt="BAT's git integration"></p>
+<p><img data-src="https://camo.githubusercontent.com/643244c46834769e0ea2802e15518c49e0c7cf10aa82d00c7c69a406f2aa161d/68747470733a2f2f692e696d6775722e636f6d2f576e64477039482e706e67" alt="BAT's non-printable characters showing"></p>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>In ArchLinux, you can run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo pacman -S bat</span><br></pre></td></tr></tbody></table></figure>
+
+<p>In Termux, you can run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">pkg install bat</span><br></pre></td></tr></tbody></table></figure>
+
+<p>In Ubuntu, you can run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo apt install bat</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Learn more on <a href="https://github.com/sharkdp/bat">BAT</a>'s GitHub page.</p>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Display a single file:</span></span><br><span class="line">bat &lt;filename&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Display multi files at once:</span></span><br><span class="line">bat &lt;filename1&gt; &lt;filename2&gt; ...</span><br><span class="line"></span><br><span class="line"><span class="comment"># Show and highlight non-printable characters:</span></span><br><span class="line">bat -A &lt;filename&gt; <span class="comment"># or</span></span><br><span class="line">bat --show-all &lt;filename&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Learn more on <a href="https://github.com/sharkdp/bat">BAT</a>'s GitHub page.</p>
+<h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><p>You can use BAT's configuration file to customize your BAT.</p>
+<p>To generate a default config file, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">bat --generate-config-file</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Here is an example:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line"># Set the theme</span><br><span class="line">--theme="Dracula"</span><br><span class="line"></span><br><span class="line"># Use C++ syntax for Arduino .ino files</span><br><span class="line">--map-syntax "*.ino:C++"</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>cat</tag>
+        <tag>bat</tag>
       </tags>
   </entry>
   <entry>
@@ -3451,6 +3451,14 @@
 <tr>
 <td>gc!</td>
 <td>git commit --verbose --amend</td>
+</tr>
+<tr>
+<td>gd</td>
+<td>git diff</td>
+</tr>
+<tr>
+<td>gf</td>
+<td>git fetch</td>
 </tr>
 <tr>
 <td>glog</td>
@@ -4440,35 +4448,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Notes for Nand2Tetris: Machine Language</title>
-    <url>/posts/a4422da3.html</url>
-    <content><![CDATA[<p>This is a note for Nand2Tetris unit 4.</p>
-<span id="more"></span>
-
-<p><img data-src="https://s1.ax1x.com/2023/07/11/pCW6n7d.jpg" alt="The Hack Machine Language"></p>
-<h2 id="Project-4"><a href="#Project-4" class="headerlink" title="Project 4"></a>Project 4</h2><h3 id="Mult-asm"><a href="#Mult-asm" class="headerlink" title="Mult.asm"></a>Mult.asm</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">// Multiplies R0 and R1 and stores the result in R2.</span><br><span class="line">// (R0, R1, R2 refer to RAM[0], RAM[1], and RAM[2], respectively.)</span><br><span class="line">//</span><br><span class="line">// This program only needs to handle arguments that satisfy</span><br><span class="line">// R0 &gt;= 0, R1 &gt;= 0, and R0*R1 &lt; 32768.</span><br><span class="line"></span><br><span class="line">  // i = 0</span><br><span class="line">  @i</span><br><span class="line">  M=0</span><br><span class="line"></span><br><span class="line">  // RAM[2] = 0</span><br><span class="line">  @R2</span><br><span class="line">  M=0</span><br><span class="line"></span><br><span class="line">(LOOP)</span><br><span class="line">  // if (i &gt;= RAM[1]) goto END</span><br><span class="line">  @i</span><br><span class="line">  D=M</span><br><span class="line">  @R1</span><br><span class="line">  D=D-M</span><br><span class="line">  @END</span><br><span class="line">  D;JGE</span><br><span class="line">  // RAM[2] = RAM[2] + RAM[0]</span><br><span class="line">  @R2</span><br><span class="line">  D=M</span><br><span class="line">  @R0</span><br><span class="line">  D=D+M</span><br><span class="line">  @R2</span><br><span class="line">  M=D</span><br><span class="line">  // i = i + 1</span><br><span class="line">  @i</span><br><span class="line">  M=M+1</span><br><span class="line">  // goto LOOP</span><br><span class="line">  @LOOP</span><br><span class="line">  0;JMP</span><br><span class="line">(END)</span><br><span class="line">  @END</span><br><span class="line">  0;JMP</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="Fill-asm"><a href="#Fill-asm" class="headerlink" title="Fill.asm"></a>Fill.asm</h3><p>The size of the screen is 512 * 256, which is made of 8192 16-bit registers.</p>
-<p>Notice that here something as follows is NOT supported:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">@total</span><br><span class="line">M=8192</span><br></pre></td></tr></tbody></table></figure>
-
-<p>The right side of the equals sign can only be 0, 1, -1, or a value from another register.</p>
-<p>Note that we can't make two loops to completely draw the screen and then listen the next input! If do that, since it doesn't listen during the loop, the program will never hear the input!</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">// Runs an infinite loop that listens to the keyboard input.</span><br><span class="line">// When a key is pressed (any key), the program blackens the screen,</span><br><span class="line">// i.e. writes "black" in every pixel;</span><br><span class="line">// the screen should remain fully black as long as the key is pressed.</span><br><span class="line">// When no key is pressed, the program clears the screen, i.e. writes</span><br><span class="line">// "white" in every pixel;</span><br><span class="line">// the screen should remain fully clear as long as no key is pressed.</span><br><span class="line"></span><br><span class="line">(RESET)</span><br><span class="line">  @8192</span><br><span class="line">  D=A</span><br><span class="line">  @i</span><br><span class="line">  M=D</span><br><span class="line">  @MAINLOOP</span><br><span class="line">  0;JMP</span><br><span class="line"></span><br><span class="line">(MAINLOOP)</span><br><span class="line">  // i=i-1</span><br><span class="line">  @i</span><br><span class="line">  M=M-1</span><br><span class="line">  D=M</span><br><span class="line">  // if (i &lt; 0) goto RESET</span><br><span class="line">  @RESET</span><br><span class="line">  D?JLT</span><br><span class="line">  // listen</span><br><span class="line">  @KBD</span><br><span class="line">  D=M</span><br><span class="line">  @WHITE</span><br><span class="line">  D;JEQ</span><br><span class="line">  @BLACK</span><br><span class="line">  0;JMP</span><br><span class="line"></span><br><span class="line">(WHITE)</span><br><span class="line">  @SCREEN</span><br><span class="line">  D=A</span><br><span class="line">  @i</span><br><span class="line">  A=D+M</span><br><span class="line">  M=0  // white</span><br><span class="line">  @MAINLOOP</span><br><span class="line">  0;JMP</span><br><span class="line"></span><br><span class="line">(BLACK)</span><br><span class="line">  @SCREEN</span><br><span class="line">  D=A</span><br><span class="line">  @i</span><br><span class="line">  A=D+M</span><br><span class="line">  M=-1  // black</span><br><span class="line">  @MAINLOOP</span><br><span class="line">  0;JMP</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Computing System</category>
-        <category>Nand2Tetris</category>
-      </categories>
-      <tags>
-        <tag>Coursera</tag>
-        <tag>Nand2Tetris</tag>
-        <tag>Assembly Language</tag>
-        <tag>Machine Language</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Notes for Nand2Tetris: Computer Architecture</title>
     <url>/posts/9a8ff4a5.html</url>
     <content><![CDATA[<p>This is a note for Nand2Tetris Unit 5.</p>
@@ -4666,6 +4645,35 @@
         <tag>Instruction bus</tag>
         <tag>CPU</tag>
         <tag>Computer design</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Notes for Nand2Tetris: Machine Language</title>
+    <url>/posts/a4422da3.html</url>
+    <content><![CDATA[<p>This is a note for Nand2Tetris unit 4.</p>
+<span id="more"></span>
+
+<p><img data-src="https://s1.ax1x.com/2023/07/11/pCW6n7d.jpg" alt="The Hack Machine Language"></p>
+<h2 id="Project-4"><a href="#Project-4" class="headerlink" title="Project 4"></a>Project 4</h2><h3 id="Mult-asm"><a href="#Mult-asm" class="headerlink" title="Mult.asm"></a>Mult.asm</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">// Multiplies R0 and R1 and stores the result in R2.</span><br><span class="line">// (R0, R1, R2 refer to RAM[0], RAM[1], and RAM[2], respectively.)</span><br><span class="line">//</span><br><span class="line">// This program only needs to handle arguments that satisfy</span><br><span class="line">// R0 &gt;= 0, R1 &gt;= 0, and R0*R1 &lt; 32768.</span><br><span class="line"></span><br><span class="line">  // i = 0</span><br><span class="line">  @i</span><br><span class="line">  M=0</span><br><span class="line"></span><br><span class="line">  // RAM[2] = 0</span><br><span class="line">  @R2</span><br><span class="line">  M=0</span><br><span class="line"></span><br><span class="line">(LOOP)</span><br><span class="line">  // if (i &gt;= RAM[1]) goto END</span><br><span class="line">  @i</span><br><span class="line">  D=M</span><br><span class="line">  @R1</span><br><span class="line">  D=D-M</span><br><span class="line">  @END</span><br><span class="line">  D;JGE</span><br><span class="line">  // RAM[2] = RAM[2] + RAM[0]</span><br><span class="line">  @R2</span><br><span class="line">  D=M</span><br><span class="line">  @R0</span><br><span class="line">  D=D+M</span><br><span class="line">  @R2</span><br><span class="line">  M=D</span><br><span class="line">  // i = i + 1</span><br><span class="line">  @i</span><br><span class="line">  M=M+1</span><br><span class="line">  // goto LOOP</span><br><span class="line">  @LOOP</span><br><span class="line">  0;JMP</span><br><span class="line">(END)</span><br><span class="line">  @END</span><br><span class="line">  0;JMP</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Fill-asm"><a href="#Fill-asm" class="headerlink" title="Fill.asm"></a>Fill.asm</h3><p>The size of the screen is 512 * 256, which is made of 8192 16-bit registers.</p>
+<p>Notice that here something as follows is NOT supported:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">@total</span><br><span class="line">M=8192</span><br></pre></td></tr></tbody></table></figure>
+
+<p>The right side of the equals sign can only be 0, 1, -1, or a value from another register.</p>
+<p>Note that we can't make two loops to completely draw the screen and then listen the next input! If do that, since it doesn't listen during the loop, the program will never hear the input!</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">// Runs an infinite loop that listens to the keyboard input.</span><br><span class="line">// When a key is pressed (any key), the program blackens the screen,</span><br><span class="line">// i.e. writes "black" in every pixel;</span><br><span class="line">// the screen should remain fully black as long as the key is pressed.</span><br><span class="line">// When no key is pressed, the program clears the screen, i.e. writes</span><br><span class="line">// "white" in every pixel;</span><br><span class="line">// the screen should remain fully clear as long as no key is pressed.</span><br><span class="line"></span><br><span class="line">(RESET)</span><br><span class="line">  @8192</span><br><span class="line">  D=A</span><br><span class="line">  @i</span><br><span class="line">  M=D</span><br><span class="line">  @MAINLOOP</span><br><span class="line">  0;JMP</span><br><span class="line"></span><br><span class="line">(MAINLOOP)</span><br><span class="line">  // i=i-1</span><br><span class="line">  @i</span><br><span class="line">  M=M-1</span><br><span class="line">  D=M</span><br><span class="line">  // if (i &lt; 0) goto RESET</span><br><span class="line">  @RESET</span><br><span class="line">  D?JLT</span><br><span class="line">  // listen</span><br><span class="line">  @KBD</span><br><span class="line">  D=M</span><br><span class="line">  @WHITE</span><br><span class="line">  D;JEQ</span><br><span class="line">  @BLACK</span><br><span class="line">  0;JMP</span><br><span class="line"></span><br><span class="line">(WHITE)</span><br><span class="line">  @SCREEN</span><br><span class="line">  D=A</span><br><span class="line">  @i</span><br><span class="line">  A=D+M</span><br><span class="line">  M=0  // white</span><br><span class="line">  @MAINLOOP</span><br><span class="line">  0;JMP</span><br><span class="line"></span><br><span class="line">(BLACK)</span><br><span class="line">  @SCREEN</span><br><span class="line">  D=A</span><br><span class="line">  @i</span><br><span class="line">  A=D+M</span><br><span class="line">  M=-1  // black</span><br><span class="line">  @MAINLOOP</span><br><span class="line">  0;JMP</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Computing System</category>
+        <category>Nand2Tetris</category>
+      </categories>
+      <tags>
+        <tag>Coursera</tag>
+        <tag>Nand2Tetris</tag>
+        <tag>Assembly Language</tag>
+        <tag>Machine Language</tag>
       </tags>
   </entry>
   <entry>
