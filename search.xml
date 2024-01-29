@@ -1877,39 +1877,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Edge 扩展推荐</title>
-    <url>/posts/3c91f84e.html</url>
-    <content><![CDATA[<p>2019 年 7 月写过一篇 Chrome 插件推荐的文章，那时候我还在用 Chrome 作为我的主要浏览器。一晃三年过去了，我也早已从 Google Chrome 转入全新 Chromium 内核构建的 Edge 浏览器。微软倒蛮有意思，自己从头开发的东西不咋地，在别人的平台上倒是表现得相当好。由于国内的水土不服啊，我用 Chrome 时总会遇到同步不了的情况，这点的体验在 Edge 这儿得到了很好的改善，也是我用 Edge 的主要原因吧。前些天帮很多同学做新机开荒，也推荐他们就用这款 “Win11 原装” 浏览器。当然一个浏览器肯定是离不开扩展的，趁着帮他们开荒这个机会，也顺便整理了我认为必备的一些浏览器扩展。</p>
-<span id="more"></span>
-
-<p><strong>本文更多的从个人角度出发，仅涵盖了笔者的主要需求，自然是粗略的，仅供参考。</strong></p>
-<h2 id="全部用户"><a href="#全部用户" class="headerlink" title="全部用户"></a>全部用户</h2><h3 id="Dark-Reader"><a href="#Dark-Reader" class="headerlink" title="Dark Reader"></a>Dark Reader</h3><p>简介：强制暗黑模式的网页</p>
-<h3 id="Infinity-新标签页-Pro"><a href="#Infinity-新标签页-Pro" class="headerlink" title="Infinity 新标签页 (Pro)"></a>Infinity 新标签页 (Pro)</h3><p>简介：rt，一个新标签页扩展</p>
-<h3 id="OneTab"><a href="#OneTab" class="headerlink" title="OneTab"></a>OneTab</h3><p>简介： 打开了太多网页的时候，按一下可以帮你全部收起来，之后可以自由恢复</p>
-<h3 id="Prevent-Duplicate-Tabs"><a href="#Prevent-Duplicate-Tabs" class="headerlink" title="Prevent Duplicate Tabs"></a>Prevent Duplicate Tabs</h3><p>简介： 帮你干掉那些重复的标签页</p>
-<h3 id="uBlock-Origin"><a href="#uBlock-Origin" class="headerlink" title="uBlock Origin"></a>uBlock Origin</h3><p>简介：干掉广告，且是众多去广告插件中占用相对较少的</p>
-<h3 id="捕捉网页截图-FireShot-的"><a href="#捕捉网页截图-FireShot-的" class="headerlink" title="捕捉网页截图 - FireShot 的"></a>捕捉网页截图 - FireShot 的</h3><p>简介：rt，支持长截图（名字有点怪，可能是翻译问题，搜索 FireShot 就能找到）</p>
-<h3 id="暴力猴"><a href="#暴力猴" class="headerlink" title="暴力猴"></a>暴力猴</h3><p>简介：装脚本的插件，和大名鼎鼎的油猴一样的功能，这个可能 (?) 小巧一点</p>
-<h3 id="沙拉查词-聚合词典划词翻译"><a href="#沙拉查词-聚合词典划词翻译" class="headerlink" title="沙拉查词-聚合词典划词翻译"></a>沙拉查词 - 聚合词典划词翻译</h3><p>简介：rt，划词翻译，可配置内容超多</p>
-<h3 id="Imagus"><a href="#Imagus" class="headerlink" title="Imagus"></a>Imagus</h3><p>简介：可以把网页图片放大了看</p>
-<h3 id="User-Agent-Switcher-for-Chrome"><a href="#User-Agent-Switcher-for-Chrome" class="headerlink" title="User-Agent Switcher for Chrome"></a>User-Agent Switcher for Chrome</h3><p>简介：“伪装” 你自己</p>
-<h3 id="Video-Speed-Controller"><a href="#Video-Speed-Controller" class="headerlink" title="Video Speed Controller"></a>Video Speed Controller</h3><p>简介：rt，但是竟然也可以改视频前广告的播放速度！</p>
-<h2 id="哔哩哔哩用户"><a href="#哔哩哔哩用户" class="headerlink" title="哔哩哔哩用户"></a>哔哩哔哩用户</h2><h3 id="pakku：哔哩哔哩弹幕过滤器"><a href="#pakku：哔哩哔哩弹幕过滤器" class="headerlink" title="pakku：哔哩哔哩弹幕过滤器"></a>pakku：哔哩哔哩弹幕过滤器</h3><p>简介：简化（过滤）你的 b 站弹幕</p>
-<h3 id="哔哩哔哩助手：bilibili-com-综合辅助扩"><a href="#哔哩哔哩助手：bilibili-com-综合辅助扩" class="headerlink" title="哔哩哔哩助手：bilibili.com 综合辅助扩"></a>哔哩哔哩助手：bilibili.com 综合辅助扩</h3><p>简介：功能超多，我主要用来下载 b 站视频了</p>
-<h2 id="Steam-用户"><a href="#Steam-用户" class="headerlink" title="Steam 用户"></a>Steam 用户</h2><h3 id="Augmented-Steam"><a href="#Augmented-Steam" class="headerlink" title="Augmented Steam"></a>Augmented Steam</h3><p>简介：为 steam 官网提供了众多试用的玩意儿</p>
-<h2 id="IT-工作者"><a href="#IT-工作者" class="headerlink" title="IT 工作者"></a>IT 工作者</h2><h3 id="Octotree-GitHub-code-tree"><a href="#Octotree-GitHub-code-tree" class="headerlink" title="Octotree - GitHub code tree"></a>Octotree - GitHub code tree</h3><p>简介：方便地查看 github 上某个 repository 的文件结构</p>
-<h3 id="Surfingkeys"><a href="#Surfingkeys" class="headerlink" title="Surfingkeys"></a>Surfingkeys</h3><p>简介：像 vim 一样的玩意儿，让你完全用你的键盘浏览网页</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Browser</tag>
-        <tag>Edge</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>LaTeX 公式基础</title>
     <url>/posts/848a7d31.html</url>
     <content><![CDATA[<p>用 LaTeX 写数学公式的时候，总记不住一些写法，故在此记录学习笔记。</p>
@@ -2476,6 +2443,39 @@
       </tags>
   </entry>
   <entry>
+    <title>Edge 扩展推荐</title>
+    <url>/posts/3c91f84e.html</url>
+    <content><![CDATA[<p>2019 年 7 月写过一篇 Chrome 插件推荐的文章，那时候我还在用 Chrome 作为我的主要浏览器。一晃三年过去了，我也早已从 Google Chrome 转入全新 Chromium 内核构建的 Edge 浏览器。微软倒蛮有意思，自己从头开发的东西不咋地，在别人的平台上倒是表现得相当好。由于国内的水土不服啊，我用 Chrome 时总会遇到同步不了的情况，这点的体验在 Edge 这儿得到了很好的改善，也是我用 Edge 的主要原因吧。前些天帮很多同学做新机开荒，也推荐他们就用这款 “Win11 原装” 浏览器。当然一个浏览器肯定是离不开扩展的，趁着帮他们开荒这个机会，也顺便整理了我认为必备的一些浏览器扩展。</p>
+<span id="more"></span>
+
+<p><strong>本文更多的从个人角度出发，仅涵盖了笔者的主要需求，自然是粗略的，仅供参考。</strong></p>
+<h2 id="全部用户"><a href="#全部用户" class="headerlink" title="全部用户"></a>全部用户</h2><h3 id="Dark-Reader"><a href="#Dark-Reader" class="headerlink" title="Dark Reader"></a>Dark Reader</h3><p>简介：强制暗黑模式的网页</p>
+<h3 id="Infinity-新标签页-Pro"><a href="#Infinity-新标签页-Pro" class="headerlink" title="Infinity 新标签页 (Pro)"></a>Infinity 新标签页 (Pro)</h3><p>简介：rt，一个新标签页扩展</p>
+<h3 id="OneTab"><a href="#OneTab" class="headerlink" title="OneTab"></a>OneTab</h3><p>简介： 打开了太多网页的时候，按一下可以帮你全部收起来，之后可以自由恢复</p>
+<h3 id="Prevent-Duplicate-Tabs"><a href="#Prevent-Duplicate-Tabs" class="headerlink" title="Prevent Duplicate Tabs"></a>Prevent Duplicate Tabs</h3><p>简介： 帮你干掉那些重复的标签页</p>
+<h3 id="uBlock-Origin"><a href="#uBlock-Origin" class="headerlink" title="uBlock Origin"></a>uBlock Origin</h3><p>简介：干掉广告，且是众多去广告插件中占用相对较少的</p>
+<h3 id="捕捉网页截图-FireShot-的"><a href="#捕捉网页截图-FireShot-的" class="headerlink" title="捕捉网页截图 - FireShot 的"></a>捕捉网页截图 - FireShot 的</h3><p>简介：rt，支持长截图（名字有点怪，可能是翻译问题，搜索 FireShot 就能找到）</p>
+<h3 id="暴力猴"><a href="#暴力猴" class="headerlink" title="暴力猴"></a>暴力猴</h3><p>简介：装脚本的插件，和大名鼎鼎的油猴一样的功能，这个可能 (?) 小巧一点</p>
+<h3 id="沙拉查词-聚合词典划词翻译"><a href="#沙拉查词-聚合词典划词翻译" class="headerlink" title="沙拉查词-聚合词典划词翻译"></a>沙拉查词 - 聚合词典划词翻译</h3><p>简介：rt，划词翻译，可配置内容超多</p>
+<h3 id="Imagus"><a href="#Imagus" class="headerlink" title="Imagus"></a>Imagus</h3><p>简介：可以把网页图片放大了看</p>
+<h3 id="User-Agent-Switcher-for-Chrome"><a href="#User-Agent-Switcher-for-Chrome" class="headerlink" title="User-Agent Switcher for Chrome"></a>User-Agent Switcher for Chrome</h3><p>简介：“伪装” 你自己</p>
+<h3 id="Video-Speed-Controller"><a href="#Video-Speed-Controller" class="headerlink" title="Video Speed Controller"></a>Video Speed Controller</h3><p>简介：rt，但是竟然也可以改视频前广告的播放速度！</p>
+<h2 id="哔哩哔哩用户"><a href="#哔哩哔哩用户" class="headerlink" title="哔哩哔哩用户"></a>哔哩哔哩用户</h2><h3 id="pakku：哔哩哔哩弹幕过滤器"><a href="#pakku：哔哩哔哩弹幕过滤器" class="headerlink" title="pakku：哔哩哔哩弹幕过滤器"></a>pakku：哔哩哔哩弹幕过滤器</h3><p>简介：简化（过滤）你的 b 站弹幕</p>
+<h3 id="哔哩哔哩助手：bilibili-com-综合辅助扩"><a href="#哔哩哔哩助手：bilibili-com-综合辅助扩" class="headerlink" title="哔哩哔哩助手：bilibili.com 综合辅助扩"></a>哔哩哔哩助手：bilibili.com 综合辅助扩</h3><p>简介：功能超多，我主要用来下载 b 站视频了</p>
+<h2 id="Steam-用户"><a href="#Steam-用户" class="headerlink" title="Steam 用户"></a>Steam 用户</h2><h3 id="Augmented-Steam"><a href="#Augmented-Steam" class="headerlink" title="Augmented Steam"></a>Augmented Steam</h3><p>简介：为 steam 官网提供了众多试用的玩意儿</p>
+<h2 id="IT-工作者"><a href="#IT-工作者" class="headerlink" title="IT 工作者"></a>IT 工作者</h2><h3 id="Octotree-GitHub-code-tree"><a href="#Octotree-GitHub-code-tree" class="headerlink" title="Octotree - GitHub code tree"></a>Octotree - GitHub code tree</h3><p>简介：方便地查看 github 上某个 repository 的文件结构</p>
+<h3 id="Surfingkeys"><a href="#Surfingkeys" class="headerlink" title="Surfingkeys"></a>Surfingkeys</h3><p>简介：像 vim 一样的玩意儿，让你完全用你的键盘浏览网页</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Browser</tag>
+        <tag>Edge</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Makefile 简单笔记</title>
     <url>/posts/b5f1b38d.html</url>
     <content><![CDATA[<p>这是一篇笔记，原视频是 <a href="https://space.bilibili.com/519963684">@于仕琪</a> 老师的 <a href="https://www.bilibili.com/video/BV188411L7d2">《Makefile 20 分钟入门，简简单单，展示如何使用 Makefile 管理和编译 C++ 代码》</a>。</p>
@@ -2617,151 +2617,6 @@
         <tag>Linux</tag>
         <tag>cat</tag>
         <tag>bat</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Simple Git Tutorial</title>
-    <url>/posts/9363e311.html</url>
-    <content><![CDATA[<p>This is mainly a simple tutorial of Git. Some info about GitHub also included. You may also read <em><a href="https://blocklune.github.io/posts/1cce885f.html">Simple GitHub Tutorial</a></em>.</p>
-<span id="more"></span>
-
-<h2 id="Brief"><a href="#Brief" class="headerlink" title="Brief"></a>Brief</h2><p>You may have learnt Git and GitHub before, and also may have confused them because their similar names. What are these two things on earth?</p>
-<p><img data-src="https://software.3metas.com/wp-content/uploads/2017/06/git.png" alt="Git (This picture is from the Internet)"></p>
-<p><img data-src="https://kinsta.com/wp-content/uploads/2018/04/what-is-github-1-1.png" alt="GitHub (This picture is from the Internet)"></p>
-<p>In short, <a href="https://git-scm.com/">Git</a> is a Version Control System (VCS), which enables you to create a repository of your codes, to track changes in your project and to manage your files efficiently. <a href="https://github.com/">GitHub</a> is a platform used to host remote Git repositories for collaboration and sharing projects.</p>
-<p>In this post, you will learn the basic usage of Git. If you are looking for info about working with GitHub, see _<a href="https://blocklune.github.io/posts/1cce885f.html">Simple GitHub Tutorial</a>.</p>
-<p>Want to go deeper? See <a href="#resources">Resources</a>.</p>
-<h2 id="Installing-Git"><a href="#Installing-Git" class="headerlink" title="Installing Git"></a>Installing Git</h2><p>Download Git from the official website:</p>
-<p><em><a href="https://git-scm.com/downloads">Git - Downloads (git-scm.com)</a></em></p>
-<p>Or use your favorite package manager by yourself.</p>
-<h2 id="Basic-Configuration"><a href="#Basic-Configuration" class="headerlink" title="Basic Configuration"></a>Basic Configuration</h2><p>Before starting to use Git, you should tell Git your name and email. The commands below set your name and email globally (which means they are visible to all your local repositories).</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">"&lt;your_name&gt;"</span></span><br><span class="line">git config --global user.email <span class="string">"&lt;your_email@example.com&gt;"</span></span><br></pre></td></tr></tbody></table></figure>
-
-<blockquote>
-<p>It's highly recommended that you set <code>&lt;your_name&gt;</code> to be your GitHub username and set <code>&lt;your_email@example.com&gt;</code> to be your GitHub no-reply email, which looks like <code>ID+USERNAME@users.noreply.github.com</code>. You can find the no-reply email <a href="https://github.com/settings/emails">here</a> (under the <code>Primary email address</code> section).</p>
-</blockquote>
-<p>Learn more:</p>
-<ul>
-<li><em><a href="https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git">Setting your username in Git - GitHub Docs</a></em></li>
-<li><em><a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address">Setting your commit email address - GitHub Docs</a></em></li>
-</ul>
-<h2 id="Getting-Help"><a href="#Getting-Help" class="headerlink" title="Getting Help"></a>Getting Help</h2><p>To get help when using Git, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">help</span> &lt;verb&gt;</span><br><span class="line"><span class="comment"># Or</span></span><br><span class="line">git &lt;verb&gt; --<span class="built_in">help</span></span><br><span class="line"><span class="comment"># Or</span></span><br><span class="line">man git-&lt;verb&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="Getting-A-Git-Repository"><a href="#Getting-A-Git-Repository" class="headerlink" title="Getting A Git Repository"></a>Getting A Git Repository</h2><h3 id="Creating-One-In-An-Existing-Directory"><a href="#Creating-One-In-An-Existing-Directory" class="headerlink" title="Creating One In An Existing Directory"></a>Creating One In An Existing Directory</h3><p>To create a new Git repo in the current directory, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></tbody></table></figure>
-
-<p>This command will create a directory called <code>.git</code>.</p>
-<h3 id="Cloning-One-from-An-Existing-Repo"><a href="#Cloning-One-from-An-Existing-Repo" class="headerlink" title="Cloning One from An Existing Repo"></a>Cloning One from An Existing Repo</h3><p>See <em><a href="https://blocklune.github.io/posts/1cce885f.html">Simple GitHub Tutorial</a></em></p>
-<h2 id="Files-States-in-a-Git-Project"><a href="#Files-States-in-a-Git-Project" class="headerlink" title="Files' States in a Git Project"></a>Files' States in a Git Project</h2><p>There are three main states in Git: <strong>modified</strong>, <strong>staged</strong>, and <strong>committed</strong>. And this leads us to three main sections of a Git project: the <code>Working Directory</code>, the <code>Staging Area</code> and the <code>Git Directory</code>.</p>
-<p>You modify your files in the <code>Working Directory</code>, stage them (using <code>git add</code>) to the <code>Staging Area</code>, and commit them (using <code>git commit</code>) to the <code>Git Directory</code>.</p>
-<p>Also see <em><a href="https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F">Git - What is Git?</a></em>.</p>
-<h2 id="Tracking-Files"><a href="#Tracking-Files" class="headerlink" title="Tracking Files"></a>Tracking Files</h2><p>To add file(s) to your tracked list (or more precisely, put file(s) onto the <code>Staging Area</code>), run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git add &lt;directory&gt;/&lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>To undo <code>git add</code> (unstage file(s)):</p>
-<ul>
-<li>Use <code>git reset</code>:</li>
-</ul>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git reset         <span class="comment"># unstage everything</span></span><br><span class="line">git reset &lt;file&gt;  <span class="comment"># unstage specific file(s)</span></span><br></pre></td></tr></tbody></table></figure>
-
-<ul>
-<li>Use <code>git restore</code>:</li>
-</ul>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git restore --staged &lt;file&gt;  <span class="comment"># unstage specific file(s)</span></span><br><span class="line">git restore --staged :/      <span class="comment"># unstage all files</span></span><br></pre></td></tr></tbody></table></figure>
-
-<ul>
-<li>Use <code>git rm</code>:</li>
-</ul>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">rm</span> --cached &lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<blockquote>
-<p><strong>Warning</strong>: <code>git reset</code> is equivalent to <code>git restore --staged :/</code>. <code>git reset &lt;file&gt;</code> is equivalent to <code>git restore --staged &lt;file&gt;</code>. But <code>git rm --cached &lt;file&gt;</code> is unique. Actually, it means remove <code>&lt;file&gt;</code> from the <code>Staging Area</code>, while the other two commands move <code>&lt;file&gt;</code> in the <code>Staging Area</code> back to the <code>Working Directory</code>.</p>
-</blockquote>
-<h2 id="Checking-Status"><a href="#Checking-Status" class="headerlink" title="Checking Status"></a>Checking Status</h2><p>To check the status of the files in the repo, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git status</span><br><span class="line"></span><br><span class="line"><span class="comment"># A Short Version</span></span><br><span class="line">git status -s</span><br><span class="line"><span class="comment"># Or</span></span><br><span class="line">git status --short</span><br></pre></td></tr></tbody></table></figure>
-
-<p>In the short version, there are two columns in the front of every line. The left column shows the status of the <code>Staging Area</code>. The right column shows the status of the <code>Working Directory</code>. For example:</p>
-<ul>
-<li><code>??</code>: untracked file</li>
-<li><code>A</code>: file newly added to the stage</li>
-<li><code>M</code>: modified file</li>
-</ul>
-<h2 id="Checking-Differences"><a href="#Checking-Differences" class="headerlink" title="Checking Differences"></a>Checking Differences</h2><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># shows unstaged, uncommitted changes</span></span><br><span class="line">git diff</span><br><span class="line"></span><br><span class="line"><span class="comment"># shows all uncommitted changes (including staged ones):</span></span><br><span class="line">git diff HEAD</span><br><span class="line"></span><br><span class="line"><span class="comment"># shows only staged changes</span></span><br><span class="line">git diff --staged</span><br><span class="line">git diff --cached</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="Committing"><a href="#Committing" class="headerlink" title="Committing"></a>Committing</h2><p>To commit your files, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git commit</span><br></pre></td></tr></tbody></table></figure>
-
-<p>This command will open a editor. You need to edit your commit message here. Use the command below to set a default editor:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git config --global core.editor &lt;path_to_editor_or_command_to_open_editor&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Or, you can simplify this by using <code>-m</code> option:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git commit -m &lt;commit_message&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p><em>Oops, I forgot to add this file!</em> If you meet this problem, you can amend it like this:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git commit -m <span class="string">"a wrong commit message"</span></span><br><span class="line">git add &lt;forgotten_file&gt;</span><br><span class="line">git commit --amend</span><br></pre></td></tr></tbody></table></figure>
-
-<p>The second commit will <strong>replace</strong> the first commit, as if the first commit never occurred.</p>
-<p>If you are tired of using the stage (<code>git add</code> first,<code>git commit</code> later), you can use <code>-a</code> flag like this to skip it:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git commit -a</span><br></pre></td></tr></tbody></table></figure>
-
-<p>This command is equivalent to these two command bellow:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git add &lt;all_tracked_files_that_have_been_modified&gt;</span><br><span class="line">git commit</span><br></pre></td></tr></tbody></table></figure>
-
-<blockquote>
-<p>How to write a commit message? The links below maybe helpful:</p>
-<ul>
-<li>_<a href="https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/">How to Write Better Git Commit Messages – A Step-By-Step Guide</a></li>
-<li><em><a href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git-commit">ohmyzsh/plugins/git-commit at master · ohmyzsh/ohmyzsh</a></em></li>
-</ul>
-</blockquote>
-<h2 id="History"><a href="#History" class="headerlink" title="History"></a>History</h2><p>To review the commit history, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></tbody></table></figure>
-
-<ul>
-<li><p><code>-p</code> or <code>--patch</code> flag make logs output in the patch way.</p>
-</li>
-<li><p><code>-&lt;n&gt;</code> flag to limit the number of logs (e.g. <code>-2</code> only show two latest logs).</p>
-</li>
-<li><p><code>--stat</code> flag shows simple statistics.</p>
-</li>
-<li><p><code>--pretty</code> option provides some different ways to show the history.</p>
-<ul>
-<li><code>--pretty=oneline</code> option make every commit be showed in one line</li>
-<li><code>--pretty=short</code></li>
-<li><code>--pretty=full</code></li>
-<li><code>--pretty=fuller</code></li>
-</ul>
-</li>
-<li><p><code>--graph</code> flag adds some ascii characters to vividly show your history.</p>
-</li>
-</ul>
-<h2 id="Discarding-Changes-in-Working"><a href="#Discarding-Changes-in-Working" class="headerlink" title="Discarding Changes in Working"></a>Discarding Changes in Working</h2><div class="note danger no-icon"><p>In Git, it's usually easy to restore the files have been committed, but usually <strong>very hard</strong> to restore the files haven't been committed.</p>
-</div>
-
-<p>To discard changes in working, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git checkout -- &lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>This command will abandon the modifications to the file after your last commit, where <code>--</code> indicates that the following content should be treated as file parameters, even if they resemble options.</p>
-<h2 id="Next-Steps"><a href="#Next-Steps" class="headerlink" title="Next Steps"></a>Next Steps</h2><p>TODO</p>
-<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ul>
-<li><em><a href="https://git-scm.com/docs">Git - Reference</a></em></li>
-<li><em><a href="https://docs.github.com/">GitHub Docs</a></em></li>
-<li><em><a href="https://training.github.com/">GitHub Training Kit</a></em></li>
-<li><em><a href="https://missing.csail.mit.edu/2020/version-control/">MIT - Missing Semester - Version Control (Git)</a></em></li>
-<li><em><a href="https://git-scm.com/book/en/v2">Pro Git</a></em></li>
-<li><em><a href="http://rogerdudler.github.io/git-guide/index.html">git - the simple guide - no deep shit!</a></em></li>
-</ul>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-        <tag>GitHub</tag>
-        <tag>Version Control</tag>
-        <tag>VCS</tag>
       </tags>
   </entry>
   <entry>
@@ -3177,40 +3032,6 @@
       </categories>
       <tags>
         <tag>Windows</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git Commit Message Cheat Sheet (CN)</title>
-    <url>/posts/8a5a50bb.html</url>
-    <content><![CDATA[<p>A Git commit message cheat sheet in Chinese.</p>
-<span id="more"></span>
-
-<ol>
-<li><code>build</code>（构建）：表示与构建系统、外部依赖或编译过程相关的更改。这可能包括构建脚本、配置文件或构建工具的更新。</li>
-<li><code>chore</code>（杂务）：表示与代码库维护相关的杂项任务，如格式化代码、重命名文件、更新依赖项等。这些更改通常不会影响代码的运行或功能。</li>
-<li><code>ci</code>（持续集成）：表示与持续集成系统相关的更改。这可能涉及构建、测试、部署流程的改进或配置变更。</li>
-<li><code>docs</code>（文档）：表示与文档相关的更改。这可能包括更新 README 文件、添加或修改文档注释、更新 API 文档等。</li>
-<li><code>feat</code>（功能）：表示添加新功能或功能改进的更改。这通常是最常用的关键词之一。</li>
-<li><code>fix</code>（修复）：表示修复 bug 或错误的更改。这些更改主要是为了修复现有功能的问题。</li>
-<li><code>perf</code>（性能）：表示与性能优化相关的更改。这些更改旨在改进代码的执行速度、资源利用率或性能指标。</li>
-<li><code>refactor</code>（重构）：表示对现有代码进行重构，目的是改善代码的结构、可读性或可维护性，而不涉及功能更改。</li>
-<li><code>rev</code>（修订）：表示对先前提交的更改进行修订或修改。</li>
-<li><code>style</code>（样式）：表示与代码样式、格式或命名约定相关的更改。这些更改不会影响代码的功能，但会使其更易于阅读和理解。</li>
-<li><code>test</code>（测试）：表示与测试相关的更改。这可能包括添加、修改或删除单元测试、集成测试或端到端测试等。</li>
-</ol>
-<p>(The notes here are generated by ChatGPT.)</p>
-<p>Learn more:</p>
-<ul>
-<li><em><a href="https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/">How to Write Better Git Commit Messages – A Step-By-Step Guide</a></em></li>
-</ul>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-        <tag>Version Control</tag>
       </tags>
   </entry>
   <entry>
@@ -3891,166 +3712,6 @@
       <tags>
         <tag>Compiling</tag>
         <tag>CMake</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Simple Git Tutorial: Branching and Merging</title>
-    <url>/posts/aa010e90.html</url>
-    <content><![CDATA[<p>Git's powerful branching and merging capabilities can help you deal with parallel collaborative development processes. Let's take a look.</p>
-<span id="more"></span>
-
-<p>So far, we've been working on a single default branch created by Git. The name of this branch is <code>main</code>. (It used to be <code>master</code>. See <em><a href="https://github.com/github/renaming">github/renaming: Guidance for changing the default branch name for GitHub repositories</a></em>) Our every commit becomes a new node on this branch.</p>
-<p>When we want to add a new feature, but aren't sure if the new feature is good enough to use, the natural thought is that we want to <strong>branch</strong> out based on our current location and do our new feature development and experimentation on the new branch. If it's good, <strong>merge</strong> it into the main branch. Otherwise discard it.</p>
-<h2 id="Branching"><a href="#Branching" class="headerlink" title="Branching"></a>Branching</h2><p>The basic commands for working on local branches are listed below:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># lists all the local branches</span></span><br><span class="line">git branch</span><br><span class="line"></span><br><span class="line"><span class="comment"># creates a new local branch named &lt;branch_name&gt;</span></span><br><span class="line">git branch &lt;branch_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># checks out branch &lt;branch_name&gt;</span></span><br><span class="line">git checkout &lt;branch_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># combines the create and check-out commands into one:</span></span><br><span class="line">git checkout -b &lt;branch_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># shows the latest commits of every branch</span></span><br><span class="line">git branch -v</span><br><span class="line"></span><br><span class="line"><span class="comment"># renames a local branch</span></span><br><span class="line">git branch -m &lt;new_branch_name&gt;</span><br><span class="line">git branch -m &lt;old_branch_name&gt; &lt;new_branch_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># deletes a local branch</span></span><br><span class="line">git branch -d &lt;branch_name&gt;</span><br><span class="line">git branch -D &lt;branch_name&gt;  <span class="comment"># force</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>All of the above commands work on the <strong>local</strong> branch(es). Then let's take a look at the remote branch(es).</p>
-<p>To list all the local and remote branches, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git branch --all</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">git branch -a</span><br></pre></td></tr></tbody></table></figure>
-
-<p>When you clone a repo from the Internet, you may find that there is a <code>main</code> branch and an <code>origin/main</code> branch. Here, <code>main</code> is a local branch, and <code>origin/main</code> is a remote branch (where <code>origin</code> means a remote server called <code>origin</code> and <code>main</code> means a branch of the same name on that remote server).</p>
-<p>In this case, the local branch <code>main</code> and the remote branch <code>origin/main</code> are related in some way, called <strong>tracking</strong>. The local branch is called the <strong>tracking branch</strong>. The corresponding branch on the remote server is called the <strong>upstream branch</strong>. Usually, the tracking branch shares a name with its upstream branch (e.g., the upstream branch of a local branch <code>feature</code> is <code>origin/feature</code>), but that's not a requirement.</p>
-<p>For example, the commands below create a new local branch <code>feature</code> and its upstream branch <code>origin/feature</code>:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git checkout -b feature</span><br><span class="line">git push -u origin feature  <span class="comment"># or `git push --set-upstream origin feature`</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>Run the command below to show the connection:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git branch -vv</span><br></pre></td></tr></tbody></table></figure>
-
-<p>More commands may be helpful:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># sets up a new tracking</span></span><br><span class="line">git checkout --track &lt;server_name&gt;/&lt;branch&gt;</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">git checkout -b &lt;branch&gt;</span><br><span class="line">git branch -u &lt;server_name&gt;/&lt;branch&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># stops tracking</span></span><br><span class="line">git brach --unset-upstream &lt;branch&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># deletes a remote branch</span></span><br><span class="line">git push origin --delete &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<blockquote>
-<p>There is no direct command to rename a remote branch. But you can do it like this:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git pull origin &lt;old_branch_name&gt;</span><br><span class="line">git push origin --delete &lt;old_branch_name&gt;</span><br><span class="line">git branch -m &lt;old_branch_name&gt; &lt;new_branch_name&gt;</span><br><span class="line">git push -u origin &lt;new_branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
-</blockquote>
-<h2 id="Merging"><a href="#Merging" class="headerlink" title="Merging"></a>Merging</h2><p>To merge the other branch to this one, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git merge &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>If your current branch is <code>master</code>, this command merge <code>&lt;branch_name&gt;</code> to <code>master</code>.</p>
-<p>To show all the branches that have/haven't been merged to this branch, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git branch --merged</span><br><span class="line">git branch --no-merged</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ul>
-<li><em><a href="https://git-scm.com/docs">Git - Reference</a></em></li>
-<li><em><a href="https://stackoverflow.com/questions/4693588/what-is-a-tracking-branch">git - What is a tracking branch? - Stack Overflow</a></em></li>
-</ul>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-        <tag>Version Control</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Simple Git Tutorial: Working with Remote Server</title>
-    <url>/posts/85390c91.html</url>
-    <content><![CDATA[<p>Use remote servers to work with collaborators better.</p>
-<span id="more"></span>
-
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># connects to a remote server. Usually &lt;server_name&gt; is `origin`</span></span><br><span class="line">git remote add &lt;server_name&gt; &lt;server&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># removes a specific remote server</span></span><br><span class="line">git remote remove &lt;server_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># shows all the remote servers</span></span><br><span class="line">git remote -v</span><br><span class="line"></span><br><span class="line"><span class="comment"># renames</span></span><br><span class="line">git remote rename &lt;old_server_name&gt; &lt;new_server_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># shows some info about a specific remote server</span></span><br><span class="line">git remote show &lt;server_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># pushes files</span></span><br><span class="line">git push -u &lt;server_name&gt; &lt;branch&gt; <span class="comment"># or `git push --set-upstream &lt;server_name&gt; &lt;branch&gt;`</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># fetches files</span></span><br><span class="line">git fetch  <span class="comment"># from the default remote upstream repo</span></span><br><span class="line">git fetch &lt;server_name&gt;  <span class="comment"># from a specific remote upstream repo</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># combines the `fetch` and `merge` together</span></span><br><span class="line">git pull</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-        <tag>Version Control</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Simple GitHub Tutorial</title>
-    <url>/posts/1cce885f.html</url>
-    <content><![CDATA[<p>I have posted a tutorial of Git (See <em><a href="https://blocklune.github.io/posts/9363e311.html">Simple Git Tutorial</a></em>). But it mixed up using Git and using GitHub together. I post this new tutorial to draw a line and make things clear.</p>
-<span id="more"></span>
-
-<blockquote>
-<p>Notice: If you run into any problems, it's highly recommended that you check out <a href="https://docs.github.com/">Github Docs</a>, or Google it. If you still can't solve it, you can comment below this post.</p>
-</blockquote>
-<h2 id="Creating-a-Github-Account"><a href="#Creating-a-Github-Account" class="headerlink" title="Creating a Github Account"></a>Creating a Github Account</h2><p>See:</p>
-<ul>
-<li><em><a href="https://docs.github.com/en/get-started/signing-up-for-GitHub/signing-up-for-a-new-GitHub-accountt">Signing up for a new GitHub account - GitHub Docs</a></em></li>
-</ul>
-<h2 id="Checking-your-Local-Git-Config"><a href="#Checking-your-Local-Git-Config" class="headerlink" title="Checking your Local Git Config"></a>Checking your Local Git Config</h2><p>Make sure that you have told Git your name and email. That is say, you should have run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">"&lt;your_name&gt;"</span></span><br><span class="line">git config --global user.email <span class="string">"&lt;your_email@example.com&gt;"</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>Also see:</p>
-<ul>
-<li><em><a href="https://blocklune.github.io/posts/9363e311.html#Basic-Configuration">Basic Configuration - Simple Git Tutorial</a></em></li>
-<li><em><a href="https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git">Setting your username in Git - GitHub Docs</a></em></li>
-<li><em><a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address">Setting your commit email address - GitHub Docs</a></em></li>
-</ul>
-<h2 id="Connecting-to-GitHub-with-SSH"><a href="#Connecting-to-GitHub-with-SSH" class="headerlink" title="Connecting to GitHub with SSH"></a>Connecting to GitHub with SSH</h2><p>You are recommended to connecting to GitHub with SSH (instead of HTTP/HTTPS).</p>
-<p>First, generate a new SSH key using new ED25519 algorithm:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">"&lt;your_email@example.com&gt;"</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>Then, Keep on repeating pressing <code>Enter</code> until your prompt appear again.</p>
-<p>Finally, add your public key to GitHub:</p>
-<ol>
-<li>Go to <em><a href="https://github.com/settings/keys">SSH and GPG keys - GitHub</a></em>.</li>
-<li>Click the green <code>New SSH key</code> button at the top right of the page.</li>
-<li>Fill out the form, where <code>key</code> is the content of <code>~/.ssh/id_ed25519.pub</code> (This file is generated by the <code>ssh-keygen</code> command above. You may run <code>cat ~/.ssh/id_ed25519.pub</code> on Linux or Mac or run <code>notepad ~/.ssh/id_ed25519.pub</code> on Windows to check its content).</li>
-<li>Submit the form by clicking the green <code>Add SSH key</code> button.</li>
-</ol>
-<blockquote>
-<p>The postfix <code>.pub</code> indicates that the <code>id_ed25519.pub</code> file is a public key. The <code>ssh-keygen</code> command above also generates a private key file <code>id_ed25519</code> (without the <code>.pub</code> postfix).</p>
-</blockquote>
-<p>Also see:</p>
-<ul>
-<li><em><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">Connecting to GitHub with SSH - GitHub Docs</a></em></li>
-</ul>
-<h2 id="Using-SSH-over-the-HTTPS-port-Optional-but-Recommended"><a href="#Using-SSH-over-the-HTTPS-port-Optional-but-Recommended" class="headerlink" title="Using SSH over the HTTPS port (Optional but Recommended)"></a>Using SSH over the HTTPS port (Optional but Recommended)</h2><p>Due to the special network environment in China, you may often need to use proxy service to get a better browsing experience. Generally, when you enable the <code>System Proxy</code> option, only the traffic on port 80/443 (corresponding to HTTP/HTTPS) will go through the proxy server, while the traffic on SSH's default port 22 will not. With the following settings, you can force SSH traffic to go to port 443.</p>
-<p>To test if SSH over the HTTPS port is possible, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">ssh -T -p 443 git@ssh.github.com</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Type <code>yes</code> if you see some info like:</p>
-<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">Are you sure you want to continue connecting (yes/no/[fingerprint])?</span><br></pre></td></tr></tbody></table></figure>
-
-<p>If you receive response like below, it means it's OK:</p>
-<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">Hi USERNAME! You've successfully authenticated, but GitHub does not</span><br><span class="line">provide shell access.</span><br></pre></td></tr></tbody></table></figure>
-
-<p>You can now override your SSH settings to force any connection to GitHub.com to run through that server and port. Edit <code>~/.ssh/config</code> and add this section:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">    Hostname ssh.github.com</span><br><span class="line">    Port 443</span><br><span class="line">    User git</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Now your usual command like:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com/YOUR-USERNAME/YOUR-REPOSITORY.git</span><br></pre></td></tr></tbody></table></figure>
-
-<p>is equivalent to:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> ssh://git@ssh.github.com:443/YOUR-USERNAME/YOUR-REPOSITORY.git</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Also see:</p>
-<ul>
-<li><em><a href="https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port">Using SSH over the HTTPS port - GitHub Docs</a></em></li>
-</ul>
-<h2 id="GitHub-Cli"><a href="#GitHub-Cli" class="headerlink" title="GitHub Cli"></a>GitHub Cli</h2><p>TODO</p>
-<h2 id="Basic-Usages"><a href="#Basic-Usages" class="headerlink" title="Basic Usages"></a>Basic Usages</h2><h3 id="Cloning"><a href="#Cloning" class="headerlink" title="Cloning"></a>Cloning</h3><p>You can use <code>git clone</code> to clone an existing repo from GitHub. The simplest form looks like:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> &lt;url&gt; [&lt;local_directory_name&gt;]</span><br></pre></td></tr></tbody></table></figure>
-
-<p>where center brackets mean that <code>&lt;local_directory_name&gt;</code> is optional.</p>
-<blockquote>
-<p>It's no longer recommended to use http/https url to clone. Using url like <code>git@github.com:YOUR-NAME/YOUR-REPOSITORY.git</code>!</p>
-</blockquote>
-<p>If you want to specify a branch when cloning, you can use <code>-b</code> option:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> -b &lt;branch&gt; &lt;url&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>If you don't want to include all commits, you can use the <code>--depth</code> option. This is helpful when cloning a large repo (you don't need so many commits before actually).</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> &lt;url&gt; --depth=1</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="Next-Steps"><a href="#Next-Steps" class="headerlink" title="Next Steps"></a>Next Steps</h2><p>TODO</p>
-<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ul>
-<li><em><a href="https://docs.github.com/">GitHub docs</a></em></li>
-</ul>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-        <tag>Version Control</tag>
       </tags>
   </entry>
   <entry>
@@ -6375,6 +6036,66 @@
       </tags>
   </entry>
   <entry>
+    <title>一个有关指针传参的问题</title>
+    <url>/posts/50c16b14.html</url>
+    <content><![CDATA[<p>这是我学习指针过程中遇到的一个问题，问过大佬才似乎懂了点，在此记录。顺便记下一句大佬说的话：</p>
+<blockquote>
+<p>注意到一点就行，指针其实也就是个存了内存地址的变量，<strong>它本身同时也具有内存地址</strong>。</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="问题的产生"><a href="#问题的产生" class="headerlink" title="问题的产生"></a>问题的产生</h2><p>事情是这样，学习了一点指针，就想自己实现一个会自动变长的数组。我也不期望把它做成一个类什么的，只有一个小目标，就是实现一个函数，能往这个动态数组后边加元素。我本来的 <strong>错误</strong> 代码如下：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">append</span><span class="params">(<span class="type">int</span> *nums, <span class="type">int</span> size, <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">if</span> (nums) <span class="comment">// 如果数组指针不为空</span></span><br><span class="line">    {</span><br><span class="line">        <span class="comment">// 暂存原来的数据</span></span><br><span class="line">        <span class="type">int</span> *tmp_nums = <span class="keyword">new</span> <span class="type">int</span>[size];</span><br><span class="line">        <span class="built_in">memcpy</span>(tmp_nums, nums, <span class="built_in">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line">        <span class="comment">// 释放掉原指针</span></span><br><span class="line">        <span class="keyword">delete</span>[] nums;</span><br><span class="line">        <span class="comment">// 元素数量 + 1</span></span><br><span class="line">        nums = <span class="keyword">new</span> <span class="type">int</span>[size + <span class="number">1</span>];</span><br><span class="line">        <span class="built_in">memcpy</span>(nums, tmp_nums, <span class="built_in">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line">        nums[size] = n;</span><br><span class="line">        <span class="keyword">delete</span>[] tmp_nums;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        nums = <span class="keyword">new</span> <span class="type">int</span>[<span class="number">1</span>];</span><br><span class="line">        nums[<span class="number">0</span>] = n;</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> tmp_n;</span><br><span class="line">    <span class="type">int</span> size = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> *nums = <span class="literal">nullptr</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">51</span>; i &lt;= <span class="number">55</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        tmp_n = i;</span><br><span class="line">        <span class="built_in">append</span>(nums, size, tmp_n);</span><br><span class="line">        size++;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">    {</span><br><span class="line">        cout &lt;&lt;nums[i] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>在调试过程中发现一直会报 <code>Segmentation fault</code>，但是如果改成下边这样，却是可以的：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> *nums = <span class="literal">nullptr</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">append</span><span class="params">(<span class="type">int</span> size, <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">if</span> (nums) <span class="comment">// 如果数组指针不为空</span></span><br><span class="line">    {</span><br><span class="line">        <span class="comment">// 暂存原来的数据</span></span><br><span class="line">        <span class="type">int</span> *tmp_nums = <span class="keyword">new</span> <span class="type">int</span>[size];</span><br><span class="line">        <span class="built_in">memcpy</span>(tmp_nums, nums, <span class="built_in">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line">        <span class="comment">// 释放掉原指针</span></span><br><span class="line">        <span class="keyword">delete</span>[] nums;</span><br><span class="line">        <span class="comment">// 元素数量 + 1</span></span><br><span class="line">        nums = <span class="keyword">new</span> <span class="type">int</span>[size + <span class="number">1</span>];</span><br><span class="line">        <span class="built_in">memcpy</span>(nums, tmp_nums, <span class="built_in">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line">        nums[size] = n;</span><br><span class="line">        <span class="keyword">delete</span>[] tmp_nums;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        nums = <span class="keyword">new</span> <span class="type">int</span>[<span class="number">1</span>];</span><br><span class="line">        nums[<span class="number">0</span>] = n;</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> tmp_n;</span><br><span class="line">    <span class="type">int</span> size = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">51</span>; i &lt;= <span class="number">55</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        tmp_n = i;</span><br><span class="line">        <span class="built_in">append</span>(size, tmp_n);</span><br><span class="line">        size++;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">    {</span><br><span class="line">        cout &lt;&lt;nums[i] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>改动的内容就是把原来的数组变成了全局的。局部的不正常，全局就对了，所以猜测，类似是形参和实参的区别。大佬们帮我分析了分析，提出了下边的解决方案：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">append</span><span class="params">(<span class="type">int</span> **, <span class="type">int</span>, <span class="type">int</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> tmp_n;</span><br><span class="line">    <span class="type">int</span> size = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> *nums = <span class="literal">nullptr</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">51</span>; i &lt;= <span class="number">55</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        tmp_n = i;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        nums 是一个指针，这个指针是我们动态数组的第一个元素的地址</span></span><br><span class="line"><span class="comment">        对 nums 取地址传参，传的是 nums 这个指针的地址</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        <span class="built_in">append</span>(&amp;nums, size, tmp_n);</span><br><span class="line">        size++;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">    {</span><br><span class="line">        cout &lt;&lt;nums[i] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">接上文的注释</span></span><br><span class="line"><span class="comment">ptr 是一个指针，这个指针是上边的 nums 的地址</span></span><br><span class="line"><span class="comment">*ptr 得到了这个地址的值，这个值是指向动态数组第一个元素的指针</span></span><br><span class="line"><span class="comment">**ptr 是第一个元素的值</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">append</span><span class="params">(<span class="type">int</span> **ptr, <span class="type">int</span> size, <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">if</span> (*ptr) <span class="comment">// 如果数组指针不为空</span></span><br><span class="line">    {</span><br><span class="line">        <span class="comment">// 暂存原来的数据</span></span><br><span class="line">        <span class="type">int</span> *tmp_nums = <span class="keyword">new</span> <span class="type">int</span>[size];</span><br><span class="line">        <span class="built_in">memcpy</span>(tmp_nums, *ptr, <span class="built_in">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line">        <span class="comment">// 释放掉原指针</span></span><br><span class="line">        <span class="keyword">delete</span>[] * ptr;</span><br><span class="line">        <span class="comment">// 元素数量 + 1</span></span><br><span class="line">        *ptr = <span class="keyword">new</span> <span class="type">int</span>[size + <span class="number">1</span>];</span><br><span class="line">        <span class="built_in">memcpy</span>(*ptr, tmp_nums, <span class="built_in">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line">        (*ptr)[size] = n;</span><br><span class="line">        <span class="keyword">delete</span>[] tmp_nums;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        (*ptr) = <span class="keyword">new</span> <span class="type">int</span>[<span class="number">1</span>];</span><br><span class="line">        (*ptr)[<span class="number">0</span>] = n;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这样运行结果就正常了。</p>
+<h2 id="分析及解决方案"><a href="#分析及解决方案" class="headerlink" title="分析及解决方案"></a>分析及解决方案</h2><p><strong>2022 年 11 月 16 日更新：</strong>这边写的错误原因有点乱，我重新写了一篇：<a href="https://blocklune.github.io/posts/1ef1e20b.html">《当形参、实参是指针变量...》</a></p>
+<p>下边给出两个简化的代码来解释这个问题。</p>
+<p>首先来看代码 1，是对上边错误代码的简化:</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">getMemory</span><span class="params">(<span class="type">int</span> *p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    p = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    cout &lt;&lt;<span class="string">"The pointer in getMemory() points at:"</span> &lt;&lt; p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt;<span class="string">"The address of the pointer in getMemory():"</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p;</span><br><span class="line">    <span class="built_in">getMemory</span>(p);</span><br><span class="line">    cout &lt;&lt;<span class="string">"The pointer in main() points at:"</span> &lt;&lt; p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt;<span class="string">"The address of the pointer in main():"</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">delete</span> p;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>下边是代码 1 对应的程序的一个可能的输出 (具体内存地址可能不同):</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">The pointer in getMemory() points at: 0x10161c0</span><br><span class="line">The address of the pointer in getMemory(): 0x61fdf0</span><br><span class="line">The pointer in main() points at: 0x10</span><br><span class="line">The address of the pointer in main(): 0x61fe18</span><br></pre></td></tr></tbody></table></figure>
+
+<p>可以看到，在 <code>getMemory()</code> 中的 <code>int*</code> 类型的指针 p 与 <code>main()</code> 中的 <code>int*</code> 类型的指针 p <strong>并不是同一个指针</strong>（存储这两个指针的内存地址不一样，在 <code>getMemory()</code> 中的指针 p 存储在 0x61fdf0，而 <code>main()</code> 中的存储在 0x61fe18），所以虽然我们在 <code>getMemory()</code> 中 new 得了存储空间（<code>getMemory()</code> 中的指针 p 指向了 0x10161c0），但这实际上只是为 <code>getMemory()</code> 中的指针 p 申请了存储空间，<code>main()</code> 中的指针 p 并没有申请到空间（<code>main()</code> 中的指针 p 指向了 0x10）。</p>
+<p>也即，我们自己的函数中的指针是一个副本，给这个指针申请空间的操作并没有实现给 <code>main()</code> 中的同名指针也申请到空间！</p>
+<p>接着是代码 2，类似于上边的正确解法：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">getMemory2</span><span class="params">(<span class="type">int</span> **p2)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    *p2 = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The pointer in getMemory() points at:"</span> &lt;&lt; *p2 &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of the pointer in getMemory():"</span> &lt;&lt; p2 &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p1;</span><br><span class="line">    <span class="built_in">getMemory2</span>(&amp;p1);</span><br><span class="line">    cout &lt;&lt; <span class="string">"The pointer in main() points at:"</span> &lt;&lt; p1 &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of the pointer in main():"</span> &lt;&lt; &amp;p1 &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">delete</span> p1;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>下边是代码 2 对应的程序的一个可能的输出 (具体内存地址可能不同):</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">The pointer in getMemory() points at: 0x7461c0</span><br><span class="line">The address of the pointer in getMemory(): 0x61fe18</span><br><span class="line">The pointer in main() points at: 0x7461c0</span><br><span class="line">The address of the pointer in main(): 0x61fe18</span><br></pre></td></tr></tbody></table></figure>
+
+<p>从 <code>main()</code> 开始看，p1 是一个 <code>int*</code> 类型的指针。与上边代码 1 不同，现在 <code>getMemory2()</code> 这个函数接受的参数是指针的指针，也就是指针的地址，所以我们传入的是 <strong>&amp;p1</strong>，也就是指针 p1 的地址。</p>
+<p>再看 <code>getMemory2()</code> 函数，传入参数后，相当于现在 p2 = &amp;p1，那么 *p2 = p1。这里的 “=” 表示 “就是” 而非赋值，所以我们对于 *p2 进行的任何操作，与对 p1 进行的操作都是等效的。</p>
+<p>还有一种解决方案 —— 使用引用传递，对于上边的问题也就是使用 <code>int* &amp;</code> 类型，代码 3 如下：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">getMemory</span><span class="params">(<span class="type">int</span> *&amp;p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    p = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The pointer in getMemory() points at: "</span> &lt;&lt; p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of the pointer in getMemory(): "</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p;</span><br><span class="line">    <span class="built_in">getMemory</span>(p);</span><br><span class="line">    cout &lt;&lt; <span class="string">"The pointer in main() points at: "</span> &lt;&lt; p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of the pointer in main(): "</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">delete</span> p;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>只要将上边的代码 1 中 <code>void getMemory(int *p)</code> 改为 <code>void getMemory(int *&amp;p)</code> 就行了，下边是可能的输出：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">The pointer in getMemory() points at: 0x10261c0</span><br><span class="line">The address of the pointer in getMemory(): 0x61fe18</span><br><span class="line">The pointer in main() points at: 0x10261c0</span><br><span class="line">The address of the pointer in main(): 0x61fe18</span><br></pre></td></tr></tbody></table></figure>
+
+<p>可以看到已经实现了我们想要的效果。</p>
+<p>也可以参考参考这篇文章：<a href="https://developer.aliyun.com/article/297093">《C++ 函数的传入参数是指针的指针（**）的详解》</a></p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+        <tag>Issue</tag>
+        <tag>Solved</tag>
+        <tag>Pointer</tag>
+        <tag>pass by pointer</tag>
+        <tag>pass by value</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Type Safety and std::optional in C++</title>
     <url>/posts/ab76f233.html</url>
     <content><![CDATA[<p>This is a note for Lecture 14, <a href="https://web.stanford.edu/class/cs106l/index.html">CS106L</a>, Spring 2023.</p>
@@ -6512,66 +6233,6 @@
       <tags>
         <tag>C/C++</tag>
         <tag>CS106L</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一个有关指针传参的问题</title>
-    <url>/posts/50c16b14.html</url>
-    <content><![CDATA[<p>这是我学习指针过程中遇到的一个问题，问过大佬才似乎懂了点，在此记录。顺便记下一句大佬说的话：</p>
-<blockquote>
-<p>注意到一点就行，指针其实也就是个存了内存地址的变量，<strong>它本身同时也具有内存地址</strong>。</p>
-</blockquote>
-<span id="more"></span>
-
-<h2 id="问题的产生"><a href="#问题的产生" class="headerlink" title="问题的产生"></a>问题的产生</h2><p>事情是这样，学习了一点指针，就想自己实现一个会自动变长的数组。我也不期望把它做成一个类什么的，只有一个小目标，就是实现一个函数，能往这个动态数组后边加元素。我本来的 <strong>错误</strong> 代码如下：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">append</span><span class="params">(<span class="type">int</span> *nums, <span class="type">int</span> size, <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">if</span> (nums) <span class="comment">// 如果数组指针不为空</span></span><br><span class="line">    {</span><br><span class="line">        <span class="comment">// 暂存原来的数据</span></span><br><span class="line">        <span class="type">int</span> *tmp_nums = <span class="keyword">new</span> <span class="type">int</span>[size];</span><br><span class="line">        <span class="built_in">memcpy</span>(tmp_nums, nums, <span class="built_in">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line">        <span class="comment">// 释放掉原指针</span></span><br><span class="line">        <span class="keyword">delete</span>[] nums;</span><br><span class="line">        <span class="comment">// 元素数量 + 1</span></span><br><span class="line">        nums = <span class="keyword">new</span> <span class="type">int</span>[size + <span class="number">1</span>];</span><br><span class="line">        <span class="built_in">memcpy</span>(nums, tmp_nums, <span class="built_in">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line">        nums[size] = n;</span><br><span class="line">        <span class="keyword">delete</span>[] tmp_nums;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        nums = <span class="keyword">new</span> <span class="type">int</span>[<span class="number">1</span>];</span><br><span class="line">        nums[<span class="number">0</span>] = n;</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> tmp_n;</span><br><span class="line">    <span class="type">int</span> size = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> *nums = <span class="literal">nullptr</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">51</span>; i &lt;= <span class="number">55</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        tmp_n = i;</span><br><span class="line">        <span class="built_in">append</span>(nums, size, tmp_n);</span><br><span class="line">        size++;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">    {</span><br><span class="line">        cout &lt;&lt;nums[i] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>在调试过程中发现一直会报 <code>Segmentation fault</code>，但是如果改成下边这样，却是可以的：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> *nums = <span class="literal">nullptr</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">append</span><span class="params">(<span class="type">int</span> size, <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">if</span> (nums) <span class="comment">// 如果数组指针不为空</span></span><br><span class="line">    {</span><br><span class="line">        <span class="comment">// 暂存原来的数据</span></span><br><span class="line">        <span class="type">int</span> *tmp_nums = <span class="keyword">new</span> <span class="type">int</span>[size];</span><br><span class="line">        <span class="built_in">memcpy</span>(tmp_nums, nums, <span class="built_in">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line">        <span class="comment">// 释放掉原指针</span></span><br><span class="line">        <span class="keyword">delete</span>[] nums;</span><br><span class="line">        <span class="comment">// 元素数量 + 1</span></span><br><span class="line">        nums = <span class="keyword">new</span> <span class="type">int</span>[size + <span class="number">1</span>];</span><br><span class="line">        <span class="built_in">memcpy</span>(nums, tmp_nums, <span class="built_in">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line">        nums[size] = n;</span><br><span class="line">        <span class="keyword">delete</span>[] tmp_nums;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        nums = <span class="keyword">new</span> <span class="type">int</span>[<span class="number">1</span>];</span><br><span class="line">        nums[<span class="number">0</span>] = n;</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> tmp_n;</span><br><span class="line">    <span class="type">int</span> size = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">51</span>; i &lt;= <span class="number">55</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        tmp_n = i;</span><br><span class="line">        <span class="built_in">append</span>(size, tmp_n);</span><br><span class="line">        size++;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">    {</span><br><span class="line">        cout &lt;&lt;nums[i] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>改动的内容就是把原来的数组变成了全局的。局部的不正常，全局就对了，所以猜测，类似是形参和实参的区别。大佬们帮我分析了分析，提出了下边的解决方案：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">append</span><span class="params">(<span class="type">int</span> **, <span class="type">int</span>, <span class="type">int</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> tmp_n;</span><br><span class="line">    <span class="type">int</span> size = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> *nums = <span class="literal">nullptr</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">51</span>; i &lt;= <span class="number">55</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        tmp_n = i;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        nums 是一个指针，这个指针是我们动态数组的第一个元素的地址</span></span><br><span class="line"><span class="comment">        对 nums 取地址传参，传的是 nums 这个指针的地址</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        <span class="built_in">append</span>(&amp;nums, size, tmp_n);</span><br><span class="line">        size++;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">    {</span><br><span class="line">        cout &lt;&lt;nums[i] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">接上文的注释</span></span><br><span class="line"><span class="comment">ptr 是一个指针，这个指针是上边的 nums 的地址</span></span><br><span class="line"><span class="comment">*ptr 得到了这个地址的值，这个值是指向动态数组第一个元素的指针</span></span><br><span class="line"><span class="comment">**ptr 是第一个元素的值</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">append</span><span class="params">(<span class="type">int</span> **ptr, <span class="type">int</span> size, <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">if</span> (*ptr) <span class="comment">// 如果数组指针不为空</span></span><br><span class="line">    {</span><br><span class="line">        <span class="comment">// 暂存原来的数据</span></span><br><span class="line">        <span class="type">int</span> *tmp_nums = <span class="keyword">new</span> <span class="type">int</span>[size];</span><br><span class="line">        <span class="built_in">memcpy</span>(tmp_nums, *ptr, <span class="built_in">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line">        <span class="comment">// 释放掉原指针</span></span><br><span class="line">        <span class="keyword">delete</span>[] * ptr;</span><br><span class="line">        <span class="comment">// 元素数量 + 1</span></span><br><span class="line">        *ptr = <span class="keyword">new</span> <span class="type">int</span>[size + <span class="number">1</span>];</span><br><span class="line">        <span class="built_in">memcpy</span>(*ptr, tmp_nums, <span class="built_in">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line">        (*ptr)[size] = n;</span><br><span class="line">        <span class="keyword">delete</span>[] tmp_nums;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        (*ptr) = <span class="keyword">new</span> <span class="type">int</span>[<span class="number">1</span>];</span><br><span class="line">        (*ptr)[<span class="number">0</span>] = n;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这样运行结果就正常了。</p>
-<h2 id="分析及解决方案"><a href="#分析及解决方案" class="headerlink" title="分析及解决方案"></a>分析及解决方案</h2><p><strong>2022 年 11 月 16 日更新：</strong>这边写的错误原因有点乱，我重新写了一篇：<a href="https://blocklune.github.io/posts/1ef1e20b.html">《当形参、实参是指针变量...》</a></p>
-<p>下边给出两个简化的代码来解释这个问题。</p>
-<p>首先来看代码 1，是对上边错误代码的简化:</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">getMemory</span><span class="params">(<span class="type">int</span> *p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    p = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    cout &lt;&lt;<span class="string">"The pointer in getMemory() points at:"</span> &lt;&lt; p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt;<span class="string">"The address of the pointer in getMemory():"</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p;</span><br><span class="line">    <span class="built_in">getMemory</span>(p);</span><br><span class="line">    cout &lt;&lt;<span class="string">"The pointer in main() points at:"</span> &lt;&lt; p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt;<span class="string">"The address of the pointer in main():"</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">delete</span> p;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>下边是代码 1 对应的程序的一个可能的输出 (具体内存地址可能不同):</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">The pointer in getMemory() points at: 0x10161c0</span><br><span class="line">The address of the pointer in getMemory(): 0x61fdf0</span><br><span class="line">The pointer in main() points at: 0x10</span><br><span class="line">The address of the pointer in main(): 0x61fe18</span><br></pre></td></tr></tbody></table></figure>
-
-<p>可以看到，在 <code>getMemory()</code> 中的 <code>int*</code> 类型的指针 p 与 <code>main()</code> 中的 <code>int*</code> 类型的指针 p <strong>并不是同一个指针</strong>（存储这两个指针的内存地址不一样，在 <code>getMemory()</code> 中的指针 p 存储在 0x61fdf0，而 <code>main()</code> 中的存储在 0x61fe18），所以虽然我们在 <code>getMemory()</code> 中 new 得了存储空间（<code>getMemory()</code> 中的指针 p 指向了 0x10161c0），但这实际上只是为 <code>getMemory()</code> 中的指针 p 申请了存储空间，<code>main()</code> 中的指针 p 并没有申请到空间（<code>main()</code> 中的指针 p 指向了 0x10）。</p>
-<p>也即，我们自己的函数中的指针是一个副本，给这个指针申请空间的操作并没有实现给 <code>main()</code> 中的同名指针也申请到空间！</p>
-<p>接着是代码 2，类似于上边的正确解法：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">getMemory2</span><span class="params">(<span class="type">int</span> **p2)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    *p2 = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The pointer in getMemory() points at:"</span> &lt;&lt; *p2 &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of the pointer in getMemory():"</span> &lt;&lt; p2 &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p1;</span><br><span class="line">    <span class="built_in">getMemory2</span>(&amp;p1);</span><br><span class="line">    cout &lt;&lt; <span class="string">"The pointer in main() points at:"</span> &lt;&lt; p1 &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of the pointer in main():"</span> &lt;&lt; &amp;p1 &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">delete</span> p1;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>下边是代码 2 对应的程序的一个可能的输出 (具体内存地址可能不同):</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">The pointer in getMemory() points at: 0x7461c0</span><br><span class="line">The address of the pointer in getMemory(): 0x61fe18</span><br><span class="line">The pointer in main() points at: 0x7461c0</span><br><span class="line">The address of the pointer in main(): 0x61fe18</span><br></pre></td></tr></tbody></table></figure>
-
-<p>从 <code>main()</code> 开始看，p1 是一个 <code>int*</code> 类型的指针。与上边代码 1 不同，现在 <code>getMemory2()</code> 这个函数接受的参数是指针的指针，也就是指针的地址，所以我们传入的是 <strong>&amp;p1</strong>，也就是指针 p1 的地址。</p>
-<p>再看 <code>getMemory2()</code> 函数，传入参数后，相当于现在 p2 = &amp;p1，那么 *p2 = p1。这里的 “=” 表示 “就是” 而非赋值，所以我们对于 *p2 进行的任何操作，与对 p1 进行的操作都是等效的。</p>
-<p>还有一种解决方案 —— 使用引用传递，对于上边的问题也就是使用 <code>int* &amp;</code> 类型，代码 3 如下：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">getMemory</span><span class="params">(<span class="type">int</span> *&amp;p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    p = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The pointer in getMemory() points at: "</span> &lt;&lt; p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of the pointer in getMemory(): "</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p;</span><br><span class="line">    <span class="built_in">getMemory</span>(p);</span><br><span class="line">    cout &lt;&lt; <span class="string">"The pointer in main() points at: "</span> &lt;&lt; p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"The address of the pointer in main(): "</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">delete</span> p;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>只要将上边的代码 1 中 <code>void getMemory(int *p)</code> 改为 <code>void getMemory(int *&amp;p)</code> 就行了，下边是可能的输出：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">The pointer in getMemory() points at: 0x10261c0</span><br><span class="line">The address of the pointer in getMemory(): 0x61fe18</span><br><span class="line">The pointer in main() points at: 0x10261c0</span><br><span class="line">The address of the pointer in main(): 0x61fe18</span><br></pre></td></tr></tbody></table></figure>
-
-<p>可以看到已经实现了我们想要的效果。</p>
-<p>也可以参考参考这篇文章：<a href="https://developer.aliyun.com/article/297093">《C++ 函数的传入参数是指针的指针（**）的详解》</a></p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-        <tag>Issue</tag>
-        <tag>Solved</tag>
-        <tag>Pointer</tag>
-        <tag>pass by pointer</tag>
-        <tag>pass by value</tag>
       </tags>
   </entry>
   <entry>
@@ -7260,6 +6921,350 @@
         <tag>Python</tag>
         <tag>CS50P</tag>
         <tag>pip</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git Commit Message Cheat Sheet (CN)</title>
+    <url>/posts/8a5a50bb.html</url>
+    <content><![CDATA[<p>A Git commit message cheat sheet in Chinese.</p>
+<span id="more"></span>
+
+<ol>
+<li><code>build</code>（构建）：表示与构建系统、外部依赖或编译过程相关的更改。这可能包括构建脚本、配置文件或构建工具的更新。</li>
+<li><code>chore</code>（杂务）：表示与代码库维护相关的杂项任务，如格式化代码、重命名文件、更新依赖项等。这些更改通常不会影响代码的运行或功能。</li>
+<li><code>ci</code>（持续集成）：表示与持续集成系统相关的更改。这可能涉及构建、测试、部署流程的改进或配置变更。</li>
+<li><code>docs</code>（文档）：表示与文档相关的更改。这可能包括更新 README 文件、添加或修改文档注释、更新 API 文档等。</li>
+<li><code>feat</code>（功能）：表示添加新功能或功能改进的更改。这通常是最常用的关键词之一。</li>
+<li><code>fix</code>（修复）：表示修复 bug 或错误的更改。这些更改主要是为了修复现有功能的问题。</li>
+<li><code>perf</code>（性能）：表示与性能优化相关的更改。这些更改旨在改进代码的执行速度、资源利用率或性能指标。</li>
+<li><code>refactor</code>（重构）：表示对现有代码进行重构，目的是改善代码的结构、可读性或可维护性，而不涉及功能更改。</li>
+<li><code>rev</code>（修订）：表示对先前提交的更改进行修订或修改。</li>
+<li><code>style</code>（样式）：表示与代码样式、格式或命名约定相关的更改。这些更改不会影响代码的功能，但会使其更易于阅读和理解。</li>
+<li><code>test</code>（测试）：表示与测试相关的更改。这可能包括添加、修改或删除单元测试、集成测试或端到端测试等。</li>
+</ol>
+<p>(The notes here are generated by ChatGPT.)</p>
+<p>Learn more:</p>
+<ul>
+<li><em><a href="https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/">How to Write Better Git Commit Messages – A Step-By-Step Guide</a></em></li>
+</ul>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+        <category>vcs</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>Version Control</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Simple Git Tutorial: Branching and Merging</title>
+    <url>/posts/aa010e90.html</url>
+    <content><![CDATA[<p>Git's powerful branching and merging capabilities can help you deal with parallel collaborative development processes. Let's take a look.</p>
+<span id="more"></span>
+
+<p>So far, we've been working on a single default branch created by Git. The name of this branch is <code>main</code>. (It used to be <code>master</code>. See <em><a href="https://github.com/github/renaming">github/renaming: Guidance for changing the default branch name for GitHub repositories</a></em>) Our every commit becomes a new node on this branch.</p>
+<p>When we want to add a new feature, but aren't sure if the new feature is good enough to use, the natural thought is that we want to <strong>branch</strong> out based on our current location and do our new feature development and experimentation on the new branch. If it's good, <strong>merge</strong> it into the main branch. Otherwise discard it.</p>
+<h2 id="Branching"><a href="#Branching" class="headerlink" title="Branching"></a>Branching</h2><p>The basic commands for working on local branches are listed below:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># lists all the local branches</span></span><br><span class="line">git branch</span><br><span class="line"></span><br><span class="line"><span class="comment"># creates a new local branch named &lt;branch_name&gt;</span></span><br><span class="line">git branch &lt;branch_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># checks out branch &lt;branch_name&gt;</span></span><br><span class="line">git checkout &lt;branch_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># combines the create and check-out commands into one:</span></span><br><span class="line">git checkout -b &lt;branch_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># shows the latest commits of every branch</span></span><br><span class="line">git branch -v</span><br><span class="line"></span><br><span class="line"><span class="comment"># renames a local branch</span></span><br><span class="line">git branch -m &lt;new_branch_name&gt;</span><br><span class="line">git branch -m &lt;old_branch_name&gt; &lt;new_branch_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># deletes a local branch</span></span><br><span class="line">git branch -d &lt;branch_name&gt;</span><br><span class="line">git branch -D &lt;branch_name&gt;  <span class="comment"># force</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>All of the above commands work on the <strong>local</strong> branch(es). Then let's take a look at the remote branch(es).</p>
+<p>To list all the local and remote branches, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git branch --all</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">git branch -a</span><br></pre></td></tr></tbody></table></figure>
+
+<p>When you clone a repo from the Internet, you may find that there is a <code>main</code> branch and an <code>origin/main</code> branch. Here, <code>main</code> is a local branch, and <code>origin/main</code> is a remote branch (where <code>origin</code> means a remote server called <code>origin</code> and <code>main</code> means a branch of the same name on that remote server).</p>
+<p>In this case, the local branch <code>main</code> and the remote branch <code>origin/main</code> are related in some way, called <strong>tracking</strong>. The local branch is called the <strong>tracking branch</strong>. The corresponding branch on the remote server is called the <strong>upstream branch</strong>. Usually, the tracking branch shares a name with its upstream branch (e.g., the upstream branch of a local branch <code>feature</code> is <code>origin/feature</code>), but that's not a requirement.</p>
+<p>For example, the commands below create a new local branch <code>feature</code> and its upstream branch <code>origin/feature</code>:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git checkout -b feature</span><br><span class="line">git push -u origin feature  <span class="comment"># or `git push --set-upstream origin feature`</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>Run the command below to show the connection:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git branch -vv</span><br></pre></td></tr></tbody></table></figure>
+
+<p>More commands may be helpful:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># sets up a new tracking</span></span><br><span class="line">git checkout --track &lt;server_name&gt;/&lt;branch&gt;</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">git checkout -b &lt;branch&gt;</span><br><span class="line">git branch -u &lt;server_name&gt;/&lt;branch&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># stops tracking</span></span><br><span class="line">git brach --unset-upstream &lt;branch&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># deletes a remote branch</span></span><br><span class="line">git push origin --delete &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>There is no direct command to rename a remote branch. But you can do it like this:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git pull origin &lt;old_branch_name&gt;</span><br><span class="line">git push origin --delete &lt;old_branch_name&gt;</span><br><span class="line">git branch -m &lt;old_branch_name&gt; &lt;new_branch_name&gt;</span><br><span class="line">git push -u origin &lt;new_branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+</blockquote>
+<h2 id="Merging"><a href="#Merging" class="headerlink" title="Merging"></a>Merging</h2><p>To merge the other branch to this one, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git merge &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>If your current branch is <code>master</code>, this command merge <code>&lt;branch_name&gt;</code> to <code>master</code>.</p>
+<p>To show all the branches that have/haven't been merged to this branch, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git branch --merged</span><br><span class="line">git branch --no-merged</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ul>
+<li><em><a href="https://git-scm.com/docs">Git - Reference</a></em></li>
+<li><em><a href="https://stackoverflow.com/questions/4693588/what-is-a-tracking-branch">git - What is a tracking branch? - Stack Overflow</a></em></li>
+</ul>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+        <category>vcs</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>Version Control</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Simple Git Tutorial: Working with Remote Server</title>
+    <url>/posts/85390c91.html</url>
+    <content><![CDATA[<p>Use remote servers to work with collaborators better.</p>
+<span id="more"></span>
+
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># connects to a remote server. Usually &lt;server_name&gt; is `origin`</span></span><br><span class="line">git remote add &lt;server_name&gt; &lt;server&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># removes a specific remote server</span></span><br><span class="line">git remote remove &lt;server_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># shows all the remote servers</span></span><br><span class="line">git remote -v</span><br><span class="line"></span><br><span class="line"><span class="comment"># renames</span></span><br><span class="line">git remote rename &lt;old_server_name&gt; &lt;new_server_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># shows some info about a specific remote server</span></span><br><span class="line">git remote show &lt;server_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># pushes files</span></span><br><span class="line">git push -u &lt;server_name&gt; &lt;branch&gt; <span class="comment"># or `git push --set-upstream &lt;server_name&gt; &lt;branch&gt;`</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># fetches files</span></span><br><span class="line">git fetch  <span class="comment"># from the default remote upstream repo</span></span><br><span class="line">git fetch &lt;server_name&gt;  <span class="comment"># from a specific remote upstream repo</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># combines the `fetch` and `merge` together</span></span><br><span class="line">git pull</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+        <category>vcs</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>Version Control</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Simple Git Tutorial</title>
+    <url>/posts/9363e311.html</url>
+    <content><![CDATA[<p>This is mainly a simple tutorial of Git. Some info about GitHub also included. You may also read <em><a href="https://blocklune.github.io/posts/1cce885f.html">Simple GitHub Tutorial</a></em>.</p>
+<span id="more"></span>
+
+<h2 id="Brief"><a href="#Brief" class="headerlink" title="Brief"></a>Brief</h2><p>You may have learnt Git and GitHub before, and also may have confused them because their similar names. What are these two things on earth?</p>
+<p><img data-src="https://software.3metas.com/wp-content/uploads/2017/06/git.png" alt="Git (This picture is from the Internet)"></p>
+<p><img data-src="https://kinsta.com/wp-content/uploads/2018/04/what-is-github-1-1.png" alt="GitHub (This picture is from the Internet)"></p>
+<p>In short, <a href="https://git-scm.com/">Git</a> is a Version Control System (VCS), which enables you to create a repository of your codes, to track changes in your project and to manage your files efficiently. <a href="https://github.com/">GitHub</a> is a platform used to host remote Git repositories for collaboration and sharing projects.</p>
+<p>In this post, you will learn the basic usage of Git. If you are looking for info about working with GitHub, see _<a href="https://blocklune.github.io/posts/1cce885f.html">Simple GitHub Tutorial</a>.</p>
+<p>Want to go deeper? See <a href="#resources">Resources</a>.</p>
+<h2 id="Installing-Git"><a href="#Installing-Git" class="headerlink" title="Installing Git"></a>Installing Git</h2><p>Download Git from the official website:</p>
+<p><em><a href="https://git-scm.com/downloads">Git - Downloads (git-scm.com)</a></em></p>
+<p>Or use your favorite package manager by yourself.</p>
+<h2 id="Basic-Configuration"><a href="#Basic-Configuration" class="headerlink" title="Basic Configuration"></a>Basic Configuration</h2><p>Before starting to use Git, you should tell Git your name and email. The commands below set your name and email globally (which means they are visible to all your local repositories).</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">"&lt;your_name&gt;"</span></span><br><span class="line">git config --global user.email <span class="string">"&lt;your_email@example.com&gt;"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>It's highly recommended that you set <code>&lt;your_name&gt;</code> to be your GitHub username and set <code>&lt;your_email@example.com&gt;</code> to be your GitHub no-reply email, which looks like <code>ID+USERNAME@users.noreply.github.com</code>. You can find the no-reply email <a href="https://github.com/settings/emails">here</a> (under the <code>Primary email address</code> section).</p>
+</blockquote>
+<p>Learn more:</p>
+<ul>
+<li><em><a href="https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git">Setting your username in Git - GitHub Docs</a></em></li>
+<li><em><a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address">Setting your commit email address - GitHub Docs</a></em></li>
+</ul>
+<h2 id="Getting-Help"><a href="#Getting-Help" class="headerlink" title="Getting Help"></a>Getting Help</h2><p>To get help when using Git, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">help</span> &lt;verb&gt;</span><br><span class="line"><span class="comment"># Or</span></span><br><span class="line">git &lt;verb&gt; --<span class="built_in">help</span></span><br><span class="line"><span class="comment"># Or</span></span><br><span class="line">man git-&lt;verb&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Getting-A-Git-Repository"><a href="#Getting-A-Git-Repository" class="headerlink" title="Getting A Git Repository"></a>Getting A Git Repository</h2><h3 id="Creating-One-In-An-Existing-Directory"><a href="#Creating-One-In-An-Existing-Directory" class="headerlink" title="Creating One In An Existing Directory"></a>Creating One In An Existing Directory</h3><p>To create a new Git repo in the current directory, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></tbody></table></figure>
+
+<p>This command will create a directory called <code>.git</code>.</p>
+<h3 id="Cloning-One-from-An-Existing-Repo"><a href="#Cloning-One-from-An-Existing-Repo" class="headerlink" title="Cloning One from An Existing Repo"></a>Cloning One from An Existing Repo</h3><p>See <em><a href="https://blocklune.github.io/posts/1cce885f.html">Simple GitHub Tutorial</a></em></p>
+<h2 id="Files-States-in-a-Git-Project"><a href="#Files-States-in-a-Git-Project" class="headerlink" title="Files' States in a Git Project"></a>Files' States in a Git Project</h2><p>There are three main states in Git: <strong>modified</strong>, <strong>staged</strong>, and <strong>committed</strong>. And this leads us to three main sections of a Git project: the <code>Working Directory</code>, the <code>Staging Area</code> and the <code>Git Directory</code>.</p>
+<p>You modify your files in the <code>Working Directory</code>, stage them (using <code>git add</code>) to the <code>Staging Area</code>, and commit them (using <code>git commit</code>) to the <code>Git Directory</code>.</p>
+<p>Also see <em><a href="https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F">Git - What is Git?</a></em>.</p>
+<h2 id="Tracking-Files"><a href="#Tracking-Files" class="headerlink" title="Tracking Files"></a>Tracking Files</h2><p>To add file(s) to your tracked list (or more precisely, put file(s) onto the <code>Staging Area</code>), run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git add &lt;directory&gt;/&lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To undo <code>git add</code> (unstage file(s)):</p>
+<ul>
+<li>Use <code>git reset</code>:</li>
+</ul>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git reset         <span class="comment"># unstage everything</span></span><br><span class="line">git reset &lt;file&gt;  <span class="comment"># unstage specific file(s)</span></span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>Use <code>git restore</code>:</li>
+</ul>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git restore --staged &lt;file&gt;  <span class="comment"># unstage specific file(s)</span></span><br><span class="line">git restore --staged :/      <span class="comment"># unstage all files</span></span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>Use <code>git rm</code>:</li>
+</ul>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">rm</span> --cached &lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p><strong>Warning</strong>: <code>git reset</code> is equivalent to <code>git restore --staged :/</code>. <code>git reset &lt;file&gt;</code> is equivalent to <code>git restore --staged &lt;file&gt;</code>. But <code>git rm --cached &lt;file&gt;</code> is unique. Actually, it means remove <code>&lt;file&gt;</code> from the <code>Staging Area</code>, while the other two commands move <code>&lt;file&gt;</code> in the <code>Staging Area</code> back to the <code>Working Directory</code>.</p>
+</blockquote>
+<h2 id="Checking-Status"><a href="#Checking-Status" class="headerlink" title="Checking Status"></a>Checking Status</h2><p>To check the status of the files in the repo, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git status</span><br><span class="line"></span><br><span class="line"><span class="comment"># A Short Version</span></span><br><span class="line">git status -s</span><br><span class="line"><span class="comment"># Or</span></span><br><span class="line">git status --short</span><br></pre></td></tr></tbody></table></figure>
+
+<p>In the short version, there are two columns in the front of every line. The left column shows the status of the <code>Staging Area</code>. The right column shows the status of the <code>Working Directory</code>. For example:</p>
+<ul>
+<li><code>??</code>: untracked file</li>
+<li><code>A</code>: file newly added to the stage</li>
+<li><code>M</code>: modified file</li>
+</ul>
+<h2 id="Checking-Differences"><a href="#Checking-Differences" class="headerlink" title="Checking Differences"></a>Checking Differences</h2><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># shows unstaged, uncommitted changes</span></span><br><span class="line">git diff</span><br><span class="line"></span><br><span class="line"><span class="comment"># shows all uncommitted changes (including staged ones):</span></span><br><span class="line">git diff HEAD</span><br><span class="line"></span><br><span class="line"><span class="comment"># shows only staged changes</span></span><br><span class="line">git diff --staged</span><br><span class="line">git diff --cached</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Committing"><a href="#Committing" class="headerlink" title="Committing"></a>Committing</h2><p>To commit your files, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git commit</span><br></pre></td></tr></tbody></table></figure>
+
+<p>This command will open a editor. You need to edit your commit message here. Use the command below to set a default editor:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git config --global core.editor &lt;path_to_editor_or_command_to_open_editor&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Or, you can simplify this by using <code>-m</code> option:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git commit -m &lt;commit_message&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p><em>Oops, I forgot to add this file!</em> If you meet this problem, you can amend it like this:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git commit -m <span class="string">"a wrong commit message"</span></span><br><span class="line">git add &lt;forgotten_file&gt;</span><br><span class="line">git commit --amend</span><br></pre></td></tr></tbody></table></figure>
+
+<p>The second commit will <strong>replace</strong> the first commit, as if the first commit never occurred.</p>
+<p>If you are tired of using the stage (<code>git add</code> first,<code>git commit</code> later), you can use <code>-a</code> flag like this to skip it:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git commit -a</span><br></pre></td></tr></tbody></table></figure>
+
+<p>This command is equivalent to these two command bellow:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git add &lt;all_tracked_files_that_have_been_modified&gt;</span><br><span class="line">git commit</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>How to write a commit message? The links below maybe helpful:</p>
+<ul>
+<li>_<a href="https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/">How to Write Better Git Commit Messages – A Step-By-Step Guide</a></li>
+<li><em><a href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git-commit">ohmyzsh/plugins/git-commit at master · ohmyzsh/ohmyzsh</a></em></li>
+</ul>
+</blockquote>
+<h2 id="History"><a href="#History" class="headerlink" title="History"></a>History</h2><p>To review the commit history, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li><p><code>-p</code> or <code>--patch</code> flag make logs output in the patch way.</p>
+</li>
+<li><p><code>-&lt;n&gt;</code> flag to limit the number of logs (e.g. <code>-2</code> only show two latest logs).</p>
+</li>
+<li><p><code>--stat</code> flag shows simple statistics.</p>
+</li>
+<li><p><code>--pretty</code> option provides some different ways to show the history.</p>
+<ul>
+<li><code>--pretty=oneline</code> option make every commit be showed in one line</li>
+<li><code>--pretty=short</code></li>
+<li><code>--pretty=full</code></li>
+<li><code>--pretty=fuller</code></li>
+</ul>
+</li>
+<li><p><code>--graph</code> flag adds some ascii characters to vividly show your history.</p>
+</li>
+</ul>
+<h2 id="Discarding-Changes-in-Working"><a href="#Discarding-Changes-in-Working" class="headerlink" title="Discarding Changes in Working"></a>Discarding Changes in Working</h2><div class="note danger no-icon"><p>In Git, it's usually easy to restore the files have been committed, but usually <strong>very hard</strong> to restore the files haven't been committed.</p>
+</div>
+
+<p>To discard changes in working, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git checkout -- &lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>This command will abandon the modifications to the file after your last commit, where <code>--</code> indicates that the following content should be treated as file parameters, even if they resemble options.</p>
+<h2 id="Next-Steps"><a href="#Next-Steps" class="headerlink" title="Next Steps"></a>Next Steps</h2><p>TODO</p>
+<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ul>
+<li><em><a href="https://git-scm.com/docs">Git - Reference</a></em></li>
+<li><em><a href="https://docs.github.com/">GitHub Docs</a></em></li>
+<li><em><a href="https://training.github.com/">GitHub Training Kit</a></em></li>
+<li><em><a href="https://missing.csail.mit.edu/2020/version-control/">MIT - Missing Semester - Version Control (Git)</a></em></li>
+<li><em><a href="https://git-scm.com/book/en/v2">Pro Git</a></em></li>
+<li><em><a href="http://rogerdudler.github.io/git-guide/index.html">git - the simple guide - no deep shit!</a></em></li>
+</ul>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+        <category>vcs</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>Version Control</tag>
+        <tag>GitHub</tag>
+        <tag>VCS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Simple GitHub Tutorial</title>
+    <url>/posts/1cce885f.html</url>
+    <content><![CDATA[<p>I have posted a tutorial of Git (See <em><a href="https://blocklune.github.io/posts/9363e311.html">Simple Git Tutorial</a></em>). But it mixed up using Git and using GitHub together. I post this new tutorial to draw a line and make things clear.</p>
+<span id="more"></span>
+
+<blockquote>
+<p>Notice: If you run into any problems, it's highly recommended that you check out <a href="https://docs.github.com/">Github Docs</a>, or Google it. If you still can't solve it, you can comment below this post.</p>
+</blockquote>
+<h2 id="Creating-a-Github-Account"><a href="#Creating-a-Github-Account" class="headerlink" title="Creating a Github Account"></a>Creating a Github Account</h2><p>See:</p>
+<ul>
+<li><em><a href="https://docs.github.com/en/get-started/signing-up-for-GitHub/signing-up-for-a-new-GitHub-accountt">Signing up for a new GitHub account - GitHub Docs</a></em></li>
+</ul>
+<h2 id="Checking-your-Local-Git-Config"><a href="#Checking-your-Local-Git-Config" class="headerlink" title="Checking your Local Git Config"></a>Checking your Local Git Config</h2><p>Make sure that you have told Git your name and email. That is say, you should have run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">"&lt;your_name&gt;"</span></span><br><span class="line">git config --global user.email <span class="string">"&lt;your_email@example.com&gt;"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>Also see:</p>
+<ul>
+<li><em><a href="https://blocklune.github.io/posts/9363e311.html#Basic-Configuration">Basic Configuration - Simple Git Tutorial</a></em></li>
+<li><em><a href="https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git">Setting your username in Git - GitHub Docs</a></em></li>
+<li><em><a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address">Setting your commit email address - GitHub Docs</a></em></li>
+</ul>
+<h2 id="Connecting-to-GitHub-with-SSH"><a href="#Connecting-to-GitHub-with-SSH" class="headerlink" title="Connecting to GitHub with SSH"></a>Connecting to GitHub with SSH</h2><p>You are recommended to connecting to GitHub with SSH (instead of HTTP/HTTPS).</p>
+<p>First, generate a new SSH key using new ED25519 algorithm:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">"&lt;your_email@example.com&gt;"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>Then, Keep on repeating pressing <code>Enter</code> until your prompt appear again.</p>
+<p>Finally, add your public key to GitHub:</p>
+<ol>
+<li>Go to <em><a href="https://github.com/settings/keys">SSH and GPG keys - GitHub</a></em>.</li>
+<li>Click the green <code>New SSH key</code> button at the top right of the page.</li>
+<li>Fill out the form, where <code>key</code> is the content of <code>~/.ssh/id_ed25519.pub</code> (This file is generated by the <code>ssh-keygen</code> command above. You may run <code>cat ~/.ssh/id_ed25519.pub</code> on Linux or Mac or run <code>notepad ~/.ssh/id_ed25519.pub</code> on Windows to check its content).</li>
+<li>Submit the form by clicking the green <code>Add SSH key</code> button.</li>
+</ol>
+<blockquote>
+<p>The postfix <code>.pub</code> indicates that the <code>id_ed25519.pub</code> file is a public key. The <code>ssh-keygen</code> command above also generates a private key file <code>id_ed25519</code> (without the <code>.pub</code> postfix).</p>
+</blockquote>
+<p>Also see:</p>
+<ul>
+<li><em><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">Connecting to GitHub with SSH - GitHub Docs</a></em></li>
+</ul>
+<h2 id="Using-SSH-over-the-HTTPS-port-Optional-but-Recommended"><a href="#Using-SSH-over-the-HTTPS-port-Optional-but-Recommended" class="headerlink" title="Using SSH over the HTTPS port (Optional but Recommended)"></a>Using SSH over the HTTPS port (Optional but Recommended)</h2><p>Due to the special network environment in China, you may often need to use proxy service to get a better browsing experience. Generally, when you enable the <code>System Proxy</code> option, only the traffic on port 80/443 (corresponding to HTTP/HTTPS) will go through the proxy server, while the traffic on SSH's default port 22 will not. With the following settings, you can force SSH traffic to go to port 443.</p>
+<p>To test if SSH over the HTTPS port is possible, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">ssh -T -p 443 git@ssh.github.com</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Type <code>yes</code> if you see some info like:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">Are you sure you want to continue connecting (yes/no/[fingerprint])?</span><br></pre></td></tr></tbody></table></figure>
+
+<p>If you receive response like below, it means it's OK:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">Hi USERNAME! You've successfully authenticated, but GitHub does not</span><br><span class="line">provide shell access.</span><br></pre></td></tr></tbody></table></figure>
+
+<p>You can now override your SSH settings to force any connection to GitHub.com to run through that server and port. Edit <code>~/.ssh/config</code> and add this section:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">    Hostname ssh.github.com</span><br><span class="line">    Port 443</span><br><span class="line">    User git</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Now your usual command like:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com/YOUR-USERNAME/YOUR-REPOSITORY.git</span><br></pre></td></tr></tbody></table></figure>
+
+<p>is equivalent to:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> ssh://git@ssh.github.com:443/YOUR-USERNAME/YOUR-REPOSITORY.git</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Also see:</p>
+<ul>
+<li><em><a href="https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port">Using SSH over the HTTPS port - GitHub Docs</a></em></li>
+</ul>
+<h2 id="GitHub-Cli"><a href="#GitHub-Cli" class="headerlink" title="GitHub Cli"></a>GitHub Cli</h2><p>TODO</p>
+<h2 id="Basic-Usages"><a href="#Basic-Usages" class="headerlink" title="Basic Usages"></a>Basic Usages</h2><h3 id="Cloning"><a href="#Cloning" class="headerlink" title="Cloning"></a>Cloning</h3><p>You can use <code>git clone</code> to clone an existing repo from GitHub. The simplest form looks like:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> &lt;url&gt; [&lt;local_directory_name&gt;]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>where center brackets mean that <code>&lt;local_directory_name&gt;</code> is optional.</p>
+<blockquote>
+<p>It's no longer recommended to use http/https url to clone. Using url like <code>git@github.com:YOUR-NAME/YOUR-REPOSITORY.git</code>!</p>
+</blockquote>
+<p>If you want to specify a branch when cloning, you can use <code>-b</code> option:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> -b &lt;branch&gt; &lt;url&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>If you don't want to include all commits, you can use the <code>--depth</code> option. This is helpful when cloning a large repo (you don't need so many commits before actually).</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> &lt;url&gt; --depth=1</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Next-Steps"><a href="#Next-Steps" class="headerlink" title="Next Steps"></a>Next Steps</h2><p>TODO</p>
+<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ul>
+<li><em><a href="https://docs.github.com/">GitHub docs</a></em></li>
+</ul>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+        <category>vcs</category>
+      </categories>
+      <tags>
+        <tag>Version Control</tag>
+        <tag>GitHub</tag>
       </tags>
   </entry>
 </search>
