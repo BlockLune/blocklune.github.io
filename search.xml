@@ -3924,34 +3924,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Two Way Binding in Vue3</title>
-    <url>/posts/8fc81ed9.html</url>
-    <content><![CDATA[<p>A simple two way binding example in vue3.</p>
-<span id="more"></span>
-
-<p><code>Child.vue</code>:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;script lang="ts" setup&gt;</span><br><span class="line">const name = defineModel&lt;string&gt;('name');</span><br><span class="line">const age = defineModel&lt;number&gt;('age');</span><br><span class="line"></span><br><span class="line">const updateAgeInChild = () =&gt; {</span><br><span class="line">  ++age.value;</span><br><span class="line">};</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;h1&gt;Child: &lt;/h1&gt;</span><br><span class="line">  &lt;p&gt;name: {{ name }}&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;age: {{ age }}&lt;/p&gt;</span><br><span class="line">  &lt;input type="text" v-model="name"/&gt;</span><br><span class="line">  &lt;button @click="updateAgeInChild()"&gt;Add age in Child&lt;/button&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p><code>Parent.vue</code>:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;script lang="ts" setup&gt;</span><br><span class="line">  import { ref } from 'vue';</span><br><span class="line">  import Child from './Child.vue';</span><br><span class="line"></span><br><span class="line">  const name = ref('BlockLune');</span><br><span class="line">  const age = ref(0);</span><br><span class="line"></span><br><span class="line">  const updateAgeInParent = () =&gt; {</span><br><span class="line">    ++age.value;</span><br><span class="line">  };</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;Child v-model:name="name" v-model:age="age" /&gt;</span><br><span class="line">  &lt;h1&gt;Parent: &lt;/h1&gt;</span><br><span class="line">  &lt;p&gt;name: {{ name }}&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;age: {{ age }}&lt;/p&gt;</span><br><span class="line">  &lt;input type="text" v-model="name"/&gt;</span><br><span class="line">  &lt;button @click="updateAgeInParent"&gt;Add in Parent&lt;/button&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p><code>App.vue</code>:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">import Parent from './Parent.vue';</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;Parent /&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Learn more at <em><a href="https://vuejs.org/guide/components/v-model.html">Component v-model | Vue.js</a>.</em> Note the <em><a href="https://vuejs.org/guide/components/v-model.html#under-the-hood">Under the Hood</a></em> part.</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>Web</tag>
-        <tag>Html</tag>
-        <tag>JS</tag>
-        <tag>Vue.js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>补记一个用 Vue.js 和 ElementUI 实现的在线抽奖网页</title>
     <url>/posts/6a8a1633.html</url>
     <content><![CDATA[<p>这件事儿发生在我的高中某个新学期开始，新来了一个电脑老师。有点打赌或者考验我的性质吧，ta 说 ta 弄了随机数点名的小网页，还能用同学的照片进行抽取，问我能不能实现一个。ta 的实现方法是 jQuery，技术上比较老，界面也不太好看。我想去尝试一下别的方法，正好也试试略微学了一点的 Vue.js，为了好看，用了 Element UI。</p>
@@ -3967,10 +3939,10 @@
       </categories>
       <tags>
         <tag>Web</tag>
-        <tag>Html</tag>
-        <tag>JS</tag>
         <tag>Vue.js</tag>
         <tag>Element UI</tag>
+        <tag>Html</tag>
+        <tag>JS</tag>
       </tags>
   </entry>
   <entry>
@@ -4014,6 +3986,34 @@
         <tag>Game</tag>
         <tag>Minecraft</tag>
         <tag>RLCraft</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Two Way Binding in Vue3</title>
+    <url>/posts/8fc81ed9.html</url>
+    <content><![CDATA[<p>A simple two way binding example in vue3.</p>
+<span id="more"></span>
+
+<p><code>Child.vue</code>:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;script lang="ts" setup&gt;</span><br><span class="line">const name = defineModel&lt;string&gt;('name');</span><br><span class="line">const age = defineModel&lt;number&gt;('age');</span><br><span class="line"></span><br><span class="line">const updateAgeInChild = () =&gt; {</span><br><span class="line">  ++age.value;</span><br><span class="line">};</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;h1&gt;Child: &lt;/h1&gt;</span><br><span class="line">  &lt;p&gt;name: {{ name }}&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;age: {{ age }}&lt;/p&gt;</span><br><span class="line">  &lt;input type="text" v-model="name"/&gt;</span><br><span class="line">  &lt;button @click="updateAgeInChild()"&gt;Add age in Child&lt;/button&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>Parent.vue</code>:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;script lang="ts" setup&gt;</span><br><span class="line">  import { ref } from 'vue';</span><br><span class="line">  import Child from './Child.vue';</span><br><span class="line"></span><br><span class="line">  const name = ref('BlockLune');</span><br><span class="line">  const age = ref(0);</span><br><span class="line"></span><br><span class="line">  const updateAgeInParent = () =&gt; {</span><br><span class="line">    ++age.value;</span><br><span class="line">  };</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;Child v-model:name="name" v-model:age="age" /&gt;</span><br><span class="line">  &lt;h1&gt;Parent: &lt;/h1&gt;</span><br><span class="line">  &lt;p&gt;name: {{ name }}&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;age: {{ age }}&lt;/p&gt;</span><br><span class="line">  &lt;input type="text" v-model="name"/&gt;</span><br><span class="line">  &lt;button @click="updateAgeInParent"&gt;Add in Parent&lt;/button&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>App.vue</code>:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">import Parent from './Parent.vue';</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;Parent /&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Learn more at <em><a href="https://vuejs.org/guide/components/v-model.html">Component v-model | Vue.js</a>.</em> Note the <em><a href="https://vuejs.org/guide/components/v-model.html#under-the-hood">Under the Hood</a></em> part.</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Web</tag>
+        <tag>Vue.js</tag>
+        <tag>Html</tag>
+        <tag>JS</tag>
       </tags>
   </entry>
   <entry>
