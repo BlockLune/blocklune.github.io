@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://software.3metas.com/wp-content/uploads/2017/06/git.png">
 <meta property="og:image" content="https://kinsta.com/wp-content/uploads/2018/04/what-is-github-1-1.png">
 <meta property="article:published_time" content="2023-03-11T09:55:55.000Z">
-<meta property="article:modified_time" content="2024-02-02T12:40:39.152Z">
+<meta property="article:modified_time" content="2024-02-02T12:41:52.557Z">
 <meta property="article:author" content="BlockLune">
 <meta property="article:tag" content="Git">
 <meta property="article:tag" content="Version Control">
@@ -309,9 +309,9 @@
 <h2 id="Basic-Configuration"><a href="#Basic-Configuration" class="headerlink" title="Basic Configuration"></a>Basic Configuration</h2><p>Before starting to use Git, you should tell Git your name and email. The commands below set your name and email globally (which means they are visible to all your local repositories).</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"&lt;your_name&gt;"</span></span><br><span class="line">git config --global user.email <span class="string">"&lt;your_email@example.com&gt;"</span></span><br></pre></td></tr></tbody></table></figure>
 
-<blockquote>
-<p>It's highly recommended that you set <code>&lt;your_name&gt;</code> to be your GitHub username and set <code>&lt;your_email@example.com&gt;</code> to be your GitHub no-reply email, which looks like <code>ID+USERNAME@users.noreply.github.com</code>. You can find the no-reply email <a target="_blank" rel="noopener" href="https://github.com/settings/emails">here</a> (under the <code>Primary email address</code> section).</p>
-</blockquote>
+<div class="note success"><p>It's highly recommended that you set <code>&lt;your_name&gt;</code> to be your GitHub username and set <code>&lt;your_email@example.com&gt;</code> to be your GitHub no-reply email, which looks like <code>ID+USERNAME@users.noreply.github.com</code>. You can find the no-reply email <a target="_blank" rel="noopener" href="https://github.com/settings/emails">here</a> (under the <code>Primary email address</code> section).</p>
+</div>
+
 <p>Learn more:</p>
 <ul>
 <li><em><a target="_blank" rel="noopener" href="https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git">Setting your username in Git - GitHub Docs</a></em></li>
@@ -354,9 +354,9 @@
 </ul>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">rm</span> --cached &lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
 
-<blockquote>
-<p><strong>Warning</strong>: <code>git reset</code> is equivalent to <code>git restore --staged :/</code>. <code>git reset &lt;file&gt;</code> is equivalent to <code>git restore --staged &lt;file&gt;</code>. But <code>git rm --cached &lt;file&gt;</code> is unique. Actually, it means remove <code>&lt;file&gt;</code> from the <code>Staging Area</code>, while the other two commands move <code>&lt;file&gt;</code> in the <code>Staging Area</code> back to the <code>Working Directory</code>.</p>
-</blockquote>
+<div class="note info"><p><code>git reset</code> is equivalent to <code>git restore --staged :/</code>. <code>git reset &lt;file&gt;</code> is equivalent to <code>git restore --staged &lt;file&gt;</code>. But <code>git rm --cached &lt;file&gt;</code> is unique. Actually, it means remove <code>&lt;file&gt;</code> from the <code>Staging Area</code>, while the other two commands move <code>&lt;file&gt;</code> in the <code>Staging Area</code> back to the <code>Working Directory</code>.</p>
+</div>
+
 <h2 id="Checking-Status"><a href="#Checking-Status" class="headerlink" title="Checking Status"></a>Checking Status</h2><p>To check the status of the files in the repo, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br><span class="line"></span><br><span class="line"><span class="comment"># A Short Version</span></span><br><span class="line">git status -s</span><br><span class="line"><span class="comment"># Or</span></span><br><span class="line">git status --short</span><br></pre></td></tr></tbody></table></figure>
 
@@ -387,13 +387,16 @@
 <p>This command is equivalent to these two command bellow:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add &lt;all_tracked_files_that_have_been_modified&gt;</span><br><span class="line">git commit</span><br></pre></td></tr></tbody></table></figure>
 
-<blockquote>
-<p>How to write a commit message? The links below maybe helpful:</p>
+<details class="note info"><summary><p>How to write better commit messages?</p>
+</summary>
+<p>The links below maybe helpful if you want to write better commit messages:</p>
 <ul>
 <li>_<a target="_blank" rel="noopener" href="https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/">How to Write Better Git Commit Messages – A Step-By-Step Guide</a></li>
 <li><em><a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git-commit">ohmyzsh/plugins/git-commit at master · ohmyzsh/ohmyzsh</a></em></li>
 </ul>
-</blockquote>
+
+</details>
+
 <h2 id="History"><a href="#History" class="headerlink" title="History"></a>History</h2><p>To review the commit history, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></tbody></table></figure>
 
@@ -415,7 +418,7 @@
 <li><p><code>--graph</code> flag adds some ascii characters to vividly show your history.</p>
 </li>
 </ul>
-<h2 id="Discarding-Changes-in-Working"><a href="#Discarding-Changes-in-Working" class="headerlink" title="Discarding Changes in Working"></a>Discarding Changes in Working</h2><div class="note danger no-icon"><p>In Git, it's usually easy to restore the files have been committed, but usually <strong>very hard</strong> to restore the files haven't been committed.</p>
+<h2 id="Discarding-Changes-in-Working"><a href="#Discarding-Changes-in-Working" class="headerlink" title="Discarding Changes in Working"></a>Discarding Changes in Working</h2><div class="note danger"><p>In Git, it's usually easy to restore the files have been committed, but usually <strong>very hard</strong> to restore the files haven't been committed.</p>
 </div>
 
 <p>To discard changes in working, run:</p>

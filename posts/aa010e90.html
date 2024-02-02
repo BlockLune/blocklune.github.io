@@ -30,7 +30,7 @@
 <meta property="og:description" content="Git&#39;s powerful branching and merging capabilities can help you deal with parallel collaborative development processes. Let&#39;s take a look.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-01-29T05:37:07.000Z">
-<meta property="article:modified_time" content="2024-02-02T12:40:39.152Z">
+<meta property="article:modified_time" content="2024-02-02T12:41:52.557Z">
 <meta property="article:author" content="BlockLune">
 <meta property="article:tag" content="Git">
 <meta property="article:tag" content="Version Control">
@@ -312,10 +312,12 @@
 <p>More commands may be helpful:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sets up a new tracking</span></span><br><span class="line">git checkout --track &lt;server_name&gt;/&lt;branch&gt;</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">git checkout -b &lt;branch&gt;</span><br><span class="line">git branch -u &lt;server_name&gt;/&lt;branch&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># stops tracking</span></span><br><span class="line">git brach --unset-upstream &lt;branch&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># deletes a remote branch</span></span><br><span class="line">git push origin --delete &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
 
-<blockquote>
+<details class="note info no-icon"><summary><p>Commands to rename a remote branch</p>
+</summary>
 <p>There is no direct command to rename a remote branch. But you can do it like this:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git pull origin &lt;old_branch_name&gt;</span><br><span class="line">git push origin --delete &lt;old_branch_name&gt;</span><br><span class="line">git branch -m &lt;old_branch_name&gt; &lt;new_branch_name&gt;</span><br><span class="line">git push -u origin &lt;new_branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
-</blockquote>
+</details>
+
 <h2 id="Merging"><a href="#Merging" class="headerlink" title="Merging"></a>Merging</h2><p>To merge the other branch to this one, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
 

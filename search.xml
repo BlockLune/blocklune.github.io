@@ -2747,6 +2747,46 @@
       </tags>
   </entry>
   <entry>
+    <title>A very interesting VimGolf</title>
+    <url>/posts/6023bfa0.html</url>
+    <content><![CDATA[<p><a href="https://www.vimgolf.com/">VimGolf.com</a> is a good place for vimers to practice and improve their vim skills. This post records my experience of solving a very interesting VimGolf game -- <a href="https://www.vimgolf.com/challenges/9v00651eb20100000000025b">Quicksort</a>.</p>
+<span id="more"></span>
+
+<h2 id="The-Game"><a href="#The-Game" class="headerlink" title="The Game"></a>The Game</h2><ul>
+<li><em><a href="https://www.vimgolf.com/challenges/9v00651eb20100000000025b">Quicksort - VimGolf</a></em></li>
+</ul>
+<h2 id="Straight-Way"><a href="#Straight-Way" class="headerlink" title="Straight Way"></a>Straight Way</h2><p>Vim has a command <code>:[range]sort</code> which sorts the lines in <code>[range]</code> (see <code>:h :sort</code>). In this case, the numbers to sort are in the first line. So the easiest way is to transform the first line into rows, sort them with <code>:sort</code>, and transform them back again. You can specify a range for <code>:sort</code> so that the <strong>"garbled text"</strong> below the divider can remain unchanged.</p>
+<p>After some tweaking, my fewest keystrokes to this game is:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">:s/ /\r/g&lt;CR&gt;vH:sor n&lt;CR&gt;gvJZZ</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li><code>:s/ /\r/g&lt;CR&gt;</code>: Transforms the first line into rows (by substituting white space to <code>\r</code>).</li>
+<li><code>vH</code>: Selects the rows to sort.</li>
+<li><code>:sor n&lt;CR&gt;</code>: Runs the <code>:sort</code> command, where <code>:sor</code> is the short version of <code>:sort</code>, and option <code>n</code> caused numbers to be sorted by their value (e.g. 1, 2, 10, 20) instead of their dictionary order (e.g. 1, 10, 2, 20).</li>
+<li><code>gvJ</code>: Selects the last selected text and joins them together (transform them back to one row).</li>
+<li><code>ZZ</code>: Saves and quits.</li>
+</ul>
+<h2 id="Shortcut"><a href="#Shortcut" class="headerlink" title="Shortcut"></a>Shortcut</h2><p>If you're thinking similarly and are also using <code>:sort</code>, then the above sequence of keystrokes is basically the optimal solution. However, check the leader board for this game and you'll see that there are many single-digit keystroke solutions. How that possible?</p>
+<p>This is the most interesting part! If you refer to the wisdom of those who came before you, you'll see that the <strong>"garbled text"</strong> actually makes sense! The last line actually hides a macro whose job is -- to sort the first line!</p>
+<p>So the optimal solution in single-digit keystroke is:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">GY@0ZZ</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li><code>GY</code>: Jumps to the last line and copies it.</li>
+<li><code>@0</code>: Runs the last line (treats it as a macro).</li>
+<li><code>ZZ</code>: Saves and quits.</li>
+</ul>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Vim</tag>
+        <tag>VimGolf</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>VS Code 的安装与配置基础 C/C++ 开发环境</title>
     <url>/posts/a7a0ce82.html</url>
     <content><![CDATA[<p>我以前学习 C++ 的时候，使用的是 DevCpp 。这个软件让我这个初学者比较舒服的点是，我不用太过详细地考虑编译的过程 —— 新建一个 cpp 文件，写一点小程序，按下 F11，程序运行。我不需要管选择编译器啊、配置编译命令啊啥啥的。但是到 VS Code 这边，这都要我自己做了，对于新手并不是那么友好。这里记录一下我配置 VS Code 的 C/C++ 环境的完整过程，希望对你有所帮助。需要注意的是：学习一下基本的编译链接指令还是很有必要的！</p>
@@ -2828,46 +2868,6 @@
       <tags>
         <tag>C/C++</tag>
         <tag>VS Code</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>A very interesting VimGolf</title>
-    <url>/posts/6023bfa0.html</url>
-    <content><![CDATA[<p><a href="https://www.vimgolf.com/">VimGolf.com</a> is a good place for vimers to practice and improve their vim skills. This post records my experience of solving a very interesting VimGolf game -- <a href="https://www.vimgolf.com/challenges/9v00651eb20100000000025b">Quicksort</a>.</p>
-<span id="more"></span>
-
-<h2 id="The-Game"><a href="#The-Game" class="headerlink" title="The Game"></a>The Game</h2><ul>
-<li><em><a href="https://www.vimgolf.com/challenges/9v00651eb20100000000025b">Quicksort - VimGolf</a></em></li>
-</ul>
-<h2 id="Straight-Way"><a href="#Straight-Way" class="headerlink" title="Straight Way"></a>Straight Way</h2><p>Vim has a command <code>:[range]sort</code> which sorts the lines in <code>[range]</code> (see <code>:h :sort</code>). In this case, the numbers to sort are in the first line. So the easiest way is to transform the first line into rows, sort them with <code>:sort</code>, and transform them back again. You can specify a range for <code>:sort</code> so that the <strong>"garbled text"</strong> below the divider can remain unchanged.</p>
-<p>After some tweaking, my fewest keystrokes to this game is:</p>
-<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">:s/ /\r/g&lt;CR&gt;vH:sor n&lt;CR&gt;gvJZZ</span><br></pre></td></tr></tbody></table></figure>
-
-<ul>
-<li><code>:s/ /\r/g&lt;CR&gt;</code>: Transforms the first line into rows (by substituting white space to <code>\r</code>).</li>
-<li><code>vH</code>: Selects the rows to sort.</li>
-<li><code>:sor n&lt;CR&gt;</code>: Runs the <code>:sort</code> command, where <code>:sor</code> is the short version of <code>:sort</code>, and option <code>n</code> caused numbers to be sorted by their value (e.g. 1, 2, 10, 20) instead of their dictionary order (e.g. 1, 10, 2, 20).</li>
-<li><code>gvJ</code>: Selects the last selected text and joins them together (transform them back to one row).</li>
-<li><code>ZZ</code>: Saves and quits.</li>
-</ul>
-<h2 id="Shortcut"><a href="#Shortcut" class="headerlink" title="Shortcut"></a>Shortcut</h2><p>If you're thinking similarly and are also using <code>:sort</code>, then the above sequence of keystrokes is basically the optimal solution. However, check the leader board for this game and you'll see that there are many single-digit keystroke solutions. How that possible?</p>
-<p>This is the most interesting part! If you refer to the wisdom of those who came before you, you'll see that the <strong>"garbled text"</strong> actually makes sense! The last line actually hides a macro whose job is -- to sort the first line!</p>
-<p>So the optimal solution in single-digit keystroke is:</p>
-<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">GY@0ZZ</span><br></pre></td></tr></tbody></table></figure>
-
-<ul>
-<li><code>GY</code>: Jumps to the last line and copies it.</li>
-<li><code>@0</code>: Runs the last line (treats it as a macro).</li>
-<li><code>ZZ</code>: Saves and quits.</li>
-</ul>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Vim</tag>
-        <tag>VimGolf</tag>
       </tags>
   </entry>
   <entry>
@@ -3924,6 +3924,34 @@
       </tags>
   </entry>
   <entry>
+    <title>Two Way Binding in Vue3</title>
+    <url>/posts/8fc81ed9.html</url>
+    <content><![CDATA[<p>A simple two way binding example in vue3.</p>
+<span id="more"></span>
+
+<p><code>Child.vue</code>:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;script lang="ts" setup&gt;</span><br><span class="line">const name = defineModel&lt;string&gt;('name');</span><br><span class="line">const age = defineModel&lt;number&gt;('age');</span><br><span class="line"></span><br><span class="line">const updateAgeInChild = () =&gt; {</span><br><span class="line">  ++age.value;</span><br><span class="line">};</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;h1&gt;Child: &lt;/h1&gt;</span><br><span class="line">  &lt;p&gt;name: {{ name }}&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;age: {{ age }}&lt;/p&gt;</span><br><span class="line">  &lt;input type="text" v-model="name"/&gt;</span><br><span class="line">  &lt;button @click="updateAgeInChild()"&gt;Add age in Child&lt;/button&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>Parent.vue</code>:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;script lang="ts" setup&gt;</span><br><span class="line">  import { ref } from 'vue';</span><br><span class="line">  import Child from './Child.vue';</span><br><span class="line"></span><br><span class="line">  const name = ref('BlockLune');</span><br><span class="line">  const age = ref(0);</span><br><span class="line"></span><br><span class="line">  const updateAgeInParent = () =&gt; {</span><br><span class="line">    ++age.value;</span><br><span class="line">  };</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;Child v-model:name="name" v-model:age="age" /&gt;</span><br><span class="line">  &lt;h1&gt;Parent: &lt;/h1&gt;</span><br><span class="line">  &lt;p&gt;name: {{ name }}&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;age: {{ age }}&lt;/p&gt;</span><br><span class="line">  &lt;input type="text" v-model="name"/&gt;</span><br><span class="line">  &lt;button @click="updateAgeInParent"&gt;Add in Parent&lt;/button&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>App.vue</code>:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">import Parent from './Parent.vue';</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;Parent /&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Learn more at <em><a href="https://vuejs.org/guide/components/v-model.html">Component v-model | Vue.js</a>.</em> Note the <em><a href="https://vuejs.org/guide/components/v-model.html#under-the-hood">Under the Hood</a></em> part.</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Web</tag>
+        <tag>Html</tag>
+        <tag>JS</tag>
+        <tag>Vue.js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>补记一个用 Vue.js 和 ElementUI 实现的在线抽奖网页</title>
     <url>/posts/6a8a1633.html</url>
     <content><![CDATA[<p>这件事儿发生在我的高中某个新学期开始，新来了一个电脑老师。有点打赌或者考验我的性质吧，ta 说 ta 弄了随机数点名的小网页，还能用同学的照片进行抽取，问我能不能实现一个。ta 的实现方法是 jQuery，技术上比较老，界面也不太好看。我想去尝试一下别的方法，正好也试试略微学了一点的 Vue.js，为了好看，用了 Element UI。</p>
@@ -3939,10 +3967,10 @@
       </categories>
       <tags>
         <tag>Web</tag>
-        <tag>Vue.js</tag>
-        <tag>Element UI</tag>
         <tag>Html</tag>
         <tag>JS</tag>
+        <tag>Vue.js</tag>
+        <tag>Element UI</tag>
       </tags>
   </entry>
   <entry>
@@ -3986,34 +4014,6 @@
         <tag>Game</tag>
         <tag>Minecraft</tag>
         <tag>RLCraft</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Two Way Binding in Vue3</title>
-    <url>/posts/8fc81ed9.html</url>
-    <content><![CDATA[<p>A simple two way binding example in vue3.</p>
-<span id="more"></span>
-
-<p><code>Child.vue</code>:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;script lang="ts" setup&gt;</span><br><span class="line">const name = defineModel&lt;string&gt;('name');</span><br><span class="line">const age = defineModel&lt;number&gt;('age');</span><br><span class="line"></span><br><span class="line">const updateAgeInChild = () =&gt; {</span><br><span class="line">  ++age.value;</span><br><span class="line">};</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;h1&gt;Child: &lt;/h1&gt;</span><br><span class="line">  &lt;p&gt;name: {{ name }}&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;age: {{ age }}&lt;/p&gt;</span><br><span class="line">  &lt;input type="text" v-model="name"/&gt;</span><br><span class="line">  &lt;button @click="updateAgeInChild()"&gt;Add age in Child&lt;/button&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p><code>Parent.vue</code>:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;script lang="ts" setup&gt;</span><br><span class="line">  import { ref } from 'vue';</span><br><span class="line">  import Child from './Child.vue';</span><br><span class="line"></span><br><span class="line">  const name = ref('BlockLune');</span><br><span class="line">  const age = ref(0);</span><br><span class="line"></span><br><span class="line">  const updateAgeInParent = () =&gt; {</span><br><span class="line">    ++age.value;</span><br><span class="line">  };</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;Child v-model:name="name" v-model:age="age" /&gt;</span><br><span class="line">  &lt;h1&gt;Parent: &lt;/h1&gt;</span><br><span class="line">  &lt;p&gt;name: {{ name }}&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;age: {{ age }}&lt;/p&gt;</span><br><span class="line">  &lt;input type="text" v-model="name"/&gt;</span><br><span class="line">  &lt;button @click="updateAgeInParent"&gt;Add in Parent&lt;/button&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p><code>App.vue</code>:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">import Parent from './Parent.vue';</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;Parent /&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Learn more at <em><a href="https://vuejs.org/guide/components/v-model.html">Component v-model | Vue.js</a>.</em> Note the <em><a href="https://vuejs.org/guide/components/v-model.html#under-the-hood">Under the Hood</a></em> part.</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>Web</tag>
-        <tag>Vue.js</tag>
-        <tag>Html</tag>
-        <tag>JS</tag>
       </tags>
   </entry>
   <entry>
@@ -5438,37 +5438,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C 语言中使用变量输出小数点位数</title>
-    <url>/posts/45e2d42.html</url>
-    <content><![CDATA[<p>这事儿要从一周前讲起，有人在群里问了这么一道题，要求用 C 实现：</p>
-<span id="more"></span>
-
-<blockquote>
-<p>习题 2-5 分数化小数（decimal）<br>输入正整数 a,b,c，输出 a/b 的小数形式，精确到小数点后 c 位。a,b&lt;=10^6，c&lt;=100。输入包含多组数据，结束标记为 a=b=c=0。<br>样例输入：<br>1 6 4<br>0 0 0<br>样例输出：<br>0.1667</p>
-</blockquote>
-<p>当时我做了个简化的版本 —— 最多处理 1000 组输入，并且 c 比较小（即不需要高精度）的情况的代码，主要是做一个字符串处理，来构造一个传给 <code>printf()</code> 的格式控制字符串，代码如下：</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span> <span class="comment">// 需要用到它的 itoa() 函数</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span> <span class="comment">// 用到strcat拼接字符数组，memset清空字符数组</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    <span class="comment">// 仅实现了最多有 1000 个输入的情况</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> a[<span class="number">1000</span>], b[<span class="number">1000</span>], c[<span class="number">1000</span>], cnt = <span class="number">0</span>;</span><br><span class="line">    <span class="type">double</span> ans[<span class="number">1000</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">if</span> (cnt == <span class="number">1000</span>)</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%u%u%u"</span>, &amp;a[i], &amp;b[i], &amp;c[i]);</span><br><span class="line">        cnt++;</span><br><span class="line">        <span class="keyword">if</span> (!(a[i] == <span class="number">0</span> &amp;&amp; b[i] == <span class="number">0</span> &amp;&amp; c[i] == <span class="number">0</span>))</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">if</span> (b[i] != <span class="number">0</span>)</span><br><span class="line">            {</span><br><span class="line">                ans[i] = a[i] * <span class="number">1.0</span> / b[i];</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; cnt - <span class="number">1</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="type">char</span> formatMsgP1[] = <span class="string">"%."</span>;</span><br><span class="line">        <span class="type">char</span> *formatMsgP2;</span><br><span class="line">        <span class="comment">// 根据位数动态确定 char 数组的大小</span></span><br><span class="line">        <span class="keyword">if</span> (c[i] &gt; <span class="number">99</span>)</span><br><span class="line">        {</span><br><span class="line">            formatMsgP2 = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">char</span>) * <span class="number">3</span>);</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (c[i] &gt; <span class="number">9</span>)</span><br><span class="line">        {</span><br><span class="line">            formatMsgP2 = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">char</span>) * <span class="number">2</span>);</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            formatMsgP2 = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">char</span>));</span><br><span class="line">        }</span><br><span class="line">        itoa(c[i], formatMsgP2, <span class="number">10</span>);</span><br><span class="line">        <span class="type">char</span> formatMsgP3[] = <span class="string">"lf\n"</span>;</span><br><span class="line">        <span class="type">char</span> formatMsg[<span class="number">20</span>];</span><br><span class="line">        <span class="built_in">strcat</span>(formatMsg, formatMsgP1);</span><br><span class="line">        <span class="built_in">strcat</span>(formatMsg, formatMsgP2);</span><br><span class="line">        <span class="built_in">strcat</span>(formatMsg, formatMsgP3);</span><br><span class="line">        <span class="built_in">printf</span>(formatMsg, ans[i]);</span><br><span class="line">        <span class="built_in">memset</span>(formatMsg, <span class="number">0</span>, <span class="keyword">sizeof</span>(formatMsg)); <span class="comment">// 清空数组</span></span><br><span class="line">        <span class="built_in">free</span>(formatMsgP2);                       <span class="comment">// 释放指针</span></span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这样的代码就比较麻烦，大量的代码都用在字符串拼接了。但今天看到一篇文章（<a href="https://mxte.cc/90.html">《使用变量设定小数点位数》</a>），才知道原来根本不需要那么麻烦。</p>
-<p>本来我的目标是构造这么一个格式控制字符串 <code>%.&lt;c&gt;lf</code>，其中 <code>&lt;c&gt;</code> 需要由用户输入。上边的思路就是输入数字之后用 <code>itoa()</code> 函数把输入的数字转成字符串，然后拼一拼。</p>
-<p>但实际上可以这样：</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"%.*lf"</span>, c[i], ans[i]);</span><br></pre></td></tr></tbody></table></figure>
-
-<p>使用 <code>*</code>，<code>printf()</code> 就知道了，需要去后边找这么一个参数。</p>
-<p>所以上边 <code>return 0;</code> 前面那个 <code>for</code> 里那么多东西都只要换成这一句就行了。</p>
-<p>下边贴出一个用动态数组实现的任意组数数据输入的代码（依然没有高精度，我不会啊）：</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">NUMS</span></span></span><br><span class="line"><span class="class">{</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> c;</span><br><span class="line">    <span class="type">double</span> ans;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">NUMS</span> *<span class="title">p</span> =</span> <span class="number">0</span>;</span><br><span class="line"><span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> size = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">append</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span>, <span class="type">double</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    <span class="type">int</span> a = <span class="number">0</span>, b = <span class="number">0</span>, c = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%u%u%u"</span>, &amp;a, &amp;b, &amp;c);</span><br><span class="line">        <span class="keyword">if</span> (a == <span class="number">0</span> &amp;&amp; b == <span class="number">0</span> &amp;&amp; c == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            <span class="type">double</span> tmp_ans = a * <span class="number">1.0</span> / b;</span><br><span class="line">            append(c, tmp_ans);</span><br><span class="line">        }</span><br><span class="line">    } <span class="keyword">while</span> (<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%.*lf\n"</span>, (p + i)-&gt;c, (p + i)-&gt;ans);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">append</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> _c, <span class="type">double</span> _ans)</span></span><br><span class="line">{</span><br><span class="line">    <span class="keyword">if</span> (p == <span class="number">0</span>)</span><br><span class="line">    {</span><br><span class="line">        p = <span class="built_in">calloc</span>(<span class="number">1</span>, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        p-&gt;c = _c;</span><br><span class="line">        p-&gt;ans = _ans;</span><br><span class="line">        size++;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">struct</span> NUMS *tmp = <span class="built_in">calloc</span>(size, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        <span class="built_in">memcpy</span>(tmp, p, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS) * size);</span><br><span class="line">        <span class="built_in">free</span>(p);</span><br><span class="line">        p = <span class="built_in">calloc</span>(size + <span class="number">1</span>, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        <span class="built_in">memcpy</span>(p, tmp, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS) * (size + <span class="number">1</span>));</span><br><span class="line">        (p + size)-&gt;c = _c;</span><br><span class="line">        (p + size)-&gt;ans = _ans;</span><br><span class="line">        size++;</span><br><span class="line">        <span class="built_in">free</span>(tmp);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C 语言文件操作</title>
     <url>/posts/914118ff.html</url>
     <content><![CDATA[<p>简单记录一下 C 语言的文件操作的相关内容。</p>
@@ -5615,6 +5584,37 @@
       </tags>
   </entry>
   <entry>
+    <title>C 语言中使用变量输出小数点位数</title>
+    <url>/posts/45e2d42.html</url>
+    <content><![CDATA[<p>这事儿要从一周前讲起，有人在群里问了这么一道题，要求用 C 实现：</p>
+<span id="more"></span>
+
+<blockquote>
+<p>习题 2-5 分数化小数（decimal）<br>输入正整数 a,b,c，输出 a/b 的小数形式，精确到小数点后 c 位。a,b&lt;=10^6，c&lt;=100。输入包含多组数据，结束标记为 a=b=c=0。<br>样例输入：<br>1 6 4<br>0 0 0<br>样例输出：<br>0.1667</p>
+</blockquote>
+<p>当时我做了个简化的版本 —— 最多处理 1000 组输入，并且 c 比较小（即不需要高精度）的情况的代码，主要是做一个字符串处理，来构造一个传给 <code>printf()</code> 的格式控制字符串，代码如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span> <span class="comment">// 需要用到它的 itoa() 函数</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span> <span class="comment">// 用到strcat拼接字符数组，memset清空字符数组</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    <span class="comment">// 仅实现了最多有 1000 个输入的情况</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> a[<span class="number">1000</span>], b[<span class="number">1000</span>], c[<span class="number">1000</span>], cnt = <span class="number">0</span>;</span><br><span class="line">    <span class="type">double</span> ans[<span class="number">1000</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">if</span> (cnt == <span class="number">1000</span>)</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%u%u%u"</span>, &amp;a[i], &amp;b[i], &amp;c[i]);</span><br><span class="line">        cnt++;</span><br><span class="line">        <span class="keyword">if</span> (!(a[i] == <span class="number">0</span> &amp;&amp; b[i] == <span class="number">0</span> &amp;&amp; c[i] == <span class="number">0</span>))</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">if</span> (b[i] != <span class="number">0</span>)</span><br><span class="line">            {</span><br><span class="line">                ans[i] = a[i] * <span class="number">1.0</span> / b[i];</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; cnt - <span class="number">1</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="type">char</span> formatMsgP1[] = <span class="string">"%."</span>;</span><br><span class="line">        <span class="type">char</span> *formatMsgP2;</span><br><span class="line">        <span class="comment">// 根据位数动态确定 char 数组的大小</span></span><br><span class="line">        <span class="keyword">if</span> (c[i] &gt; <span class="number">99</span>)</span><br><span class="line">        {</span><br><span class="line">            formatMsgP2 = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">char</span>) * <span class="number">3</span>);</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (c[i] &gt; <span class="number">9</span>)</span><br><span class="line">        {</span><br><span class="line">            formatMsgP2 = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">char</span>) * <span class="number">2</span>);</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            formatMsgP2 = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">char</span>));</span><br><span class="line">        }</span><br><span class="line">        itoa(c[i], formatMsgP2, <span class="number">10</span>);</span><br><span class="line">        <span class="type">char</span> formatMsgP3[] = <span class="string">"lf\n"</span>;</span><br><span class="line">        <span class="type">char</span> formatMsg[<span class="number">20</span>];</span><br><span class="line">        <span class="built_in">strcat</span>(formatMsg, formatMsgP1);</span><br><span class="line">        <span class="built_in">strcat</span>(formatMsg, formatMsgP2);</span><br><span class="line">        <span class="built_in">strcat</span>(formatMsg, formatMsgP3);</span><br><span class="line">        <span class="built_in">printf</span>(formatMsg, ans[i]);</span><br><span class="line">        <span class="built_in">memset</span>(formatMsg, <span class="number">0</span>, <span class="keyword">sizeof</span>(formatMsg)); <span class="comment">// 清空数组</span></span><br><span class="line">        <span class="built_in">free</span>(formatMsgP2);                       <span class="comment">// 释放指针</span></span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这样的代码就比较麻烦，大量的代码都用在字符串拼接了。但今天看到一篇文章（<a href="https://mxte.cc/90.html">《使用变量设定小数点位数》</a>），才知道原来根本不需要那么麻烦。</p>
+<p>本来我的目标是构造这么一个格式控制字符串 <code>%.&lt;c&gt;lf</code>，其中 <code>&lt;c&gt;</code> 需要由用户输入。上边的思路就是输入数字之后用 <code>itoa()</code> 函数把输入的数字转成字符串，然后拼一拼。</p>
+<p>但实际上可以这样：</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"%.*lf"</span>, c[i], ans[i]);</span><br></pre></td></tr></tbody></table></figure>
+
+<p>使用 <code>*</code>，<code>printf()</code> 就知道了，需要去后边找这么一个参数。</p>
+<p>所以上边 <code>return 0;</code> 前面那个 <code>for</code> 里那么多东西都只要换成这一句就行了。</p>
+<p>下边贴出一个用动态数组实现的任意组数数据输入的代码（依然没有高精度，我不会啊）：</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">NUMS</span></span></span><br><span class="line"><span class="class">{</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> c;</span><br><span class="line">    <span class="type">double</span> ans;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">NUMS</span> *<span class="title">p</span> =</span> <span class="number">0</span>;</span><br><span class="line"><span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> size = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">append</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span>, <span class="type">double</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    <span class="type">int</span> a = <span class="number">0</span>, b = <span class="number">0</span>, c = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%u%u%u"</span>, &amp;a, &amp;b, &amp;c);</span><br><span class="line">        <span class="keyword">if</span> (a == <span class="number">0</span> &amp;&amp; b == <span class="number">0</span> &amp;&amp; c == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            <span class="type">double</span> tmp_ans = a * <span class="number">1.0</span> / b;</span><br><span class="line">            append(c, tmp_ans);</span><br><span class="line">        }</span><br><span class="line">    } <span class="keyword">while</span> (<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%.*lf\n"</span>, (p + i)-&gt;c, (p + i)-&gt;ans);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">append</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> _c, <span class="type">double</span> _ans)</span></span><br><span class="line">{</span><br><span class="line">    <span class="keyword">if</span> (p == <span class="number">0</span>)</span><br><span class="line">    {</span><br><span class="line">        p = <span class="built_in">calloc</span>(<span class="number">1</span>, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        p-&gt;c = _c;</span><br><span class="line">        p-&gt;ans = _ans;</span><br><span class="line">        size++;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">struct</span> NUMS *tmp = <span class="built_in">calloc</span>(size, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        <span class="built_in">memcpy</span>(tmp, p, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS) * size);</span><br><span class="line">        <span class="built_in">free</span>(p);</span><br><span class="line">        p = <span class="built_in">calloc</span>(size + <span class="number">1</span>, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        <span class="built_in">memcpy</span>(p, tmp, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS) * (size + <span class="number">1</span>));</span><br><span class="line">        (p + size)-&gt;c = _c;</span><br><span class="line">        (p + size)-&gt;ans = _ans;</span><br><span class="line">        size++;</span><br><span class="line">        <span class="built_in">free</span>(tmp);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>The const and constexpr in C++ (REMAKE)</title>
     <url>/posts/3358bcc1.html</url>
     <content><![CDATA[<p>I have written a post about <code>const</code> in C++ in Chinese before, but <a href="https://blocklune.github.io/posts/7ec6ba38.html">it</a> was too verbose and unclear. :( So, I decided to rewrite it.</p>
@@ -5658,24 +5658,6 @@
       <tags>
         <tag>C/C++</tag>
         <tag>const</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Uses std::cin.ignore() to keep the user typing until the input meets the requirements</title>
-    <url>/posts/f96b3358.html</url>
-    <content><![CDATA[<p>I used to control users' input by making the input a string and process it later. But today, my friend posed this question to me: Can we control input without a char array or string class?</p>
-<span id="more"></span>
-
-<p>On <em><a href="https://en.cppreference.com/w/cpp/io/basic_istream/ignore">cppreference.com</a></em>, I found <code>std::cin.ignore()</code>. This function can help us solve the previous question. Here is an example:</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;limits&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> n = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span> (<span class="literal">true</span>) {</span><br><span class="line">    std::cout &lt;&lt; <span class="string">"Please input a number: "</span>;</span><br><span class="line">    std::cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">if</span> (!std::cin.<span class="built_in">good</span>()) {</span><br><span class="line">      std::cerr &lt;&lt; <span class="string">"Error input."</span> &lt;&lt; std::endl;</span><br><span class="line">      std::cin.<span class="built_in">clear</span>();</span><br><span class="line">      std::cin.<span class="built_in">ignore</span>(std::numeric_limits&lt;std::streamsize&gt;::<span class="built_in">max</span>(), <span class="string">'\n'</span>);</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    } <span class="keyword">else</span> {</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  std::cout &lt;&lt; <span class="string">"Your input is: "</span> &lt;&lt; n &lt;&lt; std::endl;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
       </tags>
   </entry>
   <entry>
@@ -5793,6 +5775,24 @@
         <tag>const</tag>
         <tag>C &amp; C++</tag>
         <tag>CS106L</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Uses std::cin.ignore() to keep the user typing until the input meets the requirements</title>
+    <url>/posts/f96b3358.html</url>
+    <content><![CDATA[<p>I used to control users' input by making the input a string and process it later. But today, my friend posed this question to me: Can we control input without a char array or string class?</p>
+<span id="more"></span>
+
+<p>On <em><a href="https://en.cppreference.com/w/cpp/io/basic_istream/ignore">cppreference.com</a></em>, I found <code>std::cin.ignore()</code>. This function can help us solve the previous question. Here is an example:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;limits&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> n = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span> (<span class="literal">true</span>) {</span><br><span class="line">    std::cout &lt;&lt; <span class="string">"Please input a number: "</span>;</span><br><span class="line">    std::cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">if</span> (!std::cin.<span class="built_in">good</span>()) {</span><br><span class="line">      std::cerr &lt;&lt; <span class="string">"Error input."</span> &lt;&lt; std::endl;</span><br><span class="line">      std::cin.<span class="built_in">clear</span>();</span><br><span class="line">      std::cin.<span class="built_in">ignore</span>(std::numeric_limits&lt;std::streamsize&gt;::<span class="built_in">max</span>(), <span class="string">'\n'</span>);</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    } <span class="keyword">else</span> {</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  std::cout &lt;&lt; <span class="string">"Your input is: "</span> &lt;&lt; n &lt;&lt; std::endl;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
       </tags>
   </entry>
   <entry>
@@ -6822,55 +6822,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Permutations and Combinations in Python (itertools)</title>
-    <url>/posts/cf2f01b2.html</url>
-    <content><![CDATA[<p>Extracted from <em><a href="https://docs.python.org/3/library/itertools.html">itertools — Functions creating iterators for efficient looping — Python 3.11.3 documentation</a></em></p>
-<span id="more"></span>
-
-<h2 id="PERMUTATIONS"><a href="#PERMUTATIONS" class="headerlink" title="PERMUTATIONS"></a>PERMUTATIONS</h2><p><code>itertools.permutations(iterable, r=None)</code> returns successive <code>r</code> length permutations of elements in the iterable.</p>
-<p>If <code>r</code> is not specified or is <code>None</code>, then <code>r</code> defaults to the length of the iterable and all possible full-length permutations are generated.</p>
-<p><strong>Ex.1.</strong></p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> permutations</span><br><span class="line"></span><br><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> p <span class="keyword">in</span> permutations(a):</span><br><span class="line">  <span class="built_in">print</span>(p)</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-
-<p>Output:</p>
-<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">(1, 2, 3)</span><br><span class="line">(1, 3, 2)</span><br><span class="line">(2, 1, 3)</span><br><span class="line">(2, 3, 1)</span><br><span class="line">(3, 1, 2)</span><br><span class="line">(3, 2, 1)</span><br></pre></td></tr></tbody></table></figure>
-
-<p><strong>Ex.2.</strong></p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> permutations</span><br><span class="line"></span><br><span class="line">a = [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> p <span class="keyword">in</span> permutations(a, <span class="number">2</span>):</span><br><span class="line">  <span class="built_in">print</span>(p)</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Output:</p>
-<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">('A', 'B')</span><br><span class="line">('A', 'C')</span><br><span class="line">('A', 'D')</span><br><span class="line">('B', 'A')</span><br><span class="line">('B', 'C')</span><br><span class="line">('B', 'D')</span><br><span class="line">('C', 'A')</span><br><span class="line">('C', 'B')</span><br><span class="line">('C', 'D')</span><br><span class="line">('D', 'A')</span><br><span class="line">('D', 'B')</span><br><span class="line">('D', 'C')</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Learn more <a href="https://docs.python.org/3/library/itertools.html#itertools.permutations">here</a></p>
-<h2 id="COMBINATIONS"><a href="#COMBINATIONS" class="headerlink" title="COMBINATIONS"></a>COMBINATIONS</h2><p>Notice: <code>r</code> is NOT optional. (Not like <code>permutations</code>)</p>
-<h3 id="WITH-NO-REPLACEMENTS"><a href="#WITH-NO-REPLACEMENTS" class="headerlink" title="WITH NO REPLACEMENTS"></a>WITH NO REPLACEMENTS</h3><p><code>itertools.combinations(iterable, r)</code> returns <code>r</code> length subsequences of elements from the input iterable.</p>
-<p><strong>Ex.</strong></p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> combinations</span><br><span class="line"></span><br><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> c <span class="keyword">in</span> combinations(a, <span class="number">2</span>):</span><br><span class="line">  <span class="built_in">print</span>(c)</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Output:</p>
-<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">(1, 2)</span><br><span class="line">(1, 3)</span><br><span class="line">(2, 3)</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Learn more <a href="https://docs.python.org/3/library/itertools.html#itertools.combinations">here</a></p>
-<h3 id="WITH-REPLACEMENTS"><a href="#WITH-REPLACEMENTS" class="headerlink" title="WITH REPLACEMENTS"></a>WITH REPLACEMENTS</h3><p><code>itertools.combinations_with_replacement(iterable, r)</code> returns <code>r</code> length subsequences of elements from the input iterable <strong>allowing individual elements to be repeated more than once</strong>.</p>
-<p><strong>Ex.</strong></p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> combinations_with_replacement</span><br><span class="line"></span><br><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> c_with_replacement <span class="keyword">in</span> combinations_with_replacement(a, <span class="number">2</span>):</span><br><span class="line">  <span class="built_in">print</span>(c_with_replacement)</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Output:</p>
-<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">(1, 1)</span><br><span class="line">(1, 2)</span><br><span class="line">(1, 3)</span><br><span class="line">(2, 2)</span><br><span class="line">(2, 3)</span><br><span class="line">(3, 3)</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Learn more <a href="https://docs.python.org/3/library/itertools.html#itertools.combinations_with_replacement">here</a></p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>itertools</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python libraries mentioned in CS50P</title>
     <url>/posts/22098b25.html</url>
     <content><![CDATA[<p>This is a list of some Python libraries mentioned in CS50P 2022.</p>
@@ -6936,6 +6887,55 @@
       </tags>
   </entry>
   <entry>
+    <title>Permutations and Combinations in Python (itertools)</title>
+    <url>/posts/cf2f01b2.html</url>
+    <content><![CDATA[<p>Extracted from <em><a href="https://docs.python.org/3/library/itertools.html">itertools — Functions creating iterators for efficient looping — Python 3.11.3 documentation</a></em></p>
+<span id="more"></span>
+
+<h2 id="PERMUTATIONS"><a href="#PERMUTATIONS" class="headerlink" title="PERMUTATIONS"></a>PERMUTATIONS</h2><p><code>itertools.permutations(iterable, r=None)</code> returns successive <code>r</code> length permutations of elements in the iterable.</p>
+<p>If <code>r</code> is not specified or is <code>None</code>, then <code>r</code> defaults to the length of the iterable and all possible full-length permutations are generated.</p>
+<p><strong>Ex.1.</strong></p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> permutations</span><br><span class="line"></span><br><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> p <span class="keyword">in</span> permutations(a):</span><br><span class="line">  <span class="built_in">print</span>(p)</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<p>Output:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">(1, 2, 3)</span><br><span class="line">(1, 3, 2)</span><br><span class="line">(2, 1, 3)</span><br><span class="line">(2, 3, 1)</span><br><span class="line">(3, 1, 2)</span><br><span class="line">(3, 2, 1)</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>Ex.2.</strong></p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> permutations</span><br><span class="line"></span><br><span class="line">a = [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> p <span class="keyword">in</span> permutations(a, <span class="number">2</span>):</span><br><span class="line">  <span class="built_in">print</span>(p)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Output:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">('A', 'B')</span><br><span class="line">('A', 'C')</span><br><span class="line">('A', 'D')</span><br><span class="line">('B', 'A')</span><br><span class="line">('B', 'C')</span><br><span class="line">('B', 'D')</span><br><span class="line">('C', 'A')</span><br><span class="line">('C', 'B')</span><br><span class="line">('C', 'D')</span><br><span class="line">('D', 'A')</span><br><span class="line">('D', 'B')</span><br><span class="line">('D', 'C')</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Learn more <a href="https://docs.python.org/3/library/itertools.html#itertools.permutations">here</a></p>
+<h2 id="COMBINATIONS"><a href="#COMBINATIONS" class="headerlink" title="COMBINATIONS"></a>COMBINATIONS</h2><p>Notice: <code>r</code> is NOT optional. (Not like <code>permutations</code>)</p>
+<h3 id="WITH-NO-REPLACEMENTS"><a href="#WITH-NO-REPLACEMENTS" class="headerlink" title="WITH NO REPLACEMENTS"></a>WITH NO REPLACEMENTS</h3><p><code>itertools.combinations(iterable, r)</code> returns <code>r</code> length subsequences of elements from the input iterable.</p>
+<p><strong>Ex.</strong></p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> combinations</span><br><span class="line"></span><br><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> c <span class="keyword">in</span> combinations(a, <span class="number">2</span>):</span><br><span class="line">  <span class="built_in">print</span>(c)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Output:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">(1, 2)</span><br><span class="line">(1, 3)</span><br><span class="line">(2, 3)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Learn more <a href="https://docs.python.org/3/library/itertools.html#itertools.combinations">here</a></p>
+<h3 id="WITH-REPLACEMENTS"><a href="#WITH-REPLACEMENTS" class="headerlink" title="WITH REPLACEMENTS"></a>WITH REPLACEMENTS</h3><p><code>itertools.combinations_with_replacement(iterable, r)</code> returns <code>r</code> length subsequences of elements from the input iterable <strong>allowing individual elements to be repeated more than once</strong>.</p>
+<p><strong>Ex.</strong></p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> combinations_with_replacement</span><br><span class="line"></span><br><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> c_with_replacement <span class="keyword">in</span> combinations_with_replacement(a, <span class="number">2</span>):</span><br><span class="line">  <span class="built_in">print</span>(c_with_replacement)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Output:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">(1, 1)</span><br><span class="line">(1, 2)</span><br><span class="line">(1, 3)</span><br><span class="line">(2, 2)</span><br><span class="line">(2, 3)</span><br><span class="line">(3, 3)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Learn more <a href="https://docs.python.org/3/library/itertools.html#itertools.combinations_with_replacement">here</a></p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>itertools</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git Commit Message Cheat Sheet (CN)</title>
     <url>/posts/8a5a50bb.html</url>
     <content><![CDATA[<p>A Git commit message cheat sheet in Chinese.</p>
@@ -6996,10 +6996,12 @@
 <p>More commands may be helpful:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># sets up a new tracking</span></span><br><span class="line">git checkout --track &lt;server_name&gt;/&lt;branch&gt;</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">git checkout -b &lt;branch&gt;</span><br><span class="line">git branch -u &lt;server_name&gt;/&lt;branch&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># stops tracking</span></span><br><span class="line">git brach --unset-upstream &lt;branch&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># deletes a remote branch</span></span><br><span class="line">git push origin --delete &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
 
-<blockquote>
+<details class="note info no-icon"><summary><p>Commands to rename a remote branch</p>
+</summary>
 <p>There is no direct command to rename a remote branch. But you can do it like this:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git pull origin &lt;old_branch_name&gt;</span><br><span class="line">git push origin --delete &lt;old_branch_name&gt;</span><br><span class="line">git branch -m &lt;old_branch_name&gt; &lt;new_branch_name&gt;</span><br><span class="line">git push -u origin &lt;new_branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
-</blockquote>
+</details>
+
 <h2 id="Merging"><a href="#Merging" class="headerlink" title="Merging"></a>Merging</h2><p>To merge the other branch to this one, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git merge &lt;branch_name&gt;</span><br></pre></td></tr></tbody></table></figure>
 
@@ -7058,9 +7060,9 @@
 <h2 id="Basic-Configuration"><a href="#Basic-Configuration" class="headerlink" title="Basic Configuration"></a>Basic Configuration</h2><p>Before starting to use Git, you should tell Git your name and email. The commands below set your name and email globally (which means they are visible to all your local repositories).</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">"&lt;your_name&gt;"</span></span><br><span class="line">git config --global user.email <span class="string">"&lt;your_email@example.com&gt;"</span></span><br></pre></td></tr></tbody></table></figure>
 
-<blockquote>
-<p>It's highly recommended that you set <code>&lt;your_name&gt;</code> to be your GitHub username and set <code>&lt;your_email@example.com&gt;</code> to be your GitHub no-reply email, which looks like <code>ID+USERNAME@users.noreply.github.com</code>. You can find the no-reply email <a href="https://github.com/settings/emails">here</a> (under the <code>Primary email address</code> section).</p>
-</blockquote>
+<div class="note success"><p>It's highly recommended that you set <code>&lt;your_name&gt;</code> to be your GitHub username and set <code>&lt;your_email@example.com&gt;</code> to be your GitHub no-reply email, which looks like <code>ID+USERNAME@users.noreply.github.com</code>. You can find the no-reply email <a href="https://github.com/settings/emails">here</a> (under the <code>Primary email address</code> section).</p>
+</div>
+
 <p>Learn more:</p>
 <ul>
 <li><em><a href="https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git">Setting your username in Git - GitHub Docs</a></em></li>
@@ -7103,9 +7105,9 @@
 </ul>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">rm</span> --cached &lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
 
-<blockquote>
-<p><strong>Warning</strong>: <code>git reset</code> is equivalent to <code>git restore --staged :/</code>. <code>git reset &lt;file&gt;</code> is equivalent to <code>git restore --staged &lt;file&gt;</code>. But <code>git rm --cached &lt;file&gt;</code> is unique. Actually, it means remove <code>&lt;file&gt;</code> from the <code>Staging Area</code>, while the other two commands move <code>&lt;file&gt;</code> in the <code>Staging Area</code> back to the <code>Working Directory</code>.</p>
-</blockquote>
+<div class="note info"><p><code>git reset</code> is equivalent to <code>git restore --staged :/</code>. <code>git reset &lt;file&gt;</code> is equivalent to <code>git restore --staged &lt;file&gt;</code>. But <code>git rm --cached &lt;file&gt;</code> is unique. Actually, it means remove <code>&lt;file&gt;</code> from the <code>Staging Area</code>, while the other two commands move <code>&lt;file&gt;</code> in the <code>Staging Area</code> back to the <code>Working Directory</code>.</p>
+</div>
+
 <h2 id="Checking-Status"><a href="#Checking-Status" class="headerlink" title="Checking Status"></a>Checking Status</h2><p>To check the status of the files in the repo, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git status</span><br><span class="line"></span><br><span class="line"><span class="comment"># A Short Version</span></span><br><span class="line">git status -s</span><br><span class="line"><span class="comment"># Or</span></span><br><span class="line">git status --short</span><br></pre></td></tr></tbody></table></figure>
 
@@ -7136,13 +7138,16 @@
 <p>This command is equivalent to these two command bellow:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git add &lt;all_tracked_files_that_have_been_modified&gt;</span><br><span class="line">git commit</span><br></pre></td></tr></tbody></table></figure>
 
-<blockquote>
-<p>How to write a commit message? The links below maybe helpful:</p>
+<details class="note info"><summary><p>How to write better commit messages?</p>
+</summary>
+<p>The links below maybe helpful if you want to write better commit messages:</p>
 <ul>
 <li>_<a href="https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/">How to Write Better Git Commit Messages – A Step-By-Step Guide</a></li>
 <li><em><a href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git-commit">ohmyzsh/plugins/git-commit at master · ohmyzsh/ohmyzsh</a></em></li>
 </ul>
-</blockquote>
+
+</details>
+
 <h2 id="History"><a href="#History" class="headerlink" title="History"></a>History</h2><p>To review the commit history, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></tbody></table></figure>
 
@@ -7164,7 +7169,7 @@
 <li><p><code>--graph</code> flag adds some ascii characters to vividly show your history.</p>
 </li>
 </ul>
-<h2 id="Discarding-Changes-in-Working"><a href="#Discarding-Changes-in-Working" class="headerlink" title="Discarding Changes in Working"></a>Discarding Changes in Working</h2><div class="note danger no-icon"><p>In Git, it's usually easy to restore the files have been committed, but usually <strong>very hard</strong> to restore the files haven't been committed.</p>
+<h2 id="Discarding-Changes-in-Working"><a href="#Discarding-Changes-in-Working" class="headerlink" title="Discarding Changes in Working"></a>Discarding Changes in Working</h2><div class="note danger"><p>In Git, it's usually easy to restore the files have been committed, but usually <strong>very hard</strong> to restore the files haven't been committed.</p>
 </div>
 
 <p>To discard changes in working, run:</p>
