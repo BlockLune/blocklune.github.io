@@ -30,7 +30,7 @@
 <meta property="og:description" content="Notes for tmux Productive Mouse-Free Development written by Brian P. Hogan.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-08-05T03:47:53.000Z">
-<meta property="article:modified_time" content="2024-02-02T12:41:52.557Z">
+<meta property="article:modified_time" content="2024-02-03T13:46:26.676Z">
 <meta property="article:author" content="BlockLune">
 <meta property="article:tag" content="Tmux">
 <meta name="twitter:card" content="summary">
@@ -330,17 +330,18 @@
 <p>Press <code>Prefix</code> <code>f</code> to find a window by name (if we named our windows).</p>
 <p>Press <code>Prefix</code> <code>w</code> to display a visual menu of our windows so we can select the one we'd like.</p>
 <p>Press <code>Prefix</code> <code>&amp;</code> or type <code>exit</code> to close the current window.</p>
-<h3 id="Working-with-Panes"><a href="#Working-with-Panes" class="headerlink" title="Working with Panes"></a>Working with Panes</h3><div class="note info"><p><strong>What's the difference between panes and windows?</strong></p>
+<h3 id="Working-with-Panes"><a href="#Working-with-Panes" class="headerlink" title="Working with Panes"></a>Working with Panes</h3><details class="note info"><summary><p>Difference between panes and windows.</p>
+</summary>
+<p><strong>What's the difference between panes and windows?</strong></p>
 <p>ChatGPT:</p>
 <p>In tmux, panes and windows are two different concepts that refer to distinct components of the terminal multiplexer.</p>
 <ol>
-<li><p>Windows: In tmux, a window is a single "view" or "tab" within the session. Each window occupies the entire terminal screen and can hold one or more panes. Windows are independent entities that can be created, closed, and switched between. They are typically used to organize and manage different tasks or applications within a tmux session. You can think of windows as similar to tabs in a web browser or a terminal emulator.</p>
-</li>
-<li><p>Panes: A pane, on the other hand, is a subdivision of a window. It allows you to split a window into multiple resizable and scrollable regions. Each pane within a window can run its own command or application, effectively allowing you to work on multiple tasks simultaneously within a single window. Panes can be split both horizontally and vertically, and you can resize, rearrange, and interact with them independently.</p>
-</li>
+<li>Windows: In tmux, a window is a single "view" or "tab" within the session. Each window occupies the entire terminal screen and can hold one or more panes. Windows are independent entities that can be created, closed, and switched between. They are typically used to organize and manage different tasks or applications within a tmux session. You can think of windows as similar to tabs in a web browser or a terminal emulator.</li>
+<li>Panes: A pane, on the other hand, is a subdivision of a window. It allows you to split a window into multiple resizable and scrollable regions. Each pane within a window can run its own command or application, effectively allowing you to work on multiple tasks simultaneously within a single window. Panes can be split both horizontally and vertically, and you can resize, rearrange, and interact with them independently.</li>
 </ol>
 <p>To summarize, <strong>windows are the main containers that hold one or more panes, while panes are the subdivisions within a window where you can run different commands or applications.</strong> Windows provide a way to switch between different contexts or tasks, while panes enable multitasking within a single window.</p>
-</div>
+
+</details>
 
 <p><code>Prefix</code> <code>%</code> splits the current pane with horizontal layout.</p>
 <p><code>Prefix</code> <code>"</code> splits the current pane with vertical layout.</p>

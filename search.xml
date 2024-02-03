@@ -9,7 +9,9 @@
 <h2 id="为什么在理论上三进制是最高效率的进制？"><a href="#为什么在理论上三进制是最高效率的进制？" class="headerlink" title="为什么在理论上三进制是最高效率的进制？"></a>为什么在理论上三进制是最高效率的进制？</h2><blockquote>
 <p>这里的内容来自知乎大佬 <a href="https://www.zhihu.com/people/bai-yun-long-52">@白云龙</a>的<a href="https://www.zhihu.com/question/435375360">这篇</a>回答。<br>B 站 up 主 <a href="https://space.bilibili.com/19319172">@差评君</a> 的<a href="https://www.bilibili.com/video/BV17b4y1U7TZ/">这个</a>视频中对这篇回答进行了动画形式的展现。</p>
 </blockquote>
-<p>首先，先让我们来约定一下什么叫 “进制的效率”：<br>$$<br>进制的效率 = \frac {表达的信息量}{表达这些信息所需的资源}<br>$$<br>比如我们需要表达十进制下 <code>0~999</code> 这 1000 个数字，这就是我们 $ 表达的信息量 $，我们选择用写有数字的牌子来表示它们。</p>
+<p>首先，先让我们来约定一下什么叫 “进制的效率”：</p>
+<p>$$<br>进制的效率 = \frac {表达的信息量}{表达这些信息所需的资源}<br>$$</p>
+<p>比如我们需要表达十进制下 <code>0~999</code> 这 1000 个数字，这就是我们 $ 表达的信息量 $，我们选择用写有数字的牌子来表示它们。</p>
 <ul>
 <li><p>在十进制下，<code>0~999</code> 我们至少需要三位，每位上我们都需要 0~9 十个数字的牌子，所以三位一共是 30 个数字牌子；</p>
 </li>
@@ -26,11 +28,25 @@
 </ul>
 <p>这些数字牌子的个数就是 $ 表达这些信息所需的资源 $。到目前为止，似乎二进制和四进制的效率最高。</p>
 <p>但这样理解并不完全准确。因为实际上， 对于某些进制而言，对应数量的数字牌子其实不止能表达这么多信息。比如在二进制情况下，20 个数字牌子表达的数字总量应该是 $2^{10} = 1024 $ 个；在三进制的情况下，21 个数字牌子表达的数字总量却是 $3^7 = 2187$ 个；在四进制的情况下，20 个数字牌子表达的数字总量是 $4^5 = 1024$ 个...</p>
-<p>也就是说，虽然对于上边十进制而言，它那 30 个牌子表达的信息量确实就是 <code>0~999</code> 这 1000  个数字的信息，或者我们说 1000 种状态信息，但对于下边的比如二进制、三进制、四进制，对应的 20 个、21 个、20 个牌子其实表达了超过 1000 种状态，我们用这些牌子是有浪费的。</p>
+<p>也就是说，虽然对于上边十进制而言，它那 30 个牌子表达的信息量确实就是 <code>0~999</code> 这 1000 个数字的信息，或者我们说 1000 种状态信息，但对于下边的比如二进制、三进制、四进制，对应的 20 个、21 个、20 个牌子其实表达了超过 1000 种状态，我们用这些牌子是有浪费的。</p>
 <p>这么来算，我们大致可以得到，十进制的效率是 $\frac {1000}{30} \approx 33.3333$，二进制的效率是 $\frac {1024}{20} = 51.2$，三进制的效率是 $\frac {2187}{21} \approx 104.1429$，四进制的效率是 $\frac {1024}{20} = 51.2$...</p>
 <p>从这个例子我们已经大概能看到三进制的效率了，那么怎么证明这件事儿呢？</p>
-<p>回顾上边的思考过程，我们的数字牌子个数是怎么被算出来的呢？我们大概可以总结出：<br>$$<br>数字牌子的个数 = 进制数 \times 所需的位数<br>$$<br>而为了满足上边的表达 1000 个状态的要求，所以我们要求：<br>$$<br>进制数 ^{所需的位数} \geq 1000<br>$$<br>也就是说：<br>$$<br>所需的位数 = 向上取整（log_{进制数} 1000）<br>$$<br>因为进制数必须是整数，所以我们必须加上 $ 向上取整 $，但就是因为这个向上取整，我们浪费了很多的资源，所以我们先假设 $ 进制数 $ 是个实数。</p>
-<p>那么现在对上面 $ 数字牌子的个数 $ 的式子改成 $ 表达这些信息所需的资源 $，这样这个式子就成了下边这样：<br>$$<br>表达这些信息所需的资源 = 进制数 \times log_{进制数} 表达的信息量<br>$$<br>记 $ 表达这些所需的资源 $ 为 $R$，$ 进制数 $ 为 $N$，$ 表达的信息量 $ 为 $I$：<br>$$<br>R = N \times log_NI<br>$$<br>记效率为 $E$，那么：<br>$$<br>E = \frac{I}{R} = \frac{I}{Nlog_NI} = \frac{I}{lnI}\times\frac{lnN}{N}<br>$$<br>求导<br>$$<br>\frac{dE}{dN} = \frac{I}{lnI}\times\frac{1-lnN}{N^2}<br>$$<br>分析单调性，我们知道，当 $N = e$ 时，效率 $E$ 最大。</p>
+<p>回顾上边的思考过程，我们的数字牌子个数是怎么被算出来的呢？我们大概可以总结出：</p>
+<p>$$<br>数字牌子的个数 = 进制数 \times 所需的位数<br>$$</p>
+<p>而为了满足上边的表达 1000 个状态的要求，所以我们要求：</p>
+<p>$$<br>进制数 ^{所需的位数} \geq 1000<br>$$</p>
+<p>也就是说：</p>
+<p>$$<br>所需的位数 = 向上取整（log_{进制数} 1000）<br>$$</p>
+<p>因为进制数必须是整数，所以我们必须加上 $ 向上取整 $，但就是因为这个向上取整，我们浪费了很多的资源，所以我们先假设 $ 进制数 $ 是个实数。</p>
+<p>那么现在对上面 $ 数字牌子的个数 $ 的式子改成 $ 表达这些信息所需的资源 $，这样这个式子就成了下边这样：</p>
+<p>$$<br>表达这些信息所需的资源 = 进制数 \times log_{进制数} 表达的信息量<br>$$</p>
+<p>记 $ 表达这些所需的资源 $ 为 $R$，$ 进制数 $ 为 $N$，$ 表达的信息量 $ 为 $I$：</p>
+<p>$$<br>R = N \times log_NI<br>$$</p>
+<p>记效率为 $E$，那么：</p>
+<p>$$<br>E = \frac{I}{R} = \frac{I}{Nlog_NI} = \frac{I}{lnI}\times\frac{lnN}{N}<br>$$</p>
+<p>求导</p>
+<p>$$<br>\frac{dE}{dN} = \frac{I}{lnI}\times\frac{1-lnN}{N^2}<br>$$</p>
+<p>分析单调性，我们知道，当 $N = e$ 时，效率 $E$ 最大。</p>
 <p>所以也就是，<code>e 进制</code> 理论上才是效率最高的进制。</p>
 <p>但是，e 进制是个啥呢？试试 e 附近的 2 和 3，得到 $E (2) \approx 0.3466\times\frac {I}{lnI}$，$E (3)\approx 0.3662\times\frac {I}{lnI}$，所以，三进制是理论上效率最高的进制。</p>
 <h2 id="为什么没用三进制？"><a href="#为什么没用三进制？" class="headerlink" title="为什么没用三进制？"></a>为什么没用三进制？</h2><p>在上边的两个引用里，知乎大佬 @白云龙 和 b 站 up 主 @差评君 都给出了一些答案。@白云龙 大佬的说法是，在实际的实现过程中，实现二进制的 “牌子” 和实现三进制的 “牌子” 的成本不一样，可能二进制的 01 牌子就便宜好用，但三进制的牌子就是又贵又难用，最后所需的资源还要乘上每个牌子的单价，加上这层因素后，二进制比三进制更经济。这其实也就是 @差评君 所言的，二进制只需高低电平来区分 01，但三进制需要实现三种电流状态就比较复杂。</p>
@@ -104,7 +120,7 @@
 <p>$$<br>(0\leq\theta&lt;2\pi,)0\leq\rho\leq1<br>$$</p>
 <h4 id="半圆面"><a href="#半圆面" class="headerlink" title="半圆面"></a>半圆面</h4><p>例如一个以极点为圆心，$1$ 为半径的位于 $X$ 轴上方的半圆面表述为：</p>
 <p>$$<br>0\leq\theta\leq\pi,0\leq\rho\leq1<br>$$</p>
-<div class="note warning no-icon"><p>又例如这个以 $(1,0)$ 为圆心，$1$ 为半径的位于 $X$ 轴上方的半圆面表述为：</p>
+<div class="note "><p>又例如这个以 $(1,0)$ 为圆心，$1$ 为半径的位于 $X$ 轴上方的半圆面表述为：</p>
 <p>$$<br>0\leq\theta\leq\frac{\pi}{2},0\leq\rho\leq2cos\theta<br>$$</p>
 <p><img data-src="https://s1.ax1x.com/2022/09/16/vzwCNR.png"></p>
 <p>又例如这个：</p>
@@ -126,11 +142,8 @@
     <content><![CDATA[<p>最近几天一直在忙着考驾照的事情，8 月份第一次考科二挂了后就开始边练科二边练科三。最近两三天先后把科三、第二次科二、科四过了，顺利拿到了 C1 驾照。但是... 学的是手动挡，家里的车却是自动挡。所以想着如果不记一下的话，以后估计开惯了自动挡手动挡就不会了，便想做些笔记。顺便也记录一下笔者自己的学车过程。</p>
 <span id="more"></span>
 
-
-<div class="notification is-danger">
-相关做法仅供参考，有些内容可能也只适用于笔者这边的考试。如有错误敬请各位大佬指出。
+<div class="note danger"><p>相关做法仅供参考，有些内容可能也只适用于笔者这边的考试。如有错误敬请各位大佬指出。</p>
 </div>
-
 
 <h2 id="科目一"><a href="#科目一" class="headerlink" title="科目一"></a>科目一</h2><p>就是刷题嘛。笔者本人是把 2000 道题的题库先完整了一遍，然后又模拟了 20 + 次，所以相当于做了 4000 多道题吧，结果是 98 一把过的。笔者一直很担心自己过不了那些扣分 / 罚款题，甚至为此还自己做了个表格把扣分项全部列在了里边。结果实际上并没有用上多少就是了，因为实际考试根本没有那么多难题。<del>可能自己用的软件为了让你冲 VIP 所以不冲的话给的题目就会比较难吧。</del>笔者也认识一个刷了 600 道直接过的，还有一个当天下午考结果上午中午刷了 1200 道直接过的。可能考试的时候抽题目也有点运气成分，和笔者一起去的朋友第二把的难度显然低于第一把，所以第一把 80 多但第二把就 100 了。</p>
 <h2 id="科目二"><a href="#科目二" class="headerlink" title="科目二"></a>科目二</h2><p>科二始终是一档就行了，油门也是锁死的，所以只要看离合与刹车两个踏板。核心要点：<strong>速度慢一点</strong>。</p>
@@ -248,7 +261,7 @@
 <p>【侧方停车】(1) 先调整好边缘线 30 公分左右，再看向右面大反光镜直角出来就停车。(2) 开始挂倒挡，倒车看后右反光镜看不见直角。就向右把方向打死。(3) 再看左反光镜里后面露出两条虚线把方向回正。(4) 然后在看左后轮压虚线向左打死。(5) 最后再看大镜车身平行刚进虚线就停。【2】出侧方位，打左转向灯。挂前进挡出库看前面左车头凹巢面挡外框黄线把方向回正。继续向前左车头当一半外面黄线时向右打一圈车身正把它回正。侧方位结束。【3】侧方位规定在挂倒挡开始 90 秒之内完成。【倒车入库】先看从右边数第三条虚线停在我们车中间与肩膀平行，倒车入库开始两百十秒钟完成。看左反光镜下檐 余肩膀线从合同时 向左打死方向，再看左反光镜库里面第三条虚线挡住一半时把方向回半圈。再看右面反光镜与库线平行，把方向右回正。在看左前反光镜下檐 于库角线刚从合停车。挂前档向右时看两反光镜调整出库大小。左后轮到库角向右打死，车头正回半圈。一直到肩膀停车，挂倒档看左镜子下檐于肩膀线从合向右打半圈打死。右面大反光镜库第三条虚线时一半把方向回半圈。就是等车上与地上黄线平行。把方向全部回正。就等停车看前面左反光镜檐于 库角线停车，出库调整大小左后面库角向左打死。车身正回正前轮到肩膀线。</p>
 </blockquote>
 <h3 id="科三"><a href="#科三" class="headerlink" title="科三"></a>科三</h3><blockquote>
-<p> 1. 继续完成考试。先打左转向灯。向左回头观望。确保安全后。踩离合。挂一挡。松手刹。又手推到一点钟的位置。右脚放油门。左脚慢慢抬起离合。车子开始走动一般数四秒。把离合器全部松掉。 (记住 左脚必须在六秒钟之内。完全离合器踏板。超过六秒扣 100 分，行车过程中。加减档 也必须在。六秒钟内完成)，从松手下到起步 必须十秒钟内起步走哦  2. 行车过程中。加速加档。10 码以上加二档 20 码以上加三档 35 码以上加四档。加档只能一个一个档往上加。不能跳跃加档，减档可以速度与档位匹配时可以越档位减档。3. 还有会车动作，准备会车稍微向左一点。不要压中心线。听到电脑语音指定。与机动车会车。向右靠。沿着右边线点行驶。小心右边压线。3 到 4 秒后，电脑语音指定。结束回车。你靠中心随便行驶。会车结束以后。直接踩油门踩 35 码以上加四档。四挡加上去离合器放掉 5 秒过后，踩离合直接推三档，四档就完成了。4. 超越前方车辆。电脑发出指定，你打左转向灯。向前方数三秒后，向左回头观望。头必须左后 90 度以上观望。确认安全后，方向稍微向左。行驶到另一个车道。等车辆完全进入另一个车道后，关闭左转向灯。车身直驶回原车道。你打开右转向灯。向前方数三秒后向右回头观望。头必须 90 度以上。方向稍微向右使上另一个车道，完全进入另一个车道后把转向灯关掉。5. 直线行驶。一般的我教听到指令控制好方向油门踩上去。达到 40km 以上中间会听到我的敲门声松掉油门。。让它自由滑行。方向微调。记住必须直线行驶 100 米以后。会听到结束直线行驶。滑行自由行驶了，6. 遇到路口一般减速减档轻点刹车左右观望。人行横道，公交车站台轻点刹车，左右观望通过。停车放空挡。7. 听到适当路口掉头时，借右侧辅道先打右转向灯。减二档。三秒以后回头观望。向右进入辅道记住小心右面压边线。完全进入辅道后启左转向灯，三秒以后。向左回头观望。一把快打死掉头。8. 进入对方车道路后，准备停车。打好右转向灯，记住一定要等好电脑指令。请靠边停车。可以换一挡数三秒。右回头观望后往右向右靠。注意停不进去随时随地都可以停车放空挡等， 看前小反光镜与边线 30 公分以内。踩离合踩刹车。放空挡拉手刹。等电脑成绩合格。才可下车。</p>
+<p>1. 继续完成考试。先打左转向灯。向左回头观望。确保安全后。踩离合。挂一挡。松手刹。又手推到一点钟的位置。右脚放油门。左脚慢慢抬起离合。车子开始走动一般数四秒。把离合器全部松掉。 (记住 左脚必须在六秒钟之内。完全离合器踏板。超过六秒扣 100 分，行车过程中。加减档 也必须在。六秒钟内完成)，从松手下到起步 必须十秒钟内起步走哦 2. 行车过程中。加速加档。10 码以上加二档 20 码以上加三档 35 码以上加四档。加档只能一个一个档往上加。不能跳跃加档，减档可以速度与档位匹配时可以越档位减档。3. 还有会车动作，准备会车稍微向左一点。不要压中心线。听到电脑语音指定。与机动车会车。向右靠。沿着右边线点行驶。小心右边压线。3 到 4 秒后，电脑语音指定。结束回车。你靠中心随便行驶。会车结束以后。直接踩油门踩 35 码以上加四档。四挡加上去离合器放掉 5 秒过后，踩离合直接推三档，四档就完成了。4. 超越前方车辆。电脑发出指定，你打左转向灯。向前方数三秒后，向左回头观望。头必须左后 90 度以上观望。确认安全后，方向稍微向左。行驶到另一个车道。等车辆完全进入另一个车道后，关闭左转向灯。车身直驶回原车道。你打开右转向灯。向前方数三秒后向右回头观望。头必须 90 度以上。方向稍微向右使上另一个车道，完全进入另一个车道后把转向灯关掉。5. 直线行驶。一般的我教听到指令控制好方向油门踩上去。达到 40km 以上中间会听到我的敲门声松掉油门。。让它自由滑行。方向微调。记住必须直线行驶 100 米以后。会听到结束直线行驶。滑行自由行驶了，6. 遇到路口一般减速减档轻点刹车左右观望。人行横道，公交车站台轻点刹车，左右观望通过。停车放空挡。7. 听到适当路口掉头时，借右侧辅道先打右转向灯。减二档。三秒以后回头观望。向右进入辅道记住小心右面压边线。完全进入辅道后启左转向灯，三秒以后。向左回头观望。一把快打死掉头。8. 进入对方车道路后，准备停车。打好右转向灯，记住一定要等好电脑指令。请靠边停车。可以换一挡数三秒。右回头观望后往右向右靠。注意停不进去随时随地都可以停车放空挡等， 看前小反光镜与边线 30 公分以内。踩离合踩刹车。放空挡拉手刹。等电脑成绩合格。才可下车。</p>
 </blockquote>
 ]]></content>
       <categories>
@@ -594,7 +607,7 @@
 <p>To get the same result as Octave 'std', use np.std(X, 0, ddof=1)</p>
 </blockquote>
 <p>where <code>ddof</code> means Delta Degrees of Freedom. The divisor used in calculation is <code>N - ddof</code>, where <code>N</code> represents the number of elements. By default <code>ddof</code> is zero.</p>
-<div class="note info"><p>实际上就是总体标准差和样本标准差的区别：</p>
+<div class="note info"><p>这实际上就是总体标准差和样本标准差的区别：</p>
 <p>总体标准差：</p>
 <p>$$<br>\sigma = \sqrt{\frac{\sum^n_{i=1}(x_i-\bar{x})^2}{n}}<br>$$</p>
 <p>样本标准差：</p>
@@ -2685,7 +2698,7 @@
 <p>确定，重启电脑。</p>
 <p>打开 CMD 测试一下，输入 <code>chcp</code> 可以发现已经变成了 <code>65001</code>，说明成功了。</p>
 <p>方法来源：<a href="https://blog.csdn.net/weixin_44285445/article/details/112325994">《Git Bash 中文显示乱码，options 修改为 zh_CN 和 utf-8 还是不行怎么办？》</a></p>
-<div class="note danger no-icon"><h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>该方法全局更改 Windows 系统的默认编码，可能引起某些软件运行异常。</p>
+<div class="note danger"><h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>该方法全局更改 Windows 系统的默认编码，可能引起某些软件运行异常。</p>
 </div>
 
 <p><strong>以下是原来的文章:</strong></p>
@@ -2747,6 +2760,99 @@
       </tags>
   </entry>
   <entry>
+    <title>VS Code 的安装与配置基础 C/C++ 开发环境</title>
+    <url>/posts/a7a0ce82.html</url>
+    <content><![CDATA[<p>我以前学习 C++ 的时候，使用的是 DevCpp 。这个软件让我这个初学者比较舒服的点是，我不用太过详细地考虑编译的过程 —— 新建一个 cpp 文件，写一点小程序，按下 F11，程序运行。我不需要管选择编译器啊、配置编译命令啊啥啥的。但是到 VS Code 这边，这都要我自己做了，对于新手并不是那么友好。这里记录一下我配置 VS Code 的 C/C++ 环境的完整过程，希望对你有所帮助。需要注意的是：学习一下基本的编译链接指令还是很有必要的！</p>
+<span id="more"></span>
+
+<h2 id="安装-Visual-Studio-Code"><a href="#安装-Visual-Studio-Code" class="headerlink" title="安装 Visual Studio Code"></a>安装 Visual Studio Code</h2><p>打开 <a href="https://code.visualstudio.com/">VS Code 官网</a>，点击 <code>Download for Windows</code> 按钮（其他平台请选择对应平台的安装包，此处以 Windows 平台为例），等待下载完成。</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xSRlss.png"></p>
+<details class="note success"><summary><p>国内 VS Code 下载速度慢的解决方案</p>
+</summary>
+<h4 id="国内-VS-Code-下载速度慢的解决方案"><a href="#国内-VS-Code-下载速度慢的解决方案" class="headerlink" title="国内 VS Code 下载速度慢的解决方案"></a>国内 VS Code 下载速度慢的解决方案</h4><p>此方法来自：<a href="https://zhuanlan.zhihu.com/p/112215618">https://zhuanlan.zhihu.com/p/112215618</a></p>
+<p>在你的下载软件处（我这里是 IDM，你如果是浏览器下载的就去浏览器的下载管理器里找），找到下载地址。将下载地址中的 <code>az764295.vo.msecnd.net</code> 替换为 <code>vscode.cdn.azure.cn</code>，然后取消原任务，用修改过的下载链接新建一个下载。</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xSR8Zq.png" alt="修改前"></p>
+
+</details>
+
+<p>打开安装包，一路下一步，直到下面这个界面，按照下边的进行选择，直到安装完毕。</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xSWzge.png"></p>
+<h2 id="VS-Code-设置中文"><a href="#VS-Code-设置中文" class="headerlink" title="VS Code 设置中文"></a>VS Code 设置中文</h2><p>打开 VS Code，点击图示左侧第五个图标或使用快捷键 <code>Ctrl+Shift+X</code> 打开 <code>拓展</code> 页面，搜索：<code>Chinese</code>，找到 <code>Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code</code> 这个插件，点击 <code>Install</code> 安装，等待安装完成后按照提示点击右下角 <code>Restart</code> 按钮重启 VS Code。<br><img data-src="https://s1.ax1x.com/2022/09/17/xSf1U0.png"><br><img data-src="https://s1.ax1x.com/2022/09/17/xSfJ8U.png"><br><img data-src="https://s1.ax1x.com/2022/09/17/xSftv4.png"></p>
+<h2 id="安装并检查编译器"><a href="#安装并检查编译器" class="headerlink" title="安装并检查编译器"></a>安装并检查编译器</h2><p>DevCpp 安装的时候也帮我们安装好了编译器，但 VS Code 并没有。所以我们还得自己装一个编译器。这里以 Mingw-w64 为例（参考<a href="https://code.visualstudio.com/docs/languages/cpp#_example-install-mingwx64">官方教程</a>）。</p>
+<p>参考 <a href="https://www.msys2.org/#installation">MSYS2 官网</a>下载安装和安装。</p>
+<details class="note success"><summary><p>国内 MSYS2 下载速度慢的解决方案</p>
+</summary>
+<h4 id="国内-MSYS2-下载速度慢的解决方案"><a href="#国内-MSYS2-下载速度慢的解决方案" class="headerlink" title="国内 MSYS2 下载速度慢的解决方案"></a>国内 MSYS2 下载速度慢的解决方案</h4><p>在这个按钮上右键，选择<code>复制链接</code>。</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xShuRO.png"></p>
+<p>然后前往 <a href="https://ghproxy.com/">https://ghproxy.com/</a> 这个网站，粘贴上面复制的下载链接，点击下载。</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xShGdI.png"></p>
+
+</details>
+
+<p>打开安装包，一路默认下一步。耐心等待（国内网络可以！只要耐心等！）直到出现下面的界面：</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xShqfK.png"></p>
+<p>输入下面的命令安装 gcc：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">pacman -S mingw-w64-x86_64-gcc</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xS46nH.png" alt="画横线的是需要自己输入的"></p>
+<p>接下来需要添加环境变量。直接搜索 <code>高级系统设置</code>：</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xS4bHs.png"></p>
+<p>打开后点击环境变量。</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xS4x3T.png"></p>
+<p>添加系统变量。</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xS5VC6.png"></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xS5J8f.png"></p>
+<p>打开 CMD 检查一下是否成功：<br>输入 <code>gcc -v</code>，如果有结果，就安装成功了。</p>
+<h2 id="C-C-扩展的安装"><a href="#C-C-扩展的安装" class="headerlink" title="C/C++ 扩展的安装"></a>C/C++ 扩展的安装</h2><p>按照上面的方法打开扩展，首先是几个 C/C++ 基础扩展，直接搜索 <code>C++</code>。</p>
+<p>第一个：<code>C/C++</code></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xSfhVI.png"></p>
+<p>直接点击安装（我这里截图的时候还没重启，如果按照上述步骤已经安装了中文语言包并重启了 Code，这里的 <code>Install</code> 按钮就会变成 <code>安装</code>）。</p>
+<p>第二个：<code>C/C++ Extension Pack</code></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xSf7RS.png"></p>
+<p>第三个：<code>C/C++ Compile Run</code></p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xSfLrj.png"></p>
+<p>这个扩展提供了极其简单的 <code>F6</code> 一键编译运行功能。</p>
+<h2 id="正常运行测试"><a href="#正常运行测试" class="headerlink" title="正常运行测试"></a>正常运行测试</h2><p>新建一个文件夹，就叫 <code>HelloWorld</code> 吧。打开文件夹，右键，选择 <code>通过 Code 打开</code>。新建一个 <code>HelloWorld.cpp</code>，粘贴下面的代码：</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  std::cout &lt;&lt; <span class="string">"Hello world!"</span> &lt;&lt; std::endl;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>Ctrl+S</code> 保存，<code>F6</code> 运行，成功输出结果。</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xS5oPx.png"></p>
+<h2 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h2><p><strong>2022 年 10 月 6 日更新：</strong></p>
+<p>完成上边的步骤之后，你应该可以正常运行程序了。下面的教程是安装调试器以及通过 <code>C/C++ Runner</code> 让调试等工作变得简单。</p>
+<p>首先再次打开 msys2.exe (默认位置是：C:\msys64\msys2.exe)，类似上边安装 gcc ，输入下边的命令安装 gdb。<br>类似的，还需要输入下面的命令安装 gdb:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ pacman -S mingw-w64-x86_64-gdb</span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后在 VS Code 中搜索并安装 <code>C/C++ Runner</code> 插件。</p>
+<details class="note success"><summary><p>安装 C/C++ Runner 插件时其依赖项 CodeLLDB 无法安装的解决方案</p>
+</summary>
+<h4 id="安装-C-C-Runner-插件时其依赖项-CodeLLDB-无法安装的解决方案"><a href="#安装-C-C-Runner-插件时其依赖项-CodeLLDB-无法安装的解决方案" class="headerlink" title="安装 C/C++ Runner 插件时其依赖项 CodeLLDB 无法安装的解决方案"></a>安装 C/C++ Runner 插件时其依赖项 CodeLLDB 无法安装的解决方案</h4><p>按照右下角的提示手动下载 <code>codelldb-x86_64-windows.vsix</code> 文件。</p>
+<p>在 VS Code 中按下 <code>Ctrl + Shift + P</code>，输入 <code>install</code>，选择<code>从VSIX安装...</code>，选择上边下好的文件，等待安装完成。</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xSTBad.png"></p>
+
+</details>
+
+<p>安装完成后，左下角点击 <code>Select folder.</code>，选择当前文件夹。</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xSTRsS.png"></p>
+<p>然后按下小齿轮进行编译，按下三角形运行，设置好断点按下小虫子进行 Debug。</p>
+<p><img data-src="https://s1.ax1x.com/2022/09/17/xST4aj.png"></p>
+<h2 id="解决中文乱码问题"><a href="#解决中文乱码问题" class="headerlink" title="解决中文乱码问题"></a>解决中文乱码问题</h2><p><strong>2022 年 10 月 13 日更新：</strong></p>
+<p>参见我的另一篇文章：<a href="https://blocklune.github.io/posts/ca05bed5.html">《VS Code 中文乱码问题》</a></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://zhuanlan.zhihu.com/p/112215618">国内下载 vscode 速度慢问题解决</a></li>
+<li>官方教程：<a href="https://code.visualstudio.com/docs/languages/cpp">C++ programming with Visual Studio Code</a></li>
+<li><a href="https://www.cnblogs.com/zychengzhiit1/p/5776962.html">windows 10 环境下 使用 msys2 + vs code 配置 c++ 的编译环境</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+        <tag>VS Code</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>A very interesting VimGolf</title>
     <url>/posts/6023bfa0.html</url>
     <content><![CDATA[<p><a href="https://www.vimgolf.com/">VimGolf.com</a> is a good place for vimers to practice and improve their vim skills. This post records my experience of solving a very interesting VimGolf game -- <a href="https://www.vimgolf.com/challenges/9v00651eb20100000000025b">Quicksort</a>.</p>
@@ -2784,90 +2890,6 @@
       <tags>
         <tag>Vim</tag>
         <tag>VimGolf</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>VS Code 的安装与配置基础 C/C++ 开发环境</title>
-    <url>/posts/a7a0ce82.html</url>
-    <content><![CDATA[<p>我以前学习 C++ 的时候，使用的是 DevCpp 。这个软件让我这个初学者比较舒服的点是，我不用太过详细地考虑编译的过程 —— 新建一个 cpp 文件，写一点小程序，按下 F11，程序运行。我不需要管选择编译器啊、配置编译命令啊啥啥的。但是到 VS Code 这边，这都要我自己做了，对于新手并不是那么友好。这里记录一下我配置 VS Code 的 C/C++ 环境的完整过程，希望对你有所帮助。需要注意的是：学习一下基本的编译链接指令还是很有必要的！</p>
-<span id="more"></span>
-
-<h2 id="安装-Visual-Studio-Code"><a href="#安装-Visual-Studio-Code" class="headerlink" title="安装 Visual Studio Code"></a>安装 Visual Studio Code</h2><p>打开 <a href="https://code.visualstudio.com/">VS Code 官网</a>，点击 <code>Download for Windows</code> 按钮（其他平台请选择对应平台的安装包，此处以 Windows 平台为例），等待下载完成。</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xSRlss.png"></p>
-<div class="note "><h4 id="国内-VS-Code-下载速度慢的解决方案"><a href="#国内-VS-Code-下载速度慢的解决方案" class="headerlink" title="国内 VS Code 下载速度慢的解决方案"></a>国内 VS Code 下载速度慢的解决方案</h4><p>此方法来自：<a href="https://zhuanlan.zhihu.com/p/112215618">https://zhuanlan.zhihu.com/p/112215618</a></p>
-<p>在你的下载软件处（我这里是 IDM，你如果是浏览器下载的就去浏览器的下载管理器里找），找到下载地址。将下载地址中的 <code>az764295.vo.msecnd.net</code> 替换为 <code>vscode.cdn.azure.cn</code>，然后取消原任务，用修改过的下载链接新建一个下载。</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xSR8Zq.png" alt="修改前"></p>
-</div>
-
-<p>打开安装包，一路下一步，直到下面这个界面，按照下边的进行选择，直到安装完毕。</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xSWzge.png"></p>
-<h2 id="VS-Code-设置中文"><a href="#VS-Code-设置中文" class="headerlink" title="VS Code 设置中文"></a>VS Code 设置中文</h2><p>打开 VS Code，点击图示左侧第五个图标或使用快捷键 <code>Ctrl+Shift+X</code> 打开 <code>拓展</code> 页面，搜索：<code>Chinese</code>，找到 <code>Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code</code> 这个插件，点击 <code>Install</code> 安装，等待安装完成后按照提示点击右下角 <code>Restart</code> 按钮重启 VS Code。<br><img data-src="https://s1.ax1x.com/2022/09/17/xSf1U0.png"><br><img data-src="https://s1.ax1x.com/2022/09/17/xSfJ8U.png"><br><img data-src="https://s1.ax1x.com/2022/09/17/xSftv4.png"></p>
-<h2 id="安装并检查编译器"><a href="#安装并检查编译器" class="headerlink" title="安装并检查编译器"></a>安装并检查编译器</h2><p>DevCpp 安装的时候也帮我们安装好了编译器，但 VS Code 并没有。所以我们还得自己装一个编译器。这里以 Mingw-w64 为例（参考<a href="https://code.visualstudio.com/docs/languages/cpp#_example-install-mingwx64">官方教程</a>）。</p>
-<p>参考 <a href="https://www.msys2.org/#installation">MSYS2 官网</a>下载安装和安装。</p>
-<div class="note "><h4 id="国内-MSYS2-下载速度慢的解决方案"><a href="#国内-MSYS2-下载速度慢的解决方案" class="headerlink" title="国内 MSYS2 下载速度慢的解决方案"></a>国内 MSYS2 下载速度慢的解决方案</h4><p>在这个按钮上右键，选择<code>复制链接</code>。</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xShuRO.png"></p>
-<p>然后前往 <a href="https://ghproxy.com/">https://ghproxy.com/</a> 这个网站，粘贴上面复制的下载链接，点击下载。</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xShGdI.png"></p>
-</div>
-
-<p>打开安装包，一路默认下一步。耐心等待（国内网络可以！只要耐心等！）直到出现下面的界面：</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xShqfK.png"></p>
-<p>输入下面的命令安装 gcc：</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">pacman -S mingw-w64-x86_64-gcc</span><br></pre></td></tr></tbody></table></figure>
-
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xS46nH.png" alt="画横线的是需要自己输入的"></p>
-<p>接下来需要添加环境变量。直接搜索 <code>高级系统设置</code>：</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xS4bHs.png"></p>
-<p>打开后点击环境变量。</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xS4x3T.png"></p>
-<p>添加系统变量。</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xS5VC6.png"></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xS5J8f.png"></p>
-<p>打开 CMD 检查一下是否成功：<br>输入 <code>gcc -v</code>，如果有结果，就安装成功了。</p>
-<h2 id="C-C-扩展的安装"><a href="#C-C-扩展的安装" class="headerlink" title="C/C++ 扩展的安装"></a>C/C++ 扩展的安装</h2><p>按照上面的方法打开扩展，首先是几个 C/C++ 基础扩展，直接搜索 <code>C++</code>。</p>
-<p>第一个：<code>C/C++</code></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xSfhVI.png"></p>
-<p>直接点击安装（我这里截图的时候还没重启，如果按照上述步骤已经安装了中文语言包并重启了 Code，这里的 <code>Install</code> 按钮就会变成 <code>安装</code>）。</p>
-<p>第二个：<code>C/C++ Extension Pack</code></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xSf7RS.png"></p>
-<p>第三个：<code>C/C++ Compile Run</code></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xSfLrj.png"></p>
-<p>这个扩展提供了极其简单的 <code>F6</code> 一键编译运行功能。</p>
-<h2 id="正常运行测试"><a href="#正常运行测试" class="headerlink" title="正常运行测试"></a>正常运行测试</h2><p>新建一个文件夹，就叫 <code>HelloWorld</code> 吧。打开文件夹，右键，选择 <code>通过 Code 打开</code>。新建一个 <code>HelloWorld.cpp</code>，粘贴下面的代码：</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  std::cout &lt;&lt; <span class="string">"Hello world!"</span> &lt;&lt; std::endl;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p><code>Ctrl+S</code> 保存，<code>F6</code> 运行，成功输出结果。</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xS5oPx.png"></p>
-<h2 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h2><p><strong>2022 年 10 月 6 日更新：</strong></p>
-<p>完成上边的步骤之后，你应该可以正常运行程序了。下面的教程是安装调试器以及通过 <code>C/C++ Runner</code> 让调试等工作变得简单。</p>
-<p>首先再次打开 msys2.exe (默认位置是：C:\msys64\msys2.exe)，类似上边安装 gcc ，输入下边的命令安装 gdb。<br>类似的，还需要输入下面的命令安装 gdb:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ pacman -S mingw-w64-x86_64-gdb</span><br></pre></td></tr></tbody></table></figure>
-
-<p>然后在 VS Code 中搜索并安装 <code>C/C++ Runner</code> 插件。</p>
-<div class="note "><h4 id="安装-C-C-Runner-插件时其依赖项-CodeLLDB-无法安装的解决方案"><a href="#安装-C-C-Runner-插件时其依赖项-CodeLLDB-无法安装的解决方案" class="headerlink" title="安装 C/C++ Runner 插件时其依赖项 CodeLLDB 无法安装的解决方案"></a>安装 C/C++ Runner 插件时其依赖项 CodeLLDB 无法安装的解决方案</h4><p>按照右下角的提示手动下载 <code>codelldb-x86_64-windows.vsix</code> 文件。</p>
-<p>在 VS Code 中按下 <code>Ctrl + Shift + P</code>，输入 <code>install</code>，选择<code>从VSIX安装...</code>，选择上边下好的文件，等待安装完成。</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xSTBad.png"></p>
-</div>
-
-<p>安装完成后，左下角点击 <code>Select folder.</code>，选择当前文件夹。</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xSTRsS.png"></p>
-<p>然后按下小齿轮进行编译，按下三角形运行，设置好断点按下小虫子进行 Debug。</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xST4aj.png"></p>
-<h2 id="解决中文乱码问题"><a href="#解决中文乱码问题" class="headerlink" title="解决中文乱码问题"></a>解决中文乱码问题</h2><p><strong>2022 年 10 月 13 日更新：</strong></p>
-<p>参见我的另一篇文章：<a href="https://blocklune.github.io/posts/ca05bed5.html">《VS Code 中文乱码问题》</a></p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="https://zhuanlan.zhihu.com/p/112215618">国内下载 vscode 速度慢问题解决</a></li>
-<li>官方教程：<a href="https://code.visualstudio.com/docs/languages/cpp">C++ programming with Visual Studio Code</a></li>
-<li><a href="https://www.cnblogs.com/zychengzhiit1/p/5776962.html">windows 10 环境下 使用 msys2 + vs code 配置 c++ 的编译环境</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-        <tag>VS Code</tag>
       </tags>
   </entry>
   <entry>
@@ -3046,7 +3068,7 @@
 <p>To add the new user to sudoers, run the command below <strong>as <code>root</code></strong>:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">visudo</span><br></pre></td></tr></tbody></table></figure>
 
-<div class="note "><p>You may install <code>sudo</code> first. Run the command below <strong>as <code>root</code></strong>:</p>
+<div class="note success"><p>You may install <code>sudo</code> first. Run the command below <strong>as <code>root</code></strong>:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">apt install sudo</span><br></pre></td></tr></tbody></table></figure>
 </div>
 
@@ -3096,7 +3118,9 @@
 <h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><h3 id="Arch"><a href="#Arch" class="headerlink" title="Arch"></a>Arch</h3><p>In archlinux, I choose to use <code>yay</code>. Run the command below and keep hitting Enter.</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">yay -S joshuto</span><br></pre></td></tr></tbody></table></figure>
 
-<div class="note info"><p>How to install Yay from source?</p>
+<details class="note info"><summary><p>How to install Yay?</p>
+</summary>
+<p>How to install Yay from source?</p>
 <p>First, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo pacman -Sy --needed git base-devel</span><br></pre></td></tr></tbody></table></figure>
 
@@ -3108,7 +3132,8 @@
 
 <p>Finally, build it:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">makepkg -si</span><br></pre></td></tr></tbody></table></figure>
-</div>
+
+</details>
 
 <h3 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h3><p>You can install <code>joshuto</code> using <code>cargo</code>:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">cargo install --git https://github.com/kamiyaa/joshuto.git --force</span><br></pre></td></tr></tbody></table></figure>
@@ -3346,7 +3371,8 @@
 
 <p>The default file tree hotkey is <code>Alt + 1</code>. I add <code>Ctrl + Shift + E</code>.</p>
 <h2 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h2><h3 id="ImportError-when-I-try-to-install-ycm"><a href="#ImportError-when-I-try-to-install-ycm" class="headerlink" title="ImportError when I try to install ycm"></a>ImportError when I try to install ycm</h3><figure class="highlight txt"><table><tbody><tr><td class="code"><pre><span class="line">The ycmd server SHUT DOWN (restart with ':YcmRestartServer'). Unexpected error while loading the YCM core library. Type ':YcmToggleLogs &lt;...&gt;.log' to check the logs.</span><br></pre></td></tr></tbody></table></figure>
-<p>Log: </p>
+
+<p>Log:</p>
 <figure class="highlight txt"><table><tbody><tr><td class="code"><pre><span class="line">ImportError: /home/&lt;...&gt;/miniconda3/lib/libstdc++.so.6: version `GLIBCXX_3.4.30` not found (required by /home/&lt;...&gt;/.vim/plugged/YouCompleteMe/third_party/ycmd/ycm_core.cpython-311-x86_64-linux-gnu.so)</span><br></pre></td></tr></tbody></table></figure>
 
 <p>This is an issue caused by conda. You should run <code>install.py</code> using the system python, not the conda one. Learn more <a href="https://stackoverflow.com/questions/47667119/ycm-error-the-ycmd-server-shut-down-restart-wit-the-instructions-in-the-docu">here</a>.</p>
@@ -3502,9 +3528,9 @@
 <li><code>style</code></li>
 <li><code>test</code></li>
 </ol>
-<blockquote>
-<p>NOTE: the alias for <code>revert</code> type is <code>rev</code>, as otherwise it conflicts with the git command of the same name.<br>It will still generate a commit message in the format <code>revert: &lt;message&gt;</code></p>
-</blockquote>
+<div class="note primary"><p>NOTE: the alias for <code>revert</code> type is <code>rev</code>, as otherwise it conflicts with the git command of the same name.<br>It will still generate a commit message in the format <code>revert: &lt;message&gt;</code></p>
+</div>
+
 <table>
 <thead>
 <tr>
@@ -3589,17 +3615,18 @@
 <p>Press <code>Prefix</code> <code>f</code> to find a window by name (if we named our windows).</p>
 <p>Press <code>Prefix</code> <code>w</code> to display a visual menu of our windows so we can select the one we'd like.</p>
 <p>Press <code>Prefix</code> <code>&amp;</code> or type <code>exit</code> to close the current window.</p>
-<h3 id="Working-with-Panes"><a href="#Working-with-Panes" class="headerlink" title="Working with Panes"></a>Working with Panes</h3><div class="note info"><p><strong>What's the difference between panes and windows?</strong></p>
+<h3 id="Working-with-Panes"><a href="#Working-with-Panes" class="headerlink" title="Working with Panes"></a>Working with Panes</h3><details class="note info"><summary><p>Difference between panes and windows.</p>
+</summary>
+<p><strong>What's the difference between panes and windows?</strong></p>
 <p>ChatGPT:</p>
 <p>In tmux, panes and windows are two different concepts that refer to distinct components of the terminal multiplexer.</p>
 <ol>
-<li><p>Windows: In tmux, a window is a single "view" or "tab" within the session. Each window occupies the entire terminal screen and can hold one or more panes. Windows are independent entities that can be created, closed, and switched between. They are typically used to organize and manage different tasks or applications within a tmux session. You can think of windows as similar to tabs in a web browser or a terminal emulator.</p>
-</li>
-<li><p>Panes: A pane, on the other hand, is a subdivision of a window. It allows you to split a window into multiple resizable and scrollable regions. Each pane within a window can run its own command or application, effectively allowing you to work on multiple tasks simultaneously within a single window. Panes can be split both horizontally and vertically, and you can resize, rearrange, and interact with them independently.</p>
-</li>
+<li>Windows: In tmux, a window is a single "view" or "tab" within the session. Each window occupies the entire terminal screen and can hold one or more panes. Windows are independent entities that can be created, closed, and switched between. They are typically used to organize and manage different tasks or applications within a tmux session. You can think of windows as similar to tabs in a web browser or a terminal emulator.</li>
+<li>Panes: A pane, on the other hand, is a subdivision of a window. It allows you to split a window into multiple resizable and scrollable regions. Each pane within a window can run its own command or application, effectively allowing you to work on multiple tasks simultaneously within a single window. Panes can be split both horizontally and vertically, and you can resize, rearrange, and interact with them independently.</li>
 </ol>
 <p>To summarize, <strong>windows are the main containers that hold one or more panes, while panes are the subdivisions within a window where you can run different commands or applications.</strong> Windows provide a way to switch between different contexts or tasks, while panes enable multitasking within a single window.</p>
-</div>
+
+</details>
 
 <p><code>Prefix</code> <code>%</code> splits the current pane with horizontal layout.</p>
 <p><code>Prefix</code> <code>"</code> splits the current pane with vertical layout.</p>
@@ -5393,19 +5420,9 @@
 <figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(STUDENT a, STUDENT b)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">return</span> a.score &gt; b.score;</span><br><span class="line">    <span class="comment">// 表示排序完成后前一个元素比后一个元素大，即降序排序</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <p>输出和上边是一样的。</p>
-
-
-<article class="message message-immersive is-danger">
-<div class="message-body">
-<i class="fas fa-exclamation-triangle mr-2"></i><strong>注意</strong>
-
-<p>在 qsort 中，最后一个参数的函数的返回值应是一个有符号整型。在期望<strong>升序</strong>排序时，这个返回值应该指定为：<strong>第一个元素大于第二个元素，返回正数；</strong>第一个元素等于第二个元素，返回 0；第一个元素小于第二个元素，返回负数。</p>
+<div class="note warning"><p>在 qsort 中，最后一个参数的函数的返回值应是一个有符号整型。在期望<strong>升序</strong>排序时，这个返回值应该指定为：<strong>第一个元素大于第二个元素，返回正数；</strong>第一个元素等于第二个元素，返回 0；第一个元素小于第二个元素，返回负数。</p>
 <p>在 C++ STL 的 sort 中，最后一个参数的返回值应是一个布尔值。在期望<strong>升序</strong>排序时，这个返回值应该是 (第一个元素 &lt; 第二个元素) 的运算结果。</p>
-
-
 </div>
-</article>
-
 ]]></content>
       <categories>
         <category>CS</category>
@@ -5427,6 +5444,37 @@
 <p>本来以为结果为 3，但是实际跑了一下发现结果是 1。请教了一下大佬知道了这叫做或运算符（||）的短路运算。</p>
 <p>正常来说，或运算中只要有一个为真，结果就为真。所谓或的短路运算就是说，如果已经出现了真，那么后续的运算就不会进行了。以上面的题目为例就是，因为第一个 ++x 这个运算结果肯定为真，那么后面的另外两个 ++x 就不会运行。</p>
 <p>类似的，还有与（&amp;&amp;）的短路运算。正常来说，与运算中必须所有均为真，结果才为真。所以与的短路就是，如果前面的运算结果已经有假了，那么就可以确定这个与运算总体的结果为假，也就不会运行后边的运算了。</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C 语言中使用变量输出小数点位数</title>
+    <url>/posts/45e2d42.html</url>
+    <content><![CDATA[<p>这事儿要从一周前讲起，有人在群里问了这么一道题，要求用 C 实现：</p>
+<span id="more"></span>
+
+<blockquote>
+<p>习题 2-5 分数化小数（decimal）<br>输入正整数 a,b,c，输出 a/b 的小数形式，精确到小数点后 c 位。a,b&lt;=10^6，c&lt;=100。输入包含多组数据，结束标记为 a=b=c=0。<br>样例输入：<br>1 6 4<br>0 0 0<br>样例输出：<br>0.1667</p>
+</blockquote>
+<p>当时我做了个简化的版本 —— 最多处理 1000 组输入，并且 c 比较小（即不需要高精度）的情况的代码，主要是做一个字符串处理，来构造一个传给 <code>printf()</code> 的格式控制字符串，代码如下：</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span> <span class="comment">// 需要用到它的 itoa() 函数</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span> <span class="comment">// 用到strcat拼接字符数组，memset清空字符数组</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    <span class="comment">// 仅实现了最多有 1000 个输入的情况</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> a[<span class="number">1000</span>], b[<span class="number">1000</span>], c[<span class="number">1000</span>], cnt = <span class="number">0</span>;</span><br><span class="line">    <span class="type">double</span> ans[<span class="number">1000</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">if</span> (cnt == <span class="number">1000</span>)</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%u%u%u"</span>, &amp;a[i], &amp;b[i], &amp;c[i]);</span><br><span class="line">        cnt++;</span><br><span class="line">        <span class="keyword">if</span> (!(a[i] == <span class="number">0</span> &amp;&amp; b[i] == <span class="number">0</span> &amp;&amp; c[i] == <span class="number">0</span>))</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">if</span> (b[i] != <span class="number">0</span>)</span><br><span class="line">            {</span><br><span class="line">                ans[i] = a[i] * <span class="number">1.0</span> / b[i];</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; cnt - <span class="number">1</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="type">char</span> formatMsgP1[] = <span class="string">"%."</span>;</span><br><span class="line">        <span class="type">char</span> *formatMsgP2;</span><br><span class="line">        <span class="comment">// 根据位数动态确定 char 数组的大小</span></span><br><span class="line">        <span class="keyword">if</span> (c[i] &gt; <span class="number">99</span>)</span><br><span class="line">        {</span><br><span class="line">            formatMsgP2 = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">char</span>) * <span class="number">3</span>);</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (c[i] &gt; <span class="number">9</span>)</span><br><span class="line">        {</span><br><span class="line">            formatMsgP2 = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">char</span>) * <span class="number">2</span>);</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            formatMsgP2 = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">char</span>));</span><br><span class="line">        }</span><br><span class="line">        itoa(c[i], formatMsgP2, <span class="number">10</span>);</span><br><span class="line">        <span class="type">char</span> formatMsgP3[] = <span class="string">"lf\n"</span>;</span><br><span class="line">        <span class="type">char</span> formatMsg[<span class="number">20</span>];</span><br><span class="line">        <span class="built_in">strcat</span>(formatMsg, formatMsgP1);</span><br><span class="line">        <span class="built_in">strcat</span>(formatMsg, formatMsgP2);</span><br><span class="line">        <span class="built_in">strcat</span>(formatMsg, formatMsgP3);</span><br><span class="line">        <span class="built_in">printf</span>(formatMsg, ans[i]);</span><br><span class="line">        <span class="built_in">memset</span>(formatMsg, <span class="number">0</span>, <span class="keyword">sizeof</span>(formatMsg)); <span class="comment">// 清空数组</span></span><br><span class="line">        <span class="built_in">free</span>(formatMsgP2);                       <span class="comment">// 释放指针</span></span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这样的代码就比较麻烦，大量的代码都用在字符串拼接了。但今天看到一篇文章（<a href="https://mxte.cc/90.html">《使用变量设定小数点位数》</a>），才知道原来根本不需要那么麻烦。</p>
+<p>本来我的目标是构造这么一个格式控制字符串 <code>%.&lt;c&gt;lf</code>，其中 <code>&lt;c&gt;</code> 需要由用户输入。上边的思路就是输入数字之后用 <code>itoa()</code> 函数把输入的数字转成字符串，然后拼一拼。</p>
+<p>但实际上可以这样：</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"%.*lf"</span>, c[i], ans[i]);</span><br></pre></td></tr></tbody></table></figure>
+
+<p>使用 <code>*</code>，<code>printf()</code> 就知道了，需要去后边找这么一个参数。</p>
+<p>所以上边 <code>return 0;</code> 前面那个 <code>for</code> 里那么多东西都只要换成这一句就行了。</p>
+<p>下边贴出一个用动态数组实现的任意组数数据输入的代码（依然没有高精度，我不会啊）：</p>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">NUMS</span></span></span><br><span class="line"><span class="class">{</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> c;</span><br><span class="line">    <span class="type">double</span> ans;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">NUMS</span> *<span class="title">p</span> =</span> <span class="number">0</span>;</span><br><span class="line"><span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> size = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">append</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span>, <span class="type">double</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    <span class="type">int</span> a = <span class="number">0</span>, b = <span class="number">0</span>, c = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%u%u%u"</span>, &amp;a, &amp;b, &amp;c);</span><br><span class="line">        <span class="keyword">if</span> (a == <span class="number">0</span> &amp;&amp; b == <span class="number">0</span> &amp;&amp; c == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            <span class="type">double</span> tmp_ans = a * <span class="number">1.0</span> / b;</span><br><span class="line">            append(c, tmp_ans);</span><br><span class="line">        }</span><br><span class="line">    } <span class="keyword">while</span> (<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%.*lf\n"</span>, (p + i)-&gt;c, (p + i)-&gt;ans);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">append</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> _c, <span class="type">double</span> _ans)</span></span><br><span class="line">{</span><br><span class="line">    <span class="keyword">if</span> (p == <span class="number">0</span>)</span><br><span class="line">    {</span><br><span class="line">        p = <span class="built_in">calloc</span>(<span class="number">1</span>, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        p-&gt;c = _c;</span><br><span class="line">        p-&gt;ans = _ans;</span><br><span class="line">        size++;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">struct</span> NUMS *tmp = <span class="built_in">calloc</span>(size, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        <span class="built_in">memcpy</span>(tmp, p, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS) * size);</span><br><span class="line">        <span class="built_in">free</span>(p);</span><br><span class="line">        p = <span class="built_in">calloc</span>(size + <span class="number">1</span>, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        <span class="built_in">memcpy</span>(p, tmp, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS) * (size + <span class="number">1</span>));</span><br><span class="line">        (p + size)-&gt;c = _c;</span><br><span class="line">        (p + size)-&gt;ans = _ans;</span><br><span class="line">        size++;</span><br><span class="line">        <span class="built_in">free</span>(tmp);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 ]]></content>
       <categories>
         <category>CS</category>
@@ -5584,37 +5632,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C 语言中使用变量输出小数点位数</title>
-    <url>/posts/45e2d42.html</url>
-    <content><![CDATA[<p>这事儿要从一周前讲起，有人在群里问了这么一道题，要求用 C 实现：</p>
-<span id="more"></span>
-
-<blockquote>
-<p>习题 2-5 分数化小数（decimal）<br>输入正整数 a,b,c，输出 a/b 的小数形式，精确到小数点后 c 位。a,b&lt;=10^6，c&lt;=100。输入包含多组数据，结束标记为 a=b=c=0。<br>样例输入：<br>1 6 4<br>0 0 0<br>样例输出：<br>0.1667</p>
-</blockquote>
-<p>当时我做了个简化的版本 —— 最多处理 1000 组输入，并且 c 比较小（即不需要高精度）的情况的代码，主要是做一个字符串处理，来构造一个传给 <code>printf()</code> 的格式控制字符串，代码如下：</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span> <span class="comment">// 需要用到它的 itoa() 函数</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span> <span class="comment">// 用到strcat拼接字符数组，memset清空字符数组</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    <span class="comment">// 仅实现了最多有 1000 个输入的情况</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> a[<span class="number">1000</span>], b[<span class="number">1000</span>], c[<span class="number">1000</span>], cnt = <span class="number">0</span>;</span><br><span class="line">    <span class="type">double</span> ans[<span class="number">1000</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">if</span> (cnt == <span class="number">1000</span>)</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%u%u%u"</span>, &amp;a[i], &amp;b[i], &amp;c[i]);</span><br><span class="line">        cnt++;</span><br><span class="line">        <span class="keyword">if</span> (!(a[i] == <span class="number">0</span> &amp;&amp; b[i] == <span class="number">0</span> &amp;&amp; c[i] == <span class="number">0</span>))</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">if</span> (b[i] != <span class="number">0</span>)</span><br><span class="line">            {</span><br><span class="line">                ans[i] = a[i] * <span class="number">1.0</span> / b[i];</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; cnt - <span class="number">1</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="type">char</span> formatMsgP1[] = <span class="string">"%."</span>;</span><br><span class="line">        <span class="type">char</span> *formatMsgP2;</span><br><span class="line">        <span class="comment">// 根据位数动态确定 char 数组的大小</span></span><br><span class="line">        <span class="keyword">if</span> (c[i] &gt; <span class="number">99</span>)</span><br><span class="line">        {</span><br><span class="line">            formatMsgP2 = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">char</span>) * <span class="number">3</span>);</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (c[i] &gt; <span class="number">9</span>)</span><br><span class="line">        {</span><br><span class="line">            formatMsgP2 = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">char</span>) * <span class="number">2</span>);</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            formatMsgP2 = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">char</span>));</span><br><span class="line">        }</span><br><span class="line">        itoa(c[i], formatMsgP2, <span class="number">10</span>);</span><br><span class="line">        <span class="type">char</span> formatMsgP3[] = <span class="string">"lf\n"</span>;</span><br><span class="line">        <span class="type">char</span> formatMsg[<span class="number">20</span>];</span><br><span class="line">        <span class="built_in">strcat</span>(formatMsg, formatMsgP1);</span><br><span class="line">        <span class="built_in">strcat</span>(formatMsg, formatMsgP2);</span><br><span class="line">        <span class="built_in">strcat</span>(formatMsg, formatMsgP3);</span><br><span class="line">        <span class="built_in">printf</span>(formatMsg, ans[i]);</span><br><span class="line">        <span class="built_in">memset</span>(formatMsg, <span class="number">0</span>, <span class="keyword">sizeof</span>(formatMsg)); <span class="comment">// 清空数组</span></span><br><span class="line">        <span class="built_in">free</span>(formatMsgP2);                       <span class="comment">// 释放指针</span></span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这样的代码就比较麻烦，大量的代码都用在字符串拼接了。但今天看到一篇文章（<a href="https://mxte.cc/90.html">《使用变量设定小数点位数》</a>），才知道原来根本不需要那么麻烦。</p>
-<p>本来我的目标是构造这么一个格式控制字符串 <code>%.&lt;c&gt;lf</code>，其中 <code>&lt;c&gt;</code> 需要由用户输入。上边的思路就是输入数字之后用 <code>itoa()</code> 函数把输入的数字转成字符串，然后拼一拼。</p>
-<p>但实际上可以这样：</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"%.*lf"</span>, c[i], ans[i]);</span><br></pre></td></tr></tbody></table></figure>
-
-<p>使用 <code>*</code>，<code>printf()</code> 就知道了，需要去后边找这么一个参数。</p>
-<p>所以上边 <code>return 0;</code> 前面那个 <code>for</code> 里那么多东西都只要换成这一句就行了。</p>
-<p>下边贴出一个用动态数组实现的任意组数数据输入的代码（依然没有高精度，我不会啊）：</p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">NUMS</span></span></span><br><span class="line"><span class="class">{</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> c;</span><br><span class="line">    <span class="type">double</span> ans;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">NUMS</span> *<span class="title">p</span> =</span> <span class="number">0</span>;</span><br><span class="line"><span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> size = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">append</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span>, <span class="type">double</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    <span class="type">int</span> a = <span class="number">0</span>, b = <span class="number">0</span>, c = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%u%u%u"</span>, &amp;a, &amp;b, &amp;c);</span><br><span class="line">        <span class="keyword">if</span> (a == <span class="number">0</span> &amp;&amp; b == <span class="number">0</span> &amp;&amp; c == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            <span class="type">double</span> tmp_ans = a * <span class="number">1.0</span> / b;</span><br><span class="line">            append(c, tmp_ans);</span><br><span class="line">        }</span><br><span class="line">    } <span class="keyword">while</span> (<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%.*lf\n"</span>, (p + i)-&gt;c, (p + i)-&gt;ans);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">append</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> _c, <span class="type">double</span> _ans)</span></span><br><span class="line">{</span><br><span class="line">    <span class="keyword">if</span> (p == <span class="number">0</span>)</span><br><span class="line">    {</span><br><span class="line">        p = <span class="built_in">calloc</span>(<span class="number">1</span>, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        p-&gt;c = _c;</span><br><span class="line">        p-&gt;ans = _ans;</span><br><span class="line">        size++;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">struct</span> NUMS *tmp = <span class="built_in">calloc</span>(size, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        <span class="built_in">memcpy</span>(tmp, p, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS) * size);</span><br><span class="line">        <span class="built_in">free</span>(p);</span><br><span class="line">        p = <span class="built_in">calloc</span>(size + <span class="number">1</span>, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        <span class="built_in">memcpy</span>(p, tmp, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS) * (size + <span class="number">1</span>));</span><br><span class="line">        (p + size)-&gt;c = _c;</span><br><span class="line">        (p + size)-&gt;ans = _ans;</span><br><span class="line">        size++;</span><br><span class="line">        <span class="built_in">free</span>(tmp);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>The const and constexpr in C++ (REMAKE)</title>
     <url>/posts/3358bcc1.html</url>
     <content><![CDATA[<p>I have written a post about <code>const</code> in C++ in Chinese before, but <a href="https://blocklune.github.io/posts/7ec6ba38.html">it</a> was too verbose and unclear. :( So, I decided to rewrite it.</p>
@@ -5658,6 +5675,24 @@
       <tags>
         <tag>C/C++</tag>
         <tag>const</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Uses std::cin.ignore() to keep the user typing until the input meets the requirements</title>
+    <url>/posts/f96b3358.html</url>
+    <content><![CDATA[<p>I used to control users' input by making the input a string and process it later. But today, my friend posed this question to me: Can we control input without a char array or string class?</p>
+<span id="more"></span>
+
+<p>On <em><a href="https://en.cppreference.com/w/cpp/io/basic_istream/ignore">cppreference.com</a></em>, I found <code>std::cin.ignore()</code>. This function can help us solve the previous question. Here is an example:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;limits&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> n = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span> (<span class="literal">true</span>) {</span><br><span class="line">    std::cout &lt;&lt; <span class="string">"Please input a number: "</span>;</span><br><span class="line">    std::cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">if</span> (!std::cin.<span class="built_in">good</span>()) {</span><br><span class="line">      std::cerr &lt;&lt; <span class="string">"Error input."</span> &lt;&lt; std::endl;</span><br><span class="line">      std::cin.<span class="built_in">clear</span>();</span><br><span class="line">      std::cin.<span class="built_in">ignore</span>(std::numeric_limits&lt;std::streamsize&gt;::<span class="built_in">max</span>(), <span class="string">'\n'</span>);</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    } <span class="keyword">else</span> {</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  std::cout &lt;&lt; <span class="string">"Your input is: "</span> &lt;&lt; n &lt;&lt; std::endl;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
       </tags>
   </entry>
   <entry>
@@ -5775,24 +5810,6 @@
         <tag>const</tag>
         <tag>C &amp; C++</tag>
         <tag>CS106L</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Uses std::cin.ignore() to keep the user typing until the input meets the requirements</title>
-    <url>/posts/f96b3358.html</url>
-    <content><![CDATA[<p>I used to control users' input by making the input a string and process it later. But today, my friend posed this question to me: Can we control input without a char array or string class?</p>
-<span id="more"></span>
-
-<p>On <em><a href="https://en.cppreference.com/w/cpp/io/basic_istream/ignore">cppreference.com</a></em>, I found <code>std::cin.ignore()</code>. This function can help us solve the previous question. Here is an example:</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;limits&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> n = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span> (<span class="literal">true</span>) {</span><br><span class="line">    std::cout &lt;&lt; <span class="string">"Please input a number: "</span>;</span><br><span class="line">    std::cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">if</span> (!std::cin.<span class="built_in">good</span>()) {</span><br><span class="line">      std::cerr &lt;&lt; <span class="string">"Error input."</span> &lt;&lt; std::endl;</span><br><span class="line">      std::cin.<span class="built_in">clear</span>();</span><br><span class="line">      std::cin.<span class="built_in">ignore</span>(std::numeric_limits&lt;std::streamsize&gt;::<span class="built_in">max</span>(), <span class="string">'\n'</span>);</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    } <span class="keyword">else</span> {</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  std::cout &lt;&lt; <span class="string">"Your input is: "</span> &lt;&lt; n &lt;&lt; std::endl;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
       </tags>
   </entry>
   <entry>
@@ -5987,7 +6004,7 @@
       </tags>
   </entry>
   <entry>
-    <title>My personal summay of Stanford CS106L</title>
+    <title>My personal summary of Stanford CS106L</title>
     <url>/posts/b16dfec9.html</url>
     <content><![CDATA[<p>This is <a href="https://web.stanford.edu/class/cs106l/index.html">CS106L</a>, an in-depth modern C++ language course from Stanford. I enrolled in it at the beginning of April and almost finished it today.</p>
 <span id="more"></span>
@@ -6822,6 +6839,55 @@
       </tags>
   </entry>
   <entry>
+    <title>Permutations and Combinations in Python (itertools)</title>
+    <url>/posts/cf2f01b2.html</url>
+    <content><![CDATA[<p>Extracted from <em><a href="https://docs.python.org/3/library/itertools.html">itertools — Functions creating iterators for efficient looping — Python 3.11.3 documentation</a></em></p>
+<span id="more"></span>
+
+<h2 id="PERMUTATIONS"><a href="#PERMUTATIONS" class="headerlink" title="PERMUTATIONS"></a>PERMUTATIONS</h2><p><code>itertools.permutations(iterable, r=None)</code> returns successive <code>r</code> length permutations of elements in the iterable.</p>
+<p>If <code>r</code> is not specified or is <code>None</code>, then <code>r</code> defaults to the length of the iterable and all possible full-length permutations are generated.</p>
+<p><strong>Ex.1.</strong></p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> permutations</span><br><span class="line"></span><br><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> p <span class="keyword">in</span> permutations(a):</span><br><span class="line">  <span class="built_in">print</span>(p)</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<p>Output:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">(1, 2, 3)</span><br><span class="line">(1, 3, 2)</span><br><span class="line">(2, 1, 3)</span><br><span class="line">(2, 3, 1)</span><br><span class="line">(3, 1, 2)</span><br><span class="line">(3, 2, 1)</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>Ex.2.</strong></p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> permutations</span><br><span class="line"></span><br><span class="line">a = [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> p <span class="keyword">in</span> permutations(a, <span class="number">2</span>):</span><br><span class="line">  <span class="built_in">print</span>(p)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Output:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">('A', 'B')</span><br><span class="line">('A', 'C')</span><br><span class="line">('A', 'D')</span><br><span class="line">('B', 'A')</span><br><span class="line">('B', 'C')</span><br><span class="line">('B', 'D')</span><br><span class="line">('C', 'A')</span><br><span class="line">('C', 'B')</span><br><span class="line">('C', 'D')</span><br><span class="line">('D', 'A')</span><br><span class="line">('D', 'B')</span><br><span class="line">('D', 'C')</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Learn more <a href="https://docs.python.org/3/library/itertools.html#itertools.permutations">here</a></p>
+<h2 id="COMBINATIONS"><a href="#COMBINATIONS" class="headerlink" title="COMBINATIONS"></a>COMBINATIONS</h2><p>Notice: <code>r</code> is NOT optional. (Not like <code>permutations</code>)</p>
+<h3 id="WITH-NO-REPLACEMENTS"><a href="#WITH-NO-REPLACEMENTS" class="headerlink" title="WITH NO REPLACEMENTS"></a>WITH NO REPLACEMENTS</h3><p><code>itertools.combinations(iterable, r)</code> returns <code>r</code> length subsequences of elements from the input iterable.</p>
+<p><strong>Ex.</strong></p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> combinations</span><br><span class="line"></span><br><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> c <span class="keyword">in</span> combinations(a, <span class="number">2</span>):</span><br><span class="line">  <span class="built_in">print</span>(c)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Output:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">(1, 2)</span><br><span class="line">(1, 3)</span><br><span class="line">(2, 3)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Learn more <a href="https://docs.python.org/3/library/itertools.html#itertools.combinations">here</a></p>
+<h3 id="WITH-REPLACEMENTS"><a href="#WITH-REPLACEMENTS" class="headerlink" title="WITH REPLACEMENTS"></a>WITH REPLACEMENTS</h3><p><code>itertools.combinations_with_replacement(iterable, r)</code> returns <code>r</code> length subsequences of elements from the input iterable <strong>allowing individual elements to be repeated more than once</strong>.</p>
+<p><strong>Ex.</strong></p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> combinations_with_replacement</span><br><span class="line"></span><br><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> c_with_replacement <span class="keyword">in</span> combinations_with_replacement(a, <span class="number">2</span>):</span><br><span class="line">  <span class="built_in">print</span>(c_with_replacement)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Output:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">(1, 1)</span><br><span class="line">(1, 2)</span><br><span class="line">(1, 3)</span><br><span class="line">(2, 2)</span><br><span class="line">(2, 3)</span><br><span class="line">(3, 3)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Learn more <a href="https://docs.python.org/3/library/itertools.html#itertools.combinations_with_replacement">here</a></p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>itertools</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python libraries mentioned in CS50P</title>
     <url>/posts/22098b25.html</url>
     <content><![CDATA[<p>This is a list of some Python libraries mentioned in CS50P 2022.</p>
@@ -6884,55 +6950,6 @@
         <tag>Python</tag>
         <tag>CS50P</tag>
         <tag>pip</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Permutations and Combinations in Python (itertools)</title>
-    <url>/posts/cf2f01b2.html</url>
-    <content><![CDATA[<p>Extracted from <em><a href="https://docs.python.org/3/library/itertools.html">itertools — Functions creating iterators for efficient looping — Python 3.11.3 documentation</a></em></p>
-<span id="more"></span>
-
-<h2 id="PERMUTATIONS"><a href="#PERMUTATIONS" class="headerlink" title="PERMUTATIONS"></a>PERMUTATIONS</h2><p><code>itertools.permutations(iterable, r=None)</code> returns successive <code>r</code> length permutations of elements in the iterable.</p>
-<p>If <code>r</code> is not specified or is <code>None</code>, then <code>r</code> defaults to the length of the iterable and all possible full-length permutations are generated.</p>
-<p><strong>Ex.1.</strong></p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> permutations</span><br><span class="line"></span><br><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> p <span class="keyword">in</span> permutations(a):</span><br><span class="line">  <span class="built_in">print</span>(p)</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-
-<p>Output:</p>
-<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">(1, 2, 3)</span><br><span class="line">(1, 3, 2)</span><br><span class="line">(2, 1, 3)</span><br><span class="line">(2, 3, 1)</span><br><span class="line">(3, 1, 2)</span><br><span class="line">(3, 2, 1)</span><br></pre></td></tr></tbody></table></figure>
-
-<p><strong>Ex.2.</strong></p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> permutations</span><br><span class="line"></span><br><span class="line">a = [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> p <span class="keyword">in</span> permutations(a, <span class="number">2</span>):</span><br><span class="line">  <span class="built_in">print</span>(p)</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Output:</p>
-<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">('A', 'B')</span><br><span class="line">('A', 'C')</span><br><span class="line">('A', 'D')</span><br><span class="line">('B', 'A')</span><br><span class="line">('B', 'C')</span><br><span class="line">('B', 'D')</span><br><span class="line">('C', 'A')</span><br><span class="line">('C', 'B')</span><br><span class="line">('C', 'D')</span><br><span class="line">('D', 'A')</span><br><span class="line">('D', 'B')</span><br><span class="line">('D', 'C')</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Learn more <a href="https://docs.python.org/3/library/itertools.html#itertools.permutations">here</a></p>
-<h2 id="COMBINATIONS"><a href="#COMBINATIONS" class="headerlink" title="COMBINATIONS"></a>COMBINATIONS</h2><p>Notice: <code>r</code> is NOT optional. (Not like <code>permutations</code>)</p>
-<h3 id="WITH-NO-REPLACEMENTS"><a href="#WITH-NO-REPLACEMENTS" class="headerlink" title="WITH NO REPLACEMENTS"></a>WITH NO REPLACEMENTS</h3><p><code>itertools.combinations(iterable, r)</code> returns <code>r</code> length subsequences of elements from the input iterable.</p>
-<p><strong>Ex.</strong></p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> combinations</span><br><span class="line"></span><br><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> c <span class="keyword">in</span> combinations(a, <span class="number">2</span>):</span><br><span class="line">  <span class="built_in">print</span>(c)</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Output:</p>
-<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">(1, 2)</span><br><span class="line">(1, 3)</span><br><span class="line">(2, 3)</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Learn more <a href="https://docs.python.org/3/library/itertools.html#itertools.combinations">here</a></p>
-<h3 id="WITH-REPLACEMENTS"><a href="#WITH-REPLACEMENTS" class="headerlink" title="WITH REPLACEMENTS"></a>WITH REPLACEMENTS</h3><p><code>itertools.combinations_with_replacement(iterable, r)</code> returns <code>r</code> length subsequences of elements from the input iterable <strong>allowing individual elements to be repeated more than once</strong>.</p>
-<p><strong>Ex.</strong></p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> combinations_with_replacement</span><br><span class="line"></span><br><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> c_with_replacement <span class="keyword">in</span> combinations_with_replacement(a, <span class="number">2</span>):</span><br><span class="line">  <span class="built_in">print</span>(c_with_replacement)</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Output:</p>
-<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">(1, 1)</span><br><span class="line">(1, 2)</span><br><span class="line">(1, 3)</span><br><span class="line">(2, 2)</span><br><span class="line">(2, 3)</span><br><span class="line">(3, 3)</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Learn more <a href="https://docs.python.org/3/library/itertools.html#itertools.combinations_with_replacement">here</a></p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>itertools</tag>
       </tags>
   </entry>
   <entry>

@@ -30,7 +30,7 @@
 <meta property="og:description" content="虽然到现在还是不能完全理解 qsort 和 sort 这两个函数的底层原理，但至少，先学会如何使用吧。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-12-08T13:41:18.000Z">
-<meta property="article:modified_time" content="2024-02-02T12:41:52.553Z">
+<meta property="article:modified_time" content="2024-02-03T13:46:26.676Z">
 <meta property="article:author" content="BlockLune">
 <meta property="article:tag" content="C&#x2F;C++">
 <meta property="article:tag" content="Sorting">
@@ -351,19 +351,9 @@
 <figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(STUDENT a, STUDENT b)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">return</span> a.score &gt; b.score;</span><br><span class="line">    <span class="comment">// 表示排序完成后前一个元素比后一个元素大，即降序排序</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <p>输出和上边是一样的。</p>
-
-
-<article class="message message-immersive is-danger">
-<div class="message-body">
-<i class="fas fa-exclamation-triangle mr-2"></i><strong>注意</strong>
-
-<p>在 qsort 中，最后一个参数的函数的返回值应是一个有符号整型。在期望<strong>升序</strong>排序时，这个返回值应该指定为：<strong>第一个元素大于第二个元素，返回正数；</strong>第一个元素等于第二个元素，返回 0；第一个元素小于第二个元素，返回负数。</p>
+<div class="note warning"><p>在 qsort 中，最后一个参数的函数的返回值应是一个有符号整型。在期望<strong>升序</strong>排序时，这个返回值应该指定为：<strong>第一个元素大于第二个元素，返回正数；</strong>第一个元素等于第二个元素，返回 0；第一个元素小于第二个元素，返回负数。</p>
 <p>在 C++ STL 的 sort 中，最后一个参数的返回值应是一个布尔值。在期望<strong>升序</strong>排序时，这个返回值应该是 (第一个元素 &lt; 第二个元素) 的运算结果。</p>
-
-
 </div>
-</article>
-
 
     </div>
 
