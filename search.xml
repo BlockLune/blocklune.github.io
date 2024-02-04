@@ -3802,6 +3802,78 @@
       </tags>
   </entry>
   <entry>
+    <title>Introducing hexo-blockquote2note</title>
+    <url>/posts/55f9ebd1.html</url>
+    <content><![CDATA[<p>I use Hexo with the NexT theme to build my blog. I wrote this plugin to solve a pain point I've encountered in this workflow.</p>
+<span id="more"></span>
+
+<p>The note tag feature of the NexT theme helps me insert colorful note cards into my posts. However, it's not raw markdown syntax. It looks ugly when I open the raw markdown of my post in an editor.</p>
+<p>So I made <a href="https://github.com/BlockLune/hexo-blockquote2note">hexo-blockquote2note</a>. By using code comments, I can flag some quote blocks to be treated as the note tags, while still keeping them as normal quote blocks when I open the raw markdown in an outside editor.</p>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">npm install hexo-blockquote2note --save</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Examples-and-Previews"><a href="#Examples-and-Previews" class="headerlink" title="Examples and Previews"></a>Examples and Previews</h2><figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">&lt;!--blockquote2note--&gt;</span><br><span class="line">&gt; Welcome to using [hexo-blockquote2note](https://github.com/BlockLune/hexo-blockquote2note)!</span><br><span class="line">&lt;!--end-blockquote2note--&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<div class="note "><p>Welcome to using <a href="https://github.com/BlockLune/hexo-blockquote2note">hexo-blockquote2note</a>!</p>
+</div>
+
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">&lt;!--blockquote2note:default,,--&gt;</span><br><span class="line">&gt; Welcome to using [hexo-blockquote2note](https://github.com/BlockLune/hexo-blockquote2note)!</span><br><span class="line">&lt;!--end-blockquote2note--&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<div class="note default"><p>Welcome to using <a href="https://github.com/BlockLune/hexo-blockquote2note">hexo-blockquote2note</a>!</p>
+</div>
+
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">&lt;!--blockquote2note:primary,,--&gt;</span><br><span class="line">&gt; Welcome to using [hexo-blockquote2note](https://github.com/BlockLune/hexo-blockquote2note)!</span><br><span class="line">&lt;!--end-blockquote2note--&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<div class="note primary"><p>Welcome to using <a href="https://github.com/BlockLune/hexo-blockquote2note">hexo-blockquote2note</a>!</p>
+</div>
+
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">&lt;!--blockquote2note:info,,--&gt;</span><br><span class="line">&gt; Welcome to using [hexo-blockquote2note](https://github.com/BlockLune/hexo-blockquote2note)!</span><br><span class="line">&lt;!--end-blockquote2note--&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<div class="note info"><p>Welcome to using <a href="https://github.com/BlockLune/hexo-blockquote2note">hexo-blockquote2note</a>!</p>
+</div>
+
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">&lt;!--blockquote2note:success,,--&gt;</span><br><span class="line">&gt; Welcome to using [hexo-blockquote2note](https://github.com/BlockLune/hexo-blockquote2note)!</span><br><span class="line">&lt;!--end-blockquote2note--&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<div class="note success"><p>Welcome to using <a href="https://github.com/BlockLune/hexo-blockquote2note">hexo-blockquote2note</a>!</p>
+</div>
+
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">&lt;!--blockquote2note:warning,,--&gt;</span><br><span class="line">&gt; Welcome to using [hexo-blockquote2note](https://github.com/BlockLune/hexo-blockquote2note)!</span><br><span class="line">&lt;!--end-blockquote2note--&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<div class="note warning"><p>Welcome to using <a href="https://github.com/BlockLune/hexo-blockquote2note">hexo-blockquote2note</a>!</p>
+</div>
+
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">&lt;!--blockquote2note:danger,,--&gt;</span><br><span class="line">&gt; Welcome to using [hexo-blockquote2note](https://github.com/BlockLune/hexo-blockquote2note)!</span><br><span class="line">&lt;!--end-blockquote2note--&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<div class="note danger"><p>Welcome to using <a href="https://github.com/BlockLune/hexo-blockquote2note">hexo-blockquote2note</a>!</p>
+</div>
+
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">&lt;!--blockquote2note:default,no-icon,--&gt;</span><br><span class="line">&gt; Welcome to using [hexo-blockquote2note](https://github.com/BlockLune/hexo-blockquote2note)!</span><br><span class="line">&lt;!--end-blockquote2note--&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<div class="note default no-icon"><p>Welcome to using <a href="https://github.com/BlockLune/hexo-blockquote2note">hexo-blockquote2note</a>!</p>
+</div>
+
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">&lt;!--blockquote2note:default,no-icon,--&gt;</span><br><span class="line">&gt; #### Header</span><br><span class="line">&gt; Welcome to using [hexo-blockquote2note](https://github.com/BlockLune/hexo-blockquote2note)!</span><br><span class="line">&lt;!--end-blockquote2note--&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<div class="note default no-icon"><h4 id="Header"><a href="#Header" class="headerlink" title="Header"></a>Header</h4><p>Welcome to using <a href="https://github.com/BlockLune/hexo-blockquote2note">hexo-blockquote2note</a>!</p>
+</div>
+
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">&lt;!--blockquote2note:default,no-icon,This is a summary--&gt;</span><br><span class="line">&gt; Welcome to using [hexo-blockquote2note](https://github.com/BlockLune/hexo-blockquote2note)!</span><br><span class="line">&lt;!--end-blockquote2note--&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<details class="note default no-icon"><summary><p>This is a summary</p>
+</summary>
+<p>Welcome to using <a href="https://github.com/BlockLune/hexo-blockquote2note">hexo-blockquote2note</a>!</p>
+
+</details>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Plugin</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Set up a blog with Hexo</title>
     <url>/posts/4ef0ac98.html</url>
     <content><![CDATA[<p>This is a simple record of my other trial to set up a blog with Hexo. I have built one on GitHub Page before, using Hexo with Icarus theme. This time, I want to try something else. I also cleaned my old blog and selectively migrated some old posts here.</p>
@@ -3946,8 +4018,8 @@
         <category>Web</category>
       </categories>
       <tags>
-        <tag>Web</tag>
         <tag>Hexo</tag>
+        <tag>Web</tag>
       </tags>
   </entry>
   <entry>
