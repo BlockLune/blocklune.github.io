@@ -9,8 +9,43 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Sun, 04 Feb 2024 10:25:58 GMT</pubDate>
+    <pubDate>Thu, 08 Feb 2024 06:17:10 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Testing Typescript project with Mocha and Istanbul NYC</title>
+      <link>https://fishg.top/posts/402d9408.html</link>
+      <guid>https://fishg.top/posts/402d9408.html</guid>
+      <pubDate>Thu, 08 Feb 2024 04:00:07 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;a href=&quot;https://mochajs.org/&quot;&gt;Mocha&lt;/a&gt; is a popular JS test framework, and &lt;a href=&quot;https://istanbul.js.org/&quot;&gt;Istanbul&lt;/a&gt; is a popular JS test coverage tool. How to use them when it comes to Typescript? This post shows a simple demo.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://fishg.top/categories/cs/">CS</category>
+      
+      <category domain="https://fishg.top/categories/cs/web/">Web</category>
+      
+      
+      <category domain="https://fishg.top/tags/chai/">Chai</category>
+      
+      <category domain="https://fishg.top/tags/istanbul-nyc/">Istanbul NYC</category>
+      
+      <category domain="https://fishg.top/tags/mocha/">Mocha</category>
+      
+      <category domain="https://fishg.top/tags/ts/">TS</category>
+      
+      <category domain="https://fishg.top/tags/test-first-programming/">Test First Programming</category>
+      
+      <category domain="https://fishg.top/tags/typescript/">Typescript</category>
+      
+      <category domain="https://fishg.top/tags/tsx/">tsx</category>
+      
+      
+      <comments>https://fishg.top/posts/402d9408.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Introducing hexo-blockquote2note</title>

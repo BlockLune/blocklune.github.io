@@ -4023,6 +4023,95 @@
       </tags>
   </entry>
   <entry>
+    <title>Testing Typescript project with Mocha and Istanbul NYC</title>
+    <url>/posts/402d9408.html</url>
+    <content><![CDATA[<p><a href="https://mochajs.org/">Mocha</a> is a popular JS test framework, and <a href="https://istanbul.js.org/">Istanbul</a> is a popular JS test coverage tool. How to use them when it comes to Typescript? This post shows a simple demo.</p>
+<span id="more"></span>
+
+<h2 id="Creating-a-basic-TS-Project"><a href="#Creating-a-basic-TS-Project" class="headerlink" title="Creating a basic TS Project"></a>Creating a basic TS Project</h2><p>Let's create a very basic Typescript project as our demo.</p>
+<p>First, create a directory to store this project:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> ts_mocha_nyc_demo</span><br><span class="line"><span class="built_in">cd</span> ts_mocha_nyc_demo</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Initialize this directory as a new npm project with the command below, which generates a <code>package.json</code> file with default configuration.</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">npm init -y</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Then, install Typescript in this npm project:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">npm install --save-dev typescript</span><br><span class="line">npm install --save-dev @types/node <span class="comment"># you may also need this</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>Initialize Typescript with the command below, which generates a <code>tsconfig.json</code> file with default configuration.</p>
+<figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line">tsc --init</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Finally, write some code for testing later.</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> src &amp;&amp; <span class="built_in">touch</span> src/divide.ts</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Edit <code>src/divide.ts</code>:</p>
+<figure class="highlight ts"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> divide = (<span class="attr">a</span>: <span class="built_in">number</span>, <span class="attr">b</span>: <span class="built_in">number</span>): <span class="function"><span class="params">number</span> =&gt;</span> {</span><br><span class="line">  <span class="keyword">if</span> (b === <span class="number">0</span>) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">"The divisor cannot be 0"</span>);</span><br><span class="line">  <span class="keyword">return</span> a / b;</span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Setting-up-Mocha-and-Run-Test"><a href="#Setting-up-Mocha-and-Run-Test" class="headerlink" title="Setting up Mocha and Run Test"></a>Setting up Mocha and Run Test</h2><h3 id="Installing-Chai-and-Mocha"><a href="#Installing-Chai-and-Mocha" class="headerlink" title="Installing Chai and Mocha"></a>Installing Chai and Mocha</h3><p><a href="https://www.chaijs.com/">Chai</a> is an assertion library working well with Mocha. We often use them together.</p>
+<p>To install Chai, Mocha, and their type definitions, run the following commands:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">npm install --save-dev chai @types/chai</span><br><span class="line">npm install --save-dev mocha @types/mocha</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Writing-Test-Code"><a href="#Writing-Test-Code" class="headerlink" title="Writing Test Code"></a>Writing Test Code</h3><p>Create a <code>test</code> directory and create a <code>divide.test.ts</code> for testing <code>divide.ts</code>:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> <span class="built_in">test</span> &amp;&amp; <span class="built_in">touch</span> <span class="built_in">test</span>/divide.test.ts</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Edit <code>test/divide.test.ts</code>:</p>
+<figure class="highlight ts"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> { assert, expect } <span class="keyword">from</span> <span class="string">"chai"</span>;</span><br><span class="line"><span class="keyword">import</span> { divide } <span class="keyword">from</span> <span class="string">"../src/divide"</span>;</span><br><span class="line"></span><br><span class="line"><span class="title function_">describe</span>(<span class="string">"Division Test"</span>, <span class="function">() =&gt;</span> {</span><br><span class="line">  <span class="title function_">it</span>(<span class="string">"should return 2 when divide(4, 2) called"</span>, <span class="function">() =&gt;</span> {</span><br><span class="line">    <span class="keyword">const</span> actualResult = <span class="title function_">divide</span>(<span class="number">4</span>, <span class="number">2</span>);</span><br><span class="line">    <span class="keyword">const</span> expectedResult = <span class="number">2</span>;</span><br><span class="line">    assert.<span class="title function_">strictEqual</span>(actualResult, expectedResult);</span><br><span class="line">  });</span><br><span class="line"></span><br><span class="line">  <span class="title function_">it</span>(<span class="string">"should throw error when divide(4, 0) called"</span>, <span class="function">() =&gt;</span> {</span><br><span class="line">    <span class="title function_">expect</span>(<span class="function">() =&gt;</span> {</span><br><span class="line">      <span class="title function_">divide</span>(<span class="number">4</span>, <span class="number">0</span>);</span><br><span class="line">    }).<span class="property">to</span>.<span class="keyword">throw</span>(<span class="title class_">Error</span>, <span class="string">"The divisor cannot be 0"</span>);</span><br><span class="line">  });</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Running-Test"><a href="#Running-Test" class="headerlink" title="Running Test"></a>Running Test</h3><p>Note that mocha is natively a JS test framework, and we need to configure it before we can test TS code with it.</p>
+<p>First, install <code>cross-env</code> and <code>tsx</code>:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">npm install --save-dev cross-env tsx</span><br></pre></td></tr></tbody></table></figure>
+
+<div class="note info no-icon"><p><a href="https://www.npmjs.com/package/cross-env">cross-env</a> is a useful tool for setting environment variables across platforms.</p>
+</div>
+
+<div class="note warning no-icon"><p>I tried <a href="https://github.com/TypeStrong/ts-node">ts-node</a> just like the <a href="https://github.com/mochajs/mocha-examples/tree/master/packages/typescript">example</a> provided by Mocha but I encountered an <code>ERR_UNKNOWN_FILE_EXTENSION</code> like <a href="https://github.com/TypeStrong/ts-node/issues/1997">this</a>. Finally I use <a href="https://github.com/privatenumber/tsx">tsx</a> and it works.</p>
+</div>
+
+<p>Update <code>package.json</code> to be like this:</p>
+<figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line"><span class="punctuation">{</span></span><br><span class="line">  ...</span><br><span class="line">  <span class="attr">"scripts"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"test"</span><span class="punctuation">:</span> <span class="string">"cross-env NODE_OPTIONS='--import tsx' mocha 'test/**/*.test.ts'"</span></span><br><span class="line">  <span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line">  ...</span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>Now, you can run test by running the command below:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">npm <span class="built_in">test</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>You will see output like:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line"></span><br><span class="line">&gt; ts_mocha_nyc_demo@1.0.0 test</span><br><span class="line">&gt; cross-env NODE_OPTIONS='--import tsx' mocha 'test/**/*.test.ts'</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  Division Test</span><br><span class="line">    ✔ should return 2 when divide(4, 2) called</span><br><span class="line">    ✔ should throw error when divide(4, 0) called</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  2 passing (3ms)</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Setting-up-Istanbul-NYC-and-Run-Coverage-Test"><a href="#Setting-up-Istanbul-NYC-and-Run-Coverage-Test" class="headerlink" title="Setting up Istanbul NYC and Run Coverage Test"></a>Setting up Istanbul NYC and Run Coverage Test</h2><h3 id="Installing-Istanbul-NYC"><a href="#Installing-Istanbul-NYC" class="headerlink" title="Installing Istanbul NYC"></a>Installing Istanbul NYC</h3><p>To install Istanbul NYC, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">npm install --save-dev nyc @istanbuljs/nyc-config-typescript</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Configuring-Istanbul-NYC"><a href="#Configuring-Istanbul-NYC" class="headerlink" title="Configuring Istanbul NYC"></a>Configuring Istanbul NYC</h3><p>Create a <code>.nycrc.json</code> and edit:</p>
+<figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line"><span class="punctuation">{</span></span><br><span class="line">  <span class="attr">"extends"</span><span class="punctuation">:</span> <span class="string">"@istanbuljs/nyc-config-typescript"</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"include"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">"src/**/*.ts"</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"exclude"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">"test/**/*.test.ts"</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"reporter"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">"html"</span><span class="punctuation">,</span> <span class="string">"text"</span><span class="punctuation">,</span> <span class="string">"text-summary"</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"report-dir"</span><span class="punctuation">:</span> <span class="string">"coverage"</span></span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Running-Coverage-Test"><a href="#Running-Coverage-Test" class="headerlink" title="Running Coverage Test"></a>Running Coverage Test</h3><p>Update <code>package.json</code>:</p>
+<figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line"><span class="punctuation">{</span></span><br><span class="line">  ...</span><br><span class="line">  <span class="attr">"scripts"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"coverage"</span><span class="punctuation">:</span> <span class="string">"nyc npm test"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"test"</span><span class="punctuation">:</span> <span class="string">"cross-env NODE_OPTIONS='--import tsx' mocha 'test/**/*.test.ts'"</span></span><br><span class="line">  <span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line">  ...</span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>Run the coverage test with:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">npm run coverage</span><br></pre></td></tr></tbody></table></figure>
+
+<p>The output may be:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line"></span><br><span class="line">&gt; ts_mocha_nyc_demo@1.0.0 coverage</span><br><span class="line">&gt; nyc npm test</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt; ts_mocha_nyc_demo@1.0.0 test</span><br><span class="line">&gt; cross-env NODE_OPTIONS='--import tsx' mocha 'test/**/*.test.ts'</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  Division Test</span><br><span class="line">    ✔ should return 2 when divide(4, 2) called</span><br><span class="line">    ✔ should throw error when divide(4, 0) called</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  2 passing (2ms)</span><br><span class="line"></span><br><span class="line">-----------|---------|----------|---------|---------|-------------------</span><br><span class="line">File       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s</span><br><span class="line">-----------|---------|----------|---------|---------|-------------------</span><br><span class="line">All files  |     100 |    85.71 |     100 |     100 |</span><br><span class="line"> divide.ts |     100 |    85.71 |     100 |     100 | 1</span><br><span class="line">-----------|---------|----------|---------|---------|-------------------</span><br><span class="line"></span><br><span class="line">=============================== Coverage summary ===============================</span><br><span class="line">Statements   : 100% ( 5/5 )</span><br><span class="line">Branches     : 85.71% ( 6/7 )</span><br><span class="line">Functions    : 100% ( 2/2 )</span><br><span class="line">Lines        : 100% ( 3/3 )</span><br><span class="line">================================================================================</span><br></pre></td></tr></tbody></table></figure>
+
+<p>You can also see the result in a web ui by opening <code>./coverage/index.html</code>.</p>
+<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ul>
+<li><em><a href="https://www.testim.io/blog/mocha-for-typescript-testing/">Mocha for TypeScript Testing: How to Get Started - Testim Blog</a></em></li>
+<li><em><a href="https://medium.com/@ocnvn/test-coverage-report-in-typescript-with-mocha-and-nyc-a6b10cbec24">Test coverage report in Typescript with Mocha and NYC | by Carlos Lucero | Medium</a></em></li>
+</ul>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Chai</tag>
+        <tag>Istanbul NYC</tag>
+        <tag>Mocha</tag>
+        <tag>TS</tag>
+        <tag>Test First Programming</tag>
+        <tag>Typescript</tag>
+        <tag>tsx</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Two Way Binding in Vue3</title>
     <url>/posts/8fc81ed9.html</url>
     <content><![CDATA[<p>A simple two way binding example in vue3.</p>
