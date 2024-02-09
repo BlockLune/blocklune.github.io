@@ -327,7 +327,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Notes for Machine Learning Specialization: More numerically accurate code examples</title>
+    <title>Notes for Machine Learning Specialization: More Numerically Accurate Code Examples</title>
     <url>/posts/44801878.html</url>
     <content><![CDATA[<p>This is a note for the <a href="https://www.coursera.org/specializations/machine-learning-introduction">Machine Learning Specialization</a>.</p>
 <span id="more"></span>
@@ -926,7 +926,7 @@
       </tags>
   </entry>
   <entry>
-    <title>My personal summary of Algorithms, Part I on Coursera</title>
+    <title>My Personal Summary of Algorithms, Part I on Coursera</title>
     <url>/posts/94efd546.html</url>
     <content><![CDATA[<p>As the title says, this is my personal summary of <a href="https://www.coursera.org/learn/algorithms-part1">Algorithms, Part I</a> on <a href="https://www.coursera.org/">Coursera</a>.</p>
 <span id="more"></span>
@@ -2522,7 +2522,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Package managers in Linux (To be continued)</title>
+    <title>Package Managers in Linux (To Be Continued)</title>
     <url>/posts/4ee6ac78.html</url>
     <content><![CDATA[<p>This post tries to simply introduce some package managers and their basic usage.</p>
 <span id="more"></span>
@@ -2585,7 +2585,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Replace cat with bat</title>
+    <title>Replace Cat With Bat</title>
     <url>/posts/e7bc2e88.html</url>
     <content><![CDATA[<p>When using Linux, I often use <code>cat</code> to browse some short codes. But it doesn't support syntax highlighting originally. So, I found one of its replacements: <code>bat</code>.</p>
 <span id="more"></span>
@@ -2633,7 +2633,7 @@
       </tags>
   </entry>
   <entry>
-    <title>The chmod command in Linux</title>
+    <title>The Chmod Command in Linux</title>
     <url>/posts/a9dc5c1e.html</url>
     <content><![CDATA[<p>I accidentally ran a wrong <code>chmod</code> command in my Linux, and it messed up everything! I hate the permission management in Linux. :|</p>
 <span id="more"></span>
@@ -2853,7 +2853,7 @@
       </tags>
   </entry>
   <entry>
-    <title>A very interesting VimGolf</title>
+    <title>A Very Interesting VimGolf</title>
     <url>/posts/6023bfa0.html</url>
     <content><![CDATA[<p><a href="https://www.vimgolf.com/">VimGolf.com</a> is a good place for vimers to practice and improve their vim skills. This post records my experience of solving a very interesting VimGolf game -- <a href="https://www.vimgolf.com/challenges/9v00651eb20100000000025b">Quicksort</a>.</p>
 <span id="more"></span>
@@ -2995,7 +2995,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Better right-click menu in Win11</title>
+    <title>Better Right-Click Menu in Win11</title>
     <url>/posts/798c36fc.html</url>
     <content><![CDATA[<p>When the Windows system was updated to version 11, the right-click menu was completely redesigned. Microsoft is apparently trying to make it simpler and more modern, but the way they have chosen to do it is really brute force: hiding everything useful in the secondary menu! I find this really annoying. Luckily, we have a way to bring back the classic, and even customize it and make it better! (This post is in Chinese.)</p>
 <span id="more"></span>
@@ -3107,7 +3107,7 @@
       </categories>
   </entry>
   <entry>
-    <title>joshuto: A great file manager in terminal</title>
+    <title>Joshuto: A Great File Manager in Terminal</title>
     <url>/posts/348795e3.html</url>
     <content><![CDATA[<p>When in a terminal, sometimes it's really annoying to keep on typing in <code>cd</code> or something else to browse the files and directories. Can we do it just like what we do in GUI? Then joshuto may be helpful to you.</p>
 <span id="more"></span>
@@ -3187,7 +3187,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Matching IPv4 addresses with RegExp</title>
+    <title>Matching IPv4 Addresses With RegExp</title>
     <url>/posts/1d74bec6.html</url>
     <content><![CDATA[<p>While solving <a href="https://cs50.harvard.edu/python/2022/psets/7/numb3rs/">the NUM3RS problem of CS50P</a>, I was asked to match IPv4 addresses with RegExp.</p>
 <span id="more"></span>
@@ -3567,7 +3567,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Notes for 《tmux Productive Mouse-Free Development》</title>
+    <title>Notes for 《Tmux Productive Mouse-Free Development》</title>
     <url>/posts/53957db4.html</url>
     <content><![CDATA[<p>Notes for <em>tmux Productive Mouse-Free Development</em> written by Brian P. Hogan.</p>
 <span id="more"></span>
@@ -3802,7 +3802,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Introducing hexo-blockquote2note</title>
+    <title>Introducing Hexo-Blockquote2note</title>
     <url>/posts/55f9ebd1.html</url>
     <content><![CDATA[<p>I use Hexo with the NexT theme to build my blog. I wrote this plugin to solve a pain point I've encountered in this workflow.</p>
 <span id="more"></span>
@@ -3874,7 +3874,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Set up a blog with Hexo</title>
+    <title>Set Up a Blog With Hexo</title>
     <url>/posts/4ef0ac98.html</url>
     <content><![CDATA[<p>This is a simple record of my other trial to set up a blog with Hexo. I have built one on GitHub Page before, using Hexo with Icarus theme. This time, I want to try something else. I also cleaned my old blog and selectively migrated some old posts here.</p>
 <span id="more"></span>
@@ -4023,7 +4023,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Testing Typescript project with Mocha and Istanbul NYC</title>
+    <title>Testing Typescript Project With Mocha and Istanbul NYC</title>
     <url>/posts/402d9408.html</url>
     <content><![CDATA[<p><a href="https://mochajs.org/">Mocha</a> is a popular JS test framework, and <a href="https://istanbul.js.org/">Istanbul</a> is a popular JS test coverage tool. How to use them when it comes to Typescript? This post shows a simple demo.</p>
 <span id="more"></span>
@@ -5404,7 +5404,7 @@
       </tags>
   </entry>
   <entry>
-    <title>C++ const 用法汇总</title>
+    <title>C++ Const 用法汇总</title>
     <url>/posts/7ec6ba38.html</url>
     <content><![CDATA[<p>最开始只是用 const 来定义常量，学到了指针传参的时候又知道了用 const 来防止一些值的修改，学到类的时候又看到非静态成员函数后边加个 const 来干嘛干嘛，然后么又听说什么顶层 const、底层 const... 真是越学越迷糊了，赶紧做一波整理。</p>
 <span id="more"></span>
@@ -5470,7 +5470,7 @@
       </tags>
   </entry>
   <entry>
-    <title>C++ 中 cin 与 cout 的转进制输入输出</title>
+    <title>C++ 中 Cin 与 Cout 的转进制输入输出</title>
     <url>/posts/9e863176.html</url>
     <content><![CDATA[<p>笔者的朋友有道输入八进制输出十进制的题目，他是使用数学方法实现的。笔者隐隐约约记得好像 cin 和 cout 有控制输入输出数字进制的方法，查找了一些资料，做一下笔记。</p>
 <span id="more"></span>
@@ -5518,7 +5518,7 @@
       </tags>
   </entry>
   <entry>
-    <title>C 标准库中 qsort 和 C++ STL 中 sort 的用法</title>
+    <title>C 标准库中 Qsort 和 C++ STL 中 Sort 的用法</title>
     <url>/posts/eab95d6e.html</url>
     <content><![CDATA[<p>虽然到现在还是不能完全理解 <code>qsort</code> 和 <code>sort</code> 这两个函数的底层原理，但至少，先学会如何使用吧。</p>
 <span id="more"></span>
@@ -5793,7 +5793,7 @@
       </tags>
   </entry>
   <entry>
-    <title>The const and constexpr in C++ (REMAKE)</title>
+    <title>The Const and Constexpr in C++ (REMAKE)</title>
     <url>/posts/3358bcc1.html</url>
     <content><![CDATA[<p>I have written a post about <code>const</code> in C++ in Chinese before, but <a href="https://blocklune.github.io/posts/7ec6ba38.html">it</a> was too verbose and unclear. :( So, I decided to rewrite it.</p>
 <span id="more"></span>
@@ -5839,7 +5839,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Uses std::cin.ignore() to keep the user typing until the input meets the requirements</title>
+    <title>Uses std::cin.ignore() to Keep the User Typing Until the Input Meets the Requirements</title>
     <url>/posts/f96b3358.html</url>
     <content><![CDATA[<p>I used to control users' input by making the input a string and process it later. But today, my friend posed this question to me: Can we control input without a char array or string class?</p>
 <span id="more"></span>
@@ -5974,7 +5974,7 @@
       </tags>
   </entry>
   <entry>
-    <title>error: summary string parsing error 错误解决方法</title>
+    <title>Error: Summary String Parsing Error 错误解决方法</title>
     <url>/posts/78dc947f.html</url>
     <content><![CDATA[<p>直接先说解决方法：在使用 clang 工具链进行编译的时候，添加编译选项 <code>-fstandalone-debug</code>。</p>
 <span id="more"></span>
@@ -6165,7 +6165,7 @@
       </tags>
   </entry>
   <entry>
-    <title>My personal summary of Stanford CS106L</title>
+    <title>My Personal Summary of Stanford CS106L</title>
     <url>/posts/b16dfec9.html</url>
     <content><![CDATA[<p>This is <a href="https://web.stanford.edu/class/cs106l/index.html">CS106L</a>, an in-depth modern C++ language course from Stanford. I enrolled in it at the beginning of April and almost finished it today.</p>
 <span id="more"></span>
@@ -6189,7 +6189,7 @@
       </tags>
   </entry>
   <entry>
-    <title>static_cast and const_cast in C++</title>
+    <title>Static_cast and Const_cast in C++</title>
     <url>/posts/f5746381.html</url>
     <content><![CDATA[<p>This is a note for Lecture 8, <a href="https://web.stanford.edu/class/cs106l/index.html">CS106L</a>, Spring 2023.</p>
 <span id="more"></span>
@@ -6226,7 +6226,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Type Safety and std::optional in C++</title>
+    <title>Type Safety and Std::optional in C++</title>
     <url>/posts/ab76f233.html</url>
     <content><![CDATA[<p>This is a note for Lecture 14, <a href="https://web.stanford.edu/class/cs106l/index.html">CS106L</a>, Spring 2023.</p>
 <span id="more"></span>
@@ -6678,7 +6678,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Useful packages in Java</title>
+    <title>Useful Packages in Java</title>
     <url>/posts/a4746c9.html</url>
     <content><![CDATA[<p>A simple conclusion of some useful packages in java.</p>
 <span id="more"></span>
@@ -7000,7 +7000,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Permutations and Combinations in Python (itertools)</title>
+    <title>Permutations and Combinations in Python (Itertools)</title>
     <url>/posts/cf2f01b2.html</url>
     <content><![CDATA[<p>Extracted from <em><a href="https://docs.python.org/3/library/itertools.html">itertools — Functions creating iterators for efficient looping — Python 3.11.3 documentation</a></em></p>
 <span id="more"></span>
@@ -7049,7 +7049,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Python libraries mentioned in CS50P</title>
+    <title>Python Libraries Mentioned in CS50P</title>
     <url>/posts/22098b25.html</url>
     <content><![CDATA[<p>This is a list of some Python libraries mentioned in CS50P 2022.</p>
 <span id="more"></span>
@@ -7203,7 +7203,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Simple Git Tutorial: Working with Remote Server</title>
+    <title>Simple Git Tutorial: Working With Remote Server</title>
     <url>/posts/85390c91.html</url>
     <content><![CDATA[<p>Use remote servers to work with collaborators better.</p>
 <span id="more"></span>

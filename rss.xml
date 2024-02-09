@@ -9,11 +9,11 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Thu, 08 Feb 2024 06:17:10 GMT</pubDate>
+    <pubDate>Thu, 08 Feb 2024 04:00:07 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>Testing Typescript project with Mocha and Istanbul NYC</title>
+      <title>Testing Typescript Project With Mocha and Istanbul NYC</title>
       <link>https://fishg.top/posts/402d9408.html</link>
       <guid>https://fishg.top/posts/402d9408.html</guid>
       <pubDate>Thu, 08 Feb 2024 04:00:07 GMT</pubDate>
@@ -48,7 +48,7 @@
     </item>
     
     <item>
-      <title>Introducing hexo-blockquote2note</title>
+      <title>Introducing Hexo-Blockquote2note</title>
       <link>https://fishg.top/posts/55f9ebd1.html</link>
       <guid>https://fishg.top/posts/55f9ebd1.html</guid>
       <pubDate>Sun, 04 Feb 2024 09:54:49 GMT</pubDate>
@@ -73,7 +73,7 @@
     </item>
     
     <item>
-      <title>Simple Git Tutorial: Working with Remote Server</title>
+      <title>Simple Git Tutorial: Working With Remote Server</title>
       <link>https://fishg.top/posts/85390c91.html</link>
       <guid>https://fishg.top/posts/85390c91.html</guid>
       <pubDate>Mon, 29 Jan 2024 06:05:25 GMT</pubDate>
@@ -127,7 +127,7 @@
     </item>
     
     <item>
-      <title>A very interesting VimGolf</title>
+      <title>A Very Interesting VimGolf</title>
       <link>https://fishg.top/posts/6023bfa0.html</link>
       <guid>https://fishg.top/posts/6023bfa0.html</guid>
       <pubDate>Sun, 28 Jan 2024 04:32:52 GMT</pubDate>
@@ -385,7 +385,7 @@
     </item>
     
     <item>
-      <title>Notes for Machine Learning Specialization: More numerically accurate code examples</title>
+      <title>Notes for Machine Learning Specialization: More Numerically Accurate Code Examples</title>
       <link>https://fishg.top/posts/44801878.html</link>
       <guid>https://fishg.top/posts/44801878.html</guid>
       <pubDate>Mon, 14 Aug 2023 03:03:44 GMT</pubDate>
@@ -441,7 +441,7 @@
     </item>
     
     <item>
-      <title>Notes for 《tmux Productive Mouse-Free Development》</title>
+      <title>Notes for 《Tmux Productive Mouse-Free Development》</title>
       <link>https://fishg.top/posts/53957db4.html</link>
       <guid>https://fishg.top/posts/53957db4.html</guid>
       <pubDate>Sat, 05 Aug 2023 03:47:53 GMT</pubDate>
@@ -742,7 +742,7 @@
     </item>
     
     <item>
-      <title>joshuto: A great file manager in terminal</title>
+      <title>Joshuto: A Great File Manager in Terminal</title>
       <link>https://fishg.top/posts/348795e3.html</link>
       <guid>https://fishg.top/posts/348795e3.html</guid>
       <pubDate>Wed, 12 Jul 2023 03:39:18 GMT</pubDate>
@@ -895,7 +895,7 @@
     </item>
     
     <item>
-      <title>Python libraries mentioned in CS50P</title>
+      <title>Python Libraries Mentioned in CS50P</title>
       <link>https://fishg.top/posts/22098b25.html</link>
       <guid>https://fishg.top/posts/22098b25.html</guid>
       <pubDate>Fri, 07 Jul 2023 03:27:54 GMT</pubDate>
@@ -924,7 +924,7 @@
     </item>
     
     <item>
-      <title>Matching IPv4 addresses with RegExp</title>
+      <title>Matching IPv4 Addresses With RegExp</title>
       <link>https://fishg.top/posts/1d74bec6.html</link>
       <guid>https://fishg.top/posts/1d74bec6.html</guid>
       <pubDate>Tue, 04 Jul 2023 08:03:46 GMT</pubDate>
@@ -976,7 +976,7 @@
     </item>
     
     <item>
-      <title>Better right-click menu in Win11</title>
+      <title>Better Right-Click Menu in Win11</title>
       <link>https://fishg.top/posts/798c36fc.html</link>
       <guid>https://fishg.top/posts/798c36fc.html</guid>
       <pubDate>Thu, 22 Jun 2023 14:11:51 GMT</pubDate>
@@ -999,7 +999,7 @@
     </item>
     
     <item>
-      <title>My personal summary of Stanford CS106L</title>
+      <title>My Personal Summary of Stanford CS106L</title>
       <link>https://fishg.top/posts/b16dfec9.html</link>
       <guid>https://fishg.top/posts/b16dfec9.html</guid>
       <pubDate>Thu, 01 Jun 2023 15:09:45 GMT</pubDate>
@@ -1057,7 +1057,7 @@
     </item>
     
     <item>
-      <title>Type Safety and std::optional in C++</title>
+      <title>Type Safety and Std::optional in C++</title>
       <link>https://fishg.top/posts/ab76f233.html</link>
       <guid>https://fishg.top/posts/ab76f233.html</guid>
       <pubDate>Wed, 31 May 2023 03:35:00 GMT</pubDate>
@@ -1111,7 +1111,7 @@
     </item>
     
     <item>
-      <title>static_cast and const_cast in C++</title>
+      <title>Static_cast and Const_cast in C++</title>
       <link>https://fishg.top/posts/f5746381.html</link>
       <guid>https://fishg.top/posts/f5746381.html</guid>
       <pubDate>Tue, 30 May 2023 07:44:00 GMT</pubDate>
@@ -1140,7 +1140,7 @@
     </item>
     
     <item>
-      <title>Permutations and Combinations in Python (itertools)</title>
+      <title>Permutations and Combinations in Python (Itertools)</title>
       <link>https://fishg.top/posts/cf2f01b2.html</link>
       <guid>https://fishg.top/posts/cf2f01b2.html</guid>
       <pubDate>Sun, 28 May 2023 08:42:00 GMT</pubDate>
@@ -1167,7 +1167,7 @@
     </item>
     
     <item>
-      <title>My personal summary of Algorithms, Part I on Coursera</title>
+      <title>My Personal Summary of Algorithms, Part I on Coursera</title>
       <link>https://fishg.top/posts/94efd546.html</link>
       <guid>https://fishg.top/posts/94efd546.html</guid>
       <pubDate>Fri, 12 May 2023 10:27:12 GMT</pubDate>
@@ -1240,7 +1240,7 @@
     </item>
     
     <item>
-      <title>Set up a blog with Hexo</title>
+      <title>Set Up a Blog With Hexo</title>
       <link>https://fishg.top/posts/4ef0ac98.html</link>
       <guid>https://fishg.top/posts/4ef0ac98.html</guid>
       <pubDate>Sat, 15 Apr 2023 05:16:06 GMT</pubDate>
@@ -1265,7 +1265,7 @@
     </item>
     
     <item>
-      <title>Uses std::cin.ignore() to keep the user typing until the input meets the requirements</title>
+      <title>Uses std::cin.ignore() to Keep the User Typing Until the Input Meets the Requirements</title>
       <link>https://fishg.top/posts/f96b3358.html</link>
       <guid>https://fishg.top/posts/f96b3358.html</guid>
       <pubDate>Sat, 25 Mar 2023 12:12:40 GMT</pubDate>
@@ -1290,7 +1290,7 @@
     </item>
     
     <item>
-      <title>The const and constexpr in C++ (REMAKE)</title>
+      <title>The Const and Constexpr in C++ (REMAKE)</title>
       <link>https://fishg.top/posts/3358bcc1.html</link>
       <guid>https://fishg.top/posts/3358bcc1.html</guid>
       <pubDate>Fri, 24 Mar 2023 13:21:42 GMT</pubDate>
@@ -1317,7 +1317,7 @@
     </item>
     
     <item>
-      <title>The chmod command in Linux</title>
+      <title>The Chmod Command in Linux</title>
       <link>https://fishg.top/posts/a9dc5c1e.html</link>
       <guid>https://fishg.top/posts/a9dc5c1e.html</guid>
       <pubDate>Thu, 23 Mar 2023 14:27:08 GMT</pubDate>
@@ -1342,7 +1342,7 @@
     </item>
     
     <item>
-      <title>Useful packages in Java</title>
+      <title>Useful Packages in Java</title>
       <link>https://fishg.top/posts/a4746c9.html</link>
       <guid>https://fishg.top/posts/a4746c9.html</guid>
       <pubDate>Wed, 15 Mar 2023 14:46:17 GMT</pubDate>
@@ -1367,7 +1367,7 @@
     </item>
     
     <item>
-      <title>Replace cat with bat</title>
+      <title>Replace Cat With Bat</title>
       <link>https://fishg.top/posts/e7bc2e88.html</link>
       <guid>https://fishg.top/posts/e7bc2e88.html</guid>
       <pubDate>Sun, 12 Mar 2023 02:28:47 GMT</pubDate>
@@ -1425,7 +1425,7 @@
     </item>
     
     <item>
-      <title>Package managers in Linux (To be continued)</title>
+      <title>Package Managers in Linux (To Be Continued)</title>
       <link>https://fishg.top/posts/4ee6ac78.html</link>
       <guid>https://fishg.top/posts/4ee6ac78.html</guid>
       <pubDate>Sat, 11 Mar 2023 06:23:18 GMT</pubDate>
@@ -1508,7 +1508,7 @@
     </item>
     
     <item>
-      <title>error: summary string parsing error 错误解决方法</title>
+      <title>Error: Summary String Parsing Error 错误解决方法</title>
       <link>https://fishg.top/posts/78dc947f.html</link>
       <guid>https://fishg.top/posts/78dc947f.html</guid>
       <pubDate>Wed, 11 Jan 2023 04:34:16 GMT</pubDate>
@@ -1570,7 +1570,7 @@
     </item>
     
     <item>
-      <title>C 标准库中 qsort 和 C++ STL 中 sort 的用法</title>
+      <title>C 标准库中 Qsort 和 C++ STL 中 Sort 的用法</title>
       <link>https://fishg.top/posts/eab95d6e.html</link>
       <guid>https://fishg.top/posts/eab95d6e.html</guid>
       <pubDate>Thu, 08 Dec 2022 13:41:18 GMT</pubDate>
@@ -1674,7 +1674,7 @@
     </item>
     
     <item>
-      <title>C++ const 用法汇总</title>
+      <title>C++ Const 用法汇总</title>
       <link>https://fishg.top/posts/7ec6ba38.html</link>
       <guid>https://fishg.top/posts/7ec6ba38.html</guid>
       <pubDate>Thu, 17 Nov 2022 12:05:00 GMT</pubDate>
@@ -2005,7 +2005,7 @@
     </item>
     
     <item>
-      <title>C++ 中 cin 与 cout 的转进制输入输出</title>
+      <title>C++ 中 Cin 与 Cout 的转进制输入输出</title>
       <link>https://fishg.top/posts/9e863176.html</link>
       <guid>https://fishg.top/posts/9e863176.html</guid>
       <pubDate>Thu, 29 Sep 2022 09:30:25 GMT</pubDate>
