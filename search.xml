@@ -7376,6 +7376,8 @@
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git checkout -- &lt;file&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <p>This command will abandon the modifications to the file after your last commit, where <code>--</code> indicates that the following content should be treated as file parameters, even if they resemble options.</p>
+<h2 id="Cleaning-Files-and-or-Directories"><a href="#Cleaning-Files-and-or-Directories" class="headerlink" title="Cleaning Files and/or Directories"></a>Cleaning Files and/or Directories</h2><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git clean <span class="comment"># deletes files that are not tracked by Git</span></span><br><span class="line">git clean -d <span class="comment"># deletes directories</span></span><br><span class="line">git clean -x <span class="comment"># deletes untracked files, including ignored files in `.gitignore` and `.git/info/exclude`</span></span><br></pre></td></tr></tbody></table></figure>
+
 <h2 id="Next-Steps"><a href="#Next-Steps" class="headerlink" title="Next Steps"></a>Next Steps</h2><ul>
 <li><em><a href="https://blocklune.github.io/posts/85390c91.html">Working with Remote Server - Simple Git Tutorial</a></em></li>
 <li><em><a href="https://blocklune.github.io/posts/aa010e90.html">Branching and Merging - Simple Git Tutorial</a></em></li>
