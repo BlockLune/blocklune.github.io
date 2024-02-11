@@ -9,8 +9,35 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Thu, 08 Feb 2024 04:00:07 GMT</pubDate>
+    <pubDate>Sat, 10 Feb 2024 05:12:59 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Notes for Algorithms, Part II: Shortest Paths</title>
+      <link>https://fishg.top/posts/bff11795.html</link>
+      <guid>https://fishg.top/posts/bff11795.html</guid>
+      <pubDate>Sat, 10 Feb 2024 05:12:59 GMT</pubDate>
+      
+      <description>&lt;p&gt;This is a note for 4.4 Shortest Paths, &lt;em&gt;&lt;a href=&quot;https://www.coursera.org/learn/algorithms-part2/&quot;&gt;Algorithms, Part II&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://fishg.top/categories/cs/">CS</category>
+      
+      <category domain="https://fishg.top/categories/cs/algorithms-data-structures/">Algorithms &amp; Data structures</category>
+      
+      
+      <category domain="https://fishg.top/tags/algorithm/">Algorithm</category>
+      
+      <category domain="https://fishg.top/tags/coursera/">Coursera</category>
+      
+      <category domain="https://fishg.top/tags/shortest-paths/">Shortest Paths</category>
+      
+      
+      <comments>https://fishg.top/posts/bff11795.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Testing Typescript Project With Mocha and Istanbul NYC</title>

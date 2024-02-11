@@ -1258,6 +1258,28 @@
       </tags>
   </entry>
   <entry>
+    <title>Notes for Algorithms, Part II: Shortest Paths</title>
+    <url>/posts/bff11795.html</url>
+    <content><![CDATA[<p>This is a note for 4.4 Shortest Paths, <em><a href="https://www.coursera.org/learn/algorithms-part2/">Algorithms, Part II</a></em>.</p>
+<span id="more"></span>
+
+<p>Dijkstra's algorithm is essentially the same with Prim's algorithm. Both are in a family of algorithms that compute a graph's spanning tree (BTW, DFS and BFS are also in this family). The main distinction is the rule used to choose next vertex for the tree:</p>
+<ul>
+<li>Dijkstra's: Closest vertex to the source (via a directed path).</li>
+<li>Prim's: Closest vertex to the tree (via an undirected edge).</li>
+</ul>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Algorithms &amp; Data structures</category>
+      </categories>
+      <tags>
+        <tag>Algorithm</tag>
+        <tag>Coursera</tag>
+        <tag>Shortest Paths</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Notes for Algorithms, Part II: Undirected Graphs</title>
     <url>/posts/d3e12860.html</url>
     <content><![CDATA[<p>This is a note for 4.1 Undirected Graphs, <em><a href="https://www.coursera.org/learn/algorithms-part2/">Algorithms, Part II</a></em>.</p>
