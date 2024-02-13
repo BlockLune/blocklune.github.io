@@ -292,7 +292,7 @@
     <div class="post-body" itemprop="articleBody"><p>最开始只是用 const 来定义常量，学到了指针传参的时候又知道了用 const 来防止一些值的修改，学到类的时候又看到非静态成员函数后边加个 const 来干嘛干嘛，然后么又听说什么顶层 const、底层 const... 真是越学越迷糊了，赶紧做一波整理。</p>
 <span id="more"></span>
 
-<p><strong>[2023 年 3 月 24 日更新：]</strong> 此文章已经重写，请查看：_<a target="_blank" rel="noopener" href="https://blocklune.github.io/posts/3358bcc1.html">The const and constexpr in C++ (REMAKE)</a>_</p>
+<p><strong>[2023 年 3 月 24 日更新：]</strong> 此文章已经重写，请查看：_<a href="/posts/3358bcc1.html">The const and constexpr in C++ (REMAKE)</a>_</p>
 <h2 id="最基本的用法-——-定义常量"><a href="#最基本的用法-——-定义常量" class="headerlink" title="最基本的用法 —— 定义常量"></a>最基本的用法 —— 定义常量</h2><p>这个不必多说，直接上代码：</p>
 <figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> b = <span class="number">1</span>;</span><br><span class="line">a = <span class="number">2</span>; <span class="comment">// 正确：a 没有 const 修饰，可以改变其值</span></span><br><span class="line">b = <span class="number">2</span>; <span class="comment">// 错误：b 有 const 修饰，不能改变其值</span></span><br></pre></td></tr></tbody></table></figure>
 

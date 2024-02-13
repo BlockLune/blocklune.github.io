@@ -236,7 +236,7 @@
       <guid>https://fishg.top/posts/1cce885f.html</guid>
       <pubDate>Sat, 27 Jan 2024 04:50:29 GMT</pubDate>
       
-      <description>&lt;p&gt;I have posted a tutorial of Git (See &lt;em&gt;&lt;a href=&quot;https://blocklune.github.io/posts/9363e311.html&quot;&gt;Simple Git Tutorial&lt;/a&gt;&lt;/em&gt;). But it mixed up using Git and using GitHub together. I post this new tutorial to draw a line and make things clear.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I have posted a tutorial of Git (See &lt;em&gt;&lt;a href=&quot;/posts/9363e311.html&quot;&gt;Simple Git Tutorial&lt;/a&gt;&lt;/em&gt;). But it mixed up using Git and using GitHub together. I post this new tutorial to draw a line and make things clear.&lt;/p&gt;</description>
       
       
       
@@ -1322,7 +1322,7 @@
       <guid>https://fishg.top/posts/3358bcc1.html</guid>
       <pubDate>Fri, 24 Mar 2023 13:21:42 GMT</pubDate>
       
-      <description>&lt;p&gt;I have written a post about &lt;code&gt;const&lt;/code&gt; in C++ in Chinese before, but &lt;a href=&quot;https://blocklune.github.io/posts/7ec6ba38.html&quot;&gt;it&lt;/a&gt; was too verbose and unclear. :( So, I decided to rewrite it.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I have written a post about &lt;code&gt;const&lt;/code&gt; in C++ in Chinese before, but &lt;a href=&quot;/posts/7ec6ba38.html&quot;&gt;it&lt;/a&gt; was too verbose and unclear. :( So, I decided to rewrite it.&lt;/p&gt;</description>
       
       
       
@@ -1426,7 +1426,7 @@
       <guid>https://fishg.top/posts/9363e311.html</guid>
       <pubDate>Sat, 11 Mar 2023 09:55:55 GMT</pubDate>
       
-      <description>&lt;p&gt;This is mainly a simple tutorial of Git. Some info about GitHub also included. You may also read &lt;em&gt;&lt;a href=&quot;https://blocklune.github.io/posts/1cce885f.html&quot;&gt;Simple GitHub Tutorial&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is mainly a simple tutorial of Git. Some info about GitHub also included. You may also read &lt;em&gt;&lt;a href=&quot;/posts/1cce885f.html&quot;&gt;Simple GitHub Tutorial&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;</description>
       
       
       
@@ -1762,7 +1762,7 @@
       <guid>https://fishg.top/posts/1ef1e20b.html</guid>
       <pubDate>Wed, 16 Nov 2022 06:46:44 GMT</pubDate>
       
-      <description>&lt;p&gt;接&lt;a href=&quot;https://blocklune.github.io/posts/50c16b14.html&quot;&gt;《一个有关指针传参的问题》&lt;/a&gt;，再理一理这里边的一些问题...&lt;/p&gt;</description>
+      <description>&lt;p&gt;接&lt;a href=&quot;/posts/50c16b14.html&quot;&gt;《一个有关指针传参的问题》&lt;/a&gt;，再理一理这里边的一些问题...&lt;/p&gt;</description>
       
       
       
@@ -1814,7 +1814,7 @@
       <guid>https://fishg.top/posts/c8a20144.html</guid>
       <pubDate>Sat, 05 Nov 2022 06:48:31 GMT</pubDate>
       
-      <description>&lt;p&gt;接上文&lt;a href=&quot;https://blocklune.github.io/posts/50c16b14.html&quot;&gt;《一个有关指针传参的问题》&lt;/a&gt;，打算结合一些简单的例子系统地梳理一下 C/C++ 中的值传递、指针传递和 C++ 中特有的 引用传递。&lt;/p&gt;</description>
+      <description>&lt;p&gt;接上文&lt;a href=&quot;/posts/50c16b14.html&quot;&gt;《一个有关指针传参的问题》&lt;/a&gt;，打算结合一些简单的例子系统地梳理一下 C/C++ 中的值传递、指针传递和 C++ 中特有的 引用传递。&lt;/p&gt;</description>
       
       
       

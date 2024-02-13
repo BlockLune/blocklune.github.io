@@ -2858,7 +2858,7 @@
 <p>然后按下小齿轮进行编译，按下三角形运行，设置好断点按下小虫子进行 Debug。</p>
 <p><img data-src="https://s1.ax1x.com/2022/09/17/xST4aj.png"></p>
 <h2 id="解决中文乱码问题"><a href="#解决中文乱码问题" class="headerlink" title="解决中文乱码问题"></a>解决中文乱码问题</h2><p><strong>2022 年 10 月 13 日更新：</strong></p>
-<p>参见我的另一篇文章：<a href="https://blocklune.github.io/posts/ca05bed5.html">《VS Code 中文乱码问题》</a></p>
+<p>参见我的另一篇文章：<a href="/posts/ca05bed5.html">《VS Code 中文乱码问题》</a></p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
 <li><a href="https://zhuanlan.zhihu.com/p/112215618">国内下载 vscode 速度慢问题解决</a></li>
 <li>官方教程：<a href="https://code.visualstudio.com/docs/languages/cpp">C++ programming with Visual Studio Code</a></li>
@@ -2932,7 +2932,7 @@
 <tbody><tr>
 <td>cat</td>
 <td><a href="https://github.com/sharkdp/bat">bat</a></td>
-<td>Also see <a href="https://blocklune.github.io/posts/e7bc2e88.html">my Post</a></td>
+<td>Also see <a href="/posts/e7bc2e88.html">my Post</a></td>
 </tr>
 <tr>
 <td>cd</td>
@@ -2998,7 +2998,7 @@
 </li>
 <li><p>frogmounth: a TUI Markdown browser (See <a href="https://github.com/Textualize/frogmouth">GitHub</a>)</p>
 </li>
-<li><p>joshuto: a TUI file explorer (See <a href="https://github.com/kamiyaa/joshuto">GitHub</a>, <a href="https://blocklune.github.io/posts/348795e3.html">my post</a>)</p>
+<li><p>joshuto: a TUI file explorer (See <a href="https://github.com/kamiyaa/joshuto">GitHub</a>, <a href="/posts/348795e3.html">my post</a>)</p>
 </li>
 <li><p>shell_gpt: talk to GPT in terminal (See <a href="https://github.com/TheR1D/shell_gpt">GitHub</a>)</p>
 </li>
@@ -3114,7 +3114,7 @@
 <h3 id="Browser"><a href="#Browser" class="headerlink" title="Browser"></a>Browser</h3><p>I use Microsoft Edge. It's pretty easy to download the <code>.deb</code> on its <em><a href="https://www.microsoft.com/en-us/edge/download">official website</a></em>. But if you want to install it from command line:</p>
 <p>See <em><a href="https://www.linuxcapable.com/how-to-install-microsoft-edge-on-ubuntu-linux/">How to Install Microsoft Edge on Ubuntu 22.04 | 20.04 - LinuxCapable</a></em></p>
 <h3 id="Proxy"><a href="#Proxy" class="headerlink" title="Proxy"></a>Proxy</h3><p>Maybe <em><a href="https://github.com/zzzgydi/clash-verge">zzzgydi/clash-verge: A Clash GUI based on tauri. Supports Windows, macOS and Linux</a></em> or <em><a href="https://github.com/Fndroid/clash_for_windows_pkg">Fndroid/clash_for_windows_pkg</a></em></p>
-<h3 id="CLI-APPs"><a href="#CLI-APPs" class="headerlink" title="CLI-APPs"></a>CLI-APPs</h3><p>See <a href="https://blocklune.github.io/posts/d64ccd8c.html">Awesome CLI Apps</a>.</p>
+<h3 id="CLI-APPs"><a href="#CLI-APPs" class="headerlink" title="CLI-APPs"></a>CLI-APPs</h3><p>See <a href="/posts/d64ccd8c.html">Awesome CLI Apps</a>.</p>
 <h2 id="Q-A"><a href="#Q-A" class="headerlink" title="Q &amp; A"></a>Q &amp; A</h2><p>Q: The operating system always freezes on the welcome page.<br>A: Install / Update NVIDIA driver.</p>
 <p>See <em><a href="https://www.cnblogs.com/Leozi/p/13281224.html">Ubuntu 下安装 NVIDIA 驱动的三种方法</a></em></p>
 <p>and <em><a href="https://superuser.com/questions/1750975/nouveau-00000100-0-drm-failed-to-idle-channel-0-drm">ubuntu - nouveau 0000:01:00.0: DRM: failed to idle channel 0 [DRM] - Super User</a></em></p>
@@ -5431,7 +5431,7 @@
     <content><![CDATA[<p>最开始只是用 const 来定义常量，学到了指针传参的时候又知道了用 const 来防止一些值的修改，学到类的时候又看到非静态成员函数后边加个 const 来干嘛干嘛，然后么又听说什么顶层 const、底层 const... 真是越学越迷糊了，赶紧做一波整理。</p>
 <span id="more"></span>
 
-<p><strong>[2023 年 3 月 24 日更新：]</strong> 此文章已经重写，请查看：_<a href="https://blocklune.github.io/posts/3358bcc1.html">The const and constexpr in C++ (REMAKE)</a>_</p>
+<p><strong>[2023 年 3 月 24 日更新：]</strong> 此文章已经重写，请查看：_<a href="/posts/3358bcc1.html">The const and constexpr in C++ (REMAKE)</a>_</p>
 <h2 id="最基本的用法-——-定义常量"><a href="#最基本的用法-——-定义常量" class="headerlink" title="最基本的用法 —— 定义常量"></a>最基本的用法 —— 定义常量</h2><p>这个不必多说，直接上代码：</p>
 <figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> b = <span class="number">1</span>;</span><br><span class="line">a = <span class="number">2</span>; <span class="comment">// 正确：a 没有 const 修饰，可以改变其值</span></span><br><span class="line">b = <span class="number">2</span>; <span class="comment">// 错误：b 有 const 修饰，不能改变其值</span></span><br></pre></td></tr></tbody></table></figure>
 
@@ -5817,7 +5817,7 @@
   <entry>
     <title>The Const and Constexpr in C++ (REMAKE)</title>
     <url>/posts/3358bcc1.html</url>
-    <content><![CDATA[<p>I have written a post about <code>const</code> in C++ in Chinese before, but <a href="https://blocklune.github.io/posts/7ec6ba38.html">it</a> was too verbose and unclear. :( So, I decided to rewrite it.</p>
+    <content><![CDATA[<p>I have written a post about <code>const</code> in C++ in Chinese before, but <a href="/posts/7ec6ba38.html">it</a> was too verbose and unclear. :( So, I decided to rewrite it.</p>
 <span id="more"></span>
 
 <h2 id="BASIC-USAGE-OF-CONST"><a href="#BASIC-USAGE-OF-CONST" class="headerlink" title="BASIC USAGE OF CONST"></a>BASIC USAGE OF CONST</h2><h3 id="MODIFIES-BASIC-DATE-TYPE-WITH-CONST"><a href="#MODIFIES-BASIC-DATE-TYPE-WITH-CONST" class="headerlink" title="MODIFIES BASIC DATE TYPE WITH CONST"></a>MODIFIES BASIC DATE TYPE WITH CONST</h3><p>The most basic usage of <code>const</code> is to define a constant. A constant is a variable whose value cannot be changed after initialization.</p>
@@ -5935,7 +5935,7 @@
 <p>And implement them like this:</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function">std::string&amp; <span class="title">StrVector::at</span><span class="params">(<span class="type">size_t</span> index)</span> </span>{</span><br><span class="line">  <span class="keyword">if</span> (index &gt;= <span class="built_in">size</span>()) {</span><br><span class="line">    <span class="keyword">throw</span> std::<span class="built_in">out_of_range</span>(<span class="string">"Index out of range in at."</span>);</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">return</span> *(<span class="built_in">begin</span>() + index);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">const</span> std::string&amp; <span class="title">StrVector::at</span><span class="params">(<span class="type">size_t</span> index)</span> <span class="type">const</span> </span>{</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">static_cast</span>&lt;<span class="type">const</span> std::string&amp;&gt;(</span><br><span class="line">      <span class="built_in">const_cast</span>&lt;StrVector*&gt;(<span class="keyword">this</span>)-&gt;<span class="built_in">at</span>(index));</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<p>Learn more about <code>static_cast</code> and <code>const_cast</code> <a href="https://blocklune.github.io/posts/f5746381.html">here</a></p>
+<p>Learn more about <code>static_cast</code> and <code>const_cast</code> <a href="/posts/f5746381.html">here</a></p>
 <p>Should <code>begin()</code> and <code>end()</code> be <code>const</code>?</p>
 <p>Consider a function with const <code>StrVector</code> param:</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">printVec</span><span class="params">(<span class="type">const</span> StrVector&amp; vec)</span> </span>{</span><br><span class="line">  cout &lt;&lt; <span class="string">"{ "</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> it = vec.<span class="built_in">begin</span>(); it != vec.<span class="built_in">end</span>(); ++it) {</span><br><span class="line">    *it = <span class="string">"dont mind me modifying a const vector :D"</span>;</span><br><span class="line">  }</span><br><span class="line">  cout &lt;&lt; <span class="string">"}"</span> &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
@@ -6406,7 +6406,7 @@
 <figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">append</span><span class="params">(<span class="type">int</span> **, <span class="type">int</span>, <span class="type">int</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> tmp_n;</span><br><span class="line">    <span class="type">int</span> size = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> *nums = <span class="literal">nullptr</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">51</span>; i &lt;= <span class="number">55</span>; i++)</span><br><span class="line">    {</span><br><span class="line">        tmp_n = i;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        nums 是一个指针，这个指针是我们动态数组的第一个元素的地址</span></span><br><span class="line"><span class="comment">        对 nums 取地址传参，传的是 nums 这个指针的地址</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        <span class="built_in">append</span>(&amp;nums, size, tmp_n);</span><br><span class="line">        size++;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">    {</span><br><span class="line">        cout &lt;&lt;nums[i] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">接上文的注释</span></span><br><span class="line"><span class="comment">ptr 是一个指针，这个指针是上边的 nums 的地址</span></span><br><span class="line"><span class="comment">*ptr 得到了这个地址的值，这个值是指向动态数组第一个元素的指针</span></span><br><span class="line"><span class="comment">**ptr 是第一个元素的值</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">append</span><span class="params">(<span class="type">int</span> **ptr, <span class="type">int</span> size, <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">if</span> (*ptr) <span class="comment">// 如果数组指针不为空</span></span><br><span class="line">    {</span><br><span class="line">        <span class="comment">// 暂存原来的数据</span></span><br><span class="line">        <span class="type">int</span> *tmp_nums = <span class="keyword">new</span> <span class="type">int</span>[size];</span><br><span class="line">        <span class="built_in">memcpy</span>(tmp_nums, *ptr, <span class="built_in">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line">        <span class="comment">// 释放掉原指针</span></span><br><span class="line">        <span class="keyword">delete</span>[] * ptr;</span><br><span class="line">        <span class="comment">// 元素数量 + 1</span></span><br><span class="line">        *ptr = <span class="keyword">new</span> <span class="type">int</span>[size + <span class="number">1</span>];</span><br><span class="line">        <span class="built_in">memcpy</span>(*ptr, tmp_nums, <span class="built_in">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line">        (*ptr)[size] = n;</span><br><span class="line">        <span class="keyword">delete</span>[] tmp_nums;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        (*ptr) = <span class="keyword">new</span> <span class="type">int</span>[<span class="number">1</span>];</span><br><span class="line">        (*ptr)[<span class="number">0</span>] = n;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <p>这样运行结果就正常了。</p>
-<h2 id="分析及解决方案"><a href="#分析及解决方案" class="headerlink" title="分析及解决方案"></a>分析及解决方案</h2><p><strong>2022 年 11 月 16 日更新：</strong>这边写的错误原因有点乱，我重新写了一篇：<a href="https://blocklune.github.io/posts/1ef1e20b.html">《当形参、实参是指针变量...》</a></p>
+<h2 id="分析及解决方案"><a href="#分析及解决方案" class="headerlink" title="分析及解决方案"></a>分析及解决方案</h2><p><strong>2022 年 11 月 16 日更新：</strong>这边写的错误原因有点乱，我重新写了一篇：<a href="/posts/1ef1e20b.html">《当形参、实参是指针变量...》</a></p>
 <p>下边给出两个简化的代码来解释这个问题。</p>
 <p>首先来看代码 1，是对上边错误代码的简化:</p>
 <figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">getMemory</span><span class="params">(<span class="type">int</span> *p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    p = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    cout &lt;&lt;<span class="string">"The pointer in getMemory() points at:"</span> &lt;&lt; p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt;<span class="string">"The address of the pointer in getMemory():"</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p;</span><br><span class="line">    <span class="built_in">getMemory</span>(p);</span><br><span class="line">    cout &lt;&lt;<span class="string">"The pointer in main() points at:"</span> &lt;&lt; p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt;<span class="string">"The address of the pointer in main():"</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">delete</span> p;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
@@ -6484,7 +6484,7 @@
   <entry>
     <title>值传递、指针传递、引用传递</title>
     <url>/posts/c8a20144.html</url>
-    <content><![CDATA[<p>接上文<a href="https://blocklune.github.io/posts/50c16b14.html">《一个有关指针传参的问题》</a>，打算结合一些简单的例子系统地梳理一下 C/C++ 中的值传递、指针传递和 C++ 中特有的 引用传递。</p>
+    <content><![CDATA[<p>接上文<a href="/posts/50c16b14.html">《一个有关指针传参的问题》</a>，打算结合一些简单的例子系统地梳理一下 C/C++ 中的值传递、指针传递和 C++ 中特有的 引用传递。</p>
 <span id="more"></span>
 
 <h2 id="值传递"><a href="#值传递" class="headerlink" title="值传递"></a>值传递</h2><p><strong>值传递</strong>传递实际上只是在执行函数的时候将实参的值赋给了形参，在此之后函数体内对形参的任何操作都与原来的实参无关了。</p>
@@ -6505,7 +6505,7 @@
 <p>下边是可能的输出：</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">The value of n in main(): 0</span><br><span class="line">The address of n in main(): 0x61fe1c</span><br><span class="line">The value of n(*p) in func(): 0</span><br><span class="line">The address of n(p) in func(): 0x61fe1c</span><br><span class="line">Then the value of n(*p) in func(): 1</span><br><span class="line">Then the value of n in main(): 1</span><br></pre></td></tr></tbody></table></figure>
 
-<p>这实际上就是 <a href="https://blocklune.github.io/posts/50c16b14.html#%E5%88%86%E6%9E%90%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">《一个有关指针传参的问题》- 分析及解决分案</a> 中的代码 2 的思路。只不过这里我们是对 <code>int</code> 类型的普通变量操作，所以函数接受的参数类型是 <code>int*</code>，而在那篇文章中是要对 <code>int*</code> 类型的变量操作，所以自定函数接受的参数类型变成了 <code>int**</code>。</p>
+<p>这实际上就是 <a href="/posts/50c16b14.html#%E5%88%86%E6%9E%90%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">《一个有关指针传参的问题》- 分析及解决分案</a> 中的代码 2 的思路。只不过这里我们是对 <code>int</code> 类型的普通变量操作，所以函数接受的参数类型是 <code>int*</code>，而在那篇文章中是要对 <code>int*</code> 类型的变量操作，所以自定函数接受的参数类型变成了 <code>int**</code>。</p>
 <h2 id="引用传递"><a href="#引用传递" class="headerlink" title="引用传递"></a>引用传递</h2>
 
 <article class="message message-immersive is-warning">
@@ -6545,7 +6545,7 @@
   <entry>
     <title>当形参、实参是指针变量...</title>
     <url>/posts/1ef1e20b.html</url>
-    <content><![CDATA[<p>接<a href="https://blocklune.github.io/posts/50c16b14.html">《一个有关指针传参的问题》</a>，再理一理这里边的一些问题...</p>
+    <content><![CDATA[<p>接<a href="/posts/50c16b14.html">《一个有关指针传参的问题》</a>，再理一理这里边的一些问题...</p>
 <span id="more"></span>
 
 <p>在单向值传递的过程中，我们知道，形参是对实参的值的拷贝。在实参的值传递给形参后，对形参的一切操作，都不会对实参产生什么影响。比如下边这串代码：</p>
@@ -6565,7 +6565,7 @@
 
 <p>可以看到，<code>int *</code> 类型的指针变量 <code>p</code> 的值是相同的，但地址不同，这是两个变量。</p>
 <p>把上边代码 <code>main()</code> 中的 <code>p</code> 记为 <code>p1</code>，<code>func()</code> 中的记为 <code>p2</code>，那么就可以这样理解为，当调用 <code>func()</code> 时，<code>p2</code> 与 <code>p1</code> <strong>指向了相同的位置</strong>，但它们确实<strong>不是同一个指针</strong>。</p>
-<p>对于<a href="https://blocklune.github.io/posts/50c16b14.html">《一个有关指针传参的问题》</a>中的那段错误代码，其实错误就是，在函数中 <code>new</code> 出来内存后，只是让形参指向了那片内存，而原来的实参并没有同步地指过去。</p>
+<p>对于<a href="/posts/50c16b14.html">《一个有关指针传参的问题》</a>中的那段错误代码，其实错误就是，在函数中 <code>new</code> 出来内存后，只是让形参指向了那片内存，而原来的实参并没有同步地指过去。</p>
 <p>但是只要确定形参的指针和实参的指针指向的地址是相同的，那么对这同一片内存进行的操作，就是同步的，比如：</p>
 <figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    *p = <span class="number">5</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before func(), main(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(p);</span><br><span class="line">    cout &lt;&lt; <span class="string">"After func(), main(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before (*p)++, func(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    (*p)++;</span><br><span class="line">    cout &lt;&lt; <span class="string">"After (*p)++, func(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
@@ -7245,14 +7245,14 @@
   <entry>
     <title>Simple Git Tutorial</title>
     <url>/posts/9363e311.html</url>
-    <content><![CDATA[<p>This is mainly a simple tutorial of Git. Some info about GitHub also included. You may also read <em><a href="https://blocklune.github.io/posts/1cce885f.html">Simple GitHub Tutorial</a></em>.</p>
+    <content><![CDATA[<p>This is mainly a simple tutorial of Git. Some info about GitHub also included. You may also read <em><a href="/posts/1cce885f.html">Simple GitHub Tutorial</a></em>.</p>
 <span id="more"></span>
 
 <h2 id="Brief"><a href="#Brief" class="headerlink" title="Brief"></a>Brief</h2><p>You may have learnt Git and GitHub before, and also may have confused them because their similar names. What are these two things on earth?</p>
 <p><img data-src="https://software.3metas.com/wp-content/uploads/2017/06/git.png" alt="Git (This picture is from the Internet)"></p>
 <p><img data-src="https://kinsta.com/wp-content/uploads/2018/04/what-is-github-1-1.png" alt="GitHub (This picture is from the Internet)"></p>
 <p>In short, <a href="https://git-scm.com/">Git</a> is a Version Control System (VCS), which enables you to create a repository of your codes, to track changes in your project and to manage your files efficiently. <a href="https://github.com/">GitHub</a> is a platform used to host remote Git repositories for collaboration and sharing projects.</p>
-<p>In this post, you will learn the basic usage of Git. If you are looking for info about working with GitHub, see _<a href="https://blocklune.github.io/posts/1cce885f.html">Simple GitHub Tutorial</a>.</p>
+<p>In this post, you will learn the basic usage of Git. If you are looking for info about working with GitHub, see _<a href="/posts/1cce885f.html">Simple GitHub Tutorial</a>.</p>
 <p>Want to go deeper? See <a href="#resources">Resources</a>.</p>
 <h2 id="Installing-Git"><a href="#Installing-Git" class="headerlink" title="Installing Git"></a>Installing Git</h2><p>Download Git from the official website:</p>
 <p><em><a href="https://git-scm.com/downloads">Git - Downloads (git-scm.com)</a></em></p>
@@ -7282,7 +7282,7 @@
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></tbody></table></figure>
 
 <p>This command will create a directory called <code>.git</code>.</p>
-<h3 id="Cloning-One-from-An-Existing-Repo"><a href="#Cloning-One-from-An-Existing-Repo" class="headerlink" title="Cloning One from An Existing Repo"></a>Cloning One from An Existing Repo</h3><p>See <em><a href="https://blocklune.github.io/posts/1cce885f.html">Simple GitHub Tutorial</a></em></p>
+<h3 id="Cloning-One-from-An-Existing-Repo"><a href="#Cloning-One-from-An-Existing-Repo" class="headerlink" title="Cloning One from An Existing Repo"></a>Cloning One from An Existing Repo</h3><p>See <em><a href="/posts/1cce885f.html">Simple GitHub Tutorial</a></em></p>
 <h2 id="Files-States-in-a-Git-Project"><a href="#Files-States-in-a-Git-Project" class="headerlink" title="Files' States in a Git Project"></a>Files' States in a Git Project</h2><p>There are three main states in Git: <strong>modified</strong>, <strong>staged</strong>, and <strong>committed</strong>. And this leads us to three main sections of a Git project: the <code>Working Directory</code>, the <code>Staging Area</code> and the <code>Git Directory</code>.</p>
 <p>You modify your files in the <code>Working Directory</code>, stage them (using <code>git add</code>) to the <code>Staging Area</code>, and commit them (using <code>git commit</code>) to the <code>Git Directory</code>.</p>
 <p>Also see <em><a href="https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F">Git - What is Git?</a></em>.</p>
@@ -7379,8 +7379,8 @@
 <h2 id="Cleaning-Files-and-or-Directories"><a href="#Cleaning-Files-and-or-Directories" class="headerlink" title="Cleaning Files and/or Directories"></a>Cleaning Files and/or Directories</h2><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git clean <span class="comment"># deletes files that are not tracked by Git</span></span><br><span class="line">git clean -d <span class="comment"># deletes directories</span></span><br><span class="line">git clean -x <span class="comment"># deletes untracked files, including ignored files in `.gitignore` and `.git/info/exclude`</span></span><br></pre></td></tr></tbody></table></figure>
 
 <h2 id="Next-Steps"><a href="#Next-Steps" class="headerlink" title="Next Steps"></a>Next Steps</h2><ul>
-<li><em><a href="https://blocklune.github.io/posts/85390c91.html">Working with Remote Server - Simple Git Tutorial</a></em></li>
-<li><em><a href="https://blocklune.github.io/posts/aa010e90.html">Branching and Merging - Simple Git Tutorial</a></em></li>
+<li><em><a href="/posts/85390c91.html">Working with Remote Server - Simple Git Tutorial</a></em></li>
+<li><em><a href="/posts/aa010e90.html">Branching and Merging - Simple Git Tutorial</a></em></li>
 </ul>
 <h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ul>
 <li><em><a href="https://git-scm.com/docs">Git - Reference</a></em></li>
@@ -7406,7 +7406,7 @@
   <entry>
     <title>Simple GitHub Tutorial</title>
     <url>/posts/1cce885f.html</url>
-    <content><![CDATA[<p>I have posted a tutorial of Git (See <em><a href="https://blocklune.github.io/posts/9363e311.html">Simple Git Tutorial</a></em>). But it mixed up using Git and using GitHub together. I post this new tutorial to draw a line and make things clear.</p>
+    <content><![CDATA[<p>I have posted a tutorial of Git (See <em><a href="/posts/9363e311.html">Simple Git Tutorial</a></em>). But it mixed up using Git and using GitHub together. I post this new tutorial to draw a line and make things clear.</p>
 <span id="more"></span>
 
 <blockquote>
@@ -7421,7 +7421,7 @@
 
 <p>Also see:</p>
 <ul>
-<li><em><a href="https://blocklune.github.io/posts/9363e311.html#Basic-Configuration">Basic Configuration - Simple Git Tutorial</a></em></li>
+<li><em><a href="/posts/9363e311.html#Basic-Configuration">Basic Configuration - Simple Git Tutorial</a></em></li>
 <li><em><a href="https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git">Setting your username in Git - GitHub Docs</a></em></li>
 <li><em><a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address">Setting your commit email address - GitHub Docs</a></em></li>
 </ul>
