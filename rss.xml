@@ -9,8 +9,31 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Sat, 10 Feb 2024 05:12:59 GMT</pubDate>
+    <pubDate>Thu, 15 Feb 2024 02:41:37 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>我的 Rime 配置</title>
+      <link>https://fishg.top/posts/dc298524.html</link>
+      <guid>https://fishg.top/posts/dc298524.html</guid>
+      <pubDate>Thu, 15 Feb 2024 02:41:37 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;a href=&quot;https://rime.im/&quot;&gt;Rime&lt;/a&gt; 是一个开源输入法引擎，有着开源、多平台、支持高度自定义等特点。这篇博文记录了我在 macOS 平台上基于鼠须管（&lt;a href=&quot;https://github.com/rime/squirrel&quot;&gt;rime/squirrel&lt;/a&gt;）和雾凇拼音（&lt;a href=&quot;https://github.com/iDvel/rime-ice&quot;&gt;iDvel/rime-ice&lt;/a&gt;）的 Rime 配置。&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://fishg.top/categories/misc/">Misc</category>
+      
+      
+      <category domain="https://fishg.top/tags/rime/">Rime</category>
+      
+      <category domain="https://fishg.top/tags/input-method/">Input Method</category>
+      
+      
+      <comments>https://fishg.top/posts/dc298524.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Notes for Algorithms, Part II: Shortest Paths</title>
