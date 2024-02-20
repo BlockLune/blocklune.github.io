@@ -448,79 +448,6 @@
       </tags>
   </entry>
   <entry>
-    <title>挖老婆矿！—— NovelAI 初试</title>
-    <url>/posts/f17b3e8b.html</url>
-    <content><![CDATA[<p>最近一段时间，感觉突然之间，就有很多很多将现实图片二次元化啊，按照每句歌词生成一副画作啊的 AI 绘画应用的图文视频出现。和室友聊天还说是不是最近一段时间 AI 技术突破什么瓶颈突飞猛进了。后来才知道，原来是 NovelAI 泄露了... 这样一来，本地部署方便了起来，于是整了一个玩玩。由于跑 AI 嘛，GPU 比较呼啸，跟挖矿一样，我就戏称我这是在 “挖老婆矿” 了。</p>
-<span id="more"></span>
-
-<p>注：这篇文章更偏向于我记录生成时使用的 tag， 不涉及基础操作。我使用的 NovelAI 下载自<a href="https://www.bilibili.com/video/BV1EV4y1L7dX">这里</a>。</p>
-<h1 id="一个头像（一堆头像）"><a href="#一个头像（一堆头像）" class="headerlink" title="一个头像（一堆头像）"></a>一个头像（一堆头像）</h1><p>我最开始只是用几个 tag 生成。经历了一些粗浅的尝试后，发现生成的质量并不高。但是看到了<a href="https://www.yuque.com/longyuye/lmgcwy/goa36x">一篇文章</a>，照着里边的 tag 写，才算真正开始了探索。</p>
-<p>首先是根据上边那篇文章最后的示例增改了点 tag 形成的 prompt:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">blue pen illustration, light blue background, flowers on face, growth, nature, beautiful face, pink hair,shawl hair, zoom in on eyes, apathy, red eye shadow, petite, best quality, masterpiece</span><br></pre></td></tr></tbody></table></figure>
-
-<p>然后生成出了下面这些相当不错的图案：</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0HgAK.jpg"></p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0H676.jpg"></p>
-<p>下边分类讲讲 tag:</p>
-<p>提高总体质量的：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">masterpiece, best quality, by famous artist, beautiful face</span><br></pre></td></tr></tbody></table></figure>
-
-<p>使整体的风格偏向更具插画感：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">illustration</span><br></pre></td></tr></tbody></table></figure>
-
-<p>限定背景的：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">xxxx + backgroud  (比如上边的淡蓝色背景就是 light blue background )</span><br></pre></td></tr></tbody></table></figure>
-
-<p>让生成出来的 waifu 更幼的：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">petite</span><br></pre></td></tr></tbody></table></figure>
-
-<p>让脸上、头发上出现花朵装饰的：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">flowers on face</span><br></pre></td></tr></tbody></table></figure>
-
-<p>让眼睛更大的：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">zoom in one eyes</span><br></pre></td></tr></tbody></table></figure>
-
-<p>尝到了甜头后，我就想换头像了。但我不想完全抛弃现在的头像，于是就试图拿它做派生。</p>
-<p>首先描述一下原来的头像，让 AI 知道我大概是想要怎样的一个 "老婆"。<del>（虽然其实我描述的时候更感觉是在捏女儿）</del> 顺便一说，我这个原来的头像其实也是 AI 生成的，叫 <a href="https://waifulabs.com/generate">WaifuLabs</a>，是我把原来生成出来的丢进 PS 去了水印，又自己修缮了一下得到的。</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0I1Z8.jpg" alt="上边是 WaifuLabs 生成出来时候的样子，下边是我自己 PS 改的"></p>
-<p>抛却那些提高质量的，大概给了 <code>披肩发</code>、<code>深灰色头发</code>、<code>深灰色眼睛</code>、<code>红色眼影</code>、<code>白色衬衫</code>、<code>微笑</code> 这些 tag。同时模仿了上边，给了 <code>面部的花</code> 之类的 tag：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">{{masterpiece,best quality}},shawl hair,dark grey hair, dark grey eyes,red eye shadow,  white shirt,illustration,flower on face,growth, nature,beautiful face, smile, zoom in one eyes</span><br></pre></td></tr></tbody></table></figure>
-
-<p>以上边的内容为 prompt，同时把我改的那张扔给 NovelAI，根据生成结果又慢慢改，添加 tag，最终的 prompt 如下:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">{{masterpiece,best quality,by wlop}},shawl hair,dark grey hair, dark grey eyes,red eye shadow, white shirt,{{{illustration}}},flower on face, growth, nature, beautiful face, small smile, zoom in one eyes, {{{{petite}}}}, dramatic shadows, ink,eye-focus, portrait, red hairclip</span><br></pre></td></tr></tbody></table></figure>
-
-<p>跑了大概 100 张，然后挑了挑，下边展示的是部分高质量的：</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0IgzR.png"></p>
-<p>又是一波奇奇怪怪的调整：</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0onkF.png"></p>
-<p>最后挑选出了这张我觉得挺有特色的：</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0o161.png"></p>
-<p>然后开始根据这张进行派生：</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0jbEn.png"></p>
-<h1 id="一张壁纸（一堆壁纸）"><a href="#一张壁纸（一堆壁纸）" class="headerlink" title="一张壁纸（一堆壁纸）"></a>一张壁纸（一堆壁纸）</h1><p>这事儿开始的挺搞笑的，当时我正在调上边的头像参数，坐我旁边玩 CSGO 的朋友希望我把某把枪拟人，然后发我了下边的图片：</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0TGgs.jpg"></p>
-<p>然后我加了点描述词生成了，但生成效果并不好，我就又开始研究我上边的头像了。我完全忘记了我还拿着这张图生成的某张图在做派生呢... 我只是改回了我的 prompt，就意外地得到了下边这张图：</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0TI8H.png"></p>
-<p>似乎是把枪头画成了那条条纹？我也不知道。反正着实是惊艳到我了，扔到 bigjpg 那边提高了一下分辨率，再扔进 PS 调了一下曲线，嘿嘿，新的手机壁纸有了！</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x07eG4.png" alt="拉的曲线"></p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x07Prq.png" alt="新的手机壁纸！"></p>
-<p>然后又拿这张图和基于上边改的 prompt 做了派生...</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">{{masterpiece,best quality}},shawl hair,dark grey hair, dark grey eyes,red eye shadow,red scanf,  light grey shirt,{{illustration}},red flower on face,white flower on hair,growth, nature,beautiful face, {{indifferent}}, zoom in one eyes,1girl, red flower background, gold fence background,focus on eye</span><br></pre></td></tr></tbody></table></figure>
-
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x07XO1.jpg"></p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x07vex.jpg"></p>
-<p>相当不错！</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>NovelAI</tag>
-        <tag>AI</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Notes for Machine Learning</title>
     <url>/posts/a6f57fef.html</url>
     <content><![CDATA[<p>Here are my notes for course <a href="https://study.163.com/course/courseMain.htm?courseId=1210076550">Machine Learning</a> taught by Andrew Ng.</p>
@@ -956,6 +883,79 @@
         <tag>AI</tag>
         <tag>Machine Learning</tag>
         <tag>Andrew Ng</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>挖老婆矿！—— NovelAI 初试</title>
+    <url>/posts/f17b3e8b.html</url>
+    <content><![CDATA[<p>最近一段时间，感觉突然之间，就有很多很多将现实图片二次元化啊，按照每句歌词生成一副画作啊的 AI 绘画应用的图文视频出现。和室友聊天还说是不是最近一段时间 AI 技术突破什么瓶颈突飞猛进了。后来才知道，原来是 NovelAI 泄露了... 这样一来，本地部署方便了起来，于是整了一个玩玩。由于跑 AI 嘛，GPU 比较呼啸，跟挖矿一样，我就戏称我这是在 “挖老婆矿” 了。</p>
+<span id="more"></span>
+
+<p>注：这篇文章更偏向于我记录生成时使用的 tag， 不涉及基础操作。我使用的 NovelAI 下载自<a href="https://www.bilibili.com/video/BV1EV4y1L7dX">这里</a>。</p>
+<h1 id="一个头像（一堆头像）"><a href="#一个头像（一堆头像）" class="headerlink" title="一个头像（一堆头像）"></a>一个头像（一堆头像）</h1><p>我最开始只是用几个 tag 生成。经历了一些粗浅的尝试后，发现生成的质量并不高。但是看到了<a href="https://www.yuque.com/longyuye/lmgcwy/goa36x">一篇文章</a>，照着里边的 tag 写，才算真正开始了探索。</p>
+<p>首先是根据上边那篇文章最后的示例增改了点 tag 形成的 prompt:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">blue pen illustration, light blue background, flowers on face, growth, nature, beautiful face, pink hair,shawl hair, zoom in on eyes, apathy, red eye shadow, petite, best quality, masterpiece</span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后生成出了下面这些相当不错的图案：</p>
+<p><img data-src="https://s1.ax1x.com/2022/10/15/x0HgAK.jpg"></p>
+<p><img data-src="https://s1.ax1x.com/2022/10/15/x0H676.jpg"></p>
+<p>下边分类讲讲 tag:</p>
+<p>提高总体质量的：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">masterpiece, best quality, by famous artist, beautiful face</span><br></pre></td></tr></tbody></table></figure>
+
+<p>使整体的风格偏向更具插画感：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">illustration</span><br></pre></td></tr></tbody></table></figure>
+
+<p>限定背景的：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">xxxx + backgroud  (比如上边的淡蓝色背景就是 light blue background )</span><br></pre></td></tr></tbody></table></figure>
+
+<p>让生成出来的 waifu 更幼的：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">petite</span><br></pre></td></tr></tbody></table></figure>
+
+<p>让脸上、头发上出现花朵装饰的：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">flowers on face</span><br></pre></td></tr></tbody></table></figure>
+
+<p>让眼睛更大的：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">zoom in one eyes</span><br></pre></td></tr></tbody></table></figure>
+
+<p>尝到了甜头后，我就想换头像了。但我不想完全抛弃现在的头像，于是就试图拿它做派生。</p>
+<p>首先描述一下原来的头像，让 AI 知道我大概是想要怎样的一个 "老婆"。<del>（虽然其实我描述的时候更感觉是在捏女儿）</del> 顺便一说，我这个原来的头像其实也是 AI 生成的，叫 <a href="https://waifulabs.com/generate">WaifuLabs</a>，是我把原来生成出来的丢进 PS 去了水印，又自己修缮了一下得到的。</p>
+<p><img data-src="https://s1.ax1x.com/2022/10/15/x0I1Z8.jpg" alt="上边是 WaifuLabs 生成出来时候的样子，下边是我自己 PS 改的"></p>
+<p>抛却那些提高质量的，大概给了 <code>披肩发</code>、<code>深灰色头发</code>、<code>深灰色眼睛</code>、<code>红色眼影</code>、<code>白色衬衫</code>、<code>微笑</code> 这些 tag。同时模仿了上边，给了 <code>面部的花</code> 之类的 tag：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">{{masterpiece,best quality}},shawl hair,dark grey hair, dark grey eyes,red eye shadow,  white shirt,illustration,flower on face,growth, nature,beautiful face, smile, zoom in one eyes</span><br></pre></td></tr></tbody></table></figure>
+
+<p>以上边的内容为 prompt，同时把我改的那张扔给 NovelAI，根据生成结果又慢慢改，添加 tag，最终的 prompt 如下:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">{{masterpiece,best quality,by wlop}},shawl hair,dark grey hair, dark grey eyes,red eye shadow, white shirt,{{{illustration}}},flower on face, growth, nature, beautiful face, small smile, zoom in one eyes, {{{{petite}}}}, dramatic shadows, ink,eye-focus, portrait, red hairclip</span><br></pre></td></tr></tbody></table></figure>
+
+<p>跑了大概 100 张，然后挑了挑，下边展示的是部分高质量的：</p>
+<p><img data-src="https://s1.ax1x.com/2022/10/15/x0IgzR.png"></p>
+<p>又是一波奇奇怪怪的调整：</p>
+<p><img data-src="https://s1.ax1x.com/2022/10/15/x0onkF.png"></p>
+<p>最后挑选出了这张我觉得挺有特色的：</p>
+<p><img data-src="https://s1.ax1x.com/2022/10/15/x0o161.png"></p>
+<p>然后开始根据这张进行派生：</p>
+<p><img data-src="https://s1.ax1x.com/2022/10/15/x0jbEn.png"></p>
+<h1 id="一张壁纸（一堆壁纸）"><a href="#一张壁纸（一堆壁纸）" class="headerlink" title="一张壁纸（一堆壁纸）"></a>一张壁纸（一堆壁纸）</h1><p>这事儿开始的挺搞笑的，当时我正在调上边的头像参数，坐我旁边玩 CSGO 的朋友希望我把某把枪拟人，然后发我了下边的图片：</p>
+<p><img data-src="https://s1.ax1x.com/2022/10/15/x0TGgs.jpg"></p>
+<p>然后我加了点描述词生成了，但生成效果并不好，我就又开始研究我上边的头像了。我完全忘记了我还拿着这张图生成的某张图在做派生呢... 我只是改回了我的 prompt，就意外地得到了下边这张图：</p>
+<p><img data-src="https://s1.ax1x.com/2022/10/15/x0TI8H.png"></p>
+<p>似乎是把枪头画成了那条条纹？我也不知道。反正着实是惊艳到我了，扔到 bigjpg 那边提高了一下分辨率，再扔进 PS 调了一下曲线，嘿嘿，新的手机壁纸有了！</p>
+<p><img data-src="https://s1.ax1x.com/2022/10/15/x07eG4.png" alt="拉的曲线"></p>
+<p><img data-src="https://s1.ax1x.com/2022/10/15/x07Prq.png" alt="新的手机壁纸！"></p>
+<p>然后又拿这张图和基于上边改的 prompt 做了派生...</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">{{masterpiece,best quality}},shawl hair,dark grey hair, dark grey eyes,red eye shadow,red scanf,  light grey shirt,{{illustration}},red flower on face,white flower on hair,growth, nature,beautiful face, {{indifferent}}, zoom in one eyes,1girl, red flower background, gold fence background,focus on eye</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img data-src="https://s1.ax1x.com/2022/10/15/x07XO1.jpg"></p>
+<p><img data-src="https://s1.ax1x.com/2022/10/15/x07vex.jpg"></p>
+<p>相当不错！</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+        <tag>NovelAI</tag>
       </tags>
   </entry>
   <entry>
@@ -1945,6 +1945,39 @@
       </tags>
   </entry>
   <entry>
+    <title>Edge 扩展推荐</title>
+    <url>/posts/3c91f84e.html</url>
+    <content><![CDATA[<p>2019 年 7 月写过一篇 Chrome 插件推荐的文章，那时候我还在用 Chrome 作为我的主要浏览器。一晃三年过去了，我也早已从 Google Chrome 转入全新 Chromium 内核构建的 Edge 浏览器。微软倒蛮有意思，自己从头开发的东西不咋地，在别人的平台上倒是表现得相当好。由于国内的水土不服啊，我用 Chrome 时总会遇到同步不了的情况，这点的体验在 Edge 这儿得到了很好的改善，也是我用 Edge 的主要原因吧。前些天帮很多同学做新机开荒，也推荐他们就用这款 “Win11 原装” 浏览器。当然一个浏览器肯定是离不开扩展的，趁着帮他们开荒这个机会，也顺便整理了我认为必备的一些浏览器扩展。</p>
+<span id="more"></span>
+
+<p><strong>本文更多的从个人角度出发，仅涵盖了笔者的主要需求，自然是粗略的，仅供参考。</strong></p>
+<h2 id="全部用户"><a href="#全部用户" class="headerlink" title="全部用户"></a>全部用户</h2><h3 id="Dark-Reader"><a href="#Dark-Reader" class="headerlink" title="Dark Reader"></a>Dark Reader</h3><p>简介：强制暗黑模式的网页</p>
+<h3 id="Infinity-新标签页-Pro"><a href="#Infinity-新标签页-Pro" class="headerlink" title="Infinity 新标签页 (Pro)"></a>Infinity 新标签页 (Pro)</h3><p>简介：rt，一个新标签页扩展</p>
+<h3 id="OneTab"><a href="#OneTab" class="headerlink" title="OneTab"></a>OneTab</h3><p>简介： 打开了太多网页的时候，按一下可以帮你全部收起来，之后可以自由恢复</p>
+<h3 id="Prevent-Duplicate-Tabs"><a href="#Prevent-Duplicate-Tabs" class="headerlink" title="Prevent Duplicate Tabs"></a>Prevent Duplicate Tabs</h3><p>简介： 帮你干掉那些重复的标签页</p>
+<h3 id="uBlock-Origin"><a href="#uBlock-Origin" class="headerlink" title="uBlock Origin"></a>uBlock Origin</h3><p>简介：干掉广告，且是众多去广告插件中占用相对较少的</p>
+<h3 id="捕捉网页截图-FireShot-的"><a href="#捕捉网页截图-FireShot-的" class="headerlink" title="捕捉网页截图 - FireShot 的"></a>捕捉网页截图 - FireShot 的</h3><p>简介：rt，支持长截图（名字有点怪，可能是翻译问题，搜索 FireShot 就能找到）</p>
+<h3 id="暴力猴"><a href="#暴力猴" class="headerlink" title="暴力猴"></a>暴力猴</h3><p>简介：装脚本的插件，和大名鼎鼎的油猴一样的功能，这个可能 (?) 小巧一点</p>
+<h3 id="沙拉查词-聚合词典划词翻译"><a href="#沙拉查词-聚合词典划词翻译" class="headerlink" title="沙拉查词-聚合词典划词翻译"></a>沙拉查词 - 聚合词典划词翻译</h3><p>简介：rt，划词翻译，可配置内容超多</p>
+<h3 id="Imagus"><a href="#Imagus" class="headerlink" title="Imagus"></a>Imagus</h3><p>简介：可以把网页图片放大了看</p>
+<h3 id="User-Agent-Switcher-for-Chrome"><a href="#User-Agent-Switcher-for-Chrome" class="headerlink" title="User-Agent Switcher for Chrome"></a>User-Agent Switcher for Chrome</h3><p>简介：“伪装” 你自己</p>
+<h3 id="Video-Speed-Controller"><a href="#Video-Speed-Controller" class="headerlink" title="Video Speed Controller"></a>Video Speed Controller</h3><p>简介：rt，但是竟然也可以改视频前广告的播放速度！</p>
+<h2 id="哔哩哔哩用户"><a href="#哔哩哔哩用户" class="headerlink" title="哔哩哔哩用户"></a>哔哩哔哩用户</h2><h3 id="pakku：哔哩哔哩弹幕过滤器"><a href="#pakku：哔哩哔哩弹幕过滤器" class="headerlink" title="pakku：哔哩哔哩弹幕过滤器"></a>pakku：哔哩哔哩弹幕过滤器</h3><p>简介：简化（过滤）你的 b 站弹幕</p>
+<h3 id="哔哩哔哩助手：bilibili-com-综合辅助扩"><a href="#哔哩哔哩助手：bilibili-com-综合辅助扩" class="headerlink" title="哔哩哔哩助手：bilibili.com 综合辅助扩"></a>哔哩哔哩助手：bilibili.com 综合辅助扩</h3><p>简介：功能超多，我主要用来下载 b 站视频了</p>
+<h2 id="Steam-用户"><a href="#Steam-用户" class="headerlink" title="Steam 用户"></a>Steam 用户</h2><h3 id="Augmented-Steam"><a href="#Augmented-Steam" class="headerlink" title="Augmented Steam"></a>Augmented Steam</h3><p>简介：为 steam 官网提供了众多试用的玩意儿</p>
+<h2 id="IT-工作者"><a href="#IT-工作者" class="headerlink" title="IT 工作者"></a>IT 工作者</h2><h3 id="Octotree-GitHub-code-tree"><a href="#Octotree-GitHub-code-tree" class="headerlink" title="Octotree - GitHub code tree"></a>Octotree - GitHub code tree</h3><p>简介：方便地查看 github 上某个 repository 的文件结构</p>
+<h3 id="Surfingkeys"><a href="#Surfingkeys" class="headerlink" title="Surfingkeys"></a>Surfingkeys</h3><p>简介：像 vim 一样的玩意儿，让你完全用你的键盘浏览网页</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Browser</tag>
+        <tag>Edge</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LaTeX 公式基础</title>
     <url>/posts/848a7d31.html</url>
     <content><![CDATA[<p>用 LaTeX 写数学公式的时候，总记不住一些写法，故在此记录学习笔记。</p>
@@ -2508,39 +2541,6 @@
       <tags>
         <tag>Mathematics</tag>
         <tag>LaTeX</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Edge 扩展推荐</title>
-    <url>/posts/3c91f84e.html</url>
-    <content><![CDATA[<p>2019 年 7 月写过一篇 Chrome 插件推荐的文章，那时候我还在用 Chrome 作为我的主要浏览器。一晃三年过去了，我也早已从 Google Chrome 转入全新 Chromium 内核构建的 Edge 浏览器。微软倒蛮有意思，自己从头开发的东西不咋地，在别人的平台上倒是表现得相当好。由于国内的水土不服啊，我用 Chrome 时总会遇到同步不了的情况，这点的体验在 Edge 这儿得到了很好的改善，也是我用 Edge 的主要原因吧。前些天帮很多同学做新机开荒，也推荐他们就用这款 “Win11 原装” 浏览器。当然一个浏览器肯定是离不开扩展的，趁着帮他们开荒这个机会，也顺便整理了我认为必备的一些浏览器扩展。</p>
-<span id="more"></span>
-
-<p><strong>本文更多的从个人角度出发，仅涵盖了笔者的主要需求，自然是粗略的，仅供参考。</strong></p>
-<h2 id="全部用户"><a href="#全部用户" class="headerlink" title="全部用户"></a>全部用户</h2><h3 id="Dark-Reader"><a href="#Dark-Reader" class="headerlink" title="Dark Reader"></a>Dark Reader</h3><p>简介：强制暗黑模式的网页</p>
-<h3 id="Infinity-新标签页-Pro"><a href="#Infinity-新标签页-Pro" class="headerlink" title="Infinity 新标签页 (Pro)"></a>Infinity 新标签页 (Pro)</h3><p>简介：rt，一个新标签页扩展</p>
-<h3 id="OneTab"><a href="#OneTab" class="headerlink" title="OneTab"></a>OneTab</h3><p>简介： 打开了太多网页的时候，按一下可以帮你全部收起来，之后可以自由恢复</p>
-<h3 id="Prevent-Duplicate-Tabs"><a href="#Prevent-Duplicate-Tabs" class="headerlink" title="Prevent Duplicate Tabs"></a>Prevent Duplicate Tabs</h3><p>简介： 帮你干掉那些重复的标签页</p>
-<h3 id="uBlock-Origin"><a href="#uBlock-Origin" class="headerlink" title="uBlock Origin"></a>uBlock Origin</h3><p>简介：干掉广告，且是众多去广告插件中占用相对较少的</p>
-<h3 id="捕捉网页截图-FireShot-的"><a href="#捕捉网页截图-FireShot-的" class="headerlink" title="捕捉网页截图 - FireShot 的"></a>捕捉网页截图 - FireShot 的</h3><p>简介：rt，支持长截图（名字有点怪，可能是翻译问题，搜索 FireShot 就能找到）</p>
-<h3 id="暴力猴"><a href="#暴力猴" class="headerlink" title="暴力猴"></a>暴力猴</h3><p>简介：装脚本的插件，和大名鼎鼎的油猴一样的功能，这个可能 (?) 小巧一点</p>
-<h3 id="沙拉查词-聚合词典划词翻译"><a href="#沙拉查词-聚合词典划词翻译" class="headerlink" title="沙拉查词-聚合词典划词翻译"></a>沙拉查词 - 聚合词典划词翻译</h3><p>简介：rt，划词翻译，可配置内容超多</p>
-<h3 id="Imagus"><a href="#Imagus" class="headerlink" title="Imagus"></a>Imagus</h3><p>简介：可以把网页图片放大了看</p>
-<h3 id="User-Agent-Switcher-for-Chrome"><a href="#User-Agent-Switcher-for-Chrome" class="headerlink" title="User-Agent Switcher for Chrome"></a>User-Agent Switcher for Chrome</h3><p>简介：“伪装” 你自己</p>
-<h3 id="Video-Speed-Controller"><a href="#Video-Speed-Controller" class="headerlink" title="Video Speed Controller"></a>Video Speed Controller</h3><p>简介：rt，但是竟然也可以改视频前广告的播放速度！</p>
-<h2 id="哔哩哔哩用户"><a href="#哔哩哔哩用户" class="headerlink" title="哔哩哔哩用户"></a>哔哩哔哩用户</h2><h3 id="pakku：哔哩哔哩弹幕过滤器"><a href="#pakku：哔哩哔哩弹幕过滤器" class="headerlink" title="pakku：哔哩哔哩弹幕过滤器"></a>pakku：哔哩哔哩弹幕过滤器</h3><p>简介：简化（过滤）你的 b 站弹幕</p>
-<h3 id="哔哩哔哩助手：bilibili-com-综合辅助扩"><a href="#哔哩哔哩助手：bilibili-com-综合辅助扩" class="headerlink" title="哔哩哔哩助手：bilibili.com 综合辅助扩"></a>哔哩哔哩助手：bilibili.com 综合辅助扩</h3><p>简介：功能超多，我主要用来下载 b 站视频了</p>
-<h2 id="Steam-用户"><a href="#Steam-用户" class="headerlink" title="Steam 用户"></a>Steam 用户</h2><h3 id="Augmented-Steam"><a href="#Augmented-Steam" class="headerlink" title="Augmented Steam"></a>Augmented Steam</h3><p>简介：为 steam 官网提供了众多试用的玩意儿</p>
-<h2 id="IT-工作者"><a href="#IT-工作者" class="headerlink" title="IT 工作者"></a>IT 工作者</h2><h3 id="Octotree-GitHub-code-tree"><a href="#Octotree-GitHub-code-tree" class="headerlink" title="Octotree - GitHub code tree"></a>Octotree - GitHub code tree</h3><p>简介：方便地查看 github 上某个 repository 的文件结构</p>
-<h3 id="Surfingkeys"><a href="#Surfingkeys" class="headerlink" title="Surfingkeys"></a>Surfingkeys</h3><p>简介：像 vim 一样的玩意儿，让你完全用你的键盘浏览网页</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Browser</tag>
-        <tag>Edge</tag>
       </tags>
   </entry>
   <entry>
@@ -3242,6 +3242,35 @@
       </tags>
   </entry>
   <entry>
+    <title>Managing Multiple Python Versions With Pyenv and Conda</title>
+    <url>/posts/c7d1762.html</url>
+    <content><![CDATA[<p>As a CS student, I often find myself working on projects that require different Python versions, each with its own set of dependencies and libraries. In such scenarios, having a reliable and efficient method for managing these versions becomes crucial. Inspired by <em><a href="https://blog.yfi.moe/post/pyenv-conda-together/">pyenv 与 conda 双轨制：管理 Python 版本和环境</a></em> , this blog post aims to document my experience with managing multiple versions of Python using pyenv and conda.</p>
+<span id="more"></span>
+
+<p>In this workflow, we use pythons managed by <a href="https://github.com/pyenv/pyenv">pyenv</a> by default. We'll use <code>conda activate</code> to use pythons managed by <a href="https://www.anaconda.com/">conda</a> when needed.</p>
+<div class="note primary"><p>The installation process provided here is only for macOS (and Z Shell), on other platforms such as Windows you may need to make some changes.</p>
+</div>
+
+<h2 id="Install-pyenv"><a href="#Install-pyenv" class="headerlink" title="Install pyenv"></a>Install pyenv</h2><p>Use Homebrew to install <code>pyenv</code>:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">brew install pyenv</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">'# &gt;&gt;&gt; pyenv initialize &gt;&gt;&gt;'</span> &gt;&gt; ~/.zshrc</span><br><span class="line"><span class="built_in">echo</span> <span class="string">'export PYENV_ROOT="$HOME/.pyenv"'</span> &gt;&gt; ~/.zshrc</span><br><span class="line"><span class="built_in">echo</span> <span class="string">'[[ -d $PYENV_ROOT/bin ]] &amp;&amp; export PATH="$PYENV_ROOT/bin:$PATH"'</span> &gt;&gt; ~/.zshrc</span><br><span class="line"><span class="built_in">echo</span> <span class="string">'eval "$(pyenv init -)"'</span> &gt;&gt; ~/.zshrc</span><br><span class="line"><span class="built_in">echo</span> <span class="string">'# &lt;&lt;&lt; pyenv initialize &lt;&lt;&lt;'</span> &gt;&gt; ~/.zshrc</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Restart your zsh for the changes to take effect.</p>
+<h2 id="Use-pyenv"><a href="#Use-pyenv" class="headerlink" title="Use pyenv"></a>Use pyenv</h2><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">pyenv install --list <span class="comment"># shows all versions available</span></span><br><span class="line">pyenv install 3.12.2 <span class="comment"># installs version 3.12.2</span></span><br><span class="line">pyenv global 3.12.2 <span class="comment"># set version 3.12.2 to be used globally in the current machine</span></span><br><span class="line">pyenv <span class="built_in">local</span> 3.12.2 <span class="comment"># set version 3.12.2 to be used in the current directory and all directories below it</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Install-conda"><a href="#Install-conda" class="headerlink" title="Install conda"></a>Install conda</h2><p>Use Homebrew to install <code>anaconda</code>:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">brew install anaconda</span><br><span class="line">/opt/homebrew/anaconda3/bin/conda init zsh</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Restart your zsh for the changes to take effect.</p>
+<p>Run the following command to disable conda's ability to automatically activate the base environment，if you need:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">conda config --<span class="built_in">set</span> auto_activate_base <span class="literal">false</span></span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <tags>
+        <tag>Python</tag>
+        <tag>conda</tag>
+        <tag>pyenv</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Matching IPv4 Addresses With RegExp</title>
     <url>/posts/1d74bec6.html</url>
     <content><![CDATA[<p>While solving <a href="https://cs50.harvard.edu/python/2022/psets/7/numb3rs/">the NUM3RS problem of CS50P</a>, I was asked to match IPv4 addresses with RegExp.</p>
@@ -3469,10 +3498,10 @@
 
 <h3 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h3><p>Oh-my-zsh provides many plugins (See the <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins">list</a>), and you can install more by yourself.</p>
 <p>I installed some plugins not provided by oh-my-zsh:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/sukkaw/zsh-osx-autoproxy <span class="variable">${ZSH_CUSTOM:-~/.oh-my-zsh/custom}</span>/plugins/zsh-osx-autoproxy --depth=1 <span class="comment"># only on macOS</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions.git <span class="variable">$ZSH_CUSTOM</span>/plugins/zsh-autosuggestions --depth=1</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-history-substring-search <span class="variable">${ZSH_CUSTOM:-~/.oh-my-zsh/custom}</span>/plugins/zsh-history-substring-search --depth=1</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-syntax-highlighting.git <span class="variable">${ZSH_CUSTOM:-~/.oh-my-zsh/custom}</span>/plugins/zsh-syntax-highlighting --depth=1</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/esc/conda-zsh-completion <span class="variable">${ZSH_CUSTOM:=~/.oh-my-zsh/custom}</span>/plugins/conda-zsh-completion</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/sukkaw/zsh-osx-autoproxy <span class="variable">${ZSH_CUSTOM:-~/.oh-my-zsh/custom}</span>/plugins/zsh-osx-autoproxy --depth=1 <span class="comment"># only on macOS</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions.git <span class="variable">$ZSH_CUSTOM</span>/plugins/zsh-autosuggestions --depth=1</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-history-substring-search <span class="variable">${ZSH_CUSTOM:-~/.oh-my-zsh/custom}</span>/plugins/zsh-history-substring-search --depth=1</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-syntax-highlighting.git <span class="variable">${ZSH_CUSTOM:-~/.oh-my-zsh/custom}</span>/plugins/zsh-syntax-highlighting --depth=1</span><br></pre></td></tr></tbody></table></figure>
 
 <p>Edit in <code>~/.zshrc</code>:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">plugins=(</span><br><span class="line">    fd</span><br><span class="line">    fzf</span><br><span class="line">    git</span><br><span class="line">    git-commit</span><br><span class="line">    history-substring-search</span><br><span class="line">    pip</span><br><span class="line">    ripgrep</span><br><span class="line">    z</span><br><span class="line">    zsh-autosuggestions</span><br><span class="line">    zsh-osx-autoproxy</span><br><span class="line">    zsh-syntax-highlighting</span><br><span class="line">)</span><br><span class="line">ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=white'</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">plugins=(</span><br><span class="line">    conda-zsh-completion</span><br><span class="line">    fd</span><br><span class="line">    fzf</span><br><span class="line">    git</span><br><span class="line">    git-commit</span><br><span class="line">    history-substring-search</span><br><span class="line">    pip</span><br><span class="line">    ripgrep</span><br><span class="line">    z</span><br><span class="line">    zsh-autosuggestions</span><br><span class="line">    zsh-osx-autoproxy</span><br><span class="line">    zsh-syntax-highlighting</span><br><span class="line">)</span><br><span class="line">ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=white'</span><br></pre></td></tr></tbody></table></figure>
 
 <p>Usage of some plugins:</p>
 <ul>

@@ -9,8 +9,31 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Thu, 15 Feb 2024 02:41:37 GMT</pubDate>
+    <pubDate>Tue, 20 Feb 2024 07:32:11 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Managing Multiple Python Versions With Pyenv and Conda</title>
+      <link>https://fishg.top/posts/c7d1762.html</link>
+      <guid>https://fishg.top/posts/c7d1762.html</guid>
+      <pubDate>Tue, 20 Feb 2024 07:32:11 GMT</pubDate>
+      
+      <description>&lt;p&gt;As a CS student, I often find myself working on projects that require different Python versions, each with its own set of dependencies and libraries. In such scenarios, having a reliable and efficient method for managing these versions becomes crucial. Inspired by &lt;em&gt;&lt;a href=&quot;https://blog.yfi.moe/post/pyenv-conda-together/&quot;&gt;pyenv 与 conda 双轨制：管理 Python 版本和环境&lt;/a&gt;&lt;/em&gt; , this blog post aims to document my experience with managing multiple versions of Python using pyenv and conda.&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://fishg.top/tags/python/">Python</category>
+      
+      <category domain="https://fishg.top/tags/conda/">conda</category>
+      
+      <category domain="https://fishg.top/tags/pyenv/">pyenv</category>
+      
+      
+      <comments>https://fishg.top/posts/c7d1762.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>我的 Rime 配置</title>
@@ -1968,9 +1991,9 @@
       <category domain="https://fishg.top/categories/cs/ai/">AI</category>
       
       
-      <category domain="https://fishg.top/tags/novelai/">NovelAI</category>
-      
       <category domain="https://fishg.top/tags/ai/">AI</category>
+      
+      <category domain="https://fishg.top/tags/novelai/">NovelAI</category>
       
       
       <comments>https://fishg.top/posts/f17b3e8b.html#disqus_thread</comments>
