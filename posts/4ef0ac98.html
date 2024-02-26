@@ -297,15 +297,15 @@
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></tbody></table></figure>
 
 <p>The <code>-g</code> flag indicates that Hexo is installed globally.</p>
-<p>Learn more in <a target="_blank" rel="noopener" href="https://hexo.io/docs/">Hexo Docs</a>.</p>
+<p>Learn more in <em><a target="_blank" rel="noopener" href="https://hexo.io/docs/">Hexo Docs</a></em>.</p>
 <h2 id="Setup"><a href="#Setup" class="headerlink" title="Setup"></a>Setup</h2><p>You need to make a directory <code>&lt;folder&gt;</code> to store your Hexo blog. Here I use <code>fishpond</code>.</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init fishpond</span><br><span class="line"><span class="built_in">cd</span> fishpond</span><br><span class="line">npm install</span><br></pre></td></tr></tbody></table></figure>
 
-<p>Learn more in <a target="_blank" rel="noopener" href="https://hexo.io/docs/setup">Hexo Docs</a>.</p>
+<p>Learn more in <em><a target="_blank" rel="noopener" href="https://hexo.io/docs/setup">Hexo Docs</a></em>.</p>
 <h2 id="Theme"><a href="#Theme" class="headerlink" title="Theme"></a>Theme</h2><p>Before starting to use your blog, you may choose a <a target="_blank" rel="noopener" href="https://hexo.io/themes/">theme</a> you like.</p>
 <p><img data-src="https://s1.ax1x.com/2023/04/11/ppOnugs.png" alt="Hexo themes"></p>
-<p>Here I choose <a target="_blank" rel="noopener" href="https://theme-next.js.org/">NexT</a>. To install it, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> fishpond</span><br><span class="line">npm install hexo-theme-next --save</span><br></pre></td></tr></tbody></table></figure>
+<p>Here I choose the <a target="_blank" rel="noopener" href="https://theme-next.js.org/">NexT</a> theme. To install it, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-theme-next --save</span><br></pre></td></tr></tbody></table></figure>
 
 <p>After installing your own theme, you could uninstall the default theme <code>hexo-theme-landscape</code>:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-theme-landscape --save</span><br></pre></td></tr></tbody></table></figure>
@@ -316,15 +316,14 @@
 
 <h2 id="Basic-configuration"><a href="#Basic-configuration" class="headerlink" title="Basic configuration"></a>Basic configuration</h2><h3 id="Hexo-configuration"><a href="#Hexo-configuration" class="headerlink" title="Hexo configuration"></a>Hexo configuration</h3><p>To configure your Hexo blog, modify the <code>_config.yml</code> file.</p>
 <p>Learn more in <em><a target="_blank" rel="noopener" href="https://hexo.io/docs/configuration.html">Hexo Docs</a></em>.</p>
-<h3 id="NexT-theme-configuration"><a href="#NexT-theme-configuration" class="headerlink" title="NexT theme configuration"></a>NexT theme configuration</h3><p>Before configuring, you need to copy the configuration file. Run:</p>
+<h3 id="NexT-theme-configuration"><a href="#NexT-theme-configuration" class="headerlink" title="NexT theme configuration"></a>NexT theme configuration</h3><p>Before configuring, you are recommended to copy the configuration file (so that you don't change the node module). Run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cp</span> node_modules/hexo-theme-next/_config.yml _config.next.yml</span><br></pre></td></tr></tbody></table></figure>
 
-<p>Then you can customize your own <code>_config.next.yml</code> as your wish.</p>
-<p>Learn more in <em><a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/getting-started/configuration.html">Configuration | NexT (theme-next.js.org)</a></em>.</p>
-<h2 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h2><p>You could install plugins to make your blog more powerful.</p>
-<p>To list all the plugins you have installed, run:</p>
+<p>Then you can follow <em><a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/getting-started/configuration.html">Configuration | NexT (theme-next.js.org)</a></em> and customize the NexT theme as your wish.</p>
+<h2 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h2><p>You can install plugins to make your blog more powerful. The plugins are actually all packages managed by npm, so to list all the plugins you have installed, just run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm list --depth 0</span><br></pre></td></tr></tbody></table></figure>
 
+<p>Here are some of the plugins I'm using:</p>
 <h3 id="hexo-abbrlink"><a href="#hexo-abbrlink" class="headerlink" title="hexo-abbrlink"></a>hexo-abbrlink</h3><p><a target="_blank" rel="noopener" href="https://github.com/rozbo/hexo-abbrlink">hexo-abbrlink</a> is a Hexo plugin to generate static post link based on title and data in the post front.</p>
 <p>To install it, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></tbody></table></figure>
@@ -339,10 +338,11 @@
 <p>To configure it, modify <code>_config.yml</code>:</p>
 <figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">### hexo-auto-category: https://github.com/xu-song/hexo-auto-category</span></span><br><span class="line"><span class="attr">auto_category:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">depth:</span> <span class="number">3</span></span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="hexo-blockquote2note"><a href="#hexo-blockquote2note" class="headerlink" title="hexo-blockquote2note"></a>hexo-blockquote2note</h3><p><a target="_blank" rel="noopener" href="https://github.com/BlockLune/hexo-blockquote2note">hexo-blockquote2note</a> is a little plugin that renders blockquotes to <a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/tag-plugins/note">the note tag of the NexT theme</a>. If you also use the NexT theme, it maybe helpful.</p>
+<h3 id="hexo-blockquote2note"><a href="#hexo-blockquote2note" class="headerlink" title="hexo-blockquote2note"></a>hexo-blockquote2note</h3><p><a target="_blank" rel="noopener" href="https://github.com/BlockLune/hexo-blockquote2note">hexo-blockquote2note</a> is a little plugin that renders blocks of quotes in Markdown to <a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/tag-plugins/note">the note tag of the NexT theme</a>. If you also use the NexT theme, it maybe helpful.</p>
 <p>To install it, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-blockquote2note --save</span><br></pre></td></tr></tbody></table></figure>
 
+<p>Preview: <em><a href="posts/55f9ebd1.html">Introducing hexo-blockquote2note</a></em></p>
 <h3 id="hexo-generator-feed"><a href="#hexo-generator-feed" class="headerlink" title="hexo-generator-feed"></a>hexo-generator-feed</h3><p><a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a> helps generate Atom 1.0 or RSS 2.0 feed.</p>
 <p>To install it, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></tbody></table></figure>
@@ -425,7 +425,7 @@
 <p>See <em><a target="_blank" rel="noopener" href="https://www.imaegoo.com/2020/icarus-with-bulma/">活用 Bulma 美化 Icarus 文章 - iMaeGoo's Blog</a></em></p>
 </li>
 <li><p>Change fonts of Icarus.</p>
-<p>Modify the <code>&lt;blog_path&gt;\node_modules\hexo-theme-icarus\include\style\base.styl</code>:</p>
+<p>Modify the <code>&lt;blog_path&gt;/node_modules/hexo-theme-icarus/include/style/base.styl</code>:</p>
 <figure class="highlight stylus"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$family</span>-sans-serif ?= Ubuntu, Roboto, <span class="string">'Open Sans'</span>, <span class="string">'Microsoft YaHei'</span>, sans-serif</span><br><span class="line"><span class="variable">$family</span>-<span class="selector-tag">code</span> ?= <span class="string">'Source Code Pro'</span>, monospace, <span class="string">'Microsoft YaHei'</span></span><br></pre></td></tr></tbody></table></figure></li>
 </ul>
 <div class="note danger"><p>This operation modifies the node module! So it's NOT recommended.</p>
