@@ -3332,80 +3332,82 @@
 <figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> gdb</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">on_quit</span>():</span><br><span class="line">  gdb.execute(<span class="string">'kill'</span>)</span><br><span class="line"></span><br><span class="line">gdb.events.exited.connect(on_quit)</span><br><span class="line"></span><br><span class="line">gdb.execute(<span class="string">'...'</span>)</span><br><span class="line">gdb.Breakpoint(<span class="string">'...'</span>)</span><br></pre></td></tr></tbody></table></figure>
 
 <h2 id="GDB-Commands"><a href="#GDB-Commands" class="headerlink" title="GDB Commands"></a>GDB Commands</h2><h3 id="Basic-Commands"><a href="#Basic-Commands" class="headerlink" title="Basic Commands"></a>Basic Commands</h3><ul>
-<li><p><code>set args arg1 arg2 arg3</code>: set command line arguments of the program to be executed</p>
-</li>
-<li><p><code>set args</code>: remove all command line arguments set before</p>
-</li>
-<li><p><code>show args</code>: show the current command line arguments</p>
-</li>
-<li><p><code>run</code> or <code>r</code>: start to run the program (run to complete unless met a breakpoint)</p>
+<li><code>set args arg1 arg2 arg3</code>: set command line arguments of the program to be executed</li>
+<li><code>set args</code>: remove all command line arguments set before</li>
+<li><code>show args</code>: show the current command line arguments</li>
+</ul>
+<hr>
 <ul>
+<li><code>run</code> or <code>r</code>: start to run the program (run to complete unless met a breakpoint)<ul>
 <li>You can also put args after <code>run</code> if you don't use <code>set args</code> to set them before, e.g. <code>run arg1 arg2 arg3</code></li>
 </ul>
 </li>
-<li><p><code>kill</code>: stop running the program</p>
-</li>
-<li><p><code>file program</code>: load <code>program</code> and start to debug it</p>
-</li>
-<li><p><code>quit</code>: exit the debugger</p>
-</li>
-<li><p><code>set print pretty on</code>: make the outputs prettier</p>
-</li>
+<li><code>kill</code>: stop running the program</li>
+</ul>
+<hr>
+<ul>
+<li><code>file program</code>: load <code>program</code> and start to debug it</li>
+<li><code>quit</code>: exit the debugger</li>
+<li><code>set print pretty on</code>: make the outputs prettier</li>
 </ul>
 <h3 id="Stopping-and-Rerunning-Commands"><a href="#Stopping-and-Rerunning-Commands" class="headerlink" title="Stopping and Rerunning Commands"></a>Stopping and Rerunning Commands</h3><ul>
-<li><p><code>break</code> or <code>b</code>: set a breakpoint</p>
-<ul>
+<li><code>break</code> or <code>b</code>: set a breakpoint<ul>
 <li><code>break 10</code>: set a breakpoint to stop at line 10 of the current file</li>
 <li><code>break hello.c:10</code>: set a breakpoint to stop at line 10 of <code>hello.c</code></li>
 <li><code>break main</code>: set a breakpoint to stop at the beginning of the <code>main</code> function</li>
 <li><code>break</code>: stop at the current line</li>
 </ul>
 </li>
-<li><p><code>tbreak</code> or <code>tb</code>: set a temporary breakpoint</p>
-</li>
-<li><p><code>break ... if ...</code>: set a conditional breakpoint</p>
-</li>
-<li><p><code>watch a</code>: stop when the value of variable <code>a</code> changed</p>
-</li>
-<li><p><code>clear</code>: clear a breakpoint</p>
+<li><code>tbreak</code> or <code>tb</code>: set a temporary breakpoint</li>
+<li><code>break ... if ...</code>: set a conditional breakpoint</li>
+</ul>
+<hr>
 <ul>
+<li><code>watch a</code>: stop when the value of variable <code>a</code> changed</li>
+</ul>
+<hr>
+<ul>
+<li><code>clear</code>: clear a breakpoint<ul>
 <li><code>clear main</code>: remove the breakpoint for the <code>main</code> function</li>
 <li><code>clear hello.c:10</code>: remove the breakpoint at line 10 of <code>hello.c</code></li>
 </ul>
 </li>
-<li><p><code>info breakpoint</code> or <code>i break</code>: show all breakpoints</p>
-</li>
-<li><p><code>disable 2</code>: don't stopPrints n memory values of length unit u starting from addr in f format: at breakpoint #2 but keep it there</p>
-</li>
-<li><p><code>enable 2</code>: stop at breakpoint #2 again</p>
-</li>
-<li><p><code>delete 2</code>: remove breakpoint #2</p>
-</li>
-<li><p><code>save breakpoints file</code>: save breakpoints to <code>file</code></p>
-</li>
-<li><p><code>source file</code>: load breakpoints from <code>file</code></p>
-</li>
-<li><p><code>step</code> or <code>s</code>: step forward one line of code (goes into functions)</p>
-</li>
-<li><p><code>step 2</code>: step forward two line of code (goes into functions)</p>
-</li>
-<li><p><code>stepi</code> or <code>si</code>: step a single assembly instruction forward (goes into functions)</p>
-</li>
-<li><p><code>next</code> or <code>n</code>: step forward one line of code (does not go into functions)</p>
-</li>
-<li><p><code>next 2</code>: step forward two line of code (does not go into functions)</p>
-</li>
-<li><p><code>nexti</code> or <code>ni</code>: step a single assembly instruction forward (does not go into functions)</p>
-</li>
-<li><p><code>finish</code> or <code>fin</code>: continue running until the current function finished</p>
-</li>
-<li><p><code>return</code>: stop running the current function and return immediately</p>
+</ul>
+<hr>
 <ul>
+<li><code>info breakpoint</code> or <code>i break</code>: show all breakpoints</li>
+</ul>
+<hr>
+<ul>
+<li><code>disable 2</code>: don't stopPrints n memory values of length unit u starting from addr in f format: at breakpoint #2 but keep it there</li>
+<li><code>enable 2</code>: stop at breakpoint #2 again</li>
+<li><code>delete 2</code>: remove breakpoint #2</li>
+</ul>
+<hr>
+<ul>
+<li><code>save breakpoints file</code>: save breakpoints to <code>file</code></li>
+<li><code>source file</code>: load breakpoints from <code>file</code></li>
+</ul>
+<hr>
+<ul>
+<li><code>step</code> or <code>s</code>: step forward one line of code (goes into functions)</li>
+<li><code>step 2</code>: step forward two line of code (goes into functions)</li>
+<li><code>stepi</code> or <code>si</code>: step a single assembly instruction forward (goes into functions)</li>
+</ul>
+<hr>
+<ul>
+<li><code>next</code> or <code>n</code>: step forward one line of code (does not go into functions)</li>
+<li><code>next 2</code>: step forward two line of code (does not go into functions)</li>
+<li><code>nexti</code> or <code>ni</code>: step a single assembly instruction forward (does not go into functions)</li>
+</ul>
+<hr>
+<ul>
+<li><code>finish</code> or <code>fin</code>: continue running until the current function finished</li>
+<li><code>return</code>: stop running the current function and return immediately<ul>
 <li><code>return expression</code>: stop running and return the value of <code>expression</code> as the function's return value</li>
 </ul>
 </li>
-<li><p><code>continue</code> or <code>c</code>: continue running until the next breakpoint</p>
-</li>
+<li><code>continue</code> or <code>c</code>: continue running until the next breakpoint</li>
 </ul>
 <h3 id="Inspecting-Variable-Values"><a href="#Inspecting-Variable-Values" class="headerlink" title="Inspecting Variable Values"></a>Inspecting Variable Values</h3><ul>
 <li><p><code>print a</code> or <code>p a</code>: print value of variable <code>a</code> (which must be in the current function)</p>
@@ -3417,8 +3419,10 @@
 <li><code>print *arr@10</code>: print the first ten elements of array <code>arr</code></li>
 </ul>
 </li>
-<li><p><code>x/nfu addr</code>: prints <code>n</code> memory values of length unit <code>u</code> starting from <code>addr</code> in <code>f</code> format, where</p>
+</ul>
+<hr>
 <ul>
+<li><code>x/nfu addr</code>: prints <code>n</code> memory values of length unit <code>u</code> starting from <code>addr</code> in <code>f</code> format, where<ul>
 <li><code>f</code>: <code>x</code> for hex output and <code>o</code> for oct output, etc.</li>
 <li><code>u</code>: <code>b</code> for byte, <code>h</code> for half word (two bytes), <code>w</code> for word (four bytes), and <code>g</code> for giant word (eight bytes)</li>
 </ul>
