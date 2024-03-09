@@ -9,8 +9,35 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Tue, 20 Feb 2024 07:32:11 GMT</pubDate>
+    <pubDate>Sat, 09 Mar 2024 06:16:24 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>My GDB Cheat Sheet</title>
+      <link>https://fishg.top/posts/e87455d1.html</link>
+      <guid>https://fishg.top/posts/e87455d1.html</guid>
+      <pubDate>Sat, 09 Mar 2024 06:16:24 GMT</pubDate>
+      
+      <description>&lt;p&gt;The GNU debugger is a powerful tool for the debugging of (mainly) C/C++ programs. In this post I document the common operations of gdb and some useful learning resources.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://fishg.top/categories/cs/">CS</category>
+      
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
+      
+      
+      <category domain="https://fishg.top/tags/gdb/">GDB</category>
+      
+      <category domain="https://fishg.top/tags/gnu-debugger/">GNU Debugger</category>
+      
+      <category domain="https://fishg.top/tags/cheat-sheet/">Cheat Sheet</category>
+      
+      
+      <comments>https://fishg.top/posts/e87455d1.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Managing Multiple Python Versions With Pyenv and Conda</title>
