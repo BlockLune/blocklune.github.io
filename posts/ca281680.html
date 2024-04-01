@@ -22,12 +22,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"fishg.top","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="This is NOT a tutorial of installing Ubuntu. Just write down some issues I met during my installation.">
+    <meta name="description" content="This is NOT a tutorial on how to install Ubuntu. I am just documenting some problems I encountered during my installation.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Installing Ubuntu">
 <meta property="og:url" content="https://fishg.top/posts/ca281680.html">
 <meta property="og:site_name" content="Fish Pond">
-<meta property="og:description" content="This is NOT a tutorial of installing Ubuntu. Just write down some issues I met during my installation.">
+<meta property="og:description" content="This is NOT a tutorial on how to install Ubuntu. I am just documenting some problems I encountered during my installation.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-04-27T15:41:50.000Z">
 <meta property="article:modified_time" content="2023-04-27T15:41:50.000Z">
@@ -154,7 +154,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#User"><span class="nav-number">1.</span> <span class="nav-text">User</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Software"><span class="nav-number">2.</span> <span class="nav-text">Software</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Package-Manager"><span class="nav-number">2.1.</span> <span class="nav-text">Package Manager</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Shell"><span class="nav-number">2.2.</span> <span class="nav-text">Shell</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AppStore"><span class="nav-number">2.3.</span> <span class="nav-text">AppStore</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Browser"><span class="nav-number">2.4.</span> <span class="nav-text">Browser</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Proxy"><span class="nav-number">2.5.</span> <span class="nav-text">Proxy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CLI-APPs"><span class="nav-number">2.6.</span> <span class="nav-text">CLI-APPs</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Q-A"><span class="nav-number">3.</span> <span class="nav-text">Q &amp; A</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Editor-and-sudo"><span class="nav-number">1.</span> <span class="nav-text">Editor and sudo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#User"><span class="nav-number">2.</span> <span class="nav-text">User</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Locale"><span class="nav-number">3.</span> <span class="nav-text">Locale</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Software"><span class="nav-number">4.</span> <span class="nav-text">Software</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Package-Manager"><span class="nav-number">4.1.</span> <span class="nav-text">Package Manager</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Shell"><span class="nav-number">4.2.</span> <span class="nav-text">Shell</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AppStore"><span class="nav-number">4.3.</span> <span class="nav-text">AppStore</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Browser"><span class="nav-number">4.4.</span> <span class="nav-text">Browser</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Proxy"><span class="nav-number">4.5.</span> <span class="nav-text">Proxy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CLI-APPs"><span class="nav-number">4.6.</span> <span class="nav-text">CLI-APPs</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Q-A"><span class="nav-number">5.</span> <span class="nav-text">Q &amp; A</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -293,18 +293,16 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>This is NOT a tutorial of installing Ubuntu. Just write down some issues I met during my installation.</p>
+    <div class="post-body" itemprop="articleBody"><p>This is NOT a tutorial on how to install Ubuntu. I am just documenting some problems I encountered during my installation.</p>
 <span id="more"></span>
 
-<h2 id="User"><a href="#User" class="headerlink" title="User"></a>User</h2><p>It's not recommended to login your ubuntu as <code>root</code>. To create a new user with the default home directory, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">useradd --create-home &lt;username&gt;</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">useradd -m &lt;username&gt;</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="Editor-and-sudo"><a href="#Editor-and-sudo" class="headerlink" title="Editor and sudo"></a>Editor and sudo</h2><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install vim sudo</span><br></pre></td></tr></tbody></table></figure>
 
-<p>To add the new user to sudoers, run the command below <strong>as <code>root</code></strong>:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">visudo</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="User"><a href="#User" class="headerlink" title="User"></a>User</h2><p>Add a new user and make it a sudoer:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useradd -m &lt;username&gt;</span><br><span class="line">visudo</span><br></pre></td></tr></tbody></table></figure>
 
-<div class="note success"><p>You may install <code>sudo</code> first. Run the command below <strong>as <code>root</code></strong>:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install sudo</span><br></pre></td></tr></tbody></table></figure>
-</div>
+<h2 id="Locale"><a href="#Locale" class="headerlink" title="Locale"></a>Locale</h2><p>Add this to your <code>~/.bashrc</code> (or <code>~/.zshrc</code>) if you use Z shell.</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> LANG=en_US.UTF-8</span><br></pre></td></tr></tbody></table></figure>
 
 <h2 id="Software"><a href="#Software" class="headerlink" title="Software"></a>Software</h2><h3 id="Package-Manager"><a href="#Package-Manager" class="headerlink" title="Package Manager"></a>Package Manager</h3><p>The first thing you need to do is configuring <code>apt</code>'s mirror.</p>
 <p>If you also want to use the mirror from Tsinghua:</p>
@@ -312,17 +310,11 @@
 <p>To update your <code>apt</code> repository, press <code>Ctrl + Alt + T</code> to run a terminal, and run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h3><p>I often use fishshell as my default login shell. To install it, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install fish</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h3><p>Install <a target="_blank" rel="noopener" href="https://fishshell.com/">fish shell</a> and set it as your login shell:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install fish</span><br><span class="line">chsh --shell $(<span class="built_in">which</span> fish)</span><br></pre></td></tr></tbody></table></figure>
 
-<p>To set fishshell for the current user:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chsh --shell &lt;path/to/fish&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>To find out where fishshell is, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">which</span> fish</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="AppStore"><a href="#AppStore" class="headerlink" title="AppStore"></a>AppStore</h3><p>This one is interesting. You may give it a try.</p>
-<p><em><a target="_blank" rel="noopener" href="https://gitee.com/deepin-community-store/spark-store">Spark-Store</a></em></p>
+<p>Or if you want to use <code>zsh</code> and config further, refer to: <em><a href="posts/3e5630f.html">My Zsh Config</a></em></p>
+<h3 id="AppStore"><a href="#AppStore" class="headerlink" title="AppStore"></a>AppStore</h3><p>You may try <em><a target="_blank" rel="noopener" href="https://gitee.com/deepin-community-store/spark-store">Spark-Store</a></em>.</p>
 <h3 id="Browser"><a href="#Browser" class="headerlink" title="Browser"></a>Browser</h3><p>I use Microsoft Edge. It's pretty easy to download the <code>.deb</code> on its <em><a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/edge/download">official website</a></em>. But if you want to install it from command line:</p>
 <p>See <em><a target="_blank" rel="noopener" href="https://www.linuxcapable.com/how-to-install-microsoft-edge-on-ubuntu-linux/">How to Install Microsoft Edge on Ubuntu 22.04 | 20.04 - LinuxCapable</a></em></p>
 <h3 id="Proxy"><a href="#Proxy" class="headerlink" title="Proxy"></a>Proxy</h3><p>Maybe <em><a target="_blank" rel="noopener" href="https://github.com/zzzgydi/clash-verge">zzzgydi/clash-verge: A Clash GUI based on tauri. Supports Windows, macOS and Linux</a></em> or <em><a target="_blank" rel="noopener" href="https://github.com/Fndroid/clash_for_windows_pkg">Fndroid/clash_for_windows_pkg</a></em></p>
