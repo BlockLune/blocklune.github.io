@@ -1,4 +1,13 @@
+# 这是指定 Netlify 重定向的文件
+# 下边是步骤：
+# 1. 将 zsh.fishg.top 和 vim.fishg.top 全部在腾讯云解析到 blocklune.netlify.app
+# 2. Netlify 上添加 domain alias
+# 3. 确保 public 目录中有 _redirects（hexo 需要配置 include 否则默认不会渲染
+
+/zsh /posts/3e5630f.html  301!
 http://zsh.fishg.top/*  https://fishg.top/posts/3e5630f.html  301!
 https://zsh.fishg.top/*  https://fishg.top/posts/3e5630f.html  301!
+
+/vim  /posts/96f7ff9f.html 301!
 http://vim.fishg.top/*  https://fishg.top/posts/96f7ff9f.html 301!
 https://vim.fishg.top/*  https://fishg.top/posts/96f7ff9f.html 301!

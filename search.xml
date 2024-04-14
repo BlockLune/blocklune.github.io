@@ -394,60 +394,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Notes for Machine Learning Specialization: Vectorization</title>
-    <url>/posts/266471d7.html</url>
-    <content><![CDATA[<p>This is a note for the <a href="https://www.coursera.org/specializations/machine-learning-introduction">Machine Learning Specialization</a>.</p>
-<span id="more"></span>
-
-<p>From:</p>
-<ul>
-<li><em><a href="https://www.bilibili.com/video/BV19B4y1W76i?p=22">P22 5.2 向量化 part 1</a></em></li>
-<li><em><a href="https://www.bilibili.com/video/BV19B4y1W76i?p=23">P23 5.3 向量化 part 2</a></em></li>
-<li><em><a href="https://www.bilibili.com/video/BV19B4y1W76i?p=24">P24 5.4 多元线性回归的梯度下降法</a></em></li>
-<li><em><a href="https://www.bilibili.com/video/BV19B4y1W76i?p=55">P55 6.1 神经网络如何高效实现</a></em></li>
-</ul>
-<h2 id="P22-and-P23"><a href="#P22-and-P23" class="headerlink" title="P22 and P23"></a>P22 and P23</h2><p>Here are our parameters and features:</p>
-<p>$$<br>\vec{w} =<br>\left[<br>\begin{matrix}<br>w_1 &amp; w_2 &amp; w_3<br>\end{matrix}<br>\right]<br>$$</p>
-<p>$$<br>b \text{ is a number}<br>$$</p>
-<p>$$<br>\vec{x} =<br>\left[<br>\begin{matrix}<br>x_1 &amp; x_2 &amp; x_3<br>\end{matrix}<br>\right]<br>$$</p>
-<p>So here $n=3$.</p>
-<p>In linear algebra, the index or the counting starts from 1.</p>
-<p>In Python code, the index starts from 0.</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">w = np.array([<span class="number">1.0</span>, <span class="number">2.5</span>, -<span class="number">3.3</span>])</span><br><span class="line">b = <span class="number">4</span></span><br><span class="line">x = np.array([<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>])</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Without vectorization $f_{\vec{w}, b}=w_1x_1+w_2x_2+w_3x_3+b$</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">f = w[<span class="number">0</span>] * x[<span class="number">0</span>] +</span><br><span class="line">    w[<span class="number">1</span>] * x[<span class="number">1</span>] +</span><br><span class="line">    w[<span class="number">2</span>] * x[<span class="number">2</span>] + b</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Without vectorization $f_{\vec{w}, b}=\sum_{j=1}^nw_jx_j$ + b</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">f = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, n):</span><br><span class="line">    f = f + w[j] * x[j]</span><br><span class="line">f = f + b</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Vectorization $f_{\vec{w}, b}=\vec{w}\cdot\vec{x} + b$</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">f = np.dot(w, x) + b</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Vectorization's benefits:</p>
-<ul>
-<li>Shorter code</li>
-<li>Faster running (parallel hardware)</li>
-</ul>
-<h2 id="P24"><a href="#P24" class="headerlink" title="P24"></a>P24</h2><p><strong>Ex.</strong></p>
-<p><img data-src="https://s1.ax1x.com/2023/08/09/pPZdP7n.png" alt="Vectorization for Gradient descent"></p>
-<h2 id="P55"><a href="#P55" class="headerlink" title="P55"></a>P55</h2><p>For loops vs. vectorization</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># For loops</span></span><br><span class="line">x = np.array([<span class="number">200</span>, <span class="number">17</span>])</span><br><span class="line">W = np.array([[<span class="number">1</span>, -<span class="number">3</span>, <span class="number">5</span>],</span><br><span class="line">              [-<span class="number">2</span>, <span class="number">4</span>, -<span class="number">6</span>]])</span><br><span class="line">b = np.array([-<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">dense</span>(<span class="params">a_in, W, b</span>):</span><br><span class="line">    a_out = np.zeros(units)</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(units):</span><br><span class="line">        w = W[:,j]</span><br><span class="line">        z = np.dot(w, x) + b[j]</span><br><span class="line">        a_out[j] = g(z)</span><br><span class="line">    <span class="keyword">return</span> a_out</span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Vectorization</span></span><br><span class="line">X = np.array([[<span class="number">200</span>, <span class="number">17</span>]])  <span class="comment"># 2d-array</span></span><br><span class="line">W = np.array([[<span class="number">1</span>, -<span class="number">3</span>, <span class="number">5</span>],</span><br><span class="line">              [-<span class="number">2</span>, <span class="number">4</span>, -<span class="number">6</span>]])</span><br><span class="line">B = np.array([[-<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>]])  <span class="comment"># 1*3 2d-array</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">dense</span>(<span class="params">A_in, W, B</span>):</span><br><span class="line">    Z = np.matmul(A_in, W) + B  <span class="comment"># matrix multiplication</span></span><br><span class="line">    A_out = g(Z)</span><br><span class="line">    <span class="keyword">return</span> A_out</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>Coursera</tag>
-        <tag>Machine Learning Specialization</tag>
-        <tag>Vectorization</tag>
-        <tag>NumPy</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Notes for Machine Learning</title>
     <url>/posts/a6f57fef.html</url>
     <content><![CDATA[<p>Here are my notes for course <a href="https://study.163.com/course/courseMain.htm?courseId=1210076550">Machine Learning</a> taught by Andrew Ng.</p>
@@ -883,6 +829,60 @@
         <tag>AI</tag>
         <tag>Machine Learning</tag>
         <tag>Andrew Ng</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Notes for Machine Learning Specialization: Vectorization</title>
+    <url>/posts/266471d7.html</url>
+    <content><![CDATA[<p>This is a note for the <a href="https://www.coursera.org/specializations/machine-learning-introduction">Machine Learning Specialization</a>.</p>
+<span id="more"></span>
+
+<p>From:</p>
+<ul>
+<li><em><a href="https://www.bilibili.com/video/BV19B4y1W76i?p=22">P22 5.2 向量化 part 1</a></em></li>
+<li><em><a href="https://www.bilibili.com/video/BV19B4y1W76i?p=23">P23 5.3 向量化 part 2</a></em></li>
+<li><em><a href="https://www.bilibili.com/video/BV19B4y1W76i?p=24">P24 5.4 多元线性回归的梯度下降法</a></em></li>
+<li><em><a href="https://www.bilibili.com/video/BV19B4y1W76i?p=55">P55 6.1 神经网络如何高效实现</a></em></li>
+</ul>
+<h2 id="P22-and-P23"><a href="#P22-and-P23" class="headerlink" title="P22 and P23"></a>P22 and P23</h2><p>Here are our parameters and features:</p>
+<p>$$<br>\vec{w} =<br>\left[<br>\begin{matrix}<br>w_1 &amp; w_2 &amp; w_3<br>\end{matrix}<br>\right]<br>$$</p>
+<p>$$<br>b \text{ is a number}<br>$$</p>
+<p>$$<br>\vec{x} =<br>\left[<br>\begin{matrix}<br>x_1 &amp; x_2 &amp; x_3<br>\end{matrix}<br>\right]<br>$$</p>
+<p>So here $n=3$.</p>
+<p>In linear algebra, the index or the counting starts from 1.</p>
+<p>In Python code, the index starts from 0.</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">w = np.array([<span class="number">1.0</span>, <span class="number">2.5</span>, -<span class="number">3.3</span>])</span><br><span class="line">b = <span class="number">4</span></span><br><span class="line">x = np.array([<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>])</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Without vectorization $f_{\vec{w}, b}=w_1x_1+w_2x_2+w_3x_3+b$</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">f = w[<span class="number">0</span>] * x[<span class="number">0</span>] +</span><br><span class="line">    w[<span class="number">1</span>] * x[<span class="number">1</span>] +</span><br><span class="line">    w[<span class="number">2</span>] * x[<span class="number">2</span>] + b</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Without vectorization $f_{\vec{w}, b}=\sum_{j=1}^nw_jx_j$ + b</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">f = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, n):</span><br><span class="line">    f = f + w[j] * x[j]</span><br><span class="line">f = f + b</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Vectorization $f_{\vec{w}, b}=\vec{w}\cdot\vec{x} + b$</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">f = np.dot(w, x) + b</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Vectorization's benefits:</p>
+<ul>
+<li>Shorter code</li>
+<li>Faster running (parallel hardware)</li>
+</ul>
+<h2 id="P24"><a href="#P24" class="headerlink" title="P24"></a>P24</h2><p><strong>Ex.</strong></p>
+<p><img data-src="https://s1.ax1x.com/2023/08/09/pPZdP7n.png" alt="Vectorization for Gradient descent"></p>
+<h2 id="P55"><a href="#P55" class="headerlink" title="P55"></a>P55</h2><p>For loops vs. vectorization</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># For loops</span></span><br><span class="line">x = np.array([<span class="number">200</span>, <span class="number">17</span>])</span><br><span class="line">W = np.array([[<span class="number">1</span>, -<span class="number">3</span>, <span class="number">5</span>],</span><br><span class="line">              [-<span class="number">2</span>, <span class="number">4</span>, -<span class="number">6</span>]])</span><br><span class="line">b = np.array([-<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">dense</span>(<span class="params">a_in, W, b</span>):</span><br><span class="line">    a_out = np.zeros(units)</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(units):</span><br><span class="line">        w = W[:,j]</span><br><span class="line">        z = np.dot(w, x) + b[j]</span><br><span class="line">        a_out[j] = g(z)</span><br><span class="line">    <span class="keyword">return</span> a_out</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Vectorization</span></span><br><span class="line">X = np.array([[<span class="number">200</span>, <span class="number">17</span>]])  <span class="comment"># 2d-array</span></span><br><span class="line">W = np.array([[<span class="number">1</span>, -<span class="number">3</span>, <span class="number">5</span>],</span><br><span class="line">              [-<span class="number">2</span>, <span class="number">4</span>, -<span class="number">6</span>]])</span><br><span class="line">B = np.array([[-<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>]])  <span class="comment"># 1*3 2d-array</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">dense</span>(<span class="params">A_in, W, B</span>):</span><br><span class="line">    Z = np.matmul(A_in, W) + B  <span class="comment"># matrix multiplication</span></span><br><span class="line">    A_out = g(Z)</span><br><span class="line">    <span class="keyword">return</span> A_out</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>Coursera</tag>
+        <tag>Machine Learning Specialization</tag>
+        <tag>Vectorization</tag>
+        <tag>NumPy</tag>
       </tags>
   </entry>
   <entry>
