@@ -2694,10 +2694,10 @@
 <span id="more"></span>
 
 <h2 id="Permission-Management-in-Linux"><a href="#Permission-Management-in-Linux" class="headerlink" title="Permission Management in Linux"></a>Permission Management in Linux</h2><p>When you run <code>ls -l</code> in your terminal, you can always see strings like <code>-rw-r–r–</code> and <code>drwxr-xr-x</code> etc. To understand them, we can always split a such string into four part. The first one is a single character, <code>-</code> if it's a file and <code>d</code> if it's a directory. The rest 9 characters can be equally divided into three parts, representing the permission of the owner, the members of the group and other users relatively. Every part contains three characters, showing the permission of <strong>r</strong>(read), <strong>w</strong>(write) and <strong>x</strong>(execute).</p>
-<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/the-chmod-command-in-linux/1.png" alt="When you run `ls -l`"><br><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/the-chmod-command-in-linux/2.png" alt="From www.runoob.com"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/the-chmod-command-in-linux/1.png" alt="When you run `ls -l`"><br><img data-src="https://www.runoob.com/wp-content/uploads/2014/08/file-permissions-rwx.jpg" alt="From www.runoob.com"></p>
 <p>Besides the bit pattern, you can also use octal notation to express these permissions, which uses 4 for <strong>r</strong>, 2 for <strong>w</strong> and 1 for <strong>x</strong>. The sum of these octal numbers then can replace the <code>rwx</code> pattern. For example, using 6 for <strong>rw</strong>.</p>
 <p>Why is 4, 2 and 1? Actually, you can view every 3-character unit as 3 binary bits. So, 100(r--) means 4 in decimal, 010(-w-) means 2, and 001(--x) means 1. You can then understand what dose the sum means.</p>
-<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/the-chmod-command-in-linux/3.png" alt="From www.runoob.com"></p>
+<p><img data-src="https://www.runoob.com/wp-content/uploads/2014/08/rwx-standard-unix-permission-bits.png" alt="From www.runoob.com"></p>
 <p>Now, you can read this:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">-rw------- <span class="comment"># (600) Owner:RW</span></span><br><span class="line">-rw-r--r-- <span class="comment"># (644) Owner:RW Group:R Other:R</span></span><br><span class="line">-rw-rw-rw- <span class="comment"># (666) Owner:RW Group:RW Other:RW</span></span><br><span class="line">-rwx------ <span class="comment"># (700) Owner:RWX</span></span><br><span class="line">-rwx--x--x <span class="comment"># (711) Owner:RWX Group:X Other:X</span></span><br><span class="line">-rwxr-xr-x <span class="comment"># (755) Owner:RWX Group:RX Other:RX</span></span><br><span class="line">-rwxrwxrwx <span class="comment"># (777) Owner:RWX Group:RWX Other:RWX</span></span><br></pre></td></tr></tbody></table></figure>
 
@@ -6205,6 +6205,47 @@
       </tags>
   </entry>
   <entry>
+    <title>Error: Summary String Parsing Error 错误解决方法</title>
+    <url>/posts/78dc947f.html</url>
+    <content><![CDATA[<p>直接先说解决方法：在使用 clang 工具链进行编译的时候，添加编译选项 <code>-fstandalone-debug</code>。</p>
+<span id="more"></span>
+
+<p>下边是完整的发现及解决问题的过程。</p>
+<h1 id="发现问题"><a href="#发现问题" class="headerlink" title="发现问题"></a>发现问题</h1><p>在按照 <a href="https://www.bilibili.com/video/BV1sW411v7VZ">《使用 VS Code + Clangd + CMake 搭建 C/C++ 开发环境》</a> 搭建我在 ArchWSL 内的 C/C++ 开发环境时，我创建了一个用于测试的 HelloWorld 工程。这个工程的文件结构长这样：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── build</span><br><span class="line">├── .clang-format</span><br><span class="line">├── CMakeLists.txt</span><br><span class="line">└── main.cpp</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight cmake"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># @file CMakeLists.txt</span></span><br><span class="line"><span class="comment"># old</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.10</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">project</span>(HelloWorld)</span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(HelloWorld main.cpp)</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// @file main.cpp</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line">    std::string str = <span class="string">"你好"</span>;</span><br><span class="line">    std::cout &lt;&lt; str &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>调试的时候发现，int 型变量 a 是可以查看的，但 std::string 型的变量 str 却显示 <code>error: summary string parsing error</code> 错误。</p>
+<h1 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h1><p>在测试中我发现，这个问题只在我使用 clang 工具链编译时产生，使用 g++ 就没有这个问题，所以猜测不是 lldb 调试器的问题，而是 clang 编译器的问题。</p>
+<p>在网上搜索到了类似的问题：</p>
+<ul>
+<li><a href="https://cloud.tencent.com/developer/ask/sof/1542916">无法在 lldb 中检查 std::string 变量 - 问答 - 腾讯云开发者社区</a></li>
+<li><a href="https://github.com/vadimcn/vscode-lldb/issues/415">Cannot inspect any strings · Issue #415 · vadimcn/vscode-lldb</a></li>
+</ul>
+<p>都说要使用 <code>-fstandalone-debug</code> 重新编译。</p>
+<p>于是修改 CMakeLists.txt 为：</p>
+<figure class="highlight cmake"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># @file CMakeLists.txt</span></span><br><span class="line"><span class="comment"># new</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.10</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">project</span>(HelloWorld)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果使用的是 clang 工具链，那么需要添加上 -fstandalone-debug，否则 lldb 无法查看 std::string 的东东</span></span><br><span class="line"><span class="comment"># 见 https://cloud.tencent.com/developer/ask/sof/1542916</span></span><br><span class="line"><span class="comment"># 又见 https://github.com/vadimcn/vscode-lldb/issues/415</span></span><br><span class="line"><span class="keyword">add_compile_options</span>(-fstandalone-debug)</span><br><span class="line"><span class="keyword">message</span>(STATUS <span class="string">"optional: -fstandalone-debug"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(HelloWorld main.cpp)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>至此成功解决。</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>Issue</tag>
+        <tag>Solved</tag>
+        <tag>Debug</tag>
+        <tag>LLDB</tag>
+        <tag>LLVM</tag>
+        <tag>Clang</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Move Semantics in C++</title>
     <url>/posts/d5786049.html</url>
     <content><![CDATA[<p>This is a note for Lecture 13, <a href="https://web.stanford.edu/class/cs106l/index.html">CS106L</a>, Spring 2023.</p>
@@ -6608,11 +6649,11 @@
       </categories>
       <tags>
         <tag>C/C++</tag>
+        <tag>Issue</tag>
+        <tag>Solved</tag>
         <tag>Pointer</tag>
         <tag>pass by pointer</tag>
         <tag>pass by value</tag>
-        <tag>Issue</tag>
-        <tag>Solved</tag>
       </tags>
   </entry>
   <entry>
@@ -7665,47 +7706,6 @@
       <tags>
         <tag>Version Control</tag>
         <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Error: Summary String Parsing Error 错误解决方法</title>
-    <url>/posts/78dc947f.html</url>
-    <content><![CDATA[<p>直接先说解决方法：在使用 clang 工具链进行编译的时候，添加编译选项 <code>-fstandalone-debug</code>。</p>
-<span id="more"></span>
-
-<p>下边是完整的发现及解决问题的过程。</p>
-<h1 id="发现问题"><a href="#发现问题" class="headerlink" title="发现问题"></a>发现问题</h1><p>在按照 <a href="https://www.bilibili.com/video/BV1sW411v7VZ">《使用 VS Code + Clangd + CMake 搭建 C/C++ 开发环境》</a> 搭建我在 ArchWSL 内的 C/C++ 开发环境时，我创建了一个用于测试的 HelloWorld 工程。这个工程的文件结构长这样：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── build</span><br><span class="line">├── .clang-format</span><br><span class="line">├── CMakeLists.txt</span><br><span class="line">└── main.cpp</span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight cmake"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># @file CMakeLists.txt</span></span><br><span class="line"><span class="comment"># old</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.10</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">project</span>(HelloWorld)</span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(HelloWorld main.cpp)</span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// @file main.cpp</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line">    std::string str = <span class="string">"你好"</span>;</span><br><span class="line">    std::cout &lt;&lt; str &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>调试的时候发现，int 型变量 a 是可以查看的，但 std::string 型的变量 str 却显示 <code>error: summary string parsing error</code> 错误。</p>
-<h1 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h1><p>在测试中我发现，这个问题只在我使用 clang 工具链编译时产生，使用 g++ 就没有这个问题，所以猜测不是 lldb 调试器的问题，而是 clang 编译器的问题。</p>
-<p>在网上搜索到了类似的问题：</p>
-<ul>
-<li><a href="https://cloud.tencent.com/developer/ask/sof/1542916">无法在 lldb 中检查 std::string 变量 - 问答 - 腾讯云开发者社区</a></li>
-<li><a href="https://github.com/vadimcn/vscode-lldb/issues/415">Cannot inspect any strings · Issue #415 · vadimcn/vscode-lldb</a></li>
-</ul>
-<p>都说要使用 <code>-fstandalone-debug</code> 重新编译。</p>
-<p>于是修改 CMakeLists.txt 为：</p>
-<figure class="highlight cmake"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># @file CMakeLists.txt</span></span><br><span class="line"><span class="comment"># new</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.10</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">project</span>(HelloWorld)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果使用的是 clang 工具链，那么需要添加上 -fstandalone-debug，否则 lldb 无法查看 std::string 的东东</span></span><br><span class="line"><span class="comment"># 见 https://cloud.tencent.com/developer/ask/sof/1542916</span></span><br><span class="line"><span class="comment"># 又见 https://github.com/vadimcn/vscode-lldb/issues/415</span></span><br><span class="line"><span class="keyword">add_compile_options</span>(-fstandalone-debug)</span><br><span class="line"><span class="keyword">message</span>(STATUS <span class="string">"optional: -fstandalone-debug"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(HelloWorld main.cpp)</span><br></pre></td></tr></tbody></table></figure>
-
-<p>至此成功解决。</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>Issue</tag>
-        <tag>Solved</tag>
-        <tag>Debug</tag>
-        <tag>LLDB</tag>
-        <tag>LLVM</tag>
-        <tag>Clang</tag>
       </tags>
   </entry>
 </search>
