@@ -71,18 +71,18 @@
     <content><![CDATA[<p>这篇文章主要是笔者从<a href="https://space.bilibili.com/66607740">宋浩老师</a>处学习高数高数知识的课堂笔记，也加入了一些笔者自己搜到的东西。具体课程你可以看这里：<a href="https://www.bilibili.com/video/BV1YU4y1e7Q9/">大一新生的高数预备知识简介</a>.</p>
 <span id="more"></span>
 
-<h2 id="反三角函数"><a href="#反三角函数" class="headerlink" title="反三角函数"></a>反三角函数</h2><h3 id="y-arcsinX"><a href="#y-arcsinX" class="headerlink" title="y=arcsinX"></a>y=arcsinX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxa7CV.png"></p>
-<h3 id="y-arccosX"><a href="#y-arccosX" class="headerlink" title="y=arccosX"></a>y=arccosX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxdQxS.png"></p>
-<h3 id="y-arctanX"><a href="#y-arctanX" class="headerlink" title="y=arctanX"></a>y=arctanX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxd8bj.png"></p>
-<h3 id="y-arccotX"><a href="#y-arccotX" class="headerlink" title="y=arccotX"></a>y=arccotX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxdYan.png"></p>
+<h2 id="反三角函数"><a href="#反三角函数" class="headerlink" title="反三角函数"></a>反三角函数</h2><h3 id="y-arcsinX"><a href="#y-arcsinX" class="headerlink" title="y=arcsinX"></a>y=arcsinX</h3><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/mathematics/%E5%A4%A7%E4%B8%80%E6%96%B0%E7%94%9F%E7%9A%84%E9%AB%98%E6%95%B0%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1.png"></p>
+<h3 id="y-arccosX"><a href="#y-arccosX" class="headerlink" title="y=arccosX"></a>y=arccosX</h3><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/mathematics/%E5%A4%A7%E4%B8%80%E6%96%B0%E7%94%9F%E7%9A%84%E9%AB%98%E6%95%B0%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2.png"></p>
+<h3 id="y-arctanX"><a href="#y-arctanX" class="headerlink" title="y=arctanX"></a>y=arctanX</h3><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/mathematics/%E5%A4%A7%E4%B8%80%E6%96%B0%E7%94%9F%E7%9A%84%E9%AB%98%E6%95%B0%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/3.png"></p>
+<h3 id="y-arccotX"><a href="#y-arccotX" class="headerlink" title="y=arccotX"></a>y=arccotX</h3><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/mathematics/%E5%A4%A7%E4%B8%80%E6%96%B0%E7%94%9F%E7%9A%84%E9%AB%98%E6%95%B0%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/4.png"></p>
 <h3 id="y-secX"><a href="#y-secX" class="headerlink" title="y=secX"></a>y=secX</h3><p>正割是余弦的倒数：</p>
 <p>$$<br>secX = \frac{1}{cosX}<br>$$</p>
 <p>定义域：显然 $cosX \neq 0$，所以 $y=secX$ 的定义域为：$X\neq k\pi +\frac {\pi}{2},k\in Z$</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/15/vxwCon.png"></p>
-<h3 id="y-cscX"><a href="#y-cscX" class="headerlink" title="y=cscX"></a>y=cscX</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxwneJ.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/mathematics/%E5%A4%A7%E4%B8%80%E6%96%B0%E7%94%9F%E7%9A%84%E9%AB%98%E6%95%B0%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/5.png"></p>
+<h3 id="y-cscX"><a href="#y-cscX" class="headerlink" title="y=cscX"></a>y=cscX</h3><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/mathematics/%E5%A4%A7%E4%B8%80%E6%96%B0%E7%94%9F%E7%9A%84%E9%AB%98%E6%95%B0%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/6.png"></p>
 <h3 id="一些补充"><a href="#一些补充" class="headerlink" title="一些补充"></a>一些补充</h3><p>$$<br>sec^2x=1+tan^2x,csc^2x=1+cot^2x<br>$$</p>
 <p>可以使用下面的方法进行记忆：</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/16/vzBKpt.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/mathematics/%E5%A4%A7%E4%B8%80%E6%96%B0%E7%94%9F%E7%9A%84%E9%AB%98%E6%95%B0%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/7.png"></p>
 <p>六边形的中间是 $1$。红色三角形的上边两个角的平方之和等于下边一个的平方，即：</p>
 <p>$$<br>sin^2x+cos^2x=1<br>$$</p>
 <p>$$<br>tan^2x+1=sec^2x<br>$$</p>
@@ -91,18 +91,18 @@
 <li>次数高的放前面，低的放后边</li>
 <li>缺项的补出来</li>
 </ul>
-<h3 id="不带余数"><a href="#不带余数" class="headerlink" title="不带余数"></a>不带余数</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vx0m1f.png"></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/15/vx0Mng.png"></p>
-<h3 id="带余数"><a href="#带余数" class="headerlink" title="带余数"></a>带余数</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vx0t3V.png"></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/15/vx0o4I.png"></p>
+<h3 id="不带余数"><a href="#不带余数" class="headerlink" title="不带余数"></a>不带余数</h3><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/mathematics/%E5%A4%A7%E4%B8%80%E6%96%B0%E7%94%9F%E7%9A%84%E9%AB%98%E6%95%B0%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/8.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/mathematics/%E5%A4%A7%E4%B8%80%E6%96%B0%E7%94%9F%E7%9A%84%E9%AB%98%E6%95%B0%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/9.png"></p>
+<h3 id="带余数"><a href="#带余数" class="headerlink" title="带余数"></a>带余数</h3><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/mathematics/%E5%A4%A7%E4%B8%80%E6%96%B0%E7%94%9F%E7%9A%84%E9%AB%98%E6%95%B0%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/10.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/mathematics/%E5%A4%A7%E4%B8%80%E6%96%B0%E7%94%9F%E7%9A%84%E9%AB%98%E6%95%B0%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/11.png"></p>
 <h2 id="有理分式的拆分"><a href="#有理分式的拆分" class="headerlink" title="有理分式的拆分"></a>有理分式的拆分</h2><h3 id="何为有理分式："><a href="#何为有理分式：" class="headerlink" title="何为有理分式："></a>何为有理分式：</h3><p>有理分式就是一个多项式比一个多项式</p>
 <h3 id="何为有理分式的拆分："><a href="#何为有理分式的拆分：" class="headerlink" title="何为有理分式的拆分："></a>何为有理分式的拆分：</h3><p>将相乘的项变成相加减</p>
-<h3 id="过程："><a href="#过程：" class="headerlink" title="过程："></a>过程：</h3><p><img data-src="https://s1.ax1x.com/2022/09/15/vxBdRP.png"></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/15/vxBWR0.png"></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/15/vxBHo9.png"></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/15/vxDpee.png"></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/15/vxDUw4.png" alt="待定系数法例子之一"></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/15/vxsWRI.png" alt="待定系数法例子之二"></p>
+<h3 id="过程："><a href="#过程：" class="headerlink" title="过程："></a>过程：</h3><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/mathematics/%E5%A4%A7%E4%B8%80%E6%96%B0%E7%94%9F%E7%9A%84%E9%AB%98%E6%95%B0%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/12.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/mathematics/%E5%A4%A7%E4%B8%80%E6%96%B0%E7%94%9F%E7%9A%84%E9%AB%98%E6%95%B0%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/13.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/mathematics/%E5%A4%A7%E4%B8%80%E6%96%B0%E7%94%9F%E7%9A%84%E9%AB%98%E6%95%B0%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/14.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/mathematics/%E5%A4%A7%E4%B8%80%E6%96%B0%E7%94%9F%E7%9A%84%E9%AB%98%E6%95%B0%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/15.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/mathematics/%E5%A4%A7%E4%B8%80%E6%96%B0%E7%94%9F%E7%9A%84%E9%AB%98%E6%95%B0%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/16.png" alt="待定系数法例子之一"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/mathematics/%E5%A4%A7%E4%B8%80%E6%96%B0%E7%94%9F%E7%9A%84%E9%AB%98%E6%95%B0%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/17.png" alt="待定系数法例子之二"></p>
 <h2 id="极坐标"><a href="#极坐标" class="headerlink" title="极坐标"></a>极坐标</h2><h3 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h3><p>首先看转动角度，其次看这个点到原点的距离。</p>
 <p>例如：直角坐标系中 $(2,2)$ 点在极坐标系中表示为 $(2\sqrt {2},\frac {\pi}{4})$；$(-2,2)$ 表示为 $(2\sqrt {2},\frac {3\pi}{4})$。</p>
 <p>极坐标中的原点叫<code>极点</code>，<code>极轴</code>是从极点向 $X$ 轴正方向引入的一条射线（仅正方向有）。极坐标中的点到极点的距离叫做<code>极径</code>，记作 $\rho (\rho\geq0)$（距离肯定是个非负数）；从极轴逆时针转过的角度记作 $\theta (0\leq\theta&lt;2\pi)$（但实际上不一定取这个范围）。所以极坐标中一点 $P$ 的坐标记为 $P (\rho,\theta)$。</p>
@@ -122,12 +122,12 @@
 <p>$$<br>0\leq\theta\leq\pi,0\leq\rho\leq1<br>$$</p>
 <div class="note "><p>又例如这个以 $(1,0)$ 为圆心，$1$ 为半径的位于 $X$ 轴上方的半圆面表述为：</p>
 <p>$$<br>0\leq\theta\leq\frac{\pi}{2},0\leq\rho\leq2cos\theta<br>$$</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/16/vzwCNR.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/mathematics/%E5%A4%A7%E4%B8%80%E6%96%B0%E7%94%9F%E7%9A%84%E9%AB%98%E6%95%B0%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/18.png"></p>
 <p>又例如这个：</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/16/vzwtbQ.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/mathematics/%E5%A4%A7%E4%B8%80%E6%96%B0%E7%94%9F%E7%9A%84%E9%AB%98%E6%95%B0%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/19.png"></p>
 </div>
 
-<h4 id="圆环"><a href="#圆环" class="headerlink" title="圆环"></a>圆环</h4><p><img data-src="https://s1.ax1x.com/2022/09/16/vzdzB4.png"></p>
+<h4 id="圆环"><a href="#圆环" class="headerlink" title="圆环"></a>圆环</h4><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/mathematics/%E5%A4%A7%E4%B8%80%E6%96%B0%E7%94%9F%E7%9A%84%E9%AB%98%E6%95%B0%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20.png"></p>
 ]]></content>
       <categories>
         <category>Mathematics</category>
@@ -310,13 +310,13 @@
 
 <p>硅脂买的是 7921，网上说好用就买了，竟然还送了一些刷子垫片啥的，应该是很多人都买了清灰用的所以店家就把清灰附属需要的东西也都附赠了，这点还挺不错的。但是实际涂起来吧，这款硅脂是真的令我痛苦 —— 真的很奇妙的质感，比较像容易断的那种橡皮泥 (?)，反正结果就很尴尬（我知道我涂多了！没办法）</p>
 <p>弄好装完发现点不亮了！吓了我一跳，结果发现是放那儿好久原来一直没接电源所以没电，接上电就能正常进系统了，太懒了，就没烤一下再看看。</p>
-<p><img data-src="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed37f.jpg" alt="所用硅脂——信越7921"></p>
-<p><img data-src="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed388.jpg" alt="商家还送了一些清灰用的玩意儿（这张照片是补拍的）"></p>
-<p><img data-src="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed394.jpg" alt="清灰前的风扇"></p>
-<p><img data-src="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed36a.jpg" alt="清灰前的...这叫啥..."></p>
-<p><img data-src="https://pic.imgdb.cn/item/6308bb6316f2c2beb1fed375.jpg" alt="擦掉旧的硅脂（原来这个方方的才是gpu！）"></p>
-<p><img data-src="https://pic.imgdb.cn/item/6308bb6816f2c2beb1fed7e1.jpg" alt="尽力清灰后..."></p>
-<p><img data-src="https://pic.imgdb.cn/item/6308bb6816f2c2beb1fed7e6.jpg" alt="涂多了...希望不要出事"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E6%B8%85%E7%81%B0/1.png" alt="所用硅脂——信越7921"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E6%B8%85%E7%81%B0/2.png" alt="商家还送了一些清灰用的玩意儿（这张照片是补拍的）"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E6%B8%85%E7%81%B0/3.png" alt="清灰前的风扇"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E6%B8%85%E7%81%B0/4.png" alt="清灰前的...这叫啥..."></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E6%B8%85%E7%81%B0/5.png" alt="擦掉旧的硅脂（原来这个方方的才是gpu！）"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E6%B8%85%E7%81%B0/6.png" alt="尽力清灰后..."></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E6%B8%85%E7%81%B0/7.png" alt="涂多了...希望不要出事"></p>
 ]]></content>
       <categories>
         <category>Misc</category>
@@ -334,7 +334,7 @@
 <p>接网线难在第一个，不过第一个弄会了后面也就快了，此次没有试水晶头的接法，下次有机会试试。</p>
 <p>昨天仅仅是把面板弄完了，交换机今天才到的刚刚也弄上了，现在都做的很方便接上就能用了！不过在等交换机的时候把家里老的路由器小米 WiFi4 整了出来，稀里糊涂地捣鼓了半天刷上了个 openwrt，这个东西似乎是个 linux 发行版？! 反正似乎潜力巨大，可以装好多东西，但现在还没太研究，以前想试的 adguard home 似乎也可以试试去了。</p>
 <p>现在我的房间也终于有千兆网了！</p>
-<p><img data-src="https://s1.ax1x.com/2022/08/28/vWrbPP.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrTUI.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWroVA.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWr75t.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWr5bd.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrOxS.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrL28.jpg"><br><img data-src="https://s1.ax1x.com/2022/08/28/vWrq8f.jpg"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%BD%91%E7%BB%9C%E6%94%B9%E9%80%A0/1.png"><br><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%BD%91%E7%BB%9C%E6%94%B9%E9%80%A0/2.png"><br><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%BD%91%E7%BB%9C%E6%94%B9%E9%80%A0/3.png"><br><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%BD%91%E7%BB%9C%E6%94%B9%E9%80%A0/4.png"><br><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%BD%91%E7%BB%9C%E6%94%B9%E9%80%A0/5.png"><br><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%BD%91%E7%BB%9C%E6%94%B9%E9%80%A0/6.png"><br><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%BD%91%E7%BB%9C%E6%94%B9%E9%80%A0/7.png"><br><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%BD%91%E7%BB%9C%E6%94%B9%E9%80%A0/8.png"></p>
 ]]></content>
       <categories>
         <category>Misc</category>
@@ -430,7 +430,7 @@
 <li>Faster running (parallel hardware)</li>
 </ul>
 <h2 id="P24"><a href="#P24" class="headerlink" title="P24"></a>P24</h2><p><strong>Ex.</strong></p>
-<p><img data-src="https://s1.ax1x.com/2023/08/09/pPZdP7n.png" alt="Vectorization for Gradient descent"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/notes-for-machine-learning-specialization-vectorization/1.png" alt="Vectorization for Gradient descent"></p>
 <h2 id="P55"><a href="#P55" class="headerlink" title="P55"></a>P55</h2><p>For loops vs. vectorization</p>
 <figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># For loops</span></span><br><span class="line">x = np.array([<span class="number">200</span>, <span class="number">17</span>])</span><br><span class="line">W = np.array([[<span class="number">1</span>, -<span class="number">3</span>, <span class="number">5</span>],</span><br><span class="line">              [-<span class="number">2</span>, <span class="number">4</span>, -<span class="number">6</span>]])</span><br><span class="line">b = np.array([-<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">dense</span>(<span class="params">a_in, W, b</span>):</span><br><span class="line">    a_out = np.zeros(units)</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(units):</span><br><span class="line">        w = W[:,j]</span><br><span class="line">        z = np.dot(w, x) + b[j]</span><br><span class="line">        a_out[j] = g(z)</span><br><span class="line">    <span class="keyword">return</span> a_out</span><br></pre></td></tr></tbody></table></figure>
 
@@ -498,7 +498,7 @@
 <li>$(x^{(i)}, y^{(i)})$ = $i^{th}$ training example</li>
 </ul>
 <p>How does supervised learning work?</p>
-<p><img data-src="https://s1.ax1x.com/2023/07/16/pCIip3F.png" alt="How does supervised learning work"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/notes-for-machine-learning/1.png" alt="How does supervised learning work"></p>
 <p>$h$ is called hypothesis function (假设函数)。</p>
 <p>How do we represent $h$?</p>
 <p>$$<br>h_{\theta}(x) = \theta_{0}+\theta_{1}x<br>$$</p>
@@ -633,7 +633,7 @@
 <h3 id="ex1-gradientDescent-py"><a href="#ex1-gradientDescent-py" class="headerlink" title="ex1-gradientDescent.py"></a>ex1-gradientDescent.py</h3><p>This code is from <a href="https://github.com/nsoojin/coursera-ml-py-sj/blob/master/machine-learning-ex1/gradientDescent.py">nsoojin</a>, which is so elegant! I spent a long time to understand the most important two lines.</p>
 <figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> computeCost <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gradient_descent_multi</span>(<span class="params">X, y, theta, alpha, num_iters</span>):</span><br><span class="line">    <span class="comment"># Initialize some useful values</span></span><br><span class="line">    m = y.size</span><br><span class="line">    J_history = np.zeros(num_iters)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, num_iters):</span><br><span class="line">        <span class="comment"># ===================== Your Code Here =====================</span></span><br><span class="line">        <span class="comment"># Instructions : Perform a single gradient step on the parameter vector theta</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        error = np.dot(X, theta).flatten() - y  <span class="comment"># 误差</span></span><br><span class="line">        theta -= alpha / m * np.<span class="built_in">sum</span>(X * error[:, np.newaxis], <span class="number">0</span>)</span><br><span class="line">        <span class="comment"># ===========================================================</span></span><br><span class="line">        <span class="comment"># Save the cost every iteration</span></span><br><span class="line">        J_history[i] = compute_cost(X, y, theta)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> theta, J_history</span><br></pre></td></tr></tbody></table></figure>
 
-<p><img data-src="https://s1.ax1x.com/2023/07/17/pCoEQ3V.jpg" alt="gradientDescent.py"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/notes-for-machine-learning/2.png" alt="gradientDescent.py"></p>
 <h3 id="ex1-featureNormalize-py"><a href="#ex1-featureNormalize-py" class="headerlink" title="ex1-featureNormalize.py"></a>ex1-featureNormalize.py</h3><p><code>numpy.std</code> compute the standard deviation (标准差) along the specified axis. (See <a href="https://numpy.org/doc/stable/reference/generated/numpy.std.html">Doc</a>)</p>
 <p>The hint says that:</p>
 <blockquote>
@@ -748,7 +748,7 @@
 <p>On a new input $x$, to make a prediction, pick the class $i$ that maximizes $\underset{i}{max}h_\theta^{(i)}(x)$</p>
 <h2 id="Lesson-51"><a href="#Lesson-51" class="headerlink" title="Lesson 51"></a>Lesson 51</h2><p>...</p>
 <h2 id="Lesson-52"><a href="#Lesson-52" class="headerlink" title="Lesson 52"></a>Lesson 52</h2><p>The problem of overfitting (过拟合问题)</p>
-<h3 id="What-s-overfitting"><a href="#What-s-overfitting" class="headerlink" title="What's overfitting?"></a>What's overfitting?</h3><p><img data-src="https://s1.ax1x.com/2023/07/20/pCHPt7d.png" alt="Overfitting"></p>
+<h3 id="What-s-overfitting"><a href="#What-s-overfitting" class="headerlink" title="What's overfitting?"></a>What's overfitting?</h3><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/notes-for-machine-learning/3.png" alt="Overfitting"></p>
 <ul>
 <li>Underfit: 欠拟合</li>
 <li> High bias: 高偏差</li>
@@ -831,7 +831,7 @@
 <p>Was very widely used in 80s and early 90s; popularity diminished in late 90s.</p>
 <p>Recent resurgence (兴起): State-of-the-art technique for many applications</p>
 <h3 id="The-one-learning-algorithm-hypothesis"><a href="#The-one-learning-algorithm-hypothesis" class="headerlink" title="The &quot;one learning algorithm&quot; hypothesis"></a>The "one learning algorithm" hypothesis</h3><p>...</p>
-<h2 id="Lesson-60"><a href="#Lesson-60" class="headerlink" title="Lesson 60"></a>Lesson 60</h2><h3 id="Neural-Network"><a href="#Neural-Network" class="headerlink" title="Neural Network"></a>Neural Network</h3><p><img data-src="https://s1.ax1x.com/2023/07/23/pCq573n.png" alt="Neural Network"></p>
+<h2 id="Lesson-60"><a href="#Lesson-60" class="headerlink" title="Lesson 60"></a>Lesson 60</h2><h3 id="Neural-Network"><a href="#Neural-Network" class="headerlink" title="Neural Network"></a>Neural Network</h3><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/notes-for-machine-learning/4.png" alt="Neural Network"></p>
 <ul>
 <li>The input layer: the first layer</li>
 <li>The output layer: the last layer</li>
@@ -843,12 +843,12 @@
 <li>$a_i^{(j)}$ = "activation" of unit $i$ in layer $j$ (activation 的意思是由一个具体神经元计算并输出的值)</li>
 <li>$\Theta^{(j)}$ = matrix of weights controlling function mapping from layer $j$ to layer $j+1$ (权重矩阵)</li>
 </ul>
-<p><img data-src="https://s1.ax1x.com/2023/07/23/pCqIoVO.png" alt="An example"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/notes-for-machine-learning/5.png" alt="An example"></p>
 <p>If network has $s_j$ units in layer $j$, $s_{j+1}$ units in layer $j+1$, then $\Theta^{j}$ will be of dimension $s_{j+1} \times (s_j + 1)$.</p>
-<h2 id="Lesson-61"><a href="#Lesson-61" class="headerlink" title="Lesson 61"></a>Lesson 61</h2><h3 id="Forward-propagation-前向传播-Vectorized-implementation"><a href="#Forward-propagation-前向传播-Vectorized-implementation" class="headerlink" title="Forward propagation (前向传播): Vectorized implementation"></a>Forward propagation (前向传播): Vectorized implementation</h3><p><img data-src="https://s1.ax1x.com/2023/07/23/pCqoxp9.png" alt="Forward propagation: vectorized implementation"></p>
+<h2 id="Lesson-61"><a href="#Lesson-61" class="headerlink" title="Lesson 61"></a>Lesson 61</h2><h3 id="Forward-propagation-前向传播-Vectorized-implementation"><a href="#Forward-propagation-前向传播-Vectorized-implementation" class="headerlink" title="Forward propagation (前向传播): Vectorized implementation"></a>Forward propagation (前向传播): Vectorized implementation</h3><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/notes-for-machine-learning/6.png" alt="Forward propagation: vectorized implementation"></p>
 <h2 id="Lesson-62-Exercise-3"><a href="#Lesson-62-Exercise-3" class="headerlink" title="Lesson 62 (Exercise 3)"></a>Lesson 62 (Exercise 3)</h2><p>(Not yet completed)</p>
 <h2 id="Lesson-63-64"><a href="#Lesson-63-64" class="headerlink" title="Lesson 63 - 64"></a>Lesson 63 - 64</h2><p>...</p>
-<h2 id="Lesson-65"><a href="#Lesson-65" class="headerlink" title="Lesson 65"></a>Lesson 65</h2><p><img data-src="https://s1.ax1x.com/2023/07/26/pCjwHFP.png" alt="Example"></p>
+<h2 id="Lesson-65"><a href="#Lesson-65" class="headerlink" title="Lesson 65"></a>Lesson 65</h2><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/notes-for-machine-learning/7.png" alt="Example"></p>
 <h2 id="Lesson-66"><a href="#Lesson-66" class="headerlink" title="Lesson 66"></a>Lesson 66</h2><p>...</p>
 <h2 id="Lesson-67"><a href="#Lesson-67" class="headerlink" title="Lesson 67"></a>Lesson 67</h2><p>Cost function in Neural network:</p>
 <p>$$<br>h_\Theta(x) \in \mathbb{R}^K<br>$$</p>
@@ -897,8 +897,8 @@
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">blue pen illustration, light blue background, flowers on face, growth, nature, beautiful face, pink hair,shawl hair, zoom in on eyes, apathy, red eye shadow, petite, best quality, masterpiece</span><br></pre></td></tr></tbody></table></figure>
 
 <p>然后生成出了下面这些相当不错的图案：</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0HgAK.jpg"></p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0H676.jpg"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/1.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/2.png"></p>
 <p>下边分类讲讲 tag:</p>
 <p>提高总体质量的：</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">masterpiece, best quality, by famous artist, beautiful face</span><br></pre></td></tr></tbody></table></figure>
@@ -920,7 +920,7 @@
 
 <p>尝到了甜头后，我就想换头像了。但我不想完全抛弃现在的头像，于是就试图拿它做派生。</p>
 <p>首先描述一下原来的头像，让 AI 知道我大概是想要怎样的一个 "老婆"。<del>（虽然其实我描述的时候更感觉是在捏女儿）</del> 顺便一说，我这个原来的头像其实也是 AI 生成的，叫 <a href="https://waifulabs.com/generate">WaifuLabs</a>，是我把原来生成出来的丢进 PS 去了水印，又自己修缮了一下得到的。</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0I1Z8.jpg" alt="上边是 WaifuLabs 生成出来时候的样子，下边是我自己 PS 改的"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/3.png" alt="上边是 WaifuLabs 生成出来时候的样子，下边是我自己 PS 改的"></p>
 <p>抛却那些提高质量的，大概给了 <code>披肩发</code>、<code>深灰色头发</code>、<code>深灰色眼睛</code>、<code>红色眼影</code>、<code>白色衬衫</code>、<code>微笑</code> 这些 tag。同时模仿了上边，给了 <code>面部的花</code> 之类的 tag：</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">{{masterpiece,best quality}},shawl hair,dark grey hair, dark grey eyes,red eye shadow,  white shirt,illustration,flower on face,growth, nature,beautiful face, smile, zoom in one eyes</span><br></pre></td></tr></tbody></table></figure>
 
@@ -928,25 +928,25 @@
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">{{masterpiece,best quality,by wlop}},shawl hair,dark grey hair, dark grey eyes,red eye shadow, white shirt,{{{illustration}}},flower on face, growth, nature, beautiful face, small smile, zoom in one eyes, {{{{petite}}}}, dramatic shadows, ink,eye-focus, portrait, red hairclip</span><br></pre></td></tr></tbody></table></figure>
 
 <p>跑了大概 100 张，然后挑了挑，下边展示的是部分高质量的：</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0IgzR.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/4.png"></p>
 <p>又是一波奇奇怪怪的调整：</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0onkF.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/5.png"></p>
 <p>最后挑选出了这张我觉得挺有特色的：</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0o161.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/6.png"></p>
 <p>然后开始根据这张进行派生：</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0jbEn.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/7.png"></p>
 <h1 id="一张壁纸（一堆壁纸）"><a href="#一张壁纸（一堆壁纸）" class="headerlink" title="一张壁纸（一堆壁纸）"></a>一张壁纸（一堆壁纸）</h1><p>这事儿开始的挺搞笑的，当时我正在调上边的头像参数，坐我旁边玩 CSGO 的朋友希望我把某把枪拟人，然后发我了下边的图片：</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0TGgs.jpg"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/8.png"></p>
 <p>然后我加了点描述词生成了，但生成效果并不好，我就又开始研究我上边的头像了。我完全忘记了我还拿着这张图生成的某张图在做派生呢... 我只是改回了我的 prompt，就意外地得到了下边这张图：</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x0TI8H.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/9.png"></p>
 <p>似乎是把枪头画成了那条条纹？我也不知道。反正着实是惊艳到我了，扔到 bigjpg 那边提高了一下分辨率，再扔进 PS 调了一下曲线，嘿嘿，新的手机壁纸有了！</p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x07eG4.png" alt="拉的曲线"></p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x07Prq.png" alt="新的手机壁纸！"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/10.png" alt="拉的曲线"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/11.png" alt="新的手机壁纸！"></p>
 <p>然后又拿这张图和基于上边改的 prompt 做了派生...</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">{{masterpiece,best quality}},shawl hair,dark grey hair, dark grey eyes,red eye shadow,red scanf,  light grey shirt,{{illustration}},red flower on face,white flower on hair,growth, nature,beautiful face, {{indifferent}}, zoom in one eyes,1girl, red flower background, gold fence background,focus on eye</span><br></pre></td></tr></tbody></table></figure>
 
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x07XO1.jpg"></p>
-<p><img data-src="https://s1.ax1x.com/2022/10/15/x07vex.jpg"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/12.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/13.png"></p>
 <p>相当不错！</p>
 ]]></content>
       <categories>
@@ -970,8 +970,8 @@
 <p>The biggest feature of this course is that it ties algorithms so closely to real-world problems. Almost all topics are introduced this way: Here we have a problem. To solve it, we can easily use ... But we can't do that because it's too expensive, so we can try to use ... to solve it. By using this algorithm, we can ensure that ... in the case of .... Also, we can use this algorithm to solve ... problems. I think this kind of combination between theory and practice is really valuable.</p>
 <p>The five projects are amazing. Instead of writing stupid experiment reports, uploading them to the QQ group and not knowing whether my codes are good or not, this online platform provides an incredible evaluation system that not only checks the correctness of your codes, but also the style! The style! Much better than some Chinese reference books! After each submission, the evaluation system gives you a detailed report on what's wrong with your codes, and you can then correct or polish your codes and submit them again. I submitted the last project thirteen times to pass it, with the help of GPT and even some reference codes! Orz</p>
 <p>I'd highly recommend any CS student to take this course on Coursera. It's free and in my opinion it's actually much easier than the listening section of the national college entrance examination or CET-4.</p>
-<p><img data-src="https://s1.ax1x.com/2023/05/12/p9yWH3t.png"></p>
-<p><img data-src="https://s1.ax1x.com/2023/05/12/p9yWqjf.png"></p>
+<p>![](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms</a> &amp; data structures/my-personal-summary-of-algorithms-part-i-on-coursera/1.png)</p>
+<p>![](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms</a> &amp; data structures/my-personal-summary-of-algorithms-part-i-on-coursera/2.png)</p>
 ]]></content>
       <categories>
         <category>CS</category>
@@ -1103,7 +1103,7 @@
 <h2 id="Greedy-algorithm"><a href="#Greedy-algorithm" class="headerlink" title="Greedy algorithm"></a>Greedy algorithm</h2><p><strong>Def.</strong> A <strong>cut</strong> in a graph is a partition of its vertices into two (nonempty) sets.</p>
 <p><strong>Def.</strong> A <strong>crossing edge</strong> connects a vertex in one set with a vertex in the other.</p>
 <p><strong>Cut property.</strong> Given any cut, the crossing edge of min weight is in the MST.</p>
-<p><img data-src="https://s1.ax1x.com/2023/08/03/pPFmcd0.jpg" alt="Cut property"></p>
+<p>![Cut property](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms</a> &amp; data structures/notes-for-algorithms-part-ii-minimum-spanning-trees/1.png)</p>
 <p>Greedy MST algorithm:</p>
 <ul>
 <li>Start with all edges colored gray.</li>
@@ -1587,7 +1587,7 @@
 </ol>
 <h3 id="1-伪代码描述"><a href="#1-伪代码描述" class="headerlink" title="1. 伪代码描述"></a>1. 伪代码描述</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">var a,b,i:integer;</span><br><span class="line">input(a);</span><br><span class="line">input(b);</span><br><span class="line">Begin</span><br><span class="line">For i&lt;-a to 1 do</span><br><span class="line">Begin</span><br><span class="line">	If a%i==0 Then</span><br><span class="line">    	If b%i==0 Then</span><br><span class="line">    	Begin</span><br><span class="line">    		print(i);</span><br><span class="line">    		break;</span><br><span class="line">    	End;</span><br><span class="line">End;</span><br><span class="line">End;</span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="1-流程图"><a href="#1-流程图" class="headerlink" title="1. 流程图"></a>1. 流程图</h3><p><img data-src="https://s1.ax1x.com/2022/12/05/zy8vhn.png" alt="Powered by draw.io"></p>
+<h3 id="1-流程图"><a href="#1-流程图" class="headerlink" title="1. 流程图"></a>1. 流程图</h3><p>![Powered by draw.io](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms</a> &amp; data structures / 求解最大公约数的四种算法 / 1.png)</p>
 <h3 id="1-C-代码"><a href="#1-C-代码" class="headerlink" title="1. C++ 代码"></a>1. C++ 代码</h3><figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">uint64_t</span> a, b;</span><br><span class="line">    cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">    <span class="keyword">if</span> (a &gt; b)</span><br><span class="line">        <span class="built_in">swap</span>(a, b);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = a; i &gt;= <span class="number">1</span>; i--)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">if</span> (a % i == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">if</span> (b % i == <span class="number">0</span>)</span><br><span class="line">            {</span><br><span class="line">                cout &lt;&lt; i &lt;&lt; endl;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <h2 id="法二：辗转相除法（欧几里得算法）"><a href="#法二：辗转相除法（欧几里得算法）" class="headerlink" title="法二：辗转相除法（欧几里得算法）"></a>法二：辗转相除法（欧几里得算法）</h2><p>这大概是最常见的计算最大公约数的算法了吧...</p>
@@ -1599,7 +1599,7 @@
 </ol>
 <h3 id="2-伪代码描述"><a href="#2-伪代码描述" class="headerlink" title="2. 伪代码描述"></a>2. 伪代码描述</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">var a,b:integer;</span><br><span class="line">def gcd(a,b):</span><br><span class="line">Begin</span><br><span class="line">	If b==0 Then</span><br><span class="line">    	return a;</span><br><span class="line">    Else return(gcd(b, a%b));</span><br><span class="line">End;</span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="2-流程图"><a href="#2-流程图" class="headerlink" title="2. 流程图"></a>2. 流程图</h3><p><img data-src="https://s1.ax1x.com/2022/12/05/zyNCG9.png" alt="Powered by draw.io"></p>
+<h3 id="2-流程图"><a href="#2-流程图" class="headerlink" title="2. 流程图"></a>2. 流程图</h3><p>![Powered by draw.io](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms</a> &amp; data structures / 求解最大公约数的四种算法 / 2.png)</p>
 <h3 id="2-C-代码"><a href="#2-C-代码" class="headerlink" title="2. C++ 代码"></a>2. C++ 代码</h3><p>主函数及 gcd 函数的函数声明：</p>
 <figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">uint64_t</span> <span class="title">gcd</span><span class="params">(<span class="type">uint64_t</span>, <span class="type">uint64_t</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">uint64_t</span> a, b;</span><br><span class="line">    cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">    cout &lt;&lt; <span class="built_in">gcd</span>(a, b) &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
@@ -1649,7 +1649,7 @@
 <li>如果一奇一偶，那就把那个偶数不断除以 2 直至它也为一个奇数；</li>
 <li>对两个奇数进行辗转相减（或者辗转相除？上边那篇文章里这么说，但是除的话不是无法避免取模运算效率低下的问题了嘛 emm），直至求出它们的最大公约数；</li>
 </ol>
-<h4 id="4-1-流程图"><a href="#4-1-流程图" class="headerlink" title="4.1. 流程图"></a>4.1. 流程图</h4><p><img data-src="https://s1.ax1x.com/2022/12/05/zyTcJe.png" alt="Powered by draw.io"></p>
+<h4 id="4-1-流程图"><a href="#4-1-流程图" class="headerlink" title="4.1. 流程图"></a>4.1. 流程图</h4><p>![Powered by draw.io](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms</a> &amp; data structures / 求解最大公约数的四种算法 / 3.png)</p>
 <h4 id="4-1-C-代码"><a href="#4-1-C-代码" class="headerlink" title="4.1. C++ 代码"></a>4.1. C++ 代码</h4><blockquote>
 <p>(1) 按位与 (&amp;):</p>
 <p>a&amp;x 为对数 a 的二进制形式的取位操作，即去 a 二进制形式的第 x 位。这里有一个重要应用就是 a&amp;1 可以用于判断数 a 的奇偶性，即 a 末位为 0 即为偶数，末位为 1 即为奇数。</p>
@@ -1677,7 +1677,7 @@
 <li>a 为奇数，b 为偶数: gcd (a,b) = gcd (a,b/2);</li>
 <li>a 为偶数，b 为奇数: gcd (a,b) = gcd (a/2,b);</li>
 </ol>
-<h4 id="4-2-流程图"><a href="#4-2-流程图" class="headerlink" title="4.2. 流程图"></a>4.2. 流程图</h4><p><img data-src="https://s1.ax1x.com/2022/12/05/zyTgRH.png" alt="Powered by draw.io"></p>
+<h4 id="4-2-流程图"><a href="#4-2-流程图" class="headerlink" title="4.2. 流程图"></a>4.2. 流程图</h4><p>![Powered by draw.io](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms</a> &amp; data structures / 求解最大公约数的四种算法 / 4.png)</p>
 <h4 id="4-2-C-代码"><a href="#4-2-C-代码" class="headerlink" title="4.2. C++ 代码"></a>4.2. C++ 代码</h4><p>最后代码和上边也没有太大差别。</p>
 <figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">uint64_t</span> <span class="title">gcd</span><span class="params">(<span class="type">uint64_t</span> a, <span class="type">uint64_t</span> b)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">if</span> (a == b)</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    <span class="keyword">if</span> (a &lt; b)</span><br><span class="line">        a ^= b, b ^= a, a ^= b;</span><br><span class="line">    <span class="keyword">if</span> (!(a &amp; <span class="number">1</span>) &amp;&amp; !(b &amp; <span class="number">1</span>))            <span class="comment">// 均为偶数</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">gcd</span>(a &gt;&gt; <span class="number">1</span>, b &gt;&gt; <span class="number">1</span>) &lt;&lt; <span class="number">1</span>; <span class="comment">// 别忘了要乘回来</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> ((a &amp; <span class="number">1</span>) &amp;&amp; (b &amp; <span class="number">1</span>))         <span class="comment">// 均为奇数</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">gcd</span>((a + b) &gt;&gt; <span class="number">1</span>, (a - b) &gt;&gt; <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> ((a &amp; <span class="number">1</span>) &amp;&amp; !(b &amp; <span class="number">1</span>)) <span class="comment">// a 奇 b 偶</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">gcd</span>(a, b &gt;&gt; <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (!(a &amp; <span class="number">1</span>) &amp;&amp; (b &amp; <span class="number">1</span>)) <span class="comment">// a 偶 b 奇</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">gcd</span>(a &gt;&gt; <span class="number">1</span>, b);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
@@ -1732,7 +1732,7 @@
 <p>帮助你访问所有 Google 的页面</p>
 </li>
 <li><p><strong>截图预览</strong></p>
-<p><img data-src="https://s1.ax1x.com/2022/08/26/vRECiF.jpg" alt="谷歌访问助手"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/chrome-%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/1.png" alt="谷歌访问助手"></p>
 </li>
 <li><p><strong>下载地址</strong></p>
 <p><a href="https://chrome.google.com/webstore/detail/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B/gocklaboggjfkolaknpbhddbaopcepfp?hl=zh-CN">Chrome 网上应用店</a></p>
@@ -1747,7 +1747,7 @@
 <p>在<a href="https://www.bilibili.com/video/av18789095">这里</a>可以观看鹏少更详细的介绍</p>
 </li>
 <li><p><strong>截图预览</strong></p>
-<p><img data-src="https://s1.ax1x.com/2022/08/26/vREmdK.jpg" alt="Infinity新标签页"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/chrome-%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/2.png" alt="Infinity新标签页"></p>
 </li>
 <li><p><strong>下载地址</strong></p>
 <p><a href="https://chrome.google.com/webstore/detail/infinity-new-tab-pro/nnnkddnnlpamobajfibfdgfnbcnkgngh">Chrome 网上应用店</a></p>
@@ -1760,7 +1760,7 @@
 </blockquote>
 </li>
 <li><p><strong>截图预览</strong></p>
-<p><img data-src="https://s1.ax1x.com/2022/08/26/vREeZ6.jpg" alt="安装百度优化插件后的Google主页"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/chrome-%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/3.png" alt="安装百度优化插件后的Google主页"></p>
 </li>
 <li><p><strong>下载地址</strong></p>
 <p><a href="%5Bhttps://chrome.google.com/webstore/detail/%E7%99%BE%E5%BA%A6%E4%BC%98%E5%8C%96/denccnggppnbllgifimhkcehbpmlljcp%5D(https://chrome.google.com/webstore/detail/%E7%99%BE%E5%BA%A6%E4%BC%98%E5%8C%96/denccnggppnbllgifimhkcehbpmlljcp)">Chrome 网上应用店</a></p>
@@ -1774,7 +1774,7 @@
 <p>同类型的软件很多 但是自己感觉这款最轻量好用</p>
 </li>
 <li><p><strong>截图预览</strong></p>
-<p><img data-src="https://s1.ax1x.com/2022/08/26/vREAMR.jpg" alt="划词翻译界面"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/chrome-%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/4.png" alt="划词翻译界面"></p>
 </li>
 <li><p><strong>下载地址</strong></p>
 <p><a href="%5Bhttps://chrome.google.com/webstore/detail/%E5%88%92%E8%AF%8D%E7%BF%BB%E8%AF%91/ikhdkkncnoglghljlkmcimlnlhkeamad%5D(https://chrome.google.com/webstore/detail/%E5%88%92%E8%AF%8D%E7%BF%BB%E8%AF%91/ikhdkkncnoglghljlkmcimlnlhkeamad)">Chrome 网上应用店</a></p>
@@ -1788,7 +1788,7 @@
 <p>在<a href="https://www.bilibili.com/video/av44274712">这里</a>可以观看鹏少更详细的介绍</p>
 </li>
 <li><p><strong>截图预览</strong></p>
-<p><img data-src="https://s1.ax1x.com/2022/08/26/vREiRJ.jpg" alt="一张用FireShot截取的维基百科首页"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/chrome-%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/5.png" alt="一张用FireShot截取的维基百科首页"></p>
 </li>
 <li><p><strong>下载地址</strong></p>
 <p><a href="https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg">Chrome 网上应用店</a></p>
@@ -1802,7 +1802,7 @@
 <p>在<a href="https://www.bilibili.com/video/av27145745">这里</a>可以观看鹏少更详细的介绍</p>
 </li>
 <li><p><strong>截图预览</strong></p>
-<p><img data-src="https://s1.ax1x.com/2022/08/26/vREVqx.jpg" alt="使用Stylus中“Baidu Lite 百度轻”后的百度主页"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/chrome-%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/6.png" alt="使用Stylus中“Baidu Lite 百度轻”后的百度主页"></p>
 </li>
 <li><p><strong>下载地址</strong></p>
 <p><a href="https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne">Chrome 网上应用店</a></p>
@@ -1847,7 +1847,7 @@
 </blockquote>
 </li>
 <li><p><strong>截图预览</strong></p>
-<p><img data-src="https://s1.ax1x.com/2022/08/26/vREFz9.jpg" alt="crxMouse设置界面"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/chrome-%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/7.png" alt="crxMouse设置界面"></p>
 </li>
 <li><p><strong>下载地址</strong></p>
 <p><a href="https://chrome.google.com/webstore/detail/crxmouse-chrome-gestures/jlgkpaicikihijadgifklkbpdajbkhjo">Chrome 网上应用店</a></p>
@@ -1892,7 +1892,7 @@
 </blockquote>
 </li>
 <li><p><strong>截图预览</strong></p>
-<p><img data-src="https://s1.ax1x.com/2022/08/26/vREEs1.jpg" alt="将打开的三个标签页全部聚拢"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/chrome-%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/8.png" alt="将打开的三个标签页全部聚拢"></p>
 </li>
 <li><p><strong>下载地址</strong></p>
 <p><a href="https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall">Chrome 网上应用店</a></p>
@@ -1917,7 +1917,7 @@
 </blockquote>
 </li>
 <li><p><strong>截图预览</strong></p>
-<p><img data-src="https://s1.ax1x.com/2022/08/26/vREPG4.jpg" alt="bilibili助手设置页面"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/chrome-%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/9.png" alt="bilibili助手设置页面"></p>
 </li>
 <li><p><strong>下载地址</strong></p>
 <p><a href="https://chrome.google.com/webstore/detail/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E5%8A%A9%E6%89%8B%EF%BC%9Abilibilicom-%E7%BB%BC%E5%90%88%E8%BE%85%E5%8A%A9%E6%89%A9%E5%B1%95/kpbnombpnpcffllnianjibmpadjolanh">Chrome 网上应用店</a></p>
@@ -2645,8 +2645,8 @@
     <content><![CDATA[<p>When using Linux, I often use <code>cat</code> to browse some short codes. But it doesn't support syntax highlighting originally. So, I found one of its replacements: <code>bat</code>.</p>
 <span id="more"></span>
 
-<h2 id="Brief-Introduction"><a href="#Brief-Introduction" class="headerlink" title="Brief Introduction"></a>Brief Introduction</h2><p><a href="https://github.com/sharkdp/bat"><img data-src="https://github.com/sharkdp/bat/raw/master/doc/logo-header.svg" alt="BAT Logo"></a></p>
-<p>On <a href="https://github.com/sharkdp/bat">BAT</a>'s official GitHub page, it defines itself "a cat clone with wings". In my opinion, one is "syntax highlighting", and the other is "git integration".</p>
+<h2 id="Brief-Introduction"><a href="#Brief-Introduction" class="headerlink" title="Brief Introduction"></a>Brief Introduction</h2><p><a href="bat"><img data-src="/bat/raw/master/doc/logo-header.svg" alt="BAT Logo"></a></p>
+<p>On <a href="bat">BAT</a>'s official GitHub page, it defines itself "a cat clone with wings". In my opinion, one is "syntax highlighting", and the other is "git integration".</p>
 <p>Here are some of its important features:</p>
 <ul>
 <li>Syntax highlighting</li>
@@ -2654,9 +2654,9 @@
 <li>Show non-printable characters</li>
 <li>Automatic paging</li>
 </ul>
-<p><img data-src="https://camo.githubusercontent.com/7b7c397acc5b91b4c4cf7756015185fe3c5f700f70d256a212de51294a0cf673/68747470733a2f2f696d6775722e636f6d2f724773646e44652e706e67" alt="BAT's syntax highlighting"></p>
-<p><img data-src="https://camo.githubusercontent.com/c436c206f2c86605ab2f9fb632dd485afc05fccbf14af472770b0c59d876c9cc/68747470733a2f2f692e696d6775722e636f6d2f326c53573452452e706e67" alt="BAT's git integration"></p>
-<p><img data-src="https://camo.githubusercontent.com/643244c46834769e0ea2802e15518c49e0c7cf10aa82d00c7c69a406f2aa161d/68747470733a2f2f692e696d6775722e636f6d2f576e64477039482e706e67" alt="BAT's non-printable characters showing"></p>
+<p><img data-src="/68747470733a2f2f696d6775722e636f6d2f724773646e44652e706e67" alt="BAT's syntax highlighting"></p>
+<p><img data-src="/68747470733a2f2f692e696d6775722e636f6d2f326c53573452452e706e67" alt="BAT's git integration"></p>
+<p><img data-src="/68747470733a2f2f692e696d6775722e636f6d2f576e64477039482e706e67" alt="BAT's non-printable characters showing"></p>
 <h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>In ArchLinux, you can run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo pacman -S bat</span><br></pre></td></tr></tbody></table></figure>
 
@@ -2666,10 +2666,10 @@
 <p>In Ubuntu, you can run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo apt install bat</span><br></pre></td></tr></tbody></table></figure>
 
-<p>Learn more on <a href="https://github.com/sharkdp/bat">BAT</a>'s GitHub page.</p>
+<p>Learn more on <a href="bat">BAT</a>'s GitHub page.</p>
 <h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Display a single file:</span></span><br><span class="line">bat &lt;filename&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Display multi files at once:</span></span><br><span class="line">bat &lt;filename1&gt; &lt;filename2&gt; ...</span><br><span class="line"></span><br><span class="line"><span class="comment"># Show and highlight non-printable characters:</span></span><br><span class="line">bat -A &lt;filename&gt; <span class="comment"># or</span></span><br><span class="line">bat --show-all &lt;filename&gt;</span><br></pre></td></tr></tbody></table></figure>
 
-<p>Learn more on <a href="https://github.com/sharkdp/bat">BAT</a>'s GitHub page.</p>
+<p>Learn more on <a href="bat">BAT</a>'s GitHub page.</p>
 <h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><p>You can use BAT's configuration file to customize your BAT.</p>
 <p>To generate a default config file, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">bat --generate-config-file</span><br></pre></td></tr></tbody></table></figure>
@@ -2694,10 +2694,10 @@
 <span id="more"></span>
 
 <h2 id="Permission-Management-in-Linux"><a href="#Permission-Management-in-Linux" class="headerlink" title="Permission Management in Linux"></a>Permission Management in Linux</h2><p>When you run <code>ls -l</code> in your terminal, you can always see strings like <code>-rw-r–r–</code> and <code>drwxr-xr-x</code> etc. To understand them, we can always split a such string into four part. The first one is a single character, <code>-</code> if it's a file and <code>d</code> if it's a directory. The rest 9 characters can be equally divided into three parts, representing the permission of the owner, the members of the group and other users relatively. Every part contains three characters, showing the permission of <strong>r</strong>(read), <strong>w</strong>(write) and <strong>x</strong>(execute).</p>
-<p><img data-src="https://s1.ax1x.com/2023/03/23/pp0Z5YF.png" alt="When you run `ls -l`"><br><img data-src="https://www.runoob.com/wp-content/uploads/2014/08/file-permissions-rwx.jpg" alt="From www.runoob.com"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/the-chmod-command-in-linux/1.png" alt="When you run `ls -l`"><br><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/the-chmod-command-in-linux/2.png" alt="From www.runoob.com"></p>
 <p>Besides the bit pattern, you can also use octal notation to express these permissions, which uses 4 for <strong>r</strong>, 2 for <strong>w</strong> and 1 for <strong>x</strong>. The sum of these octal numbers then can replace the <code>rwx</code> pattern. For example, using 6 for <strong>rw</strong>.</p>
 <p>Why is 4, 2 and 1? Actually, you can view every 3-character unit as 3 binary bits. So, 100(r--) means 4 in decimal, 010(-w-) means 2, and 001(--x) means 1. You can then understand what dose the sum means.</p>
-<p><img data-src="https://www.runoob.com/wp-content/uploads/2014/08/rwx-standard-unix-permission-bits.png" alt="From www.runoob.com"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/the-chmod-command-in-linux/3.png" alt="From www.runoob.com"></p>
 <p>Now, you can read this:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">-rw------- <span class="comment"># (600) Owner:RW</span></span><br><span class="line">-rw-r--r-- <span class="comment"># (644) Owner:RW Group:R Other:R</span></span><br><span class="line">-rw-rw-rw- <span class="comment"># (666) Owner:RW Group:RW Other:RW</span></span><br><span class="line">-rwx------ <span class="comment"># (700) Owner:RWX</span></span><br><span class="line">-rwx--x--x <span class="comment"># (711) Owner:RWX Group:X Other:X</span></span><br><span class="line">-rwxr-xr-x <span class="comment"># (755) Owner:RWX Group:RX Other:RX</span></span><br><span class="line">-rwxrwxrwx <span class="comment"># (777) Owner:RWX Group:RWX Other:RWX</span></span><br></pre></td></tr></tbody></table></figure>
 
@@ -2705,8 +2705,8 @@
 <p>However, these default permissions are affected by the user’s <strong>umask</strong> setting. The umask is a value that controls which permissions are removed when creating a new file or directory. For example, if the user’s umask is 022, then the write permission for group and other users will be removed when creating a new file, and the write and execute permission for group and other users will be removed when creating a new directory. Therefore:</p>
 <p>The actual default permission for a file is 666 - 022 = 644, which means <code>-rw-r–r–</code>. The actual default permission for a directory is 777 - 022 = 755, which means <code>drwxr-xr-x</code>.</p>
 <p>You can run the <code>umask</code> command to see what your setting is.</p>
-<p><img data-src="https://s1.ax1x.com/2023/03/23/pp0eZtS.png"></p>
-<h2 id="The-chmod-Command"><a href="#The-chmod-Command" class="headerlink" title="The chmod Command"></a>The chmod Command</h2><p><img data-src="https://s1.ax1x.com/2023/03/23/pp0mVD1.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/the-chmod-command-in-linux/4.png"></p>
+<h2 id="The-chmod-Command"><a href="#The-chmod-Command" class="headerlink" title="The chmod Command"></a>The chmod Command</h2><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/the-chmod-command-in-linux/5.png"></p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> [-cfvR] [--<span class="built_in">help</span>] [--version] &lt;mode&gt; &lt;file&gt;...</span><br></pre></td></tr></tbody></table></figure>
 
 <p>The <code>-R</code> means recursively. You will need it.</p>
@@ -2821,57 +2821,57 @@
 <span id="more"></span>
 
 <h2 id="安装-Visual-Studio-Code"><a href="#安装-Visual-Studio-Code" class="headerlink" title="安装 Visual Studio Code"></a>安装 Visual Studio Code</h2><p>打开 <a href="https://code.visualstudio.com/">VS Code 官网</a>，点击 <code>Download for Windows</code> 按钮（其他平台请选择对应平台的安装包，此处以 Windows 平台为例），等待下载完成。</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xSRlss.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/vs-code-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%A1%80-c-c-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/1.png"></p>
 <details class="note success"><summary><p>国内 VS Code 下载速度慢的解决方案</p>
 </summary>
 <h4 id="国内-VS-Code-下载速度慢的解决方案"><a href="#国内-VS-Code-下载速度慢的解决方案" class="headerlink" title="国内 VS Code 下载速度慢的解决方案"></a>国内 VS Code 下载速度慢的解决方案</h4><p>此方法来自：<a href="https://zhuanlan.zhihu.com/p/112215618">https://zhuanlan.zhihu.com/p/112215618</a></p>
 <p>在你的下载软件处（我这里是 IDM，你如果是浏览器下载的就去浏览器的下载管理器里找），找到下载地址。将下载地址中的 <code>az764295.vo.msecnd.net</code> 替换为 <code>vscode.cdn.azure.cn</code>，然后取消原任务，用修改过的下载链接新建一个下载。</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xSR8Zq.png" alt="修改前"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/vs-code-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%A1%80-c-c-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/2.png" alt="修改前"></p>
 
 </details>
 
 <p>打开安装包，一路下一步，直到下面这个界面，按照下边的进行选择，直到安装完毕。</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xSWzge.png"></p>
-<h2 id="VS-Code-设置中文"><a href="#VS-Code-设置中文" class="headerlink" title="VS Code 设置中文"></a>VS Code 设置中文</h2><p>打开 VS Code，点击图示左侧第五个图标或使用快捷键 <code>Ctrl+Shift+X</code> 打开 <code>拓展</code> 页面，搜索：<code>Chinese</code>，找到 <code>Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code</code> 这个插件，点击 <code>Install</code> 安装，等待安装完成后按照提示点击右下角 <code>Restart</code> 按钮重启 VS Code。<br><img data-src="https://s1.ax1x.com/2022/09/17/xSf1U0.png"><br><img data-src="https://s1.ax1x.com/2022/09/17/xSfJ8U.png"><br><img data-src="https://s1.ax1x.com/2022/09/17/xSftv4.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/vs-code-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%A1%80-c-c-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/3.png"></p>
+<h2 id="VS-Code-设置中文"><a href="#VS-Code-设置中文" class="headerlink" title="VS Code 设置中文"></a>VS Code 设置中文</h2><p>打开 VS Code，点击图示左侧第五个图标或使用快捷键 <code>Ctrl+Shift+X</code> 打开 <code>拓展</code> 页面，搜索：<code>Chinese</code>，找到 <code>Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code</code> 这个插件，点击 <code>Install</code> 安装，等待安装完成后按照提示点击右下角 <code>Restart</code> 按钮重启 VS Code。<br><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/vs-code-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%A1%80-c-c-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/4.png"><br><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/vs-code-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%A1%80-c-c-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/5.png"><br><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/vs-code-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%A1%80-c-c-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/6.png"></p>
 <h2 id="安装并检查编译器"><a href="#安装并检查编译器" class="headerlink" title="安装并检查编译器"></a>安装并检查编译器</h2><p>DevCpp 安装的时候也帮我们安装好了编译器，但 VS Code 并没有。所以我们还得自己装一个编译器。这里以 Mingw-w64 为例（参考<a href="https://code.visualstudio.com/docs/languages/cpp#_example-install-mingwx64">官方教程</a>）。</p>
 <p>参考 <a href="https://www.msys2.org/#installation">MSYS2 官网</a>下载安装和安装。</p>
 <details class="note success"><summary><p>国内 MSYS2 下载速度慢的解决方案</p>
 </summary>
 <h4 id="国内-MSYS2-下载速度慢的解决方案"><a href="#国内-MSYS2-下载速度慢的解决方案" class="headerlink" title="国内 MSYS2 下载速度慢的解决方案"></a>国内 MSYS2 下载速度慢的解决方案</h4><p>在这个按钮上右键，选择<code>复制链接</code>。</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xShuRO.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/vs-code-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%A1%80-c-c-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/7.png"></p>
 <p>然后前往 <a href="https://ghproxy.com/">https://ghproxy.com/</a> 这个网站，粘贴上面复制的下载链接，点击下载。</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xShGdI.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/vs-code-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%A1%80-c-c-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/8.png"></p>
 
 </details>
 
 <p>打开安装包，一路默认下一步。耐心等待（国内网络可以！只要耐心等！）直到出现下面的界面：</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xShqfK.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/vs-code-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%A1%80-c-c-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/9.png"></p>
 <p>输入下面的命令安装 gcc：</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">pacman -S mingw-w64-x86_64-gcc</span><br></pre></td></tr></tbody></table></figure>
 
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xS46nH.png" alt="画横线的是需要自己输入的"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/vs-code-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%A1%80-c-c-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/10.png" alt="画横线的是需要自己输入的"></p>
 <p>接下来需要添加环境变量。直接搜索 <code>高级系统设置</code>：</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xS4bHs.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/vs-code-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%A1%80-c-c-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/11.png"></p>
 <p>打开后点击环境变量。</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xS4x3T.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/vs-code-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%A1%80-c-c-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/12.png"></p>
 <p>添加系统变量。</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xS5VC6.png"></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xS5J8f.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/vs-code-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%A1%80-c-c-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/13.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/vs-code-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%A1%80-c-c-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/14.png"></p>
 <p>打开 CMD 检查一下是否成功：<br>输入 <code>gcc -v</code>，如果有结果，就安装成功了。</p>
 <h2 id="C-C-扩展的安装"><a href="#C-C-扩展的安装" class="headerlink" title="C/C++ 扩展的安装"></a>C/C++ 扩展的安装</h2><p>按照上面的方法打开扩展，首先是几个 C/C++ 基础扩展，直接搜索 <code>C++</code>。</p>
 <p>第一个：<code>C/C++</code></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xSfhVI.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/vs-code-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%A1%80-c-c-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/15.png"></p>
 <p>直接点击安装（我这里截图的时候还没重启，如果按照上述步骤已经安装了中文语言包并重启了 Code，这里的 <code>Install</code> 按钮就会变成 <code>安装</code>）。</p>
 <p>第二个：<code>C/C++ Extension Pack</code></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xSf7RS.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/vs-code-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%A1%80-c-c-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/16.png"></p>
 <p>第三个：<code>C/C++ Compile Run</code></p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xSfLrj.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/vs-code-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%A1%80-c-c-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/17.png"></p>
 <p>这个扩展提供了极其简单的 <code>F6</code> 一键编译运行功能。</p>
 <h2 id="正常运行测试"><a href="#正常运行测试" class="headerlink" title="正常运行测试"></a>正常运行测试</h2><p>新建一个文件夹，就叫 <code>HelloWorld</code> 吧。打开文件夹，右键，选择 <code>通过 Code 打开</code>。新建一个 <code>HelloWorld.cpp</code>，粘贴下面的代码：</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  std::cout &lt;&lt; <span class="string">"Hello world!"</span> &lt;&lt; std::endl;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <p><code>Ctrl+S</code> 保存，<code>F6</code> 运行，成功输出结果。</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xS5oPx.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/vs-code-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%A1%80-c-c-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/18.png"></p>
 <h2 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h2><p><strong>2022 年 10 月 6 日更新：</strong></p>
 <p>完成上边的步骤之后，你应该可以正常运行程序了。下面的教程是安装调试器以及通过 <code>C/C++ Runner</code> 让调试等工作变得简单。</p>
 <p>首先再次打开 msys2.exe (默认位置是：C:\msys64\msys2.exe)，类似上边安装 gcc ，输入下边的命令安装 gdb。<br>类似的，还需要输入下面的命令安装 gdb:</p>
@@ -2882,14 +2882,14 @@
 </summary>
 <h4 id="安装-C-C-Runner-插件时其依赖项-CodeLLDB-无法安装的解决方案"><a href="#安装-C-C-Runner-插件时其依赖项-CodeLLDB-无法安装的解决方案" class="headerlink" title="安装 C/C++ Runner 插件时其依赖项 CodeLLDB 无法安装的解决方案"></a>安装 C/C++ Runner 插件时其依赖项 CodeLLDB 无法安装的解决方案</h4><p>按照右下角的提示手动下载 <code>codelldb-x86_64-windows.vsix</code> 文件。</p>
 <p>在 VS Code 中按下 <code>Ctrl + Shift + P</code>，输入 <code>install</code>，选择<code>从VSIX安装...</code>，选择上边下好的文件，等待安装完成。</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xSTBad.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/vs-code-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%A1%80-c-c-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/19.png"></p>
 
 </details>
 
 <p>安装完成后，左下角点击 <code>Select folder.</code>，选择当前文件夹。</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xSTRsS.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/vs-code-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%A1%80-c-c-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/20.png"></p>
 <p>然后按下小齿轮进行编译，按下三角形运行，设置好断点按下小虫子进行 Debug。</p>
-<p><img data-src="https://s1.ax1x.com/2022/09/17/xST4aj.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/vs-code-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%A1%80-c-c-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/21.png"></p>
 <h2 id="解决中文乱码问题"><a href="#解决中文乱码问题" class="headerlink" title="解决中文乱码问题"></a>解决中文乱码问题</h2><p><strong>2022 年 10 月 13 日更新：</strong></p>
 <p>参见我的另一篇文章：<a href="/posts/ca05bed5.html">《VS Code 中文乱码问题》</a></p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
@@ -3059,11 +3059,11 @@
 <h2 id="回到经典的风格"><a href="#回到经典的风格" class="headerlink" title="回到经典的风格"></a>回到经典的风格</h2><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>为了让右键菜单回到经典风格，最简单的方法是使用下边这个小工具。</p>
 <p>官方网页：<a href="https://www.sordum.org/14479/windows-11-classic-context-menu-v1-1/">https://www.sordum.org/14479/windows-11-classic-context-menu-v1-1/</a></p>
 <p>将页面拉到最下边，按下这个 <strong>Download</strong> 来下载这个小工具。</p>
-<p><img data-src="https://s1.ax1x.com/2023/06/23/pCYmon0.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/better-right-click-menu-in-win11/1.png"></p>
 <p>你应该会得到一个 zip 压缩包。<strong>先将它解压</strong>，并双击运行 <strong>W11ClassicMenu.exe</strong> 这个文件。</p>
-<p><img data-src="https://s1.ax1x.com/2023/06/23/pCYmLh4.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/better-right-click-menu-in-win11/2.png"></p>
 <p>然后就是 "傻瓜式" 操作了。看不懂英文的话可以照着把语言改成中文：</p>
-<p><img data-src="https://s1.ax1x.com/2023/06/23/pCYmX9J.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/better-right-click-menu-in-win11/3.png"></p>
 <h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>第二种方法是手动修改注册表。实际上，这就是上面软件的实现原理，只不过上边的软件把这些操作变成 "傻瓜式" 的了。</p>
 <blockquote>
 <p>什么是注册表？简单而言，这是一个数据库，存储了很多 Windows 系统本身及用户安装的软件的配置信息。所以，你可以通过修改它来修改右键菜单这个系统配置。但也由于其中存储了很多系统关键信息，所以手动修改这样一个操作是挺危险的一个操作，尤其对于那些粗心的人而言！</p>
@@ -3072,31 +3072,31 @@
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">reg.exe add “HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32” /f</span><br></pre></td></tr></tbody></table></figure>
 
 <p>然后按下回车，重启你的文件资源管理器，应该就能看到效果生效了。</p>
-<p><img data-src="https://s1.ax1x.com/2023/06/23/pCYmqNF.png"></p>
-<p><img data-src="https://s1.ax1x.com/2023/06/23/pCYm77T.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/better-right-click-menu-in-win11/4.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/better-right-click-menu-in-win11/5.png"></p>
 <blockquote>
 <p>如何重启文件资源管理器？按下 <code>Ctrl + Shift + Esc</code> 来启动任务管理器，找到 Windows 资源管理器，右键，选择 "重新启动"。</p>
-<p><img data-src="https://s1.ax1x.com/2023/06/23/pCYmTBV.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/better-right-click-menu-in-win11/6.png"></p>
 </blockquote>
 <p><strong>改为 win11 风格</strong>：如果你反悔了，想把右键菜单改回 win11 风格，只要把上边的步骤再来一遍，不过换成这条命令：</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">reg.exe delete “HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}” /f</span><br></pre></td></tr></tbody></table></figure>
 
 <h2 id="让你的右键菜单更好用"><a href="#让你的右键菜单更好用" class="headerlink" title="让你的右键菜单更好用"></a>让你的右键菜单更好用</h2><p>现在你的右键菜单回归到了原汁原味的体验：经典而复杂。各种奇奇怪怪的东西都在这儿，溢出屏幕。</p>
-<p><img data-src="https://s1.ax1x.com/2023/06/23/pCYmxj1.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/better-right-click-menu-in-win11/7.png"></p>
 <p>有没有什么办法来整理这些东西呢？我推荐另一个小工具：</p>
 <p>Context Menu Manager: <a href="https://github.com/BluePointLilac/ContextMenuManager">https://github.com/BluePointLilac/ContextMenuManager</a></p>
-<p><img data-src="https://s1.ax1x.com/2023/06/23/pCYmh1s.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/better-right-click-menu-in-win11/8.png"></p>
 <h3 id="软件下载"><a href="#软件下载" class="headerlink" title="软件下载"></a>软件下载</h3><p>这个项目在 GitHub 上。访问上边的网址，点击右侧的 Releases 页面进入下载。</p>
 <p>（觉得这个项目不错的话请点击右上角的 star 以支持这位 BluePointLilac 大佬哦）</p>
-<p><img data-src="https://s1.ax1x.com/2023/06/23/pCYm5Xq.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/better-right-click-menu-in-win11/9.png"></p>
 <p>点击 exe 文件就可以下载了。如果嫌速度慢的话，可以右键，"复制链接"，然后访问 <a href="https://ghproxy.com/">https://ghproxy.com/</a>，粘贴刚刚复制的地址到输入框，点击下载。</p>
-<p><img data-src="https://s1.ax1x.com/2023/06/23/pCYmfpj.png"></p>
-<p><img data-src="https://s1.ax1x.com/2023/06/23/pCYm4cn.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/better-right-click-menu-in-win11/10.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/better-right-click-menu-in-win11/11.png"></p>
 <h3 id="软件使用"><a href="#软件使用" class="headerlink" title="软件使用"></a>软件使用</h3><p>打开软件，可以看到大部分右键菜单项都被分类列出来了。你要做的就是 —— 点击右边大大的开关键来控制是否启用某个项，或者右键某个项进行更多设置。</p>
-<p><img data-src="https://s1.ax1x.com/2023/06/23/pCYmvcR.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/better-right-click-menu-in-win11/12.png"></p>
 <p>更强大的是，你可以在 "其他规则" 选项卡中，启用一些非常牛逼的功能到你的右键菜单。</p>
-<p><img data-src="https://s1.ax1x.com/2023/06/23/pCYmbAU.png"></p>
-<p><img data-src="https://s1.ax1x.com/2023/06/23/pCYmj39.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/better-right-click-menu-in-win11/13.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/better-right-click-menu-in-win11/14.png"></p>
 <h2 id="TLDR"><a href="#TLDR" class="headerlink" title="TLDR"></a>TLDR</h2><p>使用这款由 Sordum Team 研发的 Windows 11 Classic Context Menu 来让你的右键菜单变回经典样式：</p>
 <p><a href="https://www.sordum.org/14479/windows-11-classic-context-menu-v1-1/">https://www.sordum.org/14479/windows-11-classic-context-menu-v1-1/</a></p>
 <p>使用这款由 BluePointLilac 研发的 ContextMenuManager 来自定义你的右键菜单：</p>
@@ -3161,7 +3161,7 @@
 
 <h2 id="Brief"><a href="#Brief" class="headerlink" title="Brief"></a>Brief</h2><p><a href="https://github.com/kamiyaa/joshuto">joshuto</a> is a <a href="https://ranger.github.io/">ranger</a>-like terminal file manager written in Rust. Thanks to rust's excellent performance, joshuto is much faster than ranger.</p>
 <p>It allows you to explore files in terminal like this:</p>
-<p><img data-src="https://s1.ax1x.com/2023/07/12/pCftl2d.png" alt="joshuto on GitHub"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/joshuto-a-great-file-manager-in-terminal/1.png" alt="joshuto on GitHub"></p>
 <h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><h3 id="Arch"><a href="#Arch" class="headerlink" title="Arch"></a>Arch</h3><p>In archlinux, I choose to use <code>yay</code>. Run the command below and keep hitting Enter.</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">yay -S joshuto</span><br></pre></td></tr></tbody></table></figure>
 
@@ -3278,7 +3278,7 @@
 <p>$$<br>a,b,c,d \in [0, 255]<br>\<br>e \in [0, 65525]<br>$$</p>
 <p>RegExp doesn't support the direct expression of a number range. We have to do it some other way.</p>
 <h2 id="The-0-255-Part"><a href="#The-0-255-Part" class="headerlink" title="The 0-255 Part"></a>The 0-255 Part</h2><p>After some analysis, we can easily see that we can do the 0-255 part this way:</p>
-<p><img data-src="https://s1.ax1x.com/2023/07/04/pCsg0N8.png" alt="From https://c.runoob.com/front-end/7625/"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/matching-ipv4-addresses-with-regexp/1.png" alt="From https://c.runoob.com/front-end/7625/"></p>
 <p>and the RegExp should be like this:</p>
 <figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">[0-9]|([1-9][0-9])|(1[0-9][0-9])|(2[0-4][0-9])|25[0-5]</span><br></pre></td></tr></tbody></table></figure>
 
@@ -3288,7 +3288,7 @@
 <h2 id="The-0-65525-Part"><a href="#The-0-65525-Part" class="headerlink" title="The 0-65525 Part"></a>The 0-65525 Part</h2><p>With similar method, we can write the 0-65535 part like this:</p>
 <figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">[0-9]|[1-9][0-9]{1,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5]</span><br></pre></td></tr></tbody></table></figure>
 
-<p><img data-src="https://s1.ax1x.com/2023/07/04/pCs2hqI.png" alt="From https://c.runoob.com/front-end/7625/"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/matching-ipv4-addresses-with-regexp/2.png" alt="From https://c.runoob.com/front-end/7625/"></p>
 <h2 id="Concatenate-Them"><a href="#Concatenate-Them" class="headerlink" title="Concatenate Them"></a>Concatenate Them</h2><figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">^((([0-9]|([1-9][0-9])|(1[0-9][0-9])|(2[0-4][0-9])|25[0-5])\.){3}([0-9]|([1-9][0-9])|(1[0-9][0-9])|(2[0-4][0-9])|25[0-5]))((:([0-9]|[1-9][0-9]{1,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5]))?)$</span><br></pre></td></tr></tbody></table></figure>
 ]]></content>
       <categories>
@@ -4098,7 +4098,7 @@
     <content><![CDATA[<p>This is a simple record of my further attempt to set up a blog with Hexo. I built one on GitHub Page before, using Hexo with the Icarus theme. This time I want to try something different. I also cleaned up my old blog and selectively migrated some old posts here.</p>
 <span id="more"></span>
 
-<p><img data-src="https://s1.ax1x.com/2023/04/15/p9ppsZ8.png" alt="Hexo"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/web/set-up-a-blog-with-hexo/1.png" alt="Hexo"></p>
 <h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>You need to install <a href="http://nodejs.org/">Node.js</a> and <a href="http://git-scm.com/">Git</a> before installing Hexo.</p>
 <p>After that, you could run the command below to install Hexo.</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></tbody></table></figure>
@@ -4110,7 +4110,7 @@
 
 <p>Learn more in <em><a href="https://hexo.io/docs/setup">Hexo Docs</a></em>.</p>
 <h2 id="Theme"><a href="#Theme" class="headerlink" title="Theme"></a>Theme</h2><p>Before starting to use your blog, you may choose a <a href="https://hexo.io/themes/">theme</a> you like.</p>
-<p><img data-src="https://s1.ax1x.com/2023/04/11/ppOnugs.png" alt="Hexo themes"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/web/set-up-a-blog-with-hexo/2.png" alt="Hexo themes"></p>
 <p>Here I choose the <a href="https://theme-next.js.org/">NexT</a> theme. To install it, run:</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">npm install hexo-theme-next --save</span><br></pre></td></tr></tbody></table></figure>
 
@@ -4378,7 +4378,7 @@
 
 <p>一两个周末最终实现到现在的效果，能输入名字抽人，能随机数抽人（学号抽人？），还有一个通过图片抽的到今天也还没做。当时对着 Vue.js 和 Element UI 的开发文档勉里勉强做出来这个效果，现在早把那些基础知识忘记了，也不知道以后有没有工夫完善它了。</p>
 <p>你可以<a href="/raw/CatchDog/CatchDog.html">点击这里</a>来玩玩看。</p>
-<p><img data-src="https://pic.imgdb.cn/item/6308b57316f2c2beb1fad0f4.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57316f2c2beb1fad0ec.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad081.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad087.png"><br><img data-src="https://pic.imgdb.cn/item/6308b57216f2c2beb1fad091.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/web/%E8%A1%A5%E8%AE%B0%E4%B8%80%E4%B8%AA%E7%94%A8-vue-js-%E5%92%8C-elementui-%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%9C%A8%E7%BA%BF%E6%8A%BD%E5%A5%96%E7%BD%91%E9%A1%B5/1.png"><br><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/web/%E8%A1%A5%E8%AE%B0%E4%B8%80%E4%B8%AA%E7%94%A8-vue-js-%E5%92%8C-elementui-%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%9C%A8%E7%BA%BF%E6%8A%BD%E5%A5%96%E7%BD%91%E9%A1%B5/2.png"><br><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/web/%E8%A1%A5%E8%AE%B0%E4%B8%80%E4%B8%AA%E7%94%A8-vue-js-%E5%92%8C-elementui-%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%9C%A8%E7%BA%BF%E6%8A%BD%E5%A5%96%E7%BD%91%E9%A1%B5/3.png"><br><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/web/%E8%A1%A5%E8%AE%B0%E4%B8%80%E4%B8%AA%E7%94%A8-vue-js-%E5%92%8C-elementui-%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%9C%A8%E7%BA%BF%E6%8A%BD%E5%A5%96%E7%BD%91%E9%A1%B5/4.png"><br><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/web/%E8%A1%A5%E8%AE%B0%E4%B8%80%E4%B8%AA%E7%94%A8-vue-js-%E5%92%8C-elementui-%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%9C%A8%E7%BA%BF%E6%8A%BD%E5%A5%96%E7%BD%91%E9%A1%B5/5.png"></p>
 ]]></content>
       <categories>
         <category>CS</category>
@@ -4400,10 +4400,10 @@
 
 <h2 id="燧石装备"><a href="#燧石装备" class="headerlink" title="燧石装备"></a>燧石装备</h2><p>由于 NTP 模组（<a href="https://www.mcmod.cn/class/2138.html">No Tree Punching，无树可撸</a>）的存在，初入 RLCraft，你的第一件事情不再是获取原木，而是撸树叶获取木棍，然后在河边找到沙砾获取燧石。你可以按住鼠标左键徒手破坏树叶和沙砾，然后用右键点击掉落物以拿起它（或者你也可以按下 shift 来吸取附近的掉落物）。</p>
 <p>手拿燧石右击石头 / 圆石等坚硬方块（?）上表面，你可以获取燧石碎块，然后打开背包，在 2*2 的合成栏上边放燧石碎块，下边放木棍，获取一把粗糙的小刀。（图源 RLCraft Wiki）</p>
-<p><img data-src="https://s1.ax1x.com/2023/07/22/pCq0pLt.png" alt="粗糙的小刀"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/game/minecraft/rlcraft-%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B%E4%B8%80%EF%BC%9A%E8%BF%87%E6%B8%A1%E5%88%B0%E4%BD%A0%E7%9A%84%E6%AD%A3%E5%B8%B8%E7%94%9F%E5%AD%98/1.png" alt="粗糙的小刀"></p>
 <p>使用粗糙的小刀破坏草，可以获得植物纤维，在背包合成栏用三个植物纤维合成一个植物绳。然后再使用燧石碎块、植物绳、木棍合成粗糙的斧头。恭喜你获取了这个游戏的第一把斧头，用这把斧头你就可以开采原木了 —— 当心，树倒下来可能会砸死你！</p>
-<p><img data-src="https://s1.ax1x.com/2023/07/22/pCq0SsI.png" alt="植物绳"></p>
-<p><img data-src="https://s1.ax1x.com/2023/07/22/pCqwzQA.png" alt="粗糙的斧头"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/game/minecraft/rlcraft-%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B%E4%B8%80%EF%BC%9A%E8%BF%87%E6%B8%A1%E5%88%B0%E4%BD%A0%E7%9A%84%E6%AD%A3%E5%B8%B8%E7%94%9F%E5%AD%98/2.png" alt="植物绳"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/game/minecraft/rlcraft-%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B%E4%B8%80%EF%BC%9A%E8%BF%87%E6%B8%A1%E5%88%B0%E4%BD%A0%E7%9A%84%E6%AD%A3%E5%B8%B8%E7%94%9F%E5%AD%98/3.png" alt="粗糙的斧头"></p>
 <p>你不再能够直接使用背包合成栏分解原木，而是需要把原木竖直放在地上，并用斧头右击其上表面，以获取两块木板。木棍也可以用类似的方式获取 —— 将木板放在地上，然后用斧头右击。</p>
 <p>你可以看 jei 获取更多燧石工具的制作方法，但你更可以开始制作原版的木制工具。用木镐挖石头会掉落石子，四个石子 2*2 摆放可以获取圆石，而挖圆石则会直接掉落圆石。</p>
 <p>恭喜你进入石器时代！现在，你可以开始下矿了！但要时刻注意的一点是照明 —— 恐怖生物会在黑暗中生成... 别自己怎么死的都不知道。你会发现木棍加煤炭不再能合成原版火把，它们现在只能合成 "熄灭的火把"。要想点亮它们，你需要一颗打火石 —— 将熄灭的火把和打火石放在合成栏里，你就可以获得点燃的火把。但这火把仍然会熄灭 —— 比如一场雨过后，比如燃烧很久之后... 制作原版火把相对复杂，但你可以在村庄等地方找到一些。</p>
@@ -4420,7 +4420,7 @@
 <h2 id="前期经验获取方式"><a href="#前期经验获取方式" class="headerlink" title="前期经验获取方式"></a>前期经验获取方式</h2><p>在 RLCraft 中，你必须获取经验提升你的等级，才能解锁破坏某些方块或使用更高级的工具，例如铁质装备需要你的相应属性（攻击、防御等）达到 8 级，而钻石装备需要 16 级等等。下边介绍几种经验获取方法：</p>
 <h3 id="经验田"><a href="#经验田" class="headerlink" title="经验田"></a>经验田</h3><p>当农耕点到二级，就可以种植小麦了。种植一大片小麦田，收割的时候就会获得大量经验。类似的，养殖动物也可以获得大量经验。</p>
 <p>下图为我的 30 级经验田。这片田大约是 13 格水的满浇灌面积的大小（1 格水最多能浇灌 9*9-1=80 面积的田，所以总共大约为 1000 格），能提供我从 0 级升到大约 30 级所需的经验。（注意一下不要让水源露天，否则冬天会结冰，图中忘记了）</p>
-<p><img data-src="https://s1.ax1x.com/2023/07/22/pCqwHZ6.png" alt="经验田"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/game/minecraft/rlcraft-%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B%E4%B8%80%EF%BC%9A%E8%BF%87%E6%B8%A1%E5%88%B0%E4%BD%A0%E7%9A%84%E6%AD%A3%E5%B8%B8%E7%94%9F%E5%AD%98/4.png" alt="经验田"></p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
 <li><em><a href="https://rlcraft.fandom.com/wiki/Getting_Started">Getting Started | RLCraft Wiki | Fandom</a></em></li>
 </ul>
@@ -4451,11 +4451,11 @@
 </ul>
 </li>
 </ul>
-<p><img data-src="https://s1.ax1x.com/2023/07/19/pC7KwFS.png" alt="RLCraft on CurseForge"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/game/minecraft/rlcraft-%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B-%E9%9B%B6%EF%BC%9A%E5%AE%89%E8%A3%85%E5%92%8C%E8%B5%84%E6%BA%90%E5%AF%BC%E8%88%AA/1.png" alt="RLCraft on CurseForge"></p>
 <h3 id="借助-CurseForge-APP-进行安装"><a href="#借助-CurseForge-APP-进行安装" class="headerlink" title="借助 CurseForge APP 进行安装"></a>借助 CurseForge APP 进行安装</h3><p>进入 <a href="https://www.curseforge.com/download/app">https://www.curseforge.com/download/app</a>，点击 <strong>Download on Overwolf</strong>，安装并启动 CurseForge APP。</p>
-<p><img data-src="https://s1.ax1x.com/2023/07/19/pC7Kao8.png" alt="下载 CurseForge APP"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/game/minecraft/rlcraft-%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B-%E9%9B%B6%EF%BC%9A%E5%AE%89%E8%A3%85%E5%92%8C%E8%B5%84%E6%BA%90%E5%AF%BC%E8%88%AA/2.png" alt="下载 CurseForge APP"></p>
 <p>打开后，选择 Minecraft，在顶部搜索栏中搜索 <code>RLCraft</code>，点击右侧的<code>安装</code>并等待（此处图片我已安装完成，故显示为<code>播放</code>）。</p>
-<p><img data-src="https://s1.ax1x.com/2023/07/19/pC7KUdf.png" alt="在 CurseForge APP 内安装 RLCraft"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/game/minecraft/rlcraft-%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B-%E9%9B%B6%EF%BC%9A%E5%AE%89%E8%A3%85%E5%92%8C%E8%B5%84%E6%BA%90%E5%AF%BC%E8%88%AA/3.png" alt="在 CurseForge APP 内安装 RLCraft"></p>
 <p>安装完成后，点击<code>播放</code>，即可启动游戏。</p>
 <h3 id="借助-PCL-进行安装"><a href="#借助-PCL-进行安装" class="headerlink" title="借助 PCL 进行安装"></a>借助 PCL 进行安装</h3><p>先新建一个目录用于存放游戏文件，我的是 <code>D:\Games\RLCraft\</code>。</p>
 <p>进入界面左下角的<code>版本选择</code>，点击<code>添加已有文件夹</code>，选择上边你刚刚新建的目录。</p>
@@ -4465,7 +4465,7 @@
 <ul>
 <li>Optifine G5 下载地址: <em><a href="https://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_G5.jar">https://optifine.net/adloadx?f=OptiFine_1.12.2_HD_U_G5.jar</a></em></li>
 </ul>
-<p><img data-src="https://s1.ax1x.com/2023/07/19/pC7KNeP.png" alt="RLCraft OptiFine 需求"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/game/minecraft/rlcraft-%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B-%E9%9B%B6%EF%BC%9A%E5%AE%89%E8%A3%85%E5%92%8C%E8%B5%84%E6%BA%90%E5%AF%BC%E8%88%AA/4.png" alt="RLCraft OptiFine 需求"></p>
 <p>下载完成后，你会得到名为 <code>OptiFine_1.12.2_HD_U_G5.jar</code> 的 jar 文件。<strong>直接将该文件放入游戏根目录下的 <code>mods</code> 文件夹内</strong>，即完成了 Optifine 的安装。</p>
 <p>附：一个我挺喜欢的光影 Complementary Reimagined (<em><a href="https://www.curseforge.com/minecraft/customization/complementary-reimagined">CurseForge</a></em>)</p>
 <h2 id="汉化"><a href="#汉化" class="headerlink" title="汉化"></a>汉化</h2><p><em><a href="https://www.bilibili.com/read/cv22766528">RLCraft 1.12.2 - Release v2.9.3 正式版，深度汉化任务书 + 物品 + 钓鱼，附汉化替换下载</a></em></p>
@@ -4737,7 +4737,7 @@
 <li>Plus one.</li>
 </ol>
 <h2 id="Unit-2-4"><a href="#Unit-2-4" class="headerlink" title="Unit 2.4"></a>Unit 2.4</h2><p>ALU: Arithmetic Logic Unit</p>
-<p><img data-src="https://s1.ax1x.com/2023/07/08/pCgwBcR.jpg" alt="alu"></p>
+<p>![alu](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-boolean-arithmetic-and-the-alu/1.png)</p>
 <h2 id="Project-2"><a href="#Project-2" class="headerlink" title="Project 2"></a>Project 2</h2><h3 id="HalfAdder-hdl"><a href="#HalfAdder-hdl" class="headerlink" title="HalfAdder.hdl"></a>HalfAdder.hdl</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">CHIP HalfAdder {</span><br><span class="line">    IN a, b;    // 1-bit inputs</span><br><span class="line">    OUT sum,    // Right bit of a + b</span><br><span class="line">        carry;  // Left bit of a + b</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    Xor(a=a, b=b, out=sum);</span><br><span class="line">    And(a=a, b=b, out=carry);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="FullAdder-hdl"><a href="#FullAdder-hdl" class="headerlink" title="FullAdder.hdl"></a>FullAdder.hdl</h3><p>Use two <code>HalfAdder</code>s and a <code>OR</code> to combine a <code>FullAdder</code>, per <a href="https://www.zhihu.com/question/39925519/answer/1996568103">here</a>.</p>
@@ -4788,8 +4788,8 @@
 <li>Elementary (Nand, And, Or, Not, ...)</li>
 <li>Composite (复合的) (Mux, Adder, ...)</li>
 </ul>
-<h3 id="Gate-diagrams"><a href="#Gate-diagrams" class="headerlink" title="Gate diagrams"></a>Gate diagrams</h3><p><img data-src="https://s1.ax1x.com/2023/07/08/pCgFPDU.jpg" alt="Some gate diagrams"></p>
-<h3 id="Gate-interfaces-and-implements"><a href="#Gate-interfaces-and-implements" class="headerlink" title="Gate interfaces and implements"></a>Gate interfaces and implements</h3><p><img data-src="https://s1.ax1x.com/2023/07/08/pCgFnv6.jpg" alt="Interface vs Implementation"></p>
+<h3 id="Gate-diagrams"><a href="#Gate-diagrams" class="headerlink" title="Gate diagrams"></a>Gate diagrams</h3><p>![Some gate diagrams](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-boolean-functions-and-gate-logic/1.png)</p>
+<h3 id="Gate-interfaces-and-implements"><a href="#Gate-interfaces-and-implements" class="headerlink" title="Gate interfaces and implements"></a>Gate interfaces and implements</h3><p>![Interface vs Implementation](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-boolean-functions-and-gate-logic/2.png)</p>
 <h2 id="Unit-1-4"><a href="#Unit-1-4" class="headerlink" title="Unit 1.4"></a>Unit 1.4</h2><p>HDL: Hardware Description Language</p>
 <p>Common HDLs:</p>
 <ul>
@@ -4805,7 +4805,7 @@
 <p><code>a[0]</code>: right-most bit (the least significant bit, LSB)<br><code>a[15]</code>: left-most bit (the most significant bit, MSB)</p>
 <p>Attention! The index is <strong>FROM RIGHT TO LEFT</strong>!</p>
 <p><code>true</code>: each bit gets one<br><code>false</code>: each bit gets zero</p>
-<h2 id="Unit-1-7"><a href="#Unit-1-7" class="headerlink" title="Unit 1.7"></a>Unit 1.7</h2><p><img data-src="https://s1.ax1x.com/2023/07/08/pCgF85d.jpg" alt="Mux and DMux"></p>
+<h2 id="Unit-1-7"><a href="#Unit-1-7" class="headerlink" title="Unit 1.7"></a>Unit 1.7</h2><p>![Mux and DMux](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-boolean-functions-and-gate-logic/3.png)</p>
 <h3 id="Multiplexor-Mux-复用器"><a href="#Multiplexor-Mux-复用器" class="headerlink" title="Multiplexor (Mux, 复用器)"></a>Multiplexor (Mux, 复用器)</h3><figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> sel == <span class="number">0</span>:</span><br><span class="line">    out = a</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    out = b</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="Demultiplexor-DMux-解复用器"><a href="#Demultiplexor-DMux-解复用器" class="headerlink" title="Demultiplexor (DMux, 解复用器)"></a>Demultiplexor (DMux, 解复用器)</h3><figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> sel == <span class="number">0</span>:</span><br><span class="line">    a, b = <span class="keyword">in</span>, <span class="number">0</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    a, b = <span class="number">0</span>, <span class="keyword">in</span></span><br></pre></td></tr></tbody></table></figure>
@@ -4843,14 +4843,14 @@
 <h3 id="Mux16-hdl"><a href="#Mux16-hdl" class="headerlink" title="Mux16.hdl"></a>Mux16.hdl</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 16-bit multiplexor:</span><br><span class="line"> * for i = 0..15 out[i] = a[i] if sel == 0</span><br><span class="line"> *                        b[i] if sel == 1</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">CHIP Mux16 {</span><br><span class="line">    IN a[16], b[16], sel;</span><br><span class="line">    OUT out[16];</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    Mux(a=a[0], b=b[0], sel=sel, out=out[0]);</span><br><span class="line">    Mux(a=a[1], b=b[1], sel=sel, out=out[1]);</span><br><span class="line">    Mux(a=a[2], b=b[2], sel=sel, out=out[2]);</span><br><span class="line">    Mux(a=a[3], b=b[3], sel=sel, out=out[3]);</span><br><span class="line">    Mux(a=a[4], b=b[4], sel=sel, out=out[4]);</span><br><span class="line">    Mux(a=a[5], b=b[5], sel=sel, out=out[5]);</span><br><span class="line">    Mux(a=a[6], b=b[6], sel=sel, out=out[6]);</span><br><span class="line">    Mux(a=a[7], b=b[7], sel=sel, out=out[7]);</span><br><span class="line">    Mux(a=a[8], b=b[8], sel=sel, out=out[8]);</span><br><span class="line">    Mux(a=a[9], b=b[9], sel=sel, out=out[9]);</span><br><span class="line">    Mux(a=a[10], b=b[10], sel=sel, out=out[10]);</span><br><span class="line">    Mux(a=a[11], b=b[11], sel=sel, out=out[11]);</span><br><span class="line">    Mux(a=a[12], b=b[12], sel=sel, out=out[12]);</span><br><span class="line">    Mux(a=a[13], b=b[13], sel=sel, out=out[13]);</span><br><span class="line">    Mux(a=a[14], b=b[14], sel=sel, out=out[14]);</span><br><span class="line">    Mux(a=a[15], b=b[15], sel=sel, out=out[15]);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="Mux4Way16-hdl"><a href="#Mux4Way16-hdl" class="headerlink" title="Mux4Way16.hdl"></a>Mux4Way16.hdl</h3><p>The idea of the implementation is classify the four inputs into two groups, and use two layers of <code>Mux16</code>;</p>
-<p><img data-src="https://s1.ax1x.com/2023/07/08/pCgdZi4.jpg" alt="Mux4Way"></p>
+<p>![Mux4Way](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-boolean-functions-and-gate-logic/4.png)</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 4-way 16-bit multiplexor:</span><br><span class="line"> * out = a if sel == 00</span><br><span class="line"> *       b if sel == 01</span><br><span class="line"> *       c if sel == 10</span><br><span class="line"> *       d if sel == 11</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">CHIP Mux4Way16 {</span><br><span class="line">    IN a[16], b[16], c[16], d[16], sel[2];</span><br><span class="line">    OUT out[16];</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    Mux16(a=a, b=b, sel=sel[0], out=ab);</span><br><span class="line">    Mux16(a=c, b=d, sel=sel[0], out=cd);</span><br><span class="line">    Mux16(a=ab, b=cd, sel=sel[1], out=out);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="Mux8Way16-hdl"><a href="#Mux8Way16-hdl" class="headerlink" title="Mux8Way16.hdl"></a>Mux8Way16.hdl</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 8-way 16-bit multiplexor:</span><br><span class="line"> * out = a if sel == 000</span><br><span class="line"> *       b if sel == 001</span><br><span class="line"> *       etc.</span><br><span class="line"> *       h if sel == 111</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">CHIP Mux8Way16 {</span><br><span class="line">    IN a[16], b[16], c[16], d[16],</span><br><span class="line">       e[16], f[16], g[16], h[16],</span><br><span class="line">       sel[3];</span><br><span class="line">    OUT out[16];</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    Mux4Way16(a=a, b=b, c=c, d=d, sel=sel[0..1], out=abcd);</span><br><span class="line">    Mux4Way16(a=e, b=f, c=g, d=h, sel=sel[0..1], out=efgh);</span><br><span class="line">    Mux16(a=abcd, b=efgh, sel=sel[2], out=out);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="DMux-hdl"><a href="#DMux-hdl" class="headerlink" title="DMux.hdl"></a>DMux.hdl</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Demultiplexor:</span><br><span class="line"> * {a, b} = {in, 0} if sel == 0</span><br><span class="line"> *          {0, in} if sel == 1</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">CHIP DMux {</span><br><span class="line">    IN in, sel;</span><br><span class="line">    OUT a, b;</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    Not(in=sel, out=Notsel);</span><br><span class="line">    And(a=in, b=Notsel, out=a);</span><br><span class="line">    And(a=in, b=sel, out=b);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="DMux4Way-hdl"><a href="#DMux4Way-hdl" class="headerlink" title="DMux4Way.hdl"></a>DMux4Way.hdl</h3><p><img data-src="https://s1.ax1x.com/2023/07/08/pCgdeJJ.jpg" alt="DMux4Way"></p>
+<h3 id="DMux4Way-hdl"><a href="#DMux4Way-hdl" class="headerlink" title="DMux4Way.hdl"></a>DMux4Way.hdl</h3><p>![DMux4Way](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-boolean-functions-and-gate-logic/5.png)</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 4-way demultiplexor:</span><br><span class="line"> * {a, b, c, d} = {in, 0, 0, 0} if sel == 00</span><br><span class="line"> *                {0, in, 0, 0} if sel == 01</span><br><span class="line"> *                {0, 0, in, 0} if sel == 10</span><br><span class="line"> *                {0, 0, 0, in} if sel == 11</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">CHIP DMux4Way {</span><br><span class="line">    IN in, sel[2];</span><br><span class="line">    OUT a, b, c, d;</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    DMux(in=in, sel=sel[1], a=ab, b=cd);</span><br><span class="line">    DMux(in=ab, sel=sel[0], a=a, b=b);</span><br><span class="line">    DMux(in=cd, sel=sel[0], a=c, b=d);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="DMux8Way-hdl"><a href="#DMux8Way-hdl" class="headerlink" title="DMux8Way.hdl"></a>DMux8Way.hdl</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 8-way demultiplexor:</span><br><span class="line"> * {a, b, c, d, e, f, g, h} = {in, 0, 0, 0, 0, 0, 0, 0} if sel == 000</span><br><span class="line"> *                            {0, in, 0, 0, 0, 0, 0, 0} if sel == 001</span><br><span class="line"> *                            etc.</span><br><span class="line"> *                            {0, 0, 0, 0, 0, 0, 0, in} if sel == 111</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">CHIP DMux8Way {</span><br><span class="line">    IN in, sel[3];</span><br><span class="line">    OUT a, b, c, d, e, f, g, h;</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    DMux(in=in, sel=sel[2], a=abcd, b=efgh);</span><br><span class="line">    DMux4Way(in=abcd, sel=sel[0..1], a=a, b=b, c=c, d=d);</span><br><span class="line">    DMux4Way(in=efgh, sel=sel[0..1], a=e, b=f, c=g, d=h);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
@@ -4878,7 +4878,7 @@
 <li>Practice: Von Neumann Architecture</li>
 </ul>
 <p>Memory stores <strong>Data</strong> and <strong>Program</strong>. CPU is composed of <strong>ALU</strong> and <strong>Registers</strong>.</p>
-<p><img data-src="https://s1.ax1x.com/2023/07/12/pCfU234.png" alt="Information Flows"></p>
+<p>![Information Flows](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/1.png)</p>
 <p>Registers store both Data and Addresses.</p>
 <h2 id="Unit-5-2"><a href="#Unit-5-2" class="headerlink" title="Unit 5.2"></a>Unit 5.2</h2><p>The Fetch-Execute Cycle</p>
 <h3 id="The-basic-CPU-loop"><a href="#The-basic-CPU-loop" class="headerlink" title="The basic CPU loop"></a>The basic CPU loop</h3><ul>
@@ -4891,9 +4891,9 @@
 </ul>
 <p>Use program counter.</p>
 <h3 id="Executing"><a href="#Executing" class="headerlink" title="Executing"></a>Executing</h3><p>...</p>
-<h3 id="Fetch-Execute-Clash"><a href="#Fetch-Execute-Clash" class="headerlink" title="Fetch-Execute Clash"></a>Fetch-Execute Clash</h3><p><img data-src="https://s1.ax1x.com/2023/07/12/pCfUbCD.png" alt="Fetch-Execute Clash"></p>
+<h3 id="Fetch-Execute-Clash"><a href="#Fetch-Execute-Clash" class="headerlink" title="Fetch-Execute Clash"></a>Fetch-Execute Clash</h3><p>![Fetch-Execute Clash](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/2.png)</p>
 <p>How to solve that? Do one after the other (Use <code>Mux</code>).</p>
-<h3 id="Solution-Mux-and-Instruction-register"><a href="#Solution-Mux-and-Instruction-register" class="headerlink" title="Solution: Mux and Instruction register"></a>Solution: Mux and Instruction register</h3><p><img data-src="https://s1.ax1x.com/2023/07/12/pCfULgH.png" alt="Solution"></p>
+<h3 id="Solution-Mux-and-Instruction-register"><a href="#Solution-Mux-and-Instruction-register" class="headerlink" title="Solution: Mux and Instruction register"></a>Solution: Mux and Instruction register</h3><p>![Solution](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/3.png)</p>
 <h3 id="Simpler-solution-Harvard-Architecture"><a href="#Simpler-solution-Harvard-Architecture" class="headerlink" title="Simpler solution: Harvard Architecture"></a>Simpler solution: Harvard Architecture</h3><ul>
 <li>Variant of Von Neumann Architecture</li>
 <li>Keep Program and Data in two separate memory modules</li>
@@ -4904,10 +4904,10 @@
 <li>Execute the current instruction</li>
 <li>Figure out which instruction to execute next (instructions written in the Hack language)</li>
 </ul>
-<h3 id="The-overall-computer-architecture"><a href="#The-overall-computer-architecture" class="headerlink" title="The overall computer architecture"></a>The overall computer architecture</h3><p><img data-src="https://s1.ax1x.com/2023/07/12/pCfanaV.png" alt="The overall computer architecture"></p>
-<h3 id="Hack-CPU-Interface"><a href="#Hack-CPU-Interface" class="headerlink" title="Hack CPU Interface"></a>Hack CPU Interface</h3><p><img data-src="https://s1.ax1x.com/2023/07/12/pCfdvAP.png" alt="Inputs"></p>
-<p><img data-src="https://s1.ax1x.com/2023/07/12/pCfdzh8.png" alt="Outputs"></p>
-<h3 id="Hack-CPU-Implementation"><a href="#Hack-CPU-Implementation" class="headerlink" title="Hack CPU Implementation"></a>Hack CPU Implementation</h3><p><img data-src="https://s1.ax1x.com/2023/07/12/pCfdxtf.png" alt="Hack CPU Implementation"></p>
+<h3 id="The-overall-computer-architecture"><a href="#The-overall-computer-architecture" class="headerlink" title="The overall computer architecture"></a>The overall computer architecture</h3><p>![The overall computer architecture](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/4.png)</p>
+<h3 id="Hack-CPU-Interface"><a href="#Hack-CPU-Interface" class="headerlink" title="Hack CPU Interface"></a>Hack CPU Interface</h3><p>![Inputs](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/5.png)</p>
+<p>![Outputs](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/6.png)</p>
+<h3 id="Hack-CPU-Implementation"><a href="#Hack-CPU-Implementation" class="headerlink" title="Hack CPU Implementation"></a>Hack CPU Implementation</h3><p>![Hack CPU Implementation](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/7.png)</p>
 <h3 id="Instruction-handling"><a href="#Instruction-handling" class="headerlink" title="Instruction handling"></a>Instruction handling</h3><p>When handling A-instruction (op-code is 0), the <code>Mux16</code> takes the input from instruction, while handling C-instruction (op-code is 1), it should be from the output of ALU.</p>
 <p>CPU handling of an A-instruction:</p>
 <ul>
@@ -5001,14 +5001,14 @@
 </ul>
 <p>Hardware implementation: plug-and-play ROM chips</p>
 <p>Hardware simulation: programs are stored in text files; program loading is emulated by the built-in ROM chip</p>
-<h3 id="Hack-Computer-implementation"><a href="#Hack-Computer-implementation" class="headerlink" title="Hack Computer implementation"></a>Hack Computer implementation</h3><p><img data-src="https://s1.ax1x.com/2023/07/14/pC4Wt8H.png" alt="Hack Computer implementation"></p>
+<h3 id="Hack-Computer-implementation"><a href="#Hack-Computer-implementation" class="headerlink" title="Hack Computer implementation"></a>Hack Computer implementation</h3><p>![Hack Computer implementation](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/8.png)</p>
 <h2 id="Unit-5-5"><a href="#Unit-5-5" class="headerlink" title="Unit 5.5"></a>Unit 5.5</h2><p>...</p>
 <h2 id="Project-5"><a href="#Project-5" class="headerlink" title="Project 5"></a>Project 5</h2><h3 id="CPU-hdl"><a href="#CPU-hdl" class="headerlink" title="CPU.hdl"></a>CPU.hdl</h3><p><del>吐槽：一开始我想的是，连设计图都给我了，我还能做不出来吗？前人已经载好了树，我这乘凉还不容易吗？实际上手才发现，CPU 不愧是 CPU，即使是这样一个非常简化的版本，也是相当复杂的。这凉，还真不是那么好乘。:x</del></p>
 <p>记录一下制作这个 CPU 的思考过程：</p>
 <p>首先，按照设计图，把 <code>ALU</code>、<code>ARegister</code>、<code>DRegister</code>、<code>PC</code> 和两个 <code>Mux16</code> 摆出来；</p>
 <p>接着，接线，把一些能连起来的 PIN 口连起来，为了搞清楚输入输出，我在图上将变量名都标出了（例如 ALU output 标记为 aluo，A Register 的输出标记为 ao 等等）；</p>
 <p>最后，最复杂的一步，填入 control bits（包括 sel bits, load bits 等等）。</p>
-<p><img data-src="https://s1.ax1x.com/2023/07/15/pC5hesA.jpg" alt="设计图"><br><img data-src="https://s1.ax1x.com/2023/07/15/pC5hmqI.jpg" alt="指令表"></p>
+<p>![设计图](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/9.png)<br>![指令表](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/10.png)</p>
 <p>在构造这些 control bits 之前，我们需要明确：这个 CPU 将处理 A-instruction 和 C-instruction 两类指令，这意味着 control bits 与指令类型有关。并且，分析这两类指令可以发现：</p>
 <ul>
 <li>A-instruction 必然改变并且只改变 <code>ARegister</code> 的值；</li>
@@ -5072,7 +5072,7 @@
     <content><![CDATA[<p>This is a note for Nand2Tetris unit 4.</p>
 <span id="more"></span>
 
-<p><img data-src="https://s1.ax1x.com/2023/07/11/pCW6n7d.jpg" alt="The Hack Machine Language"></p>
+<p>![The Hack Machine Language](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-machine-language/1.png)</p>
 <h2 id="Project-4"><a href="#Project-4" class="headerlink" title="Project 4"></a>Project 4</h2><h3 id="Mult-asm"><a href="#Mult-asm" class="headerlink" title="Mult.asm"></a>Mult.asm</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">// Multiplies R0 and R1 and stores the result in R2.</span><br><span class="line">// (R0, R1, R2 refer to RAM[0], RAM[1], and RAM[2], respectively.)</span><br><span class="line">//</span><br><span class="line">// This program only needs to handle arguments that satisfy</span><br><span class="line">// R0 &gt;= 0, R1 &gt;= 0, and R0*R1 &lt; 32768.</span><br><span class="line"></span><br><span class="line">  // i = 0</span><br><span class="line">  @i</span><br><span class="line">  M=0</span><br><span class="line"></span><br><span class="line">  // RAM[2] = 0</span><br><span class="line">  @R2</span><br><span class="line">  M=0</span><br><span class="line"></span><br><span class="line">(LOOP)</span><br><span class="line">  // if (i &gt;= RAM[1]) goto END</span><br><span class="line">  @i</span><br><span class="line">  D=M</span><br><span class="line">  @R1</span><br><span class="line">  D=D-M</span><br><span class="line">  @END</span><br><span class="line">  D;JGE</span><br><span class="line">  // RAM[2] = RAM[2] + RAM[0]</span><br><span class="line">  @R2</span><br><span class="line">  D=M</span><br><span class="line">  @R0</span><br><span class="line">  D=D+M</span><br><span class="line">  @R2</span><br><span class="line">  M=D</span><br><span class="line">  // i = i + 1</span><br><span class="line">  @i</span><br><span class="line">  M=M+1</span><br><span class="line">  // goto LOOP</span><br><span class="line">  @LOOP</span><br><span class="line">  0;JMP</span><br><span class="line">(END)</span><br><span class="line">  @END</span><br><span class="line">  0;JMP</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="Fill-asm"><a href="#Fill-asm" class="headerlink" title="Fill.asm"></a>Fill.asm</h3><p>The size of the screen is 512 * 256, which is made of 8192 16-bit registers.</p>
@@ -5108,9 +5108,9 @@
 <li>Sequential: $out[t]=function(in[t-1])$</li>
 </ul>
 <h2 id="Unit-3-2"><a href="#Unit-3-2" class="headerlink" title="Unit 3.2"></a>Unit 3.2</h2><p>Flip Flops (触发器)</p>
-<p><img data-src="https://s1.ax1x.com/2023/07/09/pC23o4I.jpg" alt="Sequential Logic"></p>
+<p>![Sequential Logic](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-memory/1.png)</p>
 <p>The Clock Data Flip Flop (DFF):</p>
-<p><img data-src="https://s1.ax1x.com/2023/07/09/pC23qv8.jpg" alt="DFF"></p>
+<p>![DFF](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-memory/2.png)</p>
 <p>Implementation of the DFF:</p>
 <ul>
 <li>In this course, it's a primitive</li>
@@ -5125,11 +5125,11 @@
 </li>
 </ul>
 <p>Bit (1-bit Register):</p>
-<p><img data-src="https://s1.ax1x.com/2023/07/09/pC23H8P.jpg" alt="Bit"></p>
+<p>![Bit](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-memory/3.png)</p>
 <figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> load[t-<span class="number">1</span>]:</span><br><span class="line">    out[t] = <span class="keyword">in</span>[t-<span class="number">1</span>]</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    out[t] = out[t-<span class="number">1</span>]</span><br></pre></td></tr></tbody></table></figure>
 
 <p>Register:</p>
-<p><img data-src="https://s1.ax1x.com/2023/07/09/pC2GUw4.jpg" alt="Register"></p>
+<p>![Register](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-memory/4.png)</p>
 <ul>
 <li>w (word width): 16-bit, 32-bit, 64-bit ...</li>
 <li>Register's state: the value which is currently stored in the register</li>
@@ -5140,7 +5140,7 @@
 <ul>
 <li>k (width of address input): $k = log_{2}n$</li>
 </ul>
-<p><img data-src="https://s1.ax1x.com/2023/07/09/pC2GbnS.jpg" alt="RAM"></p>
+<p>![RAM](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-memory/5.png)</p>
 <h2 id="Unit-3-3"><a href="#Unit-3-3" class="headerlink" title="Unit 3.3"></a>Unit 3.3</h2><p>Memory:</p>
 <ul>
 <li>Main memory: RAM ...</li>
@@ -5153,7 +5153,7 @@
 <li>Next: $PC++$</li>
 <li>Goto: $PC=n$</li>
 </ul>
-<p><img data-src="https://s1.ax1x.com/2023/07/09/pC237Ct.jpg" alt="PC"></p>
+<p>![PC](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-memory/6.png)</p>
 <figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> reset[t] == <span class="number">1</span>:</span><br><span class="line">    out[t+<span class="number">1</span>] = <span class="number">0</span></span><br><span class="line"><span class="keyword">elif</span> load[t] == <span class="number">1</span>:</span><br><span class="line">    out[t+<span class="number">1</span>] = <span class="keyword">in</span>[t]</span><br><span class="line"><span class="keyword">elif</span> inc[t] ==<span class="number">1</span>:</span><br><span class="line">    out[t+<span class="number">1</span>] = out[t] + <span class="number">1</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    out[t+<span class="number">1</span>] = out[t]</span><br></pre></td></tr></tbody></table></figure>
 
 <h2 id="Project-3"><a href="#Project-3" class="headerlink" title="Project 3"></a>Project 3</h2><h3 id="Bit-hdl"><a href="#Bit-hdl" class="headerlink" title="Bit.hdl"></a>Bit.hdl</h3><p>Just follow the implementation given in the course, and build a <code>Bit</code> with a <code>Mux</code> and a <code>DFF</code>:</p>
@@ -5186,7 +5186,7 @@
 <figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>      (reset[t] == <span class="number">1</span>) out[t+<span class="number">1</span>] = <span class="number">0</span></span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (load[t] == <span class="number">1</span>)  out[t+<span class="number">1</span>] = in[t]</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (inc[t] == <span class="number">1</span>)   out[t+<span class="number">1</span>] = out[t] + <span class="number">1</span>  <span class="comment">// (integer addition)</span></span><br><span class="line"><span class="keyword">else</span>                    out[t+<span class="number">1</span>] = out[t]</span><br></pre></td></tr></tbody></table></figure>
 
 <p>into nested three-level if-else statements. Since <code>Mux</code> can only choose which state to keep, and cannot choose what state is needed before calculating that state, we have to analyze this nested if-else statement <strong>from the innermost level outwards</strong>. And, in terms of requirements, the top requirement will override the bottom requirement, i.e. the reset instruction will hide the load instruction, and the load instruction will hide the inc instruction. By working from the bottom up, we achieve exactly this override.</p>
-<p><img data-src="https://s1.ax1x.com/2023/07/09/pC2ew0x.jpg" alt="From the innermost level outwards"></p>
+<p>![From the innermost level outwards](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-memory/7.png)</p>
 <p>In order to use <code>Mux</code>, it is logical to find out what the new state of the current state (<code>original</code>) should be after <code>reset</code>, <code>load</code> and <code>inc</code>. The new state after <code>reset</code> is <code>false</code>, and the new state after <code>load</code> is <code>in</code>, without any computation. Only the state after <code>inc</code> needs to be obtained using <code>Inc16</code>, in this case which is <code>increased</code>.</p>
 <p>Next, the <code>original</code>. At first I thought this was <code>in</code>, but in fact, because of the sequential logic, all operations here should be done on the basis of the current state of the chip in the <code>PC</code>. So, here the current state is noted as <code>original</code> and this <code>original</code> is updated on the last line.</p>
 ]]></content>
@@ -5222,7 +5222,7 @@
 <li>Compiler</li>
 <li>Operating system</li>
 </ul>
-<p><img data-src="https://s1.ax1x.com/2023/07/19/pC7SA0I.png" alt="From high-level to low-level"></p>
+<p>![From high-level to low-level](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-virtual-machine-i-stack-arithmetic/1.png)</p>
 <p>Nand2Tetris Part II is <strong>more demanding</strong> than Nand2Tetris Part I.</p>
 <h2 id="Unit-7-1"><a href="#Unit-7-1" class="headerlink" title="Unit 7.1"></a>Unit 7.1</h2><p>Module 1: Virtual Machine</p>
 <ul>
@@ -5830,7 +5830,7 @@
   <entry>
     <title>C 语言中与 (&amp;&amp;) 和或 (||) 运算符的短路运算</title>
     <url>/posts/13d09bbb.html</url>
-    <content><![CDATA[<p>此篇笔记来源于下边的这个题目。<br><img data-src="https://s1.ax1x.com/2022/10/12/xaK5c9.png"></p>
+    <content><![CDATA[<p>此篇笔记来源于下边的这个题目。<br>![](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/languages/c">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/languages/c</a> &amp; cpp/c - 语言中与 - 和或 - 运算符的短路运算 / 1.png)</p>
 <span id="more"></span>
 
 <p>本来以为结果为 3，但是实际跑了一下发现结果是 1。请教了一下大佬知道了这叫做或运算符（||）的短路运算。</p>
@@ -6205,47 +6205,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Error: Summary String Parsing Error 错误解决方法</title>
-    <url>/posts/78dc947f.html</url>
-    <content><![CDATA[<p>直接先说解决方法：在使用 clang 工具链进行编译的时候，添加编译选项 <code>-fstandalone-debug</code>。</p>
-<span id="more"></span>
-
-<p>下边是完整的发现及解决问题的过程。</p>
-<h1 id="发现问题"><a href="#发现问题" class="headerlink" title="发现问题"></a>发现问题</h1><p>在按照 <a href="https://www.bilibili.com/video/BV1sW411v7VZ">《使用 VS Code + Clangd + CMake 搭建 C/C++ 开发环境》</a> 搭建我在 ArchWSL 内的 C/C++ 开发环境时，我创建了一个用于测试的 HelloWorld 工程。这个工程的文件结构长这样：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── build</span><br><span class="line">├── .clang-format</span><br><span class="line">├── CMakeLists.txt</span><br><span class="line">└── main.cpp</span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight cmake"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># @file CMakeLists.txt</span></span><br><span class="line"><span class="comment"># old</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.10</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">project</span>(HelloWorld)</span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(HelloWorld main.cpp)</span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// @file main.cpp</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line">    std::string str = <span class="string">"你好"</span>;</span><br><span class="line">    std::cout &lt;&lt; str &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>调试的时候发现，int 型变量 a 是可以查看的，但 std::string 型的变量 str 却显示 <code>error: summary string parsing error</code> 错误。</p>
-<h1 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h1><p>在测试中我发现，这个问题只在我使用 clang 工具链编译时产生，使用 g++ 就没有这个问题，所以猜测不是 lldb 调试器的问题，而是 clang 编译器的问题。</p>
-<p>在网上搜索到了类似的问题：</p>
-<ul>
-<li><a href="https://cloud.tencent.com/developer/ask/sof/1542916">无法在 lldb 中检查 std::string 变量 - 问答 - 腾讯云开发者社区</a></li>
-<li><a href="https://github.com/vadimcn/vscode-lldb/issues/415">Cannot inspect any strings · Issue #415 · vadimcn/vscode-lldb</a></li>
-</ul>
-<p>都说要使用 <code>-fstandalone-debug</code> 重新编译。</p>
-<p>于是修改 CMakeLists.txt 为：</p>
-<figure class="highlight cmake"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># @file CMakeLists.txt</span></span><br><span class="line"><span class="comment"># new</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.10</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">project</span>(HelloWorld)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果使用的是 clang 工具链，那么需要添加上 -fstandalone-debug，否则 lldb 无法查看 std::string 的东东</span></span><br><span class="line"><span class="comment"># 见 https://cloud.tencent.com/developer/ask/sof/1542916</span></span><br><span class="line"><span class="comment"># 又见 https://github.com/vadimcn/vscode-lldb/issues/415</span></span><br><span class="line"><span class="keyword">add_compile_options</span>(-fstandalone-debug)</span><br><span class="line"><span class="keyword">message</span>(STATUS <span class="string">"optional: -fstandalone-debug"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(HelloWorld main.cpp)</span><br></pre></td></tr></tbody></table></figure>
-
-<p>至此成功解决。</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>Issue</tag>
-        <tag>Solved</tag>
-        <tag>Debug</tag>
-        <tag>LLDB</tag>
-        <tag>LLVM</tag>
-        <tag>Clang</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Move Semantics in C++</title>
     <url>/posts/d5786049.html</url>
     <content><![CDATA[<p>This is a note for Lecture 13, <a href="https://web.stanford.edu/class/cs106l/index.html">CS106L</a>, Spring 2023.</p>
@@ -6404,9 +6363,9 @@
 <p>This class is amazing. It covers so many interesting and exciting features of modern C++ that I do not get a chance to learn in my school C++ class, including initialization lists, STL containers and algorithms, lambda expressions, templates, all the six SMFs, move semantics, r-value reference, cpp-style casting (static_cast/const_cast), smart pointers, RAII, etc. These make the code modern and robust! These are the real C++ things!</p>
 <p>I learnt this course from the website. This is actually not an open source course. I can't find the lecture videos and notes. What I am able to read are only the slides. Every week there are two lectures on Tuesday and Thursday. The slides are updated on the website the next day and I download them to my tab. They are not very clear so what I have learnt is really superficial. There are two assignments, I tried to finish the second locally, but the online submission system is only open to Stanford students, so... I don't really know what level I'm at. But, on the plus side, at least I am learning the direction I should go.</p>
 <p>If you also want to learn more about modern C++, give this course a try.</p>
-<p><img data-src="https://s1.ax1x.com/2023/06/01/p9zRyPP.png" alt="Website of the course"></p>
-<p><img data-src="https://s1.ax1x.com/2023/06/01/p9zRgxS.png" alt="Assignment 2"></p>
-<p><img data-src="https://s1.ax1x.com/2023/06/01/p9zRRKg.jpg" alt="Slides in my Samsung Note"></p>
+<p>![Website of the course](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/languages/c">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/languages/c</a> &amp; cpp/my-personal-summay-of-stanford-cs106l/1.png)</p>
+<p>![Assignment 2](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/languages/c">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/languages/c</a> &amp; cpp/my-personal-summay-of-stanford-cs106l/2.png)</p>
+<p>![Slides in my Samsung Note](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/languages/c">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/languages/c</a> &amp; cpp/my-personal-summay-of-stanford-cs106l/3.png)</p>
 ]]></content>
       <categories>
         <category>CS</category>
@@ -6649,11 +6608,11 @@
       </categories>
       <tags>
         <tag>C/C++</tag>
-        <tag>Issue</tag>
-        <tag>Solved</tag>
         <tag>Pointer</tag>
         <tag>pass by pointer</tag>
         <tag>pass by value</tag>
+        <tag>Issue</tag>
+        <tag>Solved</tag>
       </tags>
   </entry>
   <entry>
@@ -7206,7 +7165,7 @@
 <figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib <span class="keyword">as</span> mpl</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></tbody></table></figure>
 
 <p>A useful figure:</p>
-<p><img data-src="https://matplotlib.org/stable/_images/anatomy.png" alt="Parts of a Figure"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/languages/python/notes-for-matplotlib/1.png" alt="Parts of a Figure"></p>
 <p>Two coding styles:</p>
 <ul>
 <li>OO-style (Object-oriented style)</li>
@@ -7460,8 +7419,8 @@
 <span id="more"></span>
 
 <h2 id="Brief"><a href="#Brief" class="headerlink" title="Brief"></a>Brief</h2><p>You may have learnt Git and GitHub before, and also may have confused them because their similar names. What are these two things on earth?</p>
-<p><img data-src="https://software.3metas.com/wp-content/uploads/2017/06/git.png" alt="Git (This picture is from the Internet)"></p>
-<p><img data-src="https://kinsta.com/wp-content/uploads/2018/04/what-is-github-1-1.png" alt="GitHub (This picture is from the Internet)"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/vcs/simple-git-tutorial/1.png" alt="Git (This picture is from the Internet)"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/tools/vcs/simple-git-tutorial/2.png" alt="GitHub (This picture is from the Internet)"></p>
 <p>In short, <a href="https://git-scm.com/">Git</a> is a Version Control System (VCS), which enables you to create a repository of your codes, to track changes in your project and to manage your files efficiently. <a href="https://github.com/">GitHub</a> is a platform used to host remote Git repositories for collaboration and sharing projects.</p>
 <p>In this post, you will learn the basic usage of Git. If you are looking for info about working with GitHub, see _<a href="/posts/1cce885f.html">Simple GitHub Tutorial</a>.</p>
 <p>Want to go deeper? See <a href="#resources">Resources</a>.</p>
@@ -7706,6 +7665,47 @@
       <tags>
         <tag>Version Control</tag>
         <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Error: Summary String Parsing Error 错误解决方法</title>
+    <url>/posts/78dc947f.html</url>
+    <content><![CDATA[<p>直接先说解决方法：在使用 clang 工具链进行编译的时候，添加编译选项 <code>-fstandalone-debug</code>。</p>
+<span id="more"></span>
+
+<p>下边是完整的发现及解决问题的过程。</p>
+<h1 id="发现问题"><a href="#发现问题" class="headerlink" title="发现问题"></a>发现问题</h1><p>在按照 <a href="https://www.bilibili.com/video/BV1sW411v7VZ">《使用 VS Code + Clangd + CMake 搭建 C/C++ 开发环境》</a> 搭建我在 ArchWSL 内的 C/C++ 开发环境时，我创建了一个用于测试的 HelloWorld 工程。这个工程的文件结构长这样：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── build</span><br><span class="line">├── .clang-format</span><br><span class="line">├── CMakeLists.txt</span><br><span class="line">└── main.cpp</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight cmake"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># @file CMakeLists.txt</span></span><br><span class="line"><span class="comment"># old</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.10</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">project</span>(HelloWorld)</span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(HelloWorld main.cpp)</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// @file main.cpp</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line">    std::string str = <span class="string">"你好"</span>;</span><br><span class="line">    std::cout &lt;&lt; str &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>调试的时候发现，int 型变量 a 是可以查看的，但 std::string 型的变量 str 却显示 <code>error: summary string parsing error</code> 错误。</p>
+<h1 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h1><p>在测试中我发现，这个问题只在我使用 clang 工具链编译时产生，使用 g++ 就没有这个问题，所以猜测不是 lldb 调试器的问题，而是 clang 编译器的问题。</p>
+<p>在网上搜索到了类似的问题：</p>
+<ul>
+<li><a href="https://cloud.tencent.com/developer/ask/sof/1542916">无法在 lldb 中检查 std::string 变量 - 问答 - 腾讯云开发者社区</a></li>
+<li><a href="https://github.com/vadimcn/vscode-lldb/issues/415">Cannot inspect any strings · Issue #415 · vadimcn/vscode-lldb</a></li>
+</ul>
+<p>都说要使用 <code>-fstandalone-debug</code> 重新编译。</p>
+<p>于是修改 CMakeLists.txt 为：</p>
+<figure class="highlight cmake"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># @file CMakeLists.txt</span></span><br><span class="line"><span class="comment"># new</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.10</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">project</span>(HelloWorld)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果使用的是 clang 工具链，那么需要添加上 -fstandalone-debug，否则 lldb 无法查看 std::string 的东东</span></span><br><span class="line"><span class="comment"># 见 https://cloud.tencent.com/developer/ask/sof/1542916</span></span><br><span class="line"><span class="comment"># 又见 https://github.com/vadimcn/vscode-lldb/issues/415</span></span><br><span class="line"><span class="keyword">add_compile_options</span>(-fstandalone-debug)</span><br><span class="line"><span class="keyword">message</span>(STATUS <span class="string">"optional: -fstandalone-debug"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(HelloWorld main.cpp)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>至此成功解决。</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>Issue</tag>
+        <tag>Solved</tag>
+        <tag>Debug</tag>
+        <tag>LLDB</tag>
+        <tag>LLVM</tag>
+        <tag>Clang</tag>
       </tags>
   </entry>
 </search>

@@ -29,16 +29,6 @@
 <meta property="og:site_name" content="Fish Pond">
 <meta property="og:description" content="This is a note for Nand2Tetris Unit 5.">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://s1.ax1x.com/2023/07/12/pCfU234.png">
-<meta property="og:image" content="https://s1.ax1x.com/2023/07/12/pCfUbCD.png">
-<meta property="og:image" content="https://s1.ax1x.com/2023/07/12/pCfULgH.png">
-<meta property="og:image" content="https://s1.ax1x.com/2023/07/12/pCfanaV.png">
-<meta property="og:image" content="https://s1.ax1x.com/2023/07/12/pCfdvAP.png">
-<meta property="og:image" content="https://s1.ax1x.com/2023/07/12/pCfdzh8.png">
-<meta property="og:image" content="https://s1.ax1x.com/2023/07/12/pCfdxtf.png">
-<meta property="og:image" content="https://s1.ax1x.com/2023/07/14/pC4Wt8H.png">
-<meta property="og:image" content="https://s1.ax1x.com/2023/07/15/pC5hesA.jpg">
-<meta property="og:image" content="https://s1.ax1x.com/2023/07/15/pC5hmqI.jpg">
 <meta property="article:published_time" content="2023-07-12T03:57:51.000Z">
 <meta property="article:modified_time" content="2023-07-12T03:57:51.000Z">
 <meta property="article:author" content="BlockLune">
@@ -51,7 +41,6 @@
 <meta property="article:tag" content="CPU">
 <meta property="article:tag" content="Computer design">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s1.ax1x.com/2023/07/12/pCfU234.png">
 
 
 <link rel="canonical" href="https://fishg.top/posts/9a8ff4a5.html">
@@ -318,7 +307,7 @@
 <li>Practice: Von Neumann Architecture</li>
 </ul>
 <p>Memory stores <strong>Data</strong> and <strong>Program</strong>. CPU is composed of <strong>ALU</strong> and <strong>Registers</strong>.</p>
-<p><img data-src="https://s1.ax1x.com/2023/07/12/pCfU234.png" alt="Information Flows"></p>
+<p>![Information Flows](<a target="_blank" rel="noopener" href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/1.png)</p>
 <p>Registers store both Data and Addresses.</p>
 <h2 id="Unit-5-2"><a href="#Unit-5-2" class="headerlink" title="Unit 5.2"></a>Unit 5.2</h2><p>The Fetch-Execute Cycle</p>
 <h3 id="The-basic-CPU-loop"><a href="#The-basic-CPU-loop" class="headerlink" title="The basic CPU loop"></a>The basic CPU loop</h3><ul>
@@ -331,9 +320,9 @@
 </ul>
 <p>Use program counter.</p>
 <h3 id="Executing"><a href="#Executing" class="headerlink" title="Executing"></a>Executing</h3><p>...</p>
-<h3 id="Fetch-Execute-Clash"><a href="#Fetch-Execute-Clash" class="headerlink" title="Fetch-Execute Clash"></a>Fetch-Execute Clash</h3><p><img data-src="https://s1.ax1x.com/2023/07/12/pCfUbCD.png" alt="Fetch-Execute Clash"></p>
+<h3 id="Fetch-Execute-Clash"><a href="#Fetch-Execute-Clash" class="headerlink" title="Fetch-Execute Clash"></a>Fetch-Execute Clash</h3><p>![Fetch-Execute Clash](<a target="_blank" rel="noopener" href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/2.png)</p>
 <p>How to solve that? Do one after the other (Use <code>Mux</code>).</p>
-<h3 id="Solution-Mux-and-Instruction-register"><a href="#Solution-Mux-and-Instruction-register" class="headerlink" title="Solution: Mux and Instruction register"></a>Solution: Mux and Instruction register</h3><p><img data-src="https://s1.ax1x.com/2023/07/12/pCfULgH.png" alt="Solution"></p>
+<h3 id="Solution-Mux-and-Instruction-register"><a href="#Solution-Mux-and-Instruction-register" class="headerlink" title="Solution: Mux and Instruction register"></a>Solution: Mux and Instruction register</h3><p>![Solution](<a target="_blank" rel="noopener" href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/3.png)</p>
 <h3 id="Simpler-solution-Harvard-Architecture"><a href="#Simpler-solution-Harvard-Architecture" class="headerlink" title="Simpler solution: Harvard Architecture"></a>Simpler solution: Harvard Architecture</h3><ul>
 <li>Variant of Von Neumann Architecture</li>
 <li>Keep Program and Data in two separate memory modules</li>
@@ -344,10 +333,10 @@
 <li>Execute the current instruction</li>
 <li>Figure out which instruction to execute next (instructions written in the Hack language)</li>
 </ul>
-<h3 id="The-overall-computer-architecture"><a href="#The-overall-computer-architecture" class="headerlink" title="The overall computer architecture"></a>The overall computer architecture</h3><p><img data-src="https://s1.ax1x.com/2023/07/12/pCfanaV.png" alt="The overall computer architecture"></p>
-<h3 id="Hack-CPU-Interface"><a href="#Hack-CPU-Interface" class="headerlink" title="Hack CPU Interface"></a>Hack CPU Interface</h3><p><img data-src="https://s1.ax1x.com/2023/07/12/pCfdvAP.png" alt="Inputs"></p>
-<p><img data-src="https://s1.ax1x.com/2023/07/12/pCfdzh8.png" alt="Outputs"></p>
-<h3 id="Hack-CPU-Implementation"><a href="#Hack-CPU-Implementation" class="headerlink" title="Hack CPU Implementation"></a>Hack CPU Implementation</h3><p><img data-src="https://s1.ax1x.com/2023/07/12/pCfdxtf.png" alt="Hack CPU Implementation"></p>
+<h3 id="The-overall-computer-architecture"><a href="#The-overall-computer-architecture" class="headerlink" title="The overall computer architecture"></a>The overall computer architecture</h3><p>![The overall computer architecture](<a target="_blank" rel="noopener" href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/4.png)</p>
+<h3 id="Hack-CPU-Interface"><a href="#Hack-CPU-Interface" class="headerlink" title="Hack CPU Interface"></a>Hack CPU Interface</h3><p>![Inputs](<a target="_blank" rel="noopener" href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/5.png)</p>
+<p>![Outputs](<a target="_blank" rel="noopener" href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/6.png)</p>
+<h3 id="Hack-CPU-Implementation"><a href="#Hack-CPU-Implementation" class="headerlink" title="Hack CPU Implementation"></a>Hack CPU Implementation</h3><p>![Hack CPU Implementation](<a target="_blank" rel="noopener" href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/7.png)</p>
 <h3 id="Instruction-handling"><a href="#Instruction-handling" class="headerlink" title="Instruction handling"></a>Instruction handling</h3><p>When handling A-instruction (op-code is 0), the <code>Mux16</code> takes the input from instruction, while handling C-instruction (op-code is 1), it should be from the output of ALU.</p>
 <p>CPU handling of an A-instruction:</p>
 <ul>
@@ -441,14 +430,14 @@
 </ul>
 <p>Hardware implementation: plug-and-play ROM chips</p>
 <p>Hardware simulation: programs are stored in text files; program loading is emulated by the built-in ROM chip</p>
-<h3 id="Hack-Computer-implementation"><a href="#Hack-Computer-implementation" class="headerlink" title="Hack Computer implementation"></a>Hack Computer implementation</h3><p><img data-src="https://s1.ax1x.com/2023/07/14/pC4Wt8H.png" alt="Hack Computer implementation"></p>
+<h3 id="Hack-Computer-implementation"><a href="#Hack-Computer-implementation" class="headerlink" title="Hack Computer implementation"></a>Hack Computer implementation</h3><p>![Hack Computer implementation](<a target="_blank" rel="noopener" href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/8.png)</p>
 <h2 id="Unit-5-5"><a href="#Unit-5-5" class="headerlink" title="Unit 5.5"></a>Unit 5.5</h2><p>...</p>
 <h2 id="Project-5"><a href="#Project-5" class="headerlink" title="Project 5"></a>Project 5</h2><h3 id="CPU-hdl"><a href="#CPU-hdl" class="headerlink" title="CPU.hdl"></a>CPU.hdl</h3><p><del>吐槽：一开始我想的是，连设计图都给我了，我还能做不出来吗？前人已经载好了树，我这乘凉还不容易吗？实际上手才发现，CPU 不愧是 CPU，即使是这样一个非常简化的版本，也是相当复杂的。这凉，还真不是那么好乘。:x</del></p>
 <p>记录一下制作这个 CPU 的思考过程：</p>
 <p>首先，按照设计图，把 <code>ALU</code>、<code>ARegister</code>、<code>DRegister</code>、<code>PC</code> 和两个 <code>Mux16</code> 摆出来；</p>
 <p>接着，接线，把一些能连起来的 PIN 口连起来，为了搞清楚输入输出，我在图上将变量名都标出了（例如 ALU output 标记为 aluo，A Register 的输出标记为 ao 等等）；</p>
 <p>最后，最复杂的一步，填入 control bits（包括 sel bits, load bits 等等）。</p>
-<p><img data-src="https://s1.ax1x.com/2023/07/15/pC5hesA.jpg" alt="设计图"><br><img data-src="https://s1.ax1x.com/2023/07/15/pC5hmqI.jpg" alt="指令表"></p>
+<p>![设计图](<a target="_blank" rel="noopener" href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/9.png)<br>![指令表](<a target="_blank" rel="noopener" href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/10.png)</p>
 <p>在构造这些 control bits 之前，我们需要明确：这个 CPU 将处理 A-instruction 和 C-instruction 两类指令，这意味着 control bits 与指令类型有关。并且，分析这两类指令可以发现：</p>
 <ul>
 <li>A-instruction 必然改变并且只改变 <code>ARegister</code> 的值；</li>

@@ -1939,15 +1939,15 @@
       
       <category domain="https://fishg.top/tags/c-c/">C/C++</category>
       
-      <category domain="https://fishg.top/tags/issue/">Issue</category>
-      
-      <category domain="https://fishg.top/tags/solved/">Solved</category>
-      
       <category domain="https://fishg.top/tags/pointer/">Pointer</category>
       
       <category domain="https://fishg.top/tags/pass-by-pointer/">pass by pointer</category>
       
       <category domain="https://fishg.top/tags/pass-by-value/">pass by value</category>
+      
+      <category domain="https://fishg.top/tags/issue/">Issue</category>
+      
+      <category domain="https://fishg.top/tags/solved/">Solved</category>
       
       
       <comments>https://fishg.top/posts/50c16b14.html#disqus_thread</comments>
@@ -2062,7 +2062,7 @@
       <guid>https://fishg.top/posts/13d09bbb.html</guid>
       <pubDate>Tue, 11 Oct 2022 13:23:55 GMT</pubDate>
       
-      <description>&lt;p&gt;此篇笔记来源于下边的这个题目。&lt;br&gt;&lt;img data-src=&quot;https://s1.ax1x.com/2022/10/12/xaK5c9.png&quot;&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;此篇笔记来源于下边的这个题目。&lt;br&gt;![](&lt;a href=&quot;https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/languages/c&quot;&gt;https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/languages/c&lt;/a&gt; &amp;amp; cpp/c - 语言中与 - 和或 - 运算符的短路运算 / 1.png)&lt;/p&gt;</description>
       
       
       
