@@ -150,7 +150,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Before-Debugging"><span class="nav-number">1.</span> <span class="nav-text">Before Debugging</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips-of-Compiling"><span class="nav-number">1.1.</span> <span class="nav-text">Tips of Compiling</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips-of-Starting-GDB"><span class="nav-number">1.2.</span> <span class="nav-text">Tips of Starting GDB</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GDB-Commands"><span class="nav-number">2.</span> <span class="nav-text">GDB Commands</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Basic-Commands"><span class="nav-number">2.1.</span> <span class="nav-text">Basic Commands</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stopping-and-Rerunning-Commands"><span class="nav-number">2.2.</span> <span class="nav-text">Stopping and Rerunning Commands</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Inspecting-Variable-Values"><span class="nav-number">2.3.</span> <span class="nav-text">Inspecting Variable Values</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tracing"><span class="nav-number">2.4.</span> <span class="nav-text">Tracing</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Resources"><span class="nav-number">3.</span> <span class="nav-text">Resources</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Before-Debugging"><span class="nav-number">1.</span> <span class="nav-text">Before Debugging</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips-of-Compiling"><span class="nav-number">1.1.</span> <span class="nav-text">Tips of Compiling</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips-of-Starting-GDB"><span class="nav-number">1.2.</span> <span class="nav-text">Tips of Starting GDB</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GDB-Commands"><span class="nav-number">2.</span> <span class="nav-text">GDB Commands</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Basic-Commands"><span class="nav-number">2.1.</span> <span class="nav-text">Basic Commands</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stopping-and-Rerunning-Commands"><span class="nav-number">2.2.</span> <span class="nav-text">Stopping and Rerunning Commands</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Inspecting-Variable-Values"><span class="nav-number">2.3.</span> <span class="nav-text">Inspecting Variable Values</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tracing"><span class="nav-number">2.4.</span> <span class="nav-text">Tracing</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Resources"><span class="nav-number">3.</span> <span class="nav-text">Resources</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Modern-UI"><span class="nav-number">3.1.</span> <span class="nav-text">Modern UI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tutorial-and-Tips"><span class="nav-number">3.2.</span> <span class="nav-text">Tutorial and Tips</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -301,7 +301,7 @@
 
 <h3 id="Tips-of-Starting-GDB"><a href="#Tips-of-Starting-GDB" class="headerlink" title="Tips of Starting GDB"></a>Tips of Starting GDB</h3><ul>
 <li>The <code>--tui</code> flag tells <code>gdb</code> to start in the TUI (Text User Interface) mode.</li>
-<li>The <code>-q</code> flag tells <code>gdb</code> not to print version number on startup.</li>
+<li>The <code>-q</code> flag tells <code>gdb</code> not to print version info on startup.</li>
 <li>The <code>-x</code> option tells <code>gdb</code> to execute some commands (<code>.gdb</code> files only in the past, now even <code>.py</code> files are supported) on startup.</li>
 </ul>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gdb ./a.out --tui -x debug.py -q</span><br></pre></td></tr></tbody></table></figure>
@@ -334,6 +334,7 @@
 <li><code>break hello.c:10</code>: set a breakpoint to stop at line 10 of <code>hello.c</code></li>
 <li><code>break main</code>: set a breakpoint to stop at the beginning of the <code>main</code> function</li>
 <li><code>break</code>: stop at the current line</li>
+<li><code>break *0x400522</code>: stop at a specific address (<code>0x400522</code> here)</li>
 </ul>
 </li>
 <li><code>tbreak</code> or <code>tb</code>: set a temporary breakpoint</li>
@@ -401,7 +402,7 @@
 <hr>
 <ul>
 <li><code>x/nfu addr</code>: prints <code>n</code> memory values of length unit <code>u</code> starting from <code>addr</code> in <code>f</code> format, where<ul>
-<li><code>f</code>: <code>x</code> for hex output and <code>o</code> for oct output, etc.</li>
+<li><code>f</code>: <code>x</code> for hex output and <code>o</code> for oct output, etc. In particular, <code>i</code> is for instruction output and <code>s</code> asks gdb to print a string.</li>
 <li><code>u</code>: <code>b</code> for byte, <code>h</code> for half word (two bytes), <code>w</code> for word (four bytes), and <code>g</code> for giant word (eight bytes)</li>
 </ul>
 </li>
@@ -409,7 +410,11 @@
 <h3 id="Tracing"><a href="#Tracing" class="headerlink" title="Tracing"></a>Tracing</h3><ul>
 <li><code>backtrace</code> or <code>bt</code>: show the backtrace</li>
 </ul>
-<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ul>
+<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><h3 id="Modern-UI"><a href="#Modern-UI" class="headerlink" title="Modern UI"></a>Modern UI</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://pwndbg.re/">Pwndbg</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/cyrus-and/gdb-dashboard">cyrus-and/gdb-dashboard</a></li>
+</ul>
+<h3 id="Tutorial-and-Tips"><a href="#Tutorial-and-Tips" class="headerlink" title="Tutorial and Tips"></a>Tutorial and Tips</h3><ul>
 <li><em><a target="_blank" rel="noopener" href="https://beej.us/guide/bggdb/">Beej's Quick Guide to GDB</a></em></li>
 <li><em><a target="_blank" rel="noopener" href="https://www-users.cse.umn.edu/~kauffman/tutorials/gdb">CSCI 2021 Quick Guide to gdb: The GNU Debugger</a></em></li>
 <li><em><a target="_blank" rel="noopener" href="https://github.com/hellogcc/100-gdb-tips">hellogcc/100-gdb-tips</a></em></li>
