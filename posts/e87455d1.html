@@ -150,7 +150,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Before-Debugging"><span class="nav-number">1.</span> <span class="nav-text">Before Debugging</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips-of-Compiling"><span class="nav-number">1.1.</span> <span class="nav-text">Tips of Compiling</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips-of-Starting-GDB"><span class="nav-number">1.2.</span> <span class="nav-text">Tips of Starting GDB</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GDB-Commands"><span class="nav-number">2.</span> <span class="nav-text">GDB Commands</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Basic-Commands"><span class="nav-number">2.1.</span> <span class="nav-text">Basic Commands</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stopping-and-Rerunning-Commands"><span class="nav-number">2.2.</span> <span class="nav-text">Stopping and Rerunning Commands</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Inspecting-Variable-Values"><span class="nav-number">2.3.</span> <span class="nav-text">Inspecting Variable Values</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tracing"><span class="nav-number">2.4.</span> <span class="nav-text">Tracing</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Resources"><span class="nav-number">3.</span> <span class="nav-text">Resources</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Modern-UI"><span class="nav-number">3.1.</span> <span class="nav-text">Modern UI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tutorial-and-Tips"><span class="nav-number">3.2.</span> <span class="nav-text">Tutorial and Tips</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Before-Debugging"><span class="nav-number">1.</span> <span class="nav-text">Before Debugging</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips-of-Compiling"><span class="nav-number">1.1.</span> <span class="nav-text">Tips of Compiling</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips-of-Starting-GDB"><span class="nav-number">1.2.</span> <span class="nav-text">Tips of Starting GDB</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GDB-Commands"><span class="nav-number">2.</span> <span class="nav-text">GDB Commands</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Basic-Commands"><span class="nav-number">2.1.</span> <span class="nav-text">Basic Commands</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stopping-and-Rerunning-Commands"><span class="nav-number">2.2.</span> <span class="nav-text">Stopping and Rerunning Commands</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Inspecting-Variable-Values"><span class="nav-number">2.3.</span> <span class="nav-text">Inspecting Variable Values</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tracing"><span class="nav-number">2.4.</span> <span class="nav-text">Tracing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Assembly-and-Registers"><span class="nav-number">2.5.</span> <span class="nav-text">Assembly and Registers</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Resources"><span class="nav-number">3.</span> <span class="nav-text">Resources</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Modern-UI"><span class="nav-number">3.1.</span> <span class="nav-text">Modern UI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tutorial-and-Tips"><span class="nav-number">3.2.</span> <span class="nav-text">Tutorial and Tips</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -409,6 +409,26 @@
 </ul>
 <h3 id="Tracing"><a href="#Tracing" class="headerlink" title="Tracing"></a>Tracing</h3><ul>
 <li><code>backtrace</code> or <code>bt</code>: show the backtrace</li>
+</ul>
+<h3 id="Assembly-and-Registers"><a href="#Assembly-and-Registers" class="headerlink" title="Assembly and Registers"></a>Assembly and Registers</h3><ul>
+<li><p><code>layout src</code>: switch to standard layout (of TUI mode) -- source on top, and command window on the bottom</p>
+</li>
+<li><p><code>layout asm</code>: assembly on top, and command on the bottom</p>
+</li>
+<li><p><code>layout split</code>: source on top, assembly in the middle, and command at the bottom</p>
+</li>
+<li><p><code>layout reg</code>: open the register window on top of either source or assembly</p>
+</li>
+<li><p><code>tui reg general</code>: show the general registers</p>
+</li>
+<li><p><code>tui reg float</code>: show the floating point registers</p>
+</li>
+<li><p><code>tui reg system</code>: show the "system" registers</p>
+</li>
+<li><p><code>tui reg next</code>: show the next page of registers</p>
+</li>
+<li><p><code>set disassembly-flavor [intel / att]</code>: set the look-and-feel of the disassembly</p>
+</li>
 </ul>
 <h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><h3 id="Modern-UI"><a href="#Modern-UI" class="headerlink" title="Modern UI"></a>Modern UI</h3><ul>
 <li><a target="_blank" rel="noopener" href="https://pwndbg.re/">Pwndbg</a></li>
