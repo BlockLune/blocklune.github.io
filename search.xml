@@ -970,8 +970,8 @@
 <p>The biggest feature of this course is that it ties algorithms so closely to real-world problems. Almost all topics are introduced this way: Here we have a problem. To solve it, we can easily use ... But we can't do that because it's too expensive, so we can try to use ... to solve it. By using this algorithm, we can ensure that ... in the case of .... Also, we can use this algorithm to solve ... problems. I think this kind of combination between theory and practice is really valuable.</p>
 <p>The five projects are amazing. Instead of writing stupid experiment reports, uploading them to the QQ group and not knowing whether my codes are good or not, this online platform provides an incredible evaluation system that not only checks the correctness of your codes, but also the style! The style! Much better than some Chinese reference books! After each submission, the evaluation system gives you a detailed report on what's wrong with your codes, and you can then correct or polish your codes and submit them again. I submitted the last project thirteen times to pass it, with the help of GPT and even some reference codes! Orz</p>
 <p>I'd highly recommend any CS student to take this course on Coursera. It's free and in my opinion it's actually much easier than the listening section of the national college entrance examination or CET-4.</p>
-<p>![](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms</a> &amp; data structures/my-personal-summary-of-algorithms-part-i-on-coursera/1.png)</p>
-<p>![](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms</a> &amp; data structures/my-personal-summary-of-algorithms-part-i-on-coursera/2.png)</p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms%20&amp;%20data%20structures/my-personal-summary-of-algorithms-part-i-on-coursera/1.png"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms%20&amp;%20data%20structures/my-personal-summary-of-algorithms-part-i-on-coursera/2.png"></p>
 ]]></content>
       <categories>
         <category>CS</category>
@@ -1103,7 +1103,7 @@
 <h2 id="Greedy-algorithm"><a href="#Greedy-algorithm" class="headerlink" title="Greedy algorithm"></a>Greedy algorithm</h2><p><strong>Def.</strong> A <strong>cut</strong> in a graph is a partition of its vertices into two (nonempty) sets.</p>
 <p><strong>Def.</strong> A <strong>crossing edge</strong> connects a vertex in one set with a vertex in the other.</p>
 <p><strong>Cut property.</strong> Given any cut, the crossing edge of min weight is in the MST.</p>
-<p>![Cut property](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms</a> &amp; data structures/notes-for-algorithms-part-ii-minimum-spanning-trees/1.png)</p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms%20&amp;%20data%20structures/notes-for-algorithms-part-ii-minimum-spanning-trees/1.png" alt="Cut property"></p>
 <p>Greedy MST algorithm:</p>
 <ul>
 <li>Start with all edges colored gray.</li>
@@ -1587,7 +1587,7 @@
 </ol>
 <h3 id="1-伪代码描述"><a href="#1-伪代码描述" class="headerlink" title="1. 伪代码描述"></a>1. 伪代码描述</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">var a,b,i:integer;</span><br><span class="line">input(a);</span><br><span class="line">input(b);</span><br><span class="line">Begin</span><br><span class="line">For i&lt;-a to 1 do</span><br><span class="line">Begin</span><br><span class="line">	If a%i==0 Then</span><br><span class="line">    	If b%i==0 Then</span><br><span class="line">    	Begin</span><br><span class="line">    		print(i);</span><br><span class="line">    		break;</span><br><span class="line">    	End;</span><br><span class="line">End;</span><br><span class="line">End;</span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="1-流程图"><a href="#1-流程图" class="headerlink" title="1. 流程图"></a>1. 流程图</h3><p>![Powered by draw.io](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms</a> &amp; data structures / 求解最大公约数的四种算法 / 1.png)</p>
+<h3 id="1-流程图"><a href="#1-流程图" class="headerlink" title="1. 流程图"></a>1. 流程图</h3><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms%20&amp;%20data%20structures/%E6%B1%82%E8%A7%A3%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0%E7%9A%84%E5%9B%9B%E7%A7%8D%E7%AE%97%E6%B3%95/1.png" alt="Powered by draw.io"></p>
 <h3 id="1-C-代码"><a href="#1-C-代码" class="headerlink" title="1. C++ 代码"></a>1. C++ 代码</h3><figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">uint64_t</span> a, b;</span><br><span class="line">    cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">    <span class="keyword">if</span> (a &gt; b)</span><br><span class="line">        <span class="built_in">swap</span>(a, b);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = a; i &gt;= <span class="number">1</span>; i--)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">if</span> (a % i == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">if</span> (b % i == <span class="number">0</span>)</span><br><span class="line">            {</span><br><span class="line">                cout &lt;&lt; i &lt;&lt; endl;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <h2 id="法二：辗转相除法（欧几里得算法）"><a href="#法二：辗转相除法（欧几里得算法）" class="headerlink" title="法二：辗转相除法（欧几里得算法）"></a>法二：辗转相除法（欧几里得算法）</h2><p>这大概是最常见的计算最大公约数的算法了吧...</p>
@@ -1599,7 +1599,7 @@
 </ol>
 <h3 id="2-伪代码描述"><a href="#2-伪代码描述" class="headerlink" title="2. 伪代码描述"></a>2. 伪代码描述</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">var a,b:integer;</span><br><span class="line">def gcd(a,b):</span><br><span class="line">Begin</span><br><span class="line">	If b==0 Then</span><br><span class="line">    	return a;</span><br><span class="line">    Else return(gcd(b, a%b));</span><br><span class="line">End;</span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="2-流程图"><a href="#2-流程图" class="headerlink" title="2. 流程图"></a>2. 流程图</h3><p>![Powered by draw.io](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms</a> &amp; data structures / 求解最大公约数的四种算法 / 2.png)</p>
+<h3 id="2-流程图"><a href="#2-流程图" class="headerlink" title="2. 流程图"></a>2. 流程图</h3><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms%20&amp;%20data%20structures/%E6%B1%82%E8%A7%A3%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0%E7%9A%84%E5%9B%9B%E7%A7%8D%E7%AE%97%E6%B3%95/2.png" alt="Powered by draw.io"></p>
 <h3 id="2-C-代码"><a href="#2-C-代码" class="headerlink" title="2. C++ 代码"></a>2. C++ 代码</h3><p>主函数及 gcd 函数的函数声明：</p>
 <figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">uint64_t</span> <span class="title">gcd</span><span class="params">(<span class="type">uint64_t</span>, <span class="type">uint64_t</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">uint64_t</span> a, b;</span><br><span class="line">    cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">    cout &lt;&lt; <span class="built_in">gcd</span>(a, b) &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
@@ -1649,7 +1649,7 @@
 <li>如果一奇一偶，那就把那个偶数不断除以 2 直至它也为一个奇数；</li>
 <li>对两个奇数进行辗转相减（或者辗转相除？上边那篇文章里这么说，但是除的话不是无法避免取模运算效率低下的问题了嘛 emm），直至求出它们的最大公约数；</li>
 </ol>
-<h4 id="4-1-流程图"><a href="#4-1-流程图" class="headerlink" title="4.1. 流程图"></a>4.1. 流程图</h4><p>![Powered by draw.io](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms</a> &amp; data structures / 求解最大公约数的四种算法 / 3.png)</p>
+<h4 id="4-1-流程图"><a href="#4-1-流程图" class="headerlink" title="4.1. 流程图"></a>4.1. 流程图</h4><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms%20&amp;%20data%20structures/%E6%B1%82%E8%A7%A3%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0%E7%9A%84%E5%9B%9B%E7%A7%8D%E7%AE%97%E6%B3%95/3.png" alt="Powered by draw.io"></p>
 <h4 id="4-1-C-代码"><a href="#4-1-C-代码" class="headerlink" title="4.1. C++ 代码"></a>4.1. C++ 代码</h4><blockquote>
 <p>(1) 按位与 (&amp;):</p>
 <p>a&amp;x 为对数 a 的二进制形式的取位操作，即去 a 二进制形式的第 x 位。这里有一个重要应用就是 a&amp;1 可以用于判断数 a 的奇偶性，即 a 末位为 0 即为偶数，末位为 1 即为奇数。</p>
@@ -1677,7 +1677,7 @@
 <li>a 为奇数，b 为偶数: gcd (a,b) = gcd (a,b/2);</li>
 <li>a 为偶数，b 为奇数: gcd (a,b) = gcd (a/2,b);</li>
 </ol>
-<h4 id="4-2-流程图"><a href="#4-2-流程图" class="headerlink" title="4.2. 流程图"></a>4.2. 流程图</h4><p>![Powered by draw.io](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms</a> &amp; data structures / 求解最大公约数的四种算法 / 4.png)</p>
+<h4 id="4-2-流程图"><a href="#4-2-流程图" class="headerlink" title="4.2. 流程图"></a>4.2. 流程图</h4><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/algorithms%20&amp;%20data%20structures/%E6%B1%82%E8%A7%A3%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0%E7%9A%84%E5%9B%9B%E7%A7%8D%E7%AE%97%E6%B3%95/4.png" alt="Powered by draw.io"></p>
 <h4 id="4-2-C-代码"><a href="#4-2-C-代码" class="headerlink" title="4.2. C++ 代码"></a>4.2. C++ 代码</h4><p>最后代码和上边也没有太大差别。</p>
 <figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">uint64_t</span> <span class="title">gcd</span><span class="params">(<span class="type">uint64_t</span> a, <span class="type">uint64_t</span> b)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">if</span> (a == b)</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    <span class="keyword">if</span> (a &lt; b)</span><br><span class="line">        a ^= b, b ^= a, a ^= b;</span><br><span class="line">    <span class="keyword">if</span> (!(a &amp; <span class="number">1</span>) &amp;&amp; !(b &amp; <span class="number">1</span>))            <span class="comment">// 均为偶数</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">gcd</span>(a &gt;&gt; <span class="number">1</span>, b &gt;&gt; <span class="number">1</span>) &lt;&lt; <span class="number">1</span>; <span class="comment">// 别忘了要乘回来</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> ((a &amp; <span class="number">1</span>) &amp;&amp; (b &amp; <span class="number">1</span>))         <span class="comment">// 均为奇数</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">gcd</span>((a + b) &gt;&gt; <span class="number">1</span>, (a - b) &gt;&gt; <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> ((a &amp; <span class="number">1</span>) &amp;&amp; !(b &amp; <span class="number">1</span>)) <span class="comment">// a 奇 b 偶</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">gcd</span>(a, b &gt;&gt; <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (!(a &amp; <span class="number">1</span>) &amp;&amp; (b &amp; <span class="number">1</span>)) <span class="comment">// a 偶 b 奇</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">gcd</span>(a &gt;&gt; <span class="number">1</span>, b);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
@@ -2640,54 +2640,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Replace Cat With Bat</title>
-    <url>/posts/e7bc2e88.html</url>
-    <content><![CDATA[<p>When using Linux, I often use <code>cat</code> to browse some short codes. But it doesn't support syntax highlighting originally. So, I found one of its replacements: <code>bat</code>.</p>
-<span id="more"></span>
-
-<h2 id="Brief-Introduction"><a href="#Brief-Introduction" class="headerlink" title="Brief Introduction"></a>Brief Introduction</h2><p><a href="bat"><img data-src="/bat/raw/master/doc/logo-header.svg" alt="BAT Logo"></a></p>
-<p>On <a href="bat">BAT</a>'s official GitHub page, it defines itself "a cat clone with wings". In my opinion, one is "syntax highlighting", and the other is "git integration".</p>
-<p>Here are some of its important features:</p>
-<ul>
-<li>Syntax highlighting</li>
-<li>Git integration</li>
-<li>Show non-printable characters</li>
-<li>Automatic paging</li>
-</ul>
-<p><img data-src="/68747470733a2f2f696d6775722e636f6d2f724773646e44652e706e67" alt="BAT's syntax highlighting"></p>
-<p><img data-src="/68747470733a2f2f692e696d6775722e636f6d2f326c53573452452e706e67" alt="BAT's git integration"></p>
-<p><img data-src="/68747470733a2f2f692e696d6775722e636f6d2f576e64477039482e706e67" alt="BAT's non-printable characters showing"></p>
-<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>In ArchLinux, you can run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo pacman -S bat</span><br></pre></td></tr></tbody></table></figure>
-
-<p>In Termux, you can run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">pkg install bat</span><br></pre></td></tr></tbody></table></figure>
-
-<p>In Ubuntu, you can run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo apt install bat</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Learn more on <a href="bat">BAT</a>'s GitHub page.</p>
-<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Display a single file:</span></span><br><span class="line">bat &lt;filename&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Display multi files at once:</span></span><br><span class="line">bat &lt;filename1&gt; &lt;filename2&gt; ...</span><br><span class="line"></span><br><span class="line"><span class="comment"># Show and highlight non-printable characters:</span></span><br><span class="line">bat -A &lt;filename&gt; <span class="comment"># or</span></span><br><span class="line">bat --show-all &lt;filename&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Learn more on <a href="bat">BAT</a>'s GitHub page.</p>
-<h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><p>You can use BAT's configuration file to customize your BAT.</p>
-<p>To generate a default config file, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">bat --generate-config-file</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Here is an example:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line"># Set the theme</span><br><span class="line">--theme="Dracula"</span><br><span class="line"></span><br><span class="line"># Use C++ syntax for Arduino .ino files</span><br><span class="line">--map-syntax "*.ino:C++"</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>cat</tag>
-        <tag>bat</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>The Chmod Command in Linux</title>
     <url>/posts/a9dc5c1e.html</url>
     <content><![CDATA[<p>I accidentally ran a wrong <code>chmod</code> command in my Linux, and it messed up everything! I hate the permission management in Linux. :|</p>
@@ -2965,7 +2917,7 @@
 <tbody><tr>
 <td>cat</td>
 <td><a href="https://github.com/sharkdp/bat">bat</a></td>
-<td>Also see <a href="/posts/e7bc2e88.html">my Post</a></td>
+<td></td>
 </tr>
 <tr>
 <td>cd</td>
@@ -4778,7 +4730,7 @@
 <li>Plus one.</li>
 </ol>
 <h2 id="Unit-2-4"><a href="#Unit-2-4" class="headerlink" title="Unit 2.4"></a>Unit 2.4</h2><p>ALU: Arithmetic Logic Unit</p>
-<p>![alu](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-boolean-arithmetic-and-the-alu/1.png)</p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-boolean-arithmetic-and-the-alu/1.png" alt="alu"></p>
 <h2 id="Project-2"><a href="#Project-2" class="headerlink" title="Project 2"></a>Project 2</h2><h3 id="HalfAdder-hdl"><a href="#HalfAdder-hdl" class="headerlink" title="HalfAdder.hdl"></a>HalfAdder.hdl</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">CHIP HalfAdder {</span><br><span class="line">    IN a, b;    // 1-bit inputs</span><br><span class="line">    OUT sum,    // Right bit of a + b</span><br><span class="line">        carry;  // Left bit of a + b</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    Xor(a=a, b=b, out=sum);</span><br><span class="line">    And(a=a, b=b, out=carry);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="FullAdder-hdl"><a href="#FullAdder-hdl" class="headerlink" title="FullAdder.hdl"></a>FullAdder.hdl</h3><p>Use two <code>HalfAdder</code>s and a <code>OR</code> to combine a <code>FullAdder</code>, per <a href="https://www.zhihu.com/question/39925519/answer/1996568103">here</a>.</p>
@@ -4829,8 +4781,8 @@
 <li>Elementary (Nand, And, Or, Not, ...)</li>
 <li>Composite (复合的) (Mux, Adder, ...)</li>
 </ul>
-<h3 id="Gate-diagrams"><a href="#Gate-diagrams" class="headerlink" title="Gate diagrams"></a>Gate diagrams</h3><p>![Some gate diagrams](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-boolean-functions-and-gate-logic/1.png)</p>
-<h3 id="Gate-interfaces-and-implements"><a href="#Gate-interfaces-and-implements" class="headerlink" title="Gate interfaces and implements"></a>Gate interfaces and implements</h3><p>![Interface vs Implementation](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-boolean-functions-and-gate-logic/2.png)</p>
+<h3 id="Gate-diagrams"><a href="#Gate-diagrams" class="headerlink" title="Gate diagrams"></a>Gate diagrams</h3><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-boolean-functions-and-gate-logic/1.png" alt="Some gate diagrams"></p>
+<h3 id="Gate-interfaces-and-implements"><a href="#Gate-interfaces-and-implements" class="headerlink" title="Gate interfaces and implements"></a>Gate interfaces and implements</h3><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-boolean-functions-and-gate-logic/2.png" alt="Interface vs Implementation"></p>
 <h2 id="Unit-1-4"><a href="#Unit-1-4" class="headerlink" title="Unit 1.4"></a>Unit 1.4</h2><p>HDL: Hardware Description Language</p>
 <p>Common HDLs:</p>
 <ul>
@@ -4846,7 +4798,7 @@
 <p><code>a[0]</code>: right-most bit (the least significant bit, LSB)<br><code>a[15]</code>: left-most bit (the most significant bit, MSB)</p>
 <p>Attention! The index is <strong>FROM RIGHT TO LEFT</strong>!</p>
 <p><code>true</code>: each bit gets one<br><code>false</code>: each bit gets zero</p>
-<h2 id="Unit-1-7"><a href="#Unit-1-7" class="headerlink" title="Unit 1.7"></a>Unit 1.7</h2><p>![Mux and DMux](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-boolean-functions-and-gate-logic/3.png)</p>
+<h2 id="Unit-1-7"><a href="#Unit-1-7" class="headerlink" title="Unit 1.7"></a>Unit 1.7</h2><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-boolean-functions-and-gate-logic/3.png" alt="Mux and DMux"></p>
 <h3 id="Multiplexor-Mux-复用器"><a href="#Multiplexor-Mux-复用器" class="headerlink" title="Multiplexor (Mux, 复用器)"></a>Multiplexor (Mux, 复用器)</h3><figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> sel == <span class="number">0</span>:</span><br><span class="line">    out = a</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    out = b</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="Demultiplexor-DMux-解复用器"><a href="#Demultiplexor-DMux-解复用器" class="headerlink" title="Demultiplexor (DMux, 解复用器)"></a>Demultiplexor (DMux, 解复用器)</h3><figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> sel == <span class="number">0</span>:</span><br><span class="line">    a, b = <span class="keyword">in</span>, <span class="number">0</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    a, b = <span class="number">0</span>, <span class="keyword">in</span></span><br></pre></td></tr></tbody></table></figure>
@@ -4884,14 +4836,14 @@
 <h3 id="Mux16-hdl"><a href="#Mux16-hdl" class="headerlink" title="Mux16.hdl"></a>Mux16.hdl</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 16-bit multiplexor:</span><br><span class="line"> * for i = 0..15 out[i] = a[i] if sel == 0</span><br><span class="line"> *                        b[i] if sel == 1</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">CHIP Mux16 {</span><br><span class="line">    IN a[16], b[16], sel;</span><br><span class="line">    OUT out[16];</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    Mux(a=a[0], b=b[0], sel=sel, out=out[0]);</span><br><span class="line">    Mux(a=a[1], b=b[1], sel=sel, out=out[1]);</span><br><span class="line">    Mux(a=a[2], b=b[2], sel=sel, out=out[2]);</span><br><span class="line">    Mux(a=a[3], b=b[3], sel=sel, out=out[3]);</span><br><span class="line">    Mux(a=a[4], b=b[4], sel=sel, out=out[4]);</span><br><span class="line">    Mux(a=a[5], b=b[5], sel=sel, out=out[5]);</span><br><span class="line">    Mux(a=a[6], b=b[6], sel=sel, out=out[6]);</span><br><span class="line">    Mux(a=a[7], b=b[7], sel=sel, out=out[7]);</span><br><span class="line">    Mux(a=a[8], b=b[8], sel=sel, out=out[8]);</span><br><span class="line">    Mux(a=a[9], b=b[9], sel=sel, out=out[9]);</span><br><span class="line">    Mux(a=a[10], b=b[10], sel=sel, out=out[10]);</span><br><span class="line">    Mux(a=a[11], b=b[11], sel=sel, out=out[11]);</span><br><span class="line">    Mux(a=a[12], b=b[12], sel=sel, out=out[12]);</span><br><span class="line">    Mux(a=a[13], b=b[13], sel=sel, out=out[13]);</span><br><span class="line">    Mux(a=a[14], b=b[14], sel=sel, out=out[14]);</span><br><span class="line">    Mux(a=a[15], b=b[15], sel=sel, out=out[15]);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="Mux4Way16-hdl"><a href="#Mux4Way16-hdl" class="headerlink" title="Mux4Way16.hdl"></a>Mux4Way16.hdl</h3><p>The idea of the implementation is classify the four inputs into two groups, and use two layers of <code>Mux16</code>;</p>
-<p>![Mux4Way](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-boolean-functions-and-gate-logic/4.png)</p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-boolean-functions-and-gate-logic/4.png" alt="Mux4Way"></p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 4-way 16-bit multiplexor:</span><br><span class="line"> * out = a if sel == 00</span><br><span class="line"> *       b if sel == 01</span><br><span class="line"> *       c if sel == 10</span><br><span class="line"> *       d if sel == 11</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">CHIP Mux4Way16 {</span><br><span class="line">    IN a[16], b[16], c[16], d[16], sel[2];</span><br><span class="line">    OUT out[16];</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    Mux16(a=a, b=b, sel=sel[0], out=ab);</span><br><span class="line">    Mux16(a=c, b=d, sel=sel[0], out=cd);</span><br><span class="line">    Mux16(a=ab, b=cd, sel=sel[1], out=out);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="Mux8Way16-hdl"><a href="#Mux8Way16-hdl" class="headerlink" title="Mux8Way16.hdl"></a>Mux8Way16.hdl</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 8-way 16-bit multiplexor:</span><br><span class="line"> * out = a if sel == 000</span><br><span class="line"> *       b if sel == 001</span><br><span class="line"> *       etc.</span><br><span class="line"> *       h if sel == 111</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">CHIP Mux8Way16 {</span><br><span class="line">    IN a[16], b[16], c[16], d[16],</span><br><span class="line">       e[16], f[16], g[16], h[16],</span><br><span class="line">       sel[3];</span><br><span class="line">    OUT out[16];</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    Mux4Way16(a=a, b=b, c=c, d=d, sel=sel[0..1], out=abcd);</span><br><span class="line">    Mux4Way16(a=e, b=f, c=g, d=h, sel=sel[0..1], out=efgh);</span><br><span class="line">    Mux16(a=abcd, b=efgh, sel=sel[2], out=out);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="DMux-hdl"><a href="#DMux-hdl" class="headerlink" title="DMux.hdl"></a>DMux.hdl</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Demultiplexor:</span><br><span class="line"> * {a, b} = {in, 0} if sel == 0</span><br><span class="line"> *          {0, in} if sel == 1</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">CHIP DMux {</span><br><span class="line">    IN in, sel;</span><br><span class="line">    OUT a, b;</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    Not(in=sel, out=Notsel);</span><br><span class="line">    And(a=in, b=Notsel, out=a);</span><br><span class="line">    And(a=in, b=sel, out=b);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="DMux4Way-hdl"><a href="#DMux4Way-hdl" class="headerlink" title="DMux4Way.hdl"></a>DMux4Way.hdl</h3><p>![DMux4Way](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-boolean-functions-and-gate-logic/5.png)</p>
+<h3 id="DMux4Way-hdl"><a href="#DMux4Way-hdl" class="headerlink" title="DMux4Way.hdl"></a>DMux4Way.hdl</h3><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-boolean-functions-and-gate-logic/5.png" alt="DMux4Way"></p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 4-way demultiplexor:</span><br><span class="line"> * {a, b, c, d} = {in, 0, 0, 0} if sel == 00</span><br><span class="line"> *                {0, in, 0, 0} if sel == 01</span><br><span class="line"> *                {0, 0, in, 0} if sel == 10</span><br><span class="line"> *                {0, 0, 0, in} if sel == 11</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">CHIP DMux4Way {</span><br><span class="line">    IN in, sel[2];</span><br><span class="line">    OUT a, b, c, d;</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    DMux(in=in, sel=sel[1], a=ab, b=cd);</span><br><span class="line">    DMux(in=ab, sel=sel[0], a=a, b=b);</span><br><span class="line">    DMux(in=cd, sel=sel[0], a=c, b=d);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="DMux8Way-hdl"><a href="#DMux8Way-hdl" class="headerlink" title="DMux8Way.hdl"></a>DMux8Way.hdl</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 8-way demultiplexor:</span><br><span class="line"> * {a, b, c, d, e, f, g, h} = {in, 0, 0, 0, 0, 0, 0, 0} if sel == 000</span><br><span class="line"> *                            {0, in, 0, 0, 0, 0, 0, 0} if sel == 001</span><br><span class="line"> *                            etc.</span><br><span class="line"> *                            {0, 0, 0, 0, 0, 0, 0, in} if sel == 111</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">CHIP DMux8Way {</span><br><span class="line">    IN in, sel[3];</span><br><span class="line">    OUT a, b, c, d, e, f, g, h;</span><br><span class="line"></span><br><span class="line">    PARTS:</span><br><span class="line">    DMux(in=in, sel=sel[2], a=abcd, b=efgh);</span><br><span class="line">    DMux4Way(in=abcd, sel=sel[0..1], a=a, b=b, c=c, d=d);</span><br><span class="line">    DMux4Way(in=efgh, sel=sel[0..1], a=e, b=f, c=g, d=h);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
@@ -4919,7 +4871,7 @@
 <li>Practice: Von Neumann Architecture</li>
 </ul>
 <p>Memory stores <strong>Data</strong> and <strong>Program</strong>. CPU is composed of <strong>ALU</strong> and <strong>Registers</strong>.</p>
-<p>![Information Flows](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/1.png)</p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-computer-architecture/1.png" alt="Information Flows"></p>
 <p>Registers store both Data and Addresses.</p>
 <h2 id="Unit-5-2"><a href="#Unit-5-2" class="headerlink" title="Unit 5.2"></a>Unit 5.2</h2><p>The Fetch-Execute Cycle</p>
 <h3 id="The-basic-CPU-loop"><a href="#The-basic-CPU-loop" class="headerlink" title="The basic CPU loop"></a>The basic CPU loop</h3><ul>
@@ -4932,9 +4884,9 @@
 </ul>
 <p>Use program counter.</p>
 <h3 id="Executing"><a href="#Executing" class="headerlink" title="Executing"></a>Executing</h3><p>...</p>
-<h3 id="Fetch-Execute-Clash"><a href="#Fetch-Execute-Clash" class="headerlink" title="Fetch-Execute Clash"></a>Fetch-Execute Clash</h3><p>![Fetch-Execute Clash](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/2.png)</p>
+<h3 id="Fetch-Execute-Clash"><a href="#Fetch-Execute-Clash" class="headerlink" title="Fetch-Execute Clash"></a>Fetch-Execute Clash</h3><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-computer-architecture/2.png" alt="Fetch-Execute Clash"></p>
 <p>How to solve that? Do one after the other (Use <code>Mux</code>).</p>
-<h3 id="Solution-Mux-and-Instruction-register"><a href="#Solution-Mux-and-Instruction-register" class="headerlink" title="Solution: Mux and Instruction register"></a>Solution: Mux and Instruction register</h3><p>![Solution](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/3.png)</p>
+<h3 id="Solution-Mux-and-Instruction-register"><a href="#Solution-Mux-and-Instruction-register" class="headerlink" title="Solution: Mux and Instruction register"></a>Solution: Mux and Instruction register</h3><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-computer-architecture/3.png" alt="Solution"></p>
 <h3 id="Simpler-solution-Harvard-Architecture"><a href="#Simpler-solution-Harvard-Architecture" class="headerlink" title="Simpler solution: Harvard Architecture"></a>Simpler solution: Harvard Architecture</h3><ul>
 <li>Variant of Von Neumann Architecture</li>
 <li>Keep Program and Data in two separate memory modules</li>
@@ -4945,10 +4897,10 @@
 <li>Execute the current instruction</li>
 <li>Figure out which instruction to execute next (instructions written in the Hack language)</li>
 </ul>
-<h3 id="The-overall-computer-architecture"><a href="#The-overall-computer-architecture" class="headerlink" title="The overall computer architecture"></a>The overall computer architecture</h3><p>![The overall computer architecture](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/4.png)</p>
-<h3 id="Hack-CPU-Interface"><a href="#Hack-CPU-Interface" class="headerlink" title="Hack CPU Interface"></a>Hack CPU Interface</h3><p>![Inputs](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/5.png)</p>
-<p>![Outputs](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/6.png)</p>
-<h3 id="Hack-CPU-Implementation"><a href="#Hack-CPU-Implementation" class="headerlink" title="Hack CPU Implementation"></a>Hack CPU Implementation</h3><p>![Hack CPU Implementation](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/7.png)</p>
+<h3 id="The-overall-computer-architecture"><a href="#The-overall-computer-architecture" class="headerlink" title="The overall computer architecture"></a>The overall computer architecture</h3><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-computer-architecture/4.png" alt="The overall computer architecture"></p>
+<h3 id="Hack-CPU-Interface"><a href="#Hack-CPU-Interface" class="headerlink" title="Hack CPU Interface"></a>Hack CPU Interface</h3><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-computer-architecture/5.png" alt="Inputs"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-computer-architecture/6.png" alt="Outputs"></p>
+<h3 id="Hack-CPU-Implementation"><a href="#Hack-CPU-Implementation" class="headerlink" title="Hack CPU Implementation"></a>Hack CPU Implementation</h3><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-computer-architecture/7.png" alt="Hack CPU Implementation"></p>
 <h3 id="Instruction-handling"><a href="#Instruction-handling" class="headerlink" title="Instruction handling"></a>Instruction handling</h3><p>When handling A-instruction (op-code is 0), the <code>Mux16</code> takes the input from instruction, while handling C-instruction (op-code is 1), it should be from the output of ALU.</p>
 <p>CPU handling of an A-instruction:</p>
 <ul>
@@ -5042,14 +4994,14 @@
 </ul>
 <p>Hardware implementation: plug-and-play ROM chips</p>
 <p>Hardware simulation: programs are stored in text files; program loading is emulated by the built-in ROM chip</p>
-<h3 id="Hack-Computer-implementation"><a href="#Hack-Computer-implementation" class="headerlink" title="Hack Computer implementation"></a>Hack Computer implementation</h3><p>![Hack Computer implementation](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/8.png)</p>
+<h3 id="Hack-Computer-implementation"><a href="#Hack-Computer-implementation" class="headerlink" title="Hack Computer implementation"></a>Hack Computer implementation</h3><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-computer-architecture/8.png" alt="Hack Computer implementation"></p>
 <h2 id="Unit-5-5"><a href="#Unit-5-5" class="headerlink" title="Unit 5.5"></a>Unit 5.5</h2><p>...</p>
 <h2 id="Project-5"><a href="#Project-5" class="headerlink" title="Project 5"></a>Project 5</h2><h3 id="CPU-hdl"><a href="#CPU-hdl" class="headerlink" title="CPU.hdl"></a>CPU.hdl</h3><p><del>吐槽：一开始我想的是，连设计图都给我了，我还能做不出来吗？前人已经载好了树，我这乘凉还不容易吗？实际上手才发现，CPU 不愧是 CPU，即使是这样一个非常简化的版本，也是相当复杂的。这凉，还真不是那么好乘。:x</del></p>
 <p>记录一下制作这个 CPU 的思考过程：</p>
 <p>首先，按照设计图，把 <code>ALU</code>、<code>ARegister</code>、<code>DRegister</code>、<code>PC</code> 和两个 <code>Mux16</code> 摆出来；</p>
 <p>接着，接线，把一些能连起来的 PIN 口连起来，为了搞清楚输入输出，我在图上将变量名都标出了（例如 ALU output 标记为 aluo，A Register 的输出标记为 ao 等等）；</p>
 <p>最后，最复杂的一步，填入 control bits（包括 sel bits, load bits 等等）。</p>
-<p>![设计图](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/9.png)<br>![指令表](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-computer-architecture/10.png)</p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-computer-architecture/9.png" alt="设计图"><br><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-computer-architecture/10.png" alt="指令表"></p>
 <p>在构造这些 control bits 之前，我们需要明确：这个 CPU 将处理 A-instruction 和 C-instruction 两类指令，这意味着 control bits 与指令类型有关。并且，分析这两类指令可以发现：</p>
 <ul>
 <li>A-instruction 必然改变并且只改变 <code>ARegister</code> 的值；</li>
@@ -5113,7 +5065,7 @@
     <content><![CDATA[<p>This is a note for Nand2Tetris unit 4.</p>
 <span id="more"></span>
 
-<p>![The Hack Machine Language](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-machine-language/1.png)</p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-machine-language/1.png" alt="The Hack Machine Language"></p>
 <h2 id="Project-4"><a href="#Project-4" class="headerlink" title="Project 4"></a>Project 4</h2><h3 id="Mult-asm"><a href="#Mult-asm" class="headerlink" title="Mult.asm"></a>Mult.asm</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">// Multiplies R0 and R1 and stores the result in R2.</span><br><span class="line">// (R0, R1, R2 refer to RAM[0], RAM[1], and RAM[2], respectively.)</span><br><span class="line">//</span><br><span class="line">// This program only needs to handle arguments that satisfy</span><br><span class="line">// R0 &gt;= 0, R1 &gt;= 0, and R0*R1 &lt; 32768.</span><br><span class="line"></span><br><span class="line">  // i = 0</span><br><span class="line">  @i</span><br><span class="line">  M=0</span><br><span class="line"></span><br><span class="line">  // RAM[2] = 0</span><br><span class="line">  @R2</span><br><span class="line">  M=0</span><br><span class="line"></span><br><span class="line">(LOOP)</span><br><span class="line">  // if (i &gt;= RAM[1]) goto END</span><br><span class="line">  @i</span><br><span class="line">  D=M</span><br><span class="line">  @R1</span><br><span class="line">  D=D-M</span><br><span class="line">  @END</span><br><span class="line">  D;JGE</span><br><span class="line">  // RAM[2] = RAM[2] + RAM[0]</span><br><span class="line">  @R2</span><br><span class="line">  D=M</span><br><span class="line">  @R0</span><br><span class="line">  D=D+M</span><br><span class="line">  @R2</span><br><span class="line">  M=D</span><br><span class="line">  // i = i + 1</span><br><span class="line">  @i</span><br><span class="line">  M=M+1</span><br><span class="line">  // goto LOOP</span><br><span class="line">  @LOOP</span><br><span class="line">  0;JMP</span><br><span class="line">(END)</span><br><span class="line">  @END</span><br><span class="line">  0;JMP</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="Fill-asm"><a href="#Fill-asm" class="headerlink" title="Fill.asm"></a>Fill.asm</h3><p>The size of the screen is 512 * 256, which is made of 8192 16-bit registers.</p>
@@ -5149,9 +5101,9 @@
 <li>Sequential: $out[t]=function(in[t-1])$</li>
 </ul>
 <h2 id="Unit-3-2"><a href="#Unit-3-2" class="headerlink" title="Unit 3.2"></a>Unit 3.2</h2><p>Flip Flops (触发器)</p>
-<p>![Sequential Logic](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-memory/1.png)</p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/1.png" alt="Sequential Logic"></p>
 <p>The Clock Data Flip Flop (DFF):</p>
-<p>![DFF](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-memory/2.png)</p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/2.png" alt="DFF"></p>
 <p>Implementation of the DFF:</p>
 <ul>
 <li>In this course, it's a primitive</li>
@@ -5166,11 +5118,11 @@
 </li>
 </ul>
 <p>Bit (1-bit Register):</p>
-<p>![Bit](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-memory/3.png)</p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/3.png" alt="Bit"></p>
 <figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> load[t-<span class="number">1</span>]:</span><br><span class="line">    out[t] = <span class="keyword">in</span>[t-<span class="number">1</span>]</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    out[t] = out[t-<span class="number">1</span>]</span><br></pre></td></tr></tbody></table></figure>
 
 <p>Register:</p>
-<p>![Register](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-memory/4.png)</p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/4.png" alt="Register"></p>
 <ul>
 <li>w (word width): 16-bit, 32-bit, 64-bit ...</li>
 <li>Register's state: the value which is currently stored in the register</li>
@@ -5181,7 +5133,7 @@
 <ul>
 <li>k (width of address input): $k = log_{2}n$</li>
 </ul>
-<p>![RAM](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-memory/5.png)</p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/5.png" alt="RAM"></p>
 <h2 id="Unit-3-3"><a href="#Unit-3-3" class="headerlink" title="Unit 3.3"></a>Unit 3.3</h2><p>Memory:</p>
 <ul>
 <li>Main memory: RAM ...</li>
@@ -5194,7 +5146,7 @@
 <li>Next: $PC++$</li>
 <li>Goto: $PC=n$</li>
 </ul>
-<p>![PC](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-memory/6.png)</p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/6.png" alt="PC"></p>
 <figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> reset[t] == <span class="number">1</span>:</span><br><span class="line">    out[t+<span class="number">1</span>] = <span class="number">0</span></span><br><span class="line"><span class="keyword">elif</span> load[t] == <span class="number">1</span>:</span><br><span class="line">    out[t+<span class="number">1</span>] = <span class="keyword">in</span>[t]</span><br><span class="line"><span class="keyword">elif</span> inc[t] ==<span class="number">1</span>:</span><br><span class="line">    out[t+<span class="number">1</span>] = out[t] + <span class="number">1</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    out[t+<span class="number">1</span>] = out[t]</span><br></pre></td></tr></tbody></table></figure>
 
 <h2 id="Project-3"><a href="#Project-3" class="headerlink" title="Project 3"></a>Project 3</h2><h3 id="Bit-hdl"><a href="#Bit-hdl" class="headerlink" title="Bit.hdl"></a>Bit.hdl</h3><p>Just follow the implementation given in the course, and build a <code>Bit</code> with a <code>Mux</code> and a <code>DFF</code>:</p>
@@ -5227,7 +5179,7 @@
 <figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>      (reset[t] == <span class="number">1</span>) out[t+<span class="number">1</span>] = <span class="number">0</span></span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (load[t] == <span class="number">1</span>)  out[t+<span class="number">1</span>] = in[t]</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (inc[t] == <span class="number">1</span>)   out[t+<span class="number">1</span>] = out[t] + <span class="number">1</span>  <span class="comment">// (integer addition)</span></span><br><span class="line"><span class="keyword">else</span>                    out[t+<span class="number">1</span>] = out[t]</span><br></pre></td></tr></tbody></table></figure>
 
 <p>into nested three-level if-else statements. Since <code>Mux</code> can only choose which state to keep, and cannot choose what state is needed before calculating that state, we have to analyze this nested if-else statement <strong>from the innermost level outwards</strong>. And, in terms of requirements, the top requirement will override the bottom requirement, i.e. the reset instruction will hide the load instruction, and the load instruction will hide the inc instruction. By working from the bottom up, we achieve exactly this override.</p>
-<p>![From the innermost level outwards](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-memory/7.png)</p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/7.png" alt="From the innermost level outwards"></p>
 <p>In order to use <code>Mux</code>, it is logical to find out what the new state of the current state (<code>original</code>) should be after <code>reset</code>, <code>load</code> and <code>inc</code>. The new state after <code>reset</code> is <code>false</code>, and the new state after <code>load</code> is <code>in</code>, without any computation. Only the state after <code>inc</code> needs to be obtained using <code>Inc16</code>, in this case which is <code>increased</code>.</p>
 <p>Next, the <code>original</code>. At first I thought this was <code>in</code>, but in fact, because of the sequential logic, all operations here should be done on the basis of the current state of the chip in the <code>PC</code>. So, here the current state is noted as <code>original</code> and this <code>original</code> is updated on the last line.</p>
 ]]></content>
@@ -5263,7 +5215,7 @@
 <li>Compiler</li>
 <li>Operating system</li>
 </ul>
-<p>![From high-level to low-level](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing</a> system/nand2tetris/notes-for-nand2tetris-virtual-machine-i-stack-arithmetic/1.png)</p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-virtual-machine-i-stack-arithmetic/1.png" alt="From high-level to low-level"></p>
 <p>Nand2Tetris Part II is <strong>more demanding</strong> than Nand2Tetris Part I.</p>
 <h2 id="Unit-7-1"><a href="#Unit-7-1" class="headerlink" title="Unit 7.1"></a>Unit 7.1</h2><p>Module 1: Virtual Machine</p>
 <ul>
@@ -5871,7 +5823,7 @@
   <entry>
     <title>C 语言中与 (&amp;&amp;) 和或 (||) 运算符的短路运算</title>
     <url>/posts/13d09bbb.html</url>
-    <content><![CDATA[<p>此篇笔记来源于下边的这个题目。<br>![](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/languages/c">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/languages/c</a> &amp; cpp/c - 语言中与 - 和或 - 运算符的短路运算 / 1.png)</p>
+    <content><![CDATA[<p>此篇笔记来源于下边的这个题目。<br><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/languages/c%20&amp;%20cpp/c-%E8%AF%AD%E8%A8%80%E4%B8%AD%E4%B8%8E-%E5%92%8C%E6%88%96-%E8%BF%90%E7%AE%97%E7%AC%A6%E7%9A%84%E7%9F%AD%E8%B7%AF%E8%BF%90%E7%AE%97/1.png"></p>
 <span id="more"></span>
 
 <p>本来以为结果为 3，但是实际跑了一下发现结果是 1。请教了一下大佬知道了这叫做或运算符（||）的短路运算。</p>
@@ -6445,9 +6397,9 @@
 <p>This class is amazing. It covers so many interesting and exciting features of modern C++ that I do not get a chance to learn in my school C++ class, including initialization lists, STL containers and algorithms, lambda expressions, templates, all the six SMFs, move semantics, r-value reference, cpp-style casting (static_cast/const_cast), smart pointers, RAII, etc. These make the code modern and robust! These are the real C++ things!</p>
 <p>I learnt this course from the website. This is actually not an open source course. I can't find the lecture videos and notes. What I am able to read are only the slides. Every week there are two lectures on Tuesday and Thursday. The slides are updated on the website the next day and I download them to my tab. They are not very clear so what I have learnt is really superficial. There are two assignments, I tried to finish the second locally, but the online submission system is only open to Stanford students, so... I don't really know what level I'm at. But, on the plus side, at least I am learning the direction I should go.</p>
 <p>If you also want to learn more about modern C++, give this course a try.</p>
-<p>![Website of the course](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/languages/c">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/languages/c</a> &amp; cpp/my-personal-summay-of-stanford-cs106l/1.png)</p>
-<p>![Assignment 2](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/languages/c">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/languages/c</a> &amp; cpp/my-personal-summay-of-stanford-cs106l/2.png)</p>
-<p>![Slides in my Samsung Note](<a href="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/languages/c">https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/languages/c</a> &amp; cpp/my-personal-summay-of-stanford-cs106l/3.png)</p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/languages/c%20&amp;%20cpp/my-personal-summay-of-stanford-cs106l/1.png" alt="Website of the course"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/languages/c%20&amp;%20cpp/my-personal-summay-of-stanford-cs106l/2.png" alt="Assignment 2"></p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/languages/c%20&amp;%20cpp/my-personal-summay-of-stanford-cs106l/3.png" alt="Slides in my Samsung Note"></p>
 ]]></content>
       <categories>
         <category>CS</category>

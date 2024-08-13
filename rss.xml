@@ -1471,33 +1471,6 @@
     </item>
     
     <item>
-      <title>Replace Cat With Bat</title>
-      <link>https://fishg.top/posts/e7bc2e88.html</link>
-      <guid>https://fishg.top/posts/e7bc2e88.html</guid>
-      <pubDate>Sun, 12 Mar 2023 02:28:47 GMT</pubDate>
-      
-      <description>&lt;p&gt;When using Linux, I often use &lt;code&gt;cat&lt;/code&gt; to browse some short codes. But it doesn&#39;t support syntax highlighting originally. So, I found one of its replacements: &lt;code&gt;bat&lt;/code&gt;.&lt;/p&gt;</description>
-      
-      
-      
-      
-      <category domain="https://fishg.top/categories/cs/">CS</category>
-      
-      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
-      
-      
-      <category domain="https://fishg.top/tags/linux/">Linux</category>
-      
-      <category domain="https://fishg.top/tags/cat/">cat</category>
-      
-      <category domain="https://fishg.top/tags/bat/">bat</category>
-      
-      
-      <comments>https://fishg.top/posts/e7bc2e88.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
       <title>Simple Git Tutorial</title>
       <link>https://fishg.top/posts/9363e311.html</link>
       <guid>https://fishg.top/posts/9363e311.html</guid>
@@ -2062,7 +2035,7 @@
       <guid>https://fishg.top/posts/13d09bbb.html</guid>
       <pubDate>Tue, 11 Oct 2022 13:23:55 GMT</pubDate>
       
-      <description>&lt;p&gt;此篇笔记来源于下边的这个题目。&lt;br&gt;![](&lt;a href=&quot;https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/languages/c&quot;&gt;https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/languages/c&lt;/a&gt; &amp;amp; cpp/c - 语言中与 - 和或 - 运算符的短路运算 / 1.png)&lt;/p&gt;</description>
+      <description>&lt;p&gt;此篇笔记来源于下边的这个题目。&lt;br&gt;&lt;img data-src=&quot;https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/languages/c%20&amp;amp;%20cpp/c-%E8%AF%AD%E8%A8%80%E4%B8%AD%E4%B8%8E-%E5%92%8C%E6%88%96-%E8%BF%90%E7%AE%97%E7%AC%A6%E7%9A%84%E7%9F%AD%E8%B7%AF%E8%BF%90%E7%AE%97/1.png&quot;&gt;&lt;/p&gt;</description>
       
       
       
