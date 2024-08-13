@@ -29,13 +29,13 @@
 <meta property="og:site_name" content="Fish Pond">
 <meta property="og:description" content="This is a note for Nand2Tetris unit 3.">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/1.png">
-<meta property="og:image" content="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/2.png">
-<meta property="og:image" content="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/3.png">
-<meta property="og:image" content="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/4.png">
-<meta property="og:image" content="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/5.png">
-<meta property="og:image" content="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/6.png">
-<meta property="og:image" content="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/7.png">
+<meta property="og:image" content="https://b316f18.webp.li/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/1.png">
+<meta property="og:image" content="https://b316f18.webp.li/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/2.png">
+<meta property="og:image" content="https://b316f18.webp.li/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/3.png">
+<meta property="og:image" content="https://b316f18.webp.li/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/4.png">
+<meta property="og:image" content="https://b316f18.webp.li/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/5.png">
+<meta property="og:image" content="https://b316f18.webp.li/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/6.png">
+<meta property="og:image" content="https://b316f18.webp.li/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/7.png">
 <meta property="article:published_time" content="2023-07-09T11:44:36.000Z">
 <meta property="article:modified_time" content="2023-07-09T11:44:36.000Z">
 <meta property="article:author" content="BlockLune">
@@ -48,7 +48,7 @@
 <meta property="article:tag" content="Sequential Logic">
 <meta property="article:tag" content="DFF">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/1.png">
+<meta name="twitter:image" content="https://b316f18.webp.li/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/1.png">
 
 
 <link rel="canonical" href="https://fishg.top/posts/28d92424.html">
@@ -316,9 +316,9 @@
 <li>Sequential: $out[t]=function(in[t-1])$</li>
 </ul>
 <h2 id="Unit-3-2"><a href="#Unit-3-2" class="headerlink" title="Unit 3.2"></a>Unit 3.2</h2><p>Flip Flops (触发器)</p>
-<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/1.png" alt="Sequential Logic"></p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/1.png" alt="Sequential Logic"></p>
 <p>The Clock Data Flip Flop (DFF):</p>
-<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/2.png" alt="DFF"></p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/2.png" alt="DFF"></p>
 <p>Implementation of the DFF:</p>
 <ul>
 <li>In this course, it's a primitive</li>
@@ -333,11 +333,11 @@
 </li>
 </ul>
 <p>Bit (1-bit Register):</p>
-<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/3.png" alt="Bit"></p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/3.png" alt="Bit"></p>
 <figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> load[t-<span class="number">1</span>]:</span><br><span class="line">    out[t] = <span class="keyword">in</span>[t-<span class="number">1</span>]</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    out[t] = out[t-<span class="number">1</span>]</span><br></pre></td></tr></tbody></table></figure>
 
 <p>Register:</p>
-<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/4.png" alt="Register"></p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/4.png" alt="Register"></p>
 <ul>
 <li>w (word width): 16-bit, 32-bit, 64-bit ...</li>
 <li>Register's state: the value which is currently stored in the register</li>
@@ -348,7 +348,7 @@
 <ul>
 <li>k (width of address input): $k = log_{2}n$</li>
 </ul>
-<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/5.png" alt="RAM"></p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/5.png" alt="RAM"></p>
 <h2 id="Unit-3-3"><a href="#Unit-3-3" class="headerlink" title="Unit 3.3"></a>Unit 3.3</h2><p>Memory:</p>
 <ul>
 <li>Main memory: RAM ...</li>
@@ -361,7 +361,7 @@
 <li>Next: $PC++$</li>
 <li>Goto: $PC=n$</li>
 </ul>
-<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/6.png" alt="PC"></p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/6.png" alt="PC"></p>
 <figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> reset[t] == <span class="number">1</span>:</span><br><span class="line">    out[t+<span class="number">1</span>] = <span class="number">0</span></span><br><span class="line"><span class="keyword">elif</span> load[t] == <span class="number">1</span>:</span><br><span class="line">    out[t+<span class="number">1</span>] = <span class="keyword">in</span>[t]</span><br><span class="line"><span class="keyword">elif</span> inc[t] ==<span class="number">1</span>:</span><br><span class="line">    out[t+<span class="number">1</span>] = out[t] + <span class="number">1</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    out[t+<span class="number">1</span>] = out[t]</span><br></pre></td></tr></tbody></table></figure>
 
 <h2 id="Project-3"><a href="#Project-3" class="headerlink" title="Project 3"></a>Project 3</h2><h3 id="Bit-hdl"><a href="#Bit-hdl" class="headerlink" title="Bit.hdl"></a>Bit.hdl</h3><p>Just follow the implementation given in the course, and build a <code>Bit</code> with a <code>Mux</code> and a <code>DFF</code>:</p>
@@ -394,7 +394,7 @@
 <figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>      (reset[t] == <span class="number">1</span>) out[t+<span class="number">1</span>] = <span class="number">0</span></span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (load[t] == <span class="number">1</span>)  out[t+<span class="number">1</span>] = in[t]</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (inc[t] == <span class="number">1</span>)   out[t+<span class="number">1</span>] = out[t] + <span class="number">1</span>  <span class="comment">// (integer addition)</span></span><br><span class="line"><span class="keyword">else</span>                    out[t+<span class="number">1</span>] = out[t]</span><br></pre></td></tr></tbody></table></figure>
 
 <p>into nested three-level if-else statements. Since <code>Mux</code> can only choose which state to keep, and cannot choose what state is needed before calculating that state, we have to analyze this nested if-else statement <strong>from the innermost level outwards</strong>. And, in terms of requirements, the top requirement will override the bottom requirement, i.e. the reset instruction will hide the load instruction, and the load instruction will hide the inc instruction. By working from the bottom up, we achieve exactly this override.</p>
-<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/7.png" alt="From the innermost level outwards"></p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-memory/7.png" alt="From the innermost level outwards"></p>
 <p>In order to use <code>Mux</code>, it is logical to find out what the new state of the current state (<code>original</code>) should be after <code>reset</code>, <code>load</code> and <code>inc</code>. The new state after <code>reset</code> is <code>false</code>, and the new state after <code>load</code> is <code>in</code>, without any computation. Only the state after <code>inc</code> needs to be obtained using <code>Inc16</code>, in this case which is <code>increased</code>.</p>
 <p>Next, the <code>original</code>. At first I thought this was <code>in</code>, but in fact, because of the sequential logic, all operations here should be done on the basis of the current state of the chip in the <code>PC</code>. So, here the current state is noted as <code>original</code> and this <code>original</code> is updated on the last line.</p>
 

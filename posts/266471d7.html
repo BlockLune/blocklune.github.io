@@ -29,7 +29,7 @@
 <meta property="og:site_name" content="Fish Pond">
 <meta property="og:description" content="This is a note for the Machine Learning Specialization.">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/notes-for-machine-learning-specialization-vectorization/1.png">
+<meta property="og:image" content="https://b316f18.webp.li/blog-imgs/cs/ai/notes-for-machine-learning-specialization-vectorization/1.png">
 <meta property="article:published_time" content="2023-08-09T02:56:35.000Z">
 <meta property="article:modified_time" content="2023-08-09T02:56:35.000Z">
 <meta property="article:author" content="BlockLune">
@@ -38,7 +38,7 @@
 <meta property="article:tag" content="Vectorization">
 <meta property="article:tag" content="NumPy">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/notes-for-machine-learning-specialization-vectorization/1.png">
+<meta name="twitter:image" content="https://b316f18.webp.li/blog-imgs/cs/ai/notes-for-machine-learning-specialization-vectorization/1.png">
 
 
 <link rel="canonical" href="https://fishg.top/posts/266471d7.html">
@@ -326,7 +326,7 @@
 <li>Faster running (parallel hardware)</li>
 </ul>
 <h2 id="P24"><a href="#P24" class="headerlink" title="P24"></a>P24</h2><p><strong>Ex.</strong></p>
-<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/notes-for-machine-learning-specialization-vectorization/1.png" alt="Vectorization for Gradient descent"></p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/notes-for-machine-learning-specialization-vectorization/1.png" alt="Vectorization for Gradient descent"></p>
 <h2 id="P55"><a href="#P55" class="headerlink" title="P55"></a>P55</h2><p>For loops vs. vectorization</p>
 <figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># For loops</span></span><br><span class="line">x = np.array([<span class="number">200</span>, <span class="number">17</span>])</span><br><span class="line">W = np.array([[<span class="number">1</span>, -<span class="number">3</span>, <span class="number">5</span>],</span><br><span class="line">              [-<span class="number">2</span>, <span class="number">4</span>, -<span class="number">6</span>]])</span><br><span class="line">b = np.array([-<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">dense</span>(<span class="params">a_in, W, b</span>):</span><br><span class="line">    a_out = np.zeros(units)</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(units):</span><br><span class="line">        w = W[:,j]</span><br><span class="line">        z = np.dot(w, x) + b[j]</span><br><span class="line">        a_out[j] = g(z)</span><br><span class="line">    <span class="keyword">return</span> a_out</span><br></pre></td></tr></tbody></table></figure>
 

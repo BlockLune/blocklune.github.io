@@ -29,13 +29,13 @@
 <meta property="og:site_name" content="Fish Pond">
 <meta property="og:description" content="Here are my notes for course Machine Learning taught by Andrew Ng. About exercise: I didn&#39;t do the original version exercise which depends on Octave or Matlab, but a third-party Python version (See ns">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/notes-for-machine-learning/1.png">
-<meta property="og:image" content="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/notes-for-machine-learning/2.png">
-<meta property="og:image" content="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/notes-for-machine-learning/3.png">
-<meta property="og:image" content="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/notes-for-machine-learning/4.png">
-<meta property="og:image" content="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/notes-for-machine-learning/5.png">
-<meta property="og:image" content="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/notes-for-machine-learning/6.png">
-<meta property="og:image" content="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/notes-for-machine-learning/7.png">
+<meta property="og:image" content="https://b316f18.webp.li/blog-imgs/cs/ai/notes-for-machine-learning/1.png">
+<meta property="og:image" content="https://b316f18.webp.li/blog-imgs/cs/ai/notes-for-machine-learning/2.png">
+<meta property="og:image" content="https://b316f18.webp.li/blog-imgs/cs/ai/notes-for-machine-learning/3.png">
+<meta property="og:image" content="https://b316f18.webp.li/blog-imgs/cs/ai/notes-for-machine-learning/4.png">
+<meta property="og:image" content="https://b316f18.webp.li/blog-imgs/cs/ai/notes-for-machine-learning/5.png">
+<meta property="og:image" content="https://b316f18.webp.li/blog-imgs/cs/ai/notes-for-machine-learning/6.png">
+<meta property="og:image" content="https://b316f18.webp.li/blog-imgs/cs/ai/notes-for-machine-learning/7.png">
 <meta property="article:published_time" content="2023-07-14T03:59:14.000Z">
 <meta property="article:modified_time" content="2023-07-14T03:59:14.000Z">
 <meta property="article:author" content="BlockLune">
@@ -43,7 +43,7 @@
 <meta property="article:tag" content="Machine Learning">
 <meta property="article:tag" content="Andrew Ng">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/notes-for-machine-learning/1.png">
+<meta name="twitter:image" content="https://b316f18.webp.li/blog-imgs/cs/ai/notes-for-machine-learning/1.png">
 
 
 <link rel="canonical" href="https://fishg.top/posts/a6f57fef.html">
@@ -345,7 +345,7 @@
 <li>$(x^{(i)}, y^{(i)})$ = $i^{th}$ training example</li>
 </ul>
 <p>How does supervised learning work?</p>
-<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/notes-for-machine-learning/1.png" alt="How does supervised learning work"></p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/notes-for-machine-learning/1.png" alt="How does supervised learning work"></p>
 <p>$h$ is called hypothesis function (假设函数)。</p>
 <p>How do we represent $h$?</p>
 <p>$$<br>h_{\theta}(x) = \theta_{0}+\theta_{1}x<br>$$</p>
@@ -480,7 +480,7 @@
 <h3 id="ex1-gradientDescent-py"><a href="#ex1-gradientDescent-py" class="headerlink" title="ex1-gradientDescent.py"></a>ex1-gradientDescent.py</h3><p>This code is from <a target="_blank" rel="noopener" href="https://github.com/nsoojin/coursera-ml-py-sj/blob/master/machine-learning-ex1/gradientDescent.py">nsoojin</a>, which is so elegant! I spent a long time to understand the most important two lines.</p>
 <figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> computeCost <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gradient_descent_multi</span>(<span class="params">X, y, theta, alpha, num_iters</span>):</span><br><span class="line">    <span class="comment"># Initialize some useful values</span></span><br><span class="line">    m = y.size</span><br><span class="line">    J_history = np.zeros(num_iters)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, num_iters):</span><br><span class="line">        <span class="comment"># ===================== Your Code Here =====================</span></span><br><span class="line">        <span class="comment"># Instructions : Perform a single gradient step on the parameter vector theta</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        error = np.dot(X, theta).flatten() - y  <span class="comment"># 误差</span></span><br><span class="line">        theta -= alpha / m * np.<span class="built_in">sum</span>(X * error[:, np.newaxis], <span class="number">0</span>)</span><br><span class="line">        <span class="comment"># ===========================================================</span></span><br><span class="line">        <span class="comment"># Save the cost every iteration</span></span><br><span class="line">        J_history[i] = compute_cost(X, y, theta)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> theta, J_history</span><br></pre></td></tr></tbody></table></figure>
 
-<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/notes-for-machine-learning/2.png" alt="gradientDescent.py"></p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/notes-for-machine-learning/2.png" alt="gradientDescent.py"></p>
 <h3 id="ex1-featureNormalize-py"><a href="#ex1-featureNormalize-py" class="headerlink" title="ex1-featureNormalize.py"></a>ex1-featureNormalize.py</h3><p><code>numpy.std</code> compute the standard deviation (标准差) along the specified axis. (See <a target="_blank" rel="noopener" href="https://numpy.org/doc/stable/reference/generated/numpy.std.html">Doc</a>)</p>
 <p>The hint says that:</p>
 <blockquote>
@@ -595,7 +595,7 @@
 <p>On a new input $x$, to make a prediction, pick the class $i$ that maximizes $\underset{i}{max}h_\theta^{(i)}(x)$</p>
 <h2 id="Lesson-51"><a href="#Lesson-51" class="headerlink" title="Lesson 51"></a>Lesson 51</h2><p>...</p>
 <h2 id="Lesson-52"><a href="#Lesson-52" class="headerlink" title="Lesson 52"></a>Lesson 52</h2><p>The problem of overfitting (过拟合问题)</p>
-<h3 id="What-s-overfitting"><a href="#What-s-overfitting" class="headerlink" title="What's overfitting?"></a>What's overfitting?</h3><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/notes-for-machine-learning/3.png" alt="Overfitting"></p>
+<h3 id="What-s-overfitting"><a href="#What-s-overfitting" class="headerlink" title="What's overfitting?"></a>What's overfitting?</h3><p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/notes-for-machine-learning/3.png" alt="Overfitting"></p>
 <ul>
 <li>Underfit: 欠拟合</li>
 <li> High bias: 高偏差</li>
@@ -678,7 +678,7 @@
 <p>Was very widely used in 80s and early 90s; popularity diminished in late 90s.</p>
 <p>Recent resurgence (兴起): State-of-the-art technique for many applications</p>
 <h3 id="The-one-learning-algorithm-hypothesis"><a href="#The-one-learning-algorithm-hypothesis" class="headerlink" title="The &quot;one learning algorithm&quot; hypothesis"></a>The "one learning algorithm" hypothesis</h3><p>...</p>
-<h2 id="Lesson-60"><a href="#Lesson-60" class="headerlink" title="Lesson 60"></a>Lesson 60</h2><h3 id="Neural-Network"><a href="#Neural-Network" class="headerlink" title="Neural Network"></a>Neural Network</h3><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/notes-for-machine-learning/4.png" alt="Neural Network"></p>
+<h2 id="Lesson-60"><a href="#Lesson-60" class="headerlink" title="Lesson 60"></a>Lesson 60</h2><h3 id="Neural-Network"><a href="#Neural-Network" class="headerlink" title="Neural Network"></a>Neural Network</h3><p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/notes-for-machine-learning/4.png" alt="Neural Network"></p>
 <ul>
 <li>The input layer: the first layer</li>
 <li>The output layer: the last layer</li>
@@ -690,12 +690,12 @@
 <li>$a_i^{(j)}$ = "activation" of unit $i$ in layer $j$ (activation 的意思是由一个具体神经元计算并输出的值)</li>
 <li>$\Theta^{(j)}$ = matrix of weights controlling function mapping from layer $j$ to layer $j+1$ (权重矩阵)</li>
 </ul>
-<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/notes-for-machine-learning/5.png" alt="An example"></p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/notes-for-machine-learning/5.png" alt="An example"></p>
 <p>If network has $s_j$ units in layer $j$, $s_{j+1}$ units in layer $j+1$, then $\Theta^{j}$ will be of dimension $s_{j+1} \times (s_j + 1)$.</p>
-<h2 id="Lesson-61"><a href="#Lesson-61" class="headerlink" title="Lesson 61"></a>Lesson 61</h2><h3 id="Forward-propagation-前向传播-Vectorized-implementation"><a href="#Forward-propagation-前向传播-Vectorized-implementation" class="headerlink" title="Forward propagation (前向传播): Vectorized implementation"></a>Forward propagation (前向传播): Vectorized implementation</h3><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/notes-for-machine-learning/6.png" alt="Forward propagation: vectorized implementation"></p>
+<h2 id="Lesson-61"><a href="#Lesson-61" class="headerlink" title="Lesson 61"></a>Lesson 61</h2><h3 id="Forward-propagation-前向传播-Vectorized-implementation"><a href="#Forward-propagation-前向传播-Vectorized-implementation" class="headerlink" title="Forward propagation (前向传播): Vectorized implementation"></a>Forward propagation (前向传播): Vectorized implementation</h3><p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/notes-for-machine-learning/6.png" alt="Forward propagation: vectorized implementation"></p>
 <h2 id="Lesson-62-Exercise-3"><a href="#Lesson-62-Exercise-3" class="headerlink" title="Lesson 62 (Exercise 3)"></a>Lesson 62 (Exercise 3)</h2><p>(Not yet completed)</p>
 <h2 id="Lesson-63-64"><a href="#Lesson-63-64" class="headerlink" title="Lesson 63 - 64"></a>Lesson 63 - 64</h2><p>...</p>
-<h2 id="Lesson-65"><a href="#Lesson-65" class="headerlink" title="Lesson 65"></a>Lesson 65</h2><p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/blog-imgs/cs/ai/notes-for-machine-learning/7.png" alt="Example"></p>
+<h2 id="Lesson-65"><a href="#Lesson-65" class="headerlink" title="Lesson 65"></a>Lesson 65</h2><p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/notes-for-machine-learning/7.png" alt="Example"></p>
 <h2 id="Lesson-66"><a href="#Lesson-66" class="headerlink" title="Lesson 66"></a>Lesson 66</h2><p>...</p>
 <h2 id="Lesson-67"><a href="#Lesson-67" class="headerlink" title="Lesson 67"></a>Lesson 67</h2><p>Cost function in Neural network:</p>
 <p>$$<br>h_\Theta(x) \in \mathbb{R}^K<br>$$</p>
