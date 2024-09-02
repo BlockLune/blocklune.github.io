@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- hexo injector head_begin start --><!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "61641c63411e4533b0bc263d76e9c650"}'></script><!-- End Cloudflare Web Analytics --><script defer src="https://eu.umami.is/script.js" data-website-id="f576c93d-b2e8-4701-9cd1-797cb6a6b79a"></script><!-- hexo injector head_begin end -->
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="google7b9c7ea42a3102a3.html">
+  <meta name="baidu-site-verification" content="baidu_verify_code-53bseLro2G.html">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"fishg.top","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="As developers, we interact with all kinds of machines every day. A well-configured development environment can significantly boost productivity and make coding more enjoyable. This comprehensive guide">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Setting Up Your New Machine - a Simple Dev Environment Configuration Guide">
+<meta property="og:url" content="https://fishg.top/posts/183d7426.html">
+<meta property="og:site_name" content="Fish Pond">
+<meta property="og:description" content="As developers, we interact with all kinds of machines every day. A well-configured development environment can significantly boost productivity and make coding more enjoyable. This comprehensive guide">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/sip/2024/09/02/18mgdt-o7.webp">
+<meta property="og:image" content="https://www.nerdfonts.com/assets/img/sankey-glyphs-combined-diagram.png">
+<meta property="article:published_time" content="2024-09-02T07:53:08.000Z">
+<meta property="article:modified_time" content="2024-09-02T07:53:08.000Z">
+<meta property="article:author" content="BlockLune">
+<meta property="article:tag" content="Config">
+<meta property="article:tag" content="Environment">
+<meta property="article:tag" content="Tutorial">
+<meta property="article:tag" content="Guide">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/sip/2024/09/02/18mgdt-o7.webp">
+
+
+<link rel="canonical" href="https://fishg.top/posts/183d7426.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://fishg.top/posts/183d7426.html","path":"posts/183d7426.html","title":"Setting Up Your New Machine - a Simple Dev Environment Configuration Guide"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Setting Up Your New Machine - a Simple Dev Environment Configuration Guide | Fish Pond</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XQDPHGPHDL"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-XQDPHGPHDL","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+
+  <script async defer data-website-id="f576c93d-b2e8-4701-9cd1-797cb6a6b79a" src="https://analytics.umami.is/script.js"></script>
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/rss.xml" title="Fish Pond" type="application/rss+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Fish Pond</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Posts swim here.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Why-Development-Environment-Configuration-Matters"><span class="nav-number">1.</span> <span class="nav-text">Why Development Environment Configuration Matters</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Network-Configuration-The-First-Step"><span class="nav-number">2.</span> <span class="nav-text">Network Configuration: The First Step</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Client-Side-Configuration-Windows-macOS-and-Linux"><span class="nav-number">3.</span> <span class="nav-text">Client-Side Configuration: Windows, macOS, and Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Choosing-the-Right-Font"><span class="nav-number">3.1.</span> <span class="nav-text">Choosing the Right Font</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Terminal-Console-Terminal-Emulator-Beyond-the-Basics"><span class="nav-number">3.2.</span> <span class="nav-text">Terminal, Console &amp; Terminal Emulator: Beyond the Basics</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Shell-The-Bridge-Between-You-and-the-System-Kernel"><span class="nav-number">3.3.</span> <span class="nav-text">Shell: The Bridge Between You and the System Kernel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Package-Managers-The-App-Store-for-Developers"><span class="nav-number">3.4.</span> <span class="nav-text">Package Managers: The App Store for Developers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Version-Control-of-the-Environment"><span class="nav-number">3.5.</span> <span class="nav-text">Version Control of the Environment</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Server-Side"><span class="nav-number">4.</span> <span class="nav-text">Server Side</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="BlockLune"
+      src="/img/waifu.png">
+  <p class="site-author-name" itemprop="name">BlockLune</p>
+  <div class="site-description" itemprop="description">Here is BlockLune's blog.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">87</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">133</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/BlockLune" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;BlockLune" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:blocklune@gmail.com" title="E-Mail → mailto:blocklune@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          Links
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://elysiapro.cn/" title="https:&#x2F;&#x2F;elysiapro.cn&#x2F;" rel="noopener" target="_blank">ElysiaPro's Blog</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://f-studio.is-best.net/" title="http:&#x2F;&#x2F;f-studio.is-best.net&#x2F;" rel="noopener" target="_blank">F-Studio</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://luoyuxuanryan.github.io/" title="https:&#x2F;&#x2F;luoyuxuanryan.github.io&#x2F;" rel="noopener" target="_blank">Radish Garden</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://tommygong.top/" title="https:&#x2F;&#x2F;tommygong.top&#x2F;" rel="noopener" target="_blank">TommyGong's Blog</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://blog.yfi.moe/" title="https:&#x2F;&#x2F;blog.yfi.moe&#x2F;" rel="noopener" target="_blank">Yunfi's Blog</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://fishg.top/posts/183d7426.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/waifu.png">
+      <meta itemprop="name" content="BlockLune">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fish Pond">
+      <meta itemprop="description" content="Here is BlockLune's blog.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Setting Up Your New Machine - a Simple Dev Environment Configuration Guide | Fish Pond">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Setting Up Your New Machine - a Simple Dev Environment Configuration Guide
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2024-09-02 15:53:08" itemprop="dateCreated datePublished" datetime="2024-09-02T15:53:08+08:00">2024-09-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/" itemprop="url" rel="index"><span itemprop="name">CS</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/tools/" itemprop="url" rel="index"><span itemprop="name">Tools</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>As developers, we interact with all kinds of machines every day. A well-configured development environment can significantly boost productivity and make coding more enjoyable. This comprehensive guide will help you set up a comfortable and efficient workspace. It's mainly for beginners, but experienced developers may also find some useful tips.</p>
+<span id="more"></span>
+
+<h2 id="Why-Development-Environment-Configuration-Matters"><a href="#Why-Development-Environment-Configuration-Matters" class="headerlink" title="Why Development Environment Configuration Matters"></a>Why Development Environment Configuration Matters</h2><p>When I started coding, my terminal was a stark black and white window that failed to inspire creativity. Now, my terminal is colorful, feature-rich, and a joy to use. This transformation is just one example of how proper configuration can enhance your coding experience.</p>
+<p><img data-src="https://pub-af472240fc074a369c4d02574ef383b5.r2.dev/sip/2024/09/02/18mgdt-o7.webp" alt="My Terminal"></p>
+<p>Terminal configuration is just one part of the larger concept of development environment configuration. These configurations can be complex, but this guide tries to provide a road map for beginners. This guide will not be a step-by-step tutorial, meaning I will not show you how to download and install the individual applications. You can refer to the official websites to learn how to install and use these applications in detail.</p>
+<p>This post is inspired by:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://csdiy.wiki/CS%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/#_3">一个仅供参考的 CS 学习规划 (# 环境配置)</a></li>
+<li><a target="_blank" rel="noopener" href="https://taylover2016.github.io/%E6%96%B0%E6%9C%BA%E5%99%A8%E4%B8%8A%E6%89%8B%E6%8C%87%E5%8D%97%EF%BC%88%E6%96%B0%E6%89%8B%E5%90%91%EF%BC%89/index.html">新机器上手指南 (新手向)</a></li>
+</ul>
+<h2 id="Network-Configuration-The-First-Step"><a href="#Network-Configuration-The-First-Step" class="headerlink" title="Network Configuration: The First Step"></a>Network Configuration: The First Step</h2><p>Before diving into development environment setup, ensure your network is functioning correctly. You'll need a stable internet connection to download various tools and packages.</p>
+<h2 id="Client-Side-Configuration-Windows-macOS-and-Linux"><a href="#Client-Side-Configuration-Windows-macOS-and-Linux" class="headerlink" title="Client-Side Configuration: Windows, macOS, and Linux"></a>Client-Side Configuration: Windows, macOS, and Linux</h2><p>When I say "client side", I mean the local machine you are using, i.e. your PC or Mac.</p>
+<p>On a Mac, you must use macOS, while on a PC, you can use Windows or Linux. Most configurations on a Unix-like operating system (like macOS or Linux) are similar, while they may vary on Windows. As developers, we use Unix-like systems (most of which are Linux) much more than Windows. However, as a beginner in the IT field (e.g. a Chinese CS student), you may only have a PC running Windows.</p>
+<p>In this guide, I will respect that by trying to make your Windows a little more "Unix-like". We will not use virtual machines (e.g. VMWare or WSL), as this method installs a full Linux.</p>
+<h3 id="Choosing-the-Right-Font"><a href="#Choosing-the-Right-Font" class="headerlink" title="Choosing the Right Font"></a>Choosing the Right Font</h3><p>A good programming font can make a world of difference. Look for fonts with features like:</p>
+<ul>
+<li>Mono spacing</li>
+<li>Easily distinguishable characters (so that you can easily tell the difference between <code>l</code> and <code>I</code>, <code>O</code> and <code>0</code>, etc.)</li>
+<li>Ligature support</li>
+</ul>
+<p>Moreover, a font collection called "<a target="_blank" rel="noopener" href="https://www.nerdfonts.com/">Nerd Fonts</a>" provides many patched fonts with icons, which are very useful in the terminal.</p>
+<p><img data-src="https://www.nerdfonts.com/assets/img/sankey-glyphs-combined-diagram.png" alt="The Nerd Fonts"></p>
+<p>The <code>FiraCode Nerd Font</code> is my favorite. Give it a try!</p>
+<h3 id="Terminal-Console-Terminal-Emulator-Beyond-the-Basics"><a href="#Terminal-Console-Terminal-Emulator-Beyond-the-Basics" class="headerlink" title="Terminal, Console &amp; Terminal Emulator: Beyond the Basics"></a>Terminal, Console &amp; Terminal Emulator: Beyond the Basics</h3><p>You may have heard the term "terminal" or "console" before. These pronouns are from the old days when computers were huge and expensive. There might be one computer in an entire building. Terminals would be placed in different rooms in the building so that people could interact with that computer. The terminal is a text-based interface, and the console is a physical device.</p>
+<p>The terminal emulator is software that emulates the terminal, basically it's a GUI application that looks like a terminal. These days, you can use these terms interchangeably.</p>
+<p>No matter what operating system you are using, you have a built-in terminal, e.g. <code>Terminal.app</code> on Mac and <code>Windows Terminal</code> on Windows. However, third-party options offer more features and customization. Consider:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://iterm2.com/"><code>iTerm2</code></a> for Mac</li>
+<li><a target="_blank" rel="noopener" href="https://alacritty.org/"><code>Alacritty</code></a> for Windows and Linux</li>
+</ul>
+<p><code>Alacritty</code> is a cross-platform, high-performance and highly customizable terminal emulator. You can also use <code>Alacritty</code> on Mac, but I prefer <code>iTerm2</code> on Mac.</p>
+<p>Here is my <code>Alacritty</code> configuration file on Windows:</p>
+<figure class="highlight toml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">working_directory</span> = <span class="string">"D:\\Documents"</span></span><br><span class="line"></span><br><span class="line"><span class="section">[shell]</span></span><br><span class="line"><span class="attr">program</span> = <span class="string">"C:\\Program Files\\Git\\bin\\bash.exe"</span></span><br><span class="line"><span class="attr">args</span> = [<span class="string">"--login"</span>, <span class="string">"-i"</span>]</span><br><span class="line"></span><br><span class="line"><span class="section">[font]</span></span><br><span class="line"><span class="attr">bold</span> = { family = <span class="string">"FiraCode Nerd Font Mono"</span>, style = <span class="string">"Bold"</span> }</span><br><span class="line"><span class="attr">normal</span> = { family = <span class="string">"FiraCode Nerd Font Mono"</span>, style = <span class="string">"Light"</span> }</span><br><span class="line"><span class="attr">size</span> = <span class="number">12</span></span><br><span class="line"><span class="attr">offset</span> = { x = <span class="number">0</span>, y = <span class="number">4</span> }</span><br><span class="line"></span><br><span class="line"><span class="section">[window]</span></span><br><span class="line"><span class="attr">dimensions</span> = { columns = <span class="number">80</span>, lines = <span class="number">30</span> }</span><br><span class="line"><span class="attr">padding</span> = { x = <span class="number">12</span>, y = <span class="number">12</span> }</span><br></pre></td></tr></tbody></table></figure>
+
+<p>A theme is a set of configurations that change the appearance of the applications. You can use a theme to make your terminal utilities nicer and easier to use. For example, set the <code>colorschema</code> in Vim. However, I prefer to set the theme in the terminal emulator so that all the terminal utilities share a similar look. I use the <a target="_blank" rel="noopener" href="https://draculatheme.com/"><code>Dracula</code></a> theme in <code>Alacritty</code> and <code>iTerm2</code>.</p>
+<p>By the way, the <code>Dracula</code> theme is also available in many other applications. I also use it in my VS Code and JetBrains IDEs. A shared theme makes your development environment more consistent and beautiful.</p>
+<h3 id="Shell-The-Bridge-Between-You-and-the-System-Kernel"><a href="#Shell-The-Bridge-Between-You-and-the-System-Kernel" class="headerlink" title="Shell: The Bridge Between You and the System Kernel"></a>Shell: The Bridge Between You and the System Kernel</h3><p>The program running in the terminal is called a shell. It is a bridge between the user and the system kernel. On most Linux, the default shell is <code>bash</code>, while on macOS, it is <code>zsh</code>. There are two shells on Windows, <code>cmd</code> and <code>PowerShell</code>.</p>
+<p>I recommend using <code>zsh</code> on all systems. You can view it as a super set of bash with more features. Here is <a href="/posts/3e5630f.html">my configuration</a>, in which I:</p>
+<ul>
+<li>Use the <a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh"><code>oh-my-zsh</code></a> framework to make <code>zsh</code> configuration easier</li>
+<li>Use the theme <a target="_blank" rel="noopener" href="https://github.com/romkatv/powerlevel10k"><code>powerlevel10k</code></a> to customize the command prompt</li>
+<li>Use a lot of other plugins and configurations</li>
+</ul>
+<p>If you don't want to use <code>zsh</code> since it needs some configurations, a good alternative is <a target="_blank" rel="noopener" href="https://fishshell.com/"><code>fish</code></a>. However, <code>fish</code> is not POSIX-compliant, which means you may have some compatibility issues with some shell scripts. This is the reason why I prefer <code>zsh</code>. But it's fine for beginners.</p>
+<p>You have <code>bash</code> installed on most unix-like systems and it's easy to install <code>zsh</code> or <code>fish</code> on those platform. But on Windows, it is a little bit tricky.</p>
+<p>If you want to install <code>bash</code> on Windows, you may use <a target="_blank" rel="noopener" href="https://git-scm.com/"><code>git bash</code></a>. It will be installed when you install <code>git</code>, a popular version control system, on Windows. Furthermore, you can also use <code>zsh</code> on Windows. The articles below may be helpful:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://dominikrys.com/posts/zsh-in-git-bash-on-windows/">Installing Zsh (and oh-my-zsh) in Windows Git Bash</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/625583037">Windows 安装 Zsh 终端 - 知乎</a></li>
+</ul>
+<p>I haven't yet found a good way to install <code>fish</code> on Windows. If you know how to do that, please let me know by leaving a comment or sending me an <a href="mailto:blocklune@gmail.com">email</a>.</p>
+<div class="note danger"><p>Another thing you may need to attention is the character set used on your Windows platform. If you are a Chinese CS student using Chinese Windows, the default character set of your system is usually not UTF-8. So you may encounter a <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Mojibake">mojibake</a> issue. You can add the lines to the very head of your <code>~/.zshrc</code> which enables UTF-8 in your terminal to fix this issue:</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Set Windows codepage to 65001 (UTF-8).</span><br><span class="line">if [[ "$OSTYPE" == "msys" ]]; then</span><br><span class="line">    chcp.com 65001 &amp;&gt; /dev/null</span><br><span class="line">fi</span><br></pre></td></tr></tbody></table></figure>
+</div>
+
+<h3 id="Package-Managers-The-App-Store-for-Developers"><a href="#Package-Managers-The-App-Store-for-Developers" class="headerlink" title="Package Managers: The App Store for Developers"></a>Package Managers: The App Store for Developers</h3><p>A package manager basically plays the role of an app store. The term "package" means a bunch of files. An executable application is basically a bunch of files, so you can think of an application as a package.</p>
+<p>With the help of package managers, you no longer have to go to the official website of a particular application, click on download and then install it, but with one line of simple commands.</p>
+<p>On different versions of Linux there are different package managers, for example, the most popular package manager on Ubuntu is <code>apt</code>, and on Arch it is <code>pacman</code>. They are installed when the Linux systems are ready.</p>
+<p>On the Mac, however, you need to download and install a package manager. The most popular one is <a target="_blank" rel="noopener" href="https://brew.sh/">Homebrew</a>. Windows does not have a package manager either. You can download and install <a target="_blank" rel="noopener" href="https://scoop.sh/"><code>scoop</code></a> or <a target="_blank" rel="noopener" href="https://chocolatey.org/"><code>choco</code></a> yourself.</p>
+<p>The concept of "package manager" explained above is really dirty and loose. To be more precise, the above package managers are system-wide. There are many more package managers in various tech stacks. For example, <code>npm</code> in node.js projects and <code>cargo</code> in rust projects, etc.</p>
+<div class="note info"><p>For Chinese users, a common headache is the physical distance from the server, which leads to problems such as poor network signal and consequently slow download speeds, or even timeouts, and ultimately the inability to download packages properly using a package manager. In this case, you can use a mirror site. In the past, we had to manually modify a bunch of configuration files for different package managers. But now you can use a tool called <a target="_blank" rel="noopener" href="https://github.com/RubyMetric/chsrc"><code>chsrc</code></a>.</p>
+</div>
+
+<h3 id="Version-Control-of-the-Environment"><a href="#Version-Control-of-the-Environment" class="headerlink" title="Version Control of the Environment"></a>Version Control of the Environment</h3><p>Here I'm not talking about version control systems like <code>git</code>, but the version of the software you are using. For example, you may have <code>Node 20</code> installed on your machine, but your project requires <code>Node 14</code>. How to solve this problem? There are many tools that can help you with this:</p>
+<ul>
+<li>Java: <a target="_blank" rel="noopener" href="https://sdkman.io/"><code>sdkman</code></a>, etc.</li>
+<li>Node.js: <a target="_blank" rel="noopener" href="https://github.com/tj/n"><code>n</code></a>, <a target="_blank" rel="noopener" href="https://github.com/nvm-sh/nvm"><code>nvm</code></a>, <a target="_blank" rel="noopener" href="https://github.com/Schniz/fnm"><code>fnm</code></a>, etc.</li>
+<li>Python: <a target="_blank" rel="noopener" href="https://github.com/pyenv/pyenv"><code>pyenv</code></a>, <a target="_blank" rel="noopener" href="https://www.anaconda.com/"><code>conda</code></a>, etc. I also wrote a blog post about this: <a href="/posts/c7d1762.html">Managing Multiple Python Versions with pyenv and conda</a>.</li>
+</ul>
+<h2 id="Server-Side"><a href="#Server-Side" class="headerlink" title="Server Side"></a>Server Side</h2><p>(TBD)</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/rss.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/config/" rel="tag"># Config</a>
+              <a href="/tags/environment/" rel="tag"># Environment</a>
+              <a href="/tags/tutorial/" rel="tag"># Tutorial</a>
+              <a href="/tags/guide/" rel="tag"># Guide</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/e87455d1.html" rel="prev" title="My GDB Cheat Sheet">
+                  <i class="fa fa-angle-left"></i> My GDB Cheat Sheet
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">BlockLune</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/BlockLune" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.0/mermaid.min.js","integrity":"sha256-stuqcu2FrjYCXDOytWFA5SoUE/r3nkp6gTglzNSlavU="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"BlockLune","repo":"blocklune.github.io","client_id":"f0d9ff2c460a605d4f3f","client_secret":"9808616eda1afe0741c036b5d5670a490b68f6ef","admin_user":"BlockLune","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"cdbedb741662f6a6a4c1a2666f8950ea"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

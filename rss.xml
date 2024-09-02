@@ -9,8 +9,37 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Sat, 09 Mar 2024 06:16:24 GMT</pubDate>
+    <pubDate>Mon, 02 Sep 2024 07:53:08 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Setting Up Your New Machine - a Simple Dev Environment Configuration Guide</title>
+      <link>https://fishg.top/posts/183d7426.html</link>
+      <guid>https://fishg.top/posts/183d7426.html</guid>
+      <pubDate>Mon, 02 Sep 2024 07:53:08 GMT</pubDate>
+      
+      <description>&lt;p&gt;As developers, we interact with all kinds of machines every day. A well-configured development environment can significantly boost productivity and make coding more enjoyable. This comprehensive guide will help you set up a comfortable and efficient workspace. It&#39;s mainly for beginners, but experienced developers may also find some useful tips.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://fishg.top/categories/cs/">CS</category>
+      
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
+      
+      
+      <category domain="https://fishg.top/tags/config/">Config</category>
+      
+      <category domain="https://fishg.top/tags/environment/">Environment</category>
+      
+      <category domain="https://fishg.top/tags/tutorial/">Tutorial</category>
+      
+      <category domain="https://fishg.top/tags/guide/">Guide</category>
+      
+      
+      <comments>https://fishg.top/posts/183d7426.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>My GDB Cheat Sheet</title>
