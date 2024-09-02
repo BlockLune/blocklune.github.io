@@ -3982,6 +3982,13 @@
 <li>Python: <a href="https://github.com/pyenv/pyenv"><code>pyenv</code></a>, <a href="https://www.anaconda.com/"><code>conda</code></a>, etc. I also wrote a blog post about this: <a href="/posts/c7d1762.html">Managing Multiple Python Versions with pyenv and conda</a>.</li>
 </ul>
 <h2 id="Server-Side"><a href="#Server-Side" class="headerlink" title="Server Side"></a>Server Side</h2><p>(TBD)</p>
+<h2 id="Draft"><a href="#Draft" class="headerlink" title="Draft"></a>Draft</h2><p>Topics to be done:</p>
+<ul>
+<li>Dotfiles</li>
+<li>VS Code</li>
+<li>Vim</li>
+<li>...</li>
+</ul>
 ]]></content>
       <categories>
         <category>CS</category>
