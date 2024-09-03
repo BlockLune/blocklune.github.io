@@ -2748,6 +2748,25 @@
       </tags>
   </entry>
   <entry>
+    <title>VS Code 中设置显示最大列数边界线</title>
+    <url>/posts/bb929dc9.html</url>
+    <content><![CDATA[<p>很多时候我们会避免一行代码过长，常见的限制有 80 字符、120 个字符等。我希望能在 VS Code 中显示一条边界线来提醒我已经到达这个限制了，需要换行。下边是设置的方法。</p>
+<span id="more"></span>
+
+<p>打开设置（快捷键 <code>Ctrl+,</code>），搜索 <code>Editor: Rulers</code>，点击 “在 settings.json” 中编辑，添加如下内容：</p>
+<figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">"editor.rulers"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="number">80</span><span class="punctuation">,</span><span class="number">120</span><span class="punctuation">]</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>当然你也可以按照自己的喜好设置字符数。</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>VS Code</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>VS Code 的安装与配置基础 C/C++ 开发环境</title>
     <url>/posts/a7a0ce82.html</url>
     <content><![CDATA[<p>我以前学习 C++ 的时候，使用的是 DevCpp 。这个软件让我这个初学者比较舒服的点是，我不用太过详细地考虑编译的过程 —— 新建一个 cpp 文件，写一点小程序，按下 F11，程序运行。我不需要管选择编译器啊、配置编译命令啊啥啥的。但是到 VS Code 这边，这都要我自己做了，对于新手并不是那么友好。这里记录一下我配置 VS Code 的 C/C++ 环境的完整过程，希望对你有所帮助。需要注意的是：学习一下基本的编译链接指令还是很有必要的！</p>
@@ -2838,25 +2857,6 @@
       <tags>
         <tag>VS Code</tag>
         <tag>C/C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>VS Code 中设置显示最大列数边界线</title>
-    <url>/posts/bb929dc9.html</url>
-    <content><![CDATA[<p>很多时候我们会避免一行代码过长，常见的限制有 80 字符、120 个字符等。我希望能在 VS Code 中显示一条边界线来提醒我已经到达这个限制了，需要换行。下边是设置的方法。</p>
-<span id="more"></span>
-
-<p>打开设置（快捷键 <code>Ctrl+,</code>），搜索 <code>Editor: Rulers</code>，点击 “在 settings.json” 中编辑，添加如下内容：</p>
-<figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">"editor.rulers"</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="number">80</span><span class="punctuation">,</span><span class="number">120</span><span class="punctuation">]</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>当然你也可以按照自己的喜好设置字符数。</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>VS Code</tag>
       </tags>
   </entry>
   <entry>
@@ -3159,7 +3159,7 @@
 <p>最后，你可以在本地机器上使用下面的命令来远程访问：</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">mysql -u remote_user -p --host your_server_ip</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="学习资源"><a href="#学习资源" class="headerlink" title="学习资源"></a>学习资源</h2><p>Docker 的<a href="https://docs.docker.com/">官方文档站</a> 提供了大量的文档。如果你遇到问题，你始终可以在官方文档里找到最新的解决方案。</p>
+<h2 id="学习资源"><a href="#学习资源" class="headerlink" title="学习资源"></a>学习资源</h2><p>Docker 的<a href="https://docs.docker.com/">官方文档站</a>提供了大量的文档。如果你遇到问题，你始终可以在官方文档里找到最新的解决方案。</p>
 <p>如果你需要的是一门课程，来自 KodeKloud 的这门 <em><a href="https://learn.kodekloud.com/user/courses/docker-training-course-for-the-absolute-beginner">Docker Training Course for the Absolute Beginner</a></em> 课程是我学习 Docker 的入门课。它不仅提供了课程视频，而且还有练习题和实验环境，并且完全免费。非常推荐你去学习。</p>
 ]]></content>
       <categories>
