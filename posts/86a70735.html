@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- hexo injector head_begin start --><!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "61641c63411e4533b0bc263d76e9c650"}'></script><!-- End Cloudflare Web Analytics --><script defer src="https://eu.umami.is/script.js" data-website-id="f576c93d-b2e8-4701-9cd1-797cb6a6b79a"></script><!-- hexo injector head_begin end -->
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="google7b9c7ea42a3102a3.html">
+  <meta name="baidu-site-verification" content="baidu_verify_code-53bseLro2G.html">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"fishg.top","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="作为一个喜欢折腾新玩意儿的人，在网上冲浪时，我经常会去寻找各种各样新式的软件或服务。如果你和我一样也喜欢寻找这些软件，那你可能也会注意到，在安装指南中，越来越多的软件提供了一种使用 Docker 的安装或部署方法。这是什么东西？为什么现在流行使用它？我们又能如何使用它？这篇文章，带你入门 Docker 。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker: 是什么？为什么？怎么用？">
+<meta property="og:url" content="https://fishg.top/posts/86a70735.html">
+<meta property="og:site_name" content="Fish Pond">
+<meta property="og:description" content="作为一个喜欢折腾新玩意儿的人，在网上冲浪时，我经常会去寻找各种各样新式的软件或服务。如果你和我一样也喜欢寻找这些软件，那你可能也会注意到，在安装指南中，越来越多的软件提供了一种使用 Docker 的安装或部署方法。这是什么东西？为什么现在流行使用它？我们又能如何使用它？这篇文章，带你入门 Docker 。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-09-03T08:35:32.000Z">
+<meta property="article:modified_time" content="2024-09-03T08:35:32.000Z">
+<meta property="article:author" content="BlockLune">
+<meta property="article:tag" content="Docker">
+<meta property="article:tag" content="容器化">
+<meta property="article:tag" content="DevOps">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://fishg.top/posts/86a70735.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://fishg.top/posts/86a70735.html","path":"posts/86a70735.html","title":"Docker: 是什么？为什么？怎么用？"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Docker: 是什么？为什么？怎么用？ | Fish Pond</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XQDPHGPHDL"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-XQDPHGPHDL","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+
+  <script async defer data-website-id="f576c93d-b2e8-4701-9cd1-797cb6a6b79a" src="https://analytics.umami.is/script.js"></script>
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/rss.xml" title="Fish Pond" type="application/rss+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Fish Pond</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Posts swim here.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">为什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%8E%E4%B9%88%E7%94%A8%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">怎么用？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Docker"><span class="nav-number">3.1.</span> <span class="nav-text">安装 Docker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E9%94%AE%E6%A6%82%E5%BF%B5"><span class="nav-number">3.2.</span> <span class="nav-text">关键概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%EF%BC%9A%E5%AE%89%E8%A3%85-MySQL"><span class="nav-number">3.3.</span> <span class="nav-text">例子：安装 MySQL</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90"><span class="nav-number">4.</span> <span class="nav-text">学习资源</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="BlockLune"
+      src="/img/waifu.png">
+  <p class="site-author-name" itemprop="name">BlockLune</p>
+  <div class="site-description" itemprop="description">Here is BlockLune's blog.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">88</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">136</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/BlockLune" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;BlockLune" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:blocklune@gmail.com" title="E-Mail → mailto:blocklune@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          Links
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://elysiapro.cn/" title="https:&#x2F;&#x2F;elysiapro.cn&#x2F;" rel="noopener" target="_blank">ElysiaPro's Blog</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://f-studio.is-best.net/" title="http:&#x2F;&#x2F;f-studio.is-best.net&#x2F;" rel="noopener" target="_blank">F-Studio</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://luoyuxuanryan.github.io/" title="https:&#x2F;&#x2F;luoyuxuanryan.github.io&#x2F;" rel="noopener" target="_blank">Radish Garden</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://tommygong.top/" title="https:&#x2F;&#x2F;tommygong.top&#x2F;" rel="noopener" target="_blank">TommyGong's Blog</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://blog.yfi.moe/" title="https:&#x2F;&#x2F;blog.yfi.moe&#x2F;" rel="noopener" target="_blank">Yunfi's Blog</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://fishg.top/posts/86a70735.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/waifu.png">
+      <meta itemprop="name" content="BlockLune">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fish Pond">
+      <meta itemprop="description" content="Here is BlockLune's blog.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Docker: 是什么？为什么？怎么用？ | Fish Pond">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Docker: 是什么？为什么？怎么用？
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2024-09-03 16:35:32" itemprop="dateCreated datePublished" datetime="2024-09-03T16:35:32+08:00">2024-09-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/" itemprop="url" rel="index"><span itemprop="name">CS</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/tools/" itemprop="url" rel="index"><span itemprop="name">Tools</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>作为一个喜欢折腾新玩意儿的人，在网上冲浪时，我经常会去寻找各种各样新式的软件或服务。如果你和我一样也喜欢寻找这些软件，那你可能也会注意到，在安装指南中，越来越多的软件提供了一种使用 <strong>Docker</strong> 的安装或部署方法。这是什么东西？为什么现在流行使用它？我们又能如何使用它？这篇文章，带你入门 Docker 。</p>
+<span id="more"></span>
+
+<p>题外话：这篇文章的标题模仿了朋友的<a target="_blank" rel="noopener" href="https://yfi.moe/post/all-about-rss">《RSS: 是什么？为什么？怎么用？》</a>。那是一篇很不错的文章，推荐你也去看一看。</p>
+<h2 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h2><p>维基百科这样描述 Docker：</p>
+<blockquote>
+<p>Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. The service has both free and premium tiers. The software that hosts the containers is called Docker Engine. It was first released in 2013 and is developed by Docker, Inc.</p>
+<p>Docker is a tool that is used to automate the deployment of applications in lightweight containers so that applications can work efficiently in different environments in isolation.</p>
+</blockquote>
+<p>简单地讲，借助 Docker 平台，软件开发者可以将应用程序与其依赖项打包到一个可移植的容器中。这些容器可以在任何支持 Docker 的环境中运行，无需担心底层系统的差异。</p>
+<p>你可以将 Docker 理解为一种轻量级的虚拟机:</p>
+<ul>
+<li>这个虚拟机已经配置好了运行特定软件所需的全部或大部分条件，无需你再花时间配置，开箱即用。</li>
+</ul>
+<p>但 Docker 又不完全等同于传统虚拟机:</p>
+<ul>
+<li>传统虚拟机通常很大，因为它在操作系统层面创建一个完整的、与宿主机隔离的环境。我们通常在单个虚拟机环境中做多件事，比如在 Windows 电脑上安装 Ubuntu 虚拟机来学习 Linux 时，我们会在这个虚拟机里安装各种软件、进行各种操作。</li>
+<li>而 Docker 容器通常很小，因为容器内不包含完整的操作系统，容器之间共享宿主机的操作系统内核。由于它足够轻量、启动速度快、资源利用效率高，我们通常在一个容器中只运行一个特定的应用及其所需服务。</li>
+</ul>
+<h2 id="为什么？"><a href="#为什么？" class="headerlink" title="为什么？"></a>为什么？</h2><p>新工具的诞生总是为了解决现有的问题和痛点。如果你也喜欢折腾，你肯定也经历过，照着网站上的部署和配置指南一步一步走下来，走着走着就走不通了，跑着跑着就报错了等等一系列问题。本身，“折腾” 这个词也就是在说你需要在这个过程中不停地解决问题嘛。造成这些问题的很大一部分原因，就是你的本地环境与开发者预设的环境不一致。而 Docker 允许开发者将他们的运行环境直接打包分享，大大简化了你的 “折腾” 过程。</p>
+<p>当然，Docker 的功能不止于此。从更专业一点的角度说，Docker 的流行有几个关键原因:</p>
+<ol>
+<li>一致的运行环境：Docker 确保应用程序在开发、测试和生产环境中的一致性，有效解决了 “在我的机器上可以运行” 的问题。</li>
+<li>快速部署和扩展：容器可以在几秒钟内启动和停止，使得应用程序的部署和扩展变得更加简单和快速。</li>
+<li>资源隔离和优化：Docker 容器提供了良好的资源隔离，同时允许更有效地利用底层硬件资源。</li>
+<li>版本控制和可重复性：Docker 镜像可以被版本化，确保应用程序的不同版本可以被精确地重现和部署。</li>
+</ol>
+<h2 id="怎么用？"><a href="#怎么用？" class="headerlink" title="怎么用？"></a>怎么用？</h2><h3 id="安装-Docker"><a href="#安装-Docker" class="headerlink" title="安装 Docker"></a>安装 Docker</h3><p>关于如何安装 Docker，请参见<a target="_blank" rel="noopener" href="https://docs.docker.com/get-started/get-docker/">官方文档</a>。</p>
+<p>上面提到，Docker 容器会共用操作系统的内核。但实际上，Docker 只能使用 Linux Kernel。为了在 macOS 或 Windows 上使用 Docker，实际上需要借助其他方法。在官方文档中推荐使用的是 Docker Desktop，它使用了一个轻量级的虚拟机来运行 Docker。在 macOS 上，你也可以试试 <a target="_blank" rel="noopener" href="https://orbstack.dev/">OrbStack</a>。</p>
+<p>这里特别说一下在国内的 Ubuntu 服务器上安装 Docker Engine 这样一个场景。由于一些网络问题，你可能无法访问 Docker 官方源。下面是使用阿里云镜像的一种解决方案（仅关键命令，完整步骤参见<a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/">这份官方文档</a>）：</p>
+<ol>
+<li>设置 Docker 的 <code>apt</code> 存储库：</li>
+</ol>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Add Docker's official GPG key:</span></span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install ca-certificates curl</span><br><span class="line">sudo install -m 0755 -d /etc/apt/keyrings</span><br><span class="line">sudo curl -fsSL http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc</span><br><span class="line">sudo <span class="built_in">chmod</span> a+r /etc/apt/keyrings/docker.asc</span><br><span class="line"></span><br><span class="line"><span class="comment"># Add the repository to Apt sources:</span></span><br><span class="line"><span class="built_in">echo</span> \</span><br><span class="line">  <span class="string">"deb [arch=<span class="subst">$(dpkg --print-architecture)</span> signed-by=/etc/apt/keyrings/docker.asc] http://mirrors.aliyun.com/docker-ce/linux/ubuntu \</span></span><br><span class="line"><span class="string">  <span class="subst">$(. /etc/os-release &amp;&amp; echo <span class="string">"<span class="variable">$VERSION_CODENAME</span>"</span>)</span> stable"</span> | \</span><br><span class="line">  sudo <span class="built_in">tee</span> /etc/apt/sources.list.d/docker.list &gt; /dev/null</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</span><br></pre></td></tr></tbody></table></figure>
+
+<ol start="2">
+<li>安装最新版本：</li>
+</ol>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</span><br></pre></td></tr></tbody></table></figure>
+
+<ol start="3">
+<li>使用阿里云提供的镜像加速器（具体的加速器需要你自己登录阿里云后见<a target="_blank" rel="noopener" href="https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors">这里</a>）：</li>
+</ol>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">mkdir</span> -p /etc/docker</span><br><span class="line">sudo <span class="built_in">tee</span> /etc/docker/daemon.json &lt;&lt;-<span class="string">'EOF'</span></span><br><span class="line">{</span><br><span class="line">  <span class="string">"registry-mirrors"</span>: [<span class="string">"https://your-aliyun-mirror.mirror.aliyuncs.com"</span>]</span><br><span class="line">}</span><br><span class="line">EOF</span><br><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></tbody></table></figure>
+
+<ol start="4">
+<li>检查是否安装成功：</li>
+</ol>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker run hello-world</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="关键概念"><a href="#关键概念" class="headerlink" title="关键概念"></a>关键概念</h3><p>在继续之前，必须首先解释一些关键概念。你不需要完全理解它们，但要知道它们的存在。后续的例子可能会帮助你更好地理解这些概念。</p>
+<ul>
+<li>容器 (<code>Container</code>): 一个轻量级、可执行的独立软件包，包含运行某个软件所需的所有内容。</li>
+<li>镜像 (<code>Image</code>): 用于创建容器的只读模板。镜像包含了运行应用程序所需的代码、运行时、库、环境变量和配置文件。</li>
+<li>仓库 (<code>Repository</code>): 用于存储和分发 Docker 镜像的地方。</li>
+<li>卷 (<code>Volume</code>): 用于在容器和主机之间共享数据的目录。如前文所述，Docker 容器可以不严谨地视作一个虚拟机，那么卷就是虚拟机和主机之间的共享文件夹。</li>
+</ul>
+<p>可以这样区分容器和镜像：镜像是一个只读的模板，容器是镜像的运行实例。</p>
+<h3 id="例子：安装-MySQL"><a href="#例子：安装-MySQL" class="headerlink" title="例子：安装 MySQL"></a>例子：安装 MySQL</h3><p>让我们通过一个简单的例子来演示如何使用 Docker，我们将在一台服务器上安装 MySQL 数据库。在这个例子中，我们会简单地使用 Docker。我不会详细地解释各个命令是用来干什么的，如果你想知道，可以查看<a href="#%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90">学习资源</a>。</p>
+<p>首先，参考<a href="#%E5%AE%89%E8%A3%85-docker">安装 Docker</a> 在机器上安装好 Docker。</p>
+<p>在创建容器之前，我们需要准备一些目录和文件。它们将被用作卷，以便我们可以在容器和主机之间共享数据。这样，我们可以在容器中运行 MySQL 数据库，而数据将被保存在主机上。</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建目录</span></span><br><span class="line">sudo <span class="built_in">mkdir</span> -p /var/lib/docker/mysql/data</span><br><span class="line">sudo <span class="built_in">mkdir</span> -p /etc/docker/mysql/conf.d</span><br><span class="line">sudo <span class="built_in">mkdir</span> -p /var/log/docker/mysql</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置权限</span></span><br><span class="line"><span class="comment"># 假设 MySQL 在容器中使用 UID 999 运行（这是 MySQL 官方镜像的默认值）</span></span><br><span class="line">sudo <span class="built_in">chown</span> -R 999:999 /var/lib/docker/mysql/data</span><br><span class="line">sudo <span class="built_in">chown</span> -R 999:999 /var/log/docker/mysql</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置文件目录应该由 root 拥有，因为它包含敏感信息</span></span><br><span class="line">sudo <span class="built_in">chown</span> -R root:root /etc/docker/mysql/conf.d</span><br><span class="line">sudo <span class="built_in">chmod</span> 755 /etc/docker/mysql/conf.d</span><br></pre></td></tr></tbody></table></figure>
+
+<p>接下来，我们将创建一个 MySQL 容器。下面使用 <code>docker run</code> 来创建容器，并：</p>
+<ul>
+<li>使用 <code>--name</code> 选项来指定容器的名称，这里我们将其命名为 <code>mysql-container</code>；</li>
+<li>使用 <code>-e</code> 选项来设置环境变量（<code>e</code> 的意思是 <code>env</code>），这里我们设置了 MySQL 的 root 密码；</li>
+<li>使用 <code>-d</code> 选项来在后台运行容器（<code>d</code> 的意思是 <code>detached</code>）；</li>
+<li>使用 <code>-p</code> 选项来映射容器的端口到主机的端口（<code>p</code> 的意思是 <code>port</code>，前面的端口是主机的端口，后面的端口是容器的端口）；</li>
+<li>使用 <code>-v</code> 选项来指定卷（<code>v</code> 的意思是 <code>volume</code>，同样，冒号前为主机的目录，冒号后为容器的目录）；</li>
+<li>使用 <code>--restart always</code> 选项来设置容器自动重启。</li>
+</ul>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo docker run --name mysql-container \</span><br><span class="line">  -e MYSQL_ROOT_PASSWORD=your_root_password \</span><br><span class="line">  -d -p 3306:3306 \</span><br><span class="line">  -v /var/lib/docker/mysql/data:/var/lib/mysql \</span><br><span class="line">  -v /etc/docker/mysql/conf.d:/etc/mysql/conf.d \</span><br><span class="line">  -v /var/log/docker/mysql:/var/log/mysql \</span><br><span class="line">  --restart always \  <span class="comment"># 设置自动重启</span></span><br><span class="line">  mysql:latest</span><br></pre></td></tr></tbody></table></figure>
+
+<p>如果忘记使用 <code>--restart always</code> 选项指定容器自动重启，你可以使用 <code>docker update</code> 命令来更新容器的配置：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker update --restart always mysql-container</span><br></pre></td></tr></tbody></table></figure>
+
+<p>在正式开始使用 MySQL 前，你可能还需要一些自定义配置。例如，允许任意 IP 地址连接到 MySQL 服务器。为此，编辑 <code>/etc/docker/mysql/conf.d/my.cnf</code> 如下：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[mysqld]</span><br><span class="line">bind-address = 0.0.0.0</span><br></pre></td></tr></tbody></table></figure>
+
+<p>配置文件的更改需要重启容器才能生效：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker restart mysql-container</span><br></pre></td></tr></tbody></table></figure>
+
+<p>为了连接到容器中的 MySQL 服务器，你可以使用 <code>mysql</code> 命令行工具。可以这样直接使用 Docker 容器中的：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 进入容器</span></span><br><span class="line">sudo docker <span class="built_in">exec</span> -it mysql-container bash</span><br><span class="line"><span class="comment"># 登录 mysql</span></span><br><span class="line">mysql -u root -p</span><br></pre></td></tr></tbody></table></figure>
+
+<p>我们可能希望直接远程访问位于这个远程服务器上的 MySQL 服务器。为此，可以首先在 MySQL 中添加一个新用户并给予相应的权限（下面的命令授予了所有权限，但你应该按照你的需要自行设置权限）：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> <span class="string">'remote_user'</span>@<span class="string">'%'</span> IDENTIFIED <span class="keyword">BY</span> <span class="string">'password'</span>;</span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">ALL</span> PRIVILEGES <span class="keyword">ON</span> <span class="operator">*</span>.<span class="operator">*</span> <span class="keyword">TO</span> <span class="string">'remote_user'</span>@<span class="string">'%'</span> <span class="keyword">WITH</span> <span class="keyword">GRANT</span> OPTION;</span><br><span class="line">FLUSH PRIVILEGES;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>你可能还需要设置服务器的防火墙，允许 3306 端口的访问。</p>
+<p>最后，你可以在本地机器上使用下面的命令来远程访问：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u remote_user -p --host your_server_ip</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="学习资源"><a href="#学习资源" class="headerlink" title="学习资源"></a>学习资源</h2><p>Docker 的<a target="_blank" rel="noopener" href="https://docs.docker.com/">官方文档站</a> 提供了大量的文档。如果你遇到问题，你始终可以在官方文档里找到最新的解决方案。</p>
+<p>如果你需要的是一门课程，来自 KodeKloud 的这门 <em><a target="_blank" rel="noopener" href="https://learn.kodekloud.com/user/courses/docker-training-course-for-the-absolute-beginner">Docker Training Course for the Absolute Beginner</a></em> 课程是我学习 Docker 的入门课。它不仅提供了课程视频，而且还有练习题和实验环境，并且完全免费。非常推荐你去学习。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/rss.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/docker/" rel="tag"># Docker</a>
+              <a href="/tags/%E5%AE%B9%E5%99%A8%E5%8C%96/" rel="tag"># 容器化</a>
+              <a href="/tags/devops/" rel="tag"># DevOps</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/183d7426.html" rel="prev" title="Setting Up Your New Machine - a Simple Dev Environment Configuration Guide">
+                  <i class="fa fa-angle-left"></i> Setting Up Your New Machine - a Simple Dev Environment Configuration Guide
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">BlockLune</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/BlockLune" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.0/mermaid.min.js","integrity":"sha256-stuqcu2FrjYCXDOytWFA5SoUE/r3nkp6gTglzNSlavU="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"BlockLune","repo":"blocklune.github.io","client_id":"f0d9ff2c460a605d4f3f","client_secret":"9808616eda1afe0741c036b5d5670a490b68f6ef","admin_user":"BlockLune","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"c0d67ffdb132aeb8cb98e757514df835"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

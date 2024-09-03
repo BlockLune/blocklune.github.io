@@ -9,8 +9,35 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Mon, 02 Sep 2024 07:53:08 GMT</pubDate>
+    <pubDate>Tue, 03 Sep 2024 08:35:32 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Docker: 是什么？为什么？怎么用？</title>
+      <link>https://fishg.top/posts/86a70735.html</link>
+      <guid>https://fishg.top/posts/86a70735.html</guid>
+      <pubDate>Tue, 03 Sep 2024 08:35:32 GMT</pubDate>
+      
+      <description>&lt;p&gt;作为一个喜欢折腾新玩意儿的人，在网上冲浪时，我经常会去寻找各种各样新式的软件或服务。如果你和我一样也喜欢寻找这些软件，那你可能也会注意到，在安装指南中，越来越多的软件提供了一种使用 &lt;strong&gt;Docker&lt;/strong&gt; 的安装或部署方法。这是什么东西？为什么现在流行使用它？我们又能如何使用它？这篇文章，带你入门 Docker 。&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://fishg.top/categories/cs/">CS</category>
+      
+      <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
+      
+      
+      <category domain="https://fishg.top/tags/docker/">Docker</category>
+      
+      <category domain="https://fishg.top/tags/%E5%AE%B9%E5%99%A8%E5%8C%96/">容器化</category>
+      
+      <category domain="https://fishg.top/tags/devops/">DevOps</category>
+      
+      
+      <comments>https://fishg.top/posts/86a70735.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Setting Up Your New Machine - a Simple Dev Environment Configuration Guide</title>
@@ -1826,9 +1853,9 @@
       
       <category domain="https://fishg.top/tags/c-c/">C/C++</category>
       
-      <category domain="https://fishg.top/tags/array/">Array</category>
-      
       <category domain="https://fishg.top/tags/pointer/">Pointer</category>
+      
+      <category domain="https://fishg.top/tags/array/">Array</category>
       
       
       <comments>https://fishg.top/posts/57fd79a.html#disqus_thread</comments>
@@ -2299,9 +2326,9 @@
       <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
       
       
-      <category domain="https://fishg.top/tags/edge/">Edge</category>
-      
       <category domain="https://fishg.top/tags/browser/">Browser</category>
+      
+      <category domain="https://fishg.top/tags/edge/">Edge</category>
       
       
       <comments>https://fishg.top/posts/3c91f84e.html#disqus_thread</comments>
@@ -2369,9 +2396,9 @@
       <category domain="https://fishg.top/categories/cs/tools/">Tools</category>
       
       
-      <category domain="https://fishg.top/tags/browser/">Browser</category>
-      
       <category domain="https://fishg.top/tags/chrome/">Chrome</category>
+      
+      <category domain="https://fishg.top/tags/browser/">Browser</category>
       
       
       <comments>https://fishg.top/posts/72a59031.html#disqus_thread</comments>
