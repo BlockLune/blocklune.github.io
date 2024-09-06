@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- hexo injector head_begin start --><!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "61641c63411e4533b0bc263d76e9c650"}'></script><!-- End Cloudflare Web Analytics --><script defer src="https://eu.umami.is/script.js" data-website-id="f576c93d-b2e8-4701-9cd1-797cb6a6b79a"></script><!-- hexo injector head_begin end -->
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="google7b9c7ea42a3102a3.html">
+  <meta name="baidu-site-verification" content="baidu_verify_code-53bseLro2G.html">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"fishg.top","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="这是一篇课堂笔记，课程为 Udemy React - The Complete Guide 2024。该笔记包含了该课程中有关 NextJS 的部分内容。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NextJS 笔记">
+<meta property="og:url" content="https://fishg.top/posts/cca59e58.html">
+<meta property="og:site_name" content="Fish Pond">
+<meta property="og:description" content="这是一篇课堂笔记，课程为 Udemy React - The Complete Guide 2024。该笔记包含了该课程中有关 NextJS 的部分内容。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-09-06T03:35:57.000Z">
+<meta property="article:modified_time" content="2024-09-06T03:35:57.000Z">
+<meta property="article:author" content="BlockLune">
+<meta property="article:tag" content="React">
+<meta property="article:tag" content="Next.js">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://fishg.top/posts/cca59e58.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://fishg.top/posts/cca59e58.html","path":"posts/cca59e58.html","title":"NextJS 笔记"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>NextJS 笔记 | Fish Pond</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XQDPHGPHDL"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-XQDPHGPHDL","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+
+  <script async defer data-website-id="f576c93d-b2e8-4701-9cd1-797cb6a6b79a" src="https://analytics.umami.is/script.js"></script>
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/rss.xml" title="Fish Pond" type="application/rss+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Fish Pond</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Posts swim here.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%BB%84%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">服务端组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#App-%E8%B7%AF%E7%94%B1"><span class="nav-number">2.</span> <span class="nav-text">App 路由</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1"><span class="nav-number">3.</span> <span class="nav-text">动态路由</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E8%B7%AF%E7%94%B1%E7%9A%84%E8%B7%AF%E5%BE%84"><span class="nav-number">4.</span> <span class="nav-text">获取路由的路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Layout"><span class="nav-number">5.</span> <span class="nav-text">Layout</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%AB%99%E5%9B%BE%E6%A0%87"><span class="nav-number">6.</span> <span class="nav-text">网站图标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6"><span class="nav-number">7.</span> <span class="nav-text">自定义组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F"><span class="nav-number">8.</span> <span class="nav-text">图像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS"><span class="nav-number">9.</span> <span class="nav-text">CSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-SQLite-%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">10.</span> <span class="nav-text">配置 SQLite 数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="nav-number">11.</span> <span class="nav-text">获取数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E8%BD%BD"><span class="nav-number">12.</span> <span class="nav-text">加载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%99%E8%AF%AF"><span class="nav-number">13.</span> <span class="nav-text">错误</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Not-Found"><span class="nav-number">14.</span> <span class="nav-text">Not Found</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Server-Action"><span class="nav-number">15.</span> <span class="nav-text">Server Action</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0-XSS-%E4%BF%9D%E6%8A%A4"><span class="nav-number">16.</span> <span class="nav-text">添加 XSS 保护</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%9D%E5%AD%98%E6%96%87%E4%BB%B6%E5%92%8C%E6%95%B0%E6%8D%AE"><span class="nav-number">17.</span> <span class="nav-text">保存文件和数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-useFormStatus-%E7%AE%A1%E7%90%86%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E7%8A%B6%E6%80%81"><span class="nav-number">18.</span> <span class="nav-text">使用 useFormStatus 管理表单提交状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-useFormState-%E6%9D%A5%E6%8E%A5%E5%8F%97-Server-Action-Response"><span class="nav-number">19.</span> <span class="nav-text">使用 useFormState 来接受 Server Action Response</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E4%BA%A7%E9%83%A8%E7%BD%B2%E5%92%8C%E7%BC%93%E5%AD%98"><span class="nav-number">20.</span> <span class="nav-text">生产部署和缓存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%83%E6%95%B0%E6%8D%AE"><span class="nav-number">21.</span> <span class="nav-text">元数据</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="BlockLune"
+      src="/img/waifu.png">
+  <p class="site-author-name" itemprop="name">BlockLune</p>
+  <div class="site-description" itemprop="description">Here is BlockLune's blog.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">89</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">138</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/BlockLune" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;BlockLune" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:blocklune@gmail.com" title="E-Mail → mailto:blocklune@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          Links
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://elysiapro.cn/" title="https:&#x2F;&#x2F;elysiapro.cn&#x2F;" rel="noopener" target="_blank">ElysiaPro's Blog</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://f-studio.is-best.net/" title="http:&#x2F;&#x2F;f-studio.is-best.net&#x2F;" rel="noopener" target="_blank">F-Studio</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://luoyuxuanryan.github.io/" title="https:&#x2F;&#x2F;luoyuxuanryan.github.io&#x2F;" rel="noopener" target="_blank">Radish Garden</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://tommygong.top/" title="https:&#x2F;&#x2F;tommygong.top&#x2F;" rel="noopener" target="_blank">TommyGong's Blog</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://blog.yfi.moe/" title="https:&#x2F;&#x2F;blog.yfi.moe&#x2F;" rel="noopener" target="_blank">Yunfi's Blog</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://fishg.top/posts/cca59e58.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/waifu.png">
+      <meta itemprop="name" content="BlockLune">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fish Pond">
+      <meta itemprop="description" content="Here is BlockLune's blog.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="NextJS 笔记 | Fish Pond">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          NextJS 笔记
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2024-09-06 11:35:57" itemprop="dateCreated datePublished" datetime="2024-09-06T11:35:57+08:00">2024-09-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/" itemprop="url" rel="index"><span itemprop="name">CS</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>这是一篇课堂笔记，课程为 Udemy <a target="_blank" rel="noopener" href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/">React - The Complete Guide 2024</a>。该笔记包含了该课程中有关 NextJS 的部分内容。</p>
+<span id="more"></span>
+
+<p>NextJS 允许你使用 React 开发全栈应用。</p>
+<h2 id="服务端组件"><a href="#服务端组件" class="headerlink" title="服务端组件"></a>服务端组件</h2><p>在 NextJS 中，你使用常规的 JSX 语法创建组件。但在默认情况下，这些组件都是服务端组件（React Server Components, RSC），这意味着，如果你在其中添加一句 <code>console.log()</code>，然后打开浏览器的控制台，你并不能在此处看到任何输出。相反，你可以在你运行这个 NextJS App 的终端中看到它们。</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">Page</span>(<span class="params"></span>) {</span><br><span class="line">  <span class="comment">// console.log("My component!"); // no output on client side</span></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>My component!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>原生 React 中就存在着客户端与服务端组件的区分，但是当我们使用 Vite 等构建系统时，默认都使用客户端组件。<br>使用服务端组件的好处是：服务端会将最后渲染完成的代码发给客户端显示，它们更小，并且对 SEO 更友好（因为如果使用客户端组件，页面实际上都是空的，其中的内容都是其中的 JS 代码在填充；而使用服务端组件，右键查看源代码，可以看到显示的就是已经渲染的组件的代码）。<br>但是，不是所有的 React 功能都在服务端组件可用，例如 Hooks、事件处理就仅在客户端组件中可用（这是合理的）。</p>
+<p>为了在 NextJS 中使用客户端组件，需要在组件文件首行添加：</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"use client"</span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="App-路由"><a href="#App-路由" class="headerlink" title="App 路由"></a>App 路由</h2><p>NextJS 使用一个基于目录的路由，默认推荐使用的是 App Router。在项目目录中，你可以找到一个名为 <code>app</code> 的目录。通过在此目录下创建相应的文件，就可以创建出路由。例如，如果希望创建 <code>/about</code> 页面，就需要在 <code>app</code> 中创建 <code>about</code> 目录，并在其中添加 <code>page.js</code>。你必须遵循特定的名称，这些特定名称的文件对应不同的功能：</p>
+<ul>
+<li><code>page.js</code>：定义页面组件</li>
+<li><code>layout.js</code>：定义页面的包装器</li>
+<li><code>not-found.js</code>：定义 404 页面</li>
+<li><code>error.js</code>：定义错误页面</li>
+<li><code>loading.js</code>：定义加载页面</li>
+<li><code>route.js</code>：创建 API 路由，它不返回 JSX 代码，而直接返回 JSON 数据</li>
+<li>...（更多见 <a target="_blank" rel="noopener" href="https://nextjs.org/docs/app/api-reference/file-conventions">文档</a>）</li>
+</ul>
+<p>顺便一说，既可以使用 <code>.js</code>，也可以使用 <code>.jsx</code>。<br>现在你可以在 <code>app/about/page.js</code> 中定义关于页面的组件了。该组件的名称是无关紧要的：</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">AboutPage</span>(<span class="params"></span>) {</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>About Us<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>为了在 NextJS 中切换路由，可以这样做：</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Link</span> <span class="keyword">from</span> <span class="string">"next/link"</span>;</span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">Link</span> <span class="attr">href</span>=<span class="string">"/about"</span>&gt;</span>Go to about<span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="动态路由"><a href="#动态路由" class="headerlink" title="动态路由"></a>动态路由</h2><p>如果我们有很多博客文章，它们位于 <code>/posts/post-1</code> 、<code>/posts/post-2</code> 等等路由下。我们可以在 <code>posts</code> 目录下，创建一个特殊的以 <code>[]</code> 包裹的目录，例如 <code>[slug]</code>，然后在其中编辑 <code>page.js</code>：</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">BlogPostPage</span>(<span class="params">{ params }</span>) {</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>{params.slug}<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>"Slug" 指的是一种用于生成 URL 的字符串。它是一个较短的、可读的、通常是唯一的标识符，用于在 URL 中表示某个特定的资源。它通常是从资源的标题或名称中派生出来的，并且通常是小写字母、数字和连字符的组合，以便在浏览器中更容易阅读和理解。</p>
+<p>例如，如果你有一篇博客文章标题为 “如何学习编程”，那么对应的 slug 可能是 “ru-he-xue-xi-bian-cheng”。</p>
+</blockquote>
+<h2 id="获取路由的路径"><a href="#获取路由的路径" class="headerlink" title="获取路由的路径"></a>获取路由的路径</h2><p>为了获取当前路由，可以使用 <code>usePathname</code>:</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"use client"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Link</span> <span class="keyword">from</span> <span class="string">"next/link"</span>;</span><br><span class="line"><span class="keyword">import</span> { usePathname } <span class="keyword">from</span> <span class="string">"next/navigation"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">NavLink</span>(<span class="params">{ href, children }</span>) {</span><br><span class="line">  <span class="keyword">const</span> path = <span class="title function_">usePathname</span>();</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">Link</span> <span class="attr">href</span>=<span class="string">{href}</span> <span class="attr">className</span>=<span class="string">{path.startsWith(href)</span> ? "<span class="attr">active</span>" <span class="attr">:</span> <span class="attr">undefined</span>}&gt;</span></span></span><br><span class="line"><span class="language-xml">      {" "}</span></span><br><span class="line"><span class="language-xml">      {children}{" "}</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Layout"><a href="#Layout" class="headerlink" title="Layout"></a>Layout</h2><p>NextJS 允许你使用 <code>layout.js</code> 来决定页面应该如何显示在什么位置。项目中必须包含一个 <code>RootLayout</code>，它定义在 <code>app/layout.js</code> 中：</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">"./global.css"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> metadata = {</span><br><span class="line">  <span class="attr">title</span>: <span class="string">"NextJS Course App"</span>,</span><br><span class="line">  <span class="attr">description</span>: <span class="string">"Your first NextJS app!"</span>,</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">RootLayout</span>(<span class="params">{ children }</span>) {</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">body</span>&gt;</span>{children}<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">html</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>注意到两件事情：</p>
+<ul>
+<li>我们在该函数组件中使用了 <code>&lt;html&gt;</code> 和 <code>&lt;body&gt;</code>，这在一般的 React 项目中是没有的；</li>
+<li>我们没有在 <code>&lt;html&gt;</code> 中包含 <code>&lt;head&gt;</code> 并定义一些 metadata，相反，我们导出了一个名为 <code>metadata</code> 的变量，并在其中配置了一些 metadata。事实上，变量 <code>metadata</code> 在 NextJS 中是保留的，它会自动地插入到最后生成的 HTML 中。</li>
+</ul>
+<p>你也可以创建一个嵌套的 Layout，只需要在子目录中创建一个 <code>layout.js</code>。这个 Layout 始终会嵌套在上层 Layout 中。</p>
+<h2 id="网站图标"><a href="#网站图标" class="headerlink" title="网站图标"></a>网站图标</h2><p>通过在 <code>app</code> 目录下直接添加一个名为 <code>icon</code> 的文件（例如 <code>icon.png</code>），就可以将该图片作为 NextJS App 的 Favicon。</p>
+<h2 id="自定义组件"><a href="#自定义组件" class="headerlink" title="自定义组件"></a>自定义组件</h2><p>可以创建一个与 <code>app</code> 同级的目录 <code>components</code> 专门用于存放自定义组件，例如，如果存在 <code>components/header.js</code>，可以在需要使用它的地方按如下方法使用：</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Header</span> <span class="keyword">from</span> <span class="string">"@/components/header"</span>;</span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">Header</span> /&gt;</span></span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>导入语句中的 <code>@</code> 用于标识根目录。它实际上是个别名，定义于根目录下的 <code>jsconfig.json</code> 文件中。</p>
+<h2 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h2><p>就像在原生 React 中那样，你可以使用类似于下面的语句导入一张图片：</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> logoImg <span class="keyword">from</span> <span class="string">"@/assets/logo.png"</span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>但是，与原生 React 不同的是，你不能这样做：</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- wrong way <span class="keyword">in</span> next.<span class="property">js</span> --&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">{logoImg}</span> <span class="attr">alt</span>=<span class="string">"Logo"</span> /&gt;</span></span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>而必须使用其 <code>src</code> 属性：</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src={logoImg.<span class="property">src</span>} alt=<span class="string">"Logo"</span> /&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>但是更建议的做法是，使用 NextJS 提供的 <code>&lt;Image&gt;</code>。它提供了<strong>自动的懒加载</strong>、<strong>自动检测图片大小</strong>、<strong>自动为不同设备提供不同大小的图片</strong>、<strong>自动以 WebP 格式传输以提高效率</strong>以及大量其他高级功能（这里添加了 <code>priority</code> 关闭了懒加载功能，因为这是个 Logo，始终应该显示）：</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Image</span> <span class="keyword">from</span> <span class="string">'next/image'</span>;</span><br><span class="line"><span class="keyword">import</span> logoImg <span class="keyword">from</span> <span class="string">'@/assets/logo.png'</span>;</span><br><span class="line"></span><br><span class="line">&lt;!-- pass the object directly --&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">Image</span> <span class="attr">src</span>=<span class="string">{logoImg}</span> <span class="attr">alt</span>=<span class="string">"Logo"</span> <span class="attr">priority</span> /&gt;</span></span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>可以使用 <code>fill</code> prop，来指定图片填充于父组件定义的空间中。这种方法适用于需要显示长宽未知的图片的情况。</p>
+<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><p>在前面我们已经看到了全局 CSS 的导入方法，在我们的 Root Layout 中：</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">"./global.css"</span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>NextJS 还支持 CSS 模块，只需要使用类似 <code>*.module.css</code> 的命名方式，就可以使用下面的方法导入并使用该 CSS 定义的内容，并且将其限定在特定的组件中：</p>
+<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.header</span> {</span><br><span class="line">  <span class="comment">/* ... */</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.logo</span> {</span><br><span class="line">  <span class="comment">/* ... */</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> classes <span class="keyword">from</span> <span class="string">'./header.module.css'</span>; <span class="comment">// you can choose any name</span></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">header</span> <span class="attr">className</span>=<span class="string">{classes.header}</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;<span class="name">Link</span> <span class="attr">className</span>=<span class="string">{classes.logo}</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="comment">&lt;!-- ... --&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">header</span>&gt;</span></span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="配置-SQLite-数据库"><a href="#配置-SQLite-数据库" class="headerlink" title="配置 SQLite 数据库"></a>配置 SQLite 数据库</h2><p>下面使用 <code>better-sqlite3</code> 配置了一个 SQLite 数据库供后面使用：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install better-sqlite3</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> sql = <span class="built_in">require</span>(<span class="string">"better-sqlite3"</span>);</span><br><span class="line"><span class="keyword">const</span> db = <span class="title function_">sql</span>(<span class="string">"meals.db"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> dummyMeals = [</span><br><span class="line">  {</span><br><span class="line">    <span class="attr">title</span>: <span class="string">"Juicy Cheese Burger"</span>,</span><br><span class="line">    <span class="attr">slug</span>: <span class="string">"juicy-cheese-burger"</span>,</span><br><span class="line">    <span class="attr">image</span>: <span class="string">"/images/burger.jpg"</span>,</span><br><span class="line">    <span class="attr">summary</span>: <span class="string">"..."</span>,</span><br><span class="line">    <span class="attr">instructions</span>: <span class="string">`...`</span>,</span><br><span class="line">    <span class="attr">creator</span>: <span class="string">"John Doe"</span>,</span><br><span class="line">    <span class="attr">creator_email</span>: <span class="string">"johndoe@example.com"</span>,</span><br><span class="line">  },</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">db.<span class="title function_">prepare</span>(</span><br><span class="line">  <span class="string">`</span></span><br><span class="line"><span class="string">   CREATE TABLE IF NOT EXISTS meals (</span></span><br><span class="line"><span class="string">       id INTEGER PRIMARY KEY AUTOINCREMENT,</span></span><br><span class="line"><span class="string">       slug TEXT NOT NULL UNIQUE,</span></span><br><span class="line"><span class="string">       title TEXT NOT NULL,</span></span><br><span class="line"><span class="string">       image TEXT NOT NULL,</span></span><br><span class="line"><span class="string">       summary TEXT NOT NULL,</span></span><br><span class="line"><span class="string">       instructions TEXT NOT NULL,</span></span><br><span class="line"><span class="string">       creator TEXT NOT NULL,</span></span><br><span class="line"><span class="string">       creator_email TEXT NOT NULL</span></span><br><span class="line"><span class="string">    )</span></span><br><span class="line"><span class="string">`</span></span><br><span class="line">).<span class="title function_">run</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">initData</span>(<span class="params"></span>) {</span><br><span class="line">  <span class="keyword">const</span> stmt = db.<span class="title function_">prepare</span>(<span class="string">`</span></span><br><span class="line"><span class="string">      INSERT INTO meals VALUES (</span></span><br><span class="line"><span class="string">         null,</span></span><br><span class="line"><span class="string">         @slug,</span></span><br><span class="line"><span class="string">         @title,</span></span><br><span class="line"><span class="string">         @image,</span></span><br><span class="line"><span class="string">         @summary,</span></span><br><span class="line"><span class="string">         @instructions,</span></span><br><span class="line"><span class="string">         @creator,</span></span><br><span class="line"><span class="string">         @creator_email</span></span><br><span class="line"><span class="string">      )</span></span><br><span class="line"><span class="string">   `</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">const</span> meal <span class="keyword">of</span> dummyMeals) {</span><br><span class="line">    stmt.<span class="title function_">run</span>(meal);</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="title function_">initData</span>();</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h2><p>在 NextJS 中，你仍然可以像原生 React 中做的那样，使用 <code>useEffect</code> 配合 <code>fetch</code> 用请求的方式从某个后端获取数据。<br>但是，由于我们在使用 NextJS 这样一个全栈框架，我们已经拥有了一个后端。所以，在这里直接操作数据库也是安全的。</p>
+<p>创建 <code>meals.js</code>：</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sql <span class="keyword">from</span> <span class="string">"better-sqlite3"</span>;</span><br><span class="line"><span class="keyword">const</span> db = <span class="title function_">sql</span>(<span class="string">"meals.db"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">getMeals</span>(<span class="params"></span>) {</span><br><span class="line">  <span class="comment">// 模拟该操作会花费一些时间</span></span><br><span class="line">  <span class="keyword">await</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> <span class="built_in">setTimeout</span>(resolve, <span class="number">2000</span>));</span><br><span class="line">  <span class="keyword">return</span> db.<span class="title function_">prepare</span>(<span class="string">"SELECT * FROM meals"</span>).<span class="title function_">all</span>();</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后，在需要使用它的组件代码中：</p>
+<ul>
+<li>与原生 React 不同，你可以将组件函数使用 <code>async</code> 修饰 </li>
+</ul>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> { getMeals } <span class="keyword">from</span> <span class="string">"@/lib/meals"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">MealsPage</span>(<span class="params"></span>) {</span><br><span class="line">  <span class="keyword">const</span> meals = <span class="keyword">await</span> <span class="title function_">getMeals</span>();</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="加载"><a href="#加载" class="headerlink" title="加载"></a>加载</h2><p>为了添加加载页面，只需要在对应路由的目录下，添加 <code>loading.js</code>，并编辑一些自定义的加载代码即可：</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">MealsLoadingPage</span>(<span class="params"></span>) {</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Fetching meals...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这样的加载是面向整个页面组件的。如果我们希望只是加载部分元素，可以使用 <code>Suspense</code>：</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> { <span class="title class_">Suspense</span> } <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">Meals</span>(<span class="params"></span>) {</span><br><span class="line">  <span class="keyword">const</span> meals = <span class="keyword">await</span> <span class="title function_">getMeals</span>();</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">&lt;<span class="title class_">Suspense</span> fallback={<span class="language-xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Fetching meals...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span>}&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">Meals</span> /&gt;</span></span></span><br><span class="line">&lt;/<span class="title class_">Suspense</span>&gt;;</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h2><p>通过在对应路由目录下添加 <code>error.js</code>，可以创建错误页面。该组件必须是客户端组件：</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"use client"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">Error</span>(<span class="params">{ error }</span>) {</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>An error occured!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Not-Found"><a href="#Not-Found" class="headerlink" title="Not Found"></a>Not Found</h2><p>通过在对应路由目录下添加 <code>not-found.js</code>，可以创建 Not Found 页面。</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">NotFound</span>(<span class="params"></span>) {</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Not Found<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>如果希望以编程方式手动切换到 Not Found 组件，可以使用：</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> { notFound } <span class="keyword">from</span> <span class="string">"next/navigation"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (!meal) {</span><br><span class="line">  <span class="title function_">notFound</span>();</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Server-Action"><a href="#Server-Action" class="headerlink" title="Server Action"></a>Server Action</h2><p>通过在函数中添加 <code>'use server';</code> 可以确保某个函数在服务器上执行，此外，还必须将该函数使用 <code>async</code> 修饰。<br>顺便一说，这个功能在原生 React 中是存在的。但为了让其生效，你必须使用一个像是 NextJS 这样的框架。</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">ShareMealPage</span>(<span class="params"></span>) {</span><br><span class="line">  <span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">shareMeal</span>(<span class="params">formData</span>) {</span><br><span class="line">    <span class="string">'use server'</span>;</span><br><span class="line">    <span class="keyword">const</span> meal = {</span><br><span class="line">      <span class="attr">title</span>: formData.<span class="title function_">get</span>(<span class="string">'title'</span>),</span><br><span class="line">      <span class="comment">// ...</span></span><br><span class="line">    };</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  }</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">{shareMeal}</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="comment">&lt;!-- ... --&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>'use server';</code> 无法在客户端组件中使用，所以你可能需要将 Server Actions 存储到单独的文件中：</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"use server"</span>;</span><br><span class="line"><span class="keyword">import</span> { redirect } <span class="keyword">from</span> <span class="string">"next/navigation"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">shareMeal</span>(<span class="params">formData</span>) {</span><br><span class="line">  <span class="keyword">const</span> meal = {</span><br><span class="line">    <span class="attr">title</span>: formData.<span class="title function_">get</span>(<span class="string">"title"</span>),</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  };</span><br><span class="line"></span><br><span class="line">  <span class="comment">// ... server-side validation</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">await</span> <span class="title function_">saveMeal</span>(meal);</span><br><span class="line">  <span class="title function_">redirect</span>(<span class="string">"/meals"</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="添加-XSS-保护"><a href="#添加-XSS-保护" class="headerlink" title="添加 XSS 保护"></a>添加 XSS 保护</h2><p>如果我们需要将用户填写的内容创建为 HTML，就必须添加 XSS 保护。下面的例子还使用 Slugify 来根据标题创建 Slug：</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// npm install slugify xss</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">saveMeal</span>(<span class="params">meal</span>) {</span><br><span class="line">  meal.<span class="property">slug</span> = <span class="title function_">slugify</span>(meal.<span class="property">title</span>, { <span class="attr">lower</span>: <span class="literal">true</span> });</span><br><span class="line">  meal.<span class="property">instructions</span> = <span class="title function_">xss</span>(meal.<span class="property">instructions</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="保存文件和数据"><a href="#保存文件和数据" class="headerlink" title="保存文件和数据"></a>保存文件和数据</h2><p>使用 NodeJS 提供的 <code>fs</code>，可以存储将文件存储到服务器本地：</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> fs <span class="keyword">from</span> <span class="string">'node:fs'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">saveMeal</span>(<span class="params">meal</span>) {</span><br><span class="line">  meal.<span class="property">slug</span> = <span class="title function_">slugify</span>(meal.<span class="property">title</span>, { <span class="attr">lower</span>: <span class="literal">true</span> });</span><br><span class="line">  meal.<span class="property">instructions</span> = <span class="title function_">xss</span>(meal.<span class="property">instructions</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> extension = meal.<span class="property">image</span>.<span class="property">name</span>.<span class="title function_">split</span>(<span class="string">'.'</span>).<span class="title function_">pop</span>();</span><br><span class="line">  <span class="keyword">const</span> fileName = <span class="string">`<span class="subst">${meal.slug}</span>.<span class="subst">${extension}</span>`</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> stream = fs.<span class="title function_">createWriteStream</span>(<span class="string">`public/images/<span class="subst">${fileName}</span>`</span>);</span><br><span class="line">  <span class="keyword">const</span> bufferedImage = <span class="keyword">await</span> meal.<span class="property">image</span>.<span class="title function_">arrayBuffer</span>();</span><br><span class="line"></span><br><span class="line">  stream.<span class="title function_">write</span>(<span class="title class_">Buffer</span>.<span class="title function_">from</span>(bufferedImage), <span class="function">(<span class="params">error</span>) =&gt;</span> {</span><br><span class="line">    <span class="keyword">if</span> (error) {</span><br><span class="line">      <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">'Saving image failed!'</span>);</span><br><span class="line">    }</span><br><span class="line">  });</span><br><span class="line"></span><br><span class="line">  meal.<span class="property">image</span> = <span class="string">`/images/<span class="subst">${fileName}</span>`</span>;</span><br><span class="line">  db.<span class="title function_">prepare</span>(<span class="string">`</span></span><br><span class="line"><span class="string">    INSERT INTO meals ...</span></span><br><span class="line"><span class="string">  `</span>).<span class="title function_">run</span>(meal);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>但这不是推荐的做法。为了存储文件，最好还是使用像是 AWS S3 这样的服务。</p>
+<h2 id="使用-useFormStatus-管理表单提交状态"><a href="#使用-useFormStatus-管理表单提交状态" class="headerlink" title="使用 useFormStatus 管理表单提交状态"></a>使用 <code>useFormStatus</code> 管理表单提交状态</h2><figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"use client"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> { useFormStatus } <span class="keyword">from</span> <span class="string">"react-dom"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">MealsFormSubmit</span>(<span class="params"></span>) {</span><br><span class="line">  <span class="keyword">const</span> { pending } = <span class="title function_">useFormStatus</span>();</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">disabled</span>=<span class="string">{pending}</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      {pending ? "Submitting..." : "Share Meal"}</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="使用-useFormState-来接受-Server-Action-Response"><a href="#使用-useFormState-来接受-Server-Action-Response" class="headerlink" title="使用 useFormState 来接受 Server Action Response"></a>使用 <code>useFormState</code> 来接受 Server Action Response</h2><p>注意这里是 <code>useFormState</code>，与 <code>useFormStatus</code> 区分。它有点像 <code>useState</code>。</p>
+<ul>
+<li>它接受两个参数：第一个是实际应当在表单提交时触发的 Server Action；第二个是表单的初始值。</li>
+<li>它返回两个参数：第一个是表单初始值，或者 Server Action 的响应；第二个用于和 <code>form</code> 绑定。<br>需要注意 <code>useFormState</code> 仅在客户端组件中可用。</li>
+</ul>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'use client'</span>;</span><br><span class="line"><span class="keyword">import</span> { useFormState } <span class="keyword">from</span> <span class="string">'react-dom'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">ShareMealPage</span>(<span class="params"></span>) {</span><br><span class="line">  <span class="keyword">const</span> [state, formAction] = <span class="title function_">useFormState</span>(shareMeal, { <span class="attr">message</span>: <span class="literal">null</span> });</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">{formAction}</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="comment">&lt;!-- ... --&gt;</span></span></span><br><span class="line"><span class="language-xml">      { state.message &amp;&amp; <span class="tag">&lt;<span class="name">p</span>&gt;</span>{ state.message }<span class="tag">&lt;/<span class="name">p</span>&gt;</span> }</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>我们还需要更改我们的 Server Action <code>shareMeal</code>（添加 <code>prevState</code> 作为第一个参数）：</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">shareMeal</span>(<span class="params">prevState, formData</span>) {</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="生产部署和缓存"><a href="#生产部署和缓存" class="headerlink" title="生产部署和缓存"></a>生产部署和缓存</h2><p>运行下面的命令来创建生产环境的部署，并启动生产环境的服务器：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br><span class="line">npm start</span><br></pre></td></tr></tbody></table></figure>
+
+<p>我们会遇到一个问题，即我们新添加的内容并不显示。这是因为 NextJS 默认情况下采取一个非常激进的缓存策略，即在创建生产环境的项目文件时，默认静态生成所有页面以供缓存。<br>为了解决这个问题，我们可以使用 <code>revalidatePath</code> ：</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> revalidatePath <span class="keyword">from</span> <span class="string">"next/cache"</span>;</span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="keyword">await</span> <span class="title function_">saveMeal</span>(meal);</span><br><span class="line"><span class="title function_">revalidatePath</span>(<span class="string">"/meals"</span>); <span class="comment">// only that path, no nest path</span></span><br><span class="line"><span class="title function_">redirect</span>(<span class="string">"/meals"</span>);</span><br></pre></td></tr></tbody></table></figure>
+
+<p>默认情况下，<code>revalidatePath</code> 仅会对 exact 那个目录生效，这是因为它其实可以接受第二个参数，默认值为 <code>page</code>。如果希望对当前路由及其子路由均生效，可以使用 <code>layout</code>：</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">revalidatePath</span>(<span class="string">"/meals"</span>, <span class="string">"layout"</span>);</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="元数据"><a href="#元数据" class="headerlink" title="元数据"></a>元数据</h2><p>通过在 Root Layout 中导出 <code>metadata</code> 这一变量，我们已经为整个站点设置了元数据：</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> metadata = {</span><br><span class="line">  <span class="attr">title</span>: <span class="string">"NextLevel Food"</span>,</span><br><span class="line">  <span class="attr">description</span>: <span class="string">"Delicious meals, shared by a food-loving community."</span>,</span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
+
+<p>我们也可以为页面单独设置元数据，只需要在对应页面中导出名为 <code>metadata</code> 的变量即可。</p>
+<p>对于动态页面，你可能希望添加动态的元数据，可以这样做：</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">generateMetadata</span>(<span class="params">{ params }</span>) {</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="keyword">return</span> {</span><br><span class="line">    <span class="attr">title</span>: <span class="comment">/* ... */</span>,</span><br><span class="line">    <span class="attr">description</span>: <span class="comment">/* ... */</span>,</span><br><span class="line">  };</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/rss.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/react/" rel="tag"># React</a>
+              <a href="/tags/next-js/" rel="tag"># Next.js</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/86a70735.html" rel="prev" title="Docker: 是什么？为什么？怎么用？">
+                  <i class="fa fa-angle-left"></i> Docker: 是什么？为什么？怎么用？
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">BlockLune</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/BlockLune" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.0/mermaid.min.js","integrity":"sha256-stuqcu2FrjYCXDOytWFA5SoUE/r3nkp6gTglzNSlavU="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"BlockLune","repo":"blocklune.github.io","client_id":"f0d9ff2c460a605d4f3f","client_secret":"9808616eda1afe0741c036b5d5670a490b68f6ef","admin_user":"BlockLune","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"2658a32d7862cf9615d9ce205a7d0d85"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

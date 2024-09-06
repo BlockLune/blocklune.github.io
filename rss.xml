@@ -9,8 +9,33 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Tue, 03 Sep 2024 08:35:32 GMT</pubDate>
+    <pubDate>Fri, 06 Sep 2024 03:35:57 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>NextJS 笔记</title>
+      <link>https://fishg.top/posts/cca59e58.html</link>
+      <guid>https://fishg.top/posts/cca59e58.html</guid>
+      <pubDate>Fri, 06 Sep 2024 03:35:57 GMT</pubDate>
+      
+      <description>&lt;p&gt;这是一篇课堂笔记，课程为 Udemy &lt;a href=&quot;https://www.udemy.com/course/react-the-complete-guide-incl-redux/&quot;&gt;React - The Complete Guide 2024&lt;/a&gt;。该笔记包含了该课程中有关 NextJS 的部分内容。&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://fishg.top/categories/cs/">CS</category>
+      
+      <category domain="https://fishg.top/categories/cs/web/">Web</category>
+      
+      
+      <category domain="https://fishg.top/tags/react/">React</category>
+      
+      <category domain="https://fishg.top/tags/next-js/">Next.js</category>
+      
+      
+      <comments>https://fishg.top/posts/cca59e58.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Docker: 是什么？为什么？怎么用？</title>
