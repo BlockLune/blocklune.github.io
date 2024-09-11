@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- hexo injector head_begin start --><!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "61641c63411e4533b0bc263d76e9c650"}'></script><!-- End Cloudflare Web Analytics --><script defer src="https://eu.umami.is/script.js" data-website-id="f576c93d-b2e8-4701-9cd1-797cb6a6b79a"></script><!-- hexo injector head_begin end -->
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="google7b9c7ea42a3102a3.html">
+  <meta name="baidu-site-verification" content="baidu_verify_code-53bseLro2G.html">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"fishg.top","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="MIT 6.005 Spring 2016 的 OCW 版本的学习笔记。此篇笔记涉及的内容为 Reading 3 Testing。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="阅读材料 3 - 测试 | MIT 6.005">
+<meta property="og:url" content="https://fishg.top/posts/4457dd63.html">
+<meta property="og:site_name" content="Fish Pond">
+<meta property="og:description" content="MIT 6.005 Spring 2016 的 OCW 版本的学习笔记。此篇笔记涉及的内容为 Reading 3 Testing。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://ocw.mit.edu/ans7870/6/6.005/s16/classes/03-testing/figures/multiply-partition.png">
+<meta property="og:image" content="https://ocw.mit.edu/ans7870/6/6.005/s16/classes/03-testing/figures/max-partition.png">
+<meta property="og:image" content="https://ocw.mit.edu/ans7870/6/6.005/s16/classes/03-testing/figures/eclemma.png">
+<meta property="article:published_time" content="2024-09-11T06:56:57.000Z">
+<meta property="article:modified_time" content="2024-09-11T06:56:57.000Z">
+<meta property="article:author" content="BlockLune">
+<meta property="article:tag" content="Software Engineering">
+<meta property="article:tag" content="MIT 6.005">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ocw.mit.edu/ans7870/6/6.005/s16/classes/03-testing/figures/multiply-partition.png">
+
+
+<link rel="canonical" href="https://fishg.top/posts/4457dd63.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://fishg.top/posts/4457dd63.html","path":"posts/4457dd63.html","title":"阅读材料 3 - 测试 | MIT 6.005"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>阅读材料 3 - 测试 | MIT 6.005 | Fish Pond</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XQDPHGPHDL"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-XQDPHGPHDL","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+
+  <script async defer data-website-id="f576c93d-b2e8-4701-9cd1-797cb6a6b79a" src="https://analytics.umami.is/script.js"></script>
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/rss.xml" title="Fish Pond" type="application/rss+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Fish Pond</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Posts swim here.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E7%A8%8B%E7%9B%AE%E6%A0%87"><span class="nav-number">1.</span> <span class="nav-text">课程目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%AA%8C%E8%AF%81-Validation"><span class="nav-number">2.</span> <span class="nav-text">验证 Validation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%BE%88%E5%9B%B0%E9%9A%BE"><span class="nav-number">2.1.</span> <span class="nav-text">为什么软件测试很困难</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%90%E4%B8%BA%E4%B8%80%E4%B8%AA%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%BA%BA%E5%91%98"><span class="nav-number">2.2.</span> <span class="nav-text">成为一个软件测试人员</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E4%BC%98%E5%85%88%E7%BC%96%E7%A8%8B-Test-first-Programming"><span class="nav-number">3.</span> <span class="nav-text">测试优先编程 Test-first Programming</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E5%88%92%E5%88%86%E6%9D%A5%E9%80%89%E6%8B%A9%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B"><span class="nav-number">4.</span> <span class="nav-text">通过划分来选择测试用例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%EF%BC%9ABigInterger-multiply"><span class="nav-number">4.1.</span> <span class="nav-text">例子：BigInterger.multiply()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%EF%BC%9Amax"><span class="nav-number">4.2.</span> <span class="nav-text">例子：max()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E5%88%86%E5%8C%BA%E4%B8%AD%E5%8C%85%E5%90%AB%E8%BE%B9%E7%95%8C"><span class="nav-number">4.3.</span> <span class="nav-text">在分区中包含边界</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A6%86%E7%9B%96%E5%88%86%E5%8C%BA%E7%9A%84%E4%B8%A4%E4%B8%AA%E6%9E%81%E7%AB%AF"><span class="nav-number">4.4.</span> <span class="nav-text">覆盖分区的两个极端</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%BB%91%E7%9B%92%E4%B8%8E%E7%99%BD%E7%9B%92%E6%B5%8B%E8%AF%95"><span class="nav-number">5.</span> <span class="nav-text">黑盒与白盒测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%86%E4%BD%A0%E7%9A%84%E6%B5%8B%E8%AF%95%E7%AD%96%E7%95%A5%E5%86%99%E5%85%A5%E6%96%87%E6%A1%A3"><span class="nav-number">6.</span> <span class="nav-text">将你的测试策略写入文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A6%86%E7%9B%96%E7%8E%87"><span class="nav-number">7.</span> <span class="nav-text">覆盖率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E5%92%8C%E5%AD%98%E6%A0%B9"><span class="nav-number">8.</span> <span class="nav-text">单元测试和存根</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E6%B5%8B%E8%AF%95%E5%92%8C%E5%9B%9E%E5%BD%92%E6%B5%8B%E8%AF%95"><span class="nav-number">9.</span> <span class="nav-text">自动测试和回归测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">10.</span> <span class="nav-text">总结</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="BlockLune"
+      src="/img/waifu.png">
+  <p class="site-author-name" itemprop="name">BlockLune</p>
+  <div class="site-description" itemprop="description">Here is BlockLune's blog.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">91</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">140</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/BlockLune" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;BlockLune" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:blocklune@gmail.com" title="E-Mail → mailto:blocklune@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          Links
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://elysiapro.cn/" title="https:&#x2F;&#x2F;elysiapro.cn&#x2F;" rel="noopener" target="_blank">ElysiaPro's Blog</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://f-studio.is-best.net/" title="http:&#x2F;&#x2F;f-studio.is-best.net&#x2F;" rel="noopener" target="_blank">F-Studio</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://luoyuxuanryan.github.io/" title="https:&#x2F;&#x2F;luoyuxuanryan.github.io&#x2F;" rel="noopener" target="_blank">Radish Garden</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://tommygong.top/" title="https:&#x2F;&#x2F;tommygong.top&#x2F;" rel="noopener" target="_blank">TommyGong's Blog</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://blog.yfi.moe/" title="https:&#x2F;&#x2F;blog.yfi.moe&#x2F;" rel="noopener" target="_blank">Yunfi's Blog</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://fishg.top/posts/4457dd63.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/waifu.png">
+      <meta itemprop="name" content="BlockLune">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fish Pond">
+      <meta itemprop="description" content="Here is BlockLune's blog.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="阅读材料 3 - 测试 | MIT 6.005 | Fish Pond">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          阅读材料 3 - 测试 | MIT 6.005
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2024-09-11 14:56:57" itemprop="dateCreated datePublished" datetime="2024-09-11T14:56:57+08:00">2024-09-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/" itemprop="url" rel="index"><span itemprop="name">CS</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/software-engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>MIT 6.005 Spring 2016 的 <a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/6-005-software-construction-spring-2016/">OCW</a> 版本的学习笔记。此篇笔记涉及的内容为 Reading 3 Testing。</p>
+<span id="more"></span>
+
+<h2 id="课程目标"><a href="#课程目标" class="headerlink" title="课程目标"></a>课程目标</h2><p>上完今天的课程后，你应该：</p>
+<ul>
+<li>了解测试的价值，知道测试优先的编程过程；</li>
+<li>能够通过<strong>划分输入和输出空间</strong>以及<strong>选择好的测试用例</strong>来为方法设计测试套件；</li>
+<li>能够通过<strong>测量代码覆盖率</strong>来判断测试套件；</li>
+<li>了解并知道何时使用<strong>黑盒（blackbox）测试</strong>与<strong>白盒（whitebox）测试</strong>、<strong>单元（unit）测试</strong>与<strong>集成（integration）测试</strong>，以及<strong>自动回归（automated regression）测试</strong>。</li>
+</ul>
+<h2 id="验证-Validation"><a href="#验证-Validation" class="headerlink" title="验证 Validation"></a>验证 Validation</h2><p>测试是名为 <em>验证</em> 的一般过程的一种典型例子。验证的目的是发现程序中的问题，从而增强对程序正确性的信心。 验证包括：</p>
+<ul>
+<li>对程序进行<strong>形式推理</strong>，通常称为 _Verification_。 Verification 构建了程序正确性的形式化证明。使用手工方法进行 Verification 非常繁琐，而相关自动化工具仍处于活跃的研究中。不过，程序中的一些小的关键部分可以进行正式验证，例如操作系统中的调度程序、虚拟机中的字节码解释器或<a target="_blank" rel="noopener" href="https://www.csail.mit.edu/crash_tolerant_data_storage">操作系统中的文件系统</a>。</li>
+<li><strong>代码审查（Code Review）</strong>。 让别人仔细阅读你的代码，并对其进行非正式推理，是发现错误的好方法。这就像让别人校对你写的文章一样。我们将在下一篇文章中详细介绍代码审查。</li>
+<li><strong>测试</strong>。在精心挑选的输入上运行程序并检查结果。</li>
+</ul>
+<p>即使进行了最好的验证，也很难达到完美的软件质量。 以下是一些典型软件的每千行代码残余缺陷数量：</p>
+<ul>
+<li>1 - 10 个缺陷：典型工业软件。</li>
+<li>0.1 - 1 个缺陷：高质量验证。Java 库也许达到了这种程度的正确性。</li>
+<li>0.01 - 0.1 个缺陷：最好的、严格安全的验证。NASA 和 Praxis 这样的公司可以达到这一水平。</li>
+</ul>
+<p>对于大型系统来说，这可能很打击人。例如，如果您交付的典型工业软件代码大约有一百万行，那您可能遗漏了 1000 个错误！</p>
+<h3 id="为什么软件测试很困难"><a href="#为什么软件测试很困难" class="headerlink" title="为什么软件测试很困难"></a>为什么软件测试很困难</h3><p>不幸的是，在软件世界中，有些方法并不奏效。<br><strong>穷举测试 (Exhaustive Testing)</strong> 是不可行的。可能的测试用例空间通常太大，无法穷尽覆盖。试想一下，穷举测试 32 位浮点乘法运算 $a*b$ 。有 $2^{64}$ 个测试用例！</p>
+<p><strong>杂乱无章的测试 (Haphazard Testing)</strong> （"试一试，看能不能用"）不太可能发现错误，除非程序漏洞百出。任意选择的输入更有可能失败，而不是成功。它也不会增强我们对程序正确性的信心。</p>
+<p><strong>随机测试或统计测试 (Random or Statistical Testing)</strong> 对软件并不适用。 其他工程学科可以测试随机的小样本（如生产的硬盘驱动器的 1%），并推断出整个生产批次的缺陷率。 物理系统可以使用许多技巧来加快时间，比如在 24 小时内打开冰箱 1000 次，而不是 10 年。这些技巧给出了已知的故障率（如硬盘驱动器的平均寿命），但它们假定了缺陷空间的连续性或一致性。 这对物理工件来说是正确的，但对软件来说并非如此。</p>
+<p>软件的行为在可能的输入空间内是不连续和离散变化的。在广泛的输入范围内，系统可能看似运行正常，但在某个边界点却突然失灵。<a target="_blank" rel="noopener" href="https://www.willamette.edu/~mjaneba/pentprob.html">著名的奔腾除法错误</a>大约影响了 90 亿次除法中的 1 次。堆栈溢出、内存出错和数值溢出错误往往会突然发生，而且总是以同样的方式发生，而不是以概率变化的方式发生。 这与物理系统不同，在物理系统中，经常有明显的证据表明系统正在接近故障点（桥梁上的裂缝），或者故障在故障点附近呈概率分布（因此统计测试甚至在故障点到达之前就能观察到一些故障）。相反，软件测试中的测试用例必须谨慎、系统地选择，这就是我们接下来要研究的内容。</p>
+<h3 id="成为一个软件测试人员"><a href="#成为一个软件测试人员" class="headerlink" title="成为一个软件测试人员"></a>成为一个软件测试人员</h3><p>测试需要有正确的态度。当你编码时，你的目标是让程序运行，但作为测试人员，你的目标是<strong>让它失败</strong>。这是一个微妙但重要的区别。把刚写好的代码视为珍宝、易碎的蛋壳，轻描淡写地测试一下就想让它正常工作，这种做法太诱人了。但是，你必须残酷无情。好的测试人员会挥舞大锤，敲打程序可能存在漏洞的地方，从而消除这些漏洞。</p>
+<h2 id="测试优先编程-Test-first-Programming"><a href="#测试优先编程-Test-first-Programming" class="headerlink" title="测试优先编程 Test-first Programming"></a>测试优先编程 Test-first Programming</h2><p>尽早测试，经常测试。不要把测试留到最后，当你有一大堆未经验证的代码时才进行。把测试留到最后只会让调试变得更漫长、更痛苦，因为错误可能就在代码的任何地方。在开发过程中测试代码会让人愉快得多。</p>
+<p>在测试优先编程中，在编写任何代码之前都要先编写测试。一个函数的开发过程是这样的：</p>
+<ul>
+<li>为函数编写规范 (Specification)。</li>
+<li>编写测试来验证规范。</li>
+<li>编写实际代码。一旦代码通过了测试，就大功告成了。</li>
+</ul>
+<p><strong>规范 (Specification)</strong> 描述了函数的输入和输出行为。它给出了参数的类型以及对参数的附加限制（例如，<code>sqrt</code> 函数的参数必须非负）。它还给出了返回值的类型以及返回值与输入的关系。您已经在本课的问题集中看到并使用过规范。在代码中，规范由方法签名（method signature）和上面的注释组成，注释描述了方法的作用。关于规范，我们将在以后的几节课中详细介绍。</p>
+<p>优先编写测试是理解规范的好方法。规范也可能有缺陷 —— 不正确、不完整、模棱两可、遗漏边界条件 (corner cases)。尝试编写测试可以及早发现这些问题，避免浪费时间编写错误规范的实现。</p>
+<h2 id="通过划分来选择测试用例"><a href="#通过划分来选择测试用例" class="headerlink" title="通过划分来选择测试用例"></a>通过划分来选择测试用例</h2><p>创建一个好的测试套件是一个具有挑战性且有趣的设计问题。我们希望挑选一组测试用例，它们既要小到足以快速运行，又要大到足以验证程序。</p>
+<p>为此，我们将输入空间划分为多个 ** 子域 (Subdomains)**，每个子域由一组输入组成。这些子域加在一起完全覆盖了输入空间，因此每个输入至少位于一个子域中。然后，我们从每个子域中选择一个测试用例，组成我们的测试套件。</p>
+<p>子域背后的理念是将输入空间划分为相似的输入集，程序在这些输入集上具有相似的行为。然后，我们使用每个集合中的一个代表。这种方法通过选择不同的测试用例，迫使我们的测试探索随机测试可能无法达到的输入空间部分，从而充分利用了有限的测试资源。</p>
+<p>如果我们需要确保测试能够探索输出空间的不同部分，也可以将输出空间划分为子域（程序具有相似行为的相似输出）。但在大多数情况下，对输入空间进行划分就足够了。</p>
+<h3 id="例子：BigInterger-multiply"><a href="#例子：BigInterger-multiply" class="headerlink" title="例子：BigInterger.multiply()"></a>例子：<code>BigInterger.multiply()</code></h3><p>让我们来看一个例子。<a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/api/?java/math/BigInteger.html"><code>BigInteger</code></a> 是一个 Java 库中的内置类。它可以表示任意大小的整数，而不是像原始数据类型 <code>int</code> 和 <code>long</code> 那样只能表示有限数据范围的整数。大整数有一个 <code>multiply</code> 方法用于对两个 <code>BigInteger</code> 相乘：</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> val another BigIntger</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> a BigInteger whose value is (this * val).</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> BigInteger <span class="title function_">multiply</span><span class="params">(BigInteger val)</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>例如，可以这样使用它：</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">BigInteger</span> <span class="variable">a</span> <span class="operator">=</span> ...;</span><br><span class="line"><span class="type">BigInteger</span> <span class="variable">b</span> <span class="operator">=</span> ...;</span><br><span class="line"><span class="type">BigInteger</span> <span class="variable">ab</span> <span class="operator">=</span> a.multiply(b);</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这个例子表明，尽管在方法的声明中只明确显示了一个参数，但 <code>multiply</code> 实际上是两个参数的函数：调用方法的对象（上例中的 <code>a</code>）和在括号中传递的参数（上例中的 <code>b</code>）。在 Python 中，接收方法调用的对象会在方法声明中被明确命名为名为 <code>self</code> 的参数。 而在 Java 中，我们不会在参数中提及接收对象，并且它被称为 <code>this</code> 而不是 <code>self</code>。</p>
+<p>因此，我们应将 <code>multiply</code> 视为一个函数，它接受两个输入，每个输入都是 <code>BigInteger</code> 类型，并产生一个 <code>BigInteger</code> 类型的输出：</p>
+<p>$$<br>multiply : BigInteger \times BigInteger \rightarrow BigInteger<br>$$</p>
+<p>因此，我们有一个二维输入空间，由所有整数对 $(a,b)$ 组成。现在我们对它进行分区。考虑到乘法的原理，我们可以从这些分区开始：</p>
+<ul>
+<li><code>a</code> 和 <code>b</code> 都是正数</li>
+<li><code>a</code> 和 <code>b</code> 都是负数</li>
+<li><code>a</code> 是正数，<code>b</code> 是负数</li>
+<li><code>a</code> 是负数，<code>b</code> 是正数</li>
+</ul>
+<p>我们还应该检查一些乘法的特殊情况：$0$、$1$ 和 $-1$。</p>
+<ul>
+<li><code>a</code> 或 <code>b</code> 是 $0$, $1$ 或 $-1$</li>
+</ul>
+<p>最后，作为一个试图找出 bug 的测试人员，我们可能会怀疑 <code>BigInteger</code> 的实现者可能会在可能的情况下通过在内部使用 <code>int</code> 或 <code>long</code> 来使其更快，只有在值太大时才使用昂贵的一般表示（如数字列表）。因此，我们肯定也应该尝试使用非常大的整数，比最大的 <code>long</code> 整数还要大。</p>
+<ul>
+<li><code>a</code> 或 <code>b</code> 很小</li>
+<li><code>a</code> 或 <code>b</code> 的绝对值大于 <code>Long.MAX_VALUE</code>，即 Java 原始数据类型的最大正数（大约为 $2^{63}$）</li>
+</ul>
+<p>综上，对于整个 $(a,b)$ 空间，我们可以这样选择 <code>a</code> 和 <code>b</code>：</p>
+<ul>
+<li>$0$</li>
+<li>$1$</li>
+<li>$-1$</li>
+<li> 小正整数</li>
+<li>小负整数</li>
+<li>大正整数</li>
+<li>大负整数</li>
+</ul>
+<p>这产生了 $7 \times 7 = 49$ 个分区，完全覆盖整数对的空间。</p>
+<p>为了创建测试套件，我们可以从网格的每个方格中任意选取一对 $(a,b)$。例如：</p>
+<ul>
+<li>$(a,b) = (-3, 25)$ 覆盖（小负数，小正数）</li>
+<li>$(a,b) = (0, 30)$ 覆盖（0，小正数）</li>
+<li>$(a, b) = (2^{100}, 1)$ 覆盖（大整数，1）</li>
+<li>等等</li>
+</ul>
+<p>下图展示了上面的划分，图中标出的点可能就是我们选择的完全覆盖该分区的测试用例：</p>
+<p><img data-src="https://ocw.mit.edu/ans7870/6/6.005/s16/classes/03-testing/figures/multiply-partition.png" alt="multiply 的分区"></p>
+<h3 id="例子：max"><a href="#例子：max" class="headerlink" title="例子：max()"></a>例子：<code>max()</code></h3><p>让我们看看来自 Java 库中的另一个函数，来自 <a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html"><code>Math</code></a> 类中的 <code>max()</code> 函数。</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> a  an argument</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> b  another argument</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> the larger of a and b.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">max</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>从数学上，该函数遵循：</p>
+<p>$$<br>max : int \times int \rightarrow int<br>$$</p>
+<p>从这样的规范中，我们可以将函数分划为：</p>
+<ul>
+<li>$a &lt; b$</li>
+<li>$a = b$</li>
+<li>$a &gt; b$</li>
+</ul>
+<p>我们的测试套件可以是：</p>
+<ul>
+<li>$(a, b) = (1, 2)$ 用于覆盖 $a &lt; b$ 的情况</li>
+<li> $(a, b) = (9, 9)$ 用于覆盖 $a = b$ 的情况</li>
+<li> $(a, b) = (-5, -6)$ 用于覆盖 $a &gt; b$ 的情况</li>
+</ul>
+<p><img data-src="https://ocw.mit.edu/ans7870/6/6.005/s16/classes/03-testing/figures/max-partition.png" alt="max 的分区"></p>
+<h3 id="在分区中包含边界"><a href="#在分区中包含边界" class="headerlink" title="在分区中包含边界"></a>在分区中包含边界</h3><p>Bugs 通常发生在子域的 _边界_。例如：</p>
+<ul>
+<li>$0$ 是边界，正数和负数的边界</li>
+<li>数据类型（例如 <code>int</code> 和 <code>double</code>）的最大值或最小值是边界</li>
+<li>空（空字符串、空列表、空数组）是集合类型的边界</li>
+<li>集合类型的第一个和最后一个元素是边界</li>
+</ul>
+<p>为什么错误经常发生在边界处？其中一个原因是程序员经常犯 ** 差一错误 (off-by-one mistakes)**（如将 <code>&lt;=</code> 写成 <code>&lt;</code> ，或将计数器初始化为 0 而不是 1）。另一个原因是，有些边界可能需要在代码中作为特例处理。又或者，边界可能是代码行为中的不连续处。例如，当一个 <code>int</code> 变量的增长超过其最大正值时，它就会突然变成一个负数。</p>
+<p>重要的是，要将边界作为子域纳入分区，以便从边界中选择输入。</p>
+<p>重新对 $max : int \times int \rightarrow int$ 进行分区：</p>
+<ul>
+<li>考虑 $a$ 与 $b$ 的关系<ul>
+<li> $a &lt; b$</li>
+<li>$a = b$</li>
+<li>$a &gt; b$</li>
+</ul>
+</li>
+<li> 考虑 $a$ 的值<ul>
+<li> $a = 0$</li>
+<li>$a &lt; 0$</li>
+<li>$a &gt; 0$</li>
+<li>$a$ 为最小整数</li>
+<li> $a$ 为最大整数</li>
+</ul>
+</li>
+<li>考虑 $b$ 的值<ul>
+<li> $b = 0$</li>
+<li>$b &lt; 0$</li>
+<li>$b &gt; 0$</li>
+<li>$b$ 为最小整数</li>
+<li> $b$ 为最大整数</li>
+</ul>
+</li>
+</ul>
+<p>现在，我们可以选择覆盖这些类别的测试数据了：</p>
+<ul>
+<li>$(1, 2)$ 覆盖 $a &lt; b, a &gt; 0, b &gt; 0$ 的情况</li>
+<li> $(-1, -3)$ 覆盖 $a &gt; b, a &lt; 0, b &lt; 0$ 的情况</li>
+<li> $(0, 0)$ 覆盖 $a = b, a =0, b = 0$ 的情况</li>
+<li><code>(Integer.MIN\_VALUE, Interger.MAX\_VALUE)</code> 覆盖 $a &lt; b, a = minint, b = maxint$ 的情况</li>
+<li><code>(Integer.MAX\_VALUE, Interger.MIN\_VALUE)</code> 覆盖 $a &gt; b, a = maxint, b = minint$ 的情况。</li>
+</ul>
+<h3 id="覆盖分区的两个极端"><a href="#覆盖分区的两个极端" class="headerlink" title="覆盖分区的两个极端"></a>覆盖分区的两个极端</h3><p>对输入空间进行划分后，我们可以选择测试套件的彻底程度：</p>
+<ul>
+<li><strong>全笛卡尔乘积（Full Cartesian product）</strong>。每一个分割维度的合法组合都有一个测试用例。 我们在乘法示例中就是这样做的，结果得到了 $7 × 7 = 49$ 个测试用例。对于包含边界的最大值示例，它有三个维度，分别为 3 部分、5 部分和 5 部分，这意味着多达 3 × 5 × 5 = 75 个测试用例。 但实际上，并非所有这些组合都是可能的。例如，无法覆盖 $a &lt; b、a=0、b=0$ 这样的组合，因为 a 不可能同时小于零和等于零。</li>
+<li><strong>覆盖每个部分</strong>。 每个维度的每个部分都至少有一个测试用例，但不一定是每个组合。采用这种方法，如果精心选择，<code>max</code> 的测试套件可能只有 5 个测试用例。</li>
+</ul>
+<p>通常，我们会在这两个极端之间做出一些折中，基于人为的判断和谨慎，并且受到白盒测试和代码覆盖工具的影响，我们将在下文中探讨这些主题。</p>
+<h2 id="黑盒与白盒测试"><a href="#黑盒与白盒测试" class="headerlink" title="黑盒与白盒测试"></a>黑盒与白盒测试</h2><p>回顾上文，<em>规范</em> 是对函数行为的描述 —— 参数类型、返回值类型以及它们之间的约束和关系。</p>
+<p><strong>黑盒测试</strong> 意味着仅从规范中选择测试用例，而不是函数的实现。这就是我们迄今为止在示例中一直在做的。我们在不查看 <code>multiply</code> 和 <code>max</code> 函数实际代码的情况下，对这些函数进行了分区并寻找边界。</p>
+<p><strong>白盒测试</strong>（也称为玻璃盒测试）是指在了解函数实际实现方式的情况下选择测试用例。例如，如果函数的实现会根据输入选择不同的算法，那么就应该根据这些域进行划分。 如果实现保留了内部缓存，可以记住以前输入的答案，那么就应该测试重复输入。</p>
+<p>在进行白盒测试时，必须注意你的测试用例不应 <em>要求</em> 规范中没有明确要求的特定实现行为。例如，如果规范说 "如果输入格式不正确，就会抛出异常"，那么你的测试就不应该仅仅因为当前实现抛出 <code>NullPointerException</code> 就专门检查这样特定类型的异常。因为在这种情况下，规范允许抛出任何异常，所以你的测试用例同样应该是通用的，以保留实现者的自由。关于这一点，我们将在 "规范" 课程中详细介绍。</p>
+<h2 id="将你的测试策略写入文档"><a href="#将你的测试策略写入文档" class="headerlink" title="将你的测试策略写入文档"></a>将你的测试策略写入文档</h2><p>对于下面的示例函数：</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Reverses the end of a string.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * For example:</span></span><br><span class="line"><span class="comment"> *   reverseEnd("Hello, world", 5)</span></span><br><span class="line"><span class="comment"> *   returns "Hellodlrow ,"</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * With start == 0, reverses the entire text.</span></span><br><span class="line"><span class="comment"> * With start == text.length(), reverses nothing.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> text    non-null String that will have</span></span><br><span class="line"><span class="comment"> *                its end reversed</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> start   the index at which the</span></span><br><span class="line"><span class="comment"> *                remainder of the input is</span></span><br><span class="line"><span class="comment"> *                reversed, requires 0 &lt;=</span></span><br><span class="line"><span class="comment"> *                start &lt;= text.length()</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> input text with the substring from</span></span><br><span class="line"><span class="comment"> *               start to the end of the string</span></span><br><span class="line"><span class="comment"> *               reversed</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">static</span> String <span class="title function_">reverseEnd</span><span class="params">(String text, <span class="type">int</span> start)</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>我们可以这样记录上述分区练习中的分区策略。该策略还解决了一些我们之前没有考虑到的边界值问题。</p>
+<p>在测试类的顶部记录策略：</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * Testing strategy</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * Partition the inputs as follows:</span></span><br><span class="line"><span class="comment"> * text.length(): 0, 1, &gt; 1</span></span><br><span class="line"><span class="comment"> * start:         0, 1, 1 &lt; start &lt; text.length(),</span></span><br><span class="line"><span class="comment"> *                text.length() - 1, text.length()</span></span><br><span class="line"><span class="comment"> * text.length()-start: 0, 1, even &gt; 1, odd &gt; 1</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * Include even- and odd-length reversals because</span></span><br><span class="line"><span class="comment"> * only odd has a middle element that doesn't move.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * Exhaustive Cartesian coverage of partitions.</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>记录下如何选择每个测试用例，包括白盒测试：</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// covers test.length() = 0,</span></span><br><span class="line"><span class="comment">//        start = 0 = text.length(),</span></span><br><span class="line"><span class="comment">//        text.length()-start = 0</span></span><br><span class="line"><span class="meta">@Test</span> <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">testEmpty</span><span class="params">()</span> {</span><br><span class="line">    assertEquals(<span class="string">""</span>, reverseEnd(<span class="string">""</span>, <span class="number">0</span>));</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// ... other test cases ...</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="覆盖率"><a href="#覆盖率" class="headerlink" title="覆盖率"></a>覆盖率</h2><p>评判测试套件的一种方法是看它对程序进行了多彻底的测试。这一概念称为覆盖率。以下是三种常见的覆盖范围：</p>
+<ul>
+<li><strong>语句覆盖</strong>：每条语句都被测试用例覆盖到了吗？</li>
+<li><strong>分支覆盖</strong>：对于程序中的每个 <code>if</code> 或 <code>while</code> 语句，测试用例是否都覆盖了 true 和 false 两种情况？</li>
+<li><strong>路径覆盖</strong>：对于每个可能的分支组合 —— 即程序的每条路径 —— 都由特定的测试用例覆盖到了？</li>
+</ul>
+<p>分支覆盖率指标强于语句覆盖率指标（因为它需要更多的测试代码才能实现），而路径覆盖率指标也强于分支覆盖率指标。行业中，100% 的语句覆盖率是一个常见的目标，但由于防御性代码（如 "永远不应到达此处" 的断言）无法达到，即使是这样的目标也很少能实现。 100％ 的分支覆盖率是非常理想的，而对安全至关重要的工业代码则有更苛刻的标准（如 "MCDC"，修改后的决策 / 条件覆盖率）。遗憾的是，100% 的路径覆盖是不可行的，需要指数级大小的测试套件才能实现。</p>
+<p>测试的标准方法是：增加测试，直到测试套件达到足够的语句覆盖率，即程序中的每一条可触及语句都至少被一个测试用例执行。在实践中，语句覆盖率通常由代码覆盖率工具来衡量，该工具会计算测试套件运行每条语句的次数。有了这种工具，白盒测试就很容易了；你只需测量黑盒测试的覆盖率，然后添加更多测试用例，直到所有重要语句都被记录为已执行。</p>
+<p>下图所示的 <a target="_blank" rel="noopener" href="https://www.eclemma.org/">EclEmma</a> 是一款适用于 Eclipse 的优秀代码覆盖工具。</p>
+<p><img data-src="https://ocw.mit.edu/ans7870/6/6.005/s16/classes/03-testing/figures/eclemma.png" alt="EclEmma"></p>
+<p>测试套件已执行的行显示为绿色，尚未覆盖的行显示为红色。如果您从覆盖工具中看到了这样的结果，那么下一步就是编写一个测试用例，使 <code>while</code> 循环的主体执行，并将其添加到测试套件中，这样红行就会变成绿行。</p>
+<h2 id="单元测试和存根"><a href="#单元测试和存根" class="headerlink" title="单元测试和存根"></a>单元测试和存根</h2><p>一个经过良好测试的程序会对其包含的每个模块（模块是指方法或类）进行测试。如果可能，对单个模块进行隔离测试的测试称为<strong>单元测试</strong>。 对模块进行隔离的测试可以大大简化调试工作。当某个模块的单元测试失败时，你可以更确信错误是在该模块中发现的，而不是在程序的任何地方。</p>
+<p>与单元测试相反的是<strong>集成测试</strong>，它测试模块的组合，甚至整个程序。如果只有集成测试，那么当测试失败时，就必须寻找错误。它可能出现在程序的任何地方。集成测试仍然很重要，因为程序可能会在模块之间的连接处出现故障。例如，一个模块期望的输入可能与实际从另一个模块获得的不同。但是，如果你有一套完整的单元测试，让你对各个模块的正确性有信心，那么你就可以少走很多弯路，找到错误所在。</p>
+<p>假设你正在构建一个 Web 搜索引擎。你可能一个 <code>getWebPage()</code> 模块用于下载 Web 页面，以及一个 <code>extractWords()</code> 模块用于将页面拆分为单词：</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** <span class="doctag">@return</span> the contents of the web page downloaded from url</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">getWebPage</span><span class="params">(URL url)</span> {...}</span><br><span class="line"></span><br><span class="line"><span class="comment">/** <span class="doctag">@return</span> the words in string s, in the order they appear,</span></span><br><span class="line"><span class="comment"> *          where a word is a contiguous sequence of</span></span><br><span class="line"><span class="comment"> *          non-whitespace and non-punctuation characters</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;String&gt; <span class="title function_">extractWords</span><span class="params">(String s)</span> { ... }</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这些方法可能会被另一个 <code>makeIndex()</code> 模块使用，作为制作搜索引擎索引的网络爬虫的一部分：</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** <span class="doctag">@return</span> an index mapping a word to the set of URLs</span></span><br><span class="line"><span class="comment"> *          containing that word, for all webpages in the input set</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Map&lt;String, Set&lt;URL&gt;&gt; <span class="title function_">makeIndex</span><span class="params">(Set&lt;URL&gt; urls)</span> {</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">for</span> (URL url : urls) {</span><br><span class="line">        <span class="type">String</span> <span class="variable">page</span> <span class="operator">=</span> getWebPage(url);</span><br><span class="line">        List&lt;String&gt; words = extractWords(page);</span><br><span class="line">        ...</span><br><span class="line">    }</span><br><span class="line">    ...</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>在我们的测试组件中，我们希望：</p>
+<ul>
+<li>对 <code>getWebPage()</code> 进行单元测试，测试不同的 URLs</li>
+<li> 对 <code>extractWords()</code> 进行单元测试，测试不同的字符串</li>
+<li>对 <code>makeIndex()</code> 进行单元测试，测试不同的 URLs 集合</li>
+</ul>
+<p>程序员有时会犯的一个错误是，在编写 <code>extractWords()</code> 的测试用例时，测试用例依赖于 <code>getWebPage()</code> 的正确性。最好是单独考虑和测试 <code>extractWords()</code>，并对其进行分区。使用涉及网页内容的测试分区可能是合理的，因为程序中实际上就是这样使用 <code>extractWords()</code> 的。 但不要在测试用例中实际调用 <code>getWebPage()</code>，因为 <code>getWebPage()</code> 可能会出现错误！相反，将网页内容存储为字面字符串，然后直接传给 <code>extractWords()</code>。这样你就可以编写一个独立的单元测试，如果测试失败，你可以更确信错误出在实际测试的模块 <code>extractWords()</code> 中。</p>
+<p>请注意，<code>makeIndex()</code> 的单元测试不能轻易地以这种方式隔离开来。 当测试用例调用 <code>makeIndex()</code> 时，它不仅要测试 <code>makeIndex()</code> 内部代码的正确性，还要测试 <code>makeIndex()</code> 调用的所有方法的正确性。如果测试失败，错误就可能出现在这些方法中的任何一个。这就是为什么我们要对 <code>getWebPage()</code> 和 <code>extractWords()</code> 进行单独测试，以增加我们对这些模块的信心，并将问题定位到将它们连接在一起的 <code>makeIndex()</code> 代码上。</p>
+<p>如果我们为 <code>makeIndex()</code> 所调用的模块编写 <strong>存根 (stub)</strong> 版本，就可以隔离像 <code>makeIndex()</code> 这样的高级模块。例如，<code>getWebPage()</code> 的存根根本不会访问互联网，而是返回模拟的网页内容，无论传递给它的 URL 是什么。 类的存根通常被称为 <strong><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Mock_object">模拟对象</a></strong> 。 存根是构建大型系统时的一项重要技术，但我们在 6.005 中一般不会使用存根。</p>
+<h2 id="自动测试和回归测试"><a href="#自动测试和回归测试" class="headerlink" title="自动测试和回归测试"></a>自动测试和回归测试</h2><p>没有什么比完全自动化更容易运行测试，也更有可能运行测试了。<strong>自动化测试</strong>是指自动运行测试并检查其结果。测试驱动程序不应是一个交互式程序，提示输入并打印出结果，让你手动检查。相反，测试驱动程序应在固定的测试用例中调用模块本身，并自动检查结果是否正确。测试驱动程序的结果应该是 "所有测试都 OK" 或 "这些测试失败：......"。一个好的测试框架（如 JUnit）可以帮助你构建自动化测试套件。</p>
+<p>请注意，像 JUnit 这样的自动测试框架可以让您轻松运行测试，但您仍然需要自己编写优秀的测试用例。自动测试生成是一个难题，目前仍是计算机科学研究的热点。</p>
+<p>一旦实现了测试自动化，在修改代码时重新运行测试就非常重要了。这可以防止程序 _回归 (regressing)_，即在修复新错误或添加新功能时引入其他错误。在每次更改后运行所有测试称为 ** 回归测试 (regression testing)**。</p>
+<p>每当您发现并修复了一个错误，就把引起错误的输入作为测试用例添加到您的自动测试套件中。这种测试用例称为 _回归测试_。 这有助于用好的测试用例填充测试套件。请记住，如果一个测试引出了错误，那么它就是好测试，而每个回归测试都会在一个版本的代码中引出错误！保存回归测试还能防止重新引入错误的还原。这个错误可能很容易犯，因为它已经发生过一次了。</p>
+<p>这种想法也导致了 _测试优先的调试 (test-first debugging)_。当出现错误时，立即编写一个测试用例，并立即将其添加到测试套件中。一旦发现并修复了错误，所有的测试用例都将通过，调试工作也就完成了，同时也就有了针对该错误的回归测试。</p>
+<p>在实践中，自动测试和回归测试这两个概念几乎总是结合在一起使用。回归测试只有在测试可以经常自动运行的情况下才是实用的。反过来说，如果您的项目已经有了自动化测试，那么您不妨使用它来防止错误回归。因此，<strong>自动回归测试</strong>是现代软件工程的最佳实践。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在这篇阅读材料中，有以下要点：</p>
+<ul>
+<li>测试优先编程。在编写代码之前先编写测试。</li>
+<li>系统地选择测试用例的分区和边界。</li>
+<li>使用白盒测试、检查语句覆盖率，以完善一个测试套件。</li>
+<li>尽可能孤立地对每个模块进行单元测试。</li>
+<li>自动回归测试，防止错误再次出现。</li>
+</ul>
+<p>今天的阅读材料与优秀软件的三个关键特性的关联：</p>
+<ul>
+<li><strong>远离 Bugs</strong>。测试是为了发现代码中的 Bugs，而测试优先编程则是为了在引入错误后尽早发现它们。</li>
+<li><strong>易于理解</strong>。在这一点上，测试的帮助不如代码审查的帮助大。</li>
+<li><strong>为变更做好准备</strong>。编写仅依赖于规范中行为的测试为变更做好了准备。我们还谈到了自动回归测试，它有助于防止代码更改后再次出现错误。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/rss.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/software-engineering/" rel="tag"># Software Engineering</a>
+              <a href="/tags/mit-6-005/" rel="tag"># MIT 6.005</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/cca59e58.html" rel="prev" title="NextJS 笔记">
+                  <i class="fa fa-angle-left"></i> NextJS 笔记
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/703bb2b0.html" rel="next" title="阅读材料 4 - 代码审查 | MIT 6.005">
+                  阅读材料 4 - 代码审查 | MIT 6.005 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">BlockLune</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/BlockLune" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.0/mermaid.min.js","integrity":"sha256-stuqcu2FrjYCXDOytWFA5SoUE/r3nkp6gTglzNSlavU="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"BlockLune","repo":"blocklune.github.io","client_id":"f0d9ff2c460a605d4f3f","client_secret":"9808616eda1afe0741c036b5d5670a490b68f6ef","admin_user":"BlockLune","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"a48c77096ca6b7aaae4412fb81200144"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

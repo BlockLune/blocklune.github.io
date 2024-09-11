@@ -9,8 +9,58 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Fri, 06 Sep 2024 03:35:57 GMT</pubDate>
+    <pubDate>Wed, 11 Sep 2024 07:00:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>阅读材料 4 - 代码审查 | MIT 6.005</title>
+      <link>https://fishg.top/posts/703bb2b0.html</link>
+      <guid>https://fishg.top/posts/703bb2b0.html</guid>
+      <pubDate>Wed, 11 Sep 2024 07:00:00 GMT</pubDate>
+      
+      <description>&lt;p&gt;MIT 6.005 Spring 2016 的 &lt;a href=&quot;https://ocw.mit.edu/courses/6-005-software-construction-spring-2016/&quot;&gt;OCW&lt;/a&gt; 版本的学习笔记。此篇笔记涉及的内容为 Reading 4 Code Review。&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://fishg.top/categories/cs/">CS</category>
+      
+      <category domain="https://fishg.top/categories/cs/software-engineering/">Software Engineering</category>
+      
+      
+      <category domain="https://fishg.top/tags/software-engineering/">Software Engineering</category>
+      
+      <category domain="https://fishg.top/tags/mit-6-005/">MIT 6.005</category>
+      
+      
+      <comments>https://fishg.top/posts/703bb2b0.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>阅读材料 3 - 测试 | MIT 6.005</title>
+      <link>https://fishg.top/posts/4457dd63.html</link>
+      <guid>https://fishg.top/posts/4457dd63.html</guid>
+      <pubDate>Wed, 11 Sep 2024 06:56:57 GMT</pubDate>
+      
+      <description>&lt;p&gt;MIT 6.005 Spring 2016 的 &lt;a href=&quot;https://ocw.mit.edu/courses/6-005-software-construction-spring-2016/&quot;&gt;OCW&lt;/a&gt; 版本的学习笔记。此篇笔记涉及的内容为 Reading 3 Testing。&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://fishg.top/categories/cs/">CS</category>
+      
+      <category domain="https://fishg.top/categories/cs/software-engineering/">Software Engineering</category>
+      
+      
+      <category domain="https://fishg.top/tags/software-engineering/">Software Engineering</category>
+      
+      <category domain="https://fishg.top/tags/mit-6-005/">MIT 6.005</category>
+      
+      
+      <comments>https://fishg.top/posts/4457dd63.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>NextJS 笔记</title>
