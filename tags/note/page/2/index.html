@@ -22,35 +22,32 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"fishg.top","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="This is a note for Nand2Tetris unit 7 (Part II, Unit 1).">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Notes for Nand2Tetris: Virtual Machine I: Stack Arithmetic">
-<meta property="og:url" content="https://fishg.top/posts/d8b14680.html">
+    <meta name="description" content="Here is BlockLune&#39;s blog.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fish Pond">
+<meta property="og:url" content="https://fishg.top/tags/note/page/2/index.html">
 <meta property="og:site_name" content="Fish Pond">
-<meta property="og:description" content="This is a note for Nand2Tetris unit 7 (Part II, Unit 1).">
+<meta property="og:description" content="Here is BlockLune&#39;s blog.">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://b316f18.webp.li/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-virtual-machine-i-stack-arithmetic/1.png">
-<meta property="og:image" content="https://fishg.top/">
-<meta property="article:published_time" content="2023-07-19T03:25:49.000Z">
-<meta property="article:modified_time" content="2023-07-19T03:25:49.000Z">
 <meta property="article:author" content="BlockLune">
-<meta property="article:tag" content="Note">
-<meta property="article:tag" content="Coursera">
-<meta property="article:tag" content="Nand2Tetris">
-<meta property="article:tag" content="Virtual Machine">
-<meta property="article:tag" content="Stack Arithmetic">
+<meta property="article:tag" content="BlockLune">
+<meta property="article:tag" content="Blog">
+<meta property="article:tag" content="F-Studio">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="IT">
+<meta property="article:tag" content="NJUPT">
+<meta property="article:tag" content="NexT">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://b316f18.webp.li/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-virtual-machine-i-stack-arithmetic/1.png">
 
 
-<link rel="canonical" href="https://fishg.top/posts/d8b14680.html">
+<link rel="canonical" href="https://fishg.top/tags/note/page/2/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://fishg.top/posts/d8b14680.html","path":"posts/d8b14680.html","title":"Notes for Nand2Tetris: Virtual Machine I: Stack Arithmetic"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en","comments":"","permalink":"","path":"tags/note/page/2/index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Notes for Nand2Tetris: Virtual Machine I: Stack Arithmetic | Fish Pond</title>
+<title>Tag: Note | Fish Pond</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XQDPHGPHDL"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-XQDPHGPHDL","only_pageview":false,"measure_protocol_api_secret":null}</script>
@@ -142,7 +139,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -155,7 +152,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Unit-7-0"><span class="nav-number">1.</span> <span class="nav-text">Unit 7.0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unit-7-1"><span class="nav-number">2.</span> <span class="nav-text">Unit 7.1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unit-7-2"><span class="nav-number">3.</span> <span class="nav-text">Unit 7.2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unit-7-3"><span class="nav-number">4.</span> <span class="nav-text">Unit 7.3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unit-7-4"><span class="nav-number">5.</span> <span class="nav-text">Unit 7.4</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Pointer-manipulation"><span class="nav-number">5.1.</span> <span class="nav-text">Pointer manipulation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stack-machine"><span class="nav-number">5.2.</span> <span class="nav-text">Stack machine</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VM-translator-perspective"><span class="nav-number">5.3.</span> <span class="nav-text">VM translator perspective</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unit-7-5"><span class="nav-number">6.</span> <span class="nav-text">Unit 7.5</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -229,215 +225,217 @@
 
     </div>
 
-    <div class="main-inner post posts-expand">
+    <div class="main-inner tag posts-collapse">
 
 
   
-
-
-<div class="post-block">
   
   
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://fishg.top/posts/d8b14680.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/img/waifu.png">
-      <meta itemprop="name" content="BlockLune">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Fish Pond">
-      <meta itemprop="description" content="Here is BlockLune's blog.">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Notes for Nand2Tetris: Virtual Machine I: Stack Arithmetic | Fish Pond">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          Notes for Nand2Tetris: Virtual Machine I: Stack Arithmetic
+  <div class="post-block">
+    <div class="post-content">
+      <div class="collection-title">
+        <h1 class="collection-header">Note
+          <small>Tag</small>
         </h1>
+      </div>
 
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-07-19 11:25:49" itemprop="dateCreated datePublished" datetime="2023-07-19T11:25:49+08:00">2023-07-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/cs/" itemprop="url" rel="index"><span itemprop="name">CS</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/cs/computing-system/" itemprop="url" rel="index"><span itemprop="name">Computing System</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/cs/computing-system/nand2tetris/" itemprop="url" rel="index"><span itemprop="name">Nand2Tetris</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody"><p>This is a note for Nand2Tetris unit 7 (Part II, Unit 1).</p>
-<span id="more"></span>
-
-<h2 id="Unit-7-0"><a href="#Unit-7-0" class="headerlink" title="Unit 7.0"></a>Unit 7.0</h2><p>Jack program:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class Main {</span><br><span class="line">    function void main() {</span><br><span class="line">        do Output.printString("Hello World!");</span><br><span class="line">        do Output.println(); // New line.</span><br><span class="line">        return;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>What makes the abstraction work?</p>
-<ul>
-<li>Assembler</li>
-<li>Virtual machine</li>
-<li>Compiler</li>
-<li>Operating system</li>
-</ul>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-virtual-machine-i-stack-arithmetic/1.png" alt="From high-level to low-level"></p>
-<p>Nand2Tetris Part II is <strong>more demanding</strong> than Nand2Tetris Part I.</p>
-<h2 id="Unit-7-1"><a href="#Unit-7-1" class="headerlink" title="Unit 7.1"></a>Unit 7.1</h2><p>Module 1: Virtual Machine</p>
-<ul>
-<li>Understanding the abstraction</li>
-<li>Building the implementation</li>
-</ul>
-<p>Module 1: Take Home Lessons</p>
-<ul>
-<li>Compilation (big picture)</li>
-<li>Virtualization</li>
-<li>VM abstraction</li>
-<li>Stack processing</li>
-<li>VM implementation</li>
-<li>Pointers</li>
-<li>Programming</li>
-</ul>
-<h2 id="Unit-7-2"><a href="#Unit-7-2" class="headerlink" title="Unit 7.2"></a>Unit 7.2</h2><p>VM Abstraction: the Stack</p>
-<p>Stack operations:</p>
-<ul>
-<li>push: add a plate to the stack's top</li>
-<li>pop: remove the top plate</li>
-</ul>
-<p>Applying a function $f$ on the stack:</p>
-<ul>
-<li>pops the argument(s) from the stack</li>
-<li>computes $f$ on the arguments</li>
-<li>pushes the result onto the stack</li>
-</ul>
-<p>Stack arithmetic:</p>
-<p>high-level:</p>
-<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x = 17 + 19</span><br></pre></td></tr></tbody></table></figure>
-
-<p>After compilation:</p>
-<p>low-level:</p>
-<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">push 17</span><br><span class="line">push 19</span><br><span class="line">add</span><br><span class="line">pop x</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Stack machine, manipulated by:</p>
-<ul>
-<li>Arithmetic / logical commands</li>
-<li>Memory segment commands</li>
-<li>Branching commands</li>
-<li>Function commands</li>
-</ul>
-<h2 id="Unit-7-3"><a href="#Unit-7-3" class="headerlink" title="Unit 7.3"></a>Unit 7.3</h2><p>VM Abstraction: Memory Segments</p>
-<p>Memory segments:</p>
-<ul>
-<li>local</li>
-<li>argument</li>
-<li>this</li>
-<li>that</li>
-<li>constant</li>
-<li>static</li>
-<li>pointer</li>
-<li>temp</li>
-</ul>
-<p>Syntax:</p>
-<ul>
-<li>push $segment$ $i$:<br>Where $segment$ is: argument, local, static, constant, this, that, pointer, or temp<br>and $i$ is a non-negative integer</li>
-<li>pop $segment$ $i$:<br>Where $segment$ is: argument, local, static, this, that, pointer, or temp<br>and $i$ is a non-negative integer</li>
-</ul>
-<h2 id="Unit-7-4"><a href="#Unit-7-4" class="headerlink" title="Unit 7.4"></a>Unit 7.4</h2><h3 id="Pointer-manipulation"><a href="#Pointer-manipulation" class="headerlink" title="Pointer manipulation"></a>Pointer manipulation</h3><p>asterisk: *</p>
-<h3 id="Stack-machine"><a href="#Stack-machine" class="headerlink" title="Stack machine"></a>Stack machine</h3><p>...</p>
-<h3 id="VM-translator-perspective"><a href="#VM-translator-perspective" class="headerlink" title="VM translator perspective"></a>VM translator perspective</h3><p>VM Translator:</p>
-<ul>
-<li>A program that translates VM code into machine language</li>
-<li>Each VM command generates several assembly commands</li>
-</ul>
-<h2 id="Unit-7-5"><a href="#Unit-7-5" class="headerlink" title="Unit 7.5"></a>Unit 7.5</h2><p>Implementing <strong>local</strong></p>
-<p><img data-src="/" alt="Implementing local"></p>
-
+      
+    <div class="collection-year">
+      <span class="collection-header">2023</span>
     </div>
 
-    
-    
-    
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2023-07-12T11:57:51+08:00"
+              content="2023-07-12">
+          07-12
+        </time>
+      </div>
 
-    <footer class="post-footer">
-          <div class="followme">
-  <span>Welcome to my other publishing channels</span>
-
-  <div class="social-list">
-
-      <div class="social-item">
-          <a target="_blank" class="social-link" href="/rss.xml">
-            <span class="icon">
-              <i class="fa fa-rss"></i>
-            </span>
-
-            <span class="label">RSS</span>
+      <div class="post-title">
+          <a class="post-title-link" href="/posts/9a8ff4a5.html" itemprop="url">
+            <span itemprop="name">Notes for Nand2Tetris: Computer Architecture</span>
           </a>
       </div>
-  </div>
-</div>
 
-          <div class="post-tags">
-              <a href="/tags/note/" rel="tag"># Note</a>
-              <a href="/tags/coursera/" rel="tag"># Coursera</a>
-              <a href="/tags/nand2tetris/" rel="tag"># Nand2Tetris</a>
-              <a href="/tags/virtual-machine/" rel="tag"># Virtual Machine</a>
-              <a href="/tags/stack-arithmetic/" rel="tag"># Stack Arithmetic</a>
-          </div>
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/posts/869cdee6.html" rel="prev" title="Notes for Nand2Tetris: Assembler">
-                  <i class="fa fa-angle-left"></i> Notes for Nand2Tetris: Assembler
-                </a>
-            </div>
-            <div class="post-nav-item">
-                <a href="/posts/4f52bf7e.html" rel="next" title="RLCraft 新手教程 - 零：安装和资源导航">
-                  RLCraft 新手教程 - 零：安装和资源导航 <i class="fa fa-angle-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
+      
+    </header>
   </article>
-</div>
 
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2023-07-11T16:49:01+08:00"
+              content="2023-07-11">
+          07-11
+        </time>
+      </div>
 
+      <div class="post-title">
+          <a class="post-title-link" href="/posts/a4422da3.html" itemprop="url">
+            <span itemprop="name">Notes for Nand2Tetris: Machine Language</span>
+          </a>
+      </div>
 
+      
+    </header>
+  </article>
 
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2023-07-09T19:44:36+08:00"
+              content="2023-07-09">
+          07-09
+        </time>
+      </div>
 
+      <div class="post-title">
+          <a class="post-title-link" href="/posts/28d92424.html" itemprop="url">
+            <span itemprop="name">Notes for Nand2Tetris: Memory</span>
+          </a>
+      </div>
 
-    <div class="comments gitalk-container"></div>
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2023-07-08T22:17:06+08:00"
+              content="2023-07-08">
+          07-08
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/posts/f0f4eaec.html" itemprop="url">
+            <span itemprop="name">Notes for Nand2Tetris: Boolean Arithmetic and the ALU</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2023-07-08T15:06:35+08:00"
+              content="2023-07-08">
+          07-08
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/posts/53a0b5ef.html" itemprop="url">
+            <span itemprop="name">Notes for Nand2Tetris: Boolean Functions and Gate Logic</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2023-06-01T14:57:37+08:00"
+              content="2023-06-01">
+          06-01
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/posts/4eb7504e.html" itemprop="url">
+            <span itemprop="name">Const Correctness in C++</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2023-05-31T11:35:00+08:00"
+              content="2023-05-31">
+          05-31
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/posts/ab76f233.html" itemprop="url">
+            <span itemprop="name">Type Safety and Std::optional in C++</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2023-05-30T22:14:00+08:00"
+              content="2023-05-30">
+          05-30
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/posts/d5786049.html" itemprop="url">
+            <span itemprop="name">Move Semantics in C++</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+    <div class="collection-year">
+      <span class="collection-header">2022</span>
+    </div>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2022-11-22T14:25:21+08:00"
+              content="2022-11-22">
+          11-22
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/posts/a336c1b8.html" itemprop="url">
+            <span itemprop="name">初探深度优先搜索（DFS）和广度优先搜索（BFS）</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+    </div>
+  </div>
+  
+  
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" title="Previous page" aria-label="Previous page" href="/tags/note/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/tags/note/">1</a><span class="page-number current">2</span>
+  </nav>
+
 </div>
   </main>
 
@@ -501,13 +499,13 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"BlockLune","repo":"blocklune.github.io","client_id":"f0d9ff2c460a605d4f3f","client_secret":"9808616eda1afe0741c036b5d5670a490b68f6ef","admin_user":"BlockLune","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"c271d070acc6f721f110456fb6574d9d"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"BlockLune","repo":"blocklune.github.io","client_id":"f0d9ff2c460a605d4f3f","client_secret":"9808616eda1afe0741c036b5d5670a490b68f6ef","admin_user":"BlockLune","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"74779cd7d07eb823221ceb0760ae7acc"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>

@@ -236,6 +236,8 @@
       <category domain="https://fishg.top/categories/cs/algorithms-data-structures/">Algorithms &amp; Data structures</category>
       
       
+      <category domain="https://fishg.top/tags/note/">Note</category>
+      
       <category domain="https://fishg.top/tags/coursera/">Coursera</category>
       
       <category domain="https://fishg.top/tags/algorithm/">Algorithm</category>
@@ -550,7 +552,7 @@
       <guid>https://fishg.top/posts/d1584ae1.html</guid>
       <pubDate>Sun, 12 Nov 2023 11:20:26 GMT</pubDate>
       
-      <description>&lt;p&gt;This is a note for &lt;em&gt;&lt;a href=&quot;https://www.kaggle.com/learn/intro-to-machine-learning&quot;&gt;Intro to Machine Learning&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is a note for the course on Kaggle: &lt;em&gt;&lt;a href=&quot;https://www.kaggle.com/learn/intro-to-machine-learning&quot;&gt;Intro to Machine Learning&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;</description>
       
       
       
@@ -560,7 +562,13 @@
       <category domain="https://fishg.top/categories/cs/ai/">AI</category>
       
       
+      <category domain="https://fishg.top/tags/ai/">AI</category>
+      
       <category domain="https://fishg.top/tags/kaggle/">Kaggle</category>
+      
+      <category domain="https://fishg.top/tags/ml/">ML</category>
+      
+      <category domain="https://fishg.top/tags/note/">Note</category>
       
       
       <comments>https://fishg.top/posts/d1584ae1.html#disqus_thread</comments>
@@ -635,9 +643,17 @@
       <category domain="https://fishg.top/categories/cs/ai/">AI</category>
       
       
+      <category domain="https://fishg.top/tags/ai/">AI</category>
+      
+      <category domain="https://fishg.top/tags/ml/">ML</category>
+      
+      <category domain="https://fishg.top/tags/note/">Note</category>
+      
       <category domain="https://fishg.top/tags/coursera/">Coursera</category>
       
       <category domain="https://fishg.top/tags/machine-learning-specialization/">Machine Learning Specialization</category>
+      
+      <category domain="https://fishg.top/tags/python/">Python</category>
       
       <category domain="https://fishg.top/tags/tensorflow/">TensorFlow</category>
       
@@ -662,13 +678,21 @@
       <category domain="https://fishg.top/categories/cs/ai/">AI</category>
       
       
+      <category domain="https://fishg.top/tags/ai/">AI</category>
+      
+      <category domain="https://fishg.top/tags/ml/">ML</category>
+      
+      <category domain="https://fishg.top/tags/note/">Note</category>
+      
       <category domain="https://fishg.top/tags/coursera/">Coursera</category>
       
       <category domain="https://fishg.top/tags/machine-learning-specialization/">Machine Learning Specialization</category>
       
-      <category domain="https://fishg.top/tags/vectorization/">Vectorization</category>
+      <category domain="https://fishg.top/tags/python/">Python</category>
       
       <category domain="https://fishg.top/tags/numpy/">NumPy</category>
+      
+      <category domain="https://fishg.top/tags/vectorization/">Vectorization</category>
       
       
       <comments>https://fishg.top/posts/266471d7.html#disqus_thread</comments>
@@ -737,6 +761,8 @@
       <category domain="https://fishg.top/categories/cs/algorithms-data-structures/">Algorithms &amp; Data structures</category>
       
       
+      <category domain="https://fishg.top/tags/note/">Note</category>
+      
       <category domain="https://fishg.top/tags/coursera/">Coursera</category>
       
       <category domain="https://fishg.top/tags/algorithm/">Algorithm</category>
@@ -764,19 +790,21 @@
       <category domain="https://fishg.top/categories/cs/algorithms-data-structures/">Algorithms &amp; Data structures</category>
       
       
+      <category domain="https://fishg.top/tags/note/">Note</category>
+      
       <category domain="https://fishg.top/tags/coursera/">Coursera</category>
       
       <category domain="https://fishg.top/tags/algorithm/">Algorithm</category>
-      
-      <category domain="https://fishg.top/tags/directed-graph/">Directed Graph</category>
       
       <category domain="https://fishg.top/tags/bfs/">BFS</category>
       
       <category domain="https://fishg.top/tags/dfs/">DFS</category>
       
-      <category domain="https://fishg.top/tags/topological-sort/">Topological Sort</category>
+      <category domain="https://fishg.top/tags/directed-graph/">Directed Graph</category>
       
       <category domain="https://fishg.top/tags/strong-components/">Strong Components</category>
+      
+      <category domain="https://fishg.top/tags/topological-sort/">Topological Sort</category>
       
       
       <comments>https://fishg.top/posts/5b849ae3.html#disqus_thread</comments>
@@ -799,6 +827,8 @@
       <category domain="https://fishg.top/categories/cs/algorithms-data-structures/">Algorithms &amp; Data structures</category>
       
       
+      <category domain="https://fishg.top/tags/note/">Note</category>
+      
       <category domain="https://fishg.top/tags/coursera/">Coursera</category>
       
       <category domain="https://fishg.top/tags/algorithm/">Algorithm</category>
@@ -807,13 +837,13 @@
       
       <category domain="https://fishg.top/tags/dfs/">DFS</category>
       
-      <category domain="https://fishg.top/tags/undirected-graph/">Undirected Graph</category>
-      
-      <category domain="https://fishg.top/tags/euler-tour/">Euler Tour</category>
+      <category domain="https://fishg.top/tags/connected-component/">Connected Component</category>
       
       <category domain="https://fishg.top/tags/euler-cycle/">Euler Cycle</category>
       
-      <category domain="https://fishg.top/tags/connected-component/">Connected Component</category>
+      <category domain="https://fishg.top/tags/euler-tour/">Euler Tour</category>
+      
+      <category domain="https://fishg.top/tags/undirected-graph/">Undirected Graph</category>
       
       
       <comments>https://fishg.top/posts/d3e12860.html#disqus_thread</comments>
@@ -865,6 +895,8 @@
       <category domain="https://fishg.top/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
       
       
+      <category domain="https://fishg.top/tags/note/">Note</category>
+      
       <category domain="https://fishg.top/tags/coursera/">Coursera</category>
       
       <category domain="https://fishg.top/tags/nand2tetris/">Nand2Tetris</category>
@@ -895,6 +927,8 @@
       
       <category domain="https://fishg.top/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
       
+      
+      <category domain="https://fishg.top/tags/note/">Note</category>
       
       <category domain="https://fishg.top/tags/coursera/">Coursera</category>
       
@@ -928,7 +962,9 @@
       
       <category domain="https://fishg.top/tags/ai/">AI</category>
       
-      <category domain="https://fishg.top/tags/machine-learning/">Machine Learning</category>
+      <category domain="https://fishg.top/tags/ml/">ML</category>
+      
+      <category domain="https://fishg.top/tags/note/">Note</category>
       
       <category domain="https://fishg.top/tags/andrew-ng/">Andrew Ng</category>
       
@@ -954,6 +990,8 @@
       
       <category domain="https://fishg.top/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
       
+      
+      <category domain="https://fishg.top/tags/note/">Note</category>
       
       <category domain="https://fishg.top/tags/coursera/">Coursera</category>
       
@@ -1017,6 +1055,8 @@
       <category domain="https://fishg.top/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
       
       
+      <category domain="https://fishg.top/tags/note/">Note</category>
+      
       <category domain="https://fishg.top/tags/coursera/">Coursera</category>
       
       <category domain="https://fishg.top/tags/nand2tetris/">Nand2Tetris</category>
@@ -1049,6 +1089,8 @@
       
       
       <category domain="https://fishg.top/tags/memory/">Memory</category>
+      
+      <category domain="https://fishg.top/tags/note/">Note</category>
       
       <category domain="https://fishg.top/tags/coursera/">Coursera</category>
       
@@ -1087,6 +1129,8 @@
       <category domain="https://fishg.top/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
       
       
+      <category domain="https://fishg.top/tags/note/">Note</category>
+      
       <category domain="https://fishg.top/tags/coursera/">Coursera</category>
       
       <category domain="https://fishg.top/tags/nand2tetris/">Nand2Tetris</category>
@@ -1117,6 +1161,8 @@
       
       <category domain="https://fishg.top/categories/cs/computing-system/nand2tetris/">Nand2Tetris</category>
       
+      
+      <category domain="https://fishg.top/tags/note/">Note</category>
       
       <category domain="https://fishg.top/tags/nand2tetris/">Nand2Tetris</category>
       
@@ -1253,7 +1299,7 @@
       
       <category domain="https://fishg.top/tags/online-course-summary/">Online course summary</category>
       
-      <category domain="https://fishg.top/tags/c-c/">C &amp; C++</category>
+      <category domain="https://fishg.top/tags/c-c/">C/C++</category>
       
       <category domain="https://fishg.top/tags/cs106l/">CS106L</category>
       
@@ -1280,9 +1326,11 @@
       <category domain="https://fishg.top/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
       
       
-      <category domain="https://fishg.top/tags/const/">const</category>
+      <category domain="https://fishg.top/tags/note/">Note</category>
       
-      <category domain="https://fishg.top/tags/c-c/">C &amp; C++</category>
+      <category domain="https://fishg.top/tags/c-c/">C/C++</category>
+      
+      <category domain="https://fishg.top/tags/const/">const</category>
       
       <category domain="https://fishg.top/tags/cs106l/">CS106L</category>
       
@@ -1308,6 +1356,8 @@
       
       <category domain="https://fishg.top/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
       
+      
+      <category domain="https://fishg.top/tags/note/">Note</category>
       
       <category domain="https://fishg.top/tags/c-c/">C/C++</category>
       
@@ -1335,6 +1385,8 @@
       
       <category domain="https://fishg.top/categories/cs/languages/c-cpp/">C &amp; Cpp</category>
       
+      
+      <category domain="https://fishg.top/tags/note/">Note</category>
       
       <category domain="https://fishg.top/tags/c-c/">C/C++</category>
       
@@ -1846,6 +1898,8 @@
       
       <category domain="https://fishg.top/categories/cs/algorithms-data-structures/">Algorithms &amp; Data structures</category>
       
+      
+      <category domain="https://fishg.top/tags/note/">Note</category>
       
       <category domain="https://fishg.top/tags/algorithm/">Algorithm</category>
       

@@ -346,7 +346,7 @@
   <entry>
     <title>Note for Intro to Machine Learning</title>
     <url>/posts/d1584ae1.html</url>
-    <content><![CDATA[<p>This is a note for <em><a href="https://www.kaggle.com/learn/intro-to-machine-learning">Intro to Machine Learning</a></em>.</p>
+    <content><![CDATA[<p>This is a note for the course on Kaggle: <em><a href="https://www.kaggle.com/learn/intro-to-machine-learning">Intro to Machine Learning</a></em>.</p>
 <span id="more"></span>
 
 <figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> mean_absolute_error</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeRegressor</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Path of the file to read</span></span><br><span class="line">iowa_file_path = <span class="string">'../input/home-data-for-ml-course/train.csv'</span></span><br><span class="line"></span><br><span class="line">home_data = pd.read_csv(iowa_file_path)</span><br><span class="line"><span class="comment"># Create target object and call it y</span></span><br><span class="line">y = home_data.SalePrice</span><br><span class="line"><span class="comment"># Create X</span></span><br><span class="line">features = [<span class="string">'LotArea'</span>, <span class="string">'YearBuilt'</span>, <span class="string">'1stFlrSF'</span>, <span class="string">'2ndFlrSF'</span>, <span class="string">'FullBath'</span>, <span class="string">'BedroomAbvGr'</span>, <span class="string">'TotRmsAbvGrd'</span>]</span><br><span class="line">X = home_data[features]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Split into validation and training data</span></span><br><span class="line">train_X, val_X, train_y, val_y = train_test_split(X, y, random_state=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Specify Model</span></span><br><span class="line">iowa_model = DecisionTreeRegressor(random_state=<span class="number">1</span>)</span><br><span class="line"><span class="comment"># Fit Model</span></span><br><span class="line">iowa_model.fit(train_X, train_y)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Make validation predictions and calculate mean absolute error</span></span><br><span class="line">val_predictions = iowa_model.predict(val_X)</span><br><span class="line">val_mae = mean_absolute_error(val_predictions, val_y)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"Validation MAE when not specifying max_leaf_nodes: {:,.0f}"</span>.<span class="built_in">format</span>(val_mae))</span><br><span class="line"></span><br><span class="line"><span class="comment"># Using best value for max_leaf_nodes</span></span><br><span class="line">iowa_model = DecisionTreeRegressor(max_leaf_nodes=<span class="number">100</span>, random_state=<span class="number">1</span>)</span><br><span class="line">iowa_model.fit(train_X, train_y)</span><br><span class="line">val_predictions = iowa_model.predict(val_X)</span><br><span class="line">val_mae = mean_absolute_error(val_predictions, val_y)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"Validation MAE for best value of max_leaf_nodes: {:,.0f}"</span>.<span class="built_in">format</span>(val_mae))```</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestRegressor</span><br><span class="line"></span><br><span class="line"><span class="comment"># Define the model. Set random_state to 1</span></span><br><span class="line">rf_model = RandomForestRegressor(random_state=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># fit your model</span></span><br><span class="line">rf_model.fit(train_X, train_y)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Calculate the mean absolute error of your Random Forest model on the validation data</span></span><br><span class="line">rf_val_mae = mean_absolute_error(val_y, rf_model.predict(val_X))</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">"Validation MAE for Random Forest Model: {}"</span>.<span class="built_in">format</span>(rf_val_mae))</span><br></pre></td></tr></tbody></table></figure>
@@ -356,7 +356,10 @@
         <category>AI</category>
       </categories>
       <tags>
+        <tag>AI</tag>
         <tag>Kaggle</tag>
+        <tag>ML</tag>
+        <tag>Note</tag>
       </tags>
   </entry>
   <entry>
@@ -388,8 +391,12 @@
         <category>AI</category>
       </categories>
       <tags>
+        <tag>AI</tag>
+        <tag>ML</tag>
+        <tag>Note</tag>
         <tag>Coursera</tag>
         <tag>Machine Learning Specialization</tag>
+        <tag>Python</tag>
         <tag>TensorFlow</tag>
       </tags>
   </entry>
@@ -441,10 +448,14 @@
         <category>AI</category>
       </categories>
       <tags>
+        <tag>AI</tag>
+        <tag>ML</tag>
+        <tag>Note</tag>
         <tag>Coursera</tag>
         <tag>Machine Learning Specialization</tag>
-        <tag>Vectorization</tag>
+        <tag>Python</tag>
         <tag>NumPy</tag>
+        <tag>Vectorization</tag>
       </tags>
   </entry>
   <entry>
@@ -881,7 +892,8 @@
       </categories>
       <tags>
         <tag>AI</tag>
-        <tag>Machine Learning</tag>
+        <tag>ML</tag>
+        <tag>Note</tag>
         <tag>Andrew Ng</tag>
       </tags>
   </entry>
@@ -1082,13 +1094,14 @@
         <category>Algorithms &amp; Data structures</category>
       </categories>
       <tags>
+        <tag>Note</tag>
         <tag>Coursera</tag>
         <tag>Algorithm</tag>
-        <tag>Directed Graph</tag>
         <tag>BFS</tag>
         <tag>DFS</tag>
-        <tag>Topological Sort</tag>
+        <tag>Directed Graph</tag>
         <tag>Strong Components</tag>
+        <tag>Topological Sort</tag>
       </tags>
   </entry>
   <entry>
@@ -1285,6 +1298,7 @@
         <category>Algorithms &amp; Data structures</category>
       </categories>
       <tags>
+        <tag>Note</tag>
         <tag>Coursera</tag>
         <tag>Algorithm</tag>
         <tag>Minimum Spanning Trees</tag>
@@ -1307,6 +1321,7 @@
         <category>Algorithms &amp; Data structures</category>
       </categories>
       <tags>
+        <tag>Note</tag>
         <tag>Coursera</tag>
         <tag>Algorithm</tag>
         <tag>Shortest Paths</tag>
@@ -1427,14 +1442,15 @@
         <category>Algorithms &amp; Data structures</category>
       </categories>
       <tags>
+        <tag>Note</tag>
         <tag>Coursera</tag>
         <tag>Algorithm</tag>
         <tag>BFS</tag>
         <tag>DFS</tag>
-        <tag>Undirected Graph</tag>
-        <tag>Euler Tour</tag>
-        <tag>Euler Cycle</tag>
         <tag>Connected Component</tag>
+        <tag>Euler Cycle</tag>
+        <tag>Euler Tour</tag>
+        <tag>Undirected Graph</tag>
       </tags>
   </entry>
   <entry>
@@ -1562,6 +1578,7 @@
         <category>Algorithms &amp; Data structures</category>
       </categories>
       <tags>
+        <tag>Note</tag>
         <tag>Algorithm</tag>
         <tag>BFS</tag>
         <tag>DFS</tag>
@@ -5397,6 +5414,7 @@
         <category>Nand2Tetris</category>
       </categories>
       <tags>
+        <tag>Note</tag>
         <tag>Coursera</tag>
         <tag>Nand2Tetris</tag>
         <tag>Assembler</tag>
@@ -5492,6 +5510,7 @@
         <category>Nand2Tetris</category>
       </categories>
       <tags>
+        <tag>Note</tag>
         <tag>Coursera</tag>
         <tag>Nand2Tetris</tag>
         <tag>Boolean Arithmetic</tag>
@@ -5596,6 +5615,7 @@
         <category>Nand2Tetris</category>
       </categories>
       <tags>
+        <tag>Note</tag>
         <tag>Nand2Tetris</tag>
         <tag>Boolean Functions</tag>
         <tag>Gate Logic</tag>
@@ -5791,6 +5811,7 @@
         <category>Nand2Tetris</category>
       </categories>
       <tags>
+        <tag>Note</tag>
         <tag>Coursera</tag>
         <tag>Nand2Tetris</tag>
         <tag>Computer Architecture</tag>
@@ -5824,6 +5845,7 @@
         <category>Nand2Tetris</category>
       </categories>
       <tags>
+        <tag>Note</tag>
         <tag>Coursera</tag>
         <tag>Nand2Tetris</tag>
         <tag>Assembly Language</tag>
@@ -5932,6 +5954,7 @@
       </categories>
       <tags>
         <tag>Memory</tag>
+        <tag>Note</tag>
         <tag>Coursera</tag>
         <tag>Nand2Tetris</tag>
         <tag>RAM</tag>
@@ -6034,6 +6057,7 @@
         <category>Nand2Tetris</category>
       </categories>
       <tags>
+        <tag>Note</tag>
         <tag>Coursera</tag>
         <tag>Nand2Tetris</tag>
         <tag>Virtual Machine</tag>
@@ -6934,8 +6958,9 @@
         <category>C &amp; Cpp</category>
       </categories>
       <tags>
+        <tag>Note</tag>
+        <tag>C/C++</tag>
         <tag>const</tag>
-        <tag>C &amp; C++</tag>
         <tag>CS106L</tag>
       </tags>
   </entry>
@@ -7126,6 +7151,7 @@
         <category>C &amp; Cpp</category>
       </categories>
       <tags>
+        <tag>Note</tag>
         <tag>C/C++</tag>
         <tag>CS106L</tag>
       </tags>
@@ -7150,7 +7176,7 @@
       </categories>
       <tags>
         <tag>Online course summary</tag>
-        <tag>C &amp; C++</tag>
+        <tag>C/C++</tag>
         <tag>CS106L</tag>
       </tags>
   </entry>
@@ -7327,6 +7353,7 @@
         <category>C &amp; Cpp</category>
       </categories>
       <tags>
+        <tag>Note</tag>
         <tag>C/C++</tag>
         <tag>CS106L</tag>
       </tags>
