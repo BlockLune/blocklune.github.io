@@ -2919,39 +2919,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Makefile 简单笔记</title>
-    <url>/posts/b5f1b38d.html</url>
-    <content><![CDATA[<p>这是一篇笔记，原视频是 <a href="https://space.bilibili.com/519963684">@于仕琪</a> 老师的 <a href="https://www.bilibili.com/video/BV188411L7d2">《Makefile 20 分钟入门，简简单单，展示如何使用 Makefile 管理和编译 C++ 代码》</a>。</p>
-<span id="more"></span>
-
-<h2 id="老师所给的四个版本"><a href="#老师所给的四个版本" class="headerlink" title="老师所给的四个版本"></a>老师所给的四个版本</h2><figure class="highlight makefile"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># 版本一</span></span><br><span class="line"><span class="section">hello: main.cpp printhello.cpp factorial.cpp</span></span><br><span class="line">    g++ -o hello main.cpp printhello.cpp factorial.cpp</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本二</span></span><br><span class="line">CXX = g++</span><br><span class="line">TARGET = hello</span><br><span class="line">OBJ = main.o printhello.o factorial.o</span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJ)</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -o <span class="variable">$(TARGET)</span> <span class="variable">$(OBJ)</span></span><br><span class="line"></span><br><span class="line"><span class="section">main.o: main.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -c main.cpp</span><br><span class="line"></span><br><span class="line"><span class="section">printhello.o: printhello.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -c printhello.cpp</span><br><span class="line"></span><br><span class="line"><span class="section">factorial.o: factorial.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -c factorial.cpp</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本三</span></span><br><span class="line">CXX = g++</span><br><span class="line">TARGET = hello</span><br><span class="line">OBJ = main.o printhello.o factorial.o</span><br><span class="line"></span><br><span class="line">CXXFLAGS = -c -Wall</span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJ)</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -o <span class="variable">$@</span> <span class="variable">$^</span></span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> <span class="variable">$(CXXFLAGS)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">    rm -f *.o <span class="variable">$(TARGET)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本四</span></span><br><span class="line">CXX = g++</span><br><span class="line">TARGET = hello</span><br><span class="line">SRC = <span class="variable">$(<span class="built_in">wildcard</span> *.cpp)</span></span><br><span class="line">OBJ = <span class="variable">$(<span class="built_in">patsubst</span> %.cpp, %.o, <span class="variable">$(SRC)</span>)</span></span><br><span class="line"></span><br><span class="line">CXXFLAGS = -c -Wall</span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJ)</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -o <span class="variable">$@</span> <span class="variable">$^</span></span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> <span class="variable">$(CXXFLAGS)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">    rm -f *.o <span class="variable">$(TARGET)</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><p>首先是关于 g++ 这个 C++ 编译器的一些知识点。</p>
-<ul>
-<li><code>-c</code> 参数表示生成 obj 文件（<code>*.o</code>）；</li>
-<li><code>-o</code> 用于指定生成的可执行文件的名称，比如上边 <code>-o hello</code> 就表示生成的可执行文件叫 hello；</li>
-<li><code>-Wall</code> 表示 Warning all，也就是打开全部的警告。</li>
-</ul>
-<p>接着是 Makefile 文件的大致原理。</p>
-<p>首先看最易理解的版本一。</p>
-<figure class="highlight makefile"><table><tbody><tr><td class="code"><pre><span class="line"><span class="section">hello: main.cpp printhello.cpp factorial.cpp</span></span><br><span class="line">    g++ -o hello main.cpp printhello.cpp factorial.cpp</span><br></pre></td></tr></tbody></table></figure>
-
-<p>第一行冒号前的部分表示我们需要的文件（这里是 <code>hello</code>），冒号后表示冒号前文件的依赖项（这里是三个 <code>.cpp</code> 文件），第二行表示为了生成冒号前的文件，需要执行什么命令。Make 工具通过检测冒号后文件的时间戳是否比冒号前文件更新来判断是否要执行第二行语句。</p>
-<p>在第二个版本中，引入了变量的概念。形似 <code>XXX = YYY</code> 的东西就是在给变量赋值，使用 <code>$(XXX)</code> 来取得值 <code>YYY</code>。</p>
-<p>第三个版本中出现了 <code>$@</code>、<code>$^</code>、<code>$&lt;</code> 等符号，他们分别表示冒号前面的内容、冒号后边的全部内容和冒号后边第一个内容。</p>
-<p>第三个版本中的 <code>.PHONY: clean</code> 标识了 <code>clean</code> 是个命令而不是一个文件，这样结合下边的 <code>clean:</code> 的内容，就可以实现直接在终端输入 <code>make clean</code> 来执行 <code>rm -f *.o $(TARGET)</code> 的命令，清空生成出来的文件。</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Makefile</tag>
-        <tag>GNU Make</tag>
-        <tag>Compiling</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Package Managers in Linux (To Be Continued)</title>
     <url>/posts/4ee6ac78.html</url>
     <content><![CDATA[<p>This post tries to simply introduce some package managers and their basic usage.</p>
@@ -3015,57 +2982,36 @@
       </tags>
   </entry>
   <entry>
-    <title>The Chmod Command in Linux</title>
-    <url>/posts/a9dc5c1e.html</url>
-    <content><![CDATA[<p>I accidentally ran a wrong <code>chmod</code> command in my Linux, and it messed up everything! I hate the permission management in Linux. :|</p>
+    <title>Makefile 简单笔记</title>
+    <url>/posts/b5f1b38d.html</url>
+    <content><![CDATA[<p>这是一篇笔记，原视频是 <a href="https://space.bilibili.com/519963684">@于仕琪</a> 老师的 <a href="https://www.bilibili.com/video/BV188411L7d2">《Makefile 20 分钟入门，简简单单，展示如何使用 Makefile 管理和编译 C++ 代码》</a>。</p>
 <span id="more"></span>
 
-<h2 id="Permission-Management-in-Linux"><a href="#Permission-Management-in-Linux" class="headerlink" title="Permission Management in Linux"></a>Permission Management in Linux</h2><p>When you run <code>ls -l</code> in your terminal, you can always see strings like <code>-rw-r–r–</code> and <code>drwxr-xr-x</code> etc. To understand them, we can always split a such string into four part. The first one is a single character, <code>-</code> if it's a file and <code>d</code> if it's a directory. The rest 9 characters can be equally divided into three parts, representing the permission of the owner, the members of the group and other users relatively. Every part contains three characters, showing the permission of <strong>r</strong>(read), <strong>w</strong>(write) and <strong>x</strong>(execute).</p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/tools/the-chmod-command-in-linux/1.png" alt="When you run `ls -l`"><br><img data-src="https://www.runoob.com/wp-content/uploads/2014/08/file-permissions-rwx.jpg" alt="From www.runoob.com"></p>
-<p>Besides the bit pattern, you can also use octal notation to express these permissions, which uses 4 for <strong>r</strong>, 2 for <strong>w</strong> and 1 for <strong>x</strong>. The sum of these octal numbers then can replace the <code>rwx</code> pattern. For example, using 6 for <strong>rw</strong>.</p>
-<p>Why is 4, 2 and 1? Actually, you can view every 3-character unit as 3 binary bits. So, 100(r--) means 4 in decimal, 010(-w-) means 2, and 001(--x) means 1. You can then understand what dose the sum means.</p>
-<p><img data-src="https://www.runoob.com/wp-content/uploads/2014/08/rwx-standard-unix-permission-bits.png" alt="From www.runoob.com"></p>
-<p>Now, you can read this:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">-rw------- <span class="comment"># (600) Owner:RW</span></span><br><span class="line">-rw-r--r-- <span class="comment"># (644) Owner:RW Group:R Other:R</span></span><br><span class="line">-rw-rw-rw- <span class="comment"># (666) Owner:RW Group:RW Other:RW</span></span><br><span class="line">-rwx------ <span class="comment"># (700) Owner:RWX</span></span><br><span class="line">-rwx--x--x <span class="comment"># (711) Owner:RWX Group:X Other:X</span></span><br><span class="line">-rwxr-xr-x <span class="comment"># (755) Owner:RWX Group:RX Other:RX</span></span><br><span class="line">-rwxrwxrwx <span class="comment"># (777) Owner:RWX Group:RWX Other:RWX</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="老师所给的四个版本"><a href="#老师所给的四个版本" class="headerlink" title="老师所给的四个版本"></a>老师所给的四个版本</h2><figure class="highlight makefile"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># 版本一</span></span><br><span class="line"><span class="section">hello: main.cpp printhello.cpp factorial.cpp</span></span><br><span class="line">    g++ -o hello main.cpp printhello.cpp factorial.cpp</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本二</span></span><br><span class="line">CXX = g++</span><br><span class="line">TARGET = hello</span><br><span class="line">OBJ = main.o printhello.o factorial.o</span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJ)</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -o <span class="variable">$(TARGET)</span> <span class="variable">$(OBJ)</span></span><br><span class="line"></span><br><span class="line"><span class="section">main.o: main.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -c main.cpp</span><br><span class="line"></span><br><span class="line"><span class="section">printhello.o: printhello.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -c printhello.cpp</span><br><span class="line"></span><br><span class="line"><span class="section">factorial.o: factorial.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -c factorial.cpp</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本三</span></span><br><span class="line">CXX = g++</span><br><span class="line">TARGET = hello</span><br><span class="line">OBJ = main.o printhello.o factorial.o</span><br><span class="line"></span><br><span class="line">CXXFLAGS = -c -Wall</span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJ)</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -o <span class="variable">$@</span> <span class="variable">$^</span></span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> <span class="variable">$(CXXFLAGS)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">    rm -f *.o <span class="variable">$(TARGET)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本四</span></span><br><span class="line">CXX = g++</span><br><span class="line">TARGET = hello</span><br><span class="line">SRC = <span class="variable">$(<span class="built_in">wildcard</span> *.cpp)</span></span><br><span class="line">OBJ = <span class="variable">$(<span class="built_in">patsubst</span> %.cpp, %.o, <span class="variable">$(SRC)</span>)</span></span><br><span class="line"></span><br><span class="line">CXXFLAGS = -c -Wall</span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJ)</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -o <span class="variable">$@</span> <span class="variable">$^</span></span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> <span class="variable">$(CXXFLAGS)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">    rm -f *.o <span class="variable">$(TARGET)</span></span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="Default-Permission"><a href="#Default-Permission" class="headerlink" title="Default Permission"></a>Default Permission</h2><p>The default permission for a file is 666, which means <code>-rw-rw-rw-</code>, indicating that the owner, group and other users can read and write the file. The default permission for a directory is 777, which means <code>drwxrwxrwx</code>, indicating that the owner, group and other users can read, write and access the directory.</p>
-<p>However, these default permissions are affected by the user’s <strong>umask</strong> setting. The umask is a value that controls which permissions are removed when creating a new file or directory. For example, if the user’s umask is 022, then the write permission for group and other users will be removed when creating a new file, and the write and execute permission for group and other users will be removed when creating a new directory. Therefore:</p>
-<p>The actual default permission for a file is 666 - 022 = 644, which means <code>-rw-r–r–</code>. The actual default permission for a directory is 777 - 022 = 755, which means <code>drwxr-xr-x</code>.</p>
-<p>You can run the <code>umask</code> command to see what your setting is.</p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/tools/the-chmod-command-in-linux/4.png"></p>
-<h2 id="The-chmod-Command"><a href="#The-chmod-Command" class="headerlink" title="The chmod Command"></a>The chmod Command</h2><p><img data-src="https://b316f18.webp.li/blog-imgs/cs/tools/the-chmod-command-in-linux/5.png"></p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> [-cfvR] [--<span class="built_in">help</span>] [--version] &lt;mode&gt; &lt;file&gt;...</span><br></pre></td></tr></tbody></table></figure>
-
-<p>The <code>-R</code> means recursively. You will need it.</p>
-<p>The most important part is <code>&lt;mode&gt;</code> obviously. Its pattern is:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">[ugoa...][[+-=][rwxX]...][,...]</span><br></pre></td></tr></tbody></table></figure>
-
-<ol>
-<li>[ugoa...]: <code>u</code> means user, <code>g</code> means group, <code>o</code> means other, and <code>a</code> means all.</li>
-<li>[+-=]: <code>+</code> means adding permission, <code>-</code> means removing, and <code>=</code> means setting the permissions for a specific user type, <strong>regardless of the previous permissions</strong>.</li>
-<li>[rwxX]: You have known <code>rwx</code>, and the <code>X</code> means setting the execute permission only if the file is a directory or already has execute permission for some user.</li>
-</ol>
-<p>For example:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> u+x &lt;file&gt; <span class="comment"># adding execute permission to the owner of the file, and leaving the group and other permissions unchanged</span></span><br><span class="line"><span class="built_in">chmod</span> o-rwx &lt;file&gt; <span class="comment"># removing all permissions from others, and leaving the owner and group permissions unchanged</span></span><br><span class="line"><span class="built_in">chmod</span> a=r &lt;file&gt; <span class="comment"># setting all user types’ permissions to read only, overwriting any previous permissions</span></span><br><span class="line"><span class="built_in">chmod</span> a+X &lt;file&gt; <span class="comment"># adding execute permission to all user types only if file is a directory or already executable by some user</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>You can also use octal pattern represents the <code>&lt;mode&gt;</code>. For example:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 777 &lt;file&gt; <span class="comment"># now everyone can read, write and execute the &lt;file&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="Change-Permissions-to-File-or-Dir-Individually"><a href="#Change-Permissions-to-File-or-Dir-Individually" class="headerlink" title="Change Permissions to File or Dir Individually"></a>Change Permissions to File or Dir Individually</h2><p>To change permissions to file or dir individually, you can use the <code>-exec</code> option of <code>find</code> to execute chmod on each matching file or directory. For example: To find all files in the current directory and its subdirectories and change their permissions to 644, you can use: <code>find . -type f -exec chmod 644 {} ;</code></p>
-<p><code>-type f</code> means file. You can use <code>-type d</code> to find all the dir.</p>
-<h2 id="Thanks"><a href="#Thanks" class="headerlink" title="Thanks"></a>Thanks</h2><p>By the way, this blog was completed with the help of new bing. I asked her many questions and got great answers. She also helped me correct errors and polish my writing. She is just too amazing!</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://www.runoob.com/linux/linux-comm-chmod.html">《Linux chmod 命令 | 菜鸟教程》</a></li>
-<li><a href="https://blog.csdn.net/u013197629/article/details/73608613">《Linux 权限详解（chmod、600、644、700、711、755、777、4755、6755、7755）》</a></li>
+<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><p>首先是关于 g++ 这个 C++ 编译器的一些知识点。</p>
+<ul>
+<li><code>-c</code> 参数表示生成 obj 文件（<code>*.o</code>）；</li>
+<li><code>-o</code> 用于指定生成的可执行文件的名称，比如上边 <code>-o hello</code> 就表示生成的可执行文件叫 hello；</li>
+<li><code>-Wall</code> 表示 Warning all，也就是打开全部的警告。</li>
 </ul>
+<p>接着是 Makefile 文件的大致原理。</p>
+<p>首先看最易理解的版本一。</p>
+<figure class="highlight makefile"><table><tbody><tr><td class="code"><pre><span class="line"><span class="section">hello: main.cpp printhello.cpp factorial.cpp</span></span><br><span class="line">    g++ -o hello main.cpp printhello.cpp factorial.cpp</span><br></pre></td></tr></tbody></table></figure>
+
+<p>第一行冒号前的部分表示我们需要的文件（这里是 <code>hello</code>），冒号后表示冒号前文件的依赖项（这里是三个 <code>.cpp</code> 文件），第二行表示为了生成冒号前的文件，需要执行什么命令。Make 工具通过检测冒号后文件的时间戳是否比冒号前文件更新来判断是否要执行第二行语句。</p>
+<p>在第二个版本中，引入了变量的概念。形似 <code>XXX = YYY</code> 的东西就是在给变量赋值，使用 <code>$(XXX)</code> 来取得值 <code>YYY</code>。</p>
+<p>第三个版本中出现了 <code>$@</code>、<code>$^</code>、<code>$&lt;</code> 等符号，他们分别表示冒号前面的内容、冒号后边的全部内容和冒号后边第一个内容。</p>
+<p>第三个版本中的 <code>.PHONY: clean</code> 标识了 <code>clean</code> 是个命令而不是一个文件，这样结合下边的 <code>clean:</code> 的内容，就可以实现直接在终端输入 <code>make clean</code> 来执行 <code>rm -f *.o $(TARGET)</code> 的命令，清空生成出来的文件。</p>
 ]]></content>
       <categories>
         <category>CS</category>
         <category>Tools</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
-        <tag>chmod</tag>
+        <tag>Makefile</tag>
+        <tag>GNU Make</tag>
+        <tag>Compiling</tag>
       </tags>
   </entry>
   <entry>
@@ -3139,6 +3085,60 @@
       </categories>
       <tags>
         <tag>VS Code</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>The Chmod Command in Linux</title>
+    <url>/posts/a9dc5c1e.html</url>
+    <content><![CDATA[<p>I accidentally ran a wrong <code>chmod</code> command in my Linux, and it messed up everything! I hate the permission management in Linux. :|</p>
+<span id="more"></span>
+
+<h2 id="Permission-Management-in-Linux"><a href="#Permission-Management-in-Linux" class="headerlink" title="Permission Management in Linux"></a>Permission Management in Linux</h2><p>When you run <code>ls -l</code> in your terminal, you can always see strings like <code>-rw-r–r–</code> and <code>drwxr-xr-x</code> etc. To understand them, we can always split a such string into four part. The first one is a single character, <code>-</code> if it's a file and <code>d</code> if it's a directory. The rest 9 characters can be equally divided into three parts, representing the permission of the owner, the members of the group and other users relatively. Every part contains three characters, showing the permission of <strong>r</strong>(read), <strong>w</strong>(write) and <strong>x</strong>(execute).</p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/tools/the-chmod-command-in-linux/1.png" alt="When you run `ls -l`"><br><img data-src="https://www.runoob.com/wp-content/uploads/2014/08/file-permissions-rwx.jpg" alt="From www.runoob.com"></p>
+<p>Besides the bit pattern, you can also use octal notation to express these permissions, which uses 4 for <strong>r</strong>, 2 for <strong>w</strong> and 1 for <strong>x</strong>. The sum of these octal numbers then can replace the <code>rwx</code> pattern. For example, using 6 for <strong>rw</strong>.</p>
+<p>Why is 4, 2 and 1? Actually, you can view every 3-character unit as 3 binary bits. So, 100(r--) means 4 in decimal, 010(-w-) means 2, and 001(--x) means 1. You can then understand what dose the sum means.</p>
+<p><img data-src="https://www.runoob.com/wp-content/uploads/2014/08/rwx-standard-unix-permission-bits.png" alt="From www.runoob.com"></p>
+<p>Now, you can read this:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">-rw------- <span class="comment"># (600) Owner:RW</span></span><br><span class="line">-rw-r--r-- <span class="comment"># (644) Owner:RW Group:R Other:R</span></span><br><span class="line">-rw-rw-rw- <span class="comment"># (666) Owner:RW Group:RW Other:RW</span></span><br><span class="line">-rwx------ <span class="comment"># (700) Owner:RWX</span></span><br><span class="line">-rwx--x--x <span class="comment"># (711) Owner:RWX Group:X Other:X</span></span><br><span class="line">-rwxr-xr-x <span class="comment"># (755) Owner:RWX Group:RX Other:RX</span></span><br><span class="line">-rwxrwxrwx <span class="comment"># (777) Owner:RWX Group:RWX Other:RWX</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Default-Permission"><a href="#Default-Permission" class="headerlink" title="Default Permission"></a>Default Permission</h2><p>The default permission for a file is 666, which means <code>-rw-rw-rw-</code>, indicating that the owner, group and other users can read and write the file. The default permission for a directory is 777, which means <code>drwxrwxrwx</code>, indicating that the owner, group and other users can read, write and access the directory.</p>
+<p>However, these default permissions are affected by the user’s <strong>umask</strong> setting. The umask is a value that controls which permissions are removed when creating a new file or directory. For example, if the user’s umask is 022, then the write permission for group and other users will be removed when creating a new file, and the write and execute permission for group and other users will be removed when creating a new directory. Therefore:</p>
+<p>The actual default permission for a file is 666 - 022 = 644, which means <code>-rw-r–r–</code>. The actual default permission for a directory is 777 - 022 = 755, which means <code>drwxr-xr-x</code>.</p>
+<p>You can run the <code>umask</code> command to see what your setting is.</p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/tools/the-chmod-command-in-linux/4.png"></p>
+<h2 id="The-chmod-Command"><a href="#The-chmod-Command" class="headerlink" title="The chmod Command"></a>The chmod Command</h2><p><img data-src="https://b316f18.webp.li/blog-imgs/cs/tools/the-chmod-command-in-linux/5.png"></p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> [-cfvR] [--<span class="built_in">help</span>] [--version] &lt;mode&gt; &lt;file&gt;...</span><br></pre></td></tr></tbody></table></figure>
+
+<p>The <code>-R</code> means recursively. You will need it.</p>
+<p>The most important part is <code>&lt;mode&gt;</code> obviously. Its pattern is:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">[ugoa...][[+-=][rwxX]...][,...]</span><br></pre></td></tr></tbody></table></figure>
+
+<ol>
+<li>[ugoa...]: <code>u</code> means user, <code>g</code> means group, <code>o</code> means other, and <code>a</code> means all.</li>
+<li>[+-=]: <code>+</code> means adding permission, <code>-</code> means removing, and <code>=</code> means setting the permissions for a specific user type, <strong>regardless of the previous permissions</strong>.</li>
+<li>[rwxX]: You have known <code>rwx</code>, and the <code>X</code> means setting the execute permission only if the file is a directory or already has execute permission for some user.</li>
+</ol>
+<p>For example:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> u+x &lt;file&gt; <span class="comment"># adding execute permission to the owner of the file, and leaving the group and other permissions unchanged</span></span><br><span class="line"><span class="built_in">chmod</span> o-rwx &lt;file&gt; <span class="comment"># removing all permissions from others, and leaving the owner and group permissions unchanged</span></span><br><span class="line"><span class="built_in">chmod</span> a=r &lt;file&gt; <span class="comment"># setting all user types’ permissions to read only, overwriting any previous permissions</span></span><br><span class="line"><span class="built_in">chmod</span> a+X &lt;file&gt; <span class="comment"># adding execute permission to all user types only if file is a directory or already executable by some user</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>You can also use octal pattern represents the <code>&lt;mode&gt;</code>. For example:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 777 &lt;file&gt; <span class="comment"># now everyone can read, write and execute the &lt;file&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Change-Permissions-to-File-or-Dir-Individually"><a href="#Change-Permissions-to-File-or-Dir-Individually" class="headerlink" title="Change Permissions to File or Dir Individually"></a>Change Permissions to File or Dir Individually</h2><p>To change permissions to file or dir individually, you can use the <code>-exec</code> option of <code>find</code> to execute chmod on each matching file or directory. For example: To find all files in the current directory and its subdirectories and change their permissions to 644, you can use: <code>find . -type f -exec chmod 644 {} ;</code></p>
+<p><code>-type f</code> means file. You can use <code>-type d</code> to find all the dir.</p>
+<h2 id="Thanks"><a href="#Thanks" class="headerlink" title="Thanks"></a>Thanks</h2><p>By the way, this blog was completed with the help of new bing. I asked her many questions and got great answers. She also helped me correct errors and polish my writing. She is just too amazing!</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://www.runoob.com/linux/linux-comm-chmod.html">《Linux chmod 命令 | 菜鸟教程》</a></li>
+<li><a href="https://blog.csdn.net/u013197629/article/details/73608613">《Linux 权限详解（chmod、600、644、700、711、755、777、4755、6755、7755）》</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>chmod</tag>
       </tags>
   </entry>
   <entry>
@@ -6829,24 +6829,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Uses std::cin.ignore() to Keep the User Typing Until the Input Meets the Requirements</title>
-    <url>/posts/f96b3358.html</url>
-    <content><![CDATA[<p>I used to control users' input by making the input a string and process it later. But today, my friend posed this question to me: Can we control input without a char array or string class?</p>
-<span id="more"></span>
-
-<p>On <em><a href="https://en.cppreference.com/w/cpp/io/basic_istream/ignore">cppreference.com</a></em>, I found <code>std::cin.ignore()</code>. This function can help us solve the previous question. Here is an example:</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;limits&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> n = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span> (<span class="literal">true</span>) {</span><br><span class="line">    std::cout &lt;&lt; <span class="string">"Please input a number: "</span>;</span><br><span class="line">    std::cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">if</span> (!std::cin.<span class="built_in">good</span>()) {</span><br><span class="line">      std::cerr &lt;&lt; <span class="string">"Error input."</span> &lt;&lt; std::endl;</span><br><span class="line">      std::cin.<span class="built_in">clear</span>();</span><br><span class="line">      std::cin.<span class="built_in">ignore</span>(std::numeric_limits&lt;std::streamsize&gt;::<span class="built_in">max</span>(), <span class="string">'\n'</span>);</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    } <span class="keyword">else</span> {</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  std::cout &lt;&lt; <span class="string">"Your input is: "</span> &lt;&lt; n &lt;&lt; std::endl;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Const Correctness in C++</title>
     <url>/posts/4eb7504e.html</url>
     <content><![CDATA[<p>This is a note for Lecture 8, <a href="https://web.stanford.edu/class/cs106l/index.html">CS106L</a>, Spring 2023.</p>
@@ -6962,6 +6944,24 @@
         <tag>C/C++</tag>
         <tag>const</tag>
         <tag>CS106L</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Uses std::cin.ignore() to Keep the User Typing Until the Input Meets the Requirements</title>
+    <url>/posts/f96b3358.html</url>
+    <content><![CDATA[<p>I used to control users' input by making the input a string and process it later. But today, my friend posed this question to me: Can we control input without a char array or string class?</p>
+<span id="more"></span>
+
+<p>On <em><a href="https://en.cppreference.com/w/cpp/io/basic_istream/ignore">cppreference.com</a></em>, I found <code>std::cin.ignore()</code>. This function can help us solve the previous question. Here is an example:</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;limits&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> n = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span> (<span class="literal">true</span>) {</span><br><span class="line">    std::cout &lt;&lt; <span class="string">"Please input a number: "</span>;</span><br><span class="line">    std::cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">if</span> (!std::cin.<span class="built_in">good</span>()) {</span><br><span class="line">      std::cerr &lt;&lt; <span class="string">"Error input."</span> &lt;&lt; std::endl;</span><br><span class="line">      std::cin.<span class="built_in">clear</span>();</span><br><span class="line">      std::cin.<span class="built_in">ignore</span>(std::numeric_limits&lt;std::streamsize&gt;::<span class="built_in">max</span>(), <span class="string">'\n'</span>);</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    } <span class="keyword">else</span> {</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  std::cout &lt;&lt; <span class="string">"Your input is: "</span> &lt;&lt; n &lt;&lt; std::endl;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
       </tags>
   </entry>
   <entry>
