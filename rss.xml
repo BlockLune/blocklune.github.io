@@ -9,8 +9,27 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Wed, 11 Sep 2024 07:00:00 GMT</pubDate>
+    <pubDate>Thu, 17 Oct 2024 05:03:29 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>使用 Rust 写一个简单的线程池</title>
+      <link>https://fishg.top/posts/118aec2d.html</link>
+      <guid>https://fishg.top/posts/118aec2d.html</guid>
+      <pubDate>Thu, 17 Oct 2024 05:03:29 GMT</pubDate>
+      
+      <description>&lt;p&gt;线程池是一种多线程处理形式，它通过将任务分配给事先创建好的线程以进行重用，提高了并发性能。本文是一篇阅读笔记，原材料为 &lt;a href=&quot;https://course.rs/advance-practice1/intro.html&quot;&gt;Rust 语言圣经 - 进阶实战 1 实现一个 Web 服务器&lt;/a&gt;。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://fishg.top/tags/rust/">Rust</category>
+      
+      
+      <comments>https://fishg.top/posts/118aec2d.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>阅读材料 4 - 代码审查 | MIT 6.005</title>

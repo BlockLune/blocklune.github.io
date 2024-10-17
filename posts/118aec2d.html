@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- hexo injector head_begin start --><!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "61641c63411e4533b0bc263d76e9c650"}'></script><!-- End Cloudflare Web Analytics --><script defer src="https://eu.umami.is/script.js" data-website-id="f576c93d-b2e8-4701-9cd1-797cb6a6b79a"></script><!-- hexo injector head_begin end -->
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="google7b9c7ea42a3102a3.html">
+  <meta name="baidu-site-verification" content="baidu_verify_code-53bseLro2G.html">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"fishg.top","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="线程池是一种多线程处理形式，它通过将任务分配给事先创建好的线程以进行重用，提高了并发性能。本文是一篇阅读笔记，原材料为 Rust 语言圣经 - 进阶实战 1 实现一个 Web 服务器。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 Rust 写一个简单的线程池">
+<meta property="og:url" content="https://fishg.top/posts/118aec2d.html">
+<meta property="og:site_name" content="Fish Pond">
+<meta property="og:description" content="线程池是一种多线程处理形式，它通过将任务分配给事先创建好的线程以进行重用，提高了并发性能。本文是一篇阅读笔记，原材料为 Rust 语言圣经 - 进阶实战 1 实现一个 Web 服务器。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-10-17T05:03:29.000Z">
+<meta property="article:modified_time" content="2024-10-17T05:03:29.000Z">
+<meta property="article:author" content="BlockLune">
+<meta property="article:tag" content="Rust">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://fishg.top/posts/118aec2d.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://fishg.top/posts/118aec2d.html","path":"posts/118aec2d.html","title":"使用 Rust 写一个简单的线程池"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>使用 Rust 写一个简单的线程池 | Fish Pond</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XQDPHGPHDL"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-XQDPHGPHDL","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+
+  <script async defer data-website-id="f576c93d-b2e8-4701-9cd1-797cb6a6b79a" src="https://analytics.umami.is/script.js"></script>
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/rss.xml" title="Fish Pond" type="application/rss+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Fish Pond</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Posts swim here.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="Searching..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="BlockLune"
+      src="/img/waifu.png">
+  <p class="site-author-name" itemprop="name">BlockLune</p>
+  <div class="site-description" itemprop="description">Here is BlockLune's blog.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">92</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">141</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/BlockLune" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;BlockLune" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:blocklune@gmail.com" title="E-Mail → mailto:blocklune@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          Links
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://elysiapro.cn/" title="https:&#x2F;&#x2F;elysiapro.cn&#x2F;" rel="noopener" target="_blank">ElysiaPro's Blog</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://f-studio.is-best.net/" title="http:&#x2F;&#x2F;f-studio.is-best.net&#x2F;" rel="noopener" target="_blank">F-Studio</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://luoyuxuanryan.github.io/" title="https:&#x2F;&#x2F;luoyuxuanryan.github.io&#x2F;" rel="noopener" target="_blank">Radish Garden</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://tommygong.top/" title="https:&#x2F;&#x2F;tommygong.top&#x2F;" rel="noopener" target="_blank">TommyGong's Blog</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://blog.yfi.moe/" title="https:&#x2F;&#x2F;blog.yfi.moe&#x2F;" rel="noopener" target="_blank">Yunfi's Blog</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://fishg.top/posts/118aec2d.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/waifu.png">
+      <meta itemprop="name" content="BlockLune">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fish Pond">
+      <meta itemprop="description" content="Here is BlockLune's blog.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="使用 Rust 写一个简单的线程池 | Fish Pond">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          使用 Rust 写一个简单的线程池
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2024-10-17 13:03:29" itemprop="dateCreated datePublished" datetime="2024-10-17T13:03:29+08:00">2024-10-17</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>线程池是一种多线程处理形式，它通过将任务分配给事先创建好的线程以进行重用，提高了并发性能。本文是一篇阅读笔记，原材料为 <a target="_blank" rel="noopener" href="https://course.rs/advance-practice1/intro.html">Rust 语言圣经 - 进阶实战 1 实现一个 Web 服务器</a>。</p>
+<span id="more"></span>
+
+<p>在实现线程池之前，先来看看我们希望怎么用它：</p>
+<figure class="highlight rust"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() {</span><br><span class="line">	<span class="keyword">let</span> <span class="variable">pool</span> = ThreadPool::<span class="title function_ invoke__">new</span>(<span class="number">4</span>); <span class="comment">// 创建一个包含 4 个线程的线程池</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">// 对于前来的每个任务，将其放到池子中执行</span></span><br><span class="line">	<span class="keyword">for</span> <span class="variable">task</span> <span class="keyword">in</span> tasks {</span><br><span class="line">		pool.<span class="title function_ invoke__">execute</span>(|| {</span><br><span class="line">			<span class="title function_ invoke__">handle_task</span>(task);</span><br><span class="line">		});</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>因此，我们的线程池的骨架可能是这样的：</p>
+<figure class="highlight rust"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">pub</span> <span class="keyword">struct</span> <span class="title class_">ThreadPool</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line">	<span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">new</span>(size: <span class="type">usize</span>) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> {</span><br><span class="line">		<span class="comment">// ...</span></span><br><span class="line">	}</span><br><span class="line"></span><br><span class="line">	<span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">execute</span>&lt;F&gt;(&amp;<span class="keyword">self</span>, f: F)</span><br><span class="line">    <span class="keyword">where</span></span><br><span class="line">        F: <span class="title function_ invoke__">FnOnce</span>() + <span class="built_in">Send</span> + <span class="symbol">'static</span>,</span><br><span class="line">    {</span><br><span class="line">		<span class="comment">// ...</span></span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这里的 <code>FnOnce</code> 表示我们希望这个闭包只需要被执行一次，紧跟着的 <code>()</code> 表示该闭包没有参数，后面没有跟 <code>-&gt;</code> 所以这个闭包也没有返回值。</p>
+<p>我们的 <code>new</code> 函数要干的第一件事情是，创建一些线程并存起来：</p>
+<figure class="highlight rust"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> std::thread;</span><br><span class="line"></span><br><span class="line"><span class="keyword">pub</span> <span class="keyword">struct</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line">	threads: <span class="type">Vec</span>&lt;thread::JoinHandle&lt;()&gt;&gt;,</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line">	<span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">new</span>(size: <span class="type">usize</span>) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> {</span><br><span class="line">		<span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">threads</span> = <span class="type">Vec</span>::<span class="title function_ invoke__">with_capactiy</span>(size);</span><br><span class="line">		<span class="keyword">for</span> <span class="variable">_</span> <span class="keyword">in</span> <span class="number">0</span>..size {</span><br><span class="line">			<span class="comment">// 创建线程并存储</span></span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">Self</span> { threads }</span><br><span class="line">	}</span><br><span class="line"></span><br><span class="line">	<span class="comment">// ...</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>创建线程的方式是使用 <code>thread::spawn</code>，但是它会立刻开始执行传入的任务。但是在这里，我们希望的应该是 “创建线程但暂时不执行”。为此，我们可以创建一个中介性质的对象 <code>Worker</code>：</p>
+<figure class="highlight rust"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Worker</span> {</span><br><span class="line">	id: <span class="type">usize</span>,</span><br><span class="line">	thread: thread::JoinHandle&lt;()&gt;,</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">Worker</span> {</span><br><span class="line">	<span class="keyword">fn</span> <span class="title function_">new</span>(id: <span class="type">usize</span>) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> {</span><br><span class="line">		<span class="comment">// 从任务列表中取出一个任务</span></span><br><span class="line">		<span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">// 创建一个线程，以执行这个任务</span></span><br><span class="line">		<span class="keyword">let</span> <span class="variable">thread</span> = thread::<span class="title function_ invoke__">spawn</span>(|| {</span><br><span class="line">			<span class="comment">// ...	</span></span><br><span class="line">		});</span><br><span class="line"></span><br><span class="line">		<span class="keyword">Self</span> { id, thread }</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后，就可以改一下上面线程池的声明：</p>
+<figure class="highlight rust"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">pub</span> <span class="keyword">struct</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line">	workers: <span class="type">Vec</span>&lt;Worker&gt;,</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line">	<span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">new</span>(size: <span class="type">usize</span>) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> {</span><br><span class="line">		<span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">workers</span> = <span class="type">Vec</span>::<span class="title function_ invoke__">with_capactiy</span>(size);</span><br><span class="line">		<span class="keyword">for</span> <span class="variable">id</span> <span class="keyword">in</span> <span class="number">0</span>..size {</span><br><span class="line">			workers.<span class="title function_ invoke__">push</span>(Worker::<span class="title function_ invoke__">new</span>(id));</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">Self</span> { workers }</span><br><span class="line">	}</span><br><span class="line"></span><br><span class="line">	<span class="comment">// ...</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>ThreadPool::new</code> 的下一步任务是将传递来的任务分配给刚刚创建好的线程执行。如何实现呢？可以使用 Channel。可以让 <code>ThreadPool</code> 持有发送端，由它负责将任务发出去；而让 <code>Worker</code> 持有接收端，它接收发来的任务并将它们分配到具体的线程中执行。</p>
+<p>但是，现在存在一个问题，<code>mpsc</code> 是 Multiple Producers Single Consumer，但是这里的情况是很多 <code>Worker</code> 希望从发送端接受消息，是 Multiple Consumers。怎么办呢？答案是使用 <code>Arc&lt;Mutex&lt;_&gt;&gt;</code> 。这样，多个 <code>Worker</code>s 都可以持有 <code>receiver</code>（通过 <code>Arc</code>），但最后一次只有一个 <code>Worker</code> 能实际从这个 <code>receiver</code> 中拿到消息 / 拿到需要执行的任务（通过 <code>Mutex</code>）：</p>
+<figure class="highlight rust"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> std::{</span><br><span class="line">	sync::{mpsc, Arc, Mutex},</span><br><span class="line">	thread,</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line">	<span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">new</span>(size: <span class="type">usize</span>) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> {</span><br><span class="line">		<span class="keyword">let</span> (sender, receiver) = mpsc::<span class="title function_ invoke__">channel</span>();</span><br><span class="line">		<span class="keyword">let</span> <span class="variable">receiver</span> = Arc::<span class="title function_ invoke__">new</span>(Mutex::<span class="title function_ invoke__">new</span>(receiver));</span><br><span class="line">		<span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">workers</span> = <span class="type">Vec</span>::<span class="title function_ invoke__">with_capacity</span>(size);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> <span class="variable">id</span> <span class="keyword">in</span> <span class="number">0</span>..size {</span><br><span class="line">			workers.<span class="title function_ invoke__">push</span>(Worker::<span class="title function_ invoke__">new</span>(id, Arc::<span class="title function_ invoke__">clone</span>(&amp;receiver)));</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">Self</span> { workers, sender }</span><br><span class="line">	}</span><br><span class="line"></span><br><span class="line">	<span class="comment">// ...</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">Worker</span> {</span><br><span class="line">	<span class="keyword">fn</span> <span class="title function_">new</span>(id: <span class="type">usize</span>, receiver: Arc&lt;Mutex&lt;mpsc::Receiver&lt;Job&gt;&gt;&gt;) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> {</span><br><span class="line">		<span class="comment">// 从任务列表中取出一个任务（使用 `receiver`）</span></span><br><span class="line">		<span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">// 创建一个线程，以执行这个任务</span></span><br><span class="line">		<span class="keyword">let</span> <span class="variable">thread</span> = thread::<span class="title function_ invoke__">spawn</span>(|| {</span><br><span class="line">			<span class="comment">// ...	</span></span><br><span class="line">		});</span><br><span class="line"></span><br><span class="line">		<span class="keyword">Self</span> { id, thread }</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>接下来就是具体的发送任务和接受任务并执行了。首先需要确定的是，用什么类型来表示上面的 任务 <code>Job</code> 呢？答案是：</p>
+<figure class="highlight rust"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> <span class="title class_">Job</span> = <span class="type">Box</span>&lt;<span class="keyword">dyn</span> <span class="title function_ invoke__">FnOnce</span>() + <span class="built_in">Send</span> + <span class="symbol">'static</span>&gt;;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后就可以发送和接收任务了。注意 <code>recv</code> 的调用是阻塞的：</p>
+<figure class="highlight rust"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">impl</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line">	<span class="comment">// ...</span></span><br><span class="line">	<span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">execute</span>&lt;F&gt;(&amp;<span class="keyword">self</span>, f: F)</span><br><span class="line">    <span class="keyword">where</span></span><br><span class="line">        F: <span class="title function_ invoke__">FnOnce</span>() + <span class="built_in">Send</span> + <span class="symbol">'static</span>,</span><br><span class="line">    {</span><br><span class="line">		<span class="keyword">let</span> <span class="variable">job</span> = <span class="type">Box</span>::<span class="title function_ invoke__">new</span>(f);</span><br><span class="line">		<span class="keyword">self</span>.sender.<span class="title function_ invoke__">send</span>(job).<span class="title function_ invoke__">unwrap</span>();</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">Worker</span> {</span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">new</span>(id: <span class="type">usize</span>, receiver: Arc&lt;Mutex&lt;mpsc::Receiver&lt;Job&gt;&gt;&gt;) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> {</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">thread</span> = thread::<span class="title function_ invoke__">spawn</span>(<span class="keyword">move</span> || <span class="keyword">loop</span> {</span><br><span class="line">            <span class="keyword">let</span> <span class="variable">job</span> = receiver.<span class="title function_ invoke__">lock</span>().<span class="title function_ invoke__">unwrap</span>().<span class="title function_ invoke__">recv</span>().<span class="title function_ invoke__">unwrap</span>();</span><br><span class="line">            <span class="built_in">println!</span>(<span class="string">"Worker {id} got a job; executing."</span>);</span><br><span class="line">            <span class="title function_ invoke__">job</span>();</span><br><span class="line">        });</span><br><span class="line"></span><br><span class="line">        <span class="keyword">Self</span> { id, thread }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>注意这里 ** 不能用 <code>while let</code>**。主要原因是 <code>Mutex</code> 没有显式的 "unlock"，如果使用 <code>while let</code>，那么必须等到整个循环结束锁才会被释放。而像这里的使用 <code>let job = ...;</code>，中间的临时变量会在 <code>let</code> 结束时就被 <code>drop</code>，锁可以立刻被释放。</p>
+<p>最后一步是为我们实现的这个简单的线程池实现 <code>Drop</code>，主要是等待任务结束并回收资源。但这样是不行的：</p>
+<figure class="highlight rust"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// error</span></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">Drop</span> <span class="keyword">for</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">drop</span>(&amp;<span class="keyword">mut</span> <span class="keyword">self</span>) {</span><br><span class="line">        <span class="keyword">for</span> <span class="variable">worker</span> <span class="keyword">in</span> &amp;<span class="keyword">mut</span> <span class="keyword">self</span>.workers {</span><br><span class="line">            <span class="built_in">println!</span>(<span class="string">"Shutting down worker {}"</span>, worker.id);</span><br><span class="line">            worker.thread.<span class="title function_ invoke__">join</span>().<span class="title function_ invoke__">unwrap</span>();</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>报错原因是所有权。</p>
+<p>可行的解决方案是使用 <code>Option</code> 类型，并使用 <code>take</code> 方法拿走内部值的所有权。类似地，对 <code>sender</code> 也需要做这样的处理。最后，当 <code>sender</code> 被关闭，对应的 <code>receiver</code> 会收到一个错误，可以根据是否接收到错误，来判断 Channel 是否需要被关闭，进而判断线程是否需要结束了：</p>
+<figure class="highlight rust"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> std::{</span><br><span class="line">    sync::{mpsc, Arc, Mutex},</span><br><span class="line">    thread,</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="keyword">pub</span> <span class="keyword">struct</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line">    workers: <span class="type">Vec</span>&lt;Worker&gt;,</span><br><span class="line">    sender: <span class="type">Option</span>&lt;mpsc::Sender&lt;Job&gt;&gt;,</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> <span class="title class_">Job</span> = <span class="type">Box</span>&lt;<span class="keyword">dyn</span> <span class="title function_ invoke__">FnOnce</span>() + <span class="built_in">Send</span> + <span class="symbol">'static</span>&gt;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line">    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">new</span>(size: <span class="type">usize</span>) <span class="punctuation">-&gt;</span> ThreadPool {</span><br><span class="line">        <span class="keyword">let</span> (sender, receiver) = mpsc::<span class="title function_ invoke__">channel</span>();</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">receiver</span> = Arc::<span class="title function_ invoke__">new</span>(Mutex::<span class="title function_ invoke__">new</span>(receiver));</span><br><span class="line">        <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">workers</span> = <span class="type">Vec</span>::<span class="title function_ invoke__">with_capacity</span>(size);</span><br><span class="line">        <span class="keyword">for</span> <span class="variable">id</span> <span class="keyword">in</span> <span class="number">0</span>..size {</span><br><span class="line">            workers.<span class="title function_ invoke__">push</span>(Worker::<span class="title function_ invoke__">new</span>(id, Arc::<span class="title function_ invoke__">clone</span>(&amp;receiver)));</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        ThreadPool {</span><br><span class="line">            workers,</span><br><span class="line">            sender: <span class="title function_ invoke__">Some</span>(sender),</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">execute</span>&lt;F&gt;(&amp;<span class="keyword">self</span>, f: F)</span><br><span class="line">    <span class="keyword">where</span></span><br><span class="line">        F: <span class="title function_ invoke__">FnOnce</span>() + <span class="built_in">Send</span> + <span class="symbol">'static</span>,</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">job</span> = <span class="type">Box</span>::<span class="title function_ invoke__">new</span>(f);</span><br><span class="line">        <span class="keyword">self</span>.sender.<span class="title function_ invoke__">as_ref</span>().<span class="title function_ invoke__">unwrap</span>().<span class="title function_ invoke__">send</span>(job).<span class="title function_ invoke__">unwrap</span>();</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">Drop</span> <span class="keyword">for</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">drop</span>(&amp;<span class="keyword">mut</span> <span class="keyword">self</span>) {</span><br><span class="line">        <span class="title function_ invoke__">drop</span>(<span class="keyword">self</span>.sender.<span class="title function_ invoke__">take</span>());</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> <span class="variable">worker</span> <span class="keyword">in</span> &amp;<span class="keyword">mut</span> <span class="keyword">self</span>.workers {</span><br><span class="line">            <span class="built_in">println!</span>(<span class="string">"Shutting down worker {}"</span>, worker.id);</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">let</span> <span class="variable">Some</span>(thread) = worker.thread.<span class="title function_ invoke__">take</span>() {</span><br><span class="line">                thread.<span class="title function_ invoke__">join</span>().<span class="title function_ invoke__">unwrap</span>();</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Worker</span> {</span><br><span class="line">    id: <span class="type">usize</span>,</span><br><span class="line">    thread: <span class="type">Option</span>&lt;thread::JoinHandle&lt;()&gt;&gt;,</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">Worker</span> {</span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">new</span>(id: <span class="type">usize</span>, receiver: Arc&lt;Mutex&lt;mpsc::Receiver&lt;Job&gt;&gt;&gt;) <span class="punctuation">-&gt;</span> Worker {</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">thread</span> = thread::<span class="title function_ invoke__">spawn</span>(<span class="keyword">move</span> || <span class="keyword">loop</span> {</span><br><span class="line">            <span class="keyword">let</span> <span class="variable">message</span> = receiver.<span class="title function_ invoke__">lock</span>().<span class="title function_ invoke__">unwrap</span>().<span class="title function_ invoke__">recv</span>();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">match</span> message {</span><br><span class="line">                <span class="title function_ invoke__">Ok</span>(job) =&gt; {</span><br><span class="line">                    <span class="built_in">println!</span>(<span class="string">"Worker {id} got a job; executing."</span>);</span><br><span class="line"></span><br><span class="line">                    <span class="title function_ invoke__">job</span>();</span><br><span class="line">                }</span><br><span class="line">                <span class="title function_ invoke__">Err</span>(_) =&gt; {</span><br><span class="line">                    <span class="built_in">println!</span>(<span class="string">"Worker {id} disconnected; shutting down."</span>);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line">        });</span><br><span class="line"></span><br><span class="line">        Worker {</span><br><span class="line">            id,</span><br><span class="line">            thread: <span class="title function_ invoke__">Some</span>(thread),</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/rss.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/rust/" rel="tag"># Rust</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/703bb2b0.html" rel="prev" title="阅读材料 4 - 代码审查 | MIT 6.005">
+                  <i class="fa fa-angle-left"></i> 阅读材料 4 - 代码审查 | MIT 6.005
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">BlockLune</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/BlockLune" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js","integrity":"sha256-YbM1pG3wWnzhyYN49g5fPnen+2CKEFaZfopkkwSpNtY="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"BlockLune","repo":"blocklune.github.io","client_id":"f0d9ff2c460a605d4f3f","client_secret":"9808616eda1afe0741c036b5d5670a490b68f6ef","admin_user":"BlockLune","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"8f436b34c17fee7606d19e49a6b0a070"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>
