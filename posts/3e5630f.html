@@ -22,12 +22,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"fishg.top","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="My personal config for Zsh (Z Shell), noting for next time.">
+    <meta name="description" content="作为计算机爱好者，我们每天会花大量时间和 Shell 打交道，一个配置得足够好的 Shell 会让你觉得更加得心应手。这篇博文记录了我的 Zsh 配置。本来，这篇文章只是作为我自己的笔记，所以写的没比较随意；同时出于练习英语写作的目的，写成了英文。但后来发现我的朋友们也会参考，所以我打算将其重置为中文的，并修改完善了一些内容。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="My Zsh Config">
+<meta property="og:title" content="我的 Zsh 配置">
 <meta property="og:url" content="https://fishg.top/posts/3e5630f.html">
 <meta property="og:site_name" content="Fish Pond">
-<meta property="og:description" content="My personal config for Zsh (Z Shell), noting for next time.">
+<meta property="og:description" content="作为计算机爱好者，我们每天会花大量时间和 Shell 打交道，一个配置得足够好的 Shell 会让你觉得更加得心应手。这篇博文记录了我的 Zsh 配置。本来，这篇文章只是作为我自己的笔记，所以写的没比较随意；同时出于练习英语写作的目的，写成了英文。但后来发现我的朋友们也会参考，所以我打算将其重置为中文的，并修改完善了一些内容。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-01-26T04:14:40.000Z">
 <meta property="article:modified_time" content="2024-01-26T04:14:40.000Z">
@@ -41,10 +41,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://fishg.top/posts/3e5630f.html","path":"posts/3e5630f.html","title":"My Zsh Config"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://fishg.top/posts/3e5630f.html","path":"posts/3e5630f.html","title":"我的 Zsh 配置"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>My Zsh Config | Fish Pond</title>
+<title>我的 Zsh 配置 | Fish Pond</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XQDPHGPHDL"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-XQDPHGPHDL","only_pageview":false,"measure_protocol_api_secret":null}</script>
@@ -149,7 +149,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Installation"><span class="nav-number">1.</span> <span class="nav-text">Installation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows"><span class="nav-number">1.1.</span> <span class="nav-text">Windows</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux"><span class="nav-number">1.2.</span> <span class="nav-text">Linux</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mac"><span class="nav-number">1.3.</span> <span class="nav-text">Mac</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Themes-and-Plugins"><span class="nav-number">2.</span> <span class="nav-text">Themes and Plugins</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Plugins"><span class="nav-number">2.1.</span> <span class="nav-text">Plugins</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Aliases"><span class="nav-number">3.</span> <span class="nav-text">Aliases</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lazyload"><span class="nav-number">4.</span> <span class="nav-text">Lazyload</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Q-A"><span class="nav-number">5.</span> <span class="nav-text">Q&amp;A</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Resources"><span class="nav-number">6.</span> <span class="nav-text">Resources</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8%E5%BC%80%E5%A7%8B%E4%B9%8B%E5%89%8D"><span class="nav-number">1.</span> <span class="nav-text">在开始之前</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Zsh"><span class="nav-number">2.</span> <span class="nav-text">安装 Zsh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%A1%86%E6%9E%B6%E4%B8%8E%E4%B8%BB%E9%A2%98"><span class="nav-number">3.</span> <span class="nav-text">配置框架与主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E4%BB%B6"><span class="nav-number">3.1.</span> <span class="nav-text">插件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%AB%E5%90%8D"><span class="nav-number">4.</span> <span class="nav-text">别名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%87%92%E5%8A%A0%E8%BD%BD"><span class="nav-number">5.</span> <span class="nav-text">懒加载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Q-A"><span class="nav-number">6.</span> <span class="nav-text">Q&amp;A</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E5%A4%9A%E8%B5%84%E6%BA%90"><span class="nav-number">7.</span> <span class="nav-text">更多资源</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -247,12 +247,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="My Zsh Config | Fish Pond">
+      <meta itemprop="name" content="我的 Zsh 配置 | Fish Pond">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          My Zsh Config
+          我的 Zsh 配置
         </h1>
 
         <div class="post-meta-container">
@@ -288,179 +288,70 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>My personal config for Zsh (Z Shell), noting for next time.</p>
+    <div class="post-body" itemprop="articleBody"><p>作为计算机爱好者，我们每天会花大量时间和 Shell 打交道，一个配置得足够好的 Shell 会让你觉得更加得心应手。这篇博文记录了我的 Zsh 配置。本来，这篇文章只是作为我自己的笔记，所以写的没比较随意；同时出于练习英语写作的目的，写成了英文。但后来发现我的朋友们也会参考，所以我打算将其重置为中文的，并修改完善了一些内容。</p>
 <span id="more"></span>
 
-<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><p>Native GNU bash doesn't run on windows, but you can use something like git bash (msys2) to run bash on windows. Furthermore, you can also use zsh on windows. The articles below may be helpful:</p>
+<h2 id="在开始之前"><a href="#在开始之前" class="headerlink" title="在开始之前"></a>在开始之前</h2><p>在正式开始之前，让我们先明确几个概念：</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/625583037">Windows 安装 Zsh 终端 - 知乎</a></li>
-<li><a target="_blank" rel="noopener" href="https://dominikrys.com/posts/zsh-in-git-bash-on-windows/">Installing Zsh (and oh-my-zsh) in Windows Git Bash</a></li>
+<li><strong>终端（Terminal） / 终端模拟器（Terminal Emulator）/ 控制台（Console）</strong>：这些名词来自计算机庞大而昂贵的时代，那时候整栋大楼可能只有一台计算机，名为 “终端” 的设备被放置在大楼的不同房间里，人们通过它与这台计算机进行交互。终端模拟器是模拟终端的软件，基本上是一个看起来像终端的图形用户界面应用程序。如今，这些术语可以互换使用，指的都是 “终端模拟器” 这样一个概念，即一个可以输入输出的文本界面。</li>
+<li><strong>Shell</strong>：你可能听说过 Linux 内核，内核是操作系统的核心，而在这个 “核” 之外，存在一种名为 “壳” 的软件 —— Shell。简单而言 Shell 是用户与内核沟通的桥梁。它作为一个命令解释器，接受用户输入的命令，然后调用操作系统的功能来执行这些命令。最著名的 Shell 应该是 <code>bash</code>，它是几乎所有 Linux 的默认 Shell，类似地，Windows 平台的默认 Shell 是 <code>cmd</code> 和 Power Shell。我们这里要使用的 <code>zsh</code> 可以简单理解为 <code>bash</code> 的一个超集。它几乎兼容 <code>bash</code>，但提供了更高的配置自由度和更多的功能。</li>
+<li><strong>命令提示符（Prompt）</strong>：命令提示符指的是在终端输入命令前，光标跳动位置之前的输出的内容，它的具体内容由环境变量 <code>$PS1</code>（意为 Prompt String 1）控制。你可以在 <code>zsh</code> 中输入 <code>echo $PS1</code> 命令来查看你的当前 Prompt String。注意这里的 “命令提示符” 并不是指 Windows 的 <code>cmd</code>（尽管打开这个软件它的名字显示为命令提示符），那个更像是上面说的终端和 Shell 的结合体。</li>
 </ul>
-<p>The default character set used on your Windows platform may not be UTF-8. You can add these lines to your <code>~/.zshrc</code> to enable UTF-8 in your terminal:</p>
-<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Set Windows codepage to 65001 (UTF-8).</span><br><span class="line">if [[ "$OSTYPE" == "msys" ]]; then</span><br><span class="line">    chcp.com 65001 &amp;&gt; /dev/null</span><br><span class="line">fi</span><br></pre></td></tr></tbody></table></figure>
+<p>本文将着眼于 Zsh 的配置，但我强烈建议你也去了解一下终端的配置。或者，更广地，可以看一下我的 <a href="/posts/183d7426.html">另一篇文章</a>，在那儿我较为综合地介绍了环境配置的方方面面。</p>
+<h2 id="安装-Zsh"><a href="#安装-Zsh" class="headerlink" title="安装 Zsh"></a>安装 Zsh</h2><p>在 macOS 平台上，Zsh 是默认 Shell，直接打开终端就可以开始使用了。</p>
+<p>在 Linux 平台，你可以使用相应平台的包管理器来安装它，并使用 <code>chsh</code> 命令来将其设置为你的默认 Shell。假设你使用的包管理器是 <code>apt</code> ，你可以输入下面的命令来安装并设置 zsh 为你的默认 Shell：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install zsh -y</span><br><span class="line">chsh -s $(<span class="built_in">which</span> zsh)</span><br></pre></td></tr></tbody></table></figure>
 
-<p>You may also need a terminal emulator on windows. I use <a target="_blank" rel="noopener" href="https://alacritty.org/">alacritty</a> and my config file looks like:</p>
-<figure class="highlight toml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">working_directory</span> = <span class="string">"C:\\Users\\BlockLune"</span></span><br><span class="line"></span><br><span class="line"><span class="section">[shell]</span></span><br><span class="line"><span class="attr">program</span> = <span class="string">"C:\\Program Files\\Git\\bin\\bash.exe"</span></span><br><span class="line"><span class="attr">args</span> = [<span class="string">"--login"</span>, <span class="string">"-i"</span>]</span><br><span class="line"></span><br><span class="line"><span class="section">[font]</span></span><br><span class="line"><span class="attr">bold</span> = { family = <span class="string">"FiraCode Nerd Font Mono"</span>, style = <span class="string">"Bold"</span> }</span><br><span class="line"><span class="attr">normal</span> = { family = <span class="string">"FiraCode Nerd Font Mono"</span>, style = <span class="string">"Light"</span> }</span><br><span class="line"><span class="attr">size</span> = <span class="number">12</span></span><br><span class="line"><span class="attr">offset</span> = { x = <span class="number">0</span>, y = <span class="number">4</span> }</span><br><span class="line"></span><br><span class="line"><span class="section">[window]</span></span><br><span class="line"><span class="attr">dimensions</span> = { columns = <span class="number">80</span>, lines = <span class="number">30</span> }</span><br><span class="line"><span class="attr">padding</span> = { x = <span class="number">12</span>, y = <span class="number">12</span> }</span><br></pre></td></tr></tbody></table></figure>
+<p>安装和设置完成后，关闭并重启你的终端来使配置生效。</p>
+<p>在 Windows 平台上会麻烦一些，主要是原生的 GNU Bash 并不支持 Windows 平台，更别提 Zsh 了。但也不完全没有办法，你可以参考下面两篇文章来在 Windows 平台使用 Zsh：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://dominikrys.com/posts/zsh-in-git-bash-on-windows/">Installing Zsh (and oh-my-zsh) in Windows Git Bash</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/625583037">Windows 安装 Zsh 终端 - 知乎</a></li>
+</ul>
+<h2 id="配置框架与主题"><a href="#配置框架与主题" class="headerlink" title="配置框架与主题"></a>配置框架与主题</h2><p>Zsh 最知名的配置框架是 <a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh">oh-my-zsh</a>，通过下面的命令来安装它：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">"<span class="subst">$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>"</span></span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><p>Use your favorite package manager to install <code>zsh</code> and then run <code>chsh -s $(which zsh)</code> to set Z Shell as your default shell.</p>
-<h3 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h3><p>It's installed by default.</p>
-<h2 id="Themes-and-Plugins"><a href="#Themes-and-Plugins" class="headerlink" title="Themes and Plugins"></a>Themes and Plugins</h2><p>Firstly, install <a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh">oh-my-zsh</a> and <a target="_blank" rel="noopener" href="https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#oh-my-zsh">powerlevel10k</a>.</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># installs oh-my-zsh using curl</span></span><br><span class="line">sh -c <span class="string">"<span class="subst">$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>"</span></span><br><span class="line"><span class="comment"># clones powerlevel10k</span></span><br><span class="line">git <span class="built_in">clone</span> --depth=1 https://github.com/romkatv/powerlevel10k.git <span class="variable">${ZSH_CUSTOM:-<span class="variable">$HOME</span>/.oh-my-zsh/custom}</span>/themes/powerlevel10k</span><br></pre></td></tr></tbody></table></figure>
+<p>安装成功的话，你就会发现你的 Prompt 已经变了。</p>
+<p>接着，可以安装一个主题。我使用的是 <a target="_blank" rel="noopener" href="https://github.com/romkatv/powerlevel10k">powerlevel10k</a>，它提供了一个一步一步的操作流程让你自定义一个你喜欢的命令提示符。运行下面的命令来安装它：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --depth=1 https://github.com/romkatv/powerlevel10k.git <span class="variable">${ZSH_CUSTOM:-<span class="variable">$HOME</span>/.oh-my-zsh/custom}</span>/themes/powerlevel10k</span><br></pre></td></tr></tbody></table></figure>
 
-<p>Then, to set <code>powerlevel10k</code> as the theme, edit in <code>~/.zshrc</code>:</p>
+<p>然后打开 <code>~/.zshrc</code> 这个文件，找到 <code>ZSH_THEME</code> 开头的这一行并修改为：</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ZSH_THEME="powerlevel10k/powerlevel10k"</span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h3><p>Oh-my-zsh provides many plugins (See the <a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins">list</a>), and you can install more by yourself.</p>
-<p>I installed some plugins not provided by oh-my-zsh:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># git clone https://github.com/esc/conda-zsh-completion ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/conda-zsh-completion</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/sukkaw/zsh-osx-autoproxy <span class="variable">${ZSH_CUSTOM:-~/.oh-my-zsh/custom}</span>/plugins/zsh-osx-autoproxy --depth=1 <span class="comment"># ONLY on macOS</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions.git <span class="variable">$ZSH_CUSTOM</span>/plugins/zsh-autosuggestions --depth=1</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-history-substring-search <span class="variable">${ZSH_CUSTOM:-~/.oh-my-zsh/custom}</span>/plugins/zsh-history-substring-search --depth=1</span><br><span class="line"><span class="comment"># git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting --depth=1</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zdharma-continuum/fast-syntax-highlighting.git <span class="variable">$ZSH_CUSTOM</span>/plugins/fast-syntax-highlighting --depth=1 <span class="comment"># a faster choice</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>Edit in <code>~/.zshrc</code>:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># I disable some plugins here</span><br><span class="line">plugins=(</span><br><span class="line">    # conda-zsh-completion</span><br><span class="line">    # fd</span><br><span class="line">    # fzf</span><br><span class="line">    # git</span><br><span class="line">    # git-commit</span><br><span class="line">    history-substring-search</span><br><span class="line">    # pip</span><br><span class="line">    ripgrep</span><br><span class="line">    z</span><br><span class="line">    zsh-autosuggestions</span><br><span class="line">    zsh-osx-autoproxy</span><br><span class="line">    # zsh-syntax-highlighting</span><br><span class="line">    fast-syntax-highlighting</span><br><span class="line">)</span><br><span class="line">ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=white'</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Usage of some plugins:</p>
+<blockquote>
+<p>顺便一说，<code>~/.zshrc</code> 中的 <code>~</code> 指的其实是你的家目录。举例而言，如果你的用户名是 <code>asuna</code>，那么它在各平台所代表的完整路径如下：</p>
 <ul>
-<li><code>git</code>: <a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git">GitHub</a></li>
+<li>macOS: <code>/Users/asuna</code></li>
+<li>Linux: <code>/home/asuna</code></li>
+<li>Windows: <code>C:\Users\asuna</code></li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>Alias</th>
-<th>Command</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>g</td>
-<td>git</td>
-</tr>
-<tr>
-<td>ga</td>
-<td>git add</td>
-</tr>
-<tr>
-<td>gaa</td>
-<td>git add --all</td>
-</tr>
-<tr>
-<td>gapa</td>
-<td>git add --patch</td>
-</tr>
-<tr>
-<td>gau</td>
-<td>git add --update</td>
-</tr>
-<tr>
-<td>gav</td>
-<td>git add --verbose</td>
-</tr>
-<tr>
-<td>gb</td>
-<td>git branch</td>
-</tr>
-<tr>
-<td>gco</td>
-<td>git checkout</td>
-</tr>
-<tr>
-<td>gcl</td>
-<td>git clone --recurse-submodules</td>
-</tr>
-<tr>
-<td>gcam</td>
-<td>git commit --all --message</td>
-</tr>
-<tr>
-<td>gc</td>
-<td>git commit --verbose</td>
-</tr>
-<tr>
-<td>gc!</td>
-<td>git commit --verbose --amend</td>
-</tr>
-<tr>
-<td>gd</td>
-<td>git diff</td>
-</tr>
-<tr>
-<td>gf</td>
-<td>git fetch</td>
-</tr>
-<tr>
-<td>glog</td>
-<td>git log --oneline --decorate --graph</td>
-</tr>
-<tr>
-<td>gl</td>
-<td>git pull</td>
-</tr>
-<tr>
-<td>gp</td>
-<td>git push</td>
-</tr>
-<tr>
-<td>gst</td>
-<td>git status</td>
-</tr>
-<tr>
-<td>gss</td>
-<td>git status --short</td>
-</tr>
-<tr>
-<td>...</td>
-<td>...</td>
-</tr>
-</tbody></table>
-<ul>
-<li><code>git-commit</code>: <a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git-commit">GitHub</a></li>
-</ul>
-<p>Syntax: <code>git &lt;type&gt; [(-s, --scope) "&lt;scope&gt;"] "&lt;message&gt;"</code>, where <code>&lt;type&gt;</code> is:</p>
-<ol>
-<li><code>build</code></li>
-<li><code>chore</code></li>
-<li><code>ci</code></li>
-<li><code>docs</code></li>
-<li><code>feat</code></li>
-<li><code>fix</code></li>
-<li><code>perf</code></li>
-<li><code>refactor</code></li>
-<li><code>rev</code></li>
-<li><code>style</code></li>
-<li><code>test</code></li>
-</ol>
-<div class="note primary"><p>NOTE: the alias for <code>revert</code> type is <code>rev</code>, as otherwise it conflicts with the git command of the same name.<br>It will still generate a commit message in the format <code>revert: &lt;message&gt;</code></p>
-</div>
+<p>所以实际上 <code>~/.zshrc</code> 是在说你的家目录下的 <code>.zshrc</code> 这样一个文件。它是 Zsh 的（其中一个）配置文件。</p>
+</blockquote>
+<h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><p>Oh-my-zsh 提供了海量的插件以支持丰富的扩展功能 (查看 <a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins">列表</a>)。有的是默认安装的，有的则需要你手动下载并配置。必装的我认为有这三个：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/zdharma-continuum/fast-syntax-highlighting.git <span class="variable">${ZSH_CUSTOM:-~/.oh-my-zsh/custom}</span>/plugins/fast-syntax-highlighting --depth=1</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions.git <span class="variable">${ZSH_CUSTOM:-~/.oh-my-zsh/custom}</span>/plugins/zsh-autosuggestions --depth=1</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-history-substring-search <span class="variable">${ZSH_CUSTOM:-~/.oh-my-zsh/custom}</span>/plugins/zsh-history-substring-search --depth=1</span><br></pre></td></tr></tbody></table></figure>
 
-<table>
-<thead>
-<tr>
-<th>Alias</th>
-<th>Command</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>git style "remove trailing whitespace"</td>
-<td>git commit -m "style: remove trailing whitespace"</td>
-</tr>
-<tr>
-<td>git fix -s "router" "correct redirect link"</td>
-<td>git commit -m "fix(router): correct redirect link"</td>
-</tr>
-</tbody></table>
-<h2 id="Aliases"><a href="#Aliases" class="headerlink" title="Aliases"></a>Aliases</h2><p>Actually, the two plugins shown above (git &amp; git-commit) are some aliases. A better practice is to define them yourself, so that they are more useful to you. First create a file <code>~/.zsh_aliases</code> and define your aliases:</p>
-<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"># .bash_aliases</span><br><span class="line"></span><br><span class="line"># ls</span><br><span class="line">## -F appends file type indicators</span><br><span class="line">## / for directories</span><br><span class="line">## * for executables</span><br><span class="line">## @ for symlinks</span><br><span class="line">## etc.</span><br><span class="line">alias ls="ls -FG --color=auto"</span><br><span class="line">alias ll="lsd -lh"</span><br><span class="line">alias la="ls -a"</span><br><span class="line">alias l="ll -a"</span><br><span class="line"></span><br><span class="line"># interactive</span><br><span class="line">alias rm="rm -i"</span><br><span class="line">alias cp="cp -i"</span><br><span class="line">alias mv="mv -i"</span><br><span class="line">alias ln="ln -i"</span><br><span class="line"></span><br><span class="line"># mkdir</span><br><span class="line">alias md="mkdir -p"</span><br><span class="line"></span><br><span class="line"># pagers</span><br><span class="line">alias less="less --quit-at-eof --no-init --tabs=4 --RAW-CONTROL-CHARS"</span><br><span class="line">alias more="less"</span><br><span class="line"></span><br><span class="line"># greps</span><br><span class="line">alias grep="grep --color=auto"</span><br><span class="line">alias egrep="grep -E --color=auto"</span><br><span class="line">alias fgrep="grep -F --color=auto"</span><br><span class="line"></span><br><span class="line"># git</span><br><span class="line">alias g="git"</span><br><span class="line">alias ga="git add --verbose"</span><br><span class="line">alias gaa="git add --all --verbose"</span><br><span class="line">alias gb="git branch"</span><br><span class="line">alias gc!="git commit --verbose --amend"</span><br><span class="line">alias gc="git commit --verbose"</span><br><span class="line">alias gcb="git checkout -b"</span><br><span class="line">alias gcl="git clone --recurse-submodules"</span><br><span class="line">alias gco="git checkout"</span><br><span class="line">alias gcp="git cherry-pick"</span><br><span class="line">alias gd="git diff"</span><br><span class="line">alias gf="git fetch"</span><br><span class="line">alias gl="git pull"</span><br><span class="line">alias glog="git log --oneline --decorate --graph"</span><br><span class="line">alias gp="git push"</span><br><span class="line">alias gr="git remote"</span><br><span class="line">alias grb="git rebase"</span><br><span class="line">alias grf="git reflog"</span><br><span class="line">alias grm="git rm"</span><br><span class="line">alias grs="git restore"</span><br><span class="line">alias grst="git restore --staged"</span><br><span class="line">alias gsh="git show"</span><br><span class="line">alias gss="git status --short"</span><br><span class="line">alias gst="git status"</span><br><span class="line">alias gsta="git stash push"</span><br><span class="line"></span><br><span class="line"># node</span><br><span class="line">alias cnpm="npm --registry=https://registry.npmmirror.com  --cache=$HOME/.npm/.cache/cnpm  --disturl=https://npmmirror.com/mirrors/node  --userconfig=$HOME/.cnpmrc"</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<p>如果你是 macOS 平台，我还推荐你安装下面这个插件，它可以自动检测你的系统代理设置并自动配置相关环境变量：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/sukkaw/zsh-osx-autoproxy <span class="variable">${ZSH_CUSTOM:-~/.oh-my-zsh/custom}</span>/plugins/zsh-osx-autoproxy --depth=1</span><br></pre></td></tr></tbody></table></figure>
 
-<p>Then, source the file in your <code>~/.zshrc</code>:</p>
-<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[ -f ~/.zsh_aliases ]] &amp;&amp; source ~/.zsh_aliases</span><br></pre></td></tr></tbody></table></figure>
+<p>为了启用这些插件，你需要再次打开并编辑 <code>~/.zshrc</code> 文件（如果你没有安装 zsh-osx-autoproxy 插件，记得把对应的那一行删除）：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">plugins=(</span><br><span class="line">    fast-syntax-highlighting</span><br><span class="line">    history-substring-search</span><br><span class="line">    z</span><br><span class="line">    zsh-autosuggestions</span><br><span class="line">    zsh-osx-autoproxy</span><br><span class="line">)</span><br><span class="line">ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=white'</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="Lazyload"><a href="#Lazyload" class="headerlink" title="Lazyload"></a>Lazyload</h2><p>As your configuration increases, the terminal may take longer to start. In this case, some lazyload configurations shown in the article below may be helpful:</p>
+<p>如果你细心的话，你会发现我这里还启用了一个名为 <code>z</code> 的插件，它是默认安装的，你可以在 <a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/z">这里</a> 找到关于它的说明。</p>
+<h2 id="别名"><a href="#别名" class="headerlink" title="别名"></a>别名</h2><p>一些常用命令可能很长，你可以创建别名来加快输入速度。创建别名的命令是 <code>alias</code> 。例如对于 <code>ls</code>，我有下面这些别名：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> <span class="built_in">ls</span>=<span class="string">"ls -FG --color=auto"</span></span><br><span class="line"><span class="built_in">alias</span> ll=<span class="string">"ls -lh"</span></span><br><span class="line"><span class="built_in">alias</span> la=<span class="string">"ls -a"</span></span><br><span class="line"><span class="built_in">alias</span> l=<span class="string">"ll -a"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>你可以将这些内容写入你的 <code>~/.zshrc</code> 配置文件中，这样每次你打开终端它们都会被自动配置好。而我的习惯是创建一个 <code>~/.aliases</code> 文件专门存储这些别名，并在 <code>~/.zshrc</code> 中添加下面这一行来包含它：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[ -f ~/.aliases ]] &amp;&amp; source ~/.aliases</span><br></pre></td></tr></tbody></table></figure>
+
+<p>你可以在 <a target="_blank" rel="noopener" href="https://github.com/BlockLune/dotfiles/blob/main/.aliases">这里</a> 找到我的 <code>.aliases</code> 文件。</p>
+<h2 id="懒加载"><a href="#懒加载" class="headerlink" title="懒加载"></a>懒加载</h2><p>随着你配置的插件等内容的增多，你的 zsh 可能会花费越来越多的时间才能启动。在这种情况下，配置一些懒加载可能会有所帮助。下面的文章细致地介绍了相关技术：</p>
 <ul>
 <li><em><a target="_blank" rel="noopener" href="https://blog.skk.moe/post/make-oh-my-zsh-fly/">我就感觉到快 —— zsh 和 oh my zsh 冷启动速度优化 | Sukka's Blog</a></em></li>
 </ul>
 <h2 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/zsh-users/zsh-syntax-highlighting/issues/790">syntax highlighting is super slow in WSL2 · Issue #790 · zsh-users/zsh-syntax-highlighting</a></li>
 </ul>
-<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://dominikrys.com/posts/zsh-in-git-bash-on-windows/">Installing Zsh (and oh-my-zsh) in Windows Git Bash</a></li>
-<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/625583037">Windows 安装 Zsh 终端 - 知乎</a></li>
+<h2 id="更多资源"><a href="#更多资源" class="headerlink" title="更多资源"></a>更多资源</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/abhigenie92/zsh_to_fish">abhigenie92/zsh_to_fish: How to make zsh like fish?</a></li>
 <li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/19556676">终极 Shell——ZSH - 知乎</a></li>
 </ul>
