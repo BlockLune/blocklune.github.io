@@ -5170,6 +5170,47 @@ graph TB
       </tags>
   </entry>
   <entry>
+    <title>使用 Vue 和 @Vueuse/motion 制作带动画的模态框</title>
+    <url>/posts/6633c011.html</url>
+    <content><![CDATA[<p>本文介绍了如何使用 <a href="https://cn.vuejs.org/">Vue</a> 和 <a href="https://motion.vueuse.org/">@vueuse/motion</a> 创建一个带有动画的模态框。你可以在 <a href="https://github.com/BlockLune/modal-animation-demo/tree/main/modal-animation-demo-vue">这里</a> 找到最终代码。</p>
+<span id="more"></span>
+
+<p>首先，让我们来创建一个 Modal，核心部分如下（略去了自定义类的具体内容，可以在最终代码处查看）：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;!-- Modal.vue --&gt;</span><br><span class="line">&lt;script setup lang="ts"&gt;</span><br><span class="line">import { ref, onMounted, onUnmounted } from "vue";</span><br><span class="line">const isOpen = ref(false);</span><br><span class="line">const openModal = () =&gt; {</span><br><span class="line">  isOpen.value = true;</span><br><span class="line">};</span><br><span class="line">const closeModal = () =&gt; {</span><br><span class="line">  isOpen.value = false;</span><br><span class="line">};</span><br><span class="line">const handleKeydown = (event: KeyboardEvent) =&gt; {</span><br><span class="line">  if (event.key === "Escape") {</span><br><span class="line">    closeModal();</span><br><span class="line">  }</span><br><span class="line">};</span><br><span class="line">onMounted(() =&gt; {</span><br><span class="line">  document.addEventListener("keydown", handleKeydown);</span><br><span class="line">});</span><br><span class="line">onUnmounted(() =&gt; {</span><br><span class="line">  document.removeEventListener("keydown", handleKeydown);</span><br><span class="line">});</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;button class="btn" @click="openModal"&gt;Open&lt;/button&gt;</span><br><span class="line">  &lt;Teleport to="body"&gt;</span><br><span class="line">    &lt;div v-if="isOpen" class="modal-background" /&gt;</span><br><span class="line">    &lt;div v-if="isOpen" class="modal-container" @click.self="closeModal"&gt;</span><br><span class="line">      &lt;div class="modal"&gt;</span><br><span class="line">        &lt;p class="modal-text"&gt;Hello, world!&lt;/p&gt;</span><br><span class="line">        &lt;button class="btn" @click="closeModal"&gt;Close&lt;/button&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/Teleport&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>几个注意点如下：</p>
+<ul>
+<li>使用 <a href="https://cn.vuejs.org/guide/built-ins/teleport"><code>Teleport</code></a> 来将最后的模态框 “传送” 到 DOM 中更合理的位置去；</li>
+<li>拆分了模态框背景（标注为 <code>modal-background</code>）和模态容器（标注为 <code>modal-container</code>），这是因为我打算创建的模态框的动画是从下往上上浮显示、同时带有一个透明度的变化，而背景的动画我只希望其带有一个透明度的变化；</li>
+<li>使用 <code>position: fixed;</code> 和 <code>inset: 0;</code> 来让模态框背景和模态容器正确定位；</li>
+<li>使用 <code>@click.self</code> 来为模态框外侧区域（ <code>modal-container</code> 的区域）添加一个点击事件，此处为关闭模态框；</li>
+<li>使用 <code>onMounted</code> 和 <code>onUnmounted</code> 来在组件加载和卸载时分别添加和移除一个事件监听器，用于在 Esc 键被按下时关闭模态框；</li>
+</ul>
+<p>下面让我们来制作动画。背景动画比较简单，我们直接使用 Vue 提供的 <code>[Transition](https://cn.vuejs.org/guide/built-ins/transition)</code> 组件将原来的 <code>modal-background</code> 包裹，并添加相应的 CSS 即可：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;!-- ... --&gt;</span><br><span class="line">	&lt;Transition name="fade"&gt;</span><br><span class="line">	  &lt;div v-if="isOpen" class="modal-background" @click="closeModal" /&gt;</span><br><span class="line">	&lt;/Transition&gt;</span><br><span class="line">	&lt;!-- ... --&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">/* ... */</span><br><span class="line">.fade-enter-active,</span><br><span class="line">.fade-leave-active {</span><br><span class="line">  transition: opacity 0.5s;</span><br><span class="line">}</span><br><span class="line">.fade-enter,</span><br><span class="line">.fade-leave-to {</span><br><span class="line">  opacity: 0;</span><br><span class="line">}</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后是模态框主体的动画，这里使用了 <a href="https://motion.vueuse.org/">@vueuse/motion</a> 。首先，添加这个包：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">pnpm install @vueuse/motion</span><br></pre></td></tr></tbody></table></figure>
+
+<p>接着编辑 <code>main.ts</code>：</p>
+<figure class="highlight ts"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> { createApp } <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> { <span class="title class_">MotionPlugin</span> } <span class="keyword">from</span> <span class="string">'@vueuse/motion'</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">'./style.css'</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">App</span> <span class="keyword">from</span> <span class="string">'./App.vue'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = <span class="title function_">createApp</span>(<span class="title class_">App</span>)</span><br><span class="line">app.<span class="title function_">use</span>(<span class="title class_">MotionPlugin</span>)</span><br><span class="line">app.<span class="title function_">mount</span>(<span class="string">'#app'</span>)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>OK，可以开始使用了。但是简单地为 <code>modal-container</code> 添加 <code>v-motion</code> 并不足够：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;!-- error --&gt;</span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;!-- ... --&gt;</span><br><span class="line">  &lt;div</span><br><span class="line">	v-if="isOpen"</span><br><span class="line">	class="modal-container"</span><br><span class="line">	@click.self="closeModal"</span><br><span class="line">	v-motion</span><br><span class="line">	:initial="{ opacity: 0, y: 100 }"</span><br><span class="line">	:enter="{ opacity: 1, y: 0 }"</span><br><span class="line">	:leave="{ opacity: 0, y: 100 }"</span><br><span class="line">  &gt;</span><br><span class="line">	&lt;div class="modal"&gt;</span><br><span class="line">	  &lt;p class="modal-text"&gt;Hello, world!&lt;/p&gt;</span><br><span class="line">	  &lt;button class="btn" @click="closeModal"&gt;Close&lt;/button&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;!-- ... --&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>如果是这样，你会发现进入动画非常顺利地播放了，但退出动画完全没有生效！为什么会这样？</p>
+<p>原因在于我们是通过 <code>v-if</code> 来控制是否显示这个组件的。在进入时，首先 <code>v-if</code> 后跟的值 <code>isOpen</code> 为真，接着进入动画正常播放；但是在退出时，<code>isOpen</code> 变为假，<code>v-if</code> 检测到后直接将该组件从 DOM 中移除了，退出动画根本没有时间播放！</p>
+<p>如何解决呢？这个 <a href="https://vueuse-motion-demo.netlify.app/">Demo</a> 演示了这一点，可以配合 <code>Transition</code> 使用：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;script setup lang="ts"&gt;</span><br><span class="line">import { useMotions } from "@vueuse/motion";</span><br><span class="line">const motions = useMotions();</span><br><span class="line">// ...</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;!-- ... --&gt;</span><br><span class="line">	&lt;Transition :css="false" @leave="(_, done) =&gt; motions.modal.leave(done)"&gt;</span><br><span class="line">	  &lt;div</span><br><span class="line">		v-if="isOpen"</span><br><span class="line">		class="modal-container"</span><br><span class="line">		@click.self="closeModal"</span><br><span class="line">		v-motion="'modal'"</span><br><span class="line">		:initial="{ opacity: 0, y: 100 }"</span><br><span class="line">		:enter="{ opacity: 1, y: 0 }"</span><br><span class="line">		:leave="{ opacity: 0, y: 100 }"</span><br><span class="line">	  &gt;</span><br><span class="line">		&lt;div class="modal"&gt;</span><br><span class="line">		  &lt;p class="modal-text"&gt;Hello, world!&lt;/p&gt;</span><br><span class="line">		  &lt;button class="btn" @click="closeModal"&gt;Close&lt;/button&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">	  &lt;/div&gt;</span><br><span class="line">	&lt;/Transition&gt;</span><br><span class="line">  &lt;!-- ... --&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这样退出动画也能顺利播放了。</p>
+]]></content>
+      <tags>
+        <tag>Web</tag>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>补记一个用 Vue.js 和 ElementUI 实现的在线抽奖网页</title>
     <url>/posts/6a8a1633.html</url>
     <content><![CDATA[<p>这件事儿发生在我的高中某个新学期开始，新来了一个电脑老师。有点打赌或者考验我的性质吧，ta 说 ta 弄了随机数点名的小网页，还能用同学的照片进行抽取，问我能不能实现一个。ta 的实现方法是 jQuery，技术上比较老，界面也不太好看。我想去尝试一下别的方法，正好也试试略微学了一点的 Vue.js，为了好看，用了 Element UI。</p>

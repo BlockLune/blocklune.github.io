@@ -9,8 +9,29 @@
     <atom:link href="https://fishg.top/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Thu, 17 Oct 2024 05:03:29 GMT</pubDate>
+    <pubDate>Thu, 17 Oct 2024 09:06:23 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>使用 Vue 和 @Vueuse/motion 制作带动画的模态框</title>
+      <link>https://fishg.top/posts/6633c011.html</link>
+      <guid>https://fishg.top/posts/6633c011.html</guid>
+      <pubDate>Thu, 17 Oct 2024 09:06:23 GMT</pubDate>
+      
+      <description>&lt;p&gt;本文介绍了如何使用 &lt;a href=&quot;https://cn.vuejs.org/&quot;&gt;Vue&lt;/a&gt; 和 &lt;a href=&quot;https://motion.vueuse.org/&quot;&gt;@vueuse/motion&lt;/a&gt; 创建一个带有动画的模态框。你可以在 &lt;a href=&quot;https://github.com/BlockLune/modal-animation-demo/tree/main/modal-animation-demo-vue&quot;&gt;这里&lt;/a&gt; 找到最终代码。&lt;/p&gt;</description>
+      
+      
+      
+      
+      
+      <category domain="https://fishg.top/tags/web/">Web</category>
+      
+      <category domain="https://fishg.top/tags/vue/">Vue</category>
+      
+      
+      <comments>https://fishg.top/posts/6633c011.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>使用 Rust 写一个简单的线程池</title>
