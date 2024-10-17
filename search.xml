@@ -1,49 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>使用 Rust 写一个简单的线程池</title>
-    <url>/posts/118aec2d.html</url>
-    <content><![CDATA[<p>线程池是一种多线程处理形式，它通过将任务分配给事先创建好的线程以进行重用，提高了并发性能。本文是一篇阅读笔记，原材料为 <a href="https://course.rs/advance-practice1/intro.html">Rust 语言圣经 - 进阶实战 1 实现一个 Web 服务器</a>。</p>
-<span id="more"></span>
-
-<p>在实现线程池之前，先来看看我们希望怎么用它：</p>
-<figure class="highlight rust"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() {</span><br><span class="line">	<span class="keyword">let</span> <span class="variable">pool</span> = ThreadPool::<span class="title function_ invoke__">new</span>(<span class="number">4</span>); <span class="comment">// 创建一个包含 4 个线程的线程池</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">// 对于前来的每个任务，将其放到池子中执行</span></span><br><span class="line">	<span class="keyword">for</span> <span class="variable">task</span> <span class="keyword">in</span> tasks {</span><br><span class="line">		pool.<span class="title function_ invoke__">execute</span>(|| {</span><br><span class="line">			<span class="title function_ invoke__">handle_task</span>(task);</span><br><span class="line">		});</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>因此，我们的线程池的骨架可能是这样的：</p>
-<figure class="highlight rust"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">pub</span> <span class="keyword">struct</span> <span class="title class_">ThreadPool</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line">	<span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">new</span>(size: <span class="type">usize</span>) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> {</span><br><span class="line">		<span class="comment">// ...</span></span><br><span class="line">	}</span><br><span class="line"></span><br><span class="line">	<span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">execute</span>&lt;F&gt;(&amp;<span class="keyword">self</span>, f: F)</span><br><span class="line">    <span class="keyword">where</span></span><br><span class="line">        F: <span class="title function_ invoke__">FnOnce</span>() + <span class="built_in">Send</span> + <span class="symbol">'static</span>,</span><br><span class="line">    {</span><br><span class="line">		<span class="comment">// ...</span></span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这里的 <code>FnOnce</code> 表示我们希望这个闭包只需要被执行一次，紧跟着的 <code>()</code> 表示该闭包没有参数，后面没有跟 <code>-&gt;</code> 所以这个闭包也没有返回值。</p>
-<p>我们的 <code>new</code> 函数要干的第一件事情是，创建一些线程并存起来：</p>
-<figure class="highlight rust"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">use</span> std::thread;</span><br><span class="line"></span><br><span class="line"><span class="keyword">pub</span> <span class="keyword">struct</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line">	threads: <span class="type">Vec</span>&lt;thread::JoinHandle&lt;()&gt;&gt;,</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line">	<span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">new</span>(size: <span class="type">usize</span>) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> {</span><br><span class="line">		<span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">threads</span> = <span class="type">Vec</span>::<span class="title function_ invoke__">with_capactiy</span>(size);</span><br><span class="line">		<span class="keyword">for</span> <span class="variable">_</span> <span class="keyword">in</span> <span class="number">0</span>..size {</span><br><span class="line">			<span class="comment">// 创建线程并存储</span></span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">Self</span> { threads }</span><br><span class="line">	}</span><br><span class="line"></span><br><span class="line">	<span class="comment">// ...</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>创建线程的方式是使用 <code>thread::spawn</code>，但是它会立刻开始执行传入的任务。但是在这里，我们希望的应该是 “创建线程但暂时不执行”。为此，我们可以创建一个中介性质的对象 <code>Worker</code>：</p>
-<figure class="highlight rust"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Worker</span> {</span><br><span class="line">	id: <span class="type">usize</span>,</span><br><span class="line">	thread: thread::JoinHandle&lt;()&gt;,</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">Worker</span> {</span><br><span class="line">	<span class="keyword">fn</span> <span class="title function_">new</span>(id: <span class="type">usize</span>) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> {</span><br><span class="line">		<span class="comment">// 从任务列表中取出一个任务</span></span><br><span class="line">		<span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">// 创建一个线程，以执行这个任务</span></span><br><span class="line">		<span class="keyword">let</span> <span class="variable">thread</span> = thread::<span class="title function_ invoke__">spawn</span>(|| {</span><br><span class="line">			<span class="comment">// ...	</span></span><br><span class="line">		});</span><br><span class="line"></span><br><span class="line">		<span class="keyword">Self</span> { id, thread }</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>然后，就可以改一下上面线程池的声明：</p>
-<figure class="highlight rust"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">pub</span> <span class="keyword">struct</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line">	workers: <span class="type">Vec</span>&lt;Worker&gt;,</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line">	<span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">new</span>(size: <span class="type">usize</span>) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> {</span><br><span class="line">		<span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">workers</span> = <span class="type">Vec</span>::<span class="title function_ invoke__">with_capactiy</span>(size);</span><br><span class="line">		<span class="keyword">for</span> <span class="variable">id</span> <span class="keyword">in</span> <span class="number">0</span>..size {</span><br><span class="line">			workers.<span class="title function_ invoke__">push</span>(Worker::<span class="title function_ invoke__">new</span>(id));</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">Self</span> { workers }</span><br><span class="line">	}</span><br><span class="line"></span><br><span class="line">	<span class="comment">// ...</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p><code>ThreadPool::new</code> 的下一步任务是将传递来的任务分配给刚刚创建好的线程执行。如何实现呢？可以使用 Channel。可以让 <code>ThreadPool</code> 持有发送端，由它负责将任务发出去；而让 <code>Worker</code> 持有接收端，它接收发来的任务并将它们分配到具体的线程中执行。</p>
-<p>但是，现在存在一个问题，<code>mpsc</code> 是 Multiple Producers Single Consumer，但是这里的情况是很多 <code>Worker</code> 希望从发送端接受消息，是 Multiple Consumers。怎么办呢？答案是使用 <code>Arc&lt;Mutex&lt;_&gt;&gt;</code> 。这样，多个 <code>Worker</code>s 都可以持有 <code>receiver</code>（通过 <code>Arc</code>），但最后一次只有一个 <code>Worker</code> 能实际从这个 <code>receiver</code> 中拿到消息 / 拿到需要执行的任务（通过 <code>Mutex</code>）：</p>
-<figure class="highlight rust"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">use</span> std::{</span><br><span class="line">	sync::{mpsc, Arc, Mutex},</span><br><span class="line">	thread,</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line">	<span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">new</span>(size: <span class="type">usize</span>) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> {</span><br><span class="line">		<span class="keyword">let</span> (sender, receiver) = mpsc::<span class="title function_ invoke__">channel</span>();</span><br><span class="line">		<span class="keyword">let</span> <span class="variable">receiver</span> = Arc::<span class="title function_ invoke__">new</span>(Mutex::<span class="title function_ invoke__">new</span>(receiver));</span><br><span class="line">		<span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">workers</span> = <span class="type">Vec</span>::<span class="title function_ invoke__">with_capacity</span>(size);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> <span class="variable">id</span> <span class="keyword">in</span> <span class="number">0</span>..size {</span><br><span class="line">			workers.<span class="title function_ invoke__">push</span>(Worker::<span class="title function_ invoke__">new</span>(id, Arc::<span class="title function_ invoke__">clone</span>(&amp;receiver)));</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">Self</span> { workers, sender }</span><br><span class="line">	}</span><br><span class="line"></span><br><span class="line">	<span class="comment">// ...</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">Worker</span> {</span><br><span class="line">	<span class="keyword">fn</span> <span class="title function_">new</span>(id: <span class="type">usize</span>, receiver: Arc&lt;Mutex&lt;mpsc::Receiver&lt;Job&gt;&gt;&gt;) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> {</span><br><span class="line">		<span class="comment">// 从任务列表中取出一个任务（使用 `receiver`）</span></span><br><span class="line">		<span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">// 创建一个线程，以执行这个任务</span></span><br><span class="line">		<span class="keyword">let</span> <span class="variable">thread</span> = thread::<span class="title function_ invoke__">spawn</span>(|| {</span><br><span class="line">			<span class="comment">// ...	</span></span><br><span class="line">		});</span><br><span class="line"></span><br><span class="line">		<span class="keyword">Self</span> { id, thread }</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>接下来就是具体的发送任务和接受任务并执行了。首先需要确定的是，用什么类型来表示上面的 任务 <code>Job</code> 呢？答案是：</p>
-<figure class="highlight rust"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> <span class="title class_">Job</span> = <span class="type">Box</span>&lt;<span class="keyword">dyn</span> <span class="title function_ invoke__">FnOnce</span>() + <span class="built_in">Send</span> + <span class="symbol">'static</span>&gt;;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>然后就可以发送和接收任务了。注意 <code>recv</code> 的调用是阻塞的：</p>
-<figure class="highlight rust"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">impl</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line">	<span class="comment">// ...</span></span><br><span class="line">	<span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">execute</span>&lt;F&gt;(&amp;<span class="keyword">self</span>, f: F)</span><br><span class="line">    <span class="keyword">where</span></span><br><span class="line">        F: <span class="title function_ invoke__">FnOnce</span>() + <span class="built_in">Send</span> + <span class="symbol">'static</span>,</span><br><span class="line">    {</span><br><span class="line">		<span class="keyword">let</span> <span class="variable">job</span> = <span class="type">Box</span>::<span class="title function_ invoke__">new</span>(f);</span><br><span class="line">		<span class="keyword">self</span>.sender.<span class="title function_ invoke__">send</span>(job).<span class="title function_ invoke__">unwrap</span>();</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">Worker</span> {</span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">new</span>(id: <span class="type">usize</span>, receiver: Arc&lt;Mutex&lt;mpsc::Receiver&lt;Job&gt;&gt;&gt;) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> {</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">thread</span> = thread::<span class="title function_ invoke__">spawn</span>(<span class="keyword">move</span> || <span class="keyword">loop</span> {</span><br><span class="line">            <span class="keyword">let</span> <span class="variable">job</span> = receiver.<span class="title function_ invoke__">lock</span>().<span class="title function_ invoke__">unwrap</span>().<span class="title function_ invoke__">recv</span>().<span class="title function_ invoke__">unwrap</span>();</span><br><span class="line">            <span class="built_in">println!</span>(<span class="string">"Worker {id} got a job; executing."</span>);</span><br><span class="line">            <span class="title function_ invoke__">job</span>();</span><br><span class="line">        });</span><br><span class="line"></span><br><span class="line">        <span class="keyword">Self</span> { id, thread }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>注意这里 ** 不能用 <code>while let</code>**。主要原因是 <code>Mutex</code> 没有显式的 "unlock"，如果使用 <code>while let</code>，那么必须等到整个循环结束锁才会被释放。而像这里的使用 <code>let job = ...;</code>，中间的临时变量会在 <code>let</code> 结束时就被 <code>drop</code>，锁可以立刻被释放。</p>
-<p>最后一步是为我们实现的这个简单的线程池实现 <code>Drop</code>，主要是等待任务结束并回收资源。但这样是不行的：</p>
-<figure class="highlight rust"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// error</span></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">Drop</span> <span class="keyword">for</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">drop</span>(&amp;<span class="keyword">mut</span> <span class="keyword">self</span>) {</span><br><span class="line">        <span class="keyword">for</span> <span class="variable">worker</span> <span class="keyword">in</span> &amp;<span class="keyword">mut</span> <span class="keyword">self</span>.workers {</span><br><span class="line">            <span class="built_in">println!</span>(<span class="string">"Shutting down worker {}"</span>, worker.id);</span><br><span class="line">            worker.thread.<span class="title function_ invoke__">join</span>().<span class="title function_ invoke__">unwrap</span>();</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>报错原因是所有权。</p>
-<p>可行的解决方案是使用 <code>Option</code> 类型，并使用 <code>take</code> 方法拿走内部值的所有权。类似地，对 <code>sender</code> 也需要做这样的处理。最后，当 <code>sender</code> 被关闭，对应的 <code>receiver</code> 会收到一个错误，可以根据是否接收到错误，来判断 Channel 是否需要被关闭，进而判断线程是否需要结束了：</p>
-<figure class="highlight rust"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">use</span> std::{</span><br><span class="line">    sync::{mpsc, Arc, Mutex},</span><br><span class="line">    thread,</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="keyword">pub</span> <span class="keyword">struct</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line">    workers: <span class="type">Vec</span>&lt;Worker&gt;,</span><br><span class="line">    sender: <span class="type">Option</span>&lt;mpsc::Sender&lt;Job&gt;&gt;,</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> <span class="title class_">Job</span> = <span class="type">Box</span>&lt;<span class="keyword">dyn</span> <span class="title function_ invoke__">FnOnce</span>() + <span class="built_in">Send</span> + <span class="symbol">'static</span>&gt;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line">    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">new</span>(size: <span class="type">usize</span>) <span class="punctuation">-&gt;</span> ThreadPool {</span><br><span class="line">        <span class="keyword">let</span> (sender, receiver) = mpsc::<span class="title function_ invoke__">channel</span>();</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">receiver</span> = Arc::<span class="title function_ invoke__">new</span>(Mutex::<span class="title function_ invoke__">new</span>(receiver));</span><br><span class="line">        <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">workers</span> = <span class="type">Vec</span>::<span class="title function_ invoke__">with_capacity</span>(size);</span><br><span class="line">        <span class="keyword">for</span> <span class="variable">id</span> <span class="keyword">in</span> <span class="number">0</span>..size {</span><br><span class="line">            workers.<span class="title function_ invoke__">push</span>(Worker::<span class="title function_ invoke__">new</span>(id, Arc::<span class="title function_ invoke__">clone</span>(&amp;receiver)));</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        ThreadPool {</span><br><span class="line">            workers,</span><br><span class="line">            sender: <span class="title function_ invoke__">Some</span>(sender),</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">execute</span>&lt;F&gt;(&amp;<span class="keyword">self</span>, f: F)</span><br><span class="line">    <span class="keyword">where</span></span><br><span class="line">        F: <span class="title function_ invoke__">FnOnce</span>() + <span class="built_in">Send</span> + <span class="symbol">'static</span>,</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">job</span> = <span class="type">Box</span>::<span class="title function_ invoke__">new</span>(f);</span><br><span class="line">        <span class="keyword">self</span>.sender.<span class="title function_ invoke__">as_ref</span>().<span class="title function_ invoke__">unwrap</span>().<span class="title function_ invoke__">send</span>(job).<span class="title function_ invoke__">unwrap</span>();</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">Drop</span> <span class="keyword">for</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">drop</span>(&amp;<span class="keyword">mut</span> <span class="keyword">self</span>) {</span><br><span class="line">        <span class="title function_ invoke__">drop</span>(<span class="keyword">self</span>.sender.<span class="title function_ invoke__">take</span>());</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> <span class="variable">worker</span> <span class="keyword">in</span> &amp;<span class="keyword">mut</span> <span class="keyword">self</span>.workers {</span><br><span class="line">            <span class="built_in">println!</span>(<span class="string">"Shutting down worker {}"</span>, worker.id);</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">let</span> <span class="variable">Some</span>(thread) = worker.thread.<span class="title function_ invoke__">take</span>() {</span><br><span class="line">                thread.<span class="title function_ invoke__">join</span>().<span class="title function_ invoke__">unwrap</span>();</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Worker</span> {</span><br><span class="line">    id: <span class="type">usize</span>,</span><br><span class="line">    thread: <span class="type">Option</span>&lt;thread::JoinHandle&lt;()&gt;&gt;,</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">Worker</span> {</span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">new</span>(id: <span class="type">usize</span>, receiver: Arc&lt;Mutex&lt;mpsc::Receiver&lt;Job&gt;&gt;&gt;) <span class="punctuation">-&gt;</span> Worker {</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">thread</span> = thread::<span class="title function_ invoke__">spawn</span>(<span class="keyword">move</span> || <span class="keyword">loop</span> {</span><br><span class="line">            <span class="keyword">let</span> <span class="variable">message</span> = receiver.<span class="title function_ invoke__">lock</span>().<span class="title function_ invoke__">unwrap</span>().<span class="title function_ invoke__">recv</span>();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">match</span> message {</span><br><span class="line">                <span class="title function_ invoke__">Ok</span>(job) =&gt; {</span><br><span class="line">                    <span class="built_in">println!</span>(<span class="string">"Worker {id} got a job; executing."</span>);</span><br><span class="line"></span><br><span class="line">                    <span class="title function_ invoke__">job</span>();</span><br><span class="line">                }</span><br><span class="line">                <span class="title function_ invoke__">Err</span>(_) =&gt; {</span><br><span class="line">                    <span class="built_in">println!</span>(<span class="string">"Worker {id} disconnected; shutting down."</span>);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line">        });</span><br><span class="line"></span><br><span class="line">        Worker {</span><br><span class="line">            id,</span><br><span class="line">            thread: <span class="title function_ invoke__">Some</span>(thread),</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>]]></content>
-      <tags>
-        <tag>Rust</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>为何说三进制是效率最高的进制？以及其他一些与三进制有关的东西...</title>
     <url>/posts/1d122915.html</url>
     <content><![CDATA[<p>这是一次计算机导论的作业。老师提供了很多课题供我们选择，我选择的是 “有人说三进制是被证明理论上效率最高的进制，请广泛搜集相关资料，撰写关于三进制的科普报告，或者对其他进制进行对比和评价。</p>
@@ -213,6 +170,30 @@
       </tags>
   </entry>
   <entry>
+    <title>记一次电脑清灰</title>
+    <url>/posts/50b3c006.html</url>
+    <content><![CDATA[<p>电脑是以前的老电脑，初一暑假时候买的 y700。配置低的可怜，毫无性价比的一台机子吧，当年还是电脑小白的时候保意买的，在完全不懂的情况下被忽悠着忽悠着买了，满满的坑啊。</p>
+<p>这电脑之前被我拆开来过，为了加一条固态，后盖螺丝因而已经不全了（拆必丢原则！），不过这次没丢！</p>
+<span id="more"></span>
+
+<p>硅脂买的是 7921，网上说好用就买了，竟然还送了一些刷子垫片啥的，应该是很多人都买了清灰用的所以店家就把清灰附属需要的东西也都附赠了，这点还挺不错的。但是实际涂起来吧，这款硅脂是真的令我痛苦 —— 真的很奇妙的质感，比较像容易断的那种橡皮泥 (?)，反正结果就很尴尬（我知道我涂多了！没办法）</p>
+<p>弄好装完发现点不亮了！吓了我一跳，结果发现是放那儿好久原来一直没接电源所以没电，接上电就能正常进系统了，太懒了，就没烤一下再看看。</p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E6%B8%85%E7%81%B0/1.png" alt="所用硅脂——信越7921"></p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E6%B8%85%E7%81%B0/2.png" alt="商家还送了一些清灰用的玩意儿（这张照片是补拍的）"></p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E6%B8%85%E7%81%B0/3.png" alt="清灰前的风扇"></p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E6%B8%85%E7%81%B0/4.png" alt="清灰前的...这叫啥..."></p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E6%B8%85%E7%81%B0/5.png" alt="擦掉旧的硅脂（原来这个方方的才是gpu！）"></p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E6%B8%85%E7%81%B0/6.png" alt="尽力清灰后..."></p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E6%B8%85%E7%81%B0/7.png" alt="涂多了...希望不要出事"></p>
+]]></content>
+      <categories>
+        <category>Misc</category>
+      </categories>
+      <tags>
+        <tag>Memory</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>手动挡学习笔记</title>
     <url>/posts/66959aa9.html</url>
     <content><![CDATA[<p>最近几天一直在忙着考驾照的事情，8 月份第一次考科二挂了后就开始边练科二边练科三。最近两三天先后把科三、第二次科二、科四过了，顺利拿到了 C1 驾照。但是... 学的是手动挡，家里的车却是自动挡。所以想着如果不记一下的话，以后估计开惯了自动挡手动挡就不会了，便想做些笔记。顺便也记录一下笔者自己的学车过程。</p>
@@ -345,30 +326,6 @@
       </categories>
   </entry>
   <entry>
-    <title>记一次电脑清灰</title>
-    <url>/posts/50b3c006.html</url>
-    <content><![CDATA[<p>电脑是以前的老电脑，初一暑假时候买的 y700。配置低的可怜，毫无性价比的一台机子吧，当年还是电脑小白的时候保意买的，在完全不懂的情况下被忽悠着忽悠着买了，满满的坑啊。</p>
-<p>这电脑之前被我拆开来过，为了加一条固态，后盖螺丝因而已经不全了（拆必丢原则！），不过这次没丢！</p>
-<span id="more"></span>
-
-<p>硅脂买的是 7921，网上说好用就买了，竟然还送了一些刷子垫片啥的，应该是很多人都买了清灰用的所以店家就把清灰附属需要的东西也都附赠了，这点还挺不错的。但是实际涂起来吧，这款硅脂是真的令我痛苦 —— 真的很奇妙的质感，比较像容易断的那种橡皮泥 (?)，反正结果就很尴尬（我知道我涂多了！没办法）</p>
-<p>弄好装完发现点不亮了！吓了我一跳，结果发现是放那儿好久原来一直没接电源所以没电，接上电就能正常进系统了，太懒了，就没烤一下再看看。</p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E6%B8%85%E7%81%B0/1.png" alt="所用硅脂——信越7921"></p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E6%B8%85%E7%81%B0/2.png" alt="商家还送了一些清灰用的玩意儿（这张照片是补拍的）"></p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E6%B8%85%E7%81%B0/3.png" alt="清灰前的风扇"></p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E6%B8%85%E7%81%B0/4.png" alt="清灰前的...这叫啥..."></p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E6%B8%85%E7%81%B0/5.png" alt="擦掉旧的硅脂（原来这个方方的才是gpu！）"></p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E6%B8%85%E7%81%B0/6.png" alt="尽力清灰后..."></p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/misc/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E6%B8%85%E7%81%B0/7.png" alt="涂多了...希望不要出事"></p>
-]]></content>
-      <categories>
-        <category>Misc</category>
-      </categories>
-      <tags>
-        <tag>Memory</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>记一次网络改造</title>
     <url>/posts/b9a9b40d.html</url>
     <content><![CDATA[<p>事情的起因是跟爸闲聊我抱怨家里为什么没有预埋到我和我妹房间的网线，结果才知道原来是有的，只不过藏在空面板里没有装接口...... 于是就开始兴致勃勃地想把它装起来 (这样我房间里就有有线网了！)，赶紧买了面板，交换机，网线和一众工具。</p>
@@ -499,6 +456,104 @@
         <tag>Python</tag>
         <tag>NumPy</tag>
         <tag>Vectorization</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>挖老婆矿！—— NovelAI 初试</title>
+    <url>/posts/f17b3e8b.html</url>
+    <content><![CDATA[<p>最近一段时间，感觉突然之间，就有很多很多将现实图片二次元化啊，按照每句歌词生成一副画作啊的 AI 绘画应用的图文视频出现。和室友聊天还说是不是最近一段时间 AI 技术突破什么瓶颈突飞猛进了。后来才知道，原来是 NovelAI 泄露了... 这样一来，本地部署方便了起来，于是整了一个玩玩。由于跑 AI 嘛，GPU 比较呼啸，跟挖矿一样，我就戏称我这是在 “挖老婆矿” 了。</p>
+<span id="more"></span>
+
+<p>注：这篇文章更偏向于我记录生成时使用的 tag， 不涉及基础操作。我使用的 NovelAI 下载自<a href="https://www.bilibili.com/video/BV1EV4y1L7dX">这里</a>。</p>
+<h1 id="一个头像（一堆头像）"><a href="#一个头像（一堆头像）" class="headerlink" title="一个头像（一堆头像）"></a>一个头像（一堆头像）</h1><p>我最开始只是用几个 tag 生成。经历了一些粗浅的尝试后，发现生成的质量并不高。但是看到了<a href="https://www.yuque.com/longyuye/lmgcwy/goa36x">一篇文章</a>，照着里边的 tag 写，才算真正开始了探索。</p>
+<p>首先是根据上边那篇文章最后的示例增改了点 tag 形成的 prompt:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">blue pen illustration, light blue background, flowers on face, growth, nature, beautiful face, pink hair,shawl hair, zoom in on eyes, apathy, red eye shadow, petite, best quality, masterpiece</span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后生成出了下面这些相当不错的图案：</p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/1.png"></p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/2.png"></p>
+<p>下边分类讲讲 tag:</p>
+<p>提高总体质量的：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">masterpiece, best quality, by famous artist, beautiful face</span><br></pre></td></tr></tbody></table></figure>
+
+<p>使整体的风格偏向更具插画感：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">illustration</span><br></pre></td></tr></tbody></table></figure>
+
+<p>限定背景的：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">xxxx + backgroud  (比如上边的淡蓝色背景就是 light blue background )</span><br></pre></td></tr></tbody></table></figure>
+
+<p>让生成出来的 waifu 更幼的：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">petite</span><br></pre></td></tr></tbody></table></figure>
+
+<p>让脸上、头发上出现花朵装饰的：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">flowers on face</span><br></pre></td></tr></tbody></table></figure>
+
+<p>让眼睛更大的：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">zoom in one eyes</span><br></pre></td></tr></tbody></table></figure>
+
+<p>尝到了甜头后，我就想换头像了。但我不想完全抛弃现在的头像，于是就试图拿它做派生。</p>
+<p>首先描述一下原来的头像，让 AI 知道我大概是想要怎样的一个 "老婆"。<del>（虽然其实我描述的时候更感觉是在捏女儿）</del> 顺便一说，我这个原来的头像其实也是 AI 生成的，叫 <a href="https://waifulabs.com/generate">WaifuLabs</a>，是我把原来生成出来的丢进 PS 去了水印，又自己修缮了一下得到的。</p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/3.png" alt="上边是 WaifuLabs 生成出来时候的样子，下边是我自己 PS 改的"></p>
+<p>抛却那些提高质量的，大概给了 <code>披肩发</code>、<code>深灰色头发</code>、<code>深灰色眼睛</code>、<code>红色眼影</code>、<code>白色衬衫</code>、<code>微笑</code> 这些 tag。同时模仿了上边，给了 <code>面部的花</code> 之类的 tag：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">{{masterpiece,best quality}},shawl hair,dark grey hair, dark grey eyes,red eye shadow,  white shirt,illustration,flower on face,growth, nature,beautiful face, smile, zoom in one eyes</span><br></pre></td></tr></tbody></table></figure>
+
+<p>以上边的内容为 prompt，同时把我改的那张扔给 NovelAI，根据生成结果又慢慢改，添加 tag，最终的 prompt 如下:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">{{masterpiece,best quality,by wlop}},shawl hair,dark grey hair, dark grey eyes,red eye shadow, white shirt,{{{illustration}}},flower on face, growth, nature, beautiful face, small smile, zoom in one eyes, {{{{petite}}}}, dramatic shadows, ink,eye-focus, portrait, red hairclip</span><br></pre></td></tr></tbody></table></figure>
+
+<p>跑了大概 100 张，然后挑了挑，下边展示的是部分高质量的：</p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/4.png"></p>
+<p>又是一波奇奇怪怪的调整：</p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/5.png"></p>
+<p>最后挑选出了这张我觉得挺有特色的：</p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/6.png"></p>
+<p>然后开始根据这张进行派生：</p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/7.png"></p>
+<h1 id="一张壁纸（一堆壁纸）"><a href="#一张壁纸（一堆壁纸）" class="headerlink" title="一张壁纸（一堆壁纸）"></a>一张壁纸（一堆壁纸）</h1><p>这事儿开始的挺搞笑的，当时我正在调上边的头像参数，坐我旁边玩 CSGO 的朋友希望我把某把枪拟人，然后发我了下边的图片：</p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/8.png"></p>
+<p>然后我加了点描述词生成了，但生成效果并不好，我就又开始研究我上边的头像了。我完全忘记了我还拿着这张图生成的某张图在做派生呢... 我只是改回了我的 prompt，就意外地得到了下边这张图：</p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/9.png"></p>
+<p>似乎是把枪头画成了那条条纹？我也不知道。反正着实是惊艳到我了，扔到 bigjpg 那边提高了一下分辨率，再扔进 PS 调了一下曲线，嘿嘿，新的手机壁纸有了！</p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/10.png" alt="拉的曲线"></p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/11.png" alt="新的手机壁纸！"></p>
+<p>然后又拿这张图和基于上边改的 prompt 做了派生...</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">{{masterpiece,best quality}},shawl hair,dark grey hair, dark grey eyes,red eye shadow,red scanf,  light grey shirt,{{illustration}},red flower on face,white flower on hair,growth, nature,beautiful face, {{indifferent}}, zoom in one eyes,1girl, red flower background, gold fence background,focus on eye</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/12.png"></p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/13.png"></p>
+<p>相当不错！</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+        <tag>NovelAI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>My Personal Summary of Algorithms, Part I on Coursera</title>
+    <url>/posts/94efd546.html</url>
+    <content><![CDATA[<p>As the title says, this is my personal summary of <a href="https://www.coursera.org/learn/algorithms-part1">Algorithms, Part I</a> on <a href="https://www.coursera.org/">Coursera</a>.</p>
+<span id="more"></span>
+
+<p>Finally! q(≧▽≦q)</p>
+<p>I enrolled in this course about a month ago and have just finished it. Although the system decided that I had completed the course when my last assignment was due on the 2nd of May, I actually finished Week 06 about ten days later. No deadline, no motivation. &gt;_&lt;</p>
+<p>The course is called Algorithms, Part I. (There is Part II, of course, but I haven't signed up for it yet.) The teacher is Prof. Robert Sedgewick from Princeton University, also the author of the famous book Algorithms. Although this course is from a few years ago, it's still one of the top courses today.</p>
+<p>The biggest feature of this course is that it ties algorithms so closely to real-world problems. Almost all topics are introduced this way: Here we have a problem. To solve it, we can easily use ... But we can't do that because it's too expensive, so we can try to use ... to solve it. By using this algorithm, we can ensure that ... in the case of .... Also, we can use this algorithm to solve ... problems. I think this kind of combination between theory and practice is really valuable.</p>
+<p>The five projects are amazing. Instead of writing stupid experiment reports, uploading them to the QQ group and not knowing whether my codes are good or not, this online platform provides an incredible evaluation system that not only checks the correctness of your codes, but also the style! The style! Much better than some Chinese reference books! After each submission, the evaluation system gives you a detailed report on what's wrong with your codes, and you can then correct or polish your codes and submit them again. I submitted the last project thirteen times to pass it, with the help of GPT and even some reference codes! Orz</p>
+<p>I'd highly recommend any CS student to take this course on Coursera. It's free and in my opinion it's actually much easier than the listening section of the national college entrance examination or CET-4.</p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/algorithms%20&amp;%20data%20structures/my-personal-summary-of-algorithms-part-i-on-coursera/1.png"></p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/algorithms%20&amp;%20data%20structures/my-personal-summary-of-algorithms-part-i-on-coursera/2.png"></p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Algorithms &amp; Data structures</category>
+      </categories>
+      <tags>
+        <tag>Coursera</tag>
+        <tag>Algorithm</tag>
+        <tag>Online course summary</tag>
       </tags>
   </entry>
   <entry>
@@ -941,104 +996,6 @@
       </tags>
   </entry>
   <entry>
-    <title>挖老婆矿！—— NovelAI 初试</title>
-    <url>/posts/f17b3e8b.html</url>
-    <content><![CDATA[<p>最近一段时间，感觉突然之间，就有很多很多将现实图片二次元化啊，按照每句歌词生成一副画作啊的 AI 绘画应用的图文视频出现。和室友聊天还说是不是最近一段时间 AI 技术突破什么瓶颈突飞猛进了。后来才知道，原来是 NovelAI 泄露了... 这样一来，本地部署方便了起来，于是整了一个玩玩。由于跑 AI 嘛，GPU 比较呼啸，跟挖矿一样，我就戏称我这是在 “挖老婆矿” 了。</p>
-<span id="more"></span>
-
-<p>注：这篇文章更偏向于我记录生成时使用的 tag， 不涉及基础操作。我使用的 NovelAI 下载自<a href="https://www.bilibili.com/video/BV1EV4y1L7dX">这里</a>。</p>
-<h1 id="一个头像（一堆头像）"><a href="#一个头像（一堆头像）" class="headerlink" title="一个头像（一堆头像）"></a>一个头像（一堆头像）</h1><p>我最开始只是用几个 tag 生成。经历了一些粗浅的尝试后，发现生成的质量并不高。但是看到了<a href="https://www.yuque.com/longyuye/lmgcwy/goa36x">一篇文章</a>，照着里边的 tag 写，才算真正开始了探索。</p>
-<p>首先是根据上边那篇文章最后的示例增改了点 tag 形成的 prompt:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">blue pen illustration, light blue background, flowers on face, growth, nature, beautiful face, pink hair,shawl hair, zoom in on eyes, apathy, red eye shadow, petite, best quality, masterpiece</span><br></pre></td></tr></tbody></table></figure>
-
-<p>然后生成出了下面这些相当不错的图案：</p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/1.png"></p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/2.png"></p>
-<p>下边分类讲讲 tag:</p>
-<p>提高总体质量的：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">masterpiece, best quality, by famous artist, beautiful face</span><br></pre></td></tr></tbody></table></figure>
-
-<p>使整体的风格偏向更具插画感：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">illustration</span><br></pre></td></tr></tbody></table></figure>
-
-<p>限定背景的：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">xxxx + backgroud  (比如上边的淡蓝色背景就是 light blue background )</span><br></pre></td></tr></tbody></table></figure>
-
-<p>让生成出来的 waifu 更幼的：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">petite</span><br></pre></td></tr></tbody></table></figure>
-
-<p>让脸上、头发上出现花朵装饰的：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">flowers on face</span><br></pre></td></tr></tbody></table></figure>
-
-<p>让眼睛更大的：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">zoom in one eyes</span><br></pre></td></tr></tbody></table></figure>
-
-<p>尝到了甜头后，我就想换头像了。但我不想完全抛弃现在的头像，于是就试图拿它做派生。</p>
-<p>首先描述一下原来的头像，让 AI 知道我大概是想要怎样的一个 "老婆"。<del>（虽然其实我描述的时候更感觉是在捏女儿）</del> 顺便一说，我这个原来的头像其实也是 AI 生成的，叫 <a href="https://waifulabs.com/generate">WaifuLabs</a>，是我把原来生成出来的丢进 PS 去了水印，又自己修缮了一下得到的。</p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/3.png" alt="上边是 WaifuLabs 生成出来时候的样子，下边是我自己 PS 改的"></p>
-<p>抛却那些提高质量的，大概给了 <code>披肩发</code>、<code>深灰色头发</code>、<code>深灰色眼睛</code>、<code>红色眼影</code>、<code>白色衬衫</code>、<code>微笑</code> 这些 tag。同时模仿了上边，给了 <code>面部的花</code> 之类的 tag：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">{{masterpiece,best quality}},shawl hair,dark grey hair, dark grey eyes,red eye shadow,  white shirt,illustration,flower on face,growth, nature,beautiful face, smile, zoom in one eyes</span><br></pre></td></tr></tbody></table></figure>
-
-<p>以上边的内容为 prompt，同时把我改的那张扔给 NovelAI，根据生成结果又慢慢改，添加 tag，最终的 prompt 如下:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">{{masterpiece,best quality,by wlop}},shawl hair,dark grey hair, dark grey eyes,red eye shadow, white shirt,{{{illustration}}},flower on face, growth, nature, beautiful face, small smile, zoom in one eyes, {{{{petite}}}}, dramatic shadows, ink,eye-focus, portrait, red hairclip</span><br></pre></td></tr></tbody></table></figure>
-
-<p>跑了大概 100 张，然后挑了挑，下边展示的是部分高质量的：</p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/4.png"></p>
-<p>又是一波奇奇怪怪的调整：</p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/5.png"></p>
-<p>最后挑选出了这张我觉得挺有特色的：</p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/6.png"></p>
-<p>然后开始根据这张进行派生：</p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/7.png"></p>
-<h1 id="一张壁纸（一堆壁纸）"><a href="#一张壁纸（一堆壁纸）" class="headerlink" title="一张壁纸（一堆壁纸）"></a>一张壁纸（一堆壁纸）</h1><p>这事儿开始的挺搞笑的，当时我正在调上边的头像参数，坐我旁边玩 CSGO 的朋友希望我把某把枪拟人，然后发我了下边的图片：</p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/8.png"></p>
-<p>然后我加了点描述词生成了，但生成效果并不好，我就又开始研究我上边的头像了。我完全忘记了我还拿着这张图生成的某张图在做派生呢... 我只是改回了我的 prompt，就意外地得到了下边这张图：</p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/9.png"></p>
-<p>似乎是把枪头画成了那条条纹？我也不知道。反正着实是惊艳到我了，扔到 bigjpg 那边提高了一下分辨率，再扔进 PS 调了一下曲线，嘿嘿，新的手机壁纸有了！</p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/10.png" alt="拉的曲线"></p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/11.png" alt="新的手机壁纸！"></p>
-<p>然后又拿这张图和基于上边改的 prompt 做了派生...</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">{{masterpiece,best quality}},shawl hair,dark grey hair, dark grey eyes,red eye shadow,red scanf,  light grey shirt,{{illustration}},red flower on face,white flower on hair,growth, nature,beautiful face, {{indifferent}}, zoom in one eyes,1girl, red flower background, gold fence background,focus on eye</span><br></pre></td></tr></tbody></table></figure>
-
-<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/12.png"></p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/ai/%E6%8C%96%E8%80%81%E5%A9%86%E7%9F%BF%EF%BC%81%E2%80%94%E2%80%94-novelai-%E5%88%9D%E8%AF%95/13.png"></p>
-<p>相当不错！</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-        <tag>NovelAI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>My Personal Summary of Algorithms, Part I on Coursera</title>
-    <url>/posts/94efd546.html</url>
-    <content><![CDATA[<p>As the title says, this is my personal summary of <a href="https://www.coursera.org/learn/algorithms-part1">Algorithms, Part I</a> on <a href="https://www.coursera.org/">Coursera</a>.</p>
-<span id="more"></span>
-
-<p>Finally! q(≧▽≦q)</p>
-<p>I enrolled in this course about a month ago and have just finished it. Although the system decided that I had completed the course when my last assignment was due on the 2nd of May, I actually finished Week 06 about ten days later. No deadline, no motivation. &gt;_&lt;</p>
-<p>The course is called Algorithms, Part I. (There is Part II, of course, but I haven't signed up for it yet.) The teacher is Prof. Robert Sedgewick from Princeton University, also the author of the famous book Algorithms. Although this course is from a few years ago, it's still one of the top courses today.</p>
-<p>The biggest feature of this course is that it ties algorithms so closely to real-world problems. Almost all topics are introduced this way: Here we have a problem. To solve it, we can easily use ... But we can't do that because it's too expensive, so we can try to use ... to solve it. By using this algorithm, we can ensure that ... in the case of .... Also, we can use this algorithm to solve ... problems. I think this kind of combination between theory and practice is really valuable.</p>
-<p>The five projects are amazing. Instead of writing stupid experiment reports, uploading them to the QQ group and not knowing whether my codes are good or not, this online platform provides an incredible evaluation system that not only checks the correctness of your codes, but also the style! The style! Much better than some Chinese reference books! After each submission, the evaluation system gives you a detailed report on what's wrong with your codes, and you can then correct or polish your codes and submit them again. I submitted the last project thirteen times to pass it, with the help of GPT and even some reference codes! Orz</p>
-<p>I'd highly recommend any CS student to take this course on Coursera. It's free and in my opinion it's actually much easier than the listening section of the national college entrance examination or CET-4.</p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/algorithms%20&amp;%20data%20structures/my-personal-summary-of-algorithms-part-i-on-coursera/1.png"></p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/algorithms%20&amp;%20data%20structures/my-personal-summary-of-algorithms-part-i-on-coursera/2.png"></p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Algorithms &amp; Data structures</category>
-      </categories>
-      <tags>
-        <tag>Coursera</tag>
-        <tag>Algorithm</tag>
-        <tag>Online course summary</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Notes for Algorithms, Part II: Directed Graphs</title>
     <url>/posts/5b849ae3.html</url>
     <content><![CDATA[<p>This is a note for 4.2 Directed Graphs, <em><a href="https://www.coursera.org/learn/algorithms-part2/">Algorithms, Part II</a></em>.</p>
@@ -1145,6 +1102,29 @@
         <tag>Directed Graph</tag>
         <tag>Strong Components</tag>
         <tag>Topological Sort</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Notes for Algorithms, Part II: Shortest Paths</title>
+    <url>/posts/bff11795.html</url>
+    <content><![CDATA[<p>This is a note for 4.4 Shortest Paths, <em><a href="https://www.coursera.org/learn/algorithms-part2/">Algorithms, Part II</a></em>.</p>
+<span id="more"></span>
+
+<p>Dijkstra's algorithm is essentially the same with Prim's algorithm. Both are in a family of algorithms that compute a graph's spanning tree (BTW, DFS and BFS are also in this family). The main distinction is the rule used to choose next vertex for the tree:</p>
+<ul>
+<li>Dijkstra's: Closest vertex to the source (via a directed path).</li>
+<li>Prim's: Closest vertex to the tree (via an undirected edge).</li>
+</ul>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Algorithms &amp; Data structures</category>
+      </categories>
+      <tags>
+        <tag>Note</tag>
+        <tag>Coursera</tag>
+        <tag>Algorithm</tag>
+        <tag>Shortest Paths</tag>
       </tags>
   </entry>
   <entry>
@@ -1345,29 +1325,6 @@
         <tag>Coursera</tag>
         <tag>Algorithm</tag>
         <tag>Minimum Spanning Trees</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Notes for Algorithms, Part II: Shortest Paths</title>
-    <url>/posts/bff11795.html</url>
-    <content><![CDATA[<p>This is a note for 4.4 Shortest Paths, <em><a href="https://www.coursera.org/learn/algorithms-part2/">Algorithms, Part II</a></em>.</p>
-<span id="more"></span>
-
-<p>Dijkstra's algorithm is essentially the same with Prim's algorithm. Both are in a family of algorithms that compute a graph's spanning tree (BTW, DFS and BFS are also in this family). The main distinction is the rule used to choose next vertex for the tree:</p>
-<ul>
-<li>Dijkstra's: Closest vertex to the source (via a directed path).</li>
-<li>Prim's: Closest vertex to the tree (via an undirected edge).</li>
-</ul>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Algorithms &amp; Data structures</category>
-      </categories>
-      <tags>
-        <tag>Note</tag>
-        <tag>Coursera</tag>
-        <tag>Algorithm</tag>
-        <tag>Shortest Paths</tag>
       </tags>
   </entry>
   <entry>
@@ -2400,6 +2357,39 @@ graph TB
       </tags>
   </entry>
   <entry>
+    <title>Makefile 简单笔记</title>
+    <url>/posts/b5f1b38d.html</url>
+    <content><![CDATA[<p>这是一篇笔记，原视频是 <a href="https://space.bilibili.com/519963684">@于仕琪</a> 老师的 <a href="https://www.bilibili.com/video/BV188411L7d2">《Makefile 20 分钟入门，简简单单，展示如何使用 Makefile 管理和编译 C++ 代码》</a>。</p>
+<span id="more"></span>
+
+<h2 id="老师所给的四个版本"><a href="#老师所给的四个版本" class="headerlink" title="老师所给的四个版本"></a>老师所给的四个版本</h2><figure class="highlight makefile"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># 版本一</span></span><br><span class="line"><span class="section">hello: main.cpp printhello.cpp factorial.cpp</span></span><br><span class="line">    g++ -o hello main.cpp printhello.cpp factorial.cpp</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本二</span></span><br><span class="line">CXX = g++</span><br><span class="line">TARGET = hello</span><br><span class="line">OBJ = main.o printhello.o factorial.o</span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJ)</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -o <span class="variable">$(TARGET)</span> <span class="variable">$(OBJ)</span></span><br><span class="line"></span><br><span class="line"><span class="section">main.o: main.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -c main.cpp</span><br><span class="line"></span><br><span class="line"><span class="section">printhello.o: printhello.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -c printhello.cpp</span><br><span class="line"></span><br><span class="line"><span class="section">factorial.o: factorial.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -c factorial.cpp</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本三</span></span><br><span class="line">CXX = g++</span><br><span class="line">TARGET = hello</span><br><span class="line">OBJ = main.o printhello.o factorial.o</span><br><span class="line"></span><br><span class="line">CXXFLAGS = -c -Wall</span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJ)</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -o <span class="variable">$@</span> <span class="variable">$^</span></span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> <span class="variable">$(CXXFLAGS)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">    rm -f *.o <span class="variable">$(TARGET)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本四</span></span><br><span class="line">CXX = g++</span><br><span class="line">TARGET = hello</span><br><span class="line">SRC = <span class="variable">$(<span class="built_in">wildcard</span> *.cpp)</span></span><br><span class="line">OBJ = <span class="variable">$(<span class="built_in">patsubst</span> %.cpp, %.o, <span class="variable">$(SRC)</span>)</span></span><br><span class="line"></span><br><span class="line">CXXFLAGS = -c -Wall</span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJ)</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -o <span class="variable">$@</span> <span class="variable">$^</span></span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> <span class="variable">$(CXXFLAGS)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">    rm -f *.o <span class="variable">$(TARGET)</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><p>首先是关于 g++ 这个 C++ 编译器的一些知识点。</p>
+<ul>
+<li><code>-c</code> 参数表示生成 obj 文件（<code>*.o</code>）；</li>
+<li><code>-o</code> 用于指定生成的可执行文件的名称，比如上边 <code>-o hello</code> 就表示生成的可执行文件叫 hello；</li>
+<li><code>-Wall</code> 表示 Warning all，也就是打开全部的警告。</li>
+</ul>
+<p>接着是 Makefile 文件的大致原理。</p>
+<p>首先看最易理解的版本一。</p>
+<figure class="highlight makefile"><table><tbody><tr><td class="code"><pre><span class="line"><span class="section">hello: main.cpp printhello.cpp factorial.cpp</span></span><br><span class="line">    g++ -o hello main.cpp printhello.cpp factorial.cpp</span><br></pre></td></tr></tbody></table></figure>
+
+<p>第一行冒号前的部分表示我们需要的文件（这里是 <code>hello</code>），冒号后表示冒号前文件的依赖项（这里是三个 <code>.cpp</code> 文件），第二行表示为了生成冒号前的文件，需要执行什么命令。Make 工具通过检测冒号后文件的时间戳是否比冒号前文件更新来判断是否要执行第二行语句。</p>
+<p>在第二个版本中，引入了变量的概念。形似 <code>XXX = YYY</code> 的东西就是在给变量赋值，使用 <code>$(XXX)</code> 来取得值 <code>YYY</code>。</p>
+<p>第三个版本中出现了 <code>$@</code>、<code>$^</code>、<code>$&lt;</code> 等符号，他们分别表示冒号前面的内容、冒号后边的全部内容和冒号后边第一个内容。</p>
+<p>第三个版本中的 <code>.PHONY: clean</code> 标识了 <code>clean</code> 是个命令而不是一个文件，这样结合下边的 <code>clean:</code> 的内容，就可以实现直接在终端输入 <code>make clean</code> 来执行 <code>rm -f *.o $(TARGET)</code> 的命令，清空生成出来的文件。</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Makefile</tag>
+        <tag>GNU Make</tag>
+        <tag>Compiling</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LaTeX 公式基础</title>
     <url>/posts/848a7d31.html</url>
     <content><![CDATA[<p>用 LaTeX 写数学公式的时候，总记不住一些写法，故在此记录学习笔记。</p>
@@ -2966,39 +2956,6 @@ graph TB
       </tags>
   </entry>
   <entry>
-    <title>Makefile 简单笔记</title>
-    <url>/posts/b5f1b38d.html</url>
-    <content><![CDATA[<p>这是一篇笔记，原视频是 <a href="https://space.bilibili.com/519963684">@于仕琪</a> 老师的 <a href="https://www.bilibili.com/video/BV188411L7d2">《Makefile 20 分钟入门，简简单单，展示如何使用 Makefile 管理和编译 C++ 代码》</a>。</p>
-<span id="more"></span>
-
-<h2 id="老师所给的四个版本"><a href="#老师所给的四个版本" class="headerlink" title="老师所给的四个版本"></a>老师所给的四个版本</h2><figure class="highlight makefile"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># 版本一</span></span><br><span class="line"><span class="section">hello: main.cpp printhello.cpp factorial.cpp</span></span><br><span class="line">    g++ -o hello main.cpp printhello.cpp factorial.cpp</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本二</span></span><br><span class="line">CXX = g++</span><br><span class="line">TARGET = hello</span><br><span class="line">OBJ = main.o printhello.o factorial.o</span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJ)</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -o <span class="variable">$(TARGET)</span> <span class="variable">$(OBJ)</span></span><br><span class="line"></span><br><span class="line"><span class="section">main.o: main.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -c main.cpp</span><br><span class="line"></span><br><span class="line"><span class="section">printhello.o: printhello.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -c printhello.cpp</span><br><span class="line"></span><br><span class="line"><span class="section">factorial.o: factorial.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -c factorial.cpp</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本三</span></span><br><span class="line">CXX = g++</span><br><span class="line">TARGET = hello</span><br><span class="line">OBJ = main.o printhello.o factorial.o</span><br><span class="line"></span><br><span class="line">CXXFLAGS = -c -Wall</span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJ)</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -o <span class="variable">$@</span> <span class="variable">$^</span></span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> <span class="variable">$(CXXFLAGS)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">    rm -f *.o <span class="variable">$(TARGET)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本四</span></span><br><span class="line">CXX = g++</span><br><span class="line">TARGET = hello</span><br><span class="line">SRC = <span class="variable">$(<span class="built_in">wildcard</span> *.cpp)</span></span><br><span class="line">OBJ = <span class="variable">$(<span class="built_in">patsubst</span> %.cpp, %.o, <span class="variable">$(SRC)</span>)</span></span><br><span class="line"></span><br><span class="line">CXXFLAGS = -c -Wall</span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJ)</span></span><br><span class="line">    <span class="variable">$(CXX)</span> -o <span class="variable">$@</span> <span class="variable">$^</span></span><br><span class="line"></span><br><span class="line"><span class="section">%.o: %.cpp</span></span><br><span class="line">    <span class="variable">$(CXX)</span> <span class="variable">$(CXXFLAGS)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">    rm -f *.o <span class="variable">$(TARGET)</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><p>首先是关于 g++ 这个 C++ 编译器的一些知识点。</p>
-<ul>
-<li><code>-c</code> 参数表示生成 obj 文件（<code>*.o</code>）；</li>
-<li><code>-o</code> 用于指定生成的可执行文件的名称，比如上边 <code>-o hello</code> 就表示生成的可执行文件叫 hello；</li>
-<li><code>-Wall</code> 表示 Warning all，也就是打开全部的警告。</li>
-</ul>
-<p>接着是 Makefile 文件的大致原理。</p>
-<p>首先看最易理解的版本一。</p>
-<figure class="highlight makefile"><table><tbody><tr><td class="code"><pre><span class="line"><span class="section">hello: main.cpp printhello.cpp factorial.cpp</span></span><br><span class="line">    g++ -o hello main.cpp printhello.cpp factorial.cpp</span><br></pre></td></tr></tbody></table></figure>
-
-<p>第一行冒号前的部分表示我们需要的文件（这里是 <code>hello</code>），冒号后表示冒号前文件的依赖项（这里是三个 <code>.cpp</code> 文件），第二行表示为了生成冒号前的文件，需要执行什么命令。Make 工具通过检测冒号后文件的时间戳是否比冒号前文件更新来判断是否要执行第二行语句。</p>
-<p>在第二个版本中，引入了变量的概念。形似 <code>XXX = YYY</code> 的东西就是在给变量赋值，使用 <code>$(XXX)</code> 来取得值 <code>YYY</code>。</p>
-<p>第三个版本中出现了 <code>$@</code>、<code>$^</code>、<code>$&lt;</code> 等符号，他们分别表示冒号前面的内容、冒号后边的全部内容和冒号后边第一个内容。</p>
-<p>第三个版本中的 <code>.PHONY: clean</code> 标识了 <code>clean</code> 是个命令而不是一个文件，这样结合下边的 <code>clean:</code> 的内容，就可以实现直接在终端输入 <code>make clean</code> 来执行 <code>rm -f *.o $(TARGET)</code> 的命令，清空生成出来的文件。</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Makefile</tag>
-        <tag>GNU Make</tag>
-        <tag>Compiling</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Package Managers in Linux (To Be Continued)</title>
     <url>/posts/4ee6ac78.html</url>
     <content><![CDATA[<p>This post tries to simply introduce some package managers and their basic usage.</p>
@@ -3189,6 +3146,46 @@ graph TB
       </tags>
   </entry>
   <entry>
+    <title>A Very Interesting VimGolf</title>
+    <url>/posts/6023bfa0.html</url>
+    <content><![CDATA[<p><a href="https://www.vimgolf.com/">VimGolf.com</a> is a good place for vimers to practice and improve their vim skills. This post records my experience of solving a very interesting VimGolf game -- <a href="https://www.vimgolf.com/challenges/9v00651eb20100000000025b">Quicksort</a>.</p>
+<span id="more"></span>
+
+<h2 id="The-Game"><a href="#The-Game" class="headerlink" title="The Game"></a>The Game</h2><ul>
+<li><em><a href="https://www.vimgolf.com/challenges/9v00651eb20100000000025b">Quicksort - VimGolf</a></em></li>
+</ul>
+<h2 id="Straight-Way"><a href="#Straight-Way" class="headerlink" title="Straight Way"></a>Straight Way</h2><p>Vim has a command <code>:[range]sort</code> which sorts the lines in <code>[range]</code> (see <code>:h :sort</code>). In this case, the numbers to sort are in the first line. So the easiest way is to transform the first line into rows, sort them with <code>:sort</code>, and transform them back again. You can specify a range for <code>:sort</code> so that the <strong>"garbled text"</strong> below the divider can remain unchanged.</p>
+<p>After some tweaking, my fewest keystrokes to this game is:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">:s/ /\r/g&lt;CR&gt;vH:sor n&lt;CR&gt;gvJZZ</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li><code>:s/ /\r/g&lt;CR&gt;</code>: Transforms the first line into rows (by substituting white space to <code>\r</code>).</li>
+<li><code>vH</code>: Selects the rows to sort.</li>
+<li><code>:sor n&lt;CR&gt;</code>: Runs the <code>:sort</code> command, where <code>:sor</code> is the short version of <code>:sort</code>, and option <code>n</code> caused numbers to be sorted by their value (e.g. 1, 2, 10, 20) instead of their dictionary order (e.g. 1, 10, 2, 20).</li>
+<li><code>gvJ</code>: Selects the last selected text and joins them together (transform them back to one row).</li>
+<li><code>ZZ</code>: Saves and quits.</li>
+</ul>
+<h2 id="Shortcut"><a href="#Shortcut" class="headerlink" title="Shortcut"></a>Shortcut</h2><p>If you're thinking similarly and are also using <code>:sort</code>, then the above sequence of keystrokes is basically the optimal solution. However, check the leader board for this game and you'll see that there are many single-digit keystroke solutions. How that possible?</p>
+<p>This is the most interesting part! If you refer to the wisdom of those who came before you, you'll see that the <strong>"garbled text"</strong> actually makes sense! The last line actually hides a macro whose job is -- to sort the first line!</p>
+<p>So the optimal solution in single-digit keystroke is:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">GY@0ZZ</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li><code>GY</code>: Jumps to the last line and copies it.</li>
+<li><code>@0</code>: Runs the last line (treats it as a macro).</li>
+<li><code>ZZ</code>: Saves and quits.</li>
+</ul>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Vim</tag>
+        <tag>VimGolf</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>VS Code 的安装与配置基础 C/C++ 开发环境</title>
     <url>/posts/a7a0ce82.html</url>
     <content><![CDATA[<p>我以前学习 C++ 的时候，使用的是 DevCpp 。这个软件让我这个初学者比较舒服的点是，我不用太过详细地考虑编译的过程 —— 新建一个 cpp 文件，写一点小程序，按下 F11，程序运行。我不需要管选择编译器啊、配置编译命令啊啥啥的。但是到 VS Code 这边，这都要我自己做了，对于新手并不是那么友好。这里记录一下我配置 VS Code 的 C/C++ 环境的完整过程，希望对你有所帮助。需要注意的是：学习一下基本的编译链接指令还是很有必要的！</p>
@@ -3279,46 +3276,6 @@ graph TB
       <tags>
         <tag>VS Code</tag>
         <tag>C/C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>A Very Interesting VimGolf</title>
-    <url>/posts/6023bfa0.html</url>
-    <content><![CDATA[<p><a href="https://www.vimgolf.com/">VimGolf.com</a> is a good place for vimers to practice and improve their vim skills. This post records my experience of solving a very interesting VimGolf game -- <a href="https://www.vimgolf.com/challenges/9v00651eb20100000000025b">Quicksort</a>.</p>
-<span id="more"></span>
-
-<h2 id="The-Game"><a href="#The-Game" class="headerlink" title="The Game"></a>The Game</h2><ul>
-<li><em><a href="https://www.vimgolf.com/challenges/9v00651eb20100000000025b">Quicksort - VimGolf</a></em></li>
-</ul>
-<h2 id="Straight-Way"><a href="#Straight-Way" class="headerlink" title="Straight Way"></a>Straight Way</h2><p>Vim has a command <code>:[range]sort</code> which sorts the lines in <code>[range]</code> (see <code>:h :sort</code>). In this case, the numbers to sort are in the first line. So the easiest way is to transform the first line into rows, sort them with <code>:sort</code>, and transform them back again. You can specify a range for <code>:sort</code> so that the <strong>"garbled text"</strong> below the divider can remain unchanged.</p>
-<p>After some tweaking, my fewest keystrokes to this game is:</p>
-<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">:s/ /\r/g&lt;CR&gt;vH:sor n&lt;CR&gt;gvJZZ</span><br></pre></td></tr></tbody></table></figure>
-
-<ul>
-<li><code>:s/ /\r/g&lt;CR&gt;</code>: Transforms the first line into rows (by substituting white space to <code>\r</code>).</li>
-<li><code>vH</code>: Selects the rows to sort.</li>
-<li><code>:sor n&lt;CR&gt;</code>: Runs the <code>:sort</code> command, where <code>:sor</code> is the short version of <code>:sort</code>, and option <code>n</code> caused numbers to be sorted by their value (e.g. 1, 2, 10, 20) instead of their dictionary order (e.g. 1, 10, 2, 20).</li>
-<li><code>gvJ</code>: Selects the last selected text and joins them together (transform them back to one row).</li>
-<li><code>ZZ</code>: Saves and quits.</li>
-</ul>
-<h2 id="Shortcut"><a href="#Shortcut" class="headerlink" title="Shortcut"></a>Shortcut</h2><p>If you're thinking similarly and are also using <code>:sort</code>, then the above sequence of keystrokes is basically the optimal solution. However, check the leader board for this game and you'll see that there are many single-digit keystroke solutions. How that possible?</p>
-<p>This is the most interesting part! If you refer to the wisdom of those who came before you, you'll see that the <strong>"garbled text"</strong> actually makes sense! The last line actually hides a macro whose job is -- to sort the first line!</p>
-<p>So the optimal solution in single-digit keystroke is:</p>
-<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">GY@0ZZ</span><br></pre></td></tr></tbody></table></figure>
-
-<ul>
-<li><code>GY</code>: Jumps to the last line and copies it.</li>
-<li><code>@0</code>: Runs the last line (treats it as a macro).</li>
-<li><code>ZZ</code>: Saves and quits.</li>
-</ul>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Vim</tag>
-        <tag>VimGolf</tag>
       </tags>
   </entry>
   <entry>
@@ -3486,6 +3443,48 @@ graph TB
       </tags>
   </entry>
   <entry>
+    <title>Installing Ubuntu</title>
+    <url>/posts/ca281680.html</url>
+    <content><![CDATA[<p>This is NOT a tutorial on how to install Ubuntu. I am just documenting some problems I encountered during my installation.</p>
+<span id="more"></span>
+
+<h2 id="Editor-and-sudo"><a href="#Editor-and-sudo" class="headerlink" title="Editor and sudo"></a>Editor and sudo</h2><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">apt install vim sudo</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="User"><a href="#User" class="headerlink" title="User"></a>User</h2><p>Add a new user and make it a sudoer:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">useradd -m &lt;username&gt;</span><br><span class="line">visudo</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Locale"><a href="#Locale" class="headerlink" title="Locale"></a>Locale</h2><p>Add this to your <code>~/.bashrc</code> (or <code>~/.zshrc</code>) if you use Z shell.</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> LANG=en_US.UTF-8</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Software"><a href="#Software" class="headerlink" title="Software"></a>Software</h2><h3 id="Package-Manager"><a href="#Package-Manager" class="headerlink" title="Package Manager"></a>Package Manager</h3><p>The first thing you need to do is configuring <code>apt</code>'s mirror.</p>
+<p>If you also want to use the mirror from Tsinghua:</p>
+<p>See <em><a href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/">ubuntu | 镜像使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror</a></em></p>
+<p>To update your <code>apt</code> repository, press <code>Ctrl + Alt + T</code> to run a terminal, and run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h3><p>Install <a href="https://fishshell.com/">fish shell</a> and set it as your login shell:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo apt install fish</span><br><span class="line">chsh --shell $(<span class="built_in">which</span> fish)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Or if you want to use <code>zsh</code> and config further, refer to: <em><a href="posts/3e5630f.html">My Zsh Config</a></em></p>
+<h3 id="AppStore"><a href="#AppStore" class="headerlink" title="AppStore"></a>AppStore</h3><p>You may try <em><a href="https://gitee.com/deepin-community-store/spark-store">Spark-Store</a></em>.</p>
+<h3 id="Browser"><a href="#Browser" class="headerlink" title="Browser"></a>Browser</h3><p>I use Microsoft Edge. It's pretty easy to download the <code>.deb</code> on its <em><a href="https://www.microsoft.com/en-us/edge/download">official website</a></em>. But if you want to install it from command line:</p>
+<p>See <em><a href="https://www.linuxcapable.com/how-to-install-microsoft-edge-on-ubuntu-linux/">How to Install Microsoft Edge on Ubuntu 22.04 | 20.04 - LinuxCapable</a></em></p>
+<h3 id="Proxy"><a href="#Proxy" class="headerlink" title="Proxy"></a>Proxy</h3><p>Maybe <em><a href="https://github.com/zzzgydi/clash-verge">zzzgydi/clash-verge: A Clash GUI based on tauri. Supports Windows, macOS and Linux</a></em> or <em><a href="https://github.com/Fndroid/clash_for_windows_pkg">Fndroid/clash_for_windows_pkg</a></em></p>
+<h3 id="CLI-APPs"><a href="#CLI-APPs" class="headerlink" title="CLI-APPs"></a>CLI-APPs</h3><p>See <a href="/posts/d64ccd8c.html">Awesome CLI Apps</a>.</p>
+<h2 id="Q-A"><a href="#Q-A" class="headerlink" title="Q &amp; A"></a>Q &amp; A</h2><p>Q: The operating system always freezes on the welcome page.<br>A: Install / Update NVIDIA driver.</p>
+<p>See <em><a href="https://www.cnblogs.com/Leozi/p/13281224.html">Ubuntu 下安装 NVIDIA 驱动的三种方法</a></em></p>
+<p>and <em><a href="https://superuser.com/questions/1750975/nouveau-00000100-0-drm-failed-to-idle-channel-0-drm">ubuntu - nouveau 0000:01:00.0: DRM: failed to idle channel 0 [DRM] - Super User</a></em></p>
+<p>Q: Why the Microsoft Edge always show <em>This page is having a problem</em>?</p>
+<p>A: See <em><a href="https://answers.microsoft.com/en-us/microsoftedge/forum/all/this-page-is-having-a-problem-error-code-sigill/e2a09ac0-f243-40cb-a235-41abb2148f07">This page is having a problem Error Code: SIGILL - Microsoft Community</a></em></p>
+<p>and <a href="https://www.linuxcapable.com/how-to-install-microsoft-edge-on-ubuntu-linux/">here</a></p>
+<p>Q: Why does the settings disappear?<br>A: Run <code>sudo apt install gnome-control-center</code> to (re)install gnome-control-center.</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Docker: 是什么？为什么？怎么用？</title>
     <url>/posts/86a70735.html</url>
     <content><![CDATA[<p>作为一个喜欢折腾新玩意儿的人，在网上冲浪时，我经常会去寻找各种各样新式的软件或服务。如果你和我一样也喜欢寻找这些软件，那你可能也会注意到，在安装指南中，越来越多的软件提供了一种使用 <strong>Docker</strong> 的安装或部署方法。这是什么东西？为什么现在流行使用它？我们又能如何使用它？这篇文章，带你入门 Docker 。</p>
@@ -3593,48 +3592,6 @@ graph TB
         <tag>容器化</tag>
         <tag>DevOps</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Installing Ubuntu</title>
-    <url>/posts/ca281680.html</url>
-    <content><![CDATA[<p>This is NOT a tutorial on how to install Ubuntu. I am just documenting some problems I encountered during my installation.</p>
-<span id="more"></span>
-
-<h2 id="Editor-and-sudo"><a href="#Editor-and-sudo" class="headerlink" title="Editor and sudo"></a>Editor and sudo</h2><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">apt install vim sudo</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="User"><a href="#User" class="headerlink" title="User"></a>User</h2><p>Add a new user and make it a sudoer:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">useradd -m &lt;username&gt;</span><br><span class="line">visudo</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="Locale"><a href="#Locale" class="headerlink" title="Locale"></a>Locale</h2><p>Add this to your <code>~/.bashrc</code> (or <code>~/.zshrc</code>) if you use Z shell.</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> LANG=en_US.UTF-8</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="Software"><a href="#Software" class="headerlink" title="Software"></a>Software</h2><h3 id="Package-Manager"><a href="#Package-Manager" class="headerlink" title="Package Manager"></a>Package Manager</h3><p>The first thing you need to do is configuring <code>apt</code>'s mirror.</p>
-<p>If you also want to use the mirror from Tsinghua:</p>
-<p>See <em><a href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/">ubuntu | 镜像使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror</a></em></p>
-<p>To update your <code>apt</code> repository, press <code>Ctrl + Alt + T</code> to run a terminal, and run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h3><p>Install <a href="https://fishshell.com/">fish shell</a> and set it as your login shell:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo apt install fish</span><br><span class="line">chsh --shell $(<span class="built_in">which</span> fish)</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Or if you want to use <code>zsh</code> and config further, refer to: <em><a href="posts/3e5630f.html">My Zsh Config</a></em></p>
-<h3 id="AppStore"><a href="#AppStore" class="headerlink" title="AppStore"></a>AppStore</h3><p>You may try <em><a href="https://gitee.com/deepin-community-store/spark-store">Spark-Store</a></em>.</p>
-<h3 id="Browser"><a href="#Browser" class="headerlink" title="Browser"></a>Browser</h3><p>I use Microsoft Edge. It's pretty easy to download the <code>.deb</code> on its <em><a href="https://www.microsoft.com/en-us/edge/download">official website</a></em>. But if you want to install it from command line:</p>
-<p>See <em><a href="https://www.linuxcapable.com/how-to-install-microsoft-edge-on-ubuntu-linux/">How to Install Microsoft Edge on Ubuntu 22.04 | 20.04 - LinuxCapable</a></em></p>
-<h3 id="Proxy"><a href="#Proxy" class="headerlink" title="Proxy"></a>Proxy</h3><p>Maybe <em><a href="https://github.com/zzzgydi/clash-verge">zzzgydi/clash-verge: A Clash GUI based on tauri. Supports Windows, macOS and Linux</a></em> or <em><a href="https://github.com/Fndroid/clash_for_windows_pkg">Fndroid/clash_for_windows_pkg</a></em></p>
-<h3 id="CLI-APPs"><a href="#CLI-APPs" class="headerlink" title="CLI-APPs"></a>CLI-APPs</h3><p>See <a href="/posts/d64ccd8c.html">Awesome CLI Apps</a>.</p>
-<h2 id="Q-A"><a href="#Q-A" class="headerlink" title="Q &amp; A"></a>Q &amp; A</h2><p>Q: The operating system always freezes on the welcome page.<br>A: Install / Update NVIDIA driver.</p>
-<p>See <em><a href="https://www.cnblogs.com/Leozi/p/13281224.html">Ubuntu 下安装 NVIDIA 驱动的三种方法</a></em></p>
-<p>and <em><a href="https://superuser.com/questions/1750975/nouveau-00000100-0-drm-failed-to-idle-channel-0-drm">ubuntu - nouveau 0000:01:00.0: DRM: failed to idle channel 0 [DRM] - Super User</a></em></p>
-<p>Q: Why the Microsoft Edge always show <em>This page is having a problem</em>?</p>
-<p>A: See <em><a href="https://answers.microsoft.com/en-us/microsoftedge/forum/all/this-page-is-having-a-problem-error-code-sigill/e2a09ac0-f243-40cb-a235-41abb2148f07">This page is having a problem Error Code: SIGILL - Microsoft Community</a></em></p>
-<p>and <a href="https://www.linuxcapable.com/how-to-install-microsoft-edge-on-ubuntu-linux/">here</a></p>
-<p>Q: Why does the settings disappear?<br>A: Run <code>sudo apt install gnome-control-center</code> to (re)install gnome-control-center.</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-      </categories>
   </entry>
   <entry>
     <title>Joshuto: A Great File Manager in Terminal</title>
@@ -5176,7 +5133,7 @@ graph TB
 <span id="more"></span>
 
 <p>首先，让我们来创建一个 Modal，核心部分如下（略去了自定义类的具体内容，可以在最终代码处查看）：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;!-- Modal.vue --&gt;</span><br><span class="line">&lt;script setup lang="ts"&gt;</span><br><span class="line">import { ref, onMounted, onUnmounted } from "vue";</span><br><span class="line">const isOpen = ref(false);</span><br><span class="line">const openModal = () =&gt; {</span><br><span class="line">  isOpen.value = true;</span><br><span class="line">};</span><br><span class="line">const closeModal = () =&gt; {</span><br><span class="line">  isOpen.value = false;</span><br><span class="line">};</span><br><span class="line">const handleKeydown = (event: KeyboardEvent) =&gt; {</span><br><span class="line">  if (event.key === "Escape") {</span><br><span class="line">    closeModal();</span><br><span class="line">  }</span><br><span class="line">};</span><br><span class="line">onMounted(() =&gt; {</span><br><span class="line">  document.addEventListener("keydown", handleKeydown);</span><br><span class="line">});</span><br><span class="line">onUnmounted(() =&gt; {</span><br><span class="line">  document.removeEventListener("keydown", handleKeydown);</span><br><span class="line">});</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;button class="btn" @click="openModal"&gt;Open&lt;/button&gt;</span><br><span class="line">  &lt;Teleport to="body"&gt;</span><br><span class="line">    &lt;div v-if="isOpen" class="modal-background" /&gt;</span><br><span class="line">    &lt;div v-if="isOpen" class="modal-container" @click.self="closeModal"&gt;</span><br><span class="line">      &lt;div class="modal"&gt;</span><br><span class="line">        &lt;p class="modal-text"&gt;Hello, world!&lt;/p&gt;</span><br><span class="line">        &lt;button class="btn" @click="closeModal"&gt;Close&lt;/button&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/Teleport&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Modal.vue --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span> <span class="attr">lang</span>=<span class="string">"ts"</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">import</span> { ref, onMounted, onUnmounted } <span class="keyword">from</span> <span class="string">"vue"</span>;</span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">const</span> isOpen = <span class="title function_">ref</span>(<span class="literal">false</span>);</span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">const</span> <span class="title function_">openModal</span> = (<span class="params"></span>) =&gt; {</span></span><br><span class="line"><span class="language-javascript">    isOpen.<span class="property">value</span> = <span class="literal">true</span>;</span></span><br><span class="line"><span class="language-javascript">  };</span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">const</span> <span class="title function_">closeModal</span> = (<span class="params"></span>) =&gt; {</span></span><br><span class="line"><span class="language-javascript">    isOpen.<span class="property">value</span> = <span class="literal">false</span>;</span></span><br><span class="line"><span class="language-javascript">  };</span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">const</span> <span class="title function_">handleKeydown</span> = (<span class="params">event: KeyboardEvent</span>) =&gt; {</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">if</span> (event.<span class="property">key</span> === <span class="string">"Escape"</span>) {</span></span><br><span class="line"><span class="language-javascript">      <span class="title function_">closeModal</span>();</span></span><br><span class="line"><span class="language-javascript">    }</span></span><br><span class="line"><span class="language-javascript">  };</span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">onMounted</span>(<span class="function">() =&gt;</span> {</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">"keydown"</span>, handleKeydown);</span></span><br><span class="line"><span class="language-javascript">  });</span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">onUnmounted</span>(<span class="function">() =&gt;</span> {</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">document</span>.<span class="title function_">removeEventListener</span>(<span class="string">"keydown"</span>, handleKeydown);</span></span><br><span class="line"><span class="language-javascript">  });</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"btn"</span> @<span class="attr">click</span>=<span class="string">"openModal"</span>&gt;</span>Open<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Teleport</span> <span class="attr">to</span>=<span class="string">"body"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-if</span>=<span class="string">"isOpen"</span> <span class="attr">class</span>=<span class="string">"modal-background"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-if</span>=<span class="string">"isOpen"</span> <span class="attr">class</span>=<span class="string">"modal-container"</span> @<span class="attr">click.self</span>=<span class="string">"closeModal"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"modal"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"modal-text"</span>&gt;</span>Hello, world!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"btn"</span> @<span class="attr">click</span>=<span class="string">"closeModal"</span>&gt;</span>Close<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">Teleport</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>几个注意点如下：</p>
 <ul>
@@ -5186,25 +5143,29 @@ graph TB
 <li>使用 <code>@click.self</code> 来为模态框外侧区域（ <code>modal-container</code> 的区域）添加一个点击事件，此处为关闭模态框；</li>
 <li>使用 <code>onMounted</code> 和 <code>onUnmounted</code> 来在组件加载和卸载时分别添加和移除一个事件监听器，用于在 Esc 键被按下时关闭模态框；</li>
 </ul>
-<p>下面让我们来制作动画。背景动画比较简单，我们直接使用 Vue 提供的 <code>[Transition](https://cn.vuejs.org/guide/built-ins/transition)</code> 组件将原来的 <code>modal-background</code> 包裹，并添加相应的 CSS 即可：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;!-- ... --&gt;</span><br><span class="line">	&lt;Transition name="fade"&gt;</span><br><span class="line">	  &lt;div v-if="isOpen" class="modal-background" @click="closeModal" /&gt;</span><br><span class="line">	&lt;/Transition&gt;</span><br><span class="line">	&lt;!-- ... --&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">/* ... */</span><br><span class="line">.fade-enter-active,</span><br><span class="line">.fade-leave-active {</span><br><span class="line">  transition: opacity 0.5s;</span><br><span class="line">}</span><br><span class="line">.fade-enter,</span><br><span class="line">.fade-leave-to {</span><br><span class="line">  opacity: 0;</span><br><span class="line">}</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></tbody></table></figure>
+<p>下面让我们来制作动画。背景动画比较简单，我们直接使用 Vue 提供的 <a href="https://cn.vuejs.org/guide/built-ins/transition"><code>Transition</code></a> 组件将原来的 <code>modal-background</code> 包裹，并添加相应的 CSS 即可：</p>
+<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- ... --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Transition</span> <span class="attr">name</span>=<span class="string">"fade"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-if</span>=<span class="string">"isOpen"</span> <span class="attr">class</span>=<span class="string">"modal-background"</span> @<span class="attr">click</span>=<span class="string">"closeModal"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">Transition</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- ... --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="comment">/* ... */</span></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.fade-enter-active</span>,</span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.fade-leave-active</span> {</span></span><br><span class="line"><span class="language-css">    <span class="attribute">transition</span>: opacity <span class="number">0.5s</span>;</span></span><br><span class="line"><span class="language-css">  }</span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.fade-enter</span>,</span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.fade-leave-to</span> {</span></span><br><span class="line"><span class="language-css">    <span class="attribute">opacity</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">  }</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>然后是模态框主体的动画，这里使用了 <a href="https://motion.vueuse.org/">@vueuse/motion</a> 。首先，添加这个包：</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">pnpm install @vueuse/motion</span><br></pre></td></tr></tbody></table></figure>
 
 <p>接着编辑 <code>main.ts</code>：</p>
-<figure class="highlight ts"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> { createApp } <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> { <span class="title class_">MotionPlugin</span> } <span class="keyword">from</span> <span class="string">'@vueuse/motion'</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">'./style.css'</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">App</span> <span class="keyword">from</span> <span class="string">'./App.vue'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = <span class="title function_">createApp</span>(<span class="title class_">App</span>)</span><br><span class="line">app.<span class="title function_">use</span>(<span class="title class_">MotionPlugin</span>)</span><br><span class="line">app.<span class="title function_">mount</span>(<span class="string">'#app'</span>)</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight ts"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> { createApp } <span class="keyword">from</span> <span class="string">"vue"</span>;</span><br><span class="line"><span class="keyword">import</span> { <span class="title class_">MotionPlugin</span> } <span class="keyword">from</span> <span class="string">"@vueuse/motion"</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">"./style.css"</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">App</span> <span class="keyword">from</span> <span class="string">"./App.vue"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = <span class="title function_">createApp</span>(<span class="title class_">App</span>);</span><br><span class="line">app.<span class="title function_">use</span>(<span class="title class_">MotionPlugin</span>);</span><br><span class="line">app.<span class="title function_">mount</span>(<span class="string">"#app"</span>);</span><br></pre></td></tr></tbody></table></figure>
 
 <p>OK，可以开始使用了。但是简单地为 <code>modal-container</code> 添加 <code>v-motion</code> 并不足够：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;!-- error --&gt;</span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;!-- ... --&gt;</span><br><span class="line">  &lt;div</span><br><span class="line">	v-if="isOpen"</span><br><span class="line">	class="modal-container"</span><br><span class="line">	@click.self="closeModal"</span><br><span class="line">	v-motion</span><br><span class="line">	:initial="{ opacity: 0, y: 100 }"</span><br><span class="line">	:enter="{ opacity: 1, y: 0 }"</span><br><span class="line">	:leave="{ opacity: 0, y: 100 }"</span><br><span class="line">  &gt;</span><br><span class="line">	&lt;div class="modal"&gt;</span><br><span class="line">	  &lt;p class="modal-text"&gt;Hello, world!&lt;/p&gt;</span><br><span class="line">	  &lt;button class="btn" @click="closeModal"&gt;Close&lt;/button&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;!-- ... --&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- error --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- ... --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span></span></span><br><span class="line"><span class="tag">    <span class="attr">v-if</span>=<span class="string">"isOpen"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">class</span>=<span class="string">"modal-container"</span></span></span><br><span class="line"><span class="tag">    @<span class="attr">click.self</span>=<span class="string">"closeModal"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">v-motion</span></span></span><br><span class="line"><span class="tag">    <span class="attr">:initial</span>=<span class="string">"{ opacity: 0, y: 100 }"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">:enter</span>=<span class="string">"{ opacity: 1, y: 0 }"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">:leave</span>=<span class="string">"{ opacity: 0, y: 100 }"</span></span></span><br><span class="line"><span class="tag">  &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"modal"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"modal-text"</span>&gt;</span>Hello, world!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"btn"</span> @<span class="attr">click</span>=<span class="string">"closeModal"</span>&gt;</span>Close<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- ... --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>如果是这样，你会发现进入动画非常顺利地播放了，但退出动画完全没有生效！为什么会这样？</p>
 <p>原因在于我们是通过 <code>v-if</code> 来控制是否显示这个组件的。在进入时，首先 <code>v-if</code> 后跟的值 <code>isOpen</code> 为真，接着进入动画正常播放；但是在退出时，<code>isOpen</code> 变为假，<code>v-if</code> 检测到后直接将该组件从 DOM 中移除了，退出动画根本没有时间播放！</p>
 <p>如何解决呢？这个 <a href="https://vueuse-motion-demo.netlify.app/">Demo</a> 演示了这一点，可以配合 <code>Transition</code> 使用：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;script setup lang="ts"&gt;</span><br><span class="line">import { useMotions } from "@vueuse/motion";</span><br><span class="line">const motions = useMotions();</span><br><span class="line">// ...</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;!-- ... --&gt;</span><br><span class="line">	&lt;Transition :css="false" @leave="(_, done) =&gt; motions.modal.leave(done)"&gt;</span><br><span class="line">	  &lt;div</span><br><span class="line">		v-if="isOpen"</span><br><span class="line">		class="modal-container"</span><br><span class="line">		@click.self="closeModal"</span><br><span class="line">		v-motion="'modal'"</span><br><span class="line">		:initial="{ opacity: 0, y: 100 }"</span><br><span class="line">		:enter="{ opacity: 1, y: 0 }"</span><br><span class="line">		:leave="{ opacity: 0, y: 100 }"</span><br><span class="line">	  &gt;</span><br><span class="line">		&lt;div class="modal"&gt;</span><br><span class="line">		  &lt;p class="modal-text"&gt;Hello, world!&lt;/p&gt;</span><br><span class="line">		  &lt;button class="btn" @click="closeModal"&gt;Close&lt;/button&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">	  &lt;/div&gt;</span><br><span class="line">	&lt;/Transition&gt;</span><br><span class="line">  &lt;!-- ... --&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span> <span class="attr">lang</span>=<span class="string">"ts"</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">import</span> { useMotions } <span class="keyword">from</span> <span class="string">"@vueuse/motion"</span>;</span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">const</span> motions = <span class="title function_">useMotions</span>();</span></span><br><span class="line"><span class="language-javascript">  <span class="comment">// ...</span></span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- ... --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Transition</span> <span class="attr">:css</span>=<span class="string">"false"</span> @<span class="attr">leave</span>=<span class="string">"(_, done) =&gt; motions.modal.leave(done)"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span></span></span><br><span class="line"><span class="tag">      <span class="attr">v-if</span>=<span class="string">"isOpen"</span></span></span><br><span class="line"><span class="tag">      <span class="attr">class</span>=<span class="string">"modal-container"</span></span></span><br><span class="line"><span class="tag">      @<span class="attr">click.self</span>=<span class="string">"closeModal"</span></span></span><br><span class="line"><span class="tag">      <span class="attr">v-motion</span>=<span class="string">"'modal'"</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:initial</span>=<span class="string">"{ opacity: 0, y: 100 }"</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:enter</span>=<span class="string">"{ opacity: 1, y: 0 }"</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:leave</span>=<span class="string">"{ opacity: 0, y: 100 }"</span></span></span><br><span class="line"><span class="tag">    &gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"modal"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"modal-text"</span>&gt;</span>Hello, world!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"btn"</span> @<span class="attr">click</span>=<span class="string">"closeModal"</span>&gt;</span>Close<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">Transition</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- ... --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>这样退出动画也能顺利播放了。</p>
 ]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Web</category>
+      </categories>
       <tags>
         <tag>Web</tag>
         <tag>Vue</tag>
@@ -5230,49 +5191,6 @@ graph TB
         <tag>JS</tag>
         <tag>Vue.js</tag>
         <tag>Element UI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>RLCraft 新手教程 - 一：过渡到你的正常生存</title>
-    <url>/posts/a1ada34d.html</url>
-    <content><![CDATA[<p>本系列教程是我自己游玩过程中写的。出发点是我没有在网上找到比较好的中文 RLCraft 文字教程，所以在此记录自己的游玩发现。也算留下一些记录，供未来又开坑的自己参考。这是第一篇：过渡到正常的生存。</p>
-<span id="more"></span>
-
-<h2 id="燧石装备"><a href="#燧石装备" class="headerlink" title="燧石装备"></a>燧石装备</h2><p>由于 NTP 模组（<a href="https://www.mcmod.cn/class/2138.html">No Tree Punching，无树可撸</a>）的存在，初入 RLCraft，你的第一件事情不再是获取原木，而是撸树叶获取木棍，然后在河边找到沙砾获取燧石。你可以按住鼠标左键徒手破坏树叶和沙砾，然后用右键点击掉落物以拿起它（或者你也可以按下 shift 来吸取附近的掉落物）。</p>
-<p>手拿燧石右击石头 / 圆石等坚硬方块（?）上表面，你可以获取燧石碎块，然后打开背包，在 2*2 的合成栏上边放燧石碎块，下边放木棍，获取一把粗糙的小刀。（图源 RLCraft Wiki）</p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/game/minecraft/rlcraft-%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B%E4%B8%80%EF%BC%9A%E8%BF%87%E6%B8%A1%E5%88%B0%E4%BD%A0%E7%9A%84%E6%AD%A3%E5%B8%B8%E7%94%9F%E5%AD%98/1.png" alt="粗糙的小刀"></p>
-<p>使用粗糙的小刀破坏草，可以获得植物纤维，在背包合成栏用三个植物纤维合成一个植物绳。然后再使用燧石碎块、植物绳、木棍合成粗糙的斧头。恭喜你获取了这个游戏的第一把斧头，用这把斧头你就可以开采原木了 —— 当心，树倒下来可能会砸死你！</p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/game/minecraft/rlcraft-%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B%E4%B8%80%EF%BC%9A%E8%BF%87%E6%B8%A1%E5%88%B0%E4%BD%A0%E7%9A%84%E6%AD%A3%E5%B8%B8%E7%94%9F%E5%AD%98/2.png" alt="植物绳"></p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/game/minecraft/rlcraft-%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B%E4%B8%80%EF%BC%9A%E8%BF%87%E6%B8%A1%E5%88%B0%E4%BD%A0%E7%9A%84%E6%AD%A3%E5%B8%B8%E7%94%9F%E5%AD%98/3.png" alt="粗糙的斧头"></p>
-<p>你不再能够直接使用背包合成栏分解原木，而是需要把原木竖直放在地上，并用斧头右击其上表面，以获取两块木板。木棍也可以用类似的方式获取 —— 将木板放在地上，然后用斧头右击。</p>
-<p>你可以看 jei 获取更多燧石工具的制作方法，但你更可以开始制作原版的木制工具。用木镐挖石头会掉落石子，四个石子 2*2 摆放可以获取圆石，而挖圆石则会直接掉落圆石。</p>
-<p>恭喜你进入石器时代！现在，你可以开始下矿了！但要时刻注意的一点是照明 —— 恐怖生物会在黑暗中生成... 别自己怎么死的都不知道。你会发现木棍加煤炭不再能合成原版火把，它们现在只能合成 "熄灭的火把"。要想点亮它们，你需要一颗打火石 —— 将熄灭的火把和打火石放在合成栏里，你就可以获得点燃的火把。但这火把仍然会熄灭 —— 比如一场雨过后，比如燃烧很久之后... 制作原版火把相对复杂，但你可以在村庄等地方找到一些。</p>
-<p>虽然还有很多路要走，但你现在基本上可以短暂地享受一会儿类原版的 MC 了。</p>
-<h2 id="定居下来"><a href="#定居下来" class="headerlink" title="定居下来"></a>定居下来</h2><p>RLCraft 的无限随机重生机制只有在你<strong>激活过指路石（传送石碑）</strong>或<strong>在床上睡过一觉</strong>之后才会结束。利用随机出生点，你可以选择搜刮一系列物资，然后激活指路石，然后找床睡觉，再破坏床，回到随机重生的状态。等你找到合适的定居点，再可以利用指路石传回来拿这些物资。</p>
-<p>定居点的选择：</p>
-<ul>
-<li>不能过高（例如山顶）：气温低、风元素等</li>
-<li>不要是沙漠：气温高</li>
-<li>远离龙</li>
-<li>靠近指路石</li>
-<li>...</li>
-</ul>
-<h2 id="前期经验获取方式"><a href="#前期经验获取方式" class="headerlink" title="前期经验获取方式"></a>前期经验获取方式</h2><p>在 RLCraft 中，你必须获取经验提升你的等级，才能解锁破坏某些方块或使用更高级的工具，例如铁质装备需要你的相应属性（攻击、防御等）达到 8 级，而钻石装备需要 16 级等等。下边介绍几种经验获取方法：</p>
-<h3 id="经验田"><a href="#经验田" class="headerlink" title="经验田"></a>经验田</h3><p>当农耕点到二级，就可以种植小麦了。种植一大片小麦田，收割的时候就会获得大量经验。类似的，养殖动物也可以获得大量经验。</p>
-<p>下图为我的 30 级经验田。这片田大约是 13 格水的满浇灌面积的大小（1 格水最多能浇灌 9*9-1=80 面积的田，所以总共大约为 1000 格），能提供我从 0 级升到大约 30 级所需的经验。（注意一下不要让水源露天，否则冬天会结冰，图中忘记了）</p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/game/minecraft/rlcraft-%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B%E4%B8%80%EF%BC%9A%E8%BF%87%E6%B8%A1%E5%88%B0%E4%BD%A0%E7%9A%84%E6%AD%A3%E5%B8%B8%E7%94%9F%E5%AD%98/4.png" alt="经验田"></p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><em><a href="https://rlcraft.fandom.com/wiki/Getting_Started">Getting Started | RLCraft Wiki | Fandom</a></em></li>
-</ul>
-]]></content>
-      <categories>
-        <category>Game</category>
-        <category>Minecraft</category>
-      </categories>
-      <tags>
-        <tag>Game</tag>
-        <tag>Minecraft</tag>
-        <tag>RLCraft</tag>
       </tags>
   </entry>
   <entry>
@@ -5379,6 +5297,49 @@ graph TB
       <tags>
         <tag>Game</tag>
         <tag>DSP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RLCraft 新手教程 - 一：过渡到你的正常生存</title>
+    <url>/posts/a1ada34d.html</url>
+    <content><![CDATA[<p>本系列教程是我自己游玩过程中写的。出发点是我没有在网上找到比较好的中文 RLCraft 文字教程，所以在此记录自己的游玩发现。也算留下一些记录，供未来又开坑的自己参考。这是第一篇：过渡到正常的生存。</p>
+<span id="more"></span>
+
+<h2 id="燧石装备"><a href="#燧石装备" class="headerlink" title="燧石装备"></a>燧石装备</h2><p>由于 NTP 模组（<a href="https://www.mcmod.cn/class/2138.html">No Tree Punching，无树可撸</a>）的存在，初入 RLCraft，你的第一件事情不再是获取原木，而是撸树叶获取木棍，然后在河边找到沙砾获取燧石。你可以按住鼠标左键徒手破坏树叶和沙砾，然后用右键点击掉落物以拿起它（或者你也可以按下 shift 来吸取附近的掉落物）。</p>
+<p>手拿燧石右击石头 / 圆石等坚硬方块（?）上表面，你可以获取燧石碎块，然后打开背包，在 2*2 的合成栏上边放燧石碎块，下边放木棍，获取一把粗糙的小刀。（图源 RLCraft Wiki）</p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/game/minecraft/rlcraft-%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B%E4%B8%80%EF%BC%9A%E8%BF%87%E6%B8%A1%E5%88%B0%E4%BD%A0%E7%9A%84%E6%AD%A3%E5%B8%B8%E7%94%9F%E5%AD%98/1.png" alt="粗糙的小刀"></p>
+<p>使用粗糙的小刀破坏草，可以获得植物纤维，在背包合成栏用三个植物纤维合成一个植物绳。然后再使用燧石碎块、植物绳、木棍合成粗糙的斧头。恭喜你获取了这个游戏的第一把斧头，用这把斧头你就可以开采原木了 —— 当心，树倒下来可能会砸死你！</p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/game/minecraft/rlcraft-%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B%E4%B8%80%EF%BC%9A%E8%BF%87%E6%B8%A1%E5%88%B0%E4%BD%A0%E7%9A%84%E6%AD%A3%E5%B8%B8%E7%94%9F%E5%AD%98/2.png" alt="植物绳"></p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/game/minecraft/rlcraft-%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B%E4%B8%80%EF%BC%9A%E8%BF%87%E6%B8%A1%E5%88%B0%E4%BD%A0%E7%9A%84%E6%AD%A3%E5%B8%B8%E7%94%9F%E5%AD%98/3.png" alt="粗糙的斧头"></p>
+<p>你不再能够直接使用背包合成栏分解原木，而是需要把原木竖直放在地上，并用斧头右击其上表面，以获取两块木板。木棍也可以用类似的方式获取 —— 将木板放在地上，然后用斧头右击。</p>
+<p>你可以看 jei 获取更多燧石工具的制作方法，但你更可以开始制作原版的木制工具。用木镐挖石头会掉落石子，四个石子 2*2 摆放可以获取圆石，而挖圆石则会直接掉落圆石。</p>
+<p>恭喜你进入石器时代！现在，你可以开始下矿了！但要时刻注意的一点是照明 —— 恐怖生物会在黑暗中生成... 别自己怎么死的都不知道。你会发现木棍加煤炭不再能合成原版火把，它们现在只能合成 "熄灭的火把"。要想点亮它们，你需要一颗打火石 —— 将熄灭的火把和打火石放在合成栏里，你就可以获得点燃的火把。但这火把仍然会熄灭 —— 比如一场雨过后，比如燃烧很久之后... 制作原版火把相对复杂，但你可以在村庄等地方找到一些。</p>
+<p>虽然还有很多路要走，但你现在基本上可以短暂地享受一会儿类原版的 MC 了。</p>
+<h2 id="定居下来"><a href="#定居下来" class="headerlink" title="定居下来"></a>定居下来</h2><p>RLCraft 的无限随机重生机制只有在你<strong>激活过指路石（传送石碑）</strong>或<strong>在床上睡过一觉</strong>之后才会结束。利用随机出生点，你可以选择搜刮一系列物资，然后激活指路石，然后找床睡觉，再破坏床，回到随机重生的状态。等你找到合适的定居点，再可以利用指路石传回来拿这些物资。</p>
+<p>定居点的选择：</p>
+<ul>
+<li>不能过高（例如山顶）：气温低、风元素等</li>
+<li>不要是沙漠：气温高</li>
+<li>远离龙</li>
+<li>靠近指路石</li>
+<li>...</li>
+</ul>
+<h2 id="前期经验获取方式"><a href="#前期经验获取方式" class="headerlink" title="前期经验获取方式"></a>前期经验获取方式</h2><p>在 RLCraft 中，你必须获取经验提升你的等级，才能解锁破坏某些方块或使用更高级的工具，例如铁质装备需要你的相应属性（攻击、防御等）达到 8 级，而钻石装备需要 16 级等等。下边介绍几种经验获取方法：</p>
+<h3 id="经验田"><a href="#经验田" class="headerlink" title="经验田"></a>经验田</h3><p>当农耕点到二级，就可以种植小麦了。种植一大片小麦田，收割的时候就会获得大量经验。类似的，养殖动物也可以获得大量经验。</p>
+<p>下图为我的 30 级经验田。这片田大约是 13 格水的满浇灌面积的大小（1 格水最多能浇灌 9*9-1=80 面积的田，所以总共大约为 1000 格），能提供我从 0 级升到大约 30 级所需的经验。（注意一下不要让水源露天，否则冬天会结冰，图中忘记了）</p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/game/minecraft/rlcraft-%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B%E4%B8%80%EF%BC%9A%E8%BF%87%E6%B8%A1%E5%88%B0%E4%BD%A0%E7%9A%84%E6%AD%A3%E5%B8%B8%E7%94%9F%E5%AD%98/4.png" alt="经验田"></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><em><a href="https://rlcraft.fandom.com/wiki/Getting_Started">Getting Started | RLCraft Wiki | Fandom</a></em></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Game</category>
+        <category>Minecraft</category>
+      </categories>
+      <tags>
+        <tag>Game</tag>
+        <tag>Minecraft</tag>
+        <tag>RLCraft</tag>
       </tags>
   </entry>
   <entry>
@@ -5941,6 +5902,106 @@ graph TB
       </tags>
   </entry>
   <entry>
+    <title>Notes for Nand2Tetris: Virtual Machine I: Stack Arithmetic</title>
+    <url>/posts/d8b14680.html</url>
+    <content><![CDATA[<p>This is a note for Nand2Tetris unit 7 (Part II, Unit 1).</p>
+<span id="more"></span>
+
+<h2 id="Unit-7-0"><a href="#Unit-7-0" class="headerlink" title="Unit 7.0"></a>Unit 7.0</h2><p>Jack program:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">class Main {</span><br><span class="line">    function void main() {</span><br><span class="line">        do Output.printString("Hello World!");</span><br><span class="line">        do Output.println(); // New line.</span><br><span class="line">        return;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>What makes the abstraction work?</p>
+<ul>
+<li>Assembler</li>
+<li>Virtual machine</li>
+<li>Compiler</li>
+<li>Operating system</li>
+</ul>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-virtual-machine-i-stack-arithmetic/1.png" alt="From high-level to low-level"></p>
+<p>Nand2Tetris Part II is <strong>more demanding</strong> than Nand2Tetris Part I.</p>
+<h2 id="Unit-7-1"><a href="#Unit-7-1" class="headerlink" title="Unit 7.1"></a>Unit 7.1</h2><p>Module 1: Virtual Machine</p>
+<ul>
+<li>Understanding the abstraction</li>
+<li>Building the implementation</li>
+</ul>
+<p>Module 1: Take Home Lessons</p>
+<ul>
+<li>Compilation (big picture)</li>
+<li>Virtualization</li>
+<li>VM abstraction</li>
+<li>Stack processing</li>
+<li>VM implementation</li>
+<li>Pointers</li>
+<li>Programming</li>
+</ul>
+<h2 id="Unit-7-2"><a href="#Unit-7-2" class="headerlink" title="Unit 7.2"></a>Unit 7.2</h2><p>VM Abstraction: the Stack</p>
+<p>Stack operations:</p>
+<ul>
+<li>push: add a plate to the stack's top</li>
+<li>pop: remove the top plate</li>
+</ul>
+<p>Applying a function $f$ on the stack:</p>
+<ul>
+<li>pops the argument(s) from the stack</li>
+<li>computes $f$ on the arguments</li>
+<li>pushes the result onto the stack</li>
+</ul>
+<p>Stack arithmetic:</p>
+<p>high-level:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">x = 17 + 19</span><br></pre></td></tr></tbody></table></figure>
+
+<p>After compilation:</p>
+<p>low-level:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">push 17</span><br><span class="line">push 19</span><br><span class="line">add</span><br><span class="line">pop x</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Stack machine, manipulated by:</p>
+<ul>
+<li>Arithmetic / logical commands</li>
+<li>Memory segment commands</li>
+<li>Branching commands</li>
+<li>Function commands</li>
+</ul>
+<h2 id="Unit-7-3"><a href="#Unit-7-3" class="headerlink" title="Unit 7.3"></a>Unit 7.3</h2><p>VM Abstraction: Memory Segments</p>
+<p>Memory segments:</p>
+<ul>
+<li>local</li>
+<li>argument</li>
+<li>this</li>
+<li>that</li>
+<li>constant</li>
+<li>static</li>
+<li>pointer</li>
+<li>temp</li>
+</ul>
+<p>Syntax:</p>
+<ul>
+<li>push $segment$ $i$:<br>Where $segment$ is: argument, local, static, constant, this, that, pointer, or temp<br>and $i$ is a non-negative integer</li>
+<li>pop $segment$ $i$:<br>Where $segment$ is: argument, local, static, this, that, pointer, or temp<br>and $i$ is a non-negative integer</li>
+</ul>
+<h2 id="Unit-7-4"><a href="#Unit-7-4" class="headerlink" title="Unit 7.4"></a>Unit 7.4</h2><h3 id="Pointer-manipulation"><a href="#Pointer-manipulation" class="headerlink" title="Pointer manipulation"></a>Pointer manipulation</h3><p>asterisk: *</p>
+<h3 id="Stack-machine"><a href="#Stack-machine" class="headerlink" title="Stack machine"></a>Stack machine</h3><p>...</p>
+<h3 id="VM-translator-perspective"><a href="#VM-translator-perspective" class="headerlink" title="VM translator perspective"></a>VM translator perspective</h3><p>VM Translator:</p>
+<ul>
+<li>A program that translates VM code into machine language</li>
+<li>Each VM command generates several assembly commands</li>
+</ul>
+<h2 id="Unit-7-5"><a href="#Unit-7-5" class="headerlink" title="Unit 7.5"></a>Unit 7.5</h2><p>Implementing <strong>local</strong></p>
+<p><img data-src="/" alt="Implementing local"></p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Computing System</category>
+        <category>Nand2Tetris</category>
+      </categories>
+      <tags>
+        <tag>Note</tag>
+        <tag>Coursera</tag>
+        <tag>Nand2Tetris</tag>
+        <tag>Virtual Machine</tag>
+        <tag>Stack Arithmetic</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Notes for Nand2Tetris: Memory</title>
     <url>/posts/28d92424.html</url>
     <content><![CDATA[<p>This is a note for Nand2Tetris unit 3.</p>
@@ -6050,106 +6111,6 @@ graph TB
         <tag>Counter</tag>
         <tag>Sequential Logic</tag>
         <tag>DFF</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Notes for Nand2Tetris: Virtual Machine I: Stack Arithmetic</title>
-    <url>/posts/d8b14680.html</url>
-    <content><![CDATA[<p>This is a note for Nand2Tetris unit 7 (Part II, Unit 1).</p>
-<span id="more"></span>
-
-<h2 id="Unit-7-0"><a href="#Unit-7-0" class="headerlink" title="Unit 7.0"></a>Unit 7.0</h2><p>Jack program:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">class Main {</span><br><span class="line">    function void main() {</span><br><span class="line">        do Output.printString("Hello World!");</span><br><span class="line">        do Output.println(); // New line.</span><br><span class="line">        return;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>What makes the abstraction work?</p>
-<ul>
-<li>Assembler</li>
-<li>Virtual machine</li>
-<li>Compiler</li>
-<li>Operating system</li>
-</ul>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/computing%20system/nand2tetris/notes-for-nand2tetris-virtual-machine-i-stack-arithmetic/1.png" alt="From high-level to low-level"></p>
-<p>Nand2Tetris Part II is <strong>more demanding</strong> than Nand2Tetris Part I.</p>
-<h2 id="Unit-7-1"><a href="#Unit-7-1" class="headerlink" title="Unit 7.1"></a>Unit 7.1</h2><p>Module 1: Virtual Machine</p>
-<ul>
-<li>Understanding the abstraction</li>
-<li>Building the implementation</li>
-</ul>
-<p>Module 1: Take Home Lessons</p>
-<ul>
-<li>Compilation (big picture)</li>
-<li>Virtualization</li>
-<li>VM abstraction</li>
-<li>Stack processing</li>
-<li>VM implementation</li>
-<li>Pointers</li>
-<li>Programming</li>
-</ul>
-<h2 id="Unit-7-2"><a href="#Unit-7-2" class="headerlink" title="Unit 7.2"></a>Unit 7.2</h2><p>VM Abstraction: the Stack</p>
-<p>Stack operations:</p>
-<ul>
-<li>push: add a plate to the stack's top</li>
-<li>pop: remove the top plate</li>
-</ul>
-<p>Applying a function $f$ on the stack:</p>
-<ul>
-<li>pops the argument(s) from the stack</li>
-<li>computes $f$ on the arguments</li>
-<li>pushes the result onto the stack</li>
-</ul>
-<p>Stack arithmetic:</p>
-<p>high-level:</p>
-<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">x = 17 + 19</span><br></pre></td></tr></tbody></table></figure>
-
-<p>After compilation:</p>
-<p>low-level:</p>
-<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">push 17</span><br><span class="line">push 19</span><br><span class="line">add</span><br><span class="line">pop x</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Stack machine, manipulated by:</p>
-<ul>
-<li>Arithmetic / logical commands</li>
-<li>Memory segment commands</li>
-<li>Branching commands</li>
-<li>Function commands</li>
-</ul>
-<h2 id="Unit-7-3"><a href="#Unit-7-3" class="headerlink" title="Unit 7.3"></a>Unit 7.3</h2><p>VM Abstraction: Memory Segments</p>
-<p>Memory segments:</p>
-<ul>
-<li>local</li>
-<li>argument</li>
-<li>this</li>
-<li>that</li>
-<li>constant</li>
-<li>static</li>
-<li>pointer</li>
-<li>temp</li>
-</ul>
-<p>Syntax:</p>
-<ul>
-<li>push $segment$ $i$:<br>Where $segment$ is: argument, local, static, constant, this, that, pointer, or temp<br>and $i$ is a non-negative integer</li>
-<li>pop $segment$ $i$:<br>Where $segment$ is: argument, local, static, this, that, pointer, or temp<br>and $i$ is a non-negative integer</li>
-</ul>
-<h2 id="Unit-7-4"><a href="#Unit-7-4" class="headerlink" title="Unit 7.4"></a>Unit 7.4</h2><h3 id="Pointer-manipulation"><a href="#Pointer-manipulation" class="headerlink" title="Pointer manipulation"></a>Pointer manipulation</h3><p>asterisk: *</p>
-<h3 id="Stack-machine"><a href="#Stack-machine" class="headerlink" title="Stack machine"></a>Stack machine</h3><p>...</p>
-<h3 id="VM-translator-perspective"><a href="#VM-translator-perspective" class="headerlink" title="VM translator perspective"></a>VM translator perspective</h3><p>VM Translator:</p>
-<ul>
-<li>A program that translates VM code into machine language</li>
-<li>Each VM command generates several assembly commands</li>
-</ul>
-<h2 id="Unit-7-5"><a href="#Unit-7-5" class="headerlink" title="Unit 7.5"></a>Unit 7.5</h2><p>Implementing <strong>local</strong></p>
-<p><img data-src="/" alt="Implementing local"></p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Computing System</category>
-        <category>Nand2Tetris</category>
-      </categories>
-      <tags>
-        <tag>Note</tag>
-        <tag>Coursera</tag>
-        <tag>Nand2Tetris</tag>
-        <tag>Virtual Machine</tag>
-        <tag>Stack Arithmetic</tag>
       </tags>
   </entry>
   <entry>
@@ -7094,6 +7055,30 @@ graph TB
       </tags>
   </entry>
   <entry>
+    <title>My Personal Summary of Stanford CS106L</title>
+    <url>/posts/b16dfec9.html</url>
+    <content><![CDATA[<p>This is <a href="https://web.stanford.edu/class/cs106l/index.html">CS106L</a>, an in-depth modern C++ language course from Stanford. I enrolled in it at the beginning of April and almost finished it today.</p>
+<span id="more"></span>
+
+<p>This class is amazing. It covers so many interesting and exciting features of modern C++ that I do not get a chance to learn in my school C++ class, including initialization lists, STL containers and algorithms, lambda expressions, templates, all the six SMFs, move semantics, r-value reference, cpp-style casting (static_cast/const_cast), smart pointers, RAII, etc. These make the code modern and robust! These are the real C++ things!</p>
+<p>I learnt this course from the website. This is actually not an open source course. I can't find the lecture videos and notes. What I am able to read are only the slides. Every week there are two lectures on Tuesday and Thursday. The slides are updated on the website the next day and I download them to my tab. They are not very clear so what I have learnt is really superficial. There are two assignments, I tried to finish the second locally, but the online submission system is only open to Stanford students, so... I don't really know what level I'm at. But, on the plus side, at least I am learning the direction I should go.</p>
+<p>If you also want to learn more about modern C++, give this course a try.</p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/languages/c%20&amp;%20cpp/my-personal-summay-of-stanford-cs106l/1.png" alt="Website of the course"></p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/languages/c%20&amp;%20cpp/my-personal-summay-of-stanford-cs106l/2.png" alt="Assignment 2"></p>
+<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/languages/c%20&amp;%20cpp/my-personal-summay-of-stanford-cs106l/3.png" alt="Slides in my Samsung Note"></p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>Online course summary</tag>
+        <tag>C/C++</tag>
+        <tag>CS106L</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Move Semantics in C++</title>
     <url>/posts/d5786049.html</url>
     <content><![CDATA[<p>This is a note for Lecture 13, <a href="https://web.stanford.edu/class/cs106l/index.html">CS106L</a>, Spring 2023.</p>
@@ -7240,30 +7225,6 @@ graph TB
       </categories>
       <tags>
         <tag>Note</tag>
-        <tag>C/C++</tag>
-        <tag>CS106L</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>My Personal Summary of Stanford CS106L</title>
-    <url>/posts/b16dfec9.html</url>
-    <content><![CDATA[<p>This is <a href="https://web.stanford.edu/class/cs106l/index.html">CS106L</a>, an in-depth modern C++ language course from Stanford. I enrolled in it at the beginning of April and almost finished it today.</p>
-<span id="more"></span>
-
-<p>This class is amazing. It covers so many interesting and exciting features of modern C++ that I do not get a chance to learn in my school C++ class, including initialization lists, STL containers and algorithms, lambda expressions, templates, all the six SMFs, move semantics, r-value reference, cpp-style casting (static_cast/const_cast), smart pointers, RAII, etc. These make the code modern and robust! These are the real C++ things!</p>
-<p>I learnt this course from the website. This is actually not an open source course. I can't find the lecture videos and notes. What I am able to read are only the slides. Every week there are two lectures on Tuesday and Thursday. The slides are updated on the website the next day and I download them to my tab. They are not very clear so what I have learnt is really superficial. There are two assignments, I tried to finish the second locally, but the online submission system is only open to Stanford students, so... I don't really know what level I'm at. But, on the plus side, at least I am learning the direction I should go.</p>
-<p>If you also want to learn more about modern C++, give this course a try.</p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/languages/c%20&amp;%20cpp/my-personal-summay-of-stanford-cs106l/1.png" alt="Website of the course"></p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/languages/c%20&amp;%20cpp/my-personal-summay-of-stanford-cs106l/2.png" alt="Assignment 2"></p>
-<p><img data-src="https://b316f18.webp.li/blog-imgs/cs/languages/c%20&amp;%20cpp/my-personal-summay-of-stanford-cs106l/3.png" alt="Slides in my Samsung Note"></p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>Online course summary</tag>
         <tag>C/C++</tag>
         <tag>CS106L</tag>
       </tags>
@@ -8230,6 +8191,73 @@ graph TB
       </tags>
   </entry>
   <entry>
+    <title>使用 Rust 写一个简单的线程池</title>
+    <url>/posts/118aec2d.html</url>
+    <content><![CDATA[<p>线程池是一种多线程处理形式，它通过将任务分配给事先创建好的线程以进行重用，提高了并发性能。本文是一篇阅读笔记，原材料为 <a href="https://course.rs/advance-practice1/intro.html">Rust 语言圣经 - 进阶实战 1 实现一个 Web 服务器</a>。</p>
+<span id="more"></span>
+
+<p>在实现线程池之前，先来看看我们希望怎么用它：</p>
+<figure class="highlight rust"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() {</span><br><span class="line"> <span class="keyword">let</span> <span class="variable">pool</span> = ThreadPool::<span class="title function_ invoke__">new</span>(<span class="number">4</span>); <span class="comment">// 创建一个包含 4 个线程的线程池</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">// 对于前来的每个任务，将其放到池子中执行</span></span><br><span class="line"> <span class="keyword">for</span> <span class="variable">task</span> <span class="keyword">in</span> tasks {</span><br><span class="line">  pool.<span class="title function_ invoke__">execute</span>(|| {</span><br><span class="line">   <span class="title function_ invoke__">handle_task</span>(task);</span><br><span class="line">  });</span><br><span class="line"> }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>因此，我们的线程池的骨架可能是这样的：</p>
+<figure class="highlight rust"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">pub</span> <span class="keyword">struct</span> <span class="title class_">ThreadPool</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line"> <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">new</span>(size: <span class="type">usize</span>) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> {</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line"> }</span><br><span class="line"></span><br><span class="line"> <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">execute</span>&lt;F&gt;(&amp;<span class="keyword">self</span>, f: F)</span><br><span class="line">    <span class="keyword">where</span></span><br><span class="line">        F: <span class="title function_ invoke__">FnOnce</span>() + <span class="built_in">Send</span> + <span class="symbol">'static</span>,</span><br><span class="line">    {</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这里的 <code>FnOnce</code> 表示我们希望这个闭包只需要被执行一次，紧跟着的 <code>()</code> 表示该闭包没有参数，后面没有跟 <code>-&gt;</code> 所以这个闭包也没有返回值。</p>
+<p>我们的 <code>new</code> 函数要干的第一件事情是，创建一些线程并存起来：</p>
+<figure class="highlight rust"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">use</span> std::thread;</span><br><span class="line"></span><br><span class="line"><span class="keyword">pub</span> <span class="keyword">struct</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line"> threads: <span class="type">Vec</span>&lt;thread::JoinHandle&lt;()&gt;&gt;,</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line"> <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">new</span>(size: <span class="type">usize</span>) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> {</span><br><span class="line">  <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">threads</span> = <span class="type">Vec</span>::<span class="title function_ invoke__">with_capactiy</span>(size);</span><br><span class="line">  <span class="keyword">for</span> <span class="variable">_</span> <span class="keyword">in</span> <span class="number">0</span>..size {</span><br><span class="line">   <span class="comment">// 创建线程并存储</span></span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">Self</span> { threads }</span><br><span class="line"> }</span><br><span class="line"></span><br><span class="line"> <span class="comment">// ...</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>创建线程的方式是使用 <code>thread::spawn</code>，但是它会立刻开始执行传入的任务。但是在这里，我们希望的应该是 “创建线程但暂时不执行”。为此，我们可以创建一个中介性质的对象 <code>Worker</code>：</p>
+<figure class="highlight rust"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Worker</span> {</span><br><span class="line"> id: <span class="type">usize</span>,</span><br><span class="line"> thread: thread::JoinHandle&lt;()&gt;,</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">Worker</span> {</span><br><span class="line"> <span class="keyword">fn</span> <span class="title function_">new</span>(id: <span class="type">usize</span>) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> {</span><br><span class="line">  <span class="comment">// 从任务列表中取出一个任务</span></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 创建一个线程，以执行这个任务</span></span><br><span class="line">  <span class="keyword">let</span> <span class="variable">thread</span> = thread::<span class="title function_ invoke__">spawn</span>(|| {</span><br><span class="line">   <span class="comment">// ...</span></span><br><span class="line">  });</span><br><span class="line"></span><br><span class="line">  <span class="keyword">Self</span> { id, thread }</span><br><span class="line"> }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后，就可以改一下上面线程池的声明：</p>
+<figure class="highlight rust"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">pub</span> <span class="keyword">struct</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line"> workers: <span class="type">Vec</span>&lt;Worker&gt;,</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line"> <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">new</span>(size: <span class="type">usize</span>) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> {</span><br><span class="line">  <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">workers</span> = <span class="type">Vec</span>::<span class="title function_ invoke__">with_capactiy</span>(size);</span><br><span class="line">  <span class="keyword">for</span> <span class="variable">id</span> <span class="keyword">in</span> <span class="number">0</span>..size {</span><br><span class="line">   workers.<span class="title function_ invoke__">push</span>(Worker::<span class="title function_ invoke__">new</span>(id));</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">Self</span> { workers }</span><br><span class="line"> }</span><br><span class="line"></span><br><span class="line"> <span class="comment">// ...</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>ThreadPool::new</code> 的下一步任务是将传递来的任务分配给刚刚创建好的线程执行。如何实现呢？可以使用 Channel。可以让 <code>ThreadPool</code> 持有发送端，由它负责将任务发出去；而让 <code>Worker</code> 持有接收端，它接收发来的任务并将它们分配到具体的线程中执行。</p>
+<p>但是，现在存在一个问题，<code>mpsc</code> 是 Multiple Producers Single Consumer，但是这里的情况是很多 <code>Worker</code> 希望从发送端接受消息，是 Multiple Consumers。怎么办呢？答案是使用 <code>Arc&lt;Mutex&lt;_&gt;&gt;</code> 。这样，多个 <code>Worker</code>s 都可以持有 <code>receiver</code>（通过 <code>Arc</code>），但最后一次只有一个 <code>Worker</code> 能实际从这个 <code>receiver</code> 中拿到消息 / 拿到需要执行的任务（通过 <code>Mutex</code>）：</p>
+<figure class="highlight rust"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">use</span> std::{</span><br><span class="line"> sync::{mpsc, Arc, Mutex},</span><br><span class="line"> thread,</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line"> <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">new</span>(size: <span class="type">usize</span>) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> {</span><br><span class="line">  <span class="keyword">let</span> (sender, receiver) = mpsc::<span class="title function_ invoke__">channel</span>();</span><br><span class="line">  <span class="keyword">let</span> <span class="variable">receiver</span> = Arc::<span class="title function_ invoke__">new</span>(Mutex::<span class="title function_ invoke__">new</span>(receiver));</span><br><span class="line">  <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">workers</span> = <span class="type">Vec</span>::<span class="title function_ invoke__">with_capacity</span>(size);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> <span class="variable">id</span> <span class="keyword">in</span> <span class="number">0</span>..size {</span><br><span class="line">   workers.<span class="title function_ invoke__">push</span>(Worker::<span class="title function_ invoke__">new</span>(id, Arc::<span class="title function_ invoke__">clone</span>(&amp;receiver)));</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">Self</span> { workers, sender }</span><br><span class="line"> }</span><br><span class="line"></span><br><span class="line"> <span class="comment">// ...</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">Worker</span> {</span><br><span class="line"> <span class="keyword">fn</span> <span class="title function_">new</span>(id: <span class="type">usize</span>, receiver: Arc&lt;Mutex&lt;mpsc::Receiver&lt;Job&gt;&gt;&gt;) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> {</span><br><span class="line">  <span class="comment">// 从任务列表中取出一个任务（使用 `receiver`）</span></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 创建一个线程，以执行这个任务</span></span><br><span class="line">  <span class="keyword">let</span> <span class="variable">thread</span> = thread::<span class="title function_ invoke__">spawn</span>(|| {</span><br><span class="line">   <span class="comment">// ...</span></span><br><span class="line">  });</span><br><span class="line"></span><br><span class="line">  <span class="keyword">Self</span> { id, thread }</span><br><span class="line"> }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>接下来就是具体的发送任务和接受任务并执行了。首先需要确定的是，用什么类型来表示上面的 任务 <code>Job</code> 呢？答案是：</p>
+<figure class="highlight rust"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> <span class="title class_">Job</span> = <span class="type">Box</span>&lt;<span class="keyword">dyn</span> <span class="title function_ invoke__">FnOnce</span>() + <span class="built_in">Send</span> + <span class="symbol">'static</span>&gt;;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后就可以发送和接收任务了。注意 <code>recv</code> 的调用是阻塞的：</p>
+<figure class="highlight rust"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">impl</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line"> <span class="comment">// ...</span></span><br><span class="line"> <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">execute</span>&lt;F&gt;(&amp;<span class="keyword">self</span>, f: F)</span><br><span class="line">    <span class="keyword">where</span></span><br><span class="line">        F: <span class="title function_ invoke__">FnOnce</span>() + <span class="built_in">Send</span> + <span class="symbol">'static</span>,</span><br><span class="line">    {</span><br><span class="line">  <span class="keyword">let</span> <span class="variable">job</span> = <span class="type">Box</span>::<span class="title function_ invoke__">new</span>(f);</span><br><span class="line">  <span class="keyword">self</span>.sender.<span class="title function_ invoke__">send</span>(job).<span class="title function_ invoke__">unwrap</span>();</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">Worker</span> {</span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">new</span>(id: <span class="type">usize</span>, receiver: Arc&lt;Mutex&lt;mpsc::Receiver&lt;Job&gt;&gt;&gt;) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> {</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">thread</span> = thread::<span class="title function_ invoke__">spawn</span>(<span class="keyword">move</span> || <span class="keyword">loop</span> {</span><br><span class="line">            <span class="keyword">let</span> <span class="variable">job</span> = receiver.<span class="title function_ invoke__">lock</span>().<span class="title function_ invoke__">unwrap</span>().<span class="title function_ invoke__">recv</span>().<span class="title function_ invoke__">unwrap</span>();</span><br><span class="line">            <span class="built_in">println!</span>(<span class="string">"Worker {id} got a job; executing."</span>);</span><br><span class="line">            <span class="title function_ invoke__">job</span>();</span><br><span class="line">        });</span><br><span class="line"></span><br><span class="line">        <span class="keyword">Self</span> { id, thread }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>注意这里 ** 不能用 <code>while let</code>**。主要原因是 <code>Mutex</code> 没有显式的 "unlock"，如果使用 <code>while let</code>，那么必须等到整个循环结束锁才会被释放。而像这里的使用 <code>let job = ...;</code>，中间的临时变量会在 <code>let</code> 结束时就被 <code>drop</code>，锁可以立刻被释放。</p>
+<p>最后一步是为我们实现的这个简单的线程池实现 <code>Drop</code>，主要是等待任务结束并回收资源。但这样是不行的：</p>
+<figure class="highlight rust"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// error</span></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">Drop</span> <span class="keyword">for</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">drop</span>(&amp;<span class="keyword">mut</span> <span class="keyword">self</span>) {</span><br><span class="line">        <span class="keyword">for</span> <span class="variable">worker</span> <span class="keyword">in</span> &amp;<span class="keyword">mut</span> <span class="keyword">self</span>.workers {</span><br><span class="line">            <span class="built_in">println!</span>(<span class="string">"Shutting down worker {}"</span>, worker.id);</span><br><span class="line">            worker.thread.<span class="title function_ invoke__">join</span>().<span class="title function_ invoke__">unwrap</span>();</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>报错原因是所有权。</p>
+<p>可行的解决方案是使用 <code>Option</code> 类型，并使用 <code>take</code> 方法拿走内部值的所有权。类似地，对 <code>sender</code> 也需要做这样的处理。最后，当 <code>sender</code> 被关闭，对应的 <code>receiver</code> 会收到一个错误，可以根据是否接收到错误，来判断 Channel 是否需要被关闭，进而判断线程是否需要结束了：</p>
+<figure class="highlight rust"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">use</span> std::{</span><br><span class="line">    sync::{mpsc, Arc, Mutex},</span><br><span class="line">    thread,</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="keyword">pub</span> <span class="keyword">struct</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line">    workers: <span class="type">Vec</span>&lt;Worker&gt;,</span><br><span class="line">    sender: <span class="type">Option</span>&lt;mpsc::Sender&lt;Job&gt;&gt;,</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> <span class="title class_">Job</span> = <span class="type">Box</span>&lt;<span class="keyword">dyn</span> <span class="title function_ invoke__">FnOnce</span>() + <span class="built_in">Send</span> + <span class="symbol">'static</span>&gt;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line">    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">new</span>(size: <span class="type">usize</span>) <span class="punctuation">-&gt;</span> ThreadPool {</span><br><span class="line">        <span class="keyword">let</span> (sender, receiver) = mpsc::<span class="title function_ invoke__">channel</span>();</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">receiver</span> = Arc::<span class="title function_ invoke__">new</span>(Mutex::<span class="title function_ invoke__">new</span>(receiver));</span><br><span class="line">        <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">workers</span> = <span class="type">Vec</span>::<span class="title function_ invoke__">with_capacity</span>(size);</span><br><span class="line">        <span class="keyword">for</span> <span class="variable">id</span> <span class="keyword">in</span> <span class="number">0</span>..size {</span><br><span class="line">            workers.<span class="title function_ invoke__">push</span>(Worker::<span class="title function_ invoke__">new</span>(id, Arc::<span class="title function_ invoke__">clone</span>(&amp;receiver)));</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        ThreadPool {</span><br><span class="line">            workers,</span><br><span class="line">            sender: <span class="title function_ invoke__">Some</span>(sender),</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">execute</span>&lt;F&gt;(&amp;<span class="keyword">self</span>, f: F)</span><br><span class="line">    <span class="keyword">where</span></span><br><span class="line">        F: <span class="title function_ invoke__">FnOnce</span>() + <span class="built_in">Send</span> + <span class="symbol">'static</span>,</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">job</span> = <span class="type">Box</span>::<span class="title function_ invoke__">new</span>(f);</span><br><span class="line">        <span class="keyword">self</span>.sender.<span class="title function_ invoke__">as_ref</span>().<span class="title function_ invoke__">unwrap</span>().<span class="title function_ invoke__">send</span>(job).<span class="title function_ invoke__">unwrap</span>();</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">Drop</span> <span class="keyword">for</span> <span class="title class_">ThreadPool</span> {</span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">drop</span>(&amp;<span class="keyword">mut</span> <span class="keyword">self</span>) {</span><br><span class="line">        <span class="title function_ invoke__">drop</span>(<span class="keyword">self</span>.sender.<span class="title function_ invoke__">take</span>());</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> <span class="variable">worker</span> <span class="keyword">in</span> &amp;<span class="keyword">mut</span> <span class="keyword">self</span>.workers {</span><br><span class="line">            <span class="built_in">println!</span>(<span class="string">"Shutting down worker {}"</span>, worker.id);</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">let</span> <span class="variable">Some</span>(thread) = worker.thread.<span class="title function_ invoke__">take</span>() {</span><br><span class="line">                thread.<span class="title function_ invoke__">join</span>().<span class="title function_ invoke__">unwrap</span>();</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Worker</span> {</span><br><span class="line">    id: <span class="type">usize</span>,</span><br><span class="line">    thread: <span class="type">Option</span>&lt;thread::JoinHandle&lt;()&gt;&gt;,</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">Worker</span> {</span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">new</span>(id: <span class="type">usize</span>, receiver: Arc&lt;Mutex&lt;mpsc::Receiver&lt;Job&gt;&gt;&gt;) <span class="punctuation">-&gt;</span> Worker {</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">thread</span> = thread::<span class="title function_ invoke__">spawn</span>(<span class="keyword">move</span> || <span class="keyword">loop</span> {</span><br><span class="line">            <span class="keyword">let</span> <span class="variable">message</span> = receiver.<span class="title function_ invoke__">lock</span>().<span class="title function_ invoke__">unwrap</span>().<span class="title function_ invoke__">recv</span>();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">match</span> message {</span><br><span class="line">                <span class="title function_ invoke__">Ok</span>(job) =&gt; {</span><br><span class="line">                    <span class="built_in">println!</span>(<span class="string">"Worker {id} got a job; executing."</span>);</span><br><span class="line"></span><br><span class="line">                    <span class="title function_ invoke__">job</span>();</span><br><span class="line">                }</span><br><span class="line">                <span class="title function_ invoke__">Err</span>(_) =&gt; {</span><br><span class="line">                    <span class="built_in">println!</span>(<span class="string">"Worker {id} disconnected; shutting down."</span>);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line">        });</span><br><span class="line"></span><br><span class="line">        Worker {</span><br><span class="line">            id,</span><br><span class="line">            thread: <span class="title function_ invoke__">Some</span>(thread),</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>Rust</category>
+      </categories>
+      <tags>
+        <tag>Rust</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Simple Git Tutorial: Working With Remote Server</title>
+    <url>/posts/85390c91.html</url>
+    <content><![CDATA[<p>Use remote servers to work with collaborators better.</p>
+<span id="more"></span>
+
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># connects to a remote server. Usually &lt;server_name&gt; is `origin`</span></span><br><span class="line">git remote add &lt;server_name&gt; &lt;server&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># removes a specific remote server</span></span><br><span class="line">git remote remove &lt;server_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># shows all the remote servers</span></span><br><span class="line">git remote -v</span><br><span class="line"></span><br><span class="line"><span class="comment"># renames</span></span><br><span class="line">git remote rename &lt;old_server_name&gt; &lt;new_server_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># shows some info about a specific remote server</span></span><br><span class="line">git remote show &lt;server_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># pushes files</span></span><br><span class="line">git push -u &lt;server_name&gt; &lt;branch&gt; <span class="comment"># or `git push --set-upstream &lt;server_name&gt; &lt;branch&gt;`</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># fetches files</span></span><br><span class="line">git fetch  <span class="comment"># from the default remote upstream repo</span></span><br><span class="line">git fetch &lt;server_name&gt;  <span class="comment"># from a specific remote upstream repo</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># combines the `fetch` and `merge` together</span></span><br><span class="line">git pull</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Tools</category>
+        <category>vcs</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>Version Control</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Simple Git Tutorial: Branching and Merging</title>
     <url>/posts/aa010e90.html</url>
     <content><![CDATA[<p>Git's powerful branching and merging capabilities can help you deal with parallel collaborative development processes. Let's take a look.</p>
@@ -8286,12 +8314,87 @@ graph TB
       </tags>
   </entry>
   <entry>
-    <title>Simple Git Tutorial: Working With Remote Server</title>
-    <url>/posts/85390c91.html</url>
-    <content><![CDATA[<p>Use remote servers to work with collaborators better.</p>
+    <title>Simple GitHub Tutorial</title>
+    <url>/posts/1cce885f.html</url>
+    <content><![CDATA[<p>I have posted a tutorial of Git (See <em><a href="/posts/9363e311.html">Simple Git Tutorial</a></em>). But it mixed up using Git and using GitHub together. I post this new tutorial to draw a line and make things clear.</p>
 <span id="more"></span>
 
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># connects to a remote server. Usually &lt;server_name&gt; is `origin`</span></span><br><span class="line">git remote add &lt;server_name&gt; &lt;server&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># removes a specific remote server</span></span><br><span class="line">git remote remove &lt;server_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># shows all the remote servers</span></span><br><span class="line">git remote -v</span><br><span class="line"></span><br><span class="line"><span class="comment"># renames</span></span><br><span class="line">git remote rename &lt;old_server_name&gt; &lt;new_server_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># shows some info about a specific remote server</span></span><br><span class="line">git remote show &lt;server_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># pushes files</span></span><br><span class="line">git push -u &lt;server_name&gt; &lt;branch&gt; <span class="comment"># or `git push --set-upstream &lt;server_name&gt; &lt;branch&gt;`</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># fetches files</span></span><br><span class="line">git fetch  <span class="comment"># from the default remote upstream repo</span></span><br><span class="line">git fetch &lt;server_name&gt;  <span class="comment"># from a specific remote upstream repo</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># combines the `fetch` and `merge` together</span></span><br><span class="line">git pull</span><br></pre></td></tr></tbody></table></figure>
+<blockquote>
+<p>Notice: If you run into any problems, it's highly recommended that you check out <a href="https://docs.github.com/">Github Docs</a>, or Google it. If you still can't solve it, you can comment below this post.</p>
+</blockquote>
+<h2 id="Creating-a-Github-Account"><a href="#Creating-a-Github-Account" class="headerlink" title="Creating a Github Account"></a>Creating a Github Account</h2><p>See:</p>
+<ul>
+<li><em><a href="https://docs.github.com/en/get-started/signing-up-for-GitHub/signing-up-for-a-new-GitHub-accountt">Signing up for a new GitHub account - GitHub Docs</a></em></li>
+</ul>
+<h2 id="Checking-your-Local-Git-Config"><a href="#Checking-your-Local-Git-Config" class="headerlink" title="Checking your Local Git Config"></a>Checking your Local Git Config</h2><p>Make sure that you have told Git your name and email. That is say, you should have run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">"&lt;your_name&gt;"</span></span><br><span class="line">git config --global user.email <span class="string">"&lt;your_email@example.com&gt;"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>Also see:</p>
+<ul>
+<li><em><a href="/posts/9363e311.html#Basic-Configuration">Basic Configuration - Simple Git Tutorial</a></em></li>
+<li><em><a href="https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git">Setting your username in Git - GitHub Docs</a></em></li>
+<li><em><a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address">Setting your commit email address - GitHub Docs</a></em></li>
+</ul>
+<h2 id="Connecting-to-GitHub-with-SSH"><a href="#Connecting-to-GitHub-with-SSH" class="headerlink" title="Connecting to GitHub with SSH"></a>Connecting to GitHub with SSH</h2><p>You are recommended to connecting to GitHub with SSH (instead of HTTP/HTTPS).</p>
+<p>First, generate a new SSH key using new ED25519 algorithm:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">"&lt;your_email@example.com&gt;"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>Then, Keep on repeating pressing <code>Enter</code> until your prompt appear again.</p>
+<p>Finally, add your public key to GitHub:</p>
+<ol>
+<li>Go to <em><a href="https://github.com/settings/keys">SSH and GPG keys - GitHub</a></em>.</li>
+<li>Click the green <code>New SSH key</code> button at the top right of the page.</li>
+<li>Fill out the form, where <code>key</code> is the content of <code>~/.ssh/id_ed25519.pub</code> (This file is generated by the <code>ssh-keygen</code> command above. You may run <code>cat ~/.ssh/id_ed25519.pub</code> on Linux or Mac or run <code>notepad ~/.ssh/id_ed25519.pub</code> on Windows to check its content).</li>
+<li>Submit the form by clicking the green <code>Add SSH key</code> button.</li>
+</ol>
+<blockquote>
+<p>The postfix <code>.pub</code> indicates that the <code>id_ed25519.pub</code> file is a public key. The <code>ssh-keygen</code> command above also generates a private key file <code>id_ed25519</code> (without the <code>.pub</code> postfix).</p>
+</blockquote>
+<p>Also see:</p>
+<ul>
+<li><em><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">Connecting to GitHub with SSH - GitHub Docs</a></em></li>
+</ul>
+<h2 id="Using-SSH-over-the-HTTPS-port-Optional-but-Recommended"><a href="#Using-SSH-over-the-HTTPS-port-Optional-but-Recommended" class="headerlink" title="Using SSH over the HTTPS port (Optional but Recommended)"></a>Using SSH over the HTTPS port (Optional but Recommended)</h2><p>Due to the special network environment in China, you may often need to use proxy service to get a better browsing experience. Generally, when you enable the <code>System Proxy</code> option, only the traffic on port 80/443 (corresponding to HTTP/HTTPS) will go through the proxy server, while the traffic on SSH's default port 22 will not. With the following settings, you can force SSH traffic to go to port 443.</p>
+<p>To test if SSH over the HTTPS port is possible, run:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">ssh -T -p 443 git@ssh.github.com</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Type <code>yes</code> if you see some info like:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">Are you sure you want to continue connecting (yes/no/[fingerprint])?</span><br></pre></td></tr></tbody></table></figure>
+
+<p>If you receive response like below, it means it's OK:</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">Hi USERNAME! You've successfully authenticated, but GitHub does not</span><br><span class="line">provide shell access.</span><br></pre></td></tr></tbody></table></figure>
+
+<p>You can now override your SSH settings to force any connection to GitHub.com to run through that server and port. Edit <code>~/.ssh/config</code> and add this section:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">    Hostname ssh.github.com</span><br><span class="line">    Port 443</span><br><span class="line">    User git</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Now your usual command like:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com/YOUR-USERNAME/YOUR-REPOSITORY.git</span><br></pre></td></tr></tbody></table></figure>
+
+<p>is equivalent to:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> ssh://git@ssh.github.com:443/YOUR-USERNAME/YOUR-REPOSITORY.git</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Also see:</p>
+<ul>
+<li><em><a href="https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port">Using SSH over the HTTPS port - GitHub Docs</a></em></li>
+</ul>
+<h2 id="GitHub-Cli"><a href="#GitHub-Cli" class="headerlink" title="GitHub Cli"></a>GitHub Cli</h2><p>TODO</p>
+<h2 id="Basic-Usages"><a href="#Basic-Usages" class="headerlink" title="Basic Usages"></a>Basic Usages</h2><h3 id="Cloning"><a href="#Cloning" class="headerlink" title="Cloning"></a>Cloning</h3><p>You can use <code>git clone</code> to clone an existing repo from GitHub. The simplest form looks like:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> &lt;url&gt; [&lt;local_directory_name&gt;]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>where center brackets mean that <code>&lt;local_directory_name&gt;</code> is optional.</p>
+<blockquote>
+<p>It's no longer recommended to use http/https url to clone. Using url like <code>git@github.com:YOUR-NAME/YOUR-REPOSITORY.git</code>!</p>
+</blockquote>
+<p>If you want to specify a branch when cloning, you can use <code>-b</code> option:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> -b &lt;branch&gt; &lt;url&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>If you don't want to include all commits, you can use the <code>--depth</code> option. This is helpful when cloning a large repo (you don't need so many commits before actually).</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> &lt;url&gt; --depth=1</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Next-Steps"><a href="#Next-Steps" class="headerlink" title="Next Steps"></a>Next Steps</h2><p>TODO</p>
+<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ul>
+<li><em><a href="https://docs.github.com/">GitHub docs</a></em></li>
+</ul>
 ]]></content>
       <categories>
         <category>CS</category>
@@ -8299,8 +8402,8 @@ graph TB
         <category>vcs</category>
       </categories>
       <tags>
-        <tag>Git</tag>
         <tag>Version Control</tag>
+        <tag>GitHub</tag>
       </tags>
   </entry>
   <entry>
@@ -8463,99 +8566,6 @@ graph TB
         <tag>Version Control</tag>
         <tag>GitHub</tag>
         <tag>VCS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Simple GitHub Tutorial</title>
-    <url>/posts/1cce885f.html</url>
-    <content><![CDATA[<p>I have posted a tutorial of Git (See <em><a href="/posts/9363e311.html">Simple Git Tutorial</a></em>). But it mixed up using Git and using GitHub together. I post this new tutorial to draw a line and make things clear.</p>
-<span id="more"></span>
-
-<blockquote>
-<p>Notice: If you run into any problems, it's highly recommended that you check out <a href="https://docs.github.com/">Github Docs</a>, or Google it. If you still can't solve it, you can comment below this post.</p>
-</blockquote>
-<h2 id="Creating-a-Github-Account"><a href="#Creating-a-Github-Account" class="headerlink" title="Creating a Github Account"></a>Creating a Github Account</h2><p>See:</p>
-<ul>
-<li><em><a href="https://docs.github.com/en/get-started/signing-up-for-GitHub/signing-up-for-a-new-GitHub-accountt">Signing up for a new GitHub account - GitHub Docs</a></em></li>
-</ul>
-<h2 id="Checking-your-Local-Git-Config"><a href="#Checking-your-Local-Git-Config" class="headerlink" title="Checking your Local Git Config"></a>Checking your Local Git Config</h2><p>Make sure that you have told Git your name and email. That is say, you should have run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">"&lt;your_name&gt;"</span></span><br><span class="line">git config --global user.email <span class="string">"&lt;your_email@example.com&gt;"</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>Also see:</p>
-<ul>
-<li><em><a href="/posts/9363e311.html#Basic-Configuration">Basic Configuration - Simple Git Tutorial</a></em></li>
-<li><em><a href="https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git">Setting your username in Git - GitHub Docs</a></em></li>
-<li><em><a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address">Setting your commit email address - GitHub Docs</a></em></li>
-</ul>
-<h2 id="Connecting-to-GitHub-with-SSH"><a href="#Connecting-to-GitHub-with-SSH" class="headerlink" title="Connecting to GitHub with SSH"></a>Connecting to GitHub with SSH</h2><p>You are recommended to connecting to GitHub with SSH (instead of HTTP/HTTPS).</p>
-<p>First, generate a new SSH key using new ED25519 algorithm:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">"&lt;your_email@example.com&gt;"</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>Then, Keep on repeating pressing <code>Enter</code> until your prompt appear again.</p>
-<p>Finally, add your public key to GitHub:</p>
-<ol>
-<li>Go to <em><a href="https://github.com/settings/keys">SSH and GPG keys - GitHub</a></em>.</li>
-<li>Click the green <code>New SSH key</code> button at the top right of the page.</li>
-<li>Fill out the form, where <code>key</code> is the content of <code>~/.ssh/id_ed25519.pub</code> (This file is generated by the <code>ssh-keygen</code> command above. You may run <code>cat ~/.ssh/id_ed25519.pub</code> on Linux or Mac or run <code>notepad ~/.ssh/id_ed25519.pub</code> on Windows to check its content).</li>
-<li>Submit the form by clicking the green <code>Add SSH key</code> button.</li>
-</ol>
-<blockquote>
-<p>The postfix <code>.pub</code> indicates that the <code>id_ed25519.pub</code> file is a public key. The <code>ssh-keygen</code> command above also generates a private key file <code>id_ed25519</code> (without the <code>.pub</code> postfix).</p>
-</blockquote>
-<p>Also see:</p>
-<ul>
-<li><em><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">Connecting to GitHub with SSH - GitHub Docs</a></em></li>
-</ul>
-<h2 id="Using-SSH-over-the-HTTPS-port-Optional-but-Recommended"><a href="#Using-SSH-over-the-HTTPS-port-Optional-but-Recommended" class="headerlink" title="Using SSH over the HTTPS port (Optional but Recommended)"></a>Using SSH over the HTTPS port (Optional but Recommended)</h2><p>Due to the special network environment in China, you may often need to use proxy service to get a better browsing experience. Generally, when you enable the <code>System Proxy</code> option, only the traffic on port 80/443 (corresponding to HTTP/HTTPS) will go through the proxy server, while the traffic on SSH's default port 22 will not. With the following settings, you can force SSH traffic to go to port 443.</p>
-<p>To test if SSH over the HTTPS port is possible, run:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">ssh -T -p 443 git@ssh.github.com</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Type <code>yes</code> if you see some info like:</p>
-<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">Are you sure you want to continue connecting (yes/no/[fingerprint])?</span><br></pre></td></tr></tbody></table></figure>
-
-<p>If you receive response like below, it means it's OK:</p>
-<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">Hi USERNAME! You've successfully authenticated, but GitHub does not</span><br><span class="line">provide shell access.</span><br></pre></td></tr></tbody></table></figure>
-
-<p>You can now override your SSH settings to force any connection to GitHub.com to run through that server and port. Edit <code>~/.ssh/config</code> and add this section:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">    Hostname ssh.github.com</span><br><span class="line">    Port 443</span><br><span class="line">    User git</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Now your usual command like:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com/YOUR-USERNAME/YOUR-REPOSITORY.git</span><br></pre></td></tr></tbody></table></figure>
-
-<p>is equivalent to:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> ssh://git@ssh.github.com:443/YOUR-USERNAME/YOUR-REPOSITORY.git</span><br></pre></td></tr></tbody></table></figure>
-
-<p>Also see:</p>
-<ul>
-<li><em><a href="https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port">Using SSH over the HTTPS port - GitHub Docs</a></em></li>
-</ul>
-<h2 id="GitHub-Cli"><a href="#GitHub-Cli" class="headerlink" title="GitHub Cli"></a>GitHub Cli</h2><p>TODO</p>
-<h2 id="Basic-Usages"><a href="#Basic-Usages" class="headerlink" title="Basic Usages"></a>Basic Usages</h2><h3 id="Cloning"><a href="#Cloning" class="headerlink" title="Cloning"></a>Cloning</h3><p>You can use <code>git clone</code> to clone an existing repo from GitHub. The simplest form looks like:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> &lt;url&gt; [&lt;local_directory_name&gt;]</span><br></pre></td></tr></tbody></table></figure>
-
-<p>where center brackets mean that <code>&lt;local_directory_name&gt;</code> is optional.</p>
-<blockquote>
-<p>It's no longer recommended to use http/https url to clone. Using url like <code>git@github.com:YOUR-NAME/YOUR-REPOSITORY.git</code>!</p>
-</blockquote>
-<p>If you want to specify a branch when cloning, you can use <code>-b</code> option:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> -b &lt;branch&gt; &lt;url&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>If you don't want to include all commits, you can use the <code>--depth</code> option. This is helpful when cloning a large repo (you don't need so many commits before actually).</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> &lt;url&gt; --depth=1</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="Next-Steps"><a href="#Next-Steps" class="headerlink" title="Next Steps"></a>Next Steps</h2><p>TODO</p>
-<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ul>
-<li><em><a href="https://docs.github.com/">GitHub docs</a></em></li>
-</ul>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Tools</category>
-        <category>vcs</category>
-      </categories>
-      <tags>
-        <tag>Version Control</tag>
-        <tag>GitHub</tag>
       </tags>
   </entry>
 </search>

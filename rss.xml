@@ -23,6 +23,10 @@
       
       
       
+      <category domain="https://fishg.top/categories/cs/">CS</category>
+      
+      <category domain="https://fishg.top/categories/cs/web/">Web</category>
+      
       
       <category domain="https://fishg.top/tags/web/">Web</category>
       
@@ -43,6 +47,12 @@
       
       
       
+      
+      <category domain="https://fishg.top/categories/cs/">CS</category>
+      
+      <category domain="https://fishg.top/categories/cs/languages/">Languages</category>
+      
+      <category domain="https://fishg.top/categories/cs/languages/rust/">Rust</category>
       
       
       <category domain="https://fishg.top/tags/rust/">Rust</category>
