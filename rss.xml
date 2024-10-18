@@ -738,9 +738,9 @@
       
       <category domain="https://blocklune.cc/tags/machine-learning-specialization/">Machine Learning Specialization</category>
       
-      <category domain="https://blocklune.cc/tags/python/">Python</category>
-      
       <category domain="https://blocklune.cc/tags/numpy/">NumPy</category>
+      
+      <category domain="https://blocklune.cc/tags/python/">Python</category>
       
       <category domain="https://blocklune.cc/tags/vectorization/">Vectorization</category>
       
@@ -1552,12 +1552,12 @@
     </item>
     
     <item>
-      <title>My Vim Config</title>
+      <title>我的 Vim (以及 NeoVim) 配置</title>
       <link>https://blocklune.cc/posts/96f7ff9f.html</link>
       <guid>https://blocklune.cc/posts/96f7ff9f.html</guid>
       <pubDate>Sat, 22 Apr 2023 02:27:09 GMT</pubDate>
       
-      <description>&lt;p&gt;There are a huge amount of options in Vim. It enables us to customize our own Vim as our wishes. Here&#39;s my config.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Vim 可以说是一个老古董了，但是在命令行文本编辑器这一领域，即使到目前，它说第二也没人能说第一。在这篇文章中，我们会进行一些简单的配置，让 Vim 更加好用。并且，我们还会谈到 NeoVim 相关的内容，通过安装和配置 LazyVim，来让 NeoVim 变为一个现代化的、全功能的 IDE。&lt;/p&gt;</description>
       
       
       
