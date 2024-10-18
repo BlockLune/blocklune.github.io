@@ -4331,7 +4331,7 @@ graph TB
 <li><a href="https://dominikrys.com/posts/zsh-in-git-bash-on-windows/">Installing Zsh (and oh-my-zsh) in Windows Git Bash</a></li>
 <li><a href="https://zhuanlan.zhihu.com/p/625583037">Windows 安装 Zsh 终端 - 知乎</a></li>
 </ul>
-<p>I haven't yet found a good way to install <code>fish</code> on Windows. If you know how to do that, please let me know by leaving a comment or sending me an <a href="mailto:blocklune@gmail.com">email</a>.</p>
+<p>I haven't yet found a good way to install <code>fish</code> on Windows. If you know how to do that, please let me know by leaving a comment or sending me an <a href="mailto:i@blocklune.cc">email</a>.</p>
 <div class="note danger"><p>Another thing you may need to attention is the character set used on your Windows platform. If you are a Chinese CS student using Chinese Windows, the default character set of your system is usually not UTF-8. So you may encounter a <a href="https://en.wikipedia.org/wiki/Mojibake">mojibake</a> issue. You can add the lines to the very head of your <code>~/.zshrc</code> which enables UTF-8 in your terminal to fix this issue:</p>
 <figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line"># Set Windows code page to 65001 (UTF-8).</span><br><span class="line">if [[ "$OSTYPE" == "msys" ]]; then</span><br><span class="line">    chcp.com 65001 &amp;&gt; /dev/null</span><br><span class="line">fi</span><br></pre></td></tr></tbody></table></figure>
 </div>
