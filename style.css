@@ -1,0 +1,12 @@
+strong {
+  color: #ff79c6;
+  font-weight: bold;
+}
+
+a code {
+  background-color: #6272a4;
+}
+
+a code:hover {
+  background-color: #44475a;
+}
