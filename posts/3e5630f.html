@@ -24,7 +24,7 @@
 
     <meta name="description" content="作为计算机爱好者，我们每天会花大量时间和 Shell 打交道，一个配置得足够好的 Shell 会让你觉得更加得心应手。这篇博文记录了我的 Zsh 配置。本来，这篇文章只是作为我自己的笔记，所以写的没比较随意；同时出于练习英语写作的目的，写成了英文。但后来发现我的朋友们也会参考，所以我打算将其重置为中文的，并修改完善了一些内容。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的 Zsh 配置">
+<meta property="og:title" content="Zsh 简明配置指南">
 <meta property="og:url" content="https://blocklune.cc/posts/3e5630f.html">
 <meta property="og:site_name" content="Fish Pond">
 <meta property="og:description" content="作为计算机爱好者，我们每天会花大量时间和 Shell 打交道，一个配置得足够好的 Shell 会让你觉得更加得心应手。这篇博文记录了我的 Zsh 配置。本来，这篇文章只是作为我自己的笔记，所以写的没比较随意；同时出于练习英语写作的目的，写成了英文。但后来发现我的朋友们也会参考，所以我打算将其重置为中文的，并修改完善了一些内容。">
@@ -41,10 +41,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blocklune.cc/posts/3e5630f.html","path":"posts/3e5630f.html","title":"我的 Zsh 配置"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blocklune.cc/posts/3e5630f.html","path":"posts/3e5630f.html","title":"Zsh 简明配置指南"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>我的 Zsh 配置 | Fish Pond</title>
+<title>Zsh 简明配置指南 | Fish Pond</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XQDPHGPHDL"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-XQDPHGPHDL","only_pageview":false,"measure_protocol_api_secret":null}</script>
@@ -149,7 +149,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8%E5%BC%80%E5%A7%8B%E4%B9%8B%E5%89%8D"><span class="nav-number">1.</span> <span class="nav-text">在开始之前</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Zsh"><span class="nav-number">2.</span> <span class="nav-text">安装 Zsh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%A1%86%E6%9E%B6%E4%B8%8E%E4%B8%BB%E9%A2%98"><span class="nav-number">3.</span> <span class="nav-text">配置框架与主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E4%BB%B6"><span class="nav-number">3.1.</span> <span class="nav-text">插件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%AB%E5%90%8D"><span class="nav-number">4.</span> <span class="nav-text">别名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%87%92%E5%8A%A0%E8%BD%BD"><span class="nav-number">5.</span> <span class="nav-text">懒加载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Q-A"><span class="nav-number">6.</span> <span class="nav-text">Q&amp;A</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E5%A4%9A%E8%B5%84%E6%BA%90"><span class="nav-number">7.</span> <span class="nav-text">更多资源</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8%E5%BC%80%E5%A7%8B%E4%B9%8B%E5%89%8D"><span class="nav-number">1.</span> <span class="nav-text">在开始之前</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E7%BB%88%E7%AB%AF%E6%A8%A1%E6%8B%9F%E5%99%A8"><span class="nav-number">2.</span> <span class="nav-text">选择终端模拟器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9-Nerd-Font"><span class="nav-number">3.</span> <span class="nav-text">选择 Nerd Font</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Zsh"><span class="nav-number">4.</span> <span class="nav-text">安装 Zsh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%A1%86%E6%9E%B6%E4%B8%8E%E4%B8%BB%E9%A2%98"><span class="nav-number">5.</span> <span class="nav-text">配置框架与主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E4%BB%B6"><span class="nav-number">5.1.</span> <span class="nav-text">插件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%AB%E5%90%8D"><span class="nav-number">6.</span> <span class="nav-text">别名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0"><span class="nav-number">7.</span> <span class="nav-text">自定义函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%87%92%E5%8A%A0%E8%BD%BD"><span class="nav-number">8.</span> <span class="nav-text">懒加载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E8%83%BD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">9.</span> <span class="nav-text">可能遇到的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E5%A4%9A%E8%B5%84%E6%BA%90"><span class="nav-number">10.</span> <span class="nav-text">更多资源</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -247,12 +247,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="我的 Zsh 配置 | Fish Pond">
+      <meta itemprop="name" content="Zsh 简明配置指南 | Fish Pond">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          我的 Zsh 配置
+          Zsh 简明配置指南
         </h1>
 
         <div class="post-meta-container">
@@ -297,7 +297,19 @@
 <li><strong>Shell</strong>：你可能听说过 Linux 内核，内核是操作系统的核心，而在这个 “核” 之外，存在一种名为 “壳” 的软件 —— Shell。简单而言 Shell 是用户与内核沟通的桥梁。它作为一个命令解释器，接受用户输入的命令，然后调用操作系统的功能来执行这些命令。最著名的 Shell 应该是 <code>bash</code>，它是几乎所有 Linux 的默认 Shell，类似地，Windows 平台的默认 Shell 是 <code>cmd</code> 和 Power Shell。我们这里要使用的 <code>zsh</code> 可以简单理解为 <code>bash</code> 的一个超集。它几乎兼容 <code>bash</code>，但提供了更高的配置自由度和更多的功能。</li>
 <li><strong>命令提示符（Prompt）</strong>：命令提示符指的是在终端输入命令前，光标跳动位置之前的输出的内容，它的具体内容由环境变量 <code>$PS1</code>（意为 Prompt String 1）控制。你可以在 <code>zsh</code> 中输入 <code>echo $PS1</code> 命令来查看你的当前 Prompt String。注意这里的 “命令提示符” 并不是指 Windows 的 <code>cmd</code>（尽管打开这个软件它的名字显示为命令提示符），那个更像是上面说的终端和 Shell 的结合体。</li>
 </ul>
-<p>本文将着眼于 Zsh 的配置，但我强烈建议你也去了解一下终端的配置。或者，更广地，可以看一下我的 <a href="/posts/183d7426.html">另一篇文章</a>，在那儿我较为综合地介绍了环境配置的方方面面。</p>
+<p>本文将着眼于 Zsh 的配置，但也会涉及到配置最基本的终端。如果你想了解更多关于环境配置方面的内容，也许也可以看看我的 <a href="/posts/183d7426.html">另一篇文章</a>。</p>
+<h2 id="选择终端模拟器"><a href="#选择终端模拟器" class="headerlink" title="选择终端模拟器"></a>选择终端模拟器</h2><p>在 macOS 平台，我选择的终端是 <a target="_blank" rel="noopener" href="https://iterm2.com/">iTerm2</a>。如果你使用 Homebrew，可以运行下面的命令来安装：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install --cask iterm2</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p><strong>记得配置镜像或代理！</strong>如果你选择配置代理，要记得仅仅开启系统代理是不够的。你得在你的代理软件中找到类似下面的命令（例如一键复制终端代理命令之类的按钮），并把它粘贴到你当前的终端窗口中执行：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890</span><br></pre></td></tr></tbody></table></figure>
+</blockquote>
+<p>或者你也可以选择 <a target="_blank" rel="noopener" href="https://alacritty.org/">Alacritty</a>，它是一个跨平台的高性能终端模拟器。我在 Windows 平台上使用它。</p>
+<p>可选地，你可以为你的终端配置一套配色主题以提升其美观度。我喜欢的 Dracula 主题为大量软件做了适配，它对于 iTerm2 和 Alacritty 的适配分别可以在 <a target="_blank" rel="noopener" href="https://draculatheme.com/iterm">这儿</a> 和 <a target="_blank" rel="noopener" href="https://draculatheme.com/alacritty">这儿</a> 找到。</p>
+<h2 id="选择-Nerd-Font"><a href="#选择-Nerd-Font" class="headerlink" title="选择 Nerd Font"></a>选择 Nerd Font</h2><p>Nerd Fonts 是一类带有图标的特殊字体，它和很多终端应用程序配合地很好，所以建议你在配置终端时将终端的默认字体更改为一款你喜欢的 Nerd Font。我使用的是 Fira Code Nerd Font，如果你是 macOS 平台并且使用 Homebrew，可以运行下面的命令来安装：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install --cask font-fira-code-nerd-font</span><br></pre></td></tr></tbody></table></figure>
+
 <h2 id="安装-Zsh"><a href="#安装-Zsh" class="headerlink" title="安装 Zsh"></a>安装 Zsh</h2><p>在 macOS 平台上，Zsh 是默认 Shell，直接打开终端就可以开始使用了。</p>
 <p>在 Linux 平台，你可以使用相应平台的包管理器来安装它，并使用 <code>chsh</code> 命令来将其设置为你的默认 Shell。假设你使用的包管理器是 <code>apt</code> ，你可以输入下面的命令来安装并设置 zsh 为你的默认 Shell：</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install zsh -y</span><br><span class="line">chsh -s $(<span class="built_in">which</span> zsh)</span><br></pre></td></tr></tbody></table></figure>
@@ -312,7 +324,7 @@
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">"<span class="subst">$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>"</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>安装成功的话，你就会发现你的 Prompt 已经变了。</p>
-<p>接着，可以安装一个主题。我使用的是 <a target="_blank" rel="noopener" href="https://github.com/romkatv/powerlevel10k">powerlevel10k</a>，它提供了一个一步一步的操作流程让你自定义一个你喜欢的命令提示符。运行下面的命令来安装它：</p>
+<p>接着，可以安装一个主题。我使用的是 <a target="_blank" rel="noopener" href="https://github.com/romkatv/powerlevel10k">powerlevel10k</a>，它提供了一个一步一步的操作流程让你自定义一个你喜欢的命令提示符（其中第一步操作流程就是安装一个它推荐的 Nerd Font，如果你上面配置终端时已经配过了，这里就不需要安装了）：</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --depth=1 https://github.com/romkatv/powerlevel10k.git <span class="variable">${ZSH_CUSTOM:-<span class="variable">$HOME</span>/.oh-my-zsh/custom}</span>/themes/powerlevel10k</span><br></pre></td></tr></tbody></table></figure>
 
 <p>然后打开 <code>~/.zshrc</code> 这个文件，找到 <code>ZSH_THEME</code> 开头的这一行并修改为：</p>
@@ -327,7 +339,7 @@
 </ul>
 <p>所以实际上 <code>~/.zshrc</code> 是在说你的家目录下的 <code>.zshrc</code> 这样一个文件。它是 Zsh 的（其中一个）配置文件。</p>
 </blockquote>
-<h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><p>Oh-my-zsh 提供了海量的插件以支持丰富的扩展功能 (查看 <a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins">列表</a>)。有的是默认安装的，有的则需要你手动下载并配置。必装的我认为有这三个：</p>
+<h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><p>Oh-my-zsh 提供了海量的插件以支持丰富的扩展功能 (查看 <a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins">插件列表</a>)。有的是默认安装的，有的则需要你手动下载并配置。必装的我认为有这三个：</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/zdharma-continuum/fast-syntax-highlighting.git <span class="variable">${ZSH_CUSTOM:-~/.oh-my-zsh/custom}</span>/plugins/fast-syntax-highlighting --depth=1</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions.git <span class="variable">${ZSH_CUSTOM:-~/.oh-my-zsh/custom}</span>/plugins/zsh-autosuggestions --depth=1</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-history-substring-search <span class="variable">${ZSH_CUSTOM:-~/.oh-my-zsh/custom}</span>/plugins/zsh-history-substring-search --depth=1</span><br></pre></td></tr></tbody></table></figure>
 
 <p>如果你是 macOS 平台，我还推荐你安装下面这个插件，它可以自动检测你的系统代理设置并自动配置相关环境变量：</p>
@@ -344,11 +356,17 @@
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[ -f ~/.aliases ]] &amp;&amp; source ~/.aliases</span><br></pre></td></tr></tbody></table></figure>
 
 <p>你可以在 <a target="_blank" rel="noopener" href="https://github.com/BlockLune/dotfiles/blob/main/.aliases">这里</a> 找到我的 <code>.aliases</code> 文件。</p>
+<h2 id="自定义函数"><a href="#自定义函数" class="headerlink" title="自定义函数"></a>自定义函数</h2><p>还记得上面提到的配置终端代理吗？在那儿我们遇到了类似这样一条命令：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890</span><br></pre></td></tr></tbody></table></figure>
+
+<p>我在 <code>~/.zshrc</code> 中创建了如下函数来让我快速配置终端代理：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">proxy() {</span><br><span class="line">  export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
 <h2 id="懒加载"><a href="#懒加载" class="headerlink" title="懒加载"></a>懒加载</h2><p>随着你配置的插件等内容的增多，你的 zsh 可能会花费越来越多的时间才能启动。在这种情况下，配置一些懒加载可能会有所帮助。下面的文章细致地介绍了相关技术：</p>
 <ul>
-<li><em><a target="_blank" rel="noopener" href="https://blog.skk.moe/post/make-oh-my-zsh-fly/">我就感觉到快 —— zsh 和 oh my zsh 冷启动速度优化 | Sukka's Blog</a></em></li>
+<li><a target="_blank" rel="noopener" href="https://blog.skk.moe/post/make-oh-my-zsh-fly/">我就感觉到快 —— zsh 和 oh my zsh 冷启动速度优化 | Sukka's Blog</a></li>
 </ul>
-<h2 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h2><ul>
+<h2 id="可能遇到的问题"><a href="#可能遇到的问题" class="headerlink" title="可能遇到的问题"></a>可能遇到的问题</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/zsh-users/zsh-syntax-highlighting/issues/790">syntax highlighting is super slow in WSL2 · Issue #790 · zsh-users/zsh-syntax-highlighting</a></li>
 </ul>
 <h2 id="更多资源"><a href="#更多资源" class="headerlink" title="更多资源"></a>更多资源</h2><ul>
