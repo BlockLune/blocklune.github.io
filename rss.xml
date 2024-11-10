@@ -9,8 +9,35 @@
     <atom:link href="https://blocklune.cc/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>Here is BlockLune&#39;s blog.</description>
-    <pubDate>Thu, 17 Oct 2024 09:06:23 GMT</pubDate>
+    <pubDate>Sun, 10 Nov 2024 05:57:11 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>博客迁移记录：从 Hexo 到 Astro</title>
+      <link>https://blocklune.cc/posts/78783da5.html</link>
+      <guid>https://blocklune.cc/posts/78783da5.html</guid>
+      <pubDate>Sun, 10 Nov 2024 05:57:11 GMT</pubDate>
+      
+      <description>&lt;p&gt;终于，我决定自己写一个博客！&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://blocklune.cc/categories/cs/">CS</category>
+      
+      <category domain="https://blocklune.cc/categories/cs/web/">Web</category>
+      
+      
+      <category domain="https://blocklune.cc/tags/blog-setup/">blog-setup</category>
+      
+      <category domain="https://blocklune.cc/tags/hexo/">hexo</category>
+      
+      <category domain="https://blocklune.cc/tags/astro/">astro</category>
+      
+      
+      <comments>https://blocklune.cc/posts/78783da5.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>使用 Vue 和 @Vueuse/motion 制作带动画的模态框</title>

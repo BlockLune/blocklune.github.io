@@ -4563,6 +4563,36 @@ graph TB
       </tags>
   </entry>
   <entry>
+    <title>博客迁移记录：从 Hexo 到 Astro</title>
+    <url>/posts/78783da5.html</url>
+    <content><![CDATA[<p>终于，我决定自己写一个博客！</p>
+<span id="more"></span>
+
+<h2 id="缘由"><a href="#缘由" class="headerlink" title="缘由"></a>缘由</h2><p>我之前在 <a href="https://fishg.top/">fishg.top</a> 上的博客是用 <a href="https://hexo.io/">Hexo</a> 构建的。Hexo 是一个专注于博客的框架，部署和使用都很方便。我在高中毕业后第一次接触到这个框架，并先后使用 <a href="https://ppoffice.github.io/hexo-theme-icarus/">Icarus</a> 和 <a href="https://theme-next.js.org/">NexT</a> 主题部署了两个博客。</p>
+<p>我写了一篇文章记录了<a href="/posts/4ef0ac98">部署过程</a>，并为其写了一个<a href="/posts/55f9ebd1">插件</a>。我大概用了两年这个博客，功能齐全，用起来也很顺手。</p>
+<p>然而，这样的博客总让我觉得它不完全属于我 —— 它基于一个框架，并且使用了主题，这让我不可避免地受限于其中的条条框框。我总能感觉到框架带来的 “沉重感”，无法随心所欲地添加或移除功能。</p>
+<p>于是，我决定自己写一个博客系统。我选择了 <a href="https://astro.build/">Astro</a>，并将它部署在 <a href="https://blocklune.cc/">blocklune.cc</a>，作为全新的开始。</p>
+<p>这个新的博客使用 Astro 构建，并集成了 <a href="https://react.dev/">React</a> 组件。配色方案是我个人喜欢的 <a href="https://draculatheme.com/">Dracula</a> 主题。设计过程中，<a href="https://tailwindcss.com/">Tailwind CSS</a> 和 <a href="https://github.com/tailwindlabs/tailwindcss-typography">Tailwind Typography</a> 提供了很大帮助。我还用 <a href="https://www.framer.com/motion/">Framer Motion</a> 制作了一些轻量的动画效果。</p>
+<p>该博客系统开源在 <a href="https://github.com/blocklune/astro-dracula-blog">GitHub</a>。如果你也想试试，那就 <a href="https://github.com/BlockLune/astro-dracula-blog/fork">Fork</a> 它吧！</p>
+<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p>Astro 仍然是个框架，但不是一个专门的博客框架，它是泛用的，具有极高的自由度。这是我选择它的原因。但在搭建过程中，我逐渐意识到，泛用和自由也意味着这是个 “毛坯房” —— 我需要自己写很多东西！</p>
+<p>我使用 Astro 的内容集合来管理文章。在这里遇到了第一个问题：我可以从 <code>render()</code> 中拿到 Markdown 渲染后的结果，即 HTML，但这时我才意识到，还需要给这些没有任何样式的纯 HTML 添加样式！幸运的是，<a href="https://github.com/tailwindlabs/tailwindcss-typography">Tailwind Typography</a> 向我伸出了援手。</p>
+<p>还有另一个有关 Markdown 渲染的问题。我的原文 Frontmatter 中没有描述字段，而是通过一个 more 标记实现的。所以我理所当然地可以从文中提取那部分内容，用在文章导航页的文章卡片上。问题是：提取到的是 Markdown，但 Astro 不支持选择性地仅渲染这一部分 Markdown，我得自己<a href="https://github.com/yy4382/yfi.moe/blob/149ff03d084a72b212c4629730f356377d702d45/app/blog/src/utils/markdown.ts#L59">走一遍渲染流程</a>（此处链接是我朋友的博客中走的流程）。这样让我有点抓狂，一个项目中有两个 Markdown 渲染流程总觉得不舒服，还得在 <code>astro.config.mjs</code> 和自定义渲染流程中配置两份相同的内容。最后我干脆放弃了渲染描述，直接用 <a href="https://www.npmjs.com/package/mdast-util-to-string"><code>mdast-util-to-string</code></a> 拿了纯文本作为描述，反正我设计的文章卡片操作逻辑是点击卡片进入文章，卡片上的链接本来就点不了。</p>
+<p>使用 Hexo 博客时，我没有太关注文章的 Slug，使用的是 <a href="https://github.com/ohroy/hexo-abbrlink">hexo-abbrlink</a> 插件随机生成的（哈希？）值作为文章链接。但新博客我希望使用语义化的 Slug 作为链接，同时希望能从原来的 abbrlink 跳转到新的地址。这里的适配也花了我一阵子。</p>
+<p>为了练习英语，我的一些文章是用英文写的。但为了与朋友交流分享（以及写得快、偷懒），我也有文章是用中文写的。所以我特别希望博客系统能支持国际化，至少是中英双语切换。这可以说是新博客系统中最折磨我的一段了，除了新逻辑，我几乎完全重写了原有的没有 i18n 情况下的获取文章的逻辑。我现在仍然不能确定我写的逻辑对不对。如果有问题，烦请你<a href="https://github.com/BlockLune/astro-dracula-blog/issues/new">提交 Issue</a> 指出来。</p>
+<p>原来的博客系统使用类别（category）和标签（tag）两种模式来分类查询文章，在新的博客系统中我简化为了一种，即标签。我发现原有文章中的标签真的挺乱的，所以还写了个<a href="https://github.com/BlockLune/markdown-posts-utilities/blob/main/tagenerator.py">脚本</a>，让大模型帮我基于文章内容重新生成了标签。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>现在新博客的基本功能已经全部完成，新文章应该都会在新博客上。我把此文当作一个记录，也当作从旧博客到新博客的跳转链接。</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>blog-setup</tag>
+        <tag>hexo</tag>
+        <tag>astro</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>NextJS 笔记</title>
     <url>/posts/cca59e58.html</url>
     <content><![CDATA[<p>这是一篇课堂笔记，课程为 Udemy <a href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/">React - The Complete Guide 2024</a>。该笔记包含了该课程中有关 NextJS 的部分内容。</p>
@@ -6378,54 +6408,6 @@ graph TB
       </tags>
   </entry>
   <entry>
-    <title>C++ 中 Cin 与 Cout 的转进制输入输出</title>
-    <url>/posts/9e863176.html</url>
-    <content><![CDATA[<p>笔者的朋友有道输入八进制输出十进制的题目，他是使用数学方法实现的。笔者隐隐约约记得好像 cin 和 cout 有控制输入输出数字进制的方法，查找了一些资料，做一下笔记。</p>
-<span id="more"></span>
-
-<table>
-<thead>
-<tr>
-<th>进制</th>
-<th>对应缩写</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>二进制</td>
-<td> bin</td>
-</tr>
-<tr>
-<td> 八进制</td>
-<td> oct</td>
-</tr>
-<tr>
-<td> 十进制</td>
-<td> dec</td>
-</tr>
-<tr>
-<td> 十六进制</td>
-<td> hex</td>
-</tr>
-</tbody></table>
-<p>接下来只要在输入 / 输出的时候加上这些缩写就行了。</p>
-<p>比如输入一个八进制数然后以十进制输出它：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> num;</span><br><span class="line">    cin &gt;&gt; oct &gt;&gt; num;</span><br><span class="line">    cout &lt;&lt; dec &lt;&lt; num &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>程序运行结果：</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">1750</span><br><span class="line">1000</span><br></pre></td></tr></tbody></table></figure>
-
-<p>（"1750" 是输入，"1000" 是输出）</p>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C 标准库中 Qsort 和 C++ STL 中 Sort 的用法</title>
     <url>/posts/eab95d6e.html</url>
     <content><![CDATA[<p>虽然到现在还是不能完全理解 <code>qsort</code> 和 <code>sort</code> 这两个函数的底层原理，但至少，先学会如何使用吧。</p>
@@ -6505,14 +6487,43 @@ graph TB
       </tags>
   </entry>
   <entry>
-    <title>C 语言中与 (&amp;&amp;) 和或 (||) 运算符的短路运算</title>
-    <url>/posts/13d09bbb.html</url>
-    <content><![CDATA[<p>此篇笔记来源于下边的这个题目。<br><img data-src="https://b316f18.webp.li/blog-imgs/cs/languages/c%20&amp;%20cpp/c-%E8%AF%AD%E8%A8%80%E4%B8%AD%E4%B8%8E-%E5%92%8C%E6%88%96-%E8%BF%90%E7%AE%97%E7%AC%A6%E7%9A%84%E7%9F%AD%E8%B7%AF%E8%BF%90%E7%AE%97/1.png"></p>
+    <title>C++ 中 Cin 与 Cout 的转进制输入输出</title>
+    <url>/posts/9e863176.html</url>
+    <content><![CDATA[<p>笔者的朋友有道输入八进制输出十进制的题目，他是使用数学方法实现的。笔者隐隐约约记得好像 cin 和 cout 有控制输入输出数字进制的方法，查找了一些资料，做一下笔记。</p>
 <span id="more"></span>
 
-<p>本来以为结果为 3，但是实际跑了一下发现结果是 1。请教了一下大佬知道了这叫做或运算符（||）的短路运算。</p>
-<p>正常来说，或运算中只要有一个为真，结果就为真。所谓或的短路运算就是说，如果已经出现了真，那么后续的运算就不会进行了。以上面的题目为例就是，因为第一个 ++x 这个运算结果肯定为真，那么后面的另外两个 ++x 就不会运行。</p>
-<p>类似的，还有与（&amp;&amp;）的短路运算。正常来说，与运算中必须所有均为真，结果才为真。所以与的短路就是，如果前面的运算结果已经有假了，那么就可以确定这个与运算总体的结果为假，也就不会运行后边的运算了。</p>
+<table>
+<thead>
+<tr>
+<th>进制</th>
+<th>对应缩写</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>二进制</td>
+<td> bin</td>
+</tr>
+<tr>
+<td> 八进制</td>
+<td> oct</td>
+</tr>
+<tr>
+<td> 十进制</td>
+<td> dec</td>
+</tr>
+<tr>
+<td> 十六进制</td>
+<td> hex</td>
+</tr>
+</tbody></table>
+<p>接下来只要在输入 / 输出的时候加上这些缩写就行了。</p>
+<p>比如输入一个八进制数然后以十进制输出它：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> num;</span><br><span class="line">    cin &gt;&gt; oct &gt;&gt; num;</span><br><span class="line">    cout &lt;&lt; dec &lt;&lt; num &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>程序运行结果：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">1750</span><br><span class="line">1000</span><br></pre></td></tr></tbody></table></figure>
+
+<p>（"1750" 是输入，"1000" 是输出）</p>
 ]]></content>
       <categories>
         <category>CS</category>
@@ -6544,6 +6555,25 @@ graph TB
 <p>所以上边 <code>return 0;</code> 前面那个 <code>for</code> 里那么多东西都只要换成这一句就行了。</p>
 <p>下边贴出一个用动态数组实现的任意组数数据输入的代码（依然没有高精度，我不会啊）：</p>
 <figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">NUMS</span></span></span><br><span class="line"><span class="class">{</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> c;</span><br><span class="line">    <span class="type">double</span> ans;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">NUMS</span> *<span class="title">p</span> =</span> <span class="number">0</span>;</span><br><span class="line"><span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> size = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">append</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span>, <span class="type">double</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    <span class="type">int</span> a = <span class="number">0</span>, b = <span class="number">0</span>, c = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%u%u%u"</span>, &amp;a, &amp;b, &amp;c);</span><br><span class="line">        <span class="keyword">if</span> (a == <span class="number">0</span> &amp;&amp; b == <span class="number">0</span> &amp;&amp; c == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        {</span><br><span class="line">            <span class="type">double</span> tmp_ans = a * <span class="number">1.0</span> / b;</span><br><span class="line">            append(c, tmp_ans);</span><br><span class="line">        }</span><br><span class="line">    } <span class="keyword">while</span> (<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%.*lf\n"</span>, (p + i)-&gt;c, (p + i)-&gt;ans);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">append</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> _c, <span class="type">double</span> _ans)</span></span><br><span class="line">{</span><br><span class="line">    <span class="keyword">if</span> (p == <span class="number">0</span>)</span><br><span class="line">    {</span><br><span class="line">        p = <span class="built_in">calloc</span>(<span class="number">1</span>, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        p-&gt;c = _c;</span><br><span class="line">        p-&gt;ans = _ans;</span><br><span class="line">        size++;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">struct</span> NUMS *tmp = <span class="built_in">calloc</span>(size, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        <span class="built_in">memcpy</span>(tmp, p, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS) * size);</span><br><span class="line">        <span class="built_in">free</span>(p);</span><br><span class="line">        p = <span class="built_in">calloc</span>(size + <span class="number">1</span>, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS));</span><br><span class="line">        <span class="built_in">memcpy</span>(p, tmp, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> NUMS) * (size + <span class="number">1</span>));</span><br><span class="line">        (p + size)-&gt;c = _c;</span><br><span class="line">        (p + size)-&gt;ans = _ans;</span><br><span class="line">        size++;</span><br><span class="line">        <span class="built_in">free</span>(tmp);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C 语言中与 (&amp;&amp;) 和或 (||) 运算符的短路运算</title>
+    <url>/posts/13d09bbb.html</url>
+    <content><![CDATA[<p>此篇笔记来源于下边的这个题目。<br><img data-src="https://b316f18.webp.li/blog-imgs/cs/languages/c%20&amp;%20cpp/c-%E8%AF%AD%E8%A8%80%E4%B8%AD%E4%B8%8E-%E5%92%8C%E6%88%96-%E8%BF%90%E7%AE%97%E7%AC%A6%E7%9A%84%E7%9F%AD%E8%B7%AF%E8%BF%90%E7%AE%97/1.png"></p>
+<span id="more"></span>
+
+<p>本来以为结果为 3，但是实际跑了一下发现结果是 1。请教了一下大佬知道了这叫做或运算符（||）的短路运算。</p>
+<p>正常来说，或运算中只要有一个为真，结果就为真。所谓或的短路运算就是说，如果已经出现了真，那么后续的运算就不会进行了。以上面的题目为例就是，因为第一个 ++x 这个运算结果肯定为真，那么后面的另外两个 ++x 就不会运行。</p>
+<p>类似的，还有与（&amp;&amp;）的短路运算。正常来说，与运算中必须所有均为真，结果才为真。所以与的短路就是，如果前面的运算结果已经有假了，那么就可以确定这个与运算总体的结果为假，也就不会运行后边的运算了。</p>
 ]]></content>
       <categories>
         <category>CS</category>
@@ -7432,52 +7462,6 @@ graph TB
       </tags>
   </entry>
   <entry>
-    <title>当形参、实参是指针变量...</title>
-    <url>/posts/1ef1e20b.html</url>
-    <content><![CDATA[<p>接<a href="/posts/50c16b14.html">《一个有关指针传参的问题》</a>，再理一理这里边的一些问题...</p>
-<span id="more"></span>
-
-<p>在单向值传递的过程中，我们知道，形参是对实参的值的拷贝。在实参的值传递给形参后，对形参的一切操作，都不会对实参产生什么影响。比如下边这串代码：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">5</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before func(), main(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(n);</span><br><span class="line">    cout &lt;&lt; <span class="string">"After func(), main(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before n++, func(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    n++;</span><br><span class="line">    cout &lt;&lt; <span class="string">"After n++, func(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>下边是输出结果：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Before func(), main(): n = 5</span><br><span class="line">Before n++, func(): n = 5</span><br><span class="line">After n++, func(): n = 6</span><br><span class="line">After func(), main(): n = 5</span><br></pre></td></tr></tbody></table></figure>
-
-<p>通过打印它们的地址，我们也可以认识到这一点：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">5</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"In main(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;n = "</span> &lt;&lt; &amp;n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(n);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"In func(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;n = "</span> &lt;&lt; &amp;n &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">In main():</span></span><br><span class="line"><span class="comment">n = 5</span></span><br><span class="line"><span class="comment">&amp;n = 0x61fe1c</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">In func():</span></span><br><span class="line"><span class="comment">n = 5</span></span><br><span class="line"><span class="comment">&amp;n = 0x61fdf0</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>如果把变量类型从普通类型变成指针类型，那么类似的，发生的其实也是一次值传递，也即，<strong>指针变量的值发生了一次拷贝</strong>，请看下边的例子：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"In main(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"p = "</span> &lt;&lt; (<span class="type">int</span> *)p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;p = "</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(p);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"In func(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"p = "</span> &lt;&lt; (<span class="type">int</span> *)p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;p = "</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>在我电脑上的输出结果是：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">In main():</span><br><span class="line">p = 0xee61c0</span><br><span class="line">&amp;p = 0x61fe18</span><br><span class="line"></span><br><span class="line">In func():</span><br><span class="line">p = 0xee61c0</span><br><span class="line">&amp;p = 0x61fdf0</span><br></pre></td></tr></tbody></table></figure>
-
-<p>可以看到，<code>int *</code> 类型的指针变量 <code>p</code> 的值是相同的，但地址不同，这是两个变量。</p>
-<p>把上边代码 <code>main()</code> 中的 <code>p</code> 记为 <code>p1</code>，<code>func()</code> 中的记为 <code>p2</code>，那么就可以这样理解为，当调用 <code>func()</code> 时，<code>p2</code> 与 <code>p1</code> <strong>指向了相同的位置</strong>，但它们确实<strong>不是同一个指针</strong>。</p>
-<p>对于<a href="/posts/50c16b14.html">《一个有关指针传参的问题》</a>中的那段错误代码，其实错误就是，在函数中 <code>new</code> 出来内存后，只是让形参指向了那片内存，而原来的实参并没有同步地指过去。</p>
-<p>但是只要确定形参的指针和实参的指针指向的地址是相同的，那么对这同一片内存进行的操作，就是同步的，比如：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    *p = <span class="number">5</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before func(), main(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(p);</span><br><span class="line">    cout &lt;&lt; <span class="string">"After func(), main(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before (*p)++, func(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    (*p)++;</span><br><span class="line">    cout &lt;&lt; <span class="string">"After (*p)++, func(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>输出结果：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Before func(), main(): (*p) = 5</span><br><span class="line">Before (*p)++, func(): (*p) = 5</span><br><span class="line">After (*p)++, func(): (*p) = 6</span><br><span class="line">After func(), main(): (*p) = 6</span><br></pre></td></tr></tbody></table></figure>
-
-<p>由于数组名其实就是数组第一个元素（下标为 0 的那个元素）的地址，所以类似的，在函数中对数组形参的操作会等效到数组实参上去：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span>[], <span class="type">int</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> a[<span class="number">3</span>] = {<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>};</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> x : a)</span><br><span class="line">        cout &lt;&lt; x &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(a, <span class="number">3</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> x : a)</span><br><span class="line">        cout &lt;&lt; x &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        arr[i]++;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>输出结果：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">0 1 2</span><br><span class="line">1 2 3</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Languages</category>
-        <category>C &amp; Cpp</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-        <tag>Pointer</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>补记一个用 C++ 实现的 2048 小游戏</title>
     <url>/posts/10d14c30.html</url>
     <content><![CDATA[<p>校科协的加入有条件，面试前一步是笔试。免去笔试的方法也不是没有，可以做免试题。看了各个组的免试题，发现都好难好难，只有前端组的 2048 敢去尝试尝试。但我有没怎么学过 JS，便想着先用 C++ 实现一下逻辑，再把代码改过去。</p>
@@ -7586,6 +7570,52 @@ graph TB
       <tags>
         <tag>C/C++</tag>
         <tag>Game</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>当形参、实参是指针变量...</title>
+    <url>/posts/1ef1e20b.html</url>
+    <content><![CDATA[<p>接<a href="/posts/50c16b14.html">《一个有关指针传参的问题》</a>，再理一理这里边的一些问题...</p>
+<span id="more"></span>
+
+<p>在单向值传递的过程中，我们知道，形参是对实参的值的拷贝。在实参的值传递给形参后，对形参的一切操作，都不会对实参产生什么影响。比如下边这串代码：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">5</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before func(), main(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(n);</span><br><span class="line">    cout &lt;&lt; <span class="string">"After func(), main(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before n++, func(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    n++;</span><br><span class="line">    cout &lt;&lt; <span class="string">"After n++, func(): n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>下边是输出结果：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Before func(), main(): n = 5</span><br><span class="line">Before n++, func(): n = 5</span><br><span class="line">After n++, func(): n = 6</span><br><span class="line">After func(), main(): n = 5</span><br></pre></td></tr></tbody></table></figure>
+
+<p>通过打印它们的地址，我们也可以认识到这一点：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n = <span class="number">5</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"In main(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;n = "</span> &lt;&lt; &amp;n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(n);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"In func(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"n = "</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;n = "</span> &lt;&lt; &amp;n &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">In main():</span></span><br><span class="line"><span class="comment">n = 5</span></span><br><span class="line"><span class="comment">&amp;n = 0x61fe1c</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">In func():</span></span><br><span class="line"><span class="comment">n = 5</span></span><br><span class="line"><span class="comment">&amp;n = 0x61fdf0</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>如果把变量类型从普通类型变成指针类型，那么类似的，发生的其实也是一次值传递，也即，<strong>指针变量的值发生了一次拷贝</strong>，请看下边的例子：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"In main(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"p = "</span> &lt;&lt; (<span class="type">int</span> *)p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;p = "</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(p);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"In func(): "</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"p = "</span> &lt;&lt; (<span class="type">int</span> *)p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"&amp;p = "</span> &lt;&lt; &amp;p &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>在我电脑上的输出结果是：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">In main():</span><br><span class="line">p = 0xee61c0</span><br><span class="line">&amp;p = 0x61fe18</span><br><span class="line"></span><br><span class="line">In func():</span><br><span class="line">p = 0xee61c0</span><br><span class="line">&amp;p = 0x61fdf0</span><br></pre></td></tr></tbody></table></figure>
+
+<p>可以看到，<code>int *</code> 类型的指针变量 <code>p</code> 的值是相同的，但地址不同，这是两个变量。</p>
+<p>把上边代码 <code>main()</code> 中的 <code>p</code> 记为 <code>p1</code>，<code>func()</code> 中的记为 <code>p2</code>，那么就可以这样理解为，当调用 <code>func()</code> 时，<code>p2</code> 与 <code>p1</code> <strong>指向了相同的位置</strong>，但它们确实<strong>不是同一个指针</strong>。</p>
+<p>对于<a href="/posts/50c16b14.html">《一个有关指针传参的问题》</a>中的那段错误代码，其实错误就是，在函数中 <code>new</code> 出来内存后，只是让形参指向了那片内存，而原来的实参并没有同步地指过去。</p>
+<p>但是只要确定形参的指针和实参的指针指向的地址是相同的，那么对这同一片内存进行的操作，就是同步的，比如：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> *p = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">    *p = <span class="number">5</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before func(), main(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(p);</span><br><span class="line">    cout &lt;&lt; <span class="string">"After func(), main(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> *p)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    cout &lt;&lt; <span class="string">"Before (*p)++, func(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    (*p)++;</span><br><span class="line">    cout &lt;&lt; <span class="string">"After (*p)++, func(): (*p) = "</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>输出结果：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Before func(), main(): (*p) = 5</span><br><span class="line">Before (*p)++, func(): (*p) = 5</span><br><span class="line">After (*p)++, func(): (*p) = 6</span><br><span class="line">After func(), main(): (*p) = 6</span><br></pre></td></tr></tbody></table></figure>
+
+<p>由于数组名其实就是数组第一个元素（下标为 0 的那个元素）的地址，所以类似的，在函数中对数组形参的操作会等效到数组实参上去：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span>[], <span class="type">int</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> a[<span class="number">3</span>] = {<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>};</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> x : a)</span><br><span class="line">        cout &lt;&lt; x &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">func</span>(a, <span class="number">3</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> x : a)</span><br><span class="line">        cout &lt;&lt; x &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        arr[i]++;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>输出结果：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">0 1 2</span><br><span class="line">1 2 3</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Languages</category>
+        <category>C &amp; Cpp</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+        <tag>Pointer</tag>
       </tags>
   </entry>
   <entry>
