@@ -1,3 +1,3 @@
 # blocklune.github.io
 
-This is my blog built by Hexo.
+Please visit [blocklune.cc](https://blocklune.cc)
